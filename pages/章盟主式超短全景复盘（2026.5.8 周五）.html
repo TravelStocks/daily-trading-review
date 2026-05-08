@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>章盟主式超短全景复盘（2026.5.8 周五）</title>
+  <style>
+    :root {--paper: rgba(255,255,255,0.86);--line: rgba(16,74,63,0.12);--text: #15352f;--muted: #56746c;--accent: #0e9f6e;--accent-deep: #0d6b66;--action: #1e8ed6;--shadow: 0 18px 48px rgba(13,52,45,0.08);--radius-xl: 28px;--radius-lg: 22px;--radius-md: 16px;}
+    * { box-sizing: border-box; } html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--text); font-family: "Source Han Sans SC","PingFang SC","Microsoft YaHei","Segoe UI",sans-serif; background: radial-gradient(circle at top left, rgba(30,142,214,0.14), transparent 32%), radial-gradient(circle at top right, rgba(14,159,110,0.18), transparent 28%), linear-gradient(180deg, #f3fbf7 0%, #edf6f1 48%, #e8f3ee 100%); line-height: 1.75; }
+    .page { width: min(1480px, calc(100vw - 32px)); margin: 24px auto 48px; }
+    .hero { overflow: hidden; padding: 40px; border: 1px solid rgba(255,255,255,0.7); border-radius: var(--radius-xl); background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(247,252,250,0.84)), linear-gradient(135deg, rgba(14,159,110,0.08), rgba(30,142,214,0.08)); box-shadow: var(--shadow); backdrop-filter: blur(14px); }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--accent-deep); text-decoration: none; font-size: 14px; margin-bottom: 14px; }
+    .eyebrow,.badge,.record-chip { display: inline-flex; align-items: center; }
+    .eyebrow { gap: 10px; padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,0.76); border: 1px solid var(--line); color: var(--accent-deep); font-size: 13px; letter-spacing: 0.06em; }
+    .eyebrow::before { content: ""; width: 9px; height: 9px; border-radius: 999px; background: linear-gradient(135deg, var(--accent), var(--action)); box-shadow: 0 0 0 6px rgba(14,159,110,0.09); }
+    .hero h1 { margin: 18px 0 16px; max-width: 980px; font-size: clamp(2rem, 4vw, 3.3rem); line-height: 1.18; letter-spacing: -0.03em; }
+    .hero-meta,.badge-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-meta { color: var(--muted); font-size: 15px; }
+    .hero-summary { max-width: 980px; margin-top: 20px; padding: 18px 20px; border-radius: var(--radius-md); background: rgba(255,255,255,0.74); border: 1px solid var(--line); color: #244a43; font-size: 16px; }
+    .hero-spotlight { margin-top: 16px; padding: 16px 18px; border-radius: var(--radius-md); background: linear-gradient(180deg, rgba(14,159,110,0.1), rgba(255,255,255,0.94)); border: 1px solid rgba(14,159,110,0.18); }
+    .hero-spotlight span { display: inline-flex; align-items: center; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,0.9); color: var(--accent-deep); font-size: 12px; font-weight: 700; letter-spacing: 0.04em; }
+    .hero-spotlight p { margin: 10px 0 0; color: #173e37; font-size: 16px; line-height: 1.8; font-weight: 700; }
+    .badge-row { margin-top: 16px; gap: 8px; }
+    .badge { padding: 7px 12px; border-radius: 999px; background: rgba(255,255,255,0.82); border: 1px solid var(--line); color: var(--accent-deep); font-size: 13px; }
+    .badge.status { background: rgba(30,142,214,0.08); color: #185e8b; }
+    .badge.bucket { background: rgba(184,132,21,0.12); border-color: rgba(184,132,21,0.18); color: #8a650f; }
+    .summary-grid-top { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 22px; }
+    .summary-panel { padding: 18px; border-radius: var(--radius-md); background: rgba(255,255,255,0.82); border: 1px solid var(--line); }
+    .summary-panel h3 { margin: 0 0 10px; font-size: 14px; color: var(--accent-deep); letter-spacing: 0.03em; text-transform: uppercase; }
+    .summary-note { margin: 0 0 12px; color: #173e37; font-size: 15px; line-height: 1.8; font-weight: 600; }
+    .summary-panel p { margin: 0; color: #244a43; }
+    .summary-panel ul { margin: 0; padding-left: 18px; color: #244a43; }
+    .summary-panel li + li { margin-top: 8px; }
+    .review-kiss { display: grid; gap: 10px; }
+    .review-kiss-card { padding: 14px; border-radius: 14px; border: 1px solid var(--line); background: rgba(255,255,255,0.84); }
+    .review-kiss-card.result { background: linear-gradient(180deg, rgba(14,159,110,0.08), rgba(255,255,255,0.96)); }
+    .review-kiss-card.mistake { background: linear-gradient(180deg, rgba(212,87,69,0.08), rgba(255,255,255,0.96)); border-color: rgba(212,87,69,0.18); }
+    .review-kiss-card.reflection { background: linear-gradient(180deg, rgba(184,132,21,0.08), rgba(255,255,255,0.96)); border-color: rgba(184,132,21,0.18); }
+    .review-kiss-card h5 { margin: 0 0 8px; font-size: 13px; color: var(--accent-deep); letter-spacing: 0.03em; }
+    .review-kiss-card ul { margin: 0; padding-left: 18px; color: #244a43; }
+    .review-kiss-card li + li { margin-top: 6px; }
+    .summary-panel.next-focus { background: linear-gradient(180deg, rgba(30,142,214,0.08), rgba(255,255,255,0.9)); border-color: rgba(30,142,214,0.18); }
+    .summary-panel.mainline { background: linear-gradient(180deg, rgba(14,159,110,0.08), rgba(255,255,255,0.94)); border-color: rgba(14,159,110,0.18); }
+    .summary-panel.core-focus { background: linear-gradient(180deg, rgba(14,159,110,0.06), rgba(255,255,255,0.94)); }
+    .summary-panel.risk-panel { background: linear-gradient(180deg, rgba(212,87,69,0.08), rgba(255,255,255,0.94)); border-color: rgba(212,87,69,0.18); }
+    .summary-panel.risk-panel h3 { color: #b44236; }
+    .summary-panel.rhythm-panel { margin-top: 18px; background: linear-gradient(180deg, rgba(184,132,21,0.09), rgba(255,255,255,0.96)); border-color: rgba(184,132,21,0.18); }
+    .summary-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+    .mini-card { padding: 16px; border-radius: 14px; background: rgba(255,255,255,0.8); border: 1px solid var(--line); }
+    .mini-card h4 { margin: 0 0 8px; font-size: 13px; color: var(--accent-deep); text-transform: uppercase; letter-spacing: 0.04em; }
+    .mini-card p { margin: 0; color: #244a43; line-height: 1.78; }
+    .mini-card ul { margin: 0; padding-left: 18px; color: #244a43; }
+    .mini-card li + li { margin-top: 6px; }
+    .mini-card.emotion { background: rgba(242,249,255,0.94); border-color: rgba(30,142,214,0.16); }
+    .mini-card.reflection { background: rgba(255,250,240,0.92); border-color: rgba(210,164,79,0.18); }
+    .mini-card.reflection p { white-space: pre-line; }
+    .mini-card.risk { background: rgba(255,246,243,0.92); border-color: rgba(212,87,69,0.16); }
+    .summary-chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .summary-chip { display: inline-flex; align-items: center; padding: 7px 11px; border-radius: 999px; background: rgba(14,159,110,0.12); color: var(--accent-deep); font-size: 13px; border: 1px solid rgba(14,159,110,0.12); }
+    .annotation-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 14px; }
+    .annotation-card { padding: 16px; border-radius: 14px; background: rgba(255,255,255,0.88); border: 1px solid var(--line); }
+    .annotation-card h4 { margin: 0; font-size: 15px; color: #123b36; }
+    .annotation-card p { margin: 12px 0 0; color: #244a43; line-height: 1.76; }
+    .annotation-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .annotation-meta span { display: inline-flex; align-items: center; padding: 7px 10px; border-radius: 999px; background: rgba(14,159,110,0.1); color: var(--accent-deep); font-size: 12px; }
+    .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; margin-top: 24px; }
+    .metric { padding: 16px 18px; border-radius: var(--radius-md); background: rgba(255,255,255,0.82); border: 1px solid var(--line); min-height: 92px; }
+    .metric span { display: block; font-size: 13px; color: var(--muted); letter-spacing: 0.04em; }
+    .metric strong { display: block; margin-top: 8px; font-size: clamp(1.2rem, 2vw, 1.8rem); color: var(--accent-deep); }
+    .layout { display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 24px; margin-top: 24px; align-items: start; }
+    .toc { position: sticky; top: 18px; padding: 24px 18px 20px; border-radius: var(--radius-lg); background: var(--paper); border: 1px solid rgba(255,255,255,0.75); box-shadow: var(--shadow); backdrop-filter: blur(10px); max-height: calc(100vh - 36px); overflow: auto; }
+    .toc h2 { margin: 0 0 14px; font-size: 1rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-deep); }
+    .toc-link { display: block; padding: 10px 12px; margin-bottom: 8px; border-radius: 12px; color: var(--text); text-decoration: none; border: 1px solid transparent; }
+    .toc-link.level-2 { font-weight: 700; color: var(--accent-deep); }
+    .toc-link.level-3 { margin-left: 10px; padding-left: 16px; font-size: 14px; color: #35554e; border-left: 2px solid rgba(14,159,110,0.14); border-radius: 0 12px 12px 0; }
+    .toc-link:hover,.toc-link.is-active { background: rgba(255,255,255,0.82); border-color: var(--line); transform: translateX(4px); }
+    .content { padding: 28px; border-radius: var(--radius-lg); background: var(--paper); border: 1px solid rgba(255,255,255,0.72); box-shadow: var(--shadow); backdrop-filter: blur(10px); }
+    .chapter-title,.subchapter-title { scroll-margin-top: 20px; position: relative; margin: 30px 0 16px; padding-left: 18px; line-height: 1.32; }
+    .chapter-title { font-size: clamp(1.55rem, 2.6vw, 2.25rem); color: #123b36; }
+    .chapter-title::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 7px; border-radius: 999px; background: linear-gradient(180deg, var(--accent), var(--action)); }
+    .subchapter-title { margin-top: 26px; font-size: clamp(1.16rem, 2vw, 1.5rem); color: var(--accent-deep); padding-left: 16px; }
+    .subchapter-title::before { content: ""; position: absolute; left: 0; top: 0.35em; width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--action)); box-shadow: 0 0 0 8px rgba(14,159,110,0.08); }
+    .body-line,.item-card,.table-card { margin: 0 0 14px; border-radius: var(--radius-md); background: rgba(255,255,255,0.7); border: 1px solid var(--line); }
+    .body-line { padding: 16px 18px; color: #22463f; }
+    .item-card { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; padding: 16px 18px; border-left: 4px solid rgba(14,159,110,0.5); }
+    .item-card p { margin: 0; } .item-index { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; padding: 7px 10px; border-radius: 999px; background: rgba(14,159,110,0.12); color: var(--accent-deep); font-weight: 800; line-height: 1; }
+    .tone-core { border-left-color: rgba(14,159,110,0.92); background: linear-gradient(180deg, rgba(14,159,110,0.06), rgba(255,255,255,0.76)); }
+    .tone-action { border-left-color: rgba(30,142,214,0.9); background: linear-gradient(180deg, rgba(30,142,214,0.06), rgba(255,255,255,0.78)); }
+    .tone-risk { border-left-color: rgba(212,87,69,0.9); background: linear-gradient(180deg, rgba(212,87,69,0.05), rgba(255,255,255,0.78)); }
+    .line-label { font-weight: 800; color: var(--accent-deep); }
+    mark { padding: 0 0.24em; border-radius: 0.45em; background: linear-gradient(180deg, rgba(255,231,138,0.42), rgba(255,231,138,0.22)); color: inherit; }
+    .table-card { padding: 16px; margin-top: 18px; background: rgba(255,255,255,0.84); }
+    .table-title { margin-bottom: 12px; font-weight: 800; color: var(--accent-deep); letter-spacing: 0.04em; }
+    .table-wrap { overflow-x: auto; border-radius: 14px; border: 1px solid var(--line); }
+    table { width: 100%; min-width: 860px; border-collapse: collapse; background: white; }
+    th,td { padding: 12px 14px; border-bottom: 1px solid rgba(16,74,63,0.08); border-right: 1px solid rgba(16,74,63,0.06); text-align: left; vertical-align: top; font-size: 14px; }
+    th { position: sticky; top: 0; background: #eff9f4; color: var(--accent-deep); font-weight: 800; z-index: 1; }
+    tr:last-child td { border-bottom: 0; } td:last-child,th:last-child { border-right: 0; }
+    .footer-note { margin: 16px 0 0; color: var(--muted); font-size: 13px; text-align: right; }
+    .to-top { position: fixed; right: 20px; bottom: 20px; display: inline-flex; align-items: center; justify-content: center; height: 56px; padding: 0 18px; border-radius: 999px; background: linear-gradient(135deg, var(--accent), var(--action)); color: white; text-decoration: none; box-shadow: 0 14px 26px rgba(13,52,45,0.2); font-size: 14px; font-weight: 800; letter-spacing: 0.06em; }
+    @media (max-width: 1080px) { .layout { grid-template-columns: 1fr; } .toc { position: static; max-height: none; } }
+    @media (max-width: 900px) { .summary-grid-top,.summary-card-grid,.annotation-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 720px) { .page { width: min(100vw - 18px, 100%); margin: 10px auto 24px; } .hero,.content,.toc { padding: 20px; } .hero h1 { font-size: 1.9rem; } .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } .item-card { grid-template-columns: 1fr; } .item-index { width: fit-content; } .to-top { right: 14px; bottom: 14px; } }
+  </style>
+</head>
+<body>
+  <div class="page" id="top">
+    <section class="hero">
+      <a class="back-link" href="../index.html">← 返回复盘目录</a>
+      <div class="eyebrow">Daily Note · 5/8</div>
+      <h1>章盟主式超短全景复盘（2026.5.8 周五）</h1>
+      <div class="hero-meta">
+        <span>复盘记录</span>
+        <span>情绪标签：高潮</span>
+        <span>更新时间：2026-05-08 22:16</span>
+      </div>
+      <div class="hero-summary"></div>
+      <div class="hero-spotlight"><span>一句话定调</span><p>高潮定调：机器人（最强主线），次看 光通信…；明早先看核心标的反馈：福达合金、波…</p></div>
+      <div class="badge-row"><span class="badge">通信</span><span class="badge">光通信</span><span class="badge">算力</span><span class="badge">机器人</span><span class="badge">商业航天</span><span class="badge status">主线</span><span class="badge status">退潮</span><span class="badge status">风险</span><span class="badge status">套利</span><span class="badge status">反思</span><span class="badge bucket">反思复盘</span></div>
+      <div class="summary-grid-top">
+        <section class="summary-panel next-focus">
+          <h3>明日关注</h3>
+          <p class="summary-note">明早先看核心标的反馈：福达合金、波导股份、通鼎互联、北投科技</p>
+          <ul><li>核心标的反馈：福达合金、波导股份、通鼎互联、北投科技</li><li>主线节奏继续围绕：（一）机器人（最强主线）</li><li>开盘先规避这类风险：操作适配：只做主线核心分歧低吸、板上确认接力、辨识度龙头持股；不追高后排、不博…</li></ul>
+        </section>
+        <section class="summary-panel mainline">
+          <h3>主线板块</h3>
+          <p class="summary-note">机器人（最强主线），次看 光通信 / 算力 的轮动承接。</p>
+          <ul><li>（一）机器人（最强主线）</li><li>（二）光通信（强主线）</li><li>（三）商业航天（强主线）</li><li>（四）算力（强轮动）</li></ul>
+        </section>
+        <section class="summary-panel core-focus">
+          <h3>核心标的卡片</h3>
+          <p class="summary-note">核心标的优先盯 福达合金、波导股份、通鼎互联、北投科技，只看前排、承接和分歧后的回流。</p>
+          <div class="summary-chip-row"><span class="summary-chip">福达合金</span><span class="summary-chip">波导股份</span><span class="summary-chip">通鼎互联</span><span class="summary-chip">北投科技</span><span class="summary-chip">红板科技</span><span class="summary-chip">宝鼎科技</span><span class="summary-chip">润建股份</span><span class="summary-chip">大业股份</span><span class="summary-chip">巨轮智能</span><span class="summary-chip">雷赛智能</span></div>
+        </section>
+        <section class="summary-panel risk-panel">
+          <h3>风险提示</h3>
+          <p class="summary-note">先规避操作适配：只做主线核心分歧低吸、板上确认接力、辨识度龙头持股；不追高后排、不博弈退潮板块回流</p>
+          <ul><li>操作适配：只做主线核心分歧低吸、板上确认接力、辨识度龙头持股；不追高后排、不博弈退潮板块回流</li><li>华电能源尾盘违规低吸，违背早盘接力、尾盘不追高纪律，吃大面</li><li>聚焦主线：只做机器人、光通信、商业航天三大主线，放弃杂毛</li><li>节奏：今日高潮，下周一分歧试金石，分歧日看活口，高潮不追高</li></ul>
+        </section>
+      </div>
+      <div class="summary-card-grid">
+        <section class="mini-card emotion">
+          <h4>市场情绪</h4>
+          <p>市场情绪定调为高潮，先看量能、竞价与主线前排反馈。</p>
+        </section>
+        <section class="mini-card reflection">
+          <h4>操作情绪分析</h4>
+          <div class="review-kiss"><section class="review-kiss-card result"><h5>一、今日操作结果</h5><ul><li>宝光股份早盘第一时间止盈，逃顶成功，执行力拉满</li><li>中国长城板上介入，逻辑、量能、分时完美契合模式</li><li>仓位管理严格执行“有容则容”，总仓60%-80%，预留明日接力仓位</li></ul></section><section class="review-kiss-card mistake"><h5>二、核心失误</h5><ul><li>纪律失守：尾盘随手低吸杂毛，脱离模式情绪化交易</li><li>止损不力：高位破位标的硬扛，侥幸心理主导</li><li>买点瑕疵：个别票非板上介入，被拉升分时诱惑</li></ul></section><section class="review-kiss-card reflection"><h5>三、核心反思</h5><ul><li>铁律刚性执行：只做板上确认，不半路、不尾盘低吸杂毛</li><li>止损无条件：高位破位直接斩仓，不格局、不幻想</li><li>买一看四固化：每笔交易必看前两日、今日、明日预期，覆盖题材/身位/板块PK</li></ul></section></div>
+        </section>
+        <section class="mini-card">
+          <h4>核心标的摘要</h4>
+          <p>核心标的优先盯 福达合金、波导股份、通鼎互联、北投科技，只看前排、承接和分歧后的回流。</p>
+        </section>
+      </div>
+      
+      <div class="metrics"><div class="metric"><span>跌停家数</span><strong>4板）、波导股份（3板）
+二板核心：通鼎互联、北投科技、红板科技、宝鼎科技、润建股份
+机器人：大业股份、巨轮智能、雷赛智能、泰坦股份
+光通信：通鼎互联、光迅科技、中天科技、福晶科技
+商业航天：波导股份、中国卫星、航天发展
+算力/芯片：中国长城、红板科技、宝鼎科技
+电力：大唐发电
+规避标的：高位缩量高标、老庄股、监管异动票、历史爆炒老票
+其他提及标的：华电能源、万邦德、泰晶科技、航天电器、利达新材、国安股份
+|（注：文档部分内容可能由 AI 生成）</strong></div><div class="metric"><span>内容块</span><strong>96</strong></div><div class="metric"><span>表格</span><strong>1</strong></div></div>
+    </section>
+    <div class="layout">
+      <aside class="toc"><h2>目录导航</h2><a class="toc-link level-2" href="#section-1">一、复盘总纲</a><a class="toc-link level-2" href="#section-2">二、市场风格与赚钱效应解析</a><a class="toc-link level-3" href="#section-3">（一）市场风格</a><a class="toc-link level-3" href="#section-4">（二）赚钱效应</a><a class="toc-link level-2" href="#section-5-4">三、近4日板块强度+次日节奏预测表</a><a class="toc-link level-2" href="#section-6">四、今日操作结果+核心失误+核心反思</a><a class="toc-link level-3" href="#section-7">（一）今日操作结果</a><a class="toc-link level-3" href="#section-8">（二）核心失误</a><a class="toc-link level-3" href="#section-9">（三）核心反思</a><a class="toc-link level-2" href="#section-10">五、各主线板块详细解析</a><a class="toc-link level-3" href="#section-11">（一）机器人（最强主线）</a><a class="toc-link level-3" href="#section-12">（二）光通信（强主线）</a><a class="toc-link level-3" href="#section-13">（三）商业航天（强主线）</a><a class="toc-link level-3" href="#section-14">（四）算力（强轮动）</a><a class="toc-link level-3" href="#section-15">（五）芯片（强轮动）</a><a class="toc-link level-3" href="#section-16">（六）电力（强轮动）</a><a class="toc-link level-3" href="#section-17">（七）电池（弱轮动）</a><a class="toc-link level-3" href="#section-18-ai">（八）AI应用（弱轮动）</a><a class="toc-link level-3" href="#section-19">（九）一季报/并购重组（弱轮动）</a><a class="toc-link level-2" href="#section-20">六、异动监管与龙虎榜情况</a><a class="toc-link level-3" href="#section-21">（一）异动监管</a><a class="toc-link level-3" href="#section-22">（二）龙虎榜核心</a><a class="toc-link level-2" href="#section-23">七、跌停与炸板情况</a><a class="toc-link level-2" href="#section-24">八、重点趋势牛股梳理</a><a class="toc-link level-2" href="#section-25">九、核心关键票汇总</a></aside>
+      <main class="content"><h2 id="section-1" class="chapter-title">一、复盘总纲</h2><p class="body-line tone-core">当前市场<mark>主线</mark>为机器人、光通信、商业航天三大趋势<mark>主线</mark>，算力、芯片、电力为强轮动，AI应用、电池、一季报、并购重组为弱轮动，其余板块无操作价值。整体呈现3<mark>主线</mark>+3强轮+4弱轮格局，资金极致<mark>抱团</mark><mark>主线</mark>与辨识度龙头，跟风杂毛全面被弃。</p><h2 id="section-2" class="chapter-title">二、市场风格与赚钱效应解析</h2><h3 id="section-3" class="subchapter-title">（一）市场风格</h3><p class="body-line tone-core"><span class="line-label"><mark>主线</mark>极致聚焦：</span>机器人、光通信、商业航天三大<mark>主线</mark>趋势成型，资金集中度极高，前排连板与趋势票共振走强，后排快速掉队。</p><p class="body-line"><span class="line-label">轮动有序不恐慌：</span>算力、芯片高位良性分歧，通信小分歧承接有力，高低切清晰，无全面核按钮。</p><p class="body-line"><span class="line-label">辨识度为王：</span>多概念叠加、身位领先、筹码健康、股价市值匹配标的最受资金青睐，纯跟风无溢价。</p><p class="body-line"><span class="line-label">资金结构健康：</span>游资主攻机器人、航天、连板高标；机构主导通信、算力、电力大票，合力共振无集中出逃。</p><h3 id="section-4" class="subchapter-title">（二）赚钱效应</h3><p class="body-line"><span class="line-label">赚钱集中区：</span>机器人（消息催化高潮）、光通信（F5G逻辑硬）、商业航天（催化密集）、电力（大唐发电带队）。</p><p class="body-line"><span class="line-label">赚钱薄弱区：</span>芯片（外围拖累大分歧）、AI应用（附属<mark>套利</mark>无持续性）、有色金属（持续走弱）。</p><p class="body-line tone-core"><span class="line-label">操作适配：</span><mark>只做</mark><mark>主线</mark>核心分歧<mark>低吸</mark>、板上确认接力、辨识度龙头持股；<mark>不追高</mark>后排、不博弈退潮板块回流。</p><p class="body-line"><span class="line-label">情绪特征：</span>炸板增多但无恐慌，高位温和分歧、低位承接强劲，属于强势格局中的良性调整，未进入退潮期。</p><h2 id="section-5-4" class="chapter-title">三、近4日板块强度+次日节奏预测表</h2><section class="table-card"><div class="table-title">关键表格 01</div><div class="table-wrap"><table><thead><tr><th>大题材板块</th><th>4.30（周四）</th><th>5.6（周三）</th><th>5.7（周四）</th><th>5.8（周五）</th><th>次日节奏预测</th><th>核心判断</th></tr></thead><tbody><tr><td>总体强度</td><td>61906</td><td>91381</td><td>67204</td><td>57031</td><td>震荡偏强</td><td>情绪良性分歧，主线趋势不改，资金抱团核心</td></tr><tr><td>电力</td><td>-2606</td><td>4238</td><td>2592</td><td>1520</td><td>震荡延续</td><td>游资偏好，大票超预期，高位谨慎</td></tr><tr><td>AI应用</td><td>120</td><td>4331</td><td>2650</td><td>1213</td><td>弱轮动</td><td>附属套利，无独立行情</td></tr><tr><td>算力</td><td>4885</td><td>21132</td><td>15199</td><td>6217</td><td>修复震荡</td><td>高位分歧，周末有回流预期</td></tr><tr><td>机器人</td><td>5051</td><td>2722</td><td>11635</td><td>14551</td><td>中分歧</td><td>消息催化，梯队完整，下周分歧看活口</td></tr><tr><td>光伏</td><td>-1147</td><td>-178</td><td>862</td><td>1149</td><td>弱修复</td><td>分化极端，仅独立逻辑可看</td></tr><tr><td>化工</td><td>-1285</td><td>300</td><td>-3709</td><td>1767</td><td>弱轮动</td><td>无主线地位，零星机会</td></tr><tr><td>商业航天</td><td>5706</td><td>3998</td><td>2421</td><td>7296</td><td>震荡走强</td><td>催化密集，老龙活跃，缺新梯队</td></tr><tr><td>芯片</td><td>12716</td><td>20799</td><td>10732</td><td>3804</td><td>修复预期</td><td>外围拖累大分歧，周末看美股发酵</td></tr><tr><td>通信</td><td>1030</td><td>8950</td><td>14020</td><td>9084</td><td>分歧延续</td><td>小分歧承接强，光纤逻辑持续</td></tr><tr><td>一季报增长</td><td>30533</td><td>17808</td><td>6059</td><td>4891</td><td>弱趋势结束</td><td>叠加主线才有效</td></tr><tr><td>并购重组</td><td>2821</td><td>1396</td><td>4977</td><td>1209</td><td>活跃</td><td>独立逻辑，公告驱动</td></tr><tr><td>电池</td><td>3995</td><td>4467</td><td>87</td><td>4672</td><td>分化</td><td>轮动反弹，逐步退潮</td></tr><tr><td>有色金属</td><td>87</td><td>1418</td><td>-321</td><td>-342</td><td>走弱</td><td>无资金关注</td></tr></tbody></table></div></section><h2 id="section-6" class="chapter-title">四、今日操作结果+核心失误+核心反思</h2><h3 id="section-7" class="subchapter-title">（一）今日操作结果</h3><p class="body-line"><span class="line-label">✅ 做对：</span></p><p class="body-line tone-risk">宝光股份早盘第一时间<mark>止盈</mark>，逃顶成功，执行力拉满。</p><p class="body-line">中国长城板上介入，逻辑、量能、分时完美契合模式。</p><p class="body-line tone-action">仓位管理严格执行“有容则容”，总仓60%-80%，预留明日接力仓位。</p><p class="body-line tone-core">连板选股遵循首板长阳、二板平开放量、<mark>弱转强</mark>标准，逻辑闭环。</p><p class="body-line tone-action">买点坚守快上板排板、板上确认，杜绝半路点火，持仓2-5只合理分散。</p><p class="body-line"><span class="line-label">❌ 做错：</span></p><p class="body-line">华电能源尾盘违规<mark>低吸</mark>，违背早盘接力、尾盘<mark>不追高</mark>纪律，吃大面。</p><p class="body-line">万邦德高位破位不斩仓，心存妖股幻想，亏损扩大。</p><p class="body-line">个别操作忽略“买一看四”，未全面覆盖题材、身位、板块PK与次日预期。</p><h3 id="section-8" class="subchapter-title">（二）核心失误</h3><p class="body-line"><span class="line-label">纪律失守：</span>尾盘随手<mark>低吸</mark>杂毛，脱离模式情绪化交易。</p><p class="body-line tone-risk"><span class="line-label"><mark>止损</mark>不力：</span>高位破位标的硬扛，侥幸心理主导。</p><p class="body-line tone-action"><span class="line-label">买点瑕疵：</span>个别票非板上介入，被拉升分时诱惑。</p><p class="body-line"><span class="line-label">预判不足：</span>对板块负反馈（如大唐发电走弱）反应滞后。</p><h3 id="section-9" class="subchapter-title">（三）核心反思</h3><p class="body-line"><span class="line-label">铁律刚性执行：</span><mark>只做</mark>板上确认，不半路、不尾盘<mark>低吸</mark>杂毛。</p><p class="body-line tone-risk"><span class="line-label"><mark>止损</mark>无条件：</span>高位破位直接斩仓，不格局、不幻想。</p><p class="body-line tone-action"><span class="line-label">买一看四固化：</span>每笔交易必看前两日、今日、明日预期，覆盖题材/身位/板块PK。</p><p class="body-line tone-action"><span class="line-label">仓位坚守：</span>确定性机会用凯利公式放大，总仓60%-80%，留机动仓。</p><p class="body-line tone-risk"><span class="line-label">聚焦<mark>主线</mark>：</span><mark>只做</mark>机器人、光通信、商业航天三大<mark>主线</mark>，<mark>放弃</mark>杂毛。</p><h2 id="section-10" class="chapter-title">五、各主线板块详细解析</h2><h3 id="section-11" class="subchapter-title">（一）机器人（最强主线）</h3><p class="body-line"><span class="line-label">逻辑：</span>特斯拉人形机器人消息催化，全面爆发。</p><p class="body-line tone-core"><span class="line-label">特征：</span>梯队完整，大业股份3板身位领先，巨轮智能超跌反弹，首板雷赛智能、泰坦股份筹码健康。</p><p class="body-line"><span class="line-label">节奏：</span>今日高潮，下周一分歧试金石，分歧日看活口，高潮<mark>不追高</mark>。</p><h3 id="section-12" class="subchapter-title">（二）光通信（强主线）</h3><p class="body-line"><span class="line-label">逻辑：</span>光纤涨价消息持续发酵，业绩加持。</p><p class="body-line"><span class="line-label">特征：</span>小分歧承接极强，通鼎互联二板龙相十足，创新高、换手健康；泰晶科技有资金出逃迹象，航天电器3板但高度受限。</p><p class="body-line tone-core"><span class="line-label">结论：</span>趋势完好，为最稳<mark>主线</mark>之一。</p><h3 id="section-13" class="subchapter-title">（三）商业航天（强主线）</h3><p class="body-line"><span class="line-label">逻辑：</span>周末至下周三催化密集（SpaceX、大飞机等）。</p><p class="body-line tone-core"><span class="line-label">特征：</span>老龙集体活跃（航天发展、中国卫星等），缺新梯队；波导股份集通信、芯片、航天于一身，图形、市值、股价完美。</p><p class="body-line"><span class="line-label">节奏：</span>震荡走强，<mark>重点</mark>看波导股份卡位。</p><h3 id="section-14" class="subchapter-title">（四）算力（强轮动）</h3><p class="body-line tone-core"><span class="line-label">逻辑：</span>绝对<mark>主线</mark>高位良性分歧。</p><p class="body-line tone-action"><span class="line-label">特征：</span>福达合金4板情绪核心，多概念叠加但未放量，明日需爆量<mark>弱转强</mark>；中国长城3板大票超预期，正常回调。</p><p class="body-line"><span class="line-label">节奏：</span>周末有回流预期，盯福达合金放量情况。</p><h3 id="section-15" class="subchapter-title">（五）芯片（强轮动）</h3><p class="body-line"><span class="line-label">逻辑：</span>外围拖累，今日大分歧。</p><p class="body-line"><span class="line-label">特征：</span>波导股份逆势扛分歧，红板科技、宝鼎科技活口。</p><p class="body-line"><span class="line-label">节奏：</span>等待周末美股发酵，预期修复。</p><h3 id="section-16" class="subchapter-title">（六）电力（强轮动）</h3><p class="body-line"><span class="line-label">逻辑：</span>大唐发电3板大票超预期，游资扎堆。</p><p class="body-line"><span class="line-label">特征：</span>华电能源等为跟风<mark>套利</mark>，无独立龙头气质。</p><p class="body-line"><span class="line-label">节奏：</span>震荡延续，高位谨慎。</p><h3 id="section-17" class="subchapter-title">（七）电池（弱轮动）</h3><p class="body-line"><span class="line-label">逻辑：</span>轮动反弹，一季报后逐步退潮。</p><p class="body-line"><span class="line-label">特征：</span>内部分化，利达新材等辨识度标的有反包尝试。</p><h3 id="section-18-ai" class="subchapter-title">（八）AI应用（弱轮动）</h3><p class="body-line"><span class="line-label">逻辑：</span>算力附属，无独立行情。</p><p class="body-line"><span class="line-label">特征：</span>仅国安股份可看，持续性差。</p><h3 id="section-19" class="subchapter-title">（九）一季报/并购重组（弱轮动）</h3><p class="body-line"><span class="line-label">逻辑：</span>公告驱动，独立逻辑，不受轮动干扰。</p><p class="body-line tone-core"><span class="line-label">特征：</span>低市值、平台突破标的受资金<mark>抱团</mark>。</p><h2 id="section-20" class="chapter-title">六、异动监管与龙虎榜情况</h2><h3 id="section-21" class="subchapter-title">（一）异动监管</h3><p class="body-line tone-core">利通电子、德福科技等高位趋势票触发200<mark>异动</mark>，高度受限，禁止追高与近距离<mark>低吸</mark>。</p><h3 id="section-22" class="subchapter-title">（二）龙虎榜核心</h3><p class="body-line"><span class="line-label">游资主攻：</span>航天发展、烽火通信、红板科技、巨轮智能、大业股份。</p><p class="body-line tone-risk"><span class="line-label">风险提示：</span>巨轮智能曾进入ST预警池，优先选择大业股份。</p><p class="body-line"><span class="line-label">机构共振：</span>通信、电力大资金流入，结构健康。</p><h2 id="section-23" class="chapter-title">七、跌停与炸板情况</h2><p class="body-line"><span class="line-label">跌停：</span>无大面积跌停，情绪无恐慌。</p><p class="body-line"><span class="line-label">炸板：</span>集中于高位高标与芯片板块，属于良性分歧，无核按钮，资金承接有力。</p><h2 id="section-24" class="chapter-title">八、重点趋势牛股梳理</h2><p class="body-line">波导股份、通鼎互联、福达合金、大唐发电、大业股份、红板科技、北投科技、宝鼎科技、润建股份。</p><h2 id="section-25" class="chapter-title">九、核心关键票汇总</h2><p class="body-line"><span class="line-label">总龙/高标：</span>福达合金（4板）、波导股份（3板）</p><p class="body-line"><span class="line-label">二板核心：</span>通鼎互联、北投科技、红板科技、宝鼎科技、润建股份</p><p class="body-line"><span class="line-label">机器人：</span>大业股份、巨轮智能、雷赛智能、泰坦股份</p><p class="body-line"><span class="line-label">光通信：</span>通鼎互联、光迅科技、中天科技、福晶科技</p><p class="body-line"><span class="line-label">商业航天：</span>波导股份、中国卫星、航天发展</p><p class="body-line"><span class="line-label">算力/芯片：</span>中国长城、红板科技、宝鼎科技</p><p class="body-line"><span class="line-label">电力：</span>大唐发电</p><p class="body-line tone-risk"><span class="line-label"><mark>规避</mark>标的：</span>高位缩量高标、老庄股、<mark>监管</mark><mark>异动</mark>票、历史爆炒老票</p><p class="body-line"><span class="line-label">其他提及标的：</span>华电能源、万邦德、泰晶科技、航天电器、利达新材、国安股份</p><p class="footer-note"><span class="line-label">|（注：</span>文档部分内容可能由 AI 生成）</p></main>
+    </div>
+  </div>
+  <script>
+    const links = Array.from(document.querySelectorAll('.toc-link'));
+    const sections = links.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        links.forEach(link => link.classList.remove('is-active'));
+        const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('is-active');
+      });
+    }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+    sections.forEach(section => observer.observe(section));
+  </script>
+  <a class="to-top" href="#top" aria-label="回到顶部">回到顶部</a>
+</body>
+</html>
