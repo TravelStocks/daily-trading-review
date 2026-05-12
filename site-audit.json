@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-08 22:22:49",
+  "generated_at": "2026-05-12 22:27:22",
   "site_dir": "C:\\Users\\abcha\\Desktop\\A股复盘站",
   "index_path": "C:\\Users\\abcha\\Desktop\\A股复盘站\\index.html",
   "desktop_entry": "C:\\Users\\abcha\\Desktop\\A股复盘站-首页.html",
-  "record_count": 16,
+  "record_count": 17,
   "records": {
     "2026-03-19": {
       "title": "A股超短全复盘（2026年3月19日）——板块+标的+情绪+操作全梳理",
@@ -114,6 +114,13 @@
       "title": "章盟主式超短全景复盘（2026.5.8 周五）",
       "source_docx": "C:\\Users\\abcha\\Downloads\\章盟主式超短全景复盘（2026.5.8 周五）.docx",
       "page_path": "pages\\章盟主式超短全景复盘（2026.5.8 周五）.html",
+      "missing_count": 0,
+      "missing_preview": []
+    },
+    "2026-05-13": {
+      "title": "明日（5.13）个股实战预案及全景复盘",
+      "source_docx": "C:\\Users\\abcha\\Downloads\\明日（5.13）个股实战预案及全景复盘.docx",
+      "page_path": "pages\\明日（5.13）个股实战预案及全景复盘.html",
       "missing_count": 0,
       "missing_preview": []
     }
