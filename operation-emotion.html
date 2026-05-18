@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>操作与情绪复盘 | A股复盘站</title>
+  <style>
+    :root{--text:#173e37;--muted:#667c76;--line:rgba(16,74,63,.12);--line2:rgba(16,74,63,.18);--surface:#fff;--bg:#f5f7f4;--green:#0e8f68;--blue:#1e77b7;--red:#c84f42;--amber:#a97812;--shadow:0 18px 40px rgba(20,40,36,.07)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;color:var(--text);font-family:"Source Han Sans SC","PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;background:linear-gradient(180deg,#f8faf7 0%,#edf3ef 100%);overflow-x:hidden}
+    a{color:inherit}
+    button,input,select{font:inherit}
+    button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid rgba(30,119,183,.24);outline-offset:2px}
+    .shell{width:min(1440px,calc(100vw - 28px));margin:16px auto 40px;display:grid;gap:16px}
+    .topbar,.hero,.panel,.record{border:1px solid var(--line);background:rgba(255,255,255,.94);box-shadow:var(--shadow);border-radius:8px}
+    .topbar{position:sticky;top:10px;z-index:10;display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 14px;backdrop-filter:blur(14px)}
+    .nav{display:flex;flex-wrap:wrap;gap:8px}
+    .btn,.chip{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 14px;border:1px solid var(--line2);border-radius:8px;background:#fff;color:var(--text);text-decoration:none;cursor:pointer}
+    .btn.primary{background:linear-gradient(135deg,var(--green),var(--blue));color:#fff;border-color:transparent;font-weight:700}
+    .btn.active,.chip.active{background:rgba(14,143,104,.1);border-color:rgba(14,143,104,.34);color:#0a654d}
+    .brand{font-weight:800;color:#173e37}
+    .hero{padding:26px 28px;border-top:4px solid #213b37;display:grid;gap:18px}
+    .eyebrow{display:inline-flex;width:fit-content;align-items:center;gap:8px;padding:7px 11px;border-radius:999px;background:#f3f8f5;border:1px solid var(--line);color:#0a654d;font-size:12px;font-weight:800;letter-spacing:.04em}
+    .eyebrow:before{content:"";width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,var(--green),var(--blue))}
+    h1{margin:0;font-size:clamp(2rem,3.2vw,3.2rem);line-height:1.08;letter-spacing:0}
+    .hero p,.panel p{margin:0;color:#334b47;line-height:1.78}
+    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+    .stat{padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:#fff}
+    .stat span{display:block;color:var(--muted);font-size:12px}
+    .stat strong{display:block;margin-top:7px;font-size:1.35rem;color:#173e37;font-variant-numeric:tabular-nums}
+    .workbench{display:grid;grid-template-columns:1fr;gap:16px}
+    .panel{padding:18px;display:grid;gap:14px}
+    .section-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+    .section-head h2{margin:0;font-size:1.08rem;color:#173e37}
+    .section-head span{font-size:12px;color:var(--muted)}
+    .filters{display:grid;grid-template-columns:minmax(0,1fr) 170px 170px;gap:10px;align-items:end}
+    label{display:grid;gap:6px;color:var(--muted);font-size:12px}
+    input[type=search],select{width:100%;min-height:46px;border:1px solid var(--line2);border-radius:8px;background:#fff;color:var(--text);padding:11px 12px;outline:none}
+    input[type=search]:focus,select:focus{border-color:rgba(30,119,183,.5);box-shadow:0 0 0 3px rgba(30,119,183,.1)}
+    .summary{display:flex;flex-wrap:wrap;gap:8px}
+    .summary span{display:inline-flex;align-items:center;padding:8px 11px;border:1px solid var(--line);border-radius:999px;background:#fff;color:#35554e;font-size:13px}
+    .top-insight{display:grid;grid-template-columns:minmax(0,.92fr) minmax(260px,.38fr);gap:12px}
+    .insight-main,.insight-side{padding:14px 16px;border:1px solid var(--line);border-radius:8px;background:#fff;display:grid;gap:8px}
+    .insight-main strong,.insight-side strong{font-size:12px;letter-spacing:.04em;color:#0a654d}
+    .insight-main p,.insight-side p{font-size:14px;line-height:1.72}
+    .pattern-panel{border-top:4px solid #213b37}
+    .hero-patterns{display:grid;gap:10px;padding:14px;border:1px solid var(--line);border-radius:8px;background:#fff;box-shadow:var(--shadow);border-top:4px solid #213b37}
+    .pattern-list{display:grid;gap:10px}
+    .pattern-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+    .pattern{width:100%;padding:12px;border:1px solid rgba(200,79,66,.14);border-radius:8px;background:#fff;text-align:left;display:grid;gap:8px;color:inherit;cursor:pointer}
+    .pattern:hover{border-color:rgba(200,79,66,.28)}
+    .pattern-top{display:flex;justify-content:space-between;gap:10px;align-items:center}
+    .pattern-top strong{font-size:14px;color:#7b332b}
+    .pattern-top em{font-style:normal;color:#7b332b;font-size:12px;font-variant-numeric:tabular-nums}
+    .track{height:8px;border-radius:999px;background:rgba(200,79,66,.1);overflow:hidden}
+    .track i{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,var(--red),var(--amber))}
+    .pattern small{color:var(--muted);line-height:1.5}
+    .pattern-dates{font-size:12px;color:#35554e;line-height:1.5}
+    .records{display:grid;gap:12px}
+    .record{padding:16px;display:grid;gap:14px}
+    .record-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;flex-wrap:wrap}
+    .date-stack{display:grid;gap:6px}
+    .date-stack strong{font-size:1.12rem;color:#173e37}
+    .date-stack span{font-size:13px;color:var(--muted)}
+    .badges{display:flex;flex-wrap:wrap;gap:7px;justify-content:flex-end}
+    .badge{display:inline-flex;align-items:center;justify-content:center;padding:7px 10px;border:1px solid var(--line);border-radius:999px;background:#f8fbf8;color:#35554e;font-size:12px}
+    .badge.keep{background:rgba(14,143,104,.08);color:#0a654d}
+    .badge.improve{background:rgba(30,119,183,.08);color:#18527c}
+    .badge.start{background:rgba(169,120,18,.1);color:#7b5a10}
+    .badge.stop{background:rgba(200,79,66,.08);color:#7b332b}
+    .sections{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+    .block{padding:13px;border:1px solid var(--line);border-radius:8px;background:#fff;display:grid;gap:8px;align-content:start}
+    .block.keep{border-left:4px solid var(--green)}
+    .block.improve{border-left:4px solid var(--blue)}
+    .block.start{border-left:4px solid var(--amber)}
+    .block.stop{border-left:4px solid var(--red)}
+    .block h3{margin:0;font-size:13px;color:#173e37}
+    .daily-brief{padding:14px;border:1px solid rgba(16,74,63,.1);border-radius:8px;background:#f8fbf8;display:grid;gap:10px}
+    .daily-brief>strong{font-size:12px;letter-spacing:.04em;color:#0a654d}
+    .daily-conclusion{margin:0;color:#173e37;font-size:15px;font-weight:700;line-height:1.7}
+    .brief-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+    .brief-item{padding:10px;border:1px solid var(--line);border-radius:8px;background:#fff;display:grid;gap:5px}
+    .brief-item strong{font-size:12px;color:#173e37}
+    .brief-item span{font-size:13px;line-height:1.62;color:#334b47}
+    .brief-item small{color:var(--muted);font-size:12px;line-height:1.55}
+    .distill{padding:10px;border-radius:8px;background:#f8fbf8;border:1px solid rgba(16,74,63,.08);display:grid;gap:6px}
+    .distill strong{font-size:12px;color:#173e37}
+    .distill span{font-size:13px;line-height:1.62;color:#334b47}
+    details{display:grid;gap:8px}
+    summary{min-height:44px;display:flex;align-items:center;color:var(--muted);font-size:13px;cursor:pointer}
+    .block ul{margin:0;padding-left:18px;color:#24463f;font-size:14px;line-height:1.75}
+    .block li+li{margin-top:7px}
+    .block p{margin:0;color:#24463f;font-size:14px;line-height:1.75;white-space:normal;overflow-wrap:anywhere;word-break:break-word}
+    .pattern.keep{border-color:rgba(14,143,104,.16)}
+    .pattern.keep .track{background:rgba(14,143,104,.1)}
+    .pattern.keep .track i{background:linear-gradient(90deg,var(--green),#54b38a)}
+    .pattern.improve{border-color:rgba(30,119,183,.16)}
+    .pattern.improve .track{background:rgba(30,119,183,.1)}
+    .pattern.improve .track i{background:linear-gradient(90deg,var(--blue),#55a7d8)}
+    .pattern.start{border-color:rgba(169,120,18,.18)}
+    .pattern.start .track{background:rgba(169,120,18,.1)}
+    .pattern.start .track i{background:linear-gradient(90deg,var(--amber),#d5a83a)}
+    .pattern.stop{border-color:rgba(200,79,66,.18)}
+    .empty{padding:18px;border:1px dashed var(--line2);border-radius:8px;background:#fff;color:var(--muted);text-align:center}
+    .muted{color:var(--muted)}
+    @media (max-width:980px){.workbench,.filters,.stats,.sections,.brief-grid,.top-insight,.pattern-grid{grid-template-columns:1fr}.topbar,.record-head{align-items:flex-start}.badges{justify-content:flex-start}}
+    @media (max-width:720px){.shell{width:100%;padding:8px;margin:0}.hero,.panel,.record{padding:14px}.topbar{position:static}.nav{width:100%}.btn{flex:1 1 auto}.hero p{font-size:14px}.stat strong{font-size:1.16rem}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">A股复盘站 · 操作与情绪复盘</div>
+      <nav class="nav">
+        <a class="btn" href="index.html">返回首页</a>
+        <a class="btn" href="#records">查看日期记录</a>
+        <a class="btn primary" id="sourceLink" target="_blank" rel="noreferrer">打开源表格</a>
+      </nav>
+    </header>
+
+    <section class="hero-patterns">
+      <div class="section-head"><div><h2>KISS 重复频次</h2><p>先看最高频训练主题，点击后聚焦相关日期。</p></div></div>
+      <div class="pattern-list pattern-grid" id="heroPatternList"></div>
+    </section>
+
+    <section class="hero">
+      <div class="eyebrow">Google Sheets Module</div>
+      <div>
+        <h1>交易行为复盘雷达</h1>
+        <p>先看 KISS 高频模式，再看每日凝练；原始表格内容只作为可展开证据。</p>
+      </div>
+      <div class="top-insight" id="topInsight"></div>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section class="panel pattern-panel" id="patternOverview">
+      <div class="section-head"><div><h2>完整频次列表</h2><p>只从“改进”列抽取，每个日期同类主题最多命中一次；点击任意主题会直接聚焦相关日期。</p></div></div>
+      <div class="pattern-list pattern-grid" id="patternList"></div>
+    </section>
+
+    <section class="panel">
+      <div class="section-head">
+        <div><h2>筛选</h2><p>按日期、关键词、月份或 KISS 分类缩小范围；点击重复频次会自动聚焦同类记录。</p></div>
+        <span id="dataMeta"></span>
+      </div>
+      <div class="filters">
+        <label>搜索关键词<input id="searchInput" type="search" placeholder="例如：追高、卖飞、止损、情绪、龙头、预案" /></label>
+        <label>月份<select id="monthSelect"></select></label>
+        <label>KISS 分类<select id="kissSelect"><option value="all">全部 KISS</option><option value="keep">Keep 保持</option><option value="improve">Improve 改进</option><option value="start">Start 开始</option><option value="stop">Stop 停止</option></select></label>
+      </div>
+      <div class="summary" id="activeSummary"></div>
+    </section>
+
+    <main class="workbench">
+      <section class="panel" id="records">
+        <div class="section-head"><div><h2>按日期展开</h2><p>每一天只展示“改进”列，并自动拆成 Keep / Improve / Start / Stop。</p></div><span id="resultCount"></span></div>
+        <div class="records" id="recordList"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="operation-emotion-data.js"></script>
+  <script>
+    const data = globalThis.OPERATION_EMOTION_DATA || { records: [] };
+    const allRecords = Array.isArray(data.records) ? data.records : [];
+    const records = allRecords.filter(record => String(record.improvement || '').trim());
+    const kissSections = [
+      { key: 'keep', code: 'Keep', label: 'Keep 保持', className: 'keep' },
+      { key: 'improve', code: 'Improve', label: 'Improve 改进', className: 'improve' },
+      { key: 'start', code: 'Start', label: 'Start 开始', className: 'start' },
+      { key: 'stop', code: 'Stop', label: 'Stop 停止', className: 'stop' }
+    ];
+    const kissLabel = Object.fromEntries(kissSections.map(section => [section.key, section.code]));
+    const kissPatterns = [
+      { id: 'keep-core', category: 'keep', label: '主线核心 / 龙头审美', keywords: ['主线','龙头','核心','辨识度','人气','优质标的','题材逻辑'] },
+      { id: 'keep-risk', category: 'keep', label: '风控 / 仓位意识', keywords: ['风控','仓位','轻仓','回撤','止盈','止损','风险','条件单'] },
+      { id: 'keep-review', category: 'keep', label: '复盘自省 / 情绪稳定', keywords: ['复盘','自省','情绪','心态','冷静','理性','不慌','平稳'] },
+      { id: 'keep-rhythm', category: 'keep', label: '盘感 / 节奏判断', keywords: ['节奏','盘感','分歧','回流','承接','周期','市场风格','板块'] },
+
+      { id: 'improve-sell', category: 'improve', label: '卖点 / 止盈止损', keywords: ['卖点','卖飞','止盈','止损','割肉','清仓','离场','利润回吐','回撤','硬扛'] },
+      { id: 'improve-exec', category: 'improve', label: '执行 / 纪律落地', keywords: ['执行','纪律','知行','规则','条件单','模式','落实','落地','不统一'] },
+      { id: 'improve-emotion', category: 'improve', label: '情绪 / 侥幸 / 焦虑', keywords: ['情绪','侥幸','冲动','幻想','犹豫','焦虑','恐慌','心态','懊悔'] },
+      { id: 'improve-follow', category: 'improve', label: '跟风 / 杂毛 / 非核心', keywords: ['跟风','杂毛','后排','中位','无辨识度','非核心','弱势','次强'] },
+      { id: 'improve-rhythm', category: 'improve', label: '盘中节奏 / 择时', keywords: ['节奏','择时','时点','分时','承接','回流','低吸','打板','追高'] },
+
+      { id: 'start-plan', category: 'start', label: '预案 / 盘前规则', keywords: ['预案','盘前','计划','闭环','规则','记录','核查','梳理'] },
+      { id: 'start-risk', category: 'start', label: '条件单 / 分批风控', keywords: ['条件单','止损位','风控','仓位','分批','减仓','止盈','避险'] },
+      { id: 'start-core', category: 'start', label: '聚焦主线核心', keywords: ['主线','核心','龙头','辨识度','人气','标的池','筛选'] },
+      { id: 'start-training', category: 'start', label: '专项练习 / 复盘记录', keywords: ['练习','复盘','记录','训练','打磨','肌肉记忆'] },
+
+      { id: 'stop-follow', category: 'stop', label: '停止杂毛 / 跟风 / 模式外', keywords: ['杂毛','跟风','后排','非核心','模式外','无辨识度','次强'] },
+      { id: 'stop-chase', category: 'stop', label: '停止追高 / 半路 / 盲目接力', keywords: ['追高','半路','盲目','打板','接力','加仓','满仓'] },
+      { id: 'stop-hold', category: 'stop', label: '停止硬扛 / 格局 / 侥幸', keywords: ['硬扛','格局','侥幸','幻想','赌','死拿','拖延','扛亏'] },
+      { id: 'stop-emotion', category: 'stop', label: '停止情绪化 / 分心', keywords: ['情绪化','冲动','恐慌','分心','犹豫','焦虑'] }
+    ];
+    const state = { query: '', month: 'all', kiss: 'all', pattern: '' };
+
+    const $ = selector => document.querySelector(selector);
+    const esc = value => String(value ?? '')
+      .replaceAll('&','&amp;')
+      .replaceAll('<','&lt;')
+      .replaceAll('>','&gt;')
+      .replaceAll('"','&quot;')
+      .replaceAll("'",'&#39;');
+    const text = (value, limit = 80) => {
+      const raw = String(value ?? '').replace(/\s+/g, ' ').trim();
+      return raw.length > limit ? `${raw.slice(0, limit - 1)}…` : raw;
+    };
+    const cleanLine = value => String(value || '')
+      .replace(/^[\\-•·]\s*/, '')
+      .replace(/^\\d+[.、．]\s*/, '')
+      .trim();
+    const headingKey = line => {
+      const value = String(line || '').trim();
+      if (/^(?:[一二三四五六七八九十]+[、.．]\s*|\d+[.、．]\s*)?Keep\b/i.test(value)) return 'keep';
+      if (/^(?:[一二三四五六七八九十]+[、.．]\s*|\d+[.、．]\s*)?Improve\b/i.test(value)) return 'improve';
+      if (/^(?:[一二三四五六七八九十]+[、.．]\s*|\d+[.、．]\s*)?Start\b/i.test(value)) return 'start';
+      if (/^(?:[一二三四五六七八九十]+[、.．]\s*|\d+[.、．]\s*)?Stop\b/i.test(value)) return 'stop';
+      return '';
+    };
+    const kissCache = new Map();
+    const kissParts = record => {
+      if (kissCache.has(record.date_iso)) return kissCache.get(record.date_iso);
+      const parts = { keep: [], improve: [], start: [], stop: [] };
+      let current = '';
+      String(record.improvement || '').replaceAll('\r', '').split('\n').forEach(rawLine => {
+        const line = rawLine.trim();
+        if (!line) return;
+        const heading = headingKey(line);
+        if (heading) {
+          current = heading;
+          return;
+        }
+        if (/^核心凝练/.test(line)) return;
+        if (current) {
+          const cleaned = cleanLine(line);
+          if (cleaned) parts[current].push(cleaned);
+        }
+      });
+      if (!Object.values(parts).some(lines => lines.length)) {
+        parts.improve = String(record.improvement || '')
+          .replaceAll('\r', '')
+          .split('\n')
+          .map(cleanLine)
+          .filter(Boolean);
+      }
+      kissCache.set(record.date_iso, parts);
+      return parts;
+    };
+    const sectionText = (record, key) => (kissParts(record)[key] || []).join('\n');
+    const recordText = record => kissSections.map(section => sectionText(record, section.key)).join('\n');
+    const hasKissSection = (record, key) => (kissParts(record)[key] || []).length > 0;
+    const matchedLines = (record, pattern) => (kissParts(record)[pattern.category] || [])
+      .filter(line => pattern.keywords.some(keyword => line.includes(keyword)));
+    const matchesPattern = (record, pattern) => matchedLines(record, pattern).length > 0;
+    const formatLines = lines => {
+      const items = Array.isArray(lines) ? lines.filter(Boolean) : [];
+      if (!items.length) return '<p class="muted">未填写</p>';
+      return `<ul>${items.map(line => `<li>${esc(line)}</li>`).join('')}</ul>`;
+    };
+    const hasAny = (lines, keywords) => lines.some(line => keywords.some(keyword => line.includes(keyword)));
+    const categorySummary = (lines, key) => {
+      const items = Array.isArray(lines) ? lines.filter(Boolean) : [];
+      if (!items.length) return '未形成明确条目';
+      const rules = {
+        keep: [
+          [['主线','龙头','核心','辨识度','题材逻辑'], '保持主线核心和高辨识度审美'],
+          [['风控','仓位','止盈','止损','回撤'], '继续把仓位和风控前置'],
+          [['复盘','自省','情绪','冷静','理性'], '保留盘后自省和情绪稳定'],
+          [['节奏','分歧','回流','承接','周期'], '延续对节奏、承接和周期的感知']
+        ],
+        improve: [
+          [['卖点','卖飞','止盈','止损','清仓','利润回吐','回撤'], '重点修正卖点、分批止盈和离场纪律'],
+          [['执行','纪律','知行','规则','落地','条件单'], '把规则落到临盘动作，减少知行不一'],
+          [['情绪','侥幸','冲动','幻想','犹豫','焦虑'], '压低侥幸和冲动，避免被分时带偏'],
+          [['跟风','杂毛','后排','中位','无辨识度','次强'], '减少后排杂毛和非核心试错'],
+          [['节奏','择时','时点','低吸','打板','追高'], '提高盘中择时和买卖点精度']
+        ],
+        start: [
+          [['预案','盘前','计划','闭环','规则','核查'], '建立盘前预案和执行闭环'],
+          [['条件单','止损位','风控','仓位','分批','减仓'], '新增条件单、止损位和分批风控'],
+          [['主线','核心','龙头','辨识度','标的池'], '用核心标的池约束出手范围'],
+          [['练习','复盘','记录','训练','肌肉记忆'], '做专项练习，把反思沉淀成动作']
+        ],
+        stop: [
+          [['杂毛','跟风','后排','非核心','模式外','无辨识度','次强'], '停止模式外、后排和无辨识度交易'],
+          [['追高','半路','盲目','接力','加仓','满仓'], '停止追高半路和粗糙加仓'],
+          [['硬扛','格局','侥幸','幻想','赌','死拿','拖延'], '停止硬扛、幻想和赌反包'],
+          [['情绪化','冲动','恐慌','分心','犹豫','焦虑'], '停止情绪化操作和盯盘分心']
+        ]
+      };
+      const matched = (rules[key] || [])
+        .filter(([keywords]) => hasAny(items, keywords))
+        .map(([, summary]) => summary);
+      return [...new Set(matched)].slice(0, 2).join('；') || text(items[0], 64);
+    };
+    const actionWords = ['必须','不要','停止','避免','减少','提高','建立','执行','纪律','止损','止盈','预案','条件单','仓位','分批','核心','主线','情绪','侥幸'];
+    const keySentence = lines => {
+      const items = Array.isArray(lines) ? lines.filter(Boolean) : [];
+      if (!items.length) return '';
+      return items
+        .map(line => ({
+          line,
+          score: actionWords.reduce((sum, word) => sum + (line.includes(word) ? 1 : 0), 0)
+        }))
+        .sort((a, b) => b.score - a.score || b.line.length - a.line.length)[0].line;
+    };
+    const recordBrief = record => {
+      const parts = kissParts(record);
+      return kissSections.map(section => ({
+        ...section,
+        summary: categorySummary(parts[section.key], section.key),
+        sentence: keySentence(parts[section.key])
+      }));
+    };
+    const dailyConclusion = record => {
+      const brief = recordBrief(record);
+      const improve = brief.find(section => section.key === 'improve')?.summary || '';
+      const stop = brief.find(section => section.key === 'stop')?.summary || '';
+      const start = brief.find(section => section.key === 'start')?.summary || '';
+      const keep = brief.find(section => section.key === 'keep')?.summary || '';
+      const anchors = [improve, stop, start, keep].filter(item => item && item !== '未形成明确条目');
+      const concise = anchors.map(item => item.split('；')[0]).slice(0, 2);
+      return concise.length ? `今日核心：${concise.join('；')}。` : '今日尚未形成明确操作结论。';
+    };
+    const renderKissBlock = (section, lines) => {
+      const items = Array.isArray(lines) ? lines.filter(Boolean) : [];
+      const summary = categorySummary(items, section.key);
+      const details = items.length
+        ? `<details ${state.query || state.pattern ? 'open' : ''}><summary>展开原文 ${items.length} 条</summary>${formatLines(items)}</details>`
+        : '<p class="muted">未填写</p>';
+      return `<section class="block ${section.className}">
+        <h3>${esc(section.label)}</h3>
+        <div class="distill"><strong>凝练</strong><span>${esc(summary)}</span></div>
+        ${details}
+      </section>`;
+    };
+    const months = [...new Set(records.map(record => record.date_iso.slice(0, 7)))].sort((a, b) => b.localeCompare(a));
+
+    function filteredRecords() {
+      const query = state.query.trim().toLowerCase();
+      const activePattern = kissPatterns.find(pattern => pattern.id === state.pattern);
+      return records.filter(record => {
+        const inMonth = state.month === 'all' || record.date_iso.startsWith(state.month);
+        const inKiss = state.kiss === 'all' || hasKissSection(record, state.kiss);
+        const searchable = state.kiss === 'all' ? recordText(record) : sectionText(record, state.kiss);
+        const inQuery = !query || [
+          record.date_iso,
+          record.date_display,
+          record.date_label,
+          record.weekday,
+          searchable
+        ].join(' ').toLowerCase().includes(query);
+        const inPattern = !activePattern || matchesPattern(record, activePattern);
+        return inMonth && inKiss && inQuery && inPattern;
+      });
+    }
+
+    function patternStats(items = records) {
+      const definitions = state.kiss === 'all'
+        ? kissPatterns
+        : kissPatterns.filter(pattern => pattern.category === state.kiss);
+      const maxBase = Math.max(items.length, 1);
+      return definitions.map(pattern => {
+        const matches = items.filter(record => matchesPattern(record, pattern));
+        return {
+          ...pattern,
+          count: matches.length,
+          percent: Math.round(matches.length / maxBase * 100),
+          latest: matches[0],
+          matches,
+          sample: matches[0] ? matchedLines(matches[0], pattern)[0] : ''
+        };
+      }).filter(item => item.count).sort((a, b) => b.count - a.count || kissLabel[a.category].localeCompare(kissLabel[b.category]) || a.label.localeCompare(b.label, 'zh-CN'));
+    }
+    const patternSummary = item => {
+      const messages = {
+        'keep-core': '优势在于能识别主线核心，但要继续把审美用在真正有辨识度的票上。',
+        'keep-risk': '已有风控意识，接下来要把仓位、条件单和止损动作继续固定。',
+        'keep-review': '复盘自省和情绪稳定是优势，需要保留为每日交易前后的固定动作。',
+        'keep-rhythm': '盘感和节奏判断有基础，关键是把判断转成明确买卖动作。',
+        'improve-sell': '核心问题是卖点和止盈止损不稳定，容易卖飞、硬扛或利润回吐。',
+        'improve-exec': '主矛盾是知行不一，规则知道但临盘执行不够硬。',
+        'improve-emotion': '情绪、侥幸和焦虑会干扰操作，需要先降噪再决策。',
+        'improve-follow': '容易被后排、杂毛、非核心机会分散注意力，要回到主线核心。',
+        'improve-rhythm': '盘中择时和分时节奏还需打磨，避免判断对但买卖点错。',
+        'start-plan': '需要把盘前预案、买卖点和风险线写清楚，再进入临盘。',
+        'start-risk': '下一步重点是条件单、分批止盈和仓位风控前置。',
+        'start-core': '行动方向是建立核心标的池，用主线和辨识度筛掉噪音。',
+        'start-training': '需要把复盘变成专项训练，形成可重复的交易动作。',
+        'stop-follow': '必须停止模式外、后排和无辨识度交易，这是减少回撤的第一刀。',
+        'stop-chase': '必须停止追高、半路和粗糙加仓，等确认而不是抢情绪。',
+        'stop-hold': '必须停止硬扛、幻想和赌反包，错了就认，弱了就走。',
+        'stop-emotion': '必须停止情绪化和分心操作，先稳定注意力再出手。'
+      };
+      return messages[item.id] || `${kissLabel[item.category]} 里反复出现 ${item.label}，需要持续跟踪。`;
+    };
+    const patternCards = (stats, maxCount) => stats.length ? stats.map(item => {
+      const width = Math.max(8, Math.round(item.count / maxCount * 100));
+      const dates = (item.matches || [])
+        .slice(0, 4)
+        .map(record => record.date_label)
+        .join(' / ');
+      return `<button class="pattern ${esc(item.category)} ${state.pattern === item.id ? 'active' : ''}" type="button" data-pattern="${esc(item.id)}">
+        <span class="pattern-top"><strong>${esc(kissLabel[item.category])} · ${esc(item.label)}</strong><em>${item.count} 天 / ${item.percent}%</em></span>
+        <span class="track" aria-hidden="true"><i style="width:${width}%"></i></span>
+        <small>${esc(patternSummary(item))}</small>
+        <span class="pattern-dates">最近日期：${esc(dates || item.latest?.date_display || '暂无')}</span>
+      </button>`;
+    }).join('') : '<div class="empty">当前筛选下没有命中 KISS 高频主题。</div>';
+
+    function renderStats(items) {
+      const top = patternStats(records)[0];
+      const currentTop = patternStats(items).slice(0, 3);
+      const complete = records.filter(record => kissSections.every(section => hasKissSection(record, section.key))).length;
+      $('#stats').innerHTML = [
+        ['改进日期', records.length],
+        ['KISS完整', complete],
+        ['Improve样本', records.filter(record => hasKissSection(record, 'improve')).length],
+        ['最高频重复', top ? `${kissLabel[top.category]} · ${top.label} ${top.count}` : '暂无']
+      ].map(([label, value]) => `<div class="stat"><span>${esc(label)}</span><strong>${esc(value)}</strong></div>`).join('');
+      $('#dataMeta').textContent = `${data.source_name || 'Google Sheets'} · 导出 ${data.exported_at || ''}`;
+      const sourceLink = $('#sourceLink');
+      sourceLink.href = data.source_url || '#';
+      $('#topInsight').innerHTML = currentTop.length ? `
+        <section class="insight-main">
+          <strong>本屏先看</strong>
+          <p>当前最高频的训练主题是 ${esc(kissLabel[currentTop[0].category])} · ${esc(currentTop[0].label)}，命中 ${currentTop[0].count} 天。先把这个问题当成今天交易前的第一条提醒。</p>
+        </section>
+        <section class="insight-side">
+          <strong>前三重复</strong>
+          <p>${currentTop.map(item => `${kissLabel[item.category]} · ${item.label} ${item.count}天`).join(' / ')}</p>
+        </section>
+      ` : '<div class="empty">当前筛选下暂时没有可汇总的 KISS 主题。</div>';
+    }
+
+    function renderPatterns(items) {
+      const stats = patternStats(items);
+      const maxCount = Math.max(...stats.map(item => item.count), 1);
+      $('#heroPatternList').innerHTML = patternCards(stats.slice(0, 4), maxCount);
+      $('#patternList').innerHTML = patternCards(stats, maxCount);
+    }
+
+    function renderRecords(items) {
+      $('#resultCount').textContent = `${items.length} 条记录`;
+      $('#recordList').innerHTML = items.length ? items.map(record => {
+        const parts = kissParts(record);
+        const visibleSections = kissSections.filter(section => state.kiss === 'all' || state.kiss === section.key);
+        const brief = recordBrief(record).filter(section => state.kiss === 'all' || state.kiss === section.key);
+        const chips = kissSections.filter(section => hasKissSection(record, section.key))
+          .map(section => `<span class="badge ${section.className}">${section.label}</span>`).join('');
+        return `<article class="record">
+          <div class="record-head">
+            <div class="date-stack"><strong>${esc(record.date_display)} ${esc(record.weekday || '')}</strong><span>${esc(record.date_label)}</span></div>
+            <div class="badges">${chips || '<span class="badge">空记录</span>'}</div>
+          </div>
+          <div class="daily-brief">
+            <strong>当日凝练</strong>
+            <p class="daily-conclusion">${esc(dailyConclusion(record))}</p>
+            <div class="brief-grid">
+              ${brief.map(section => `<div class="brief-item ${section.className}"><strong>${esc(section.code)}</strong><span>${esc(section.summary)}</span>${section.sentence ? `<small>${esc(text(section.sentence, 72))}</small>` : ''}</div>`).join('')}
+            </div>
+          </div>
+          <div class="sections">
+            ${visibleSections.map(section => renderKissBlock(section, parts[section.key])).join('')}
+          </div>
+        </article>`;
+      }).join('') : '<div class="empty">当前筛选没有匹配记录。</div>';
+    }
+
+    function renderSummary(items) {
+      const activePattern = kissPatterns.find(pattern => pattern.id === state.pattern);
+      const activeKiss = kissSections.find(section => section.key === state.kiss);
+      const tags = [
+        `当前 ${items.length} / ${records.length} 条`,
+        state.month === 'all' ? '全部月份' : state.month.replace('-', '.'),
+        activeKiss ? activeKiss.label : '全部 KISS',
+        state.query ? `搜索：${state.query}` : '',
+        activePattern ? `重复：${kissLabel[activePattern.category]} · ${activePattern.label}` : ''
+      ].filter(Boolean);
+      $('#activeSummary').innerHTML = tags.map(tag => `<span>${esc(tag)}</span>`).join('');
+    }
+
+    function render() {
+      const items = filteredRecords();
+      renderStats(items);
+      renderSummary(items);
+      renderPatterns(items);
+      renderRecords(items);
+    }
+
+    function init() {
+      $('#monthSelect').innerHTML = '<option value="all">全部月份</option>' + months.map(month => `<option value="${esc(month)}">${esc(month.replace('-', '.'))}</option>`).join('');
+      $('#searchInput').addEventListener('input', event => {
+        state.query = event.target.value;
+        render();
+      });
+      $('#monthSelect').addEventListener('change', event => {
+        state.month = event.target.value;
+        render();
+      });
+      $('#kissSelect').addEventListener('change', event => {
+        state.kiss = event.target.value;
+        state.pattern = '';
+        render();
+      });
+      document.addEventListener('click', event => {
+        const button = event.target.closest('[data-pattern]');
+        if (!button) return;
+        state.pattern = state.pattern === button.dataset.pattern ? '' : button.dataset.pattern;
+        render();
+        setTimeout(() => {
+          const target = document.getElementById('records');
+          if (!target) return;
+          const root = document.documentElement;
+          const previousBehavior = root.style.scrollBehavior;
+          root.style.scrollBehavior = 'auto';
+          window.scrollTo(0, target.getBoundingClientRect().top + window.scrollY - 76);
+          requestAnimationFrame(() => {
+            root.style.scrollBehavior = previousBehavior;
+          });
+        }, 0);
+      });
+      render();
+    }
+
+    init();
+  </script>
+</body>
+</html>
