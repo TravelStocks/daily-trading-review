@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-19 00:01:10",
+  "generated_at": "2026-05-19 23:29:32",
   "site_dir": "C:\\Users\\abcha\\Desktop\\A股\\A股复盘站",
   "index_path": "C:\\Users\\abcha\\Desktop\\A股\\A股复盘站\\index.html",
   "desktop_entry": "C:\\Users\\abcha\\Desktop\\A股\\A股复盘站-首页.html",
-  "record_count": 18,
+  "record_count": 19,
   "records": {
     "2026-03-19": {
       "title": "A股超短全复盘（2026年3月19日）——板块+标的+情绪+操作全梳理",
@@ -126,8 +126,15 @@
     },
     "2026-05-18": {
       "title": "章盟主式超短全景复盘（2026.5.18 周一）+ 5.19个股板块预案",
-      "source_docx": "C:\\Users\\abcha\\Downloads\\章盟主式超短全景复盘（2026.5.18 周一）+ 5.19个股板块预案.docx",
+      "source_docx": "C:\\Users\\abcha\\Desktop\\章盟主式超短全景复盘（2026.5.18 周一）+ 5.19个股板块预案.docx",
       "page_path": "pages\\章盟主式超短全景复盘（2026.5.18 周一）+ 5.19个股板块预案.html",
+      "missing_count": 0,
+      "missing_preview": []
+    },
+    "2026-05-19": {
+      "title": "章盟主式超短全景复盘（2026.05.19 周二）+ 5.20 个股板块预案",
+      "source_docx": "C:\\Users\\abcha\\Downloads\\章盟主式超短全景复盘（2026.05.19 周二）+ 5.20 个股板块预案.docx",
+      "page_path": "pages\\章盟主式超短全景复盘（2026.05.19 周二）+ 5.20 个股板块预案.html",
       "missing_count": 0,
       "missing_preview": []
     }
