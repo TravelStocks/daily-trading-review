@@ -158,6 +158,199 @@
       <div class="metrics"><div class="metric"><span>情绪数值</span><strong>4000</strong></div><div class="metric"><span>涨停家数</span><strong>2. 赚钱主线（按强度排序）
 1. 算力（含液冷、数据中心、算电协同）——绝对主线</strong></div><div class="metric"><span>内容块</span><strong>128</strong></div><div class="metric"><span>表格</span><strong>2</strong></div></div>
     </section>
+    <section class="limit-up-calculator-panel" data-limit-up-calculator>
+  <style>
+    .limit-up-calculator-panel{position:relative;overflow:hidden;padding:24px;border-radius:24px;background:linear-gradient(135deg,rgba(9,43,38,.96),rgba(10,83,73,.94) 52%,rgba(20,102,132,.92));border:1px solid rgba(255,255,255,.22);box-shadow:0 24px 60px rgba(6,42,38,.18);color:#f3fffb}
+    .limit-up-calculator-panel:before{content:"";position:absolute;inset:-28% auto auto -14%;width:360px;height:360px;border-radius:999px;background:radial-gradient(circle,rgba(77,214,162,.24),transparent 68%);pointer-events:none}
+    .limit-up-calculator-panel:after{content:"";position:absolute;right:-90px;bottom:-110px;width:320px;height:320px;border-radius:999px;background:radial-gradient(circle,rgba(72,174,228,.22),transparent 70%);pointer-events:none}
+    .limit-up-calculator-inner{position:relative;z-index:1;display:grid;gap:18px}
+    .limit-up-calculator-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;flex-wrap:wrap}
+    .limit-up-calculator-kicker{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);font-size:12px;font-weight:800;letter-spacing:.08em;color:#bff8e1}
+    .limit-up-calculator-kicker:before{content:"";width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,#5df0af,#60c3ff);box-shadow:0 0 0 6px rgba(93,240,175,.1)}
+    .limit-up-calculator-head h2{margin:12px 0 8px;font-size:clamp(1.45rem,2.4vw,2.1rem);line-height:1.22;color:#fff}
+    .limit-up-calculator-head p{margin:0;max-width:850px;color:rgba(243,255,251,.78);line-height:1.8;font-size:14px}
+    .limit-up-calculator-source{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#eafff6;text-decoration:none;font-size:13px;font-weight:800;white-space:nowrap}
+    .limit-up-calculator-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .limit-up-calc-card{display:grid;gap:14px;padding:18px;border-radius:20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px)}
+    .limit-up-calc-card h3{margin:0;color:#fff;font-size:1.03rem}
+    .limit-up-calc-card p{margin:0;color:rgba(243,255,251,.72);font-size:13px;line-height:1.7}
+    .limit-up-calc-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .limit-up-calc-field{display:grid;gap:6px}
+    .limit-up-calc-field label{font-size:12px;color:#bff8e1;font-weight:800}
+    .limit-up-calc-field input{width:100%;border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:12px 13px;background:rgba(255,255,255,.92);color:#123b36;font-size:14px;outline:none}
+    .limit-up-calc-field input:focus{border-color:#5df0af;box-shadow:0 0 0 4px rgba(93,240,175,.14)}
+    .limit-up-calc-output{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .limit-up-calc-metric{padding:12px;border-radius:14px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.14)}
+    .limit-up-calc-metric span{display:block;font-size:12px;color:rgba(243,255,251,.7)}
+    .limit-up-calc-metric strong{display:block;margin-top:4px;color:#fff;font-size:1.12rem}
+    .limit-up-calc-metric.full{grid-column:1/-1}
+    .limit-up-calc-status{padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.16);color:#f5fffb;font-size:13px;line-height:1.72}
+    .limit-up-calc-status strong{color:#9ff2cd}
+    .limit-up-calculator-note{padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.1);border:1px dashed rgba(255,255,255,.22);color:rgba(243,255,251,.7);font-size:12px;line-height:1.75}
+    @media (max-width:980px){.limit-up-calculator-grid,.limit-up-calc-form,.limit-up-calc-output{grid-template-columns:1fr}.limit-up-calculator-head{display:grid}.limit-up-calculator-source{width:fit-content}}
+  </style>
+  <div class="limit-up-calculator-inner">
+    <div class="limit-up-calculator-head">
+      <div>
+        <span class="limit-up-calculator-kicker">Limit-Up Calculator</span>
+        <h2>连板开盘风控与冲高回落止盈计算器</h2>
+        <p>模型来自 abchaoming1 的 limit-up-calculators-skill，主要用于三板及以上连板龙头的开盘下杀线、振幅阈值、条件单保护价，以及第一次冲高后的安全回落线。</p>
+      </div>
+      <a class="limit-up-calculator-source" href="https://github.com/abchaoming1/limit-up-calculators-skill" target="_blank" rel="noreferrer">查看模型来源</a>
+    </div>
+    <div class="limit-up-calculator-grid">
+      <article class="limit-up-calc-card">
+        <div>
+          <h3>开盘条件计算</h3>
+          <p>输入竞价开盘涨幅，快速得到当日振幅阈值、最低下杀线和条件单保护价。</p>
+        </div>
+        <div class="limit-up-calc-form">
+          <div class="limit-up-calc-field"><label>开盘涨幅 x（%）</label><input data-open-pct type="number" step="0.1" value="5" /></div>
+          <div class="limit-up-calc-field"><label>昨日收盘价（可选）</label><input data-open-prev-close type="number" step="0.01" placeholder="如 10.00" /></div>
+        </div>
+        <div class="limit-up-calc-output" data-open-output></div>
+        <div class="limit-up-calc-status" data-open-status></div>
+      </article>
+      <article class="limit-up-calc-card">
+        <div>
+          <h3>第一次冲高回落止盈</h3>
+          <p>输入开盘涨幅、第一次冲高点和第一次回落点，判断承接强弱与硬止盈线。</p>
+        </div>
+        <div class="limit-up-calc-form">
+          <div class="limit-up-calc-field"><label>开盘涨幅 x（%）</label><input data-profit-open-pct type="number" step="0.1" value="3" /></div>
+          <div class="limit-up-calc-field"><label>第一次冲高 h（%）</label><input data-profit-high-pct type="number" step="0.1" value="9" /></div>
+          <div class="limit-up-calc-field"><label>第一次回落 p（可选，%）</label><input data-profit-pullback-pct type="number" step="0.1" placeholder="如 7" /></div>
+          <div class="limit-up-calc-field"><label>昨日收盘价（可选）</label><input data-profit-prev-close type="number" step="0.01" placeholder="如 10.00" /></div>
+        </div>
+        <div class="limit-up-calc-output" data-profit-output></div>
+        <div class="limit-up-calc-status" data-profit-status></div>
+      </article>
+    </div>
+    <div class="limit-up-calculator-note">提示：所有百分比都按“百分数单位”输入，例如 5 代表 5%。模型是风控辅助，不是连板确定性预测；若当天爆量分歧极大，要先标记为例外日再判断阈值。</div>
+  </div>
+</section>
+<script>
+(function(root){
+  if(!root) return;
+  const rows=[
+    {open:10,minLow:5.0,openToLow:5.0,amp:5.0},
+    {open:9,minLow:4.2,openToLow:4.8,amp:5.8},
+    {open:8,minLow:3.6,openToLow:4.4,amp:6.4},
+    {open:7,minLow:3.2,openToLow:3.8,amp:6.8},
+    {open:6,minLow:2.6,openToLow:3.4,amp:7.4},
+    {open:5,minLow:1.6,openToLow:3.4,amp:8.4},
+    {open:4,minLow:0.8,openToLow:3.2,amp:9.2},
+    {open:3,minLow:0.0,openToLow:3.0,amp:10.0},
+    {open:2,minLow:-0.4,openToLow:2.4,amp:10.4},
+    {open:1,minLow:-1.2,openToLow:2.2,amp:11.2},
+    {open:0,minLow:-1.6,openToLow:1.6,amp:11.6},
+    {open:-1,minLow:-2.0,openToLow:1.0,amp:12.0},
+    {open:-2,minLow:-2.6,openToLow:0.6,amp:12.6}
+  ];
+  const $=selector=>root.querySelector(selector);
+  const $$=selector=>Array.from(root.querySelectorAll(selector));
+  const clamp=(value,min,max)=>Math.min(Math.max(value,min),max);
+  const num=input=>{const value=Number(input.value);return Number.isFinite(value)?value:undefined};
+  const fmt=(value,digits=2)=>value===undefined||value===null||Number.isNaN(value)?"--":Number(value).toFixed(digits).replace(/\.00$/,"");
+  const pct=value=>`${fmt(value)}%`;
+  const price=value=>value===undefined?"--":fmt(value,2);
+  function interpolate(openPct){
+    const sorted=[...rows].sort((a,b)=>a.open-b.open);
+    const clampedOpenPct=clamp(openPct,sorted[0].open,sorted[sorted.length-1].open);
+    const exact=sorted.find(row=>row.open===clampedOpenPct);
+    if(exact) return {...exact,inputOpenPct:openPct,clampedOpenPct,boundaryClamped:clampedOpenPct!==openPct};
+    for(let i=0;i<sorted.length-1;i+=1){
+      const lo=sorted[i],hi=sorted[i+1];
+      if(clampedOpenPct>=lo.open&&clampedOpenPct<=hi.open){
+        const t=(clampedOpenPct-lo.open)/(hi.open-lo.open);
+        return {
+          inputOpenPct:openPct,
+          clampedOpenPct,
+          boundaryClamped:clampedOpenPct!==openPct,
+          open:clampedOpenPct,
+          minLow:lo.minLow+(hi.minLow-lo.minLow)*t,
+          openToLow:lo.openToLow+(hi.openToLow-lo.openToLow)*t,
+          amp:lo.amp+(hi.amp-lo.amp)*t
+        };
+      }
+    }
+    return {...rows[0],inputOpenPct:openPct,clampedOpenPct:openPct,boundaryClamped:false};
+  }
+  function openingConditions(openPct,prevClose){
+    const line=interpolate(openPct);
+    return {
+      line,
+      protectivePrice:prevClose===undefined?undefined:prevClose*(1+line.minLow/100)
+    };
+  }
+  function metric(label,value,full=false){
+    return `<div class="limit-up-calc-metric ${full?"full":""}"><span>${label}</span><strong>${value}</strong></div>`;
+  }
+  function updateOpen(){
+    const openPct=num($("[data-open-pct]"));
+    const prevClose=num($("[data-open-prev-close]"));
+    const output=$("[data-open-output]");
+    const status=$("[data-open-status]");
+    if(openPct===undefined){output.innerHTML="";status.textContent="请输入有效的开盘涨幅。";return;}
+    const result=openingConditions(openPct,prevClose);
+    const line=result.line;
+    output.innerHTML=[
+      metric("振幅阈值",pct(line.amp)),
+      metric("最低下杀线",pct(line.minLow)),
+      metric("开盘到低点容忍",pct(line.openToLow)),
+      metric("条件单保护价",price(result.protectivePrice))
+    ].join("");
+    status.innerHTML=`开盘涨幅 <strong>${pct(openPct)}</strong> 时，盘中低点最好不要跌破 <strong>${pct(line.minLow)}</strong>。${line.boundaryClamped?`输入超出 [-2%,10%]，已按 <strong>${pct(line.clampedOpenPct)}</strong> 边界保护计算。`:""}`;
+  }
+  function profitModel(openPct,highPct,pullbackPct,prevClose){
+    const opening=openingConditions(openPct,prevClose);
+    const impulsePct=highPct-openPct;
+    if(impulsePct<=0) return {valid:false,reason:"第一次冲高点必须高于开盘涨幅。",opening};
+    const alphaSafe=clamp(0.45-0.015*Math.max(openPct,0),0.28,0.45);
+    const alphaHard=clamp(0.62-0.012*Math.max(openPct,0),0.45,0.62);
+    const anchorBuffer=clamp(0.15*impulsePct,0.3,1.2);
+    const safePullbackLinePct=highPct-alphaSafe*impulsePct;
+    const hardByImpulse=highPct-alphaHard*impulsePct;
+    const hardByOpenAnchor=openPct-anchorBuffer;
+    const hardStopLinePct=Math.max(hardByImpulse,hardByOpenAnchor,opening.line.minLow);
+    const safePrice=prevClose===undefined?undefined:prevClose*(1+safePullbackLinePct/100);
+    const hardStopPrice=prevClose===undefined?undefined:prevClose*(1+hardStopLinePct/100);
+    let status;
+    let pullbackDepthPct;
+    let pullbackRatio;
+    if(pullbackPct!==undefined){
+      pullbackDepthPct=highPct-pullbackPct;
+      pullbackRatio=pullbackDepthPct/impulsePct;
+      if(pullbackPct>=safePullbackLinePct) status="强承接";
+      else if(pullbackPct>=hardStopLinePct) status="偏弱观察";
+      else status="不能接受";
+    }
+    return {valid:true,impulsePct,safePullbackLinePct,hardStopLinePct,safePrice,hardStopPrice,pullbackDepthPct,pullbackRatio,status};
+  }
+  function updateProfit(){
+    const openPct=num($("[data-profit-open-pct]"));
+    const highPct=num($("[data-profit-high-pct]"));
+    const pullbackPct=num($("[data-profit-pullback-pct]"));
+    const prevClose=num($("[data-profit-prev-close]"));
+    const output=$("[data-profit-output]");
+    const statusEl=$("[data-profit-status]");
+    if(openPct===undefined||highPct===undefined){output.innerHTML="";statusEl.textContent="请输入有效的开盘涨幅和第一次冲高点。";return;}
+    const result=profitModel(openPct,highPct,pullbackPct,prevClose);
+    if(!result.valid){output.innerHTML="";statusEl.textContent=result.reason;return;}
+    output.innerHTML=[
+      metric("一次冲高幅度",pct(result.impulsePct)),
+      metric("安全回落线",pct(result.safePullbackLinePct)),
+      metric("不能接受线",pct(result.hardStopLinePct)),
+      metric("安全/硬线价格",`${price(result.safePrice)} / ${price(result.hardStopPrice)}`)
+    ].join("");
+    const statusCopy=result.status?`第一次回落到 <strong>${pct(pullbackPct)}</strong>，状态为 <strong>${result.status}</strong>。`:"未输入第一次回落点时，只给出安全线和硬线。";
+    statusEl.innerHTML=`开盘 <strong>${pct(openPct)}</strong> 后冲到 <strong>${pct(highPct)}</strong>，安全回落线 <strong>${pct(result.safePullbackLinePct)}</strong>，不能接受线 <strong>${pct(result.hardStopLinePct)}</strong>。${statusCopy}`;
+  }
+  $$("input").forEach(input=>input.addEventListener("input",()=>{updateOpen();updateProfit();}));
+  updateOpen();
+  updateProfit();
+})(document.currentScript.previousElementSibling);
+</script>
     <div class="layout">
       <aside class="toc"><h2>目录导航</h2><a class="toc-link level-2" href="#section-1">一、整体盘面及情绪定调</a><a class="toc-link level-2" href="#section-2">二、市场风格与赚钱效应解析</a><a class="toc-link level-2" href="#section-3">三、各板块逐一审视（按强度从强到弱）</a><a class="toc-link level-3" href="#section-4-no-1">（一）算力｜No.1 绝对主线，分歧→断板→反包循环</a><a class="toc-link level-3" href="#section-5-no-2-6">（二）存储芯片｜No.2 黄金坑主升，连红6天→明日分歧</a><a class="toc-link level-3" href="#section-6-no-3">（三）能源金属/电池｜No.3 同步存储，分歧确认日</a><a class="toc-link level-3" href="#section-7-no-4">（四）并购重组｜No.4 独立高度线，烂板走妖</a><a class="toc-link level-3" href="#section-8-no-5">（五）半导体/元件｜No.5 低位爬坑，补涨抗分歧</a><a class="toc-link level-3" href="#section-9-no-6">（六）燃气轮机｜No.6 明日利好落地，进入兑现期</a><a class="toc-link level-3" href="#section-10-no-7">（七）银行/地产｜No.7 低位补涨，指数护盘</a><a class="toc-link level-3" href="#section-11">（八）电力/医药/猪肉/金融科技等</a><a class="toc-link level-2" href="#section-12">四、期货市场全景（对应题材联动）</a><a class="toc-link level-2" href="#section-13">五、监管异动提醒（新增核心）</a><a class="toc-link level-2" href="#section-14">六、龙虎榜+主力资金全景（核心补充）</a><a class="toc-link level-2" href="#section-15">七、今日操作结果+核心失误+核心反思</a><a class="toc-link level-3" href="#section-16">（一）操作结果</a><a class="toc-link level-3" href="#section-17">（二）核心失误</a><a class="toc-link level-3" href="#section-18">（三）核心反思</a><a class="toc-link level-2" href="#section-19-4">八、近4日板块强度+次日节奏预测表</a><a class="toc-link level-2" href="#section-20">九、异动博弈+关键时间窗口</a><a class="toc-link level-2" href="#section-21">十、未来操作节奏总规划</a><a class="toc-link level-2" href="#section-22">十一、核心标的详细信息表</a></aside>
       <main class="content"><h2 id="section-1" class="chapter-title">一、整体盘面及情绪定调</h2><div class="item-card"><span class="item-index">1.</span><p><span class="line-label">情绪数值：</span>整体强度持续回升，指数放量站稳4000点，量能维持2.3万亿水平，封板率75%，短线环境进入机构主导+趋势共振的温和回暖周期，情绪进入最舒服的<mark>主升</mark>段。</p></div><div class="item-card tone-core"><span class="item-index">2.</span><p><span class="line-label">盘面特征：</span>沪指完成黄金坑突破，走震荡反包结构，与<mark>主线</mark>板块图形高度共振；无新题材卡位，资金在核心<mark>主线</mark>内轮动，同时资金溢出带动低位补涨板块（如地产）。</p></div><div class="item-card tone-core"><span class="item-index">3.</span><p><span class="line-label">涨跌结构：</span>普涨修复，<mark>主线</mark>虹吸效应明显，算力一枝独秀，存储芯片、能源金属、电池连红后分歧；电子、半导体、电力、芯片、银行、地产全线飘红，非<mark>主线</mark>板块也迎来阶段性修复。</p></div><div class="item-card tone-core"><span class="item-index">4.</span><p><span class="line-label">指数与资金：</span>量能稳步回暖，机构资金主导趋势行情，游资聚焦断板反包、烂板<mark>抱团</mark>、低位一进二；尾盘拉银行稳指数，配合大盘站稳4000点，形成机构护盘+指数共振格局。</p></div><div class="item-card"><span class="item-index">5.</span><p><span class="line-label">核心驱动：</span>算力涨价+液冷大会预期+存储芯片涨价+并购重组独立高度+<mark>监管</mark>松绑，多逻辑共振支撑盘面走强。</p></div><div class="item-card"><span class="item-index">6.</span><p><span class="line-label">板块全景：</span>算力（液冷/算电协同）&gt; 存储芯片 &gt; 能源金属/电池 &gt; 并购重组 &gt; 半导体/元件 &gt; 银行/地产；其余题材无持续性，仅为阶段性补涨。</p></div><div class="item-card tone-core"><span class="item-index">7.</span><p><span class="line-label">短线连板情绪：</span>高度打开，华远控股6板，3进4批量成功，2进3仅美能能源独苗；连板回暖以烂板<mark>抱团</mark>为主，非气势连板，同时老<mark>监管</mark>解禁标的迎来龙回头。</p></div><h2 id="section-2" class="chapter-title">二、市场风格与赚钱效应解析</h2><div class="item-card tone-risk"><span class="item-index">1.</span><p><span class="line-label">核心风格：</span>指数黄金坑突破+<mark>主线</mark>轮动+断板反包+高位烂板<mark>抱团</mark>+低位补涨+<mark>监管</mark>松绑红利；资金既聚焦<mark>主线</mark>，也存在部分资金溢出至低位补涨板块（如地产）。结合5日排行榜可见，当前市场核心标的普遍呈现“涨停试盘+断板慢涨”的特征，无明显情绪高潮，多为小阳线逐步抬升，而非直接两板<mark>加速</mark>，不会出现阴线反包，更侧重稳步攀升。比如星光股份、沃格光电、东山精密、美克家居、深蓝电路、中嘉博创、康盛股份、金富科技、飞龙股份等核心标的，均是如此，断板之后逐步向上，不追求短期爆发，而是稳步走趋势。此外，会员通信天地板之后，第三天企稳并反包上行；维科技术、通达股份也贴合这一节奏，不追求大肉，而是以小阳线稳步兑现收益，这种行情极其考验交易者的审美判断与持仓定力，需坚守标的、不急躁、不追涨。盈峰环境、新中港等标的也呈现类似温和走势，这背后核心是当前市场无强烈情绪高潮，资金更倾向于稳健布局，以断板反包、慢涨趋势为主，<mark>规避</mark>高位<mark>加速</mark>风险。</p></div><div class="item-card tone-core"><span class="item-index">2.</span><p>赚钱<mark>主线</mark>（按强度排序）</p></div><div class="item-card tone-core"><span class="item-index">1.</span><p>算力（含液冷、数据中心、算电协同）——绝对<mark>主线</mark>，分歧不死，龙头二波共振</p></div><div class="item-card"><span class="item-index">2.</span><p>存储芯片——黄金坑连阳，高位分歧，趋势性强</p></div><div class="item-card"><span class="item-index">3.</span><p>能源金属/电池——同步存储，分歧扛旗，趋势延续</p></div><div class="item-card"><span class="item-index">4.</span><p>并购重组——独立高度线，烂板走妖，不受板块轮动影响</p></div><div class="item-card"><span class="item-index">5.</span><p>半导体/元件——低位爬坑，补涨抗分歧，算力上游加持</p></div><div class="item-card"><span class="item-index">6.</span><p>银行/地产——低位补涨，指数护盘属性，阶段性机会</p></div><div class="item-card"><span class="item-index">3.</span><p><span class="line-label">赚钱效应：</span>断板反包、烂板连板、一字<mark>加速</mark>三种模式垄断，同时新增<mark>监管</mark>解禁标的龙回头、指数共振二波两种辅助赚钱效应，其余战法失效。</p></div><div class="item-card tone-core"><span class="item-index">4.</span><p><span class="line-label">战法适配：</span><mark>主线</mark>一进二、断板<mark>低吸</mark>反包、分歧扛旗龙、黄金坑突破、<mark>监管</mark>解禁标的龙回头。</p></div><div class="item-card tone-risk"><span class="item-index">5.</span><p><span class="line-label">核心标的原则：</span><mark>只做</mark><mark>主线</mark>、<mark>只做</mark>辨识度、<mark>只做</mark>突破/反包/龙回头，不做中位接力、不做非<mark>主线</mark>，<mark>规避</mark>未解禁<mark>监管</mark>标的。</p></div><h2 id="section-3" class="chapter-title">三、各板块逐一审视（按强度从强到弱）</h2><h3 id="section-4-no-1" class="subchapter-title">（一）算力｜No.1 绝对主线，分歧→断板→反包循环</h3><p class="body-line tone-core"><span class="line-label">特征：</span>圣阳股份（液冷+算电+储能）烂板带队，梯队完整；中嘉博创、新朋股份走标准断板反包，分歧不致死；利通电子爆量上榜，主力大买，走二波<mark>主升</mark>；金泉华（你提及的“金钱花”“金券华”均为口误/笔误）是板块内隐藏的多逻辑共振标的，并非单纯的AI服务器配套，具备独特核心优势。</p><p class="body-line tone-core"><span class="line-label">核心标的：</span>圣阳股份、中嘉博创、新朋股份、利通电子、鸿博股份、金泉华、大为股份、盈新发展（补涨）</p><p class="body-line"><span class="line-label">操作：</span>分歧<mark>低吸</mark>核心，一进二优先，<mark>不追高</mark>，持有二波趋势标的。</p><p class="body-line tone-core"><span class="line-label">补充（金泉华独特逻辑）：</span>今日涨停（收盘价27.05元，30分钟走势强势），核心逻辑并非单一AI服务器配套，而是多<mark>主线</mark>叠加：① 业绩预增超市场预期，下游AI服务器订单饱满，作为上游核心配套商直接受益于需求爆发；② 叠加第三代半导体概念，涉及氮化镓（你提及的“氮化钾”为口误）相关技术布局，属于算力上游核心材料延伸；③ 隐藏日系树脂灯带授权提价逻辑，同时涉足ABS载板、基础量子相关配套，并非纯算力跟风，具备独立题材属性；④ 前期市场预期较低，资金提前布局后，通过公告落地打消市场疑虑，形成“预期差修复+<mark>主线</mark>共振”的双重驱动，这是其区别于其他算力标的的独特亮点。</p><p class="body-line tone-risk"><span class="line-label">补充（盈新发展、利通电子、大为股份）：</span>① 盈新发展：近期走势喋喋不休，核心原因是涉及诉讼纠纷，前期资金提前布局但散户跟风过多，后续散户<mark>离场</mark>后主力资金逐步介入，但当前仍处于震荡洗盘阶段，暂未形成明确<mark>主升</mark>节奏，需<mark>规避</mark>短期波动风险；② 利通电子（你提及的“逆通电子”为口误）：今日爆量上榜，主力大买的核心的是二波<mark>主升</mark>逻辑，并非单纯跟风算力，其算电协同技术具备稀缺性，与液冷大会预期形成共振；③ 大为股份：今日表现偏弱，核心是缺乏独立逻辑，仅为算力补涨标的，主力资金介入力度不足，暂不具备持续走强条件，需谨慎参与。</p><h3 id="section-5-no-2-6" class="subchapter-title">（二）存储芯片｜No.2 黄金坑主升，连红6天→明日分歧</h3><p class="body-line tone-action"><span class="line-label">特征：</span>挖坑深V反转，连续逼空，接近前高压力；明日大概率分化，龙头断板反包，后排掉队，与大盘共振走趋势。</p><p class="body-line tone-core"><span class="line-label">核心标的：</span>板块核心活口、趋势龙头</p><p class="body-line tone-risk"><span class="line-label">操作：</span>分歧<mark>不追高</mark>，<mark>低吸</mark>龙头，<mark>放弃</mark>跟风。</p><h3 id="section-6-no-3" class="subchapter-title">（三）能源金属/电池｜No.3 同步存储，分歧确认日</h3><p class="body-line"><span class="line-label">特征：</span>黄金坑突破、连红新高，今日分歧；维科技术为分歧扛旗龙，石大胜华反包，板块与指数共振。</p><p class="body-line tone-core"><span class="line-label">核心标的：</span>维科技术、石大胜华</p><p class="body-line tone-action"><span class="line-label">操作：</span>明日回流确认，强留弱走。</p><h3 id="section-7-no-4" class="subchapter-title">（四）并购重组｜No.4 独立高度线，烂板走妖</h3><p class="body-line tone-core"><span class="line-label">特征：</span>华远控股打出6板高度，中恒电气、博云新材（你提及的“薄云星辰”“博云新材料”均为口误/笔误）强势，不受板块轮动影响，游资<mark>抱团</mark>明显；博云新材今日资金介入较多，核心是其并购标的具备稀缺性，并非单纯的烂板跟风。</p><p class="body-line tone-core"><span class="line-label">核心标的：</span>华远控股、中恒电气、博云新材</p><p class="body-line"><span class="line-label">操作：</span>烂板承接留，断板不反包走。</p><p class="body-line tone-action"><span class="line-label">补充（博云新材）：</span>今日资金关注度高，核心逻辑是并购标的涉及高端材料领域，与半导体、算力上游形成间接联动，并非单纯的并购重组概念，且其股价未形成双头结构，当前仍处于烂板<mark>抱团</mark>的上升阶段，明日需关注烂板承接力度，不盲目追高。</p><h3 id="section-8-no-5" class="subchapter-title">（五）半导体/元件｜No.5 低位爬坑，补涨抗分歧</h3><p class="body-line tone-core"><span class="line-label">特征：</span>算力上游卖铲子，低位突破，梯队健康，持续性中等，资金布局积极；海特高新是板块内核心标的，具备独特的新材料逻辑，区别于其他补涨标的。</p><p class="body-line tone-core"><span class="line-label">核心标的：</span>海特高新、远程股份、汇通能源</p><p class="body-line"><span class="line-label">操作：</span>一进二为主，<mark>低吸</mark>突破。</p><p class="body-line"><span class="line-label">补充（海特高新、汇通能源）：</span>① 海特高新：今日走强核心并非普通半导体补涨，而是其磷化铟（你提及的“曹宇琪磷化因”为口误/表述偏差）材料布局，该材料是算力、半导体上游核心稀缺材料，主力资金介入较多，具备“算力上游卖铲子+新材料稀缺性”双重逻辑，是板块内辨识度最高的标的；② 汇通能源：与大为股份类似，今日表现偏弱，缺乏独立核心逻辑，仅为半导体板块补涨，资金介入力度有限，暂不具备持续走强条件。</p><h3 id="section-9-no-6" class="subchapter-title">（六）燃气轮机｜No.6 明日利好落地，进入兑现期</h3><p class="body-line tone-risk"><span class="line-label">特征：</span>美能能源3进4独苗，明日展会落地，利好出尽偏利空，需警惕兑现风险。</p><p class="body-line"><span class="line-label">操作：</span><mark>不追高</mark>，高开低走直接兑现。</p><h3 id="section-10-no-7" class="subchapter-title">（七）银行/地产｜No.7 低位补涨，指数护盘</h3><p class="body-line"><span class="line-label">特征：</span>银行尾盘拉升稳指数，配合大盘站稳4000点；地产全线翻红，属于资金溢出+低位补涨，与指数共振修复，核心催化是二手房成交新高，叠加国资入股逻辑，资金布局明确。</p><p class="body-line tone-core"><span class="line-label">核心标的：</span>银行（护盘标的）、地产（低位补涨标的）</p><p class="body-line"><span class="line-label">操作：</span><mark>不追高</mark>，仅观望，不做长期布局。</p><p class="body-line tone-risk"><span class="line-label">补充（北辰实业、华远控股）：</span>① 北辰实业（你提及的“北辰实验”为口误）：今日走势强势，核心是地产+国资入股逻辑，叠加二手房成交新高催化，其作为北京地产标的，与华远控股形成“龙头+跟风”格局——华远控股（6板高度）是北京地产龙头，北辰实业则为跟风龙，今日游资新介入约3000万，属于资金溢出后的低位补涨，明日需警惕补涨回落风险；② 华远控股：作为地产板块唯一6板高度，核心是北京地产+并购重组双重逻辑，并非单纯的地产补涨，是当前并购重组板块的高度锚，与北辰实业有明确的梯队区分。</p><h3 id="section-11" class="subchapter-title">（八）电力/医药/猪肉/金融科技等</h3><p class="body-line tone-core"><span class="line-label">特征：</span>电力板块受华电辽能<mark>监管</mark>解禁带动，部分标的龙回头；其余板块无持续性、多为龙回头、一波流、超跌反弹，被<mark>主线</mark>抽血。</p><p class="body-line"><span class="line-label">操作：</span>电力可关注<mark>监管</mark>解禁标的龙回头，其余全部屏蔽，零参与。</p><p class="body-line tone-risk"><span class="line-label">补充（风神股份、盈峰环境、金科科技等非<mark>主线</mark>标的）：</span>① 风神股份（你提及的“封神”“封神榜”为口误）：今日走强核心是2万套巨胎项目建设（轮胎领域），属于独立题材，与<mark>主线</mark>无关，且其散户股东数较少，筹码集中度较高，资金<mark>抱团</mark>拉升，但缺乏持续性催化，明日需警惕冲高回落；② 盈峰环境（你提及的“凌风环境”为口误）：核心逻辑是业绩预增+合作共振，一方面与东阳光有合作布局，另一方面涉及地图电子相关业务，近期刚与英伟达达成间接合作，叠加前期洗盘充分，资金开始启动拉升，但属于非<mark>主线</mark>标的，仅可短期<mark>套利</mark>，不可长期持有；③ 金科科技（你提及的“荆轲能源”“金砖科技”为口误）：属于金科系标的，核心业务是AI DC方案+光伏储能，但当前光伏板块表现偏弱，其AI DC方案未形成核心竞争力，且股价已形成6.2元伏地式顶部，短期下跌风险较大，坚决<mark>规避</mark>；④ 硅谷经理人（表述偏差，推测为某业绩预增标的）：业绩大涨192%，核心原因是低价原材料加持，但股价未同步上涨，本质是业绩增长源于非主营业务（对外收购），并非自身核心业务爆发，属于“业绩伪增长”，短期资金可能炒作，但长期无支撑，需谨慎参与；⑤ 携创信息（你提及的“携创心肝肾”为口误）：主营业务与“卡类”相关，近期有项目落地，但尾盘拉升多为资金短期<mark>套利</mark>，且涉及世界杯相关营收（非核心业务），持续性不足，零参与。</p><h2 id="section-12" class="chapter-title">四、期货市场全景（对应题材联动）</h2><div class="item-card"><span class="item-index">1.</span><p><span class="line-label">原油、黄金、工业金属：</span>无催化、无联动，资金关注度极低，对A股无正向驱动。</p></div><div class="item-card tone-core"><span class="item-index">2.</span><p><span class="line-label">结论：</span>商品端无影响，资金全部聚焦A股科技<mark>主线</mark>及低位补涨板块，不分散布局。</p></div><h2 id="section-13" class="chapter-title">五、监管异动提醒（新增核心）</h2><div class="item-card"><span class="item-index">1.</span><p><span class="line-label"><mark>重点</mark><mark>监管</mark>标的：</span>今日无新增<mark>重点</mark><mark>监管</mark>标的，市场进入<mark>监管</mark>真空期，情绪彻底松绑。</p></div><div class="item-card"><span class="item-index">2.</span><p><span class="line-label"><mark>监管</mark>失效标的：</span>华电辽能（桦甸辽宁）、豫能控股<mark>监管</mark>已到期失效，资金敢拉、敢做龙回头，今日标的猛冲属于<mark>监管</mark>解禁红利。</p></div><div class="item-card tone-risk"><span class="item-index">3.</span><p><span class="line-label">仍在<mark>监管</mark>标的：</span>津药药业（津药药业）仍处于<mark>重点</mark>监控名单，继续<mark>规避</mark>，不碰、不接力、不格局。</p></div><div class="item-card tone-risk"><span class="item-index">4.</span><p><span class="line-label">操作提示：</span>利用<mark>监管</mark>真空期，聚焦<mark>主线</mark>核心与<mark>监管</mark>解禁标的龙回头，<mark>规避</mark>未解禁<mark>监管</mark>票，防止<mark>异动</mark>停牌风险。</p></div><h2 id="section-14" class="chapter-title">六、龙虎榜+主力资金全景（核心补充）</h2><div class="item-card"><span class="item-index">1.</span><p><span class="line-label">算力/液冷方向：</span>利通电子爆量上榜，主力大买，机构+游资合力布局；盈新发展资金顶得猛，属于算力/芯片方向补涨。</p></div><div class="item-card"><span class="item-index">2.</span><p><span class="line-label">赛道方向：</span>阳光电源上榜，大资金在顶，机构+游资合力，赛道趋势<mark>主升</mark>。</p></div><div class="item-card"><span class="item-index">3.</span><p><span class="line-label">指数护盘方向：</span>银行板块尾盘有资金介入，主要作用为稳指数、配合大盘站稳4000点，属于机构护盘行为。</p></div><div class="item-card"><span class="item-index">4.</span><p><span class="line-label">低位补涨方向：</span>地产板块全线翻红，部分标的上榜，资金溢出布局，属于低位超跌补涨（如北辰实业，游资新介入3000余万）。</p></div><div class="item-card tone-core"><span class="item-index">5.</span><p><span class="line-label">整体：</span>资金呈现“顶赛道、护指数、做补涨、挖<mark>主线</mark>”的格局，<mark>主线</mark>与低位补涨资金分流不明显，虹吸效应仍集中在核心<mark>主线</mark>。</p></div><h2 id="section-15" class="chapter-title">七、今日操作结果+核心失误+核心反思</h2><h3 id="section-16" class="subchapter-title">（一）操作结果</h3><p class="body-line"><span class="line-label">✅ 做对：</span></p><p class="body-line tone-core">坚守算力、存储、电池、并购重组四大<mark>主线</mark>，屏蔽杂毛，同时捕捉到<mark>监管</mark>解禁标的龙回头机会。</p><p class="body-line">严格执行不做中位3板接力、<mark>只做</mark>一进二/低位突破/断板反包的铁律。</p><p class="body-line tone-core">精准捕捉维科技术等模式内标准标的，看懂大盘黄金坑突破与<mark>主线</mark>共振的核心逻辑。</p><p class="body-line">识别三种核心赚钱效应，同时关注到<mark>监管</mark>松绑带来的龙回头机会，逻辑审美在线。</p><p class="body-line tone-risk"><mark>规避</mark>津药药业等仍在<mark>监管</mark>期内的标的，风控意识在线。</p><p class="body-line"><span class="line-label">❌ 做错：</span></p><p class="body-line tone-action">维科技术未分批买入，仓位不足，错失部分收益。</p><p class="body-line tone-core"><mark>主线</mark>断板票持股周期偏短，卖飞反包（如新朋股份）。</p><p class="body-line">错过美能能源等独立高度票，对<mark>监管</mark>解禁标的龙回头布局不够及时。</p><p class="body-line tone-core">未及时捕捉银行护盘、地产补涨的阶段性机会（非<mark>主线</mark>，可接受）。</p><h3 id="section-17" class="subchapter-title">（二）核心失误</h3><div class="item-card tone-core"><span class="item-index">1.</span><p><mark>主线</mark>反包票持股周期不够，卖飞洗盘段，未充分利用<mark>主线</mark>共振行情。</p></div><div class="item-card tone-action"><span class="item-index">2.</span><p>看好标的未严格执行分批买入，仓位把控不足。</p></div><div class="item-card tone-core"><span class="item-index">3.</span><p>对高位烂板<mark>抱团</mark>耐心不足，对<mark>监管</mark>解禁标的龙回头机会敏感度不够。</p></div><h3 id="section-18" class="subchapter-title">（三）核心反思</h3><div class="item-card tone-core"><span class="item-index">1.</span><p><mark>主线</mark>内分歧≠退潮，断板=洗盘，可放宽持股周期，享受<mark>主线</mark>共振二波收益。</p></div><div class="item-card tone-action"><span class="item-index">2.</span><p>模式内标的坚决分批买入，不主观减仓，合理把控仓位弹性。</p></div><div class="item-card tone-risk"><span class="item-index">3.</span><p>关注<mark>监管</mark><mark>异动</mark>，利用<mark>监管</mark>真空期布局核心标的，同时坚决<mark>规避</mark>未解禁<mark>监管</mark>票。</p></div><div class="item-card tone-core"><span class="item-index">4.</span><p>只跟随市场，不预判顶底，接受市场资金分流带来的低位补涨机会，但不偏离<mark>主线</mark>。</p></div><div class="item-card tone-core"><span class="item-index">5.</span><p>非<mark>主线</mark>一律不看不做，保持极致聚焦，不被阶段性补涨分散精力。</p></div><div class="item-card tone-risk"><span class="item-index">6.</span><p><span class="line-label">新增选票铁律：</span>筛选一进二打板标的前，需提前在九源公社、雪球等平台检索标的核心信息，确认其所属概念、在概念中的核心地位，同时核查其应用场景、市场份额、业绩增速、潜在客户量及核心技术等关键维度，避免盲目打板，增加选票的确定性，降低踩坑风险，这是今日操作中总结的核心教训（尤其适用于金泉华、海特高新等有独特逻辑的标的，需<mark>重点</mark>核查其非<mark>主线</mark>叠加逻辑）。</p></div><h2 id="section-19-4" class="chapter-title">八、近4日板块强度+次日节奏预测表</h2><section class="table-card"><div class="table-title">关键表格 01</div><div class="table-wrap"><table><thead><tr><th>大题材板块</th><th>2026/4/10（周四）</th><th>2026/4/11（周五）</th><th>2026/4/13（周一）</th><th>2026/4/14（周二）</th><th>次日节奏预测</th><th>核心判断</th></tr></thead><tbody><tr><td>总体强度</td><td>14314</td><td>23433</td><td>27663</td><td>36050</td><td>延续回暖</td><td>机构趋势主导，监管真空期加持</td></tr><tr><td>有色金属</td><td>650</td><td>-399</td><td>-</td><td>-</td><td>弱势</td><td>规避</td></tr><tr><td>电力</td><td>-932</td><td>-267</td><td>-</td><td>-</td><td>龙回头修复</td><td>只看监管解禁标的</td></tr><tr><td>AI应用</td><td>459</td><td>-22</td><td>-</td><td>-</td><td>跟风</td><td>放弃</td></tr><tr><td>算力</td><td>3797</td><td>4081</td><td>4842</td><td>9401</td><td>分歧→反包</td><td>绝对主线，共振二波</td></tr><tr><td>机器人</td><td>1097</td><td>1302</td><td>2433</td><td>488</td><td>弱势</td><td>放弃</td></tr><tr><td>光伏</td><td>-849</td><td>162</td><td>-</td><td>-</td><td>退潮</td><td>规避</td></tr><tr><td>化工</td><td>-242</td><td>578</td><td>1875</td><td>575</td><td>轮动</td><td>规避</td></tr><tr><td>电网</td><td>-</td><td>-</td><td>-388</td><td>1983</td><td>弱轮动</td><td>放弃</td></tr><tr><td>人工智能</td><td>-744</td><td>-818</td><td>-2156</td><td>1121</td><td>跟风</td><td>套利</td></tr><tr><td>商业航天</td><td>1824</td><td>673</td><td>289</td><td>4332</td><td>支线</td><td>套利</td></tr><tr><td>芯片</td><td>5204</td><td>5996</td><td>4888</td><td>7080</td><td>高位分歧</td><td>低吸龙头</td></tr><tr><td>通信</td><td>5686</td><td>2382</td><td>8346</td><td>4156</td><td>分歧</td><td>聚焦核心</td></tr><tr><td>军工</td><td>-</td><td>-</td><td>379</td><td>1886</td><td>弱轮动</td><td>放弃</td></tr><tr><td>并购重组</td><td>1351</td><td>2402</td><td>3331</td><td>2395</td><td>强势</td><td>独立高度</td></tr><tr><td>电池</td><td>-704</td><td>7176</td><td>3824</td><td>2633</td><td>分歧确认</td><td>强留弱走</td></tr><tr><td>银行</td><td>-</td><td>-</td><td>-</td><td>强势</td><td>护盘延续</td><td>不追高</td></tr><tr><td>地产</td><td>-</td><td>-</td><td>-</td><td>强势</td><td>补涨回落</td><td>规避</td></tr></tbody></table></div></section><h2 id="section-20" class="chapter-title">九、异动博弈+关键时间窗口</h2><div class="item-card"><span class="item-index">1.</span><p>催化窗口</p></div><p class="body-line"><span class="line-label">4月15日（周三）：</span>燃气轮机大会（利好落地，美能能源兑现）</p><p class="body-line"><span class="line-label">4月16日（周四）：</span>液冷技术大会（预期逐步透支，算力/液冷分歧）</p><div class="item-card tone-core"><span class="item-index">2.</span><p><span class="line-label">产业<mark>异动</mark>：</span>存储芯片涨价、算力供需紧张、AI服务器上游爆发，<mark>主线</mark>逻辑未变；同时半导体上游新材料（如磷化铟、氮化镓）需求升温，利好海特高新、金泉华等标的。</p></div><div class="item-card tone-risk"><span class="item-index">3.</span><p><span class="line-label"><mark>监管</mark><mark>异动</mark>：</span><mark>监管</mark>真空期，华电辽能、豫能控股<mark>监管</mark>失效，可布局其龙回头机会；津药药业仍在<mark>监管</mark>，<mark>规避</mark>。</p></div><div class="item-card"><span class="item-index">4.</span><p><span class="line-label">核心锚：</span>圣阳股份（算力总锚）、华远控股（高度锚）、维科技术（电池锚）、利通电子（二波锚）、金泉华（算力+新材料双逻辑锚）、海特高新（半导体新材料锚）</p></div><div class="item-card tone-risk"><span class="item-index">5.</span><p><span class="line-label"><mark>监管</mark>锚：</span><mark>规避</mark>津药药业，聚焦<mark>主线</mark>低位与核心，利用<mark>监管</mark>真空期把握机会。</p></div><h2 id="section-21" class="chapter-title">十、未来操作节奏总规划</h2><div class="item-card tone-risk"><span class="item-index">1.</span><p><span class="line-label"><mark>主线</mark>：</span>算力&gt;存储芯片&gt;电池&gt;并购重组，银行/地产仅观望，其余全部拉黑（尤其<mark>规避</mark>金科科技、硅谷经理人等非<mark>主线</mark>伪业绩标的）。</p></div><div class="item-card"><span class="item-index">2.</span><p>策略</p></div><p class="body-line"><span class="line-label">算力：</span>分歧<mark>低吸</mark>、一进二、断板反包，持有二波趋势标的（利通电子等）；<mark>重点</mark>关注金泉华，其多逻辑共振优势，可逢分歧<mark>低吸</mark>，<mark>不追高</mark>。</p><p class="body-line tone-action"><span class="line-label">存储/电池：</span>分歧<mark>不追高</mark>，扛旗龙持股，明日确认回流情况。</p><p class="body-line"><span class="line-label">并购重组：</span>烂板承接留，断板走，聚焦华远控股等高度标的；博云新材需关注烂板承接力度，不盲目跟风。</p><p class="body-line tone-action"><span class="line-label">燃气轮机：</span>明日兑现为主，<mark>不追高</mark>。</p><p class="body-line"><span class="line-label"><mark>监管</mark>解禁标的：</span>华电辽能、豫能控股，可关注龙回头机会，<mark>不追高</mark>。</p><p class="body-line tone-risk"><span class="line-label">银行/地产：</span><mark>不追高</mark>，仅观望，不做长期布局；北辰实业作为跟风龙，明日<mark>规避</mark>补涨回落风险。</p><p class="body-line tone-risk"><span class="line-label">非<mark>主线</mark>标的：</span>风神股份、盈峰环境仅可短期<mark>套利</mark>（若有冲高），金科科技、硅谷经理人、携创信息坚决<mark>规避</mark>，不被短期拉升误导。</p><div class="item-card"><span class="item-index">3.</span><p>铁律</p></div><p class="body-line tone-core"><mark>只做</mark><mark>主线</mark>，不做杂毛，不被低位补涨分散精力。</p><p class="body-line"><mark>只做</mark>一进二+断板反包+<mark>监管</mark>解禁龙回头，不做中位3板接力。</p><p class="body-line tone-core"><mark>主线</mark>分歧持股，非<mark>主线</mark>一律不看，保持聚焦。</p><p class="body-line tone-risk">利好落地题材<mark>不追高</mark>，<mark>监管</mark>未解禁标的坚决<mark>规避</mark>。</p><p class="body-line tone-action">看好标的严格分批买入，合理把控仓位。</p><div class="item-card tone-risk"><span class="item-index">6.</span><p><span class="line-label">选票前置核查：</span>一进二打板标的筛选前，必须先通过九源公社、雪球等渠道，核查标的概念属性、核心地位、应用场景、市场份额、增速、潜在客户及核心技术，筑牢选票第一道防线，杜绝盲目跟风打板，同时结合当日盘面情绪、资金流向，进一步确认标的可行性，避免踩中伪<mark>主线</mark>、伪业绩标的（如硅谷经理人），确保每一只筛选的标的都具备明确的逻辑支撑和资金认可，最大化降低打板风险，提升操作成功率。</p></div><h2 id="section-22" class="chapter-title">十一、核心标的详细信息表</h2><section class="table-card"><div class="table-title">关键表格 02</div><div class="table-wrap"><table><thead><tr><th>标的名称</th><th>所属板块</th><th>核心逻辑</th><th>今日表现</th><th>操作建议</th><th>风险提示</th></tr></thead><tbody><tr><td>圣阳股份</td><td>算力（液冷+算电+储能）</td><td>液冷+算电协同，烂板带队，算力绝对主线核心锚</td><td>烂板，引领算力板块轮动</td><td>分歧低吸，持有二波趋势</td><td>高位分歧，避免追高</td></tr><tr><td>金泉华</td><td>算力+半导体（第三代半导体）</td><td>业绩预增超预期，AI服务器上游配套，氮化镓布局，日系树脂灯带授权提价，ABS载板+基础量子配套</td><td>涨停，收盘价27.05元，30分钟走势强势</td><td>逢分歧低吸，不追高，关注多逻辑共振</td><td>前期预期差修复到位，警惕短期兑现</td></tr><tr><td>利通电子</td><td>算力</td><td>算电协同技术稀缺，与液冷大会预期共振，主力+机构合力布局</td><td>爆量上榜，主力大买，走二波主升</td><td>持有二波趋势，分歧低吸</td><td>二波高位，警惕分歧回落</td></tr><tr><td>海特高新</td><td>半导体/元件</td><td>磷化铟材料布局，算力、半导体上游核心稀缺材料，主力资金介入多</td><td>强势上涨，半导体板块核心标的</td><td>一进二为主，低吸突破</td><td>半导体板块补涨属性，需关注主线资金分流</td></tr><tr><td>华远控股</td><td>并购重组+地产（北京地产）</td><td>6板高度，北京地产龙头，并购重组独立高度线，双重逻辑加持</td><td>强势连板，带动并购重组板块</td><td>烂板承接留，断板不反包则离场</td><td>高位连板，监管风险潜在，避免盲目追高</td></tr><tr><td>北辰实业</td><td>地产（北京地产）</td><td>北京地产跟风龙，国资入股，二手房成交新高催化，游资新介入3000余万</td><td>走势强势，地产板块补涨</td><td>不追高，仅观望，规避补涨回落</td><td>跟风属性强，无独立逻辑，易冲高回落</td></tr><tr><td>维科技术</td><td>能源金属/电池</td><td>电池板块分歧扛旗龙，与指数共振，趋势性强</td><td>反包上涨，板块核心活口</td><td>明日确认回流，强留弱走</td><td>板块分歧未完全结束，警惕资金出逃</td></tr><tr><td>博云新材</td><td>并购重组</td><td>并购标的涉及高端材料，与半导体、算力上游间接联动，主力资金介入多</td><td>强势上涨，游资抱团明显</td><td>关注烂板承接力度，不盲目跟风</td><td>并购概念炒作，需警惕兑现风险</td></tr><tr><td>美能能源</td><td>燃气轮机</td><td>燃气轮机板块3进4独苗，受益于明日大会催化</td><td>3进4成功，板块唯一高度</td><td>明日利好落地兑现，不追高，高开低走直接离场</td><td>利好出尽易回调，规避高位站岗</td></tr><tr><td>盈新发展</td><td>算力（补涨）</td><td>算力补涨标的，涉及诉讼纠纷，主力资金逐步介入</td><td>走势震荡，仍处于洗盘阶段</td><td>规避短期波动，暂不介入</td><td>诉讼纠纷影响，筹码不稳定</td></tr><tr><td>大为股份</td><td>算力（补涨）</td><td>算力补涨，无独立核心逻辑，主力介入力度不足</td><td>表现偏弱，跟随板块波动</td><td>谨慎参与，不盲目跟风</td><td>补涨属性，缺乏持续性</td></tr><tr><td>风神股份</td><td>非主线（轮胎）</td><td>2万套巨胎项目建设，独立题材，筹码集中度高</td><td>强势上涨，资金抱团拉升</td><td>仅短期套利，冲高即走</td><td>非主线标的，缺乏持续性催化</td></tr><tr><td>金科科技</td><td>非主线（AI DC+光伏储能）</td><td>AI DC方案+光伏储能，光伏板块偏弱，无核心竞争力</td><td>处于6.2元伏地式顶部，走势疲软</td><td>坚决规避，不介入</td><td>顶部形态明确，短期下跌风险大</td></tr><tr><td>盈峰环境</td><td>非主线（业绩预增+合作）</td><td>业绩预增，与东阳光、英伟达间接合作，前期洗盘充分</td><td>资金启动拉升，走势温和</td><td>短期套利，不可长期持有</td><td>非主线标的，易受主线资金虹吸</td></tr><tr><td>汇通能源</td><td>半导体（补涨）</td><td>半导体补涨，无独立核心逻辑，资金介入力度有限</td><td>表现偏弱，跟随板块波动</td><td>谨慎参与，不盲目跟风</td><td>补涨属性，缺乏持续性</td></tr></tbody></table></div></section><p class="footer-note"><span class="line-label">|（注：</span>文档部分内容可能由 AI 生成)</p></main>

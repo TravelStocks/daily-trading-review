@@ -270,6 +270,199 @@
         <div class="hero-copy">这里是你的专属 A 股复盘与研究日志。首页整合了左侧目录树、最近 7 天时间轴、主线板块热度、最近新增、风险关键词、月度日历视图和置顶收藏；每篇复盘则继续拆成“市场情绪 / 主线板块 / 核心标的 / 明日关注 / 风险提示 / 个人反思”的统一结构，方便长期积累和回看。</div>
         <div class="stats"><div class="stat"><span>累计复盘</span><strong>20</strong></div><div class="stat"><span>最新日期</span><strong>2026.05.20</strong></div><div class="stat"><span>含反思复盘</span><strong>20</strong></div><div class="stat"><span>主线板块库</span><strong>44</strong></div><div class="stat"><span>更新方式</span><strong>Word 自动转页</strong></div></div>
       </section>
+      <section class="limit-up-calculator-panel" data-limit-up-calculator>
+  <style>
+    .limit-up-calculator-panel{position:relative;overflow:hidden;padding:24px;border-radius:24px;background:linear-gradient(135deg,rgba(9,43,38,.96),rgba(10,83,73,.94) 52%,rgba(20,102,132,.92));border:1px solid rgba(255,255,255,.22);box-shadow:0 24px 60px rgba(6,42,38,.18);color:#f3fffb}
+    .limit-up-calculator-panel:before{content:"";position:absolute;inset:-28% auto auto -14%;width:360px;height:360px;border-radius:999px;background:radial-gradient(circle,rgba(77,214,162,.24),transparent 68%);pointer-events:none}
+    .limit-up-calculator-panel:after{content:"";position:absolute;right:-90px;bottom:-110px;width:320px;height:320px;border-radius:999px;background:radial-gradient(circle,rgba(72,174,228,.22),transparent 70%);pointer-events:none}
+    .limit-up-calculator-inner{position:relative;z-index:1;display:grid;gap:18px}
+    .limit-up-calculator-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;flex-wrap:wrap}
+    .limit-up-calculator-kicker{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);font-size:12px;font-weight:800;letter-spacing:.08em;color:#bff8e1}
+    .limit-up-calculator-kicker:before{content:"";width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,#5df0af,#60c3ff);box-shadow:0 0 0 6px rgba(93,240,175,.1)}
+    .limit-up-calculator-head h2{margin:12px 0 8px;font-size:clamp(1.45rem,2.4vw,2.1rem);line-height:1.22;color:#fff}
+    .limit-up-calculator-head p{margin:0;max-width:850px;color:rgba(243,255,251,.78);line-height:1.8;font-size:14px}
+    .limit-up-calculator-source{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#eafff6;text-decoration:none;font-size:13px;font-weight:800;white-space:nowrap}
+    .limit-up-calculator-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .limit-up-calc-card{display:grid;gap:14px;padding:18px;border-radius:20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px)}
+    .limit-up-calc-card h3{margin:0;color:#fff;font-size:1.03rem}
+    .limit-up-calc-card p{margin:0;color:rgba(243,255,251,.72);font-size:13px;line-height:1.7}
+    .limit-up-calc-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .limit-up-calc-field{display:grid;gap:6px}
+    .limit-up-calc-field label{font-size:12px;color:#bff8e1;font-weight:800}
+    .limit-up-calc-field input{width:100%;border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:12px 13px;background:rgba(255,255,255,.92);color:#123b36;font-size:14px;outline:none}
+    .limit-up-calc-field input:focus{border-color:#5df0af;box-shadow:0 0 0 4px rgba(93,240,175,.14)}
+    .limit-up-calc-output{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .limit-up-calc-metric{padding:12px;border-radius:14px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.14)}
+    .limit-up-calc-metric span{display:block;font-size:12px;color:rgba(243,255,251,.7)}
+    .limit-up-calc-metric strong{display:block;margin-top:4px;color:#fff;font-size:1.12rem}
+    .limit-up-calc-metric.full{grid-column:1/-1}
+    .limit-up-calc-status{padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.16);color:#f5fffb;font-size:13px;line-height:1.72}
+    .limit-up-calc-status strong{color:#9ff2cd}
+    .limit-up-calculator-note{padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.1);border:1px dashed rgba(255,255,255,.22);color:rgba(243,255,251,.7);font-size:12px;line-height:1.75}
+    @media (max-width:980px){.limit-up-calculator-grid,.limit-up-calc-form,.limit-up-calc-output{grid-template-columns:1fr}.limit-up-calculator-head{display:grid}.limit-up-calculator-source{width:fit-content}}
+  </style>
+  <div class="limit-up-calculator-inner">
+    <div class="limit-up-calculator-head">
+      <div>
+        <span class="limit-up-calculator-kicker">Limit-Up Calculator</span>
+        <h2>连板开盘风控与冲高回落止盈计算器</h2>
+        <p>模型来自 abchaoming1 的 limit-up-calculators-skill，主要用于三板及以上连板龙头的开盘下杀线、振幅阈值、条件单保护价，以及第一次冲高后的安全回落线。</p>
+      </div>
+      <a class="limit-up-calculator-source" href="https://github.com/abchaoming1/limit-up-calculators-skill" target="_blank" rel="noreferrer">查看模型来源</a>
+    </div>
+    <div class="limit-up-calculator-grid">
+      <article class="limit-up-calc-card">
+        <div>
+          <h3>开盘条件计算</h3>
+          <p>输入竞价开盘涨幅，快速得到当日振幅阈值、最低下杀线和条件单保护价。</p>
+        </div>
+        <div class="limit-up-calc-form">
+          <div class="limit-up-calc-field"><label>开盘涨幅 x（%）</label><input data-open-pct type="number" step="0.1" value="5" /></div>
+          <div class="limit-up-calc-field"><label>昨日收盘价（可选）</label><input data-open-prev-close type="number" step="0.01" placeholder="如 10.00" /></div>
+        </div>
+        <div class="limit-up-calc-output" data-open-output></div>
+        <div class="limit-up-calc-status" data-open-status></div>
+      </article>
+      <article class="limit-up-calc-card">
+        <div>
+          <h3>第一次冲高回落止盈</h3>
+          <p>输入开盘涨幅、第一次冲高点和第一次回落点，判断承接强弱与硬止盈线。</p>
+        </div>
+        <div class="limit-up-calc-form">
+          <div class="limit-up-calc-field"><label>开盘涨幅 x（%）</label><input data-profit-open-pct type="number" step="0.1" value="3" /></div>
+          <div class="limit-up-calc-field"><label>第一次冲高 h（%）</label><input data-profit-high-pct type="number" step="0.1" value="9" /></div>
+          <div class="limit-up-calc-field"><label>第一次回落 p（可选，%）</label><input data-profit-pullback-pct type="number" step="0.1" placeholder="如 7" /></div>
+          <div class="limit-up-calc-field"><label>昨日收盘价（可选）</label><input data-profit-prev-close type="number" step="0.01" placeholder="如 10.00" /></div>
+        </div>
+        <div class="limit-up-calc-output" data-profit-output></div>
+        <div class="limit-up-calc-status" data-profit-status></div>
+      </article>
+    </div>
+    <div class="limit-up-calculator-note">提示：所有百分比都按“百分数单位”输入，例如 5 代表 5%。模型是风控辅助，不是连板确定性预测；若当天爆量分歧极大，要先标记为例外日再判断阈值。</div>
+  </div>
+</section>
+<script>
+(function(root){
+  if(!root) return;
+  const rows=[
+    {open:10,minLow:5.0,openToLow:5.0,amp:5.0},
+    {open:9,minLow:4.2,openToLow:4.8,amp:5.8},
+    {open:8,minLow:3.6,openToLow:4.4,amp:6.4},
+    {open:7,minLow:3.2,openToLow:3.8,amp:6.8},
+    {open:6,minLow:2.6,openToLow:3.4,amp:7.4},
+    {open:5,minLow:1.6,openToLow:3.4,amp:8.4},
+    {open:4,minLow:0.8,openToLow:3.2,amp:9.2},
+    {open:3,minLow:0.0,openToLow:3.0,amp:10.0},
+    {open:2,minLow:-0.4,openToLow:2.4,amp:10.4},
+    {open:1,minLow:-1.2,openToLow:2.2,amp:11.2},
+    {open:0,minLow:-1.6,openToLow:1.6,amp:11.6},
+    {open:-1,minLow:-2.0,openToLow:1.0,amp:12.0},
+    {open:-2,minLow:-2.6,openToLow:0.6,amp:12.6}
+  ];
+  const $=selector=>root.querySelector(selector);
+  const $$=selector=>Array.from(root.querySelectorAll(selector));
+  const clamp=(value,min,max)=>Math.min(Math.max(value,min),max);
+  const num=input=>{const value=Number(input.value);return Number.isFinite(value)?value:undefined};
+  const fmt=(value,digits=2)=>value===undefined||value===null||Number.isNaN(value)?"--":Number(value).toFixed(digits).replace(/\.00$/,"");
+  const pct=value=>`${fmt(value)}%`;
+  const price=value=>value===undefined?"--":fmt(value,2);
+  function interpolate(openPct){
+    const sorted=[...rows].sort((a,b)=>a.open-b.open);
+    const clampedOpenPct=clamp(openPct,sorted[0].open,sorted[sorted.length-1].open);
+    const exact=sorted.find(row=>row.open===clampedOpenPct);
+    if(exact) return {...exact,inputOpenPct:openPct,clampedOpenPct,boundaryClamped:clampedOpenPct!==openPct};
+    for(let i=0;i<sorted.length-1;i+=1){
+      const lo=sorted[i],hi=sorted[i+1];
+      if(clampedOpenPct>=lo.open&&clampedOpenPct<=hi.open){
+        const t=(clampedOpenPct-lo.open)/(hi.open-lo.open);
+        return {
+          inputOpenPct:openPct,
+          clampedOpenPct,
+          boundaryClamped:clampedOpenPct!==openPct,
+          open:clampedOpenPct,
+          minLow:lo.minLow+(hi.minLow-lo.minLow)*t,
+          openToLow:lo.openToLow+(hi.openToLow-lo.openToLow)*t,
+          amp:lo.amp+(hi.amp-lo.amp)*t
+        };
+      }
+    }
+    return {...rows[0],inputOpenPct:openPct,clampedOpenPct:openPct,boundaryClamped:false};
+  }
+  function openingConditions(openPct,prevClose){
+    const line=interpolate(openPct);
+    return {
+      line,
+      protectivePrice:prevClose===undefined?undefined:prevClose*(1+line.minLow/100)
+    };
+  }
+  function metric(label,value,full=false){
+    return `<div class="limit-up-calc-metric ${full?"full":""}"><span>${label}</span><strong>${value}</strong></div>`;
+  }
+  function updateOpen(){
+    const openPct=num($("[data-open-pct]"));
+    const prevClose=num($("[data-open-prev-close]"));
+    const output=$("[data-open-output]");
+    const status=$("[data-open-status]");
+    if(openPct===undefined){output.innerHTML="";status.textContent="请输入有效的开盘涨幅。";return;}
+    const result=openingConditions(openPct,prevClose);
+    const line=result.line;
+    output.innerHTML=[
+      metric("振幅阈值",pct(line.amp)),
+      metric("最低下杀线",pct(line.minLow)),
+      metric("开盘到低点容忍",pct(line.openToLow)),
+      metric("条件单保护价",price(result.protectivePrice))
+    ].join("");
+    status.innerHTML=`开盘涨幅 <strong>${pct(openPct)}</strong> 时，盘中低点最好不要跌破 <strong>${pct(line.minLow)}</strong>。${line.boundaryClamped?`输入超出 [-2%,10%]，已按 <strong>${pct(line.clampedOpenPct)}</strong> 边界保护计算。`:""}`;
+  }
+  function profitModel(openPct,highPct,pullbackPct,prevClose){
+    const opening=openingConditions(openPct,prevClose);
+    const impulsePct=highPct-openPct;
+    if(impulsePct<=0) return {valid:false,reason:"第一次冲高点必须高于开盘涨幅。",opening};
+    const alphaSafe=clamp(0.45-0.015*Math.max(openPct,0),0.28,0.45);
+    const alphaHard=clamp(0.62-0.012*Math.max(openPct,0),0.45,0.62);
+    const anchorBuffer=clamp(0.15*impulsePct,0.3,1.2);
+    const safePullbackLinePct=highPct-alphaSafe*impulsePct;
+    const hardByImpulse=highPct-alphaHard*impulsePct;
+    const hardByOpenAnchor=openPct-anchorBuffer;
+    const hardStopLinePct=Math.max(hardByImpulse,hardByOpenAnchor,opening.line.minLow);
+    const safePrice=prevClose===undefined?undefined:prevClose*(1+safePullbackLinePct/100);
+    const hardStopPrice=prevClose===undefined?undefined:prevClose*(1+hardStopLinePct/100);
+    let status;
+    let pullbackDepthPct;
+    let pullbackRatio;
+    if(pullbackPct!==undefined){
+      pullbackDepthPct=highPct-pullbackPct;
+      pullbackRatio=pullbackDepthPct/impulsePct;
+      if(pullbackPct>=safePullbackLinePct) status="强承接";
+      else if(pullbackPct>=hardStopLinePct) status="偏弱观察";
+      else status="不能接受";
+    }
+    return {valid:true,impulsePct,safePullbackLinePct,hardStopLinePct,safePrice,hardStopPrice,pullbackDepthPct,pullbackRatio,status};
+  }
+  function updateProfit(){
+    const openPct=num($("[data-profit-open-pct]"));
+    const highPct=num($("[data-profit-high-pct]"));
+    const pullbackPct=num($("[data-profit-pullback-pct]"));
+    const prevClose=num($("[data-profit-prev-close]"));
+    const output=$("[data-profit-output]");
+    const statusEl=$("[data-profit-status]");
+    if(openPct===undefined||highPct===undefined){output.innerHTML="";statusEl.textContent="请输入有效的开盘涨幅和第一次冲高点。";return;}
+    const result=profitModel(openPct,highPct,pullbackPct,prevClose);
+    if(!result.valid){output.innerHTML="";statusEl.textContent=result.reason;return;}
+    output.innerHTML=[
+      metric("一次冲高幅度",pct(result.impulsePct)),
+      metric("安全回落线",pct(result.safePullbackLinePct)),
+      metric("不能接受线",pct(result.hardStopLinePct)),
+      metric("安全/硬线价格",`${price(result.safePrice)} / ${price(result.hardStopPrice)}`)
+    ].join("");
+    const statusCopy=result.status?`第一次回落到 <strong>${pct(pullbackPct)}</strong>，状态为 <strong>${result.status}</strong>。`:"未输入第一次回落点时，只给出安全线和硬线。";
+    statusEl.innerHTML=`开盘 <strong>${pct(openPct)}</strong> 后冲到 <strong>${pct(highPct)}</strong>，安全回落线 <strong>${pct(result.safePullbackLinePct)}</strong>，不能接受线 <strong>${pct(result.hardStopLinePct)}</strong>。${statusCopy}`;
+  }
+  $$("input").forEach(input=>input.addEventListener("input",()=>{updateOpen();updateProfit();}));
+  updateOpen();
+  updateProfit();
+})(document.currentScript.previousElementSibling);
+</script>
       <section class="panel coach-panel">
         <div class="section-head"><div><h2>个人每日操作与情绪分析</h2><p>这里固定只看三件事：今日操作结果、核心失误、核心反思。每一天都按 KISS 法则直接展开，方便你回看自己到底做对了什么、又错在了哪里。</p></div></div>
         <div class="coach-grid">
