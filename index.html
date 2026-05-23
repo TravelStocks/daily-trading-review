@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A股复盘站</title>
+  <title>每日A股复盘</title>
   <style>
     :root{--line:rgba(16,74,63,.12);--line-strong:rgba(16,74,63,.18);--text:#15352f;--muted:#56746c;--accent:#0e9f6e;--accent2:#1e8ed6;--risk:#d45745;--warn:#b88415;--shadow:0 18px 48px rgba(13,52,45,.08);--r1:30px;--r2:22px;--r3:16px}
     *{box-sizing:border-box}html{scroll-behavior:smooth}
@@ -266,7 +266,7 @@
     <main class="main">
       <section class="hero">
         <div class="eyebrow">Personal A-Share Recap Hub</div>
-        <h1>A股复盘站</h1>
+        <h1>每日A股复盘</h1>
         <div class="hero-copy">这里是你的专属 A 股复盘与研究日志。首页整合了左侧目录树、最近 7 天时间轴、主线板块热度、最近新增、风险关键词、月度日历视图和置顶收藏；每篇复盘则继续拆成“市场情绪 / 主线板块 / 核心标的 / 明日关注 / 风险提示 / 个人反思”的统一结构，方便长期积累和回看。</div>
         <div class="stats"><div class="stat"><span>累计复盘</span><strong>20</strong></div><div class="stat"><span>最新日期</span><strong>2026.05.20</strong></div><div class="stat"><span>含反思复盘</span><strong>20</strong></div><div class="stat"><span>主线板块库</span><strong>44</strong></div><div class="stat"><span>更新方式</span><strong>Word 自动转页</strong></div></div>
       </section>
@@ -610,7 +610,8 @@
       return text(cleaned, limit);
     };
     const parseOperationEmotionSections = textValue => {
-      const lines = String(textValue || '').replaceAll('', '').split('
+      const lines = String(textValue || '').replaceAll('
+', '').split('
 ').map(line => line.trim()).filter(Boolean);
       if (!lines.length) return [];
       const sections = [];
