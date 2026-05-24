@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>章盟主式超短全景复盘（2026.5.22 周五）+5.25个股板块预案</title>
+  <style>
+    :root {--paper: rgba(255,255,255,0.86);--line: rgba(16,74,63,0.12);--text: #15352f;--muted: #56746c;--accent: #0e9f6e;--accent-deep: #0d6b66;--action: #1e8ed6;--shadow: 0 18px 48px rgba(13,52,45,0.08);--radius-xl: 28px;--radius-lg: 22px;--radius-md: 16px;}
+    * { box-sizing: border-box; } html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--text); font-family: "Source Han Sans SC","PingFang SC","Microsoft YaHei","Segoe UI",sans-serif; background: radial-gradient(circle at top left, rgba(30,142,214,0.14), transparent 32%), radial-gradient(circle at top right, rgba(14,159,110,0.18), transparent 28%), linear-gradient(180deg, #f3fbf7 0%, #edf6f1 48%, #e8f3ee 100%); line-height: 1.75; }
+    .page { width: min(1480px, calc(100vw - 32px)); margin: 24px auto 48px; }
+    .hero { overflow: hidden; padding: 40px; border: 1px solid rgba(255,255,255,0.7); border-radius: var(--radius-xl); background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(247,252,250,0.84)), linear-gradient(135deg, rgba(14,159,110,0.08), rgba(30,142,214,0.08)); box-shadow: var(--shadow); backdrop-filter: blur(14px); }
+    .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--accent-deep); text-decoration: none; font-size: 14px; margin-bottom: 14px; }
+    .eyebrow,.badge,.record-chip { display: inline-flex; align-items: center; }
+    .eyebrow { gap: 10px; padding: 8px 14px; border-radius: 999px; background: rgba(255,255,255,0.76); border: 1px solid var(--line); color: var(--accent-deep); font-size: 13px; letter-spacing: 0.06em; }
+    .eyebrow::before { content: ""; width: 9px; height: 9px; border-radius: 999px; background: linear-gradient(135deg, var(--accent), var(--action)); box-shadow: 0 0 0 6px rgba(14,159,110,0.09); }
+    .hero h1 { margin: 18px 0 16px; max-width: 980px; font-size: clamp(2rem, 4vw, 3.3rem); line-height: 1.18; letter-spacing: -0.03em; }
+    .hero-meta,.badge-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .hero-meta { color: var(--muted); font-size: 15px; }
+    .hero-summary { max-width: 980px; margin-top: 20px; padding: 18px 20px; border-radius: var(--radius-md); background: rgba(255,255,255,0.74); border: 1px solid var(--line); color: #244a43; font-size: 16px; }
+    .hero-spotlight { margin-top: 16px; padding: 16px 18px; border-radius: var(--radius-md); background: linear-gradient(180deg, rgba(14,159,110,0.1), rgba(255,255,255,0.94)); border: 1px solid rgba(14,159,110,0.18); }
+    .hero-spotlight span { display: inline-flex; align-items: center; padding: 6px 10px; border-radius: 999px; background: rgba(255,255,255,0.9); color: var(--accent-deep); font-size: 12px; font-weight: 700; letter-spacing: 0.04em; }
+    .hero-spotlight p { margin: 10px 0 0; color: #173e37; font-size: 16px; line-height: 1.8; font-weight: 700; }
+    .badge-row { margin-top: 16px; gap: 8px; }
+    .badge { padding: 7px 12px; border-radius: 999px; background: rgba(255,255,255,0.82); border: 1px solid var(--line); color: var(--accent-deep); font-size: 13px; }
+    .badge.status { background: rgba(30,142,214,0.08); color: #185e8b; }
+    .badge.bucket { background: rgba(184,132,21,0.12); border-color: rgba(184,132,21,0.18); color: #8a650f; }
+    .summary-grid-top { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 22px; }
+    .summary-panel { padding: 18px; border-radius: var(--radius-md); background: rgba(255,255,255,0.82); border: 1px solid var(--line); }
+    .summary-panel h3 { margin: 0 0 10px; font-size: 14px; color: var(--accent-deep); letter-spacing: 0.03em; text-transform: uppercase; }
+    .summary-note { margin: 0 0 12px; color: #173e37; font-size: 15px; line-height: 1.8; font-weight: 600; }
+    .summary-panel p { margin: 0; color: #244a43; }
+    .summary-panel ul { margin: 0; padding-left: 18px; color: #244a43; }
+    .summary-panel li + li { margin-top: 8px; }
+    .review-kiss { display: grid; gap: 10px; }
+    .review-kiss-card { padding: 14px; border-radius: 14px; border: 1px solid var(--line); background: rgba(255,255,255,0.84); }
+    .review-kiss-card.result { background: linear-gradient(180deg, rgba(14,159,110,0.08), rgba(255,255,255,0.96)); }
+    .review-kiss-card.mistake { background: linear-gradient(180deg, rgba(212,87,69,0.08), rgba(255,255,255,0.96)); border-color: rgba(212,87,69,0.18); }
+    .review-kiss-card.reflection { background: linear-gradient(180deg, rgba(184,132,21,0.08), rgba(255,255,255,0.96)); border-color: rgba(184,132,21,0.18); }
+    .review-kiss-card h5 { margin: 0 0 8px; font-size: 13px; color: var(--accent-deep); letter-spacing: 0.03em; }
+    .review-kiss-card ul { margin: 0; padding-left: 18px; color: #244a43; }
+    .review-kiss-card li + li { margin-top: 6px; }
+    .summary-panel.next-focus { background: linear-gradient(180deg, rgba(30,142,214,0.08), rgba(255,255,255,0.9)); border-color: rgba(30,142,214,0.18); }
+    .summary-panel.mainline { background: linear-gradient(180deg, rgba(14,159,110,0.08), rgba(255,255,255,0.94)); border-color: rgba(14,159,110,0.18); }
+    .summary-panel.core-focus { background: linear-gradient(180deg, rgba(14,159,110,0.06), rgba(255,255,255,0.94)); }
+    .summary-panel.risk-panel { background: linear-gradient(180deg, rgba(212,87,69,0.08), rgba(255,255,255,0.94)); border-color: rgba(212,87,69,0.18); }
+    .summary-panel.risk-panel h3 { color: #b44236; }
+    .summary-panel.rhythm-panel { margin-top: 18px; background: linear-gradient(180deg, rgba(184,132,21,0.09), rgba(255,255,255,0.96)); border-color: rgba(184,132,21,0.18); }
+    .summary-card-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+    .mini-card { padding: 16px; border-radius: 14px; background: rgba(255,255,255,0.8); border: 1px solid var(--line); }
+    .mini-card h4 { margin: 0 0 8px; font-size: 13px; color: var(--accent-deep); text-transform: uppercase; letter-spacing: 0.04em; }
+    .mini-card p { margin: 0; color: #244a43; line-height: 1.78; }
+    .mini-card ul { margin: 0; padding-left: 18px; color: #244a43; }
+    .mini-card li + li { margin-top: 6px; }
+    .mini-card.emotion { background: rgba(242,249,255,0.94); border-color: rgba(30,142,214,0.16); }
+    .mini-card.reflection { background: rgba(255,250,240,0.92); border-color: rgba(210,164,79,0.18); }
+    .mini-card.reflection p { white-space: pre-line; }
+    .mini-card.risk { background: rgba(255,246,243,0.92); border-color: rgba(212,87,69,0.16); }
+    .summary-chip-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .summary-chip { display: inline-flex; align-items: center; padding: 7px 11px; border-radius: 999px; background: rgba(14,159,110,0.12); color: var(--accent-deep); font-size: 13px; border: 1px solid rgba(14,159,110,0.12); }
+    .annotation-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 14px; }
+    .annotation-card { padding: 16px; border-radius: 14px; background: rgba(255,255,255,0.88); border: 1px solid var(--line); }
+    .annotation-card h4 { margin: 0; font-size: 15px; color: #123b36; }
+    .annotation-card p { margin: 12px 0 0; color: #244a43; line-height: 1.76; }
+    .annotation-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .annotation-meta span { display: inline-flex; align-items: center; padding: 7px 10px; border-radius: 999px; background: rgba(14,159,110,0.1); color: var(--accent-deep); font-size: 12px; }
+    .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; margin-top: 24px; }
+    .metric { padding: 16px 18px; border-radius: var(--radius-md); background: rgba(255,255,255,0.82); border: 1px solid var(--line); min-height: 92px; }
+    .metric span { display: block; font-size: 13px; color: var(--muted); letter-spacing: 0.04em; }
+    .metric strong { display: block; margin-top: 8px; font-size: clamp(1.2rem, 2vw, 1.8rem); color: var(--accent-deep); }
+    .layout { display: grid; grid-template-columns: 320px minmax(0, 1fr); gap: 24px; margin-top: 24px; align-items: start; }
+    .toc { position: sticky; top: 18px; padding: 24px 18px 20px; border-radius: var(--radius-lg); background: var(--paper); border: 1px solid rgba(255,255,255,0.75); box-shadow: var(--shadow); backdrop-filter: blur(10px); max-height: calc(100vh - 36px); overflow: auto; }
+    .toc h2 { margin: 0 0 14px; font-size: 1rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent-deep); }
+    .toc-link { display: block; padding: 10px 12px; margin-bottom: 8px; border-radius: 12px; color: var(--text); text-decoration: none; border: 1px solid transparent; }
+    .toc-link.level-2 { font-weight: 700; color: var(--accent-deep); }
+    .toc-link.level-3 { margin-left: 10px; padding-left: 16px; font-size: 14px; color: #35554e; border-left: 2px solid rgba(14,159,110,0.14); border-radius: 0 12px 12px 0; }
+    .toc-link:hover,.toc-link.is-active { background: rgba(255,255,255,0.82); border-color: var(--line); transform: translateX(4px); }
+    .content { padding: 28px; border-radius: var(--radius-lg); background: var(--paper); border: 1px solid rgba(255,255,255,0.72); box-shadow: var(--shadow); backdrop-filter: blur(10px); }
+    .chapter-title,.subchapter-title { scroll-margin-top: 20px; position: relative; margin: 30px 0 16px; padding-left: 18px; line-height: 1.32; }
+    .chapter-title { font-size: clamp(1.55rem, 2.6vw, 2.25rem); color: #123b36; }
+    .chapter-title::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 7px; border-radius: 999px; background: linear-gradient(180deg, var(--accent), var(--action)); }
+    .subchapter-title { margin-top: 26px; font-size: clamp(1.16rem, 2vw, 1.5rem); color: var(--accent-deep); padding-left: 16px; }
+    .subchapter-title::before { content: ""; position: absolute; left: 0; top: 0.35em; width: 10px; height: 10px; border-radius: 50%; background: linear-gradient(135deg, var(--accent), var(--action)); box-shadow: 0 0 0 8px rgba(14,159,110,0.08); }
+    .body-line,.item-card,.table-card { margin: 0 0 14px; border-radius: var(--radius-md); background: rgba(255,255,255,0.7); border: 1px solid var(--line); }
+    .body-line { padding: 16px 18px; color: #22463f; }
+    .item-card { display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start; padding: 16px 18px; border-left: 4px solid rgba(14,159,110,0.5); }
+    .item-card p { margin: 0; } .item-index { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; padding: 7px 10px; border-radius: 999px; background: rgba(14,159,110,0.12); color: var(--accent-deep); font-weight: 800; line-height: 1; }
+    .tone-core { border-left-color: rgba(14,159,110,0.92); background: linear-gradient(180deg, rgba(14,159,110,0.06), rgba(255,255,255,0.76)); }
+    .tone-action { border-left-color: rgba(30,142,214,0.9); background: linear-gradient(180deg, rgba(30,142,214,0.06), rgba(255,255,255,0.78)); }
+    .tone-risk { border-left-color: rgba(212,87,69,0.9); background: linear-gradient(180deg, rgba(212,87,69,0.05), rgba(255,255,255,0.78)); }
+    .line-label { font-weight: 800; color: var(--accent-deep); }
+    mark { padding: 0 0.24em; border-radius: 0.45em; background: linear-gradient(180deg, rgba(255,231,138,0.42), rgba(255,231,138,0.22)); color: inherit; }
+    .table-card { padding: 16px; margin-top: 18px; background: rgba(255,255,255,0.84); }
+    .table-title { margin-bottom: 12px; font-weight: 800; color: var(--accent-deep); letter-spacing: 0.04em; }
+    .table-wrap { overflow-x: auto; border-radius: 14px; border: 1px solid var(--line); }
+    table { width: 100%; min-width: 860px; border-collapse: collapse; background: white; }
+    th,td { padding: 12px 14px; border-bottom: 1px solid rgba(16,74,63,0.08); border-right: 1px solid rgba(16,74,63,0.06); text-align: left; vertical-align: top; font-size: 14px; }
+    th { position: sticky; top: 0; background: #eff9f4; color: var(--accent-deep); font-weight: 800; z-index: 1; }
+    tr:last-child td { border-bottom: 0; } td:last-child,th:last-child { border-right: 0; }
+    .footer-note { margin: 16px 0 0; color: var(--muted); font-size: 13px; text-align: right; }
+    .to-top { position: fixed; right: 20px; bottom: 20px; display: inline-flex; align-items: center; justify-content: center; height: 56px; padding: 0 18px; border-radius: 999px; background: linear-gradient(135deg, var(--accent), var(--action)); color: white; text-decoration: none; box-shadow: 0 14px 26px rgba(13,52,45,0.2); font-size: 14px; font-weight: 800; letter-spacing: 0.06em; }
+    @media (max-width: 1080px) { .layout { grid-template-columns: 1fr; } .toc { position: static; max-height: none; } }
+    @media (max-width: 900px) { .summary-grid-top,.summary-card-grid,.annotation-grid { grid-template-columns: 1fr; } }
+    @media (max-width: 720px) { .page { width: min(100vw - 18px, 100%); margin: 10px auto 24px; } .hero,.content,.toc { padding: 20px; } .hero h1 { font-size: 1.9rem; } .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); } .item-card { grid-template-columns: 1fr; } .item-index { width: fit-content; } .to-top { right: 14px; bottom: 14px; } }
+  </style>
+</head>
+<body>
+  <div class="page" id="top">
+    <section class="hero">
+      <a class="back-link" href="../index.html">← 返回复盘目录</a>
+      <div class="eyebrow">Daily Note · 5/22</div>
+      <h1>章盟主式超短全景复盘（2026.5.22 周五）+5.25个股板块预案</h1>
+      <div class="hero-meta">
+        <span>复盘记录</span>
+        <span>情绪标签：高潮</span>
+        <span>更新时间：2026-05-24 15:35</span>
+      </div>
+      <div class="hero-summary"></div>
+      <div class="hero-spotlight"><span>一句话定调</span><p>高潮定调：玻璃基板（新主线，京东方A独立中军…；明早先看核心标的反馈：大盘节奏、高…</p></div>
+      <div class="badge-row"><span class="badge">算力</span><span class="badge">机器人</span><span class="badge status">主线</span><span class="badge status">退潮</span><span class="badge status">风险</span><span class="badge status">套利</span><span class="badge status">反思</span><span class="badge bucket">反思复盘</span></div>
+      <div class="summary-grid-top">
+        <section class="summary-panel next-focus">
+          <h3>明日关注</h3>
+          <p class="summary-note">明早先看核心标的反馈：大盘节奏、高开必兑现、全程回避杂毛</p>
+          <ul><li>核心标的反馈：大盘节奏、高开必兑现、全程回避杂毛</li><li>主线节奏继续围绕：（一）玻璃基板（新主线，京东方A独立中军龙）</li><li>开盘先规避这类风险：提前识别高位独立龙崩盘风险，全面回避利仁科技、威龙股份，成功规避大面回撤</li></ul>
+        </section>
+        <section class="summary-panel mainline">
+          <h3>主线板块</h3>
+          <p class="summary-note">玻璃基板（新主线，京东方A独立中军龙），次看 机器人 的轮动承接。</p>
+          <ul><li>（一）玻璃基板（新主线，京东方A独立中军龙）</li><li>（二）机器人（绝对主线，梯队完整）</li><li>（六）算力液冷（老主线，强度明显下降）</li></ul>
+        </section>
+        <section class="summary-panel core-focus">
+          <h3>核心标的卡片</h3>
+          <p class="summary-note">核心标的优先盯 大盘节奏、高开必兑现、全程回避杂毛，只看前排、承接和分歧后的回流。</p>
+          <div class="summary-chip-row"><span class="summary-chip">大盘节奏</span><span class="summary-chip">高开必兑现</span><span class="summary-chip">全程回避杂毛</span></div>
+        </section>
+        <section class="summary-panel risk-panel">
+          <h3>风险提示</h3>
+          <p class="summary-note">先规避提前识别高位独立龙崩盘风险，全面回避利仁科技、威龙股份，成功规避大面回撤</p>
+          <ul><li>提前识别高位独立龙崩盘风险，全面回避利仁科技、威龙股份，成功规避大面回撤</li><li>依托量化模型设置止盈保护位，守住盈利、规避回撤</li><li>异动监管（严格规避）</li><li>大盘节奏：高开必兑现，低开可低吸，整体横盘震荡为主</li></ul>
+        </section>
+      </div>
+      <div class="summary-card-grid">
+        <section class="mini-card emotion">
+          <h4>市场情绪</h4>
+          <p>市场情绪定调为高潮，先看量能、竞价与主线前排反馈。</p>
+        </section>
+        <section class="mini-card reflection">
+          <h4>操作情绪分析</h4>
+          <div class="review-kiss"><section class="review-kiss-card result"><h5>一、今日操作结果</h5><ul><li>冰点后精准预判强修复，聚焦断板反包+AI硬件主线，锁定达实智能、京东方A、合百集团、大众交通</li><li>提前回避利仁科技、威龙股份等高位独立抱团龙崩盘风险，守住回撤</li><li>达实智能按量化模型设置4%-5%止盈保护位，回踩不破继续持有，拿住到上板</li></ul></section><section class="review-kiss-card mistake"><h5>二、核心失误</h5><ul><li>高潮缩量信号出现后，控仓意识还要更前置，不能被普涨情绪放松警惕</li><li>异动监管票和支线题材没有提前完全剔除，盯盘范围仍有冗余</li><li>无人驾驶梯队残缺的持续性判断还不够量化，盘中仍有纠结</li></ul></section><section class="review-kiss-card reflection"><h5>三、核心反思</h5><ul><li>强修复日错杀龙头先给3-5分钟观察，不因瞬时下杀恐慌卖飞</li><li>龙头具有唯一性，只比较五维拉满、梯队完整、异动安全的核心票</li><li>每笔交易前必须写死止盈/止损点和仓位上限，无规划不交易</li></ul></section></div>
+        </section>
+        <section class="mini-card">
+          <h4>核心标的摘要</h4>
+          <p>核心标的优先盯 大盘节奏、高开必兑现、全程回避杂毛，只看前排、承接和分歧后的回流。</p>
+        </section>
+      </div>
+      
+      <div class="metrics"><div class="metric"><span>涨停家数</span><strong>1. 达实智能：平开/小高开抗跌横盘、弱转强 → 锁定市场总龙</strong></div><div class="metric"><span>跌停家数</span><strong>3板</strong></div><div class="metric"><span>内容块</span><strong>147</strong></div><div class="metric"><span>表格</span><strong>4</strong></div></div>
+    </section>
+    <section class="limit-up-calculator-panel" data-limit-up-calculator>
+  <style>
+    .limit-up-calculator-panel{position:relative;overflow:hidden;padding:24px;border-radius:24px;background:linear-gradient(135deg,rgba(9,43,38,.96),rgba(10,83,73,.94) 52%,rgba(20,102,132,.92));border:1px solid rgba(255,255,255,.22);box-shadow:0 24px 60px rgba(6,42,38,.18);color:#f3fffb}
+    .limit-up-calculator-panel:before{content:"";position:absolute;inset:-28% auto auto -14%;width:360px;height:360px;border-radius:999px;background:radial-gradient(circle,rgba(77,214,162,.24),transparent 68%);pointer-events:none}
+    .limit-up-calculator-panel:after{content:"";position:absolute;right:-90px;bottom:-110px;width:320px;height:320px;border-radius:999px;background:radial-gradient(circle,rgba(72,174,228,.22),transparent 70%);pointer-events:none}
+    .limit-up-calculator-inner{position:relative;z-index:1;display:grid;gap:18px}
+    .limit-up-calculator-head{display:flex;justify-content:space-between;gap:18px;align-items:flex-start;flex-wrap:wrap}
+    .limit-up-calculator-kicker{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);font-size:12px;font-weight:800;letter-spacing:.08em;color:#bff8e1}
+    .limit-up-calculator-kicker:before{content:"";width:8px;height:8px;border-radius:999px;background:linear-gradient(135deg,#5df0af,#60c3ff);box-shadow:0 0 0 6px rgba(93,240,175,.1)}
+    .limit-up-calculator-head h2{margin:12px 0 8px;font-size:clamp(1.45rem,2.4vw,2.1rem);line-height:1.22;color:#fff}
+    .limit-up-calculator-head p{margin:0;max-width:850px;color:rgba(243,255,251,.78);line-height:1.8;font-size:14px}
+    .limit-up-calculator-source{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#eafff6;text-decoration:none;font-size:13px;font-weight:800;white-space:nowrap}
+    .limit-up-calculator-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .limit-up-calc-card{display:grid;gap:14px;padding:18px;border-radius:20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(8px)}
+    .limit-up-calc-card h3{margin:0;color:#fff;font-size:1.03rem}
+    .limit-up-calc-card p{margin:0;color:rgba(243,255,251,.72);font-size:13px;line-height:1.7}
+    .limit-up-calc-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .limit-up-calc-field{display:grid;gap:6px}
+    .limit-up-calc-field label{font-size:12px;color:#bff8e1;font-weight:800}
+    .limit-up-calc-field input{width:100%;border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:12px 13px;background:rgba(255,255,255,.92);color:#123b36;font-size:14px;outline:none}
+    .limit-up-calc-field input:focus{border-color:#5df0af;box-shadow:0 0 0 4px rgba(93,240,175,.14)}
+    .limit-up-calc-output{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .limit-up-calc-metric{padding:12px;border-radius:14px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.14)}
+    .limit-up-calc-metric span{display:block;font-size:12px;color:rgba(243,255,251,.7)}
+    .limit-up-calc-metric strong{display:block;margin-top:4px;color:#fff;font-size:1.12rem}
+    .limit-up-calc-metric.full{grid-column:1/-1}
+    .limit-up-calc-status{padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.16);color:#f5fffb;font-size:13px;line-height:1.72}
+    .limit-up-calc-status strong{color:#9ff2cd}
+    .limit-up-calculator-note{padding:12px 14px;border-radius:16px;background:rgba(255,255,255,.1);border:1px dashed rgba(255,255,255,.22);color:rgba(243,255,251,.7);font-size:12px;line-height:1.75}
+    @media (max-width:980px){.limit-up-calculator-grid,.limit-up-calc-form,.limit-up-calc-output{grid-template-columns:1fr}.limit-up-calculator-head{display:grid}.limit-up-calculator-source{width:fit-content}}
+  </style>
+  <div class="limit-up-calculator-inner">
+    <div class="limit-up-calculator-head">
+      <div>
+        <span class="limit-up-calculator-kicker">Limit-Up Calculator</span>
+        <h2>连板开盘风控与冲高回落止盈计算器</h2>
+        <p>模型来自 abchaoming1 的 limit-up-calculators-skill，主要用于三板及以上连板龙头的开盘下杀线、振幅阈值、条件单保护价，以及第一次冲高后的安全回落线。</p>
+      </div>
+      <a class="limit-up-calculator-source" href="https://github.com/abchaoming1/limit-up-calculators-skill" target="_blank" rel="noreferrer">查看模型来源</a>
+    </div>
+    <div class="limit-up-calculator-grid">
+      <article class="limit-up-calc-card">
+        <div>
+          <h3>开盘条件计算</h3>
+          <p>输入竞价开盘涨幅，快速得到当日振幅阈值、最低下杀线和条件单保护价。</p>
+        </div>
+        <div class="limit-up-calc-form">
+          <div class="limit-up-calc-field"><label>开盘涨幅 x（%）</label><input data-open-pct type="number" step="0.1" value="5" /></div>
+          <div class="limit-up-calc-field"><label>昨日收盘价（可选）</label><input data-open-prev-close type="number" step="0.01" placeholder="如 10.00" /></div>
+        </div>
+        <div class="limit-up-calc-output" data-open-output></div>
+        <div class="limit-up-calc-status" data-open-status></div>
+      </article>
+      <article class="limit-up-calc-card">
+        <div>
+          <h3>第一次冲高回落止盈</h3>
+          <p>输入开盘涨幅、第一次冲高点和第一次回落点，判断承接强弱与硬止盈线。</p>
+        </div>
+        <div class="limit-up-calc-form">
+          <div class="limit-up-calc-field"><label>开盘涨幅 x（%）</label><input data-profit-open-pct type="number" step="0.1" value="3" /></div>
+          <div class="limit-up-calc-field"><label>第一次冲高 h（%）</label><input data-profit-high-pct type="number" step="0.1" value="9" /></div>
+          <div class="limit-up-calc-field"><label>第一次回落 p（可选，%）</label><input data-profit-pullback-pct type="number" step="0.1" placeholder="如 7" /></div>
+          <div class="limit-up-calc-field"><label>昨日收盘价（可选）</label><input data-profit-prev-close type="number" step="0.01" placeholder="如 10.00" /></div>
+        </div>
+        <div class="limit-up-calc-output" data-profit-output></div>
+        <div class="limit-up-calc-status" data-profit-status></div>
+      </article>
+    </div>
+    <div class="limit-up-calculator-note">提示：所有百分比都按“百分数单位”输入，例如 5 代表 5%。模型是风控辅助，不是连板确定性预测；若当天爆量分歧极大，要先标记为例外日再判断阈值。</div>
+  </div>
+</section>
+<script>
+(function(root){
+  if(!root) return;
+  const rows=[
+    {open:10,minLow:5.0,openToLow:5.0,amp:5.0},
+    {open:9,minLow:4.2,openToLow:4.8,amp:5.8},
+    {open:8,minLow:3.6,openToLow:4.4,amp:6.4},
+    {open:7,minLow:3.2,openToLow:3.8,amp:6.8},
+    {open:6,minLow:2.6,openToLow:3.4,amp:7.4},
+    {open:5,minLow:1.6,openToLow:3.4,amp:8.4},
+    {open:4,minLow:0.8,openToLow:3.2,amp:9.2},
+    {open:3,minLow:0.0,openToLow:3.0,amp:10.0},
+    {open:2,minLow:-0.4,openToLow:2.4,amp:10.4},
+    {open:1,minLow:-1.2,openToLow:2.2,amp:11.2},
+    {open:0,minLow:-1.6,openToLow:1.6,amp:11.6},
+    {open:-1,minLow:-2.0,openToLow:1.0,amp:12.0},
+    {open:-2,minLow:-2.6,openToLow:0.6,amp:12.6}
+  ];
+  const $=selector=>root.querySelector(selector);
+  const $$=selector=>Array.from(root.querySelectorAll(selector));
+  const clamp=(value,min,max)=>Math.min(Math.max(value,min),max);
+  const num=input=>{const value=Number(input.value);return Number.isFinite(value)?value:undefined};
+  const fmt=(value,digits=2)=>value===undefined||value===null||Number.isNaN(value)?"--":Number(value).toFixed(digits).replace(/\.00$/,"");
+  const pct=value=>`${fmt(value)}%`;
+  const price=value=>value===undefined?"--":fmt(value,2);
+  function interpolate(openPct){
+    const sorted=[...rows].sort((a,b)=>a.open-b.open);
+    const clampedOpenPct=clamp(openPct,sorted[0].open,sorted[sorted.length-1].open);
+    const exact=sorted.find(row=>row.open===clampedOpenPct);
+    if(exact) return {...exact,inputOpenPct:openPct,clampedOpenPct,boundaryClamped:clampedOpenPct!==openPct};
+    for(let i=0;i<sorted.length-1;i+=1){
+      const lo=sorted[i],hi=sorted[i+1];
+      if(clampedOpenPct>=lo.open&&clampedOpenPct<=hi.open){
+        const t=(clampedOpenPct-lo.open)/(hi.open-lo.open);
+        return {
+          inputOpenPct:openPct,
+          clampedOpenPct,
+          boundaryClamped:clampedOpenPct!==openPct,
+          open:clampedOpenPct,
+          minLow:lo.minLow+(hi.minLow-lo.minLow)*t,
+          openToLow:lo.openToLow+(hi.openToLow-lo.openToLow)*t,
+          amp:lo.amp+(hi.amp-lo.amp)*t
+        };
+      }
+    }
+    return {...rows[0],inputOpenPct:openPct,clampedOpenPct:openPct,boundaryClamped:false};
+  }
+  function openingConditions(openPct,prevClose){
+    const line=interpolate(openPct);
+    return {
+      line,
+      protectivePrice:prevClose===undefined?undefined:prevClose*(1+line.minLow/100)
+    };
+  }
+  function metric(label,value,full=false){
+    return `<div class="limit-up-calc-metric ${full?"full":""}"><span>${label}</span><strong>${value}</strong></div>`;
+  }
+  function updateOpen(){
+    const openPct=num($("[data-open-pct]"));
+    const prevClose=num($("[data-open-prev-close]"));
+    const output=$("[data-open-output]");
+    const status=$("[data-open-status]");
+    if(openPct===undefined){output.innerHTML="";status.textContent="请输入有效的开盘涨幅。";return;}
+    const result=openingConditions(openPct,prevClose);
+    const line=result.line;
+    output.innerHTML=[
+      metric("振幅阈值",pct(line.amp)),
+      metric("最低下杀线",pct(line.minLow)),
+      metric("开盘到低点容忍",pct(line.openToLow)),
+      metric("条件单保护价",price(result.protectivePrice))
+    ].join("");
+    status.innerHTML=`开盘涨幅 <strong>${pct(openPct)}</strong> 时，盘中低点最好不要跌破 <strong>${pct(line.minLow)}</strong>。${line.boundaryClamped?`输入超出 [-2%,10%]，已按 <strong>${pct(line.clampedOpenPct)}</strong> 边界保护计算。`:""}`;
+  }
+  function profitModel(openPct,highPct,pullbackPct,prevClose){
+    const opening=openingConditions(openPct,prevClose);
+    const impulsePct=highPct-openPct;
+    if(impulsePct<=0) return {valid:false,reason:"第一次冲高点必须高于开盘涨幅。",opening};
+    const alphaSafe=clamp(0.45-0.015*Math.max(openPct,0),0.28,0.45);
+    const alphaHard=clamp(0.62-0.012*Math.max(openPct,0),0.45,0.62);
+    const anchorBuffer=clamp(0.15*impulsePct,0.3,1.2);
+    const safePullbackLinePct=highPct-alphaSafe*impulsePct;
+    const hardByImpulse=highPct-alphaHard*impulsePct;
+    const hardByOpenAnchor=openPct-anchorBuffer;
+    const hardStopLinePct=Math.max(hardByImpulse,hardByOpenAnchor,opening.line.minLow);
+    const safePrice=prevClose===undefined?undefined:prevClose*(1+safePullbackLinePct/100);
+    const hardStopPrice=prevClose===undefined?undefined:prevClose*(1+hardStopLinePct/100);
+    let status;
+    let pullbackDepthPct;
+    let pullbackRatio;
+    if(pullbackPct!==undefined){
+      pullbackDepthPct=highPct-pullbackPct;
+      pullbackRatio=pullbackDepthPct/impulsePct;
+      if(pullbackPct>=safePullbackLinePct) status="强承接";
+      else if(pullbackPct>=hardStopLinePct) status="偏弱观察";
+      else status="不能接受";
+    }
+    return {valid:true,impulsePct,safePullbackLinePct,hardStopLinePct,safePrice,hardStopPrice,pullbackDepthPct,pullbackRatio,status};
+  }
+  function updateProfit(){
+    const openPct=num($("[data-profit-open-pct]"));
+    const highPct=num($("[data-profit-high-pct]"));
+    const pullbackPct=num($("[data-profit-pullback-pct]"));
+    const prevClose=num($("[data-profit-prev-close]"));
+    const output=$("[data-profit-output]");
+    const statusEl=$("[data-profit-status]");
+    if(openPct===undefined||highPct===undefined){output.innerHTML="";statusEl.textContent="请输入有效的开盘涨幅和第一次冲高点。";return;}
+    const result=profitModel(openPct,highPct,pullbackPct,prevClose);
+    if(!result.valid){output.innerHTML="";statusEl.textContent=result.reason;return;}
+    output.innerHTML=[
+      metric("一次冲高幅度",pct(result.impulsePct)),
+      metric("安全回落线",pct(result.safePullbackLinePct)),
+      metric("不能接受线",pct(result.hardStopLinePct)),
+      metric("安全/硬线价格",`${price(result.safePrice)} / ${price(result.hardStopPrice)}`)
+    ].join("");
+    const statusCopy=result.status?`第一次回落到 <strong>${pct(pullbackPct)}</strong>，状态为 <strong>${result.status}</strong>。`:"未输入第一次回落点时，只给出安全线和硬线。";
+    statusEl.innerHTML=`开盘 <strong>${pct(openPct)}</strong> 后冲到 <strong>${pct(highPct)}</strong>，安全回落线 <strong>${pct(result.safePullbackLinePct)}</strong>，不能接受线 <strong>${pct(result.hardStopLinePct)}</strong>。${statusCopy}`;
+  }
+  $$("input").forEach(input=>input.addEventListener("input",()=>{updateOpen();updateProfit();}));
+  updateOpen();
+  updateProfit();
+})(document.currentScript.previousElementSibling);
+</script>
+    <div class="layout">
+      <aside class="toc"><h2>目录导航</h2><a class="toc-link level-2" href="#section-1">一、复盘总纲</a><a class="toc-link level-2" href="#section-2">二、市场风格与赚钱效应解析</a><a class="toc-link level-3" href="#section-3">（一）市场风格</a><a class="toc-link level-3" href="#section-4">（二）赚钱效应</a><a class="toc-link level-2" href="#section-5-4">三、近4日板块强度+次日节奏预测表</a><a class="toc-link level-2" href="#section-6">四、今日操作结果+核心失误+核心反思</a><a class="toc-link level-3" href="#section-7">（一）今日操作结果</a><a class="toc-link level-3" href="#section-8">（二）核心失误根源</a><a class="toc-link level-3" href="#section-9">（三）深度核心反思</a><a class="toc-link level-2" href="#section-10-kiss-keep-improve-start-stop">五、操作与情绪复盘（KISS模型：Keep/Improve/Start/Stop）</a><a class="toc-link level-3" href="#section-11-5-21">（一）5.21 操作&amp;情绪复盘（大亏日）</a><a class="toc-link level-3" href="#section-12-5-22">（二）5.22 操作&amp;情绪复盘（完美日）</a><a class="toc-link level-3" href="#section-13-kiss-keep-improve-start-stop">（三）KISS模型四维总结（Keep/Improve/Start/Stop）</a><a class="toc-link level-2" href="#section-14">六、各主线板块详细解析</a><a class="toc-link level-3" href="#section-15-a">（一）玻璃基板（新主线，京东方A独立中军龙）</a><a class="toc-link level-3" href="#section-16">（二）机器人（绝对主线，梯队完整）</a><a class="toc-link level-3" href="#section-17-pcb-mlcc-ai">（三）PCB/MLCC（AI硬件上游，梯队完整，高潮分化）</a><a class="toc-link level-3" href="#section-18">（四）半导体/存储（梯队完整，消息催化）</a><a class="toc-link level-3" href="#section-19">（五）无人驾驶（梯队残缺，容量不足）</a><a class="toc-link level-3" href="#section-20">（六）算力液冷（老主线，强度明显下降）</a><a class="toc-link level-2" href="#section-21">七、事件催化时间线</a><a class="toc-link level-2" href="#section-22">八、异动监管与龙虎榜+人气榜情况</a><a class="toc-link level-3" href="#section-23">（一）异动监管（严格规避）</a><a class="toc-link level-3" href="#section-24">（二）龙虎榜资金流向</a><a class="toc-link level-3" href="#section-25">（三）人气榜核心研判</a><a class="toc-link level-2" href="#section-26">九、跌停与炸板情况</a><a class="toc-link level-2" href="#section-27-5-25">十、核心关键票汇总+明日个股预案（5.25）</a><a class="toc-link level-3" href="#section-28">（一）核心关键票全梳理</a><a class="toc-link level-3" href="#section-29">（二）明日操作铁律</a><a class="toc-link level-2" href="#section-30">十一、大盘明日预期节奏</a><a class="toc-link level-3" href="#section-31">（一）指数节奏预判</a><a class="toc-link level-3" href="#section-32">（二）情绪节奏预判</a><a class="toc-link level-3" href="#section-33">（三）操作适配节奏</a><a class="toc-link level-2" href="#section-34">十二、明日核心票弱转强/转强确定+板块预期细化表</a><a class="toc-link level-2" href="#section-35">十三、龙头预备票（最终定稿）</a><a class="toc-link level-3" href="#section-36">（一）总龙候选名单</a><a class="toc-link level-3" href="#section-37">（二）总龙唯一性排序</a><a class="toc-link level-3" href="#section-38">（三）龙头五维核验明细</a><a class="toc-link level-3" href="#section-39">（四）明日总龙决胜观察要点</a></aside>
+      <main class="content"><h2 id="section-1" class="chapter-title">一、复盘总纲</h2><p class="body-line tone-core">今日市场从5.21情绪冰点直接走出强修复高潮，指数站稳4100点关口，量能小幅缩量、资金极致<mark>抱团</mark>AI硬件<mark>主线</mark>；高位独立<mark>抱团</mark>龙（利仁科技、威龙股份）集体跌停，连板高度压缩至3板，断板反包成为市场核心赚钱模式。当前<mark>主线</mark>排序：玻璃基板＞机器人＞PCB/MLCC＞算力液冷＞半导体/存储，无人驾驶梯队残缺、电力/医药/化工等边缘板块全线退潮。</p><p class="body-line tone-action"><span class="line-label">核心操作原则：</span><mark>只做</mark><mark>主线</mark>核心票、断板反包龙、趋势中军，回避无板块支撑/触碰<mark>异动</mark>/中位杂毛标的；高潮缩量环境下仓位控制在5成以内，聚焦<mark>弱转强</mark>与抗跌性标的，所有反包龙统一执行反包看3板即减仓纪律。</p><h2 id="section-2" class="chapter-title">二、市场风格与赚钱效应解析</h2><h3 id="section-3" class="subchapter-title">（一）市场风格</h3><p class="body-line"><span class="line-label">指数节奏：</span>高开下杀→午后震荡拉升，收阳线站稳4112点，4100点支撑有效，市场进入横盘震荡格局。</p><p class="body-line tone-core"><span class="line-label">量能结构：</span>两市成交额29033亿，强修复但缩量，属于高潮隐忧信号，资金以存量<mark>抱团</mark>为主，无增量资金强攻。</p><p class="body-line"><span class="line-label">板块风格：</span>AI硬件上游（玻璃基板/PCB/MLCC）全线爆发，机器人、算力液冷强修复，半导体/存储分化，无板块支撑的纯情绪票被资金全面抛弃。</p><p class="body-line tone-core"><span class="line-label">资金风格：</span>极致<mark>抱团</mark>大市值中军+高辨识度龙头，趋势票溢价显著优于连板票，断板反包溢价远高于一进二。</p><h3 id="section-4" class="subchapter-title">（二）赚钱效应</h3><p class="body-line tone-core"><span class="line-label">涨跌结构：</span>上涨3868家、下跌1509家，普涨修复，赚钱效应高度集中在AI硬件<mark>主线</mark>。</p><p class="body-line tone-core"><span class="line-label">连板结构：</span>首板104家、二板7家、三板4家，4板及以上高度完全断层，连板梯队极度单薄。</p><p class="body-line"><span class="line-label">封板与断板：</span>封板率0.85，断板仅21家，跌停仅5家，市场亏钱效应快速收敛，接力情绪全面回暖。</p><p class="body-line tone-action"><span class="line-label">明日关键：</span>高潮缩量后必然分化，<mark>重点</mark>观察核心票抗跌性、玻璃基板回流力度，以及机器人/算力能否横盘扛住分歧。</p><h2 id="section-5-4" class="chapter-title">三、近4日板块强度+次日节奏预测表</h2><section class="table-card"><div class="table-title">关键表格 01</div><div class="table-wrap"><table><thead><tr><th>大题材板块</th><th>2026.5.18</th><th>2026.5.19</th><th>2026.5.20</th><th>2026.5.22</th><th>次日（5.25）节奏预测</th><th>核心判断</th></tr></thead><tbody><tr><td>有色金属</td><td>-102</td><td>-997</td><td>252</td><td>3965</td><td>小分歧</td><td>弱轮动，无主线价值</td></tr><tr><td>电力</td><td>1907</td><td>4648</td><td>-11323</td><td>901</td><td>继续退潮</td><td>彻底走弱，不关注</td></tr><tr><td>AI应用</td><td>1287</td><td>5739</td><td>-531</td><td>1333</td><td>弱分歧</td><td>附属题材，无持续性</td></tr><tr><td>算力</td><td>8403</td><td>10827</td><td>4389</td><td>6165</td><td>小分歧→横盘</td><td>强度下降，仅活口抗跌</td></tr><tr><td>机器人</td><td>7770</td><td>10827</td><td>5792</td><td>7576</td><td>小分歧→扛跌</td><td>最强主线，核心锚点</td></tr><tr><td>光伏</td><td>-1243</td><td>351</td><td>-589</td><td>1476</td><td>弱轮动</td><td>无操作价值</td></tr><tr><td>化工</td><td>951</td><td>587</td><td>164</td><td>4817</td><td>大分歧</td><td>仅独立票，无板块效应</td></tr><tr><td>电网</td><td>1564</td><td>1553</td><td>-1979</td><td>1950</td><td>跟随退潮</td><td>无独立行情</td></tr><tr><td>人工智能</td><td>-2887</td><td>-790</td><td>-2123</td><td>587</td><td>弱分歧</td><td>资金撤离，边缘属性</td></tr><tr><td>商业航天</td><td>4518</td><td>-91</td><td>-289</td><td>4905</td><td>小分歧</td><td>仅300活口，持续性差</td></tr><tr><td>芯片</td><td>14622</td><td>9548</td><td>21472</td><td>18589</td><td>大分歧</td><td>高潮后分化，留前排活口</td></tr><tr><td>黄金</td><td>-75</td><td>-159</td><td>-112</td><td>230</td><td>走弱</td><td>无关注价值</td></tr><tr><td>石油石化</td><td>-167</td><td>456</td><td>-306</td><td>-464</td><td>走弱</td><td>弱势震荡</td></tr><tr><td>通信</td><td>5348</td><td>5886</td><td>1106</td><td>25917</td><td>大分歧</td><td>趋势延续但短线分化</td></tr><tr><td>智能驾驶</td><td>-333</td><td>565</td><td>-358</td><td>1626</td><td>弱回流</td><td>梯队残缺，纯标勉强续命</td></tr><tr><td>军工</td><td>-546</td><td>167</td><td>-253</td><td>528</td><td>走弱</td><td>持续调整</td></tr><tr><td>医疗</td><td>-1345</td><td>-237</td><td>-888</td><td>2405</td><td>走弱</td><td>补跌为主</td></tr><tr><td>农业</td><td>-851</td><td>14</td><td>376</td><td>90</td><td>弱轮动</td><td>零星机会</td></tr><tr><td>一季报增长</td><td>-2321</td><td>-1692</td><td>-1397</td><td>1348</td><td>走弱</td><td>无溢价</td></tr><tr><td>并购重组</td><td>2300</td><td>1577</td><td>2025</td><td>5426</td><td>退潮</td><td>高位票崩盘，无持续性</td></tr><tr><td>电池</td><td>-1107</td><td>-587</td><td>676</td><td>1774</td><td>弱回流</td><td>跟随主线，无独立行情</td></tr><tr><td>稀土</td><td>-56</td><td>-34</td><td>514</td><td>732</td><td>弱轮动</td><td>无关注价值</td></tr></tbody></table></div></section><h2 id="section-6" class="chapter-title">四、今日操作结果+核心失误+核心反思</h2><h3 id="section-7" class="subchapter-title">（一）今日操作结果</h3><p class="body-line">✅ 做对操作</p><div class="item-card tone-core"><span class="item-index">1.</span><p>冰点后精准预判强修复行情，聚焦断板反包+AI硬件<mark>主线</mark>，锁定达实智能、京东方A、合百集团、大众交通四大核心标的。</p></div><div class="item-card tone-risk"><span class="item-index">2.</span><p>提前识别高位独立龙崩盘风险，全面回避利仁科技、威龙股份，成功<mark>规避</mark>大面回撤。</p></div><div class="item-card tone-core"><span class="item-index">3.</span><p>锚定各细分龙头与趋势中军，<mark>主线</mark>聚焦不分散，严格遵循反包龙看3板的操作纪律。</p></div><p class="body-line">❌ 做错操作</p><div class="item-card tone-core"><span class="item-index">1.</span><p>未提前彻底剔除<mark>异动</mark><mark>监管</mark>标的，观察范围冗余，干扰盯盘效率。</p></div><div class="item-card tone-risk"><span class="item-index">2.</span><p>对无人驾驶梯队残缺的风险预判不足，盘中一度纠结联创电子的参与价值。</p></div><h3 id="section-8" class="subchapter-title">（二）核心失误根源</h3><div class="item-card tone-risk"><span class="item-index">1.</span><p><span class="line-label">执行层面：</span>高潮缩量信号出现后，未第一时间严格控仓，对连板高度断层的风险警惕不足。</p></div><div class="item-card tone-core"><span class="item-index">2.</span><p><span class="line-label">预案层面：</span>未提前量化题材梯队完整性的判断标准，误判支线题材的持续性。</p></div><h3 id="section-9" class="subchapter-title">（三）深度核心反思</h3><p class="body-line tone-action">今日核心胜利在于抓住<mark>主线</mark>修复、全面抛弃杂毛独立票，市场已从纯连板周期切换为断板反包+趋势周期；总龙具备唯一性，只参与五维拉满、梯队完整、<mark>异动</mark>安全的核心票，不平均仓位、不博弈边缘题材。</p><h2 id="section-10-kiss-keep-improve-start-stop" class="chapter-title">五、操作与情绪复盘（KISS模型：Keep/Improve/Start/Stop）</h2><h3 id="section-11-5-21" class="subchapter-title">（一）5.21 操作&amp;情绪复盘（大亏日）</h3><div class="item-card"><span class="item-index">1.</span><p>核心失误</p></div><div class="item-card tone-risk"><span class="item-index">1.</span><p>未设置量化<mark>止盈</mark><mark>止损</mark>条件点，冲高后主观幻想反冲，未执行纪律。</p></div><div class="item-card"><span class="item-index">2.</span><p>零轴卖出后，见个股下杀误以为有支撑，逆势反手买回，接飞刀导致亏损扩大。</p></div><div class="item-card"><span class="item-index">3.</span><p><span class="line-label">未结合大盘情绪操作：</span>冰点日个股下杀不接，应等回均线或确认回流再动手。</p></div><div class="item-card tone-action"><span class="item-index">4.</span><p>买卖点（BS点）混乱、主观交易，当日亏损7个多点。</p></div><div class="item-card"><span class="item-index">2.</span><p>正向进化</p></div><p class="body-line"><span class="line-label">痛定思痛，建立两套严格量化交易模型：</span></p><div class="item-card tone-risk"><span class="item-index">1.</span><p>第一次冲高回落<mark>止盈</mark>模型</p></div><div class="item-card tone-risk"><span class="item-index">2.</span><p>开盘下杀<mark>止损</mark>模型</p></div><p class="body-line tone-risk">实现<mark>止盈</mark>、<mark>止损</mark>点位标准化，彻底杜绝主观交易。</p><h3 id="section-12-5-22" class="subchapter-title">（二）5.22 操作&amp;情绪复盘（完美日）</h3><div class="item-card"><span class="item-index">1.</span><p>微小瑕疵</p></div><p class="body-line">个股低开-2%偏弱，下杀至-5%时出现恐慌卖出冲动，属于波动放大时的本能反应。</p><div class="item-card"><span class="item-index">2.</span><p>核心优势</p></div><div class="item-card"><span class="item-index">1.</span><p>心态极度稳定，强修复预期下不慌割、不甩卖。</p></div><div class="item-card"><span class="item-index">2.</span><p>用废单处理稳住心态，成功避免被洗出局。</p></div><div class="item-card tone-risk"><span class="item-index">3.</span><p><span class="line-label">执行新纪律：</span>强修复日个股错杀，给3-5分钟拉回时间，不立即<mark>止损</mark>。</p></div><div class="item-card tone-risk"><span class="item-index">4.</span><p><span class="line-label">达实智能严格按模型执行：</span>-2%开盘冲高至9%，设置4%-5%<mark>止盈</mark>保护位，回踩不破，完美拿住直至上板。</p></div><div class="item-card"><span class="item-index">5.</span><p><span class="line-label">领悟核心：</span>大盘修复日，拿住错杀龙头就是最优操作。</p></div><h3 id="section-13-kiss-keep-improve-start-stop" class="subchapter-title">（三）KISS模型四维总结（Keep/Improve/Start/Stop）</h3><div class="item-card"><span class="item-index">1.</span><p><span class="line-label">Keep（保持：</span>持续坚守的正确操作）</p></div><div class="item-card tone-core"><span class="item-index">1.</span><p>强修复预期下，拿住错杀的<mark>主线</mark>龙头，不轻易被盘中波动洗出局。</p></div><div class="item-card"><span class="item-index">2.</span><p>利用废单处理机制管控盘中冲动，稳定交易心态。</p></div><div class="item-card tone-risk"><span class="item-index">3.</span><p>依托量化模型设置<mark>止盈</mark>保护位，守住盈利、<mark>规避</mark>回撤。</p></div><div class="item-card tone-action"><span class="item-index">4.</span><p>聚焦核心人气龙头，不分散仓位参与杂毛标的。</p></div><div class="item-card"><span class="item-index">5.</span><p>大盘修复周期中，坚定持股，杜绝无依据追涨杀跌。</p></div><div class="item-card"><span class="item-index">2.</span><p><span class="line-label">Improve（改进：</span>持续优化的操作细节）</p></div><div class="item-card"><span class="item-index">1.</span><p>细化强修复日个股错杀下杀的3-5分钟观察规则，杜绝提前恐慌割肉。</p></div><div class="item-card tone-risk"><span class="item-index">2.</span><p><mark>止盈</mark>保护位严格贴合量化模型标准，不主观随意调整点位。</p></div><div class="item-card tone-action"><span class="item-index">3.</span><p>强化开盘强弱与大盘情绪匹配度的判断精度，优化买卖点位。</p></div><div class="item-card"><span class="item-index">4.</span><p>放大波动行情下，进一步强化心态管控，杜绝临时冲动交易。</p></div><div class="item-card"><span class="item-index">3.</span><p><span class="line-label">Start（启动：</span>全新执行的交易规则）</p></div><div class="item-card tone-risk"><span class="item-index">1.</span><p>严格落地第一次冲高回落<mark>止盈</mark>模型，实现<mark>止盈</mark>标准化、量化化。</p></div><div class="item-card tone-risk"><span class="item-index">2.</span><p>严格执行开盘下杀<mark>止损</mark>模型，所有<mark>止损</mark>均有固定量化条件。</p></div><div class="item-card"><span class="item-index">3.</span><p><span class="line-label">遵守冰点交易纪律：</span>个股下杀不承接、不逆势接飞刀，只等均线回流确认。</p></div><div class="item-card"><span class="item-index">4.</span><p>强修复日个股跳水后，强制观察3-5分钟，确认无回流再执行操作。</p></div><div class="item-card tone-risk"><span class="item-index">5.</span><p>每笔交易前置设定<mark>止盈</mark>、<mark>止损</mark>点位，无规划不交易。</p></div><div class="item-card"><span class="item-index">4.</span><p><span class="line-label">Stop（禁止：</span>彻底杜绝的错误行为）</p></div><div class="item-card tone-risk"><span class="item-index">1.</span><p>杜绝无量化依据、主观幻想反弹的不<mark>止盈</mark>、不<mark>止损</mark>行为。</p></div><div class="item-card"><span class="item-index">2.</span><p>彻底停止冰点行情下，个股下杀逆势接盘、反手买回的飞刀交易。</p></div><div class="item-card"><span class="item-index">3.</span><p>禁止个股短期大幅波动后，恐慌性盲目甩卖，避免卖飞优质标的。</p></div><div class="item-card"><span class="item-index">4.</span><p>杜绝脱离大盘情绪、单一判断个股强弱的碎片化交易。</p></div><div class="item-card"><span class="item-index">5.</span><p>停止无纪律、无逻辑、BS点混乱的随意交易。</p></div><h2 id="section-14" class="chapter-title">六、各主线板块详细解析</h2><h3 id="section-15-a" class="subchapter-title">（一）玻璃基板（新主线，京东方A独立中军龙）</h3><p class="body-line"><span class="line-label">催化：</span>与康宁公司签署合作备忘录，千亿市值低价大票，对标大唐发电独立走牛模式；昨日领涨、今日分歧抗跌，单日成交额破历史天量。</p><p class="body-line tone-action"><span class="line-label">核心：</span>京东方A，容量大、筹码健康、量能健康，明日看回流转强。五维全部拉满，题材容量充足，距离<mark>异动</mark><mark>监管</mark>空间充足，唯一短板是题材持续性有待明日确认。</p><h3 id="section-16" class="subchapter-title">（二）机器人（绝对主线，梯队完整）</h3><p class="body-line">板块冰点后最强修复，唯一高辨识度龙达实智能，断板反包、人气榜第4、情绪总锚；先锋票和泰机电、锋龙股份股价过高，连板乏力，板块仅看达实智能。</p><p class="body-line tone-core"><span class="line-label">纪律：</span>反包龙看3板减仓，五维全部拉满，题材梯队完整、持续性强、<mark>异动</mark>安全，为市场核心总龙候选。</p><h3 id="section-17-pcb-mlcc-ai" class="subchapter-title">（三）PCB/MLCC（AI硬件上游，梯队完整，高潮分化）</h3><p class="body-line tone-core"><span class="line-label">PCB：</span>英伟达Rubin机架拆解催化，价值量大幅提升，鹏鼎控股（趋势中军）、宝鼎科技（短线龙）梯队完整、容量充足，整体启动节奏慢于玻璃基板，后续持续性预期更强。</p><p class="body-line tone-action"><span class="line-label">MLCC：</span>风华高科为唯一核心，第一性、辨识度、市场人气、题材价值全部具备；核心短板为股价偏高，题材持续性弱于PCB、玻璃基板，今日高潮后明日大概率分歧，仅可龙头<mark>低吸</mark>。</p><h3 id="section-18" class="subchapter-title">（四）半导体/存储（梯队完整，消息催化）</h3><p class="body-line"><span class="line-label">核心：</span>合百集团（长鑫存储）、大众交通（长江存储），5.27长鑫科技IPO上会，存在3天短期消息催化窗口。</p><p class="body-line tone-core">大众交通核心逻辑为长江存储，无人驾驶仅为叠加附属属性；存储板块梯队完整、容量充足，是其核心加分项。合百集团五维拉满，反包形态标准，看3板<mark>套利</mark>减仓。</p><h3 id="section-19" class="subchapter-title">（五）无人驾驶（梯队残缺，容量不足）</h3><p class="body-line tone-core">发酵日恰逢市场情绪冰点，板块梯队搭建不完整、题材容量不足，无独立<mark>主线</mark>能力。</p><p class="body-line tone-core"><span class="line-label">标的：</span>联创电子（纯无人驾驶标的）、大众交通（杂糅标的）；联创电子纯度更高，但板块无持续性，仅勉强备选，无法成为市场<mark>主线</mark>。</p><h3 id="section-20" class="subchapter-title">（六）算力液冷（老主线，强度明显下降）</h3><p class="body-line tone-core">川润股份为板块唯一活口，具备反包形态，但整体板块强度大幅下降，弱于机器人、玻璃基板、存储<mark>主线</mark>，仅做小幅<mark>套利</mark>，不列入总龙候选。</p><h2 id="section-21" class="chapter-title">七、事件催化时间线</h2><div class="item-card tone-core"><span class="item-index">1.</span><p><span class="line-label">今日：</span>AI硬件上游全线爆发，断板反包潮，高位独立<mark>抱团</mark>龙集体崩盘。</p></div><div class="item-card"><span class="item-index">2.</span><p><span class="line-label">5.25（周一）：</span>高潮分化日，观察玻璃基板回流、核心票抗跌性、各支线强弱切换。</p></div><div class="item-card"><span class="item-index">3.</span><p><span class="line-label">5.27：</span>长鑫科技IPO上会，催化存储芯片板块，合百集团、大众交通存在短期炒作窗口。</p></div><div class="item-card"><span class="item-index">4.</span><p><span class="line-label">6.1：</span>英伟达主题演讲，再度催化AI硬件全产业链（PCB/MLCC/服务器/机器人）。</p></div><div class="item-card tone-core"><span class="item-index">5.</span><p><span class="line-label">下周：</span>SpaceX上市预期发酵，商业航天仅300标的<mark>套利</mark>，无<mark>主线</mark>持续性。</p></div><h2 id="section-22" class="chapter-title">八、异动监管与龙虎榜+人气榜情况</h2><h3 id="section-23" class="subchapter-title">（一）异动监管（严格规避）</h3><div class="item-card tone-core"><span class="item-index">1.</span><p><span class="line-label">海星股份：</span>30天200%<mark>异动</mark>红线，禁止参与。</p></div><div class="item-card tone-core"><span class="item-index">2.</span><p><span class="line-label">利通电子：</span>触碰<mark>异动</mark>红线，禁止参与。</p></div><div class="item-card tone-core"><span class="item-index">3.</span><p><span class="line-label">金利华电：</span>10天100%<mark>异动</mark>红线，禁止参与。</p></div><div class="item-card"><span class="item-index">4.</span><p><span class="line-label">大唐发电、长盈通：</span>处于<mark>监管</mark>监控期，不做接力。</p></div><div class="item-card tone-risk"><span class="item-index">5.</span><p><span class="line-label">核心四龙：</span>达实智能、京东方A、大众交通、合百集团，<mark>异动</mark>安全距离充足，无停牌风险，可正常参与。</p></div><h3 id="section-24" class="subchapter-title">（二）龙虎榜资金流向</h3><p class="body-line tone-core"><span class="line-label">主力资金集体重仓核心<mark>主线</mark>标的：</span>达实智能（3.49亿）、京东方A（20亿+）、风华高科（4亿+）、鹏鼎控股（5亿+）、川润股份（4亿+）、合百集团（7000万）、联创电子（1亿+），全市场<mark>主线</mark>核心票获得机构+游资共识加仓，无主力出逃迹象。</p><h3 id="section-25" class="subchapter-title">（三）人气榜核心研判</h3><p class="body-line tone-core"><span class="line-label">人气TOP梯队：</span>京东方A（第1）、风华高科（第3）、达实智能（第4）、鹏鼎控股（第10）、大众交通（第11）。达实智能、京东方A为全市场两大核心人气锚点，资金共识最强。</p><h2 id="section-26" class="chapter-title">九、跌停与炸板情况</h2><div class="item-card tone-core"><span class="item-index">1.</span><p>跌停仅5家，全部为前期高位独立<mark>抱团</mark>龙，无<mark>主线</mark>核心票跌停，市场亏钱效应彻底收敛。</p></div><div class="item-card tone-core"><span class="item-index">2.</span><p>全日断板仅21家，封板率0.85，<mark>主线</mark>标的炸板后均有强承接，后排杂毛炸板无修复。</p></div><div class="item-card tone-risk"><span class="item-index">3.</span><p><span class="line-label">明日观察<mark>重点</mark>：</span>分化日跌停家数是否扩容、核心<mark>主线</mark>票是否持续抗跌、后排杂毛是否批量补跌。</p></div><h2 id="section-27-5-25" class="chapter-title">十、核心关键票汇总+明日个股预案（5.25）</h2><h3 id="section-28" class="subchapter-title">（一）核心关键票全梳理</h3><section class="table-card"><div class="table-title">关键表格 02</div><div class="table-wrap"><table><thead><tr><th>个股</th><th>今日状态</th><th>明日核心预期</th><th>量能要求</th><th>风险点</th></tr></thead><tbody><tr><td>达实智能</td><td>6天5板，机器人人气龙</td><td>抗跌、弱转强，反包看3板减仓</td><td>温和放量</td><td>低开无承接直接淘汰</td></tr><tr><td>京东方A</td><td>2连板，玻璃基板中军</td><td>回流、缩量加速，确认主线</td><td>缩量稳封</td><td>放量滞涨则分歧加大</td></tr><tr><td>大众交通</td><td>3板，存储+无人驾驶杂糅龙</td><td>放量换手、低开高走</td><td>健康换手</td><td>无人驾驶梯队残缺拖累走势</td></tr><tr><td>合百集团</td><td>5天4板，存储消息龙</td><td>抗跌震荡，等待5.27催化</td><td>小幅缩量</td><td>芯片板块大分歧拖累走势</td></tr><tr><td>联创电子</td><td>2板，纯无人驾驶标的</td><td>尝试转强确认（勉强备选）</td><td>温和放量</td><td>板块梯队残缺，持续性极差</td></tr></tbody></table></div></section><h3 id="section-29" class="subchapter-title">（二）明日操作铁律</h3><div class="item-card"><span class="item-index">1.</span><p><span class="line-label">大盘节奏：</span>高开必兑现，低开可<mark>低吸</mark>，整体横盘震荡为主。</p></div><div class="item-card tone-core"><span class="item-index">2.</span><p><span class="line-label">选股原则：</span><mark>只做</mark>四大核心龙+勉强备选联创电子，全程回避杂毛、<mark>异动</mark><mark>监管</mark>票、无板块支撑标的。</p></div><div class="item-card tone-action"><span class="item-index">3.</span><p><span class="line-label">仓位纪律：</span>控仓5成以内，分歧日<mark>不追高</mark>，反包龙冲高至3板严格执行减仓。</p></div><h2 id="section-30" class="chapter-title">十一、大盘明日预期节奏</h2><h3 id="section-31" class="subchapter-title">（一）指数节奏预判</h3><p class="body-line tone-risk">沪指支撑4100点，压力4130点，整体横盘震荡格局；高开则回落消化获利盘，低开/平开则震荡回升，无大幅变盘风险。</p><h3 id="section-32" class="subchapter-title">（二）情绪节奏预判</h3><p class="body-line tone-risk">周五高潮缩量后，周一进入强分化周期，涨停数量缩减、断板小幅增加，呈现核心龙头抗跌、后排杂毛批量补跌的结构性行情，资金进一步<mark>抱团</mark>高辨识度核心标的。</p><h3 id="section-33" class="subchapter-title">（三）操作适配节奏</h3><p class="body-line tone-core">整体以守为攻，聚焦机器人、玻璃基板、存储三大核心<mark>主线</mark>，执行分歧<mark>低吸</mark>、高潮兑现的操作节奏，不博弈边缘题材、不盲目追高。</p><h2 id="section-34" class="chapter-title">十二、明日核心票弱转强/转强确定+板块预期细化表</h2><section class="table-card"><div class="table-title">关键表格 03</div><div class="table-wrap"><table><thead><tr><th>板块</th><th>板块节奏</th><th>核心标的</th><th>今日状态</th><th>明日弱转强/转强判定</th><th>形态预期</th><th>板块预期</th></tr></thead><tbody><tr><td>机器人</td><td>小分歧→扛跌</td><td>达实智能</td><td>6 天 5 板，人气龙</td><td>平开/小高开，快速翻红，承接有力</td><td>横盘震荡不回落，抗跌领涨</td><td>核心扛跌，中位修复</td></tr><tr><td>玻璃基板</td><td>大分歧→回流</td><td>京东方 A</td><td>2 连板，中军</td><td>缩量加速，领涨板块</td><td>高开快速拉升，稳封不炸</td><td>全线回流，确认主线</td></tr><tr><td>MLCC</td><td>大分歧→抗跌</td><td>风华高科</td><td>首板，趋势龙</td><td>承接放量，不跳水</td><td>低开高走，弱转强</td><td>支线留存，仅看龙头</td></tr><tr><td>PCB</td><td>大分歧→抗跌</td><td>宝鼎科技</td><td>12 天 7 板，短线龙</td><td>爆量扛分歧，不炸板</td><td>换手充分，稳封</td><td>仅留龙头，后排淘汰</td></tr><tr><td>算力液冷</td><td>小分歧→横盘</td><td>川润股份</td><td>5 天 4 板，细分龙</td><td>小幅高开，不回落</td><td>震荡上行，承接健康</td><td>弱回流，活口留存</td></tr><tr><td>无人驾驶</td><td>弱回流→竞争</td><td>联创电子 / 大众交通</td><td>2 板 / 3 板</td><td>率先转强，封板不炸</td><td>联创纯标转强，大众放量换手</td><td>二选一，纯标占优</td></tr><tr><td>半导体/存储</td><td>大分歧→扛跌</td><td>合百集团</td><td>5 天 4 板，消息龙</td><td>缩量稳封，不跳水</td><td>横盘抗跌，等待催化</td><td>弱延续，轻仓博弈</td></tr></tbody></table></div></section><h2 id="section-35" class="chapter-title">十三、龙头预备票（最终定稿）</h2><h3 id="section-36" class="subchapter-title">（一）总龙候选名单</h3><p class="body-line"><span class="line-label">核心四龙候选：</span>达实智能、京东方A、大众交通、合百集团</p><p class="body-line"><span class="line-label">第五勉强备选：</span>联创电子</p><p class="body-line">PCB、MLCC、算力液冷标的暂未走出确定性总龙，不纳入核心候选。</p><h3 id="section-37" class="subchapter-title">（二）总龙唯一性排序</h3><p class="body-line">达实智能 ＞ 京东方A ＞ 大众交通 ＞ 合百集团</p><h3 id="section-38" class="subchapter-title">（三）龙头五维核验明细</h3><section class="table-card"><div class="table-title">关键表格 04</div><div class="table-wrap"><table><thead><tr><th>标的</th><th>身位</th><th>领涨性</th><th>抗跌性</th><th>市场性</th><th>价值性</th><th>五维结论</th><th>100%异动监管距离</th><th>题材梯队完整性</th><th>题材持续性</th><th>筹码结构&amp;量能健康度</th></tr></thead><tbody><tr><td>达实智能</td><td>6天5板，情绪反包龙</td><td>强，板块绝对领涨核心</td><td>极强，分歧日抗跌扛旗</td><td>拉满，市场人气TOP4</td><td>高，机器人主线核心标的</td><td>五维拉满，总龙候选第一顺位</td><td>充足，无监管停牌风险</td><td>完整，机器人主线梯队完善</td><td>强，冰点修复后持续走强</td><td>筹码干净，换手充分，量能温和健康</td></tr><tr><td>京东方A</td><td>2连板，趋势中军龙</td><td>强，板块唯一中军领涨</td><td>极强，大资金抱团抗跌</td><td>拉满，全市场人气TOP1</td><td>极高，低价大票题材容量巨大</td><td>五维拉满，主线中军总龙</td><td>充足，远离异动红线</td><td>独立中军完整，板块发酵中</td><td>待定，明日回流确认持续性</td><td>天量成交，筹码充分交换，量能历史级别</td></tr><tr><td>大众交通</td><td>3板，复合型杂糅龙</td><td>偏弱，跟随板块轮动</td><td>强，核心题材支撑抗跌</td><td>较好，市场人气靠前</td><td>高，存储消息催化加持</td><td>四维满（领涨性短板）</td><td>充足，监管安全距离足够</td><td>存储完整、无人驾驶梯队残缺</td><td>中等，依赖存储消息窗口</td><td>换手健康，无抱团滞涨隐患</td></tr><tr><td>合百集团</td><td>5天4板，消息趋势龙</td><td>中强，存储板块先锋</td><td>强，分歧日守住形态</td><td>良好，资金辨识度高</td><td>高，5.27IPO催化加持</td><td>五维拉满，消息套利核心龙</td><td>充足，无监管压力</td><td>存储题材梯队完整</td><td>短期强，中长期待确认</td><td>缩量企稳，筹码稳定，量能良性</td></tr><tr><td>联创电子</td><td>2板，支线套利龙</td><td>弱，板块无带动性</td><td>中等，被动跟随修复</td><td>一般，人气仅限支线</td><td>低，无主线题材加持</td><td>三维满，仅勉强套利标的</td><td>充足，无监管风险</td><td>无人驾驶梯队严重残缺</td><td>极差，无持续发酵能力</td><td>放量透支，筹码稳定性一般</td></tr></tbody></table></div></section><h3 id="section-39" class="subchapter-title">（四）明日总龙决胜观察要点</h3><div class="item-card tone-core"><span class="item-index">1.</span><p><span class="line-label">达实智能：</span>平开/小高开抗跌横盘、<mark>弱转强</mark> → 锁定市场总龙；低开无承接直接淘汰。</p></div><div class="item-card tone-core"><span class="item-index">2.</span><p><span class="line-label">京东方A：</span>缩量<mark>加速</mark>回流、领涨板块 → 确认玻璃基板<mark>主线</mark>龙；放量滞涨则板块分歧。</p></div><div class="item-card"><span class="item-index">3.</span><p><span class="line-label">大众交通：</span>放量换手扛住分歧、不跳水 → 留存；被无人驾驶弱势拖累走弱则淘汰。</p></div><div class="item-card"><span class="item-index">4.</span><p><span class="line-label">合百集团：</span>横盘抗跌、守住形态 → 等待5.27催化；被芯片分化带崩则出局。</p></div><div class="item-card tone-core"><span class="item-index">5.</span><p><span class="line-label">核心铁律：</span>只参与五维拉满、梯队完整、<mark>异动</mark>安全的核心龙头，反包龙统一3板减仓，不博弈杂毛与弱势支线。</p></div><p class="footer-note"><span class="line-label">|（注：</span>文档部分内容可能由 AI 生成）</p></main>
+    </div>
+  </div>
+  <script>
+    const links = Array.from(document.querySelectorAll('.toc-link'));
+    const sections = links.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        links.forEach(link => link.classList.remove('is-active'));
+        const active = document.querySelector(`.toc-link[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('is-active');
+      });
+    }, { rootMargin: '-20% 0px -70% 0px', threshold: 0 });
+    sections.forEach(section => observer.observe(section));
+  </script>
+  <a class="to-top" href="#top" aria-label="回到顶部">回到顶部</a>
+</body>
+</html>
