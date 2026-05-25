@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-24 15:43:32",
-  "site_dir": "C:\\Users\\abcha\\Desktop\\A股\\A股复盘站",
-  "index_path": "C:\\Users\\abcha\\Desktop\\A股\\A股复盘站\\index.html",
-  "desktop_entry": "C:\\Users\\abcha\\Desktop\\A股\\A股复盘站-首页.html",
-  "record_count": 20,
+  "generated_at": "2026-05-26 00:59:31",
+  "site_dir": "C:\\Users\\Administrator\\Desktop\\Codex\\daily-trading-review-unzip\\daily-trading-review-main",
+  "index_path": "C:\\Users\\Administrator\\Desktop\\Codex\\daily-trading-review-unzip\\daily-trading-review-main\\index.html",
+  "desktop_entry": "C:\\Users\\Administrator\\Desktop\\Codex\\daily-trading-review-unzip\\daily-trading-review-main\\A股复盘站-首页.html",
+  "record_count": 21,
   "records": {
     "2026-03-19": {
       "title": "A股超短全复盘（2026年3月19日）——板块+标的+情绪+操作全梳理",
@@ -142,6 +142,13 @@
       "title": "章盟主式超短全景复盘（2026.5.22 周五）+5.25个股板块预案",
       "source_docx": "C:\\Users\\abcha\\Downloads\\章盟主式超短全景复盘（2026.5.22 周五）+5.25个股板块预案.docx",
       "page_path": "pages\\章盟主式超短全景复盘（2026.5.22 周五）+5.25个股板块预案.html",
+      "missing_count": 0,
+      "missing_preview": []
+    },
+    "2026-05-25": {
+      "title": "章盟主式超短全景复盘（2026.5.25 周一）+5.26个股板块预案",
+      "source_docx": "C:\\Users\\Administrator\\Downloads\\章盟主式超短全景复盘（2026.5.25 周一）+5.26个股板块预案.docx",
+      "page_path": "pages\\章盟主式超短全景复盘（2026.5.25 周一）+5.26个股板块预案.html",
       "missing_count": 0,
       "missing_preview": []
     }
