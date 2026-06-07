@@ -159,7 +159,7 @@
     const optionList = unique([...(options[field] || []), ...selected]);
     const chips = optionList.map(option => {
       const active = selected.includes(option);
-      return `<button class="multi-chip${active ? ' is-selected' : ''}" type="button" aria-pressed="${active}" data-index="${index}" data-multi-field="${field}" data-toggle-option="${esc(option)}">${esc(option)}</button>`;
+      return `<button class="multi-chip${active ? ' is-selected' : ''}" type="button" aria-pressed="${active}" title="点击改为该项；按 Ctrl/Command 点击追加或取消" data-index="${index}" data-multi-field="${field}" data-toggle-option="${esc(option)}">${esc(option)}</button>`;
     }).join('');
     return `<td class="multi-select-cell" data-multi-cell data-index="${index}" data-field="${field}">
       <div class="multi-select-control">${chips}</div>
@@ -203,7 +203,10 @@
       const field = toggle.dataset.multiField;
       const value = toggle.dataset.toggleOption;
       const selected = normalizeSelection(row[field]);
-      row[field] = selected.includes(value) ? selected.filter(item => item !== value) : [...selected, value];
+      const additive = event.ctrlKey || event.metaKey;
+      row[field] = additive
+        ? (selected.includes(value) ? selected.filter(item => item !== value) : [...selected, value])
+        : [value];
       save(); render(); return;
     }
     const addOption = event.target.closest('[data-add-option]');
