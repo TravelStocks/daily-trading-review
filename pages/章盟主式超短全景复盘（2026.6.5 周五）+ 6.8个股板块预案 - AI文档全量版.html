@@ -437,8 +437,24 @@
     position: ['接力套利','龙头预备','观察试错'],
     nextStrategy: ['冲高兑现套利','龙头核心做T或格局','走弱止损']
   };
-  const defaults = defaultsNode ? JSON.parse(defaultsNode.textContent || '[]') : [];
-  const suppliedHoldingDefaults = holdingDefaultsNode ? JSON.parse(holdingDefaultsNode.textContent || '[]') : [];
+  const decodeJsonText = text => String(text || '')
+    .replace(/&quot;/g, '"')
+    .replace(/&#34;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&amp;/g, '&');
+  const parseDataJson = (node, fallback) => {
+    const raw = node?.textContent || '';
+    if(!raw.trim()) return fallback;
+    for(const text of [raw, decodeJsonText(raw)]){
+      try { return JSON.parse(text); } catch(error) {}
+    }
+    return fallback;
+  };
+  const defaults = parseDataJson(defaultsNode, []);
+  const suppliedHoldingDefaults = parseDataJson(holdingDefaultsNode, []);
   const body = root.querySelector('[data-plan-body]');
   const status = root.querySelector('[data-save-status]');
   const textFields = ['type','stock','entry','exit','maxLoss','note'];
