@@ -462,6 +462,18 @@
   };
   const esc = value => String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
   const unique = values => Array.from(new Set(values.filter(Boolean)));
+  const safeLocalSet = (key, value) => {
+    try { localStorage.setItem(key, value); return true; } catch(error) { return false; }
+  };
+  const rowIndexFromButton = (button, dataName) => {
+    const raw = button?.dataset?.[dataName];
+    if(raw !== undefined && raw !== '') {
+      const parsed = Number(raw);
+      if(Number.isInteger(parsed) && parsed >= 0) return parsed;
+    }
+    const row = button?.closest('tr');
+    return row?.parentElement ? Array.from(row.parentElement.children).indexOf(row) : -1;
+  };
   const normalizeSelection = value => {
     if(Array.isArray(value)) return unique(value.map(item => String(item).trim()));
     return String(value || '').split(/[；;、,]/).map(item => item.trim()).filter(Boolean);
@@ -489,11 +501,11 @@
     position: unique([...(optionDefaults.position || []), ...(options.position || []), ...rows.flatMap(row => row.position || [])]),
     nextStrategy: unique([...(optionDefaults.nextStrategy || []), ...(options.nextStrategy || []), ...rows.flatMap(row => row.nextStrategy || [])])
   };
-  const saveOptions = () => localStorage.setItem(optionsKey, JSON.stringify(options));
+  const saveOptions = () => safeLocalSet(optionsKey, JSON.stringify(options));
   const save = () => {
-    localStorage.setItem(storageKey, JSON.stringify(rows));
+    const ok = safeLocalSet(storageKey, JSON.stringify(rows));
     saveOptions();
-    status.textContent = '本地已保存 ' + new Date().toLocaleTimeString('zh-CN', {hour:'2-digit', minute:'2-digit'});
+    status.textContent = (ok ? '本地已保存 ' : '本地暂存失败 ') + new Date().toLocaleTimeString('zh-CN', {hour:'2-digit', minute:'2-digit'});
   };
   const renderTextCell = (row,index,field) => `<td class="editable-cell" contenteditable="true" data-index="${index}" data-field="${field}" title="点击直接修改">${esc(row[field])}</td>`;
   const renderMultiCell = (row,index,field) => {
@@ -535,10 +547,21 @@
   root.addEventListener('click', event => {
     const add = event.target.closest('[data-add-row]');
     if(add){ rows.push(normalizeRow({type:add.dataset.addRow})); save(); render(); return; }
-    const saveRow = event.target.closest('[data-save-row]');
-    if(saveRow){ save(); status.textContent = '第 ' + (Number(saveRow.dataset.saveRow) + 1) + ' 行已保存 ' + new Date().toLocaleTimeString('zh-CN', {hour:'2-digit', minute:'2-digit'}); return; }
-    const del = event.target.closest('[data-delete-row]');
-    if(del){ rows.splice(Number(del.dataset.deleteRow), 1); save(); render(); return; }
+    const saveRow = event.target.closest('[data-save-row], .plan-table .plan-row-save');
+    if(saveRow && root.contains(saveRow)){
+      event.preventDefault(); event.stopPropagation();
+      const rowIndex = rowIndexFromButton(saveRow, 'saveRow');
+      save();
+      status.textContent = (rowIndex >= 0 ? '第 ' + (rowIndex + 1) + ' 行已保存 ' : '已保存 ') + new Date().toLocaleTimeString('zh-CN', {hour:'2-digit', minute:'2-digit'});
+      return;
+    }
+    const del = event.target.closest('[data-delete-row], .plan-table .plan-row-delete');
+    if(del && root.contains(del)){
+      event.preventDefault(); event.stopPropagation();
+      const rowIndex = rowIndexFromButton(del, 'deleteRow');
+      if(rowIndex >= 0){ rows.splice(rowIndex, 1); save(); render(); }
+      return;
+    }
     if(event.target.closest('[data-reset-plan]')){ rows = cloneDefaults(); options = JSON.parse(JSON.stringify(optionDefaults)); save(); render(); return; }
     const toggle = event.target.closest('[data-toggle-option]');
     if(toggle){
@@ -608,8 +631,8 @@
     try { holdingRows = JSON.parse(localStorage.getItem(holdingStorageKey) || 'null') || deriveHoldingDefaults(); } catch(error) { holdingRows = deriveHoldingDefaults(); }
     holdingRows = holdingRows.map(normalizeHoldingRow);
     const saveHolding = () => {
-      localStorage.setItem(holdingStorageKey, JSON.stringify(holdingRows));
-      holdingStatus.textContent = '本地已保存 ' + new Date().toLocaleTimeString('zh-CN', {hour:'2-digit', minute:'2-digit'});
+      const ok = safeLocalSet(holdingStorageKey, JSON.stringify(holdingRows));
+      holdingStatus.textContent = (ok ? '本地已保存 ' : '本地暂存失败 ') + new Date().toLocaleTimeString('zh-CN', {hour:'2-digit', minute:'2-digit'});
     };
     const renderHoldingCell = (row,index,field) => `<td contenteditable="true" data-holding-index="${index}" data-holding-field="${field}" title="点击直接修改">${esc(row[field])}</td>`;
     const renderHoldingAction = index => `<td><div class="plan-row-actions"><button class="plan-row-save" type="button" data-holding-save="${index}">保存</button><button class="plan-row-delete" type="button" data-holding-delete="${index}">删除</button></div></td>`;
@@ -623,10 +646,18 @@
       saveHolding();
     });
     holdingRoot.addEventListener('click', event => {
-      const saveButton = event.target.closest('[data-holding-save]');
-      if(saveButton){ saveHolding(); renderHolding(); return; }
-      const deleteButton = event.target.closest('[data-holding-delete]');
-      if(deleteButton){ holdingRows.splice(Number(deleteButton.dataset.holdingDelete), 1); saveHolding(); renderHolding(); return; }
+      const saveButton = event.target.closest('[data-holding-save], .holding-table .plan-row-save');
+      if(saveButton && holdingRoot.contains(saveButton)){
+        event.preventDefault(); event.stopPropagation();
+        saveHolding(); renderHolding(); return;
+      }
+      const deleteButton = event.target.closest('[data-holding-delete], .holding-table .plan-row-delete');
+      if(deleteButton && holdingRoot.contains(deleteButton)){
+        event.preventDefault(); event.stopPropagation();
+        const rowIndex = rowIndexFromButton(deleteButton, 'holdingDelete');
+        if(rowIndex >= 0){ holdingRows.splice(rowIndex, 1); saveHolding(); renderHolding(); }
+        return;
+      }
       if(event.target.closest('[data-add-holding-row]')){ holdingRows.push(normalizeHoldingRow({})); saveHolding(); renderHolding(); return; }
       if(event.target.closest('[data-reset-holding]')){ holdingRows = deriveHoldingDefaults(); saveHolding(); renderHolding(); return; }
       if(event.target.closest('[data-export-holding]')){
