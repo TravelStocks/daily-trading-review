@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-01 19:55:31",
+  "generated_at": "2026-07-02 23:54:00",
   "site_dir": "C:\\Users\\Administrator\\Desktop\\Codex\\daily-trading-review",
   "index_path": "C:\\Users\\Administrator\\Desktop\\Codex\\daily-trading-review\\index.html",
   "desktop_entry": "C:\\Users\\Administrator\\Desktop\\Codex\\daily-trading-review\\A股复盘站-首页.html",
-  "record_count": 42,
+  "record_count": 43,
   "records": {
     "2026-03-19": {
       "title": "A股超短全复盘（2026年3月19日）——板块+标的+情绪+操作全梳理",
@@ -298,9 +298,16 @@
       "page_path": "pages\\章盟主式超短全景复盘（2026.7.1 周三）+ 7.2个股板块预案 - AI全量文档.html",
       "missing_count": 0,
       "missing_preview": []
+    },
+    "2026-07-02": {
+      "title": "章盟主式超短全景复盘（2026.7.2 周四）+ 7.3个股板块预案 - AI文档",
+      "source_docx": "C:\\Users\\Administrator\\Desktop\\Codex\\output\\doc\\2026-07-02-a-share-review-ai-full.docx",
+      "page_path": "pages\\章盟主式超短全景复盘（2026.7.2 周四）+ 7.3个股板块预案 - AI文档.html",
+      "missing_count": 0,
+      "missing_preview": []
     }
   },
-  "latest_date": "2026-07-01",
+  "latest_date": "2026-07-02",
   "latest_validation": {
     "missing_count": 0,
     "detail_page_exists": true,
