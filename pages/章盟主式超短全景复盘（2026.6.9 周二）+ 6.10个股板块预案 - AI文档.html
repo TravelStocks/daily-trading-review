@@ -256,25 +256,36 @@
     .mantra-kicker:before{content:"";width:10px;height:10px;border-radius:999px;background:#ffd166;box-shadow:0 0 0 7px rgba(255,209,102,.13)}
     .mantra-line{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center;font-weight:1000;line-height:1.02;letter-spacing:-.08em;font-size:clamp(2.4rem,5.8vw,5.8rem);text-shadow:0 8px 26px rgba(0,0,0,.28)}
     .mantra-line span{display:inline-flex;align-items:center;padding:.05em .18em .12em;border-radius:.2em;background:linear-gradient(180deg,#fff7cf 0%,#ffd166 48%,#ff7a45 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
-    .mantra-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
-    .mantra-card{padding:12px 13px;border-radius:18px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(8px)}
-    .mantra-card strong{display:block;color:#fff;font-size:18px;line-height:1.2}
-    .mantra-card small{display:block;margin-top:6px;color:rgba(255,255,255,.72);font-size:12px;line-height:1.55}
-    .mantra-card b{color:#ffe7a3}
-    @media (max-width:980px){.mantra-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mantra-line{font-size:clamp(2.1rem,11vw,4.2rem)}}
-    @media (max-width:620px){.twenty-word-mantra{padding:18px}.mantra-grid{grid-template-columns:1fr}.mantra-line{letter-spacing:-.05em}}
+    .mantra-table-wrap{overflow-x:auto;border-radius:20px;border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.1);backdrop-filter:blur(8px)}
+    .mantra-table{width:100%;min-width:760px;border-collapse:separate;border-spacing:0;color:#fff}
+    .mantra-table th,.mantra-table td{padding:14px 16px;border-right:1px solid rgba(255,255,255,.15);border-bottom:1px solid rgba(255,255,255,.14);text-align:left;vertical-align:middle}
+    .mantra-table th:last-child,.mantra-table td:last-child{border-right:0}
+    .mantra-table tr:last-child td{border-bottom:0}
+    .mantra-table thead th{background:rgba(255,209,102,.18);color:#ffe7a3;font-size:14px;font-weight:1000;letter-spacing:.08em}
+    .mantra-table tbody th{width:96px;color:#fff;font-size:22px;font-weight:1000;background:rgba(255,255,255,.08)}
+    .mantra-table td{font-size:16px;line-height:1.55;color:rgba(255,255,255,.86)}
+    .mantra-table .mantra-wrong{color:#ffc3b3;font-weight:900}
+    .mantra-table .mantra-right{color:#ffe7a3;font-weight:1000}
+    .mantra-table .mantra-action{color:#9ff2cd;font-weight:1000}
+    @media (max-width:980px){.mantra-line{font-size:clamp(2.1rem,11vw,4.2rem)}}
+    @media (max-width:620px){.twenty-word-mantra{padding:18px}.mantra-line{letter-spacing:-.05em}.mantra-table{min-width:680px}.mantra-table th,.mantra-table td{padding:12px}}
   </style>
   <div class="mantra-inner">
     <div class="mantra-kicker">二十字真言 · 交易前先念三遍</div>
     <div class="mantra-line" aria-label="启动头铁，冰点反转，高潮砸强，主升重仓，退潮空仓">
       <span>启动头铁</span><span>冰点反转</span><span>高潮砸强</span><span>主升重仓</span><span>退潮空仓</span>
     </div>
-    <div class="mantra-grid">
-      <div class="mantra-card"><strong>启动</strong><small>错在观望，<b>对在头铁前排</b></small></div>
-      <div class="mantra-card"><strong>冰点</strong><small>错在恐惧，<b>对在二冰/三冰反转</b></small></div>
-      <div class="mantra-card"><strong>高潮</strong><small>错在懒惰，<b>对在高位砸强控回撤</b></small></div>
-      <div class="mantra-card"><strong>主升</strong><small>错在空仓，<b>对在确认后重仓</b></small></div>
-      <div class="mantra-card"><strong>退潮</strong><small>错在追涨，<b>对在空仓等下一次启动</b></small></div>
+    <div class="mantra-table-wrap" aria-label="二十字真言阶段交易表">
+      <table class="mantra-table">
+        <thead><tr><th>阶段</th><th>常见错误</th><th>正确动作</th><th>盘中提醒</th></tr></thead>
+        <tbody>
+          <tr><th>启动</th><td><span class="mantra-wrong">观望</span></td><td><span class="mantra-right">头铁前排</span></td><td><span class="mantra-action">新主线启动，第一时间盯前排，不要后排犹豫。</span></td></tr>
+          <tr><th>冰点</th><td><span class="mantra-wrong">恐惧</span></td><td><span class="mantra-right">二冰反转 / 三冰反转</span></td><td><span class="mantra-action">越接近极致冰点，越要准备看反转核心。</span></td></tr>
+          <tr><th>高潮</th><td><span class="mantra-wrong">懒惰</span></td><td><span class="mantra-right">高潮砸强</span></td><td><span class="mantra-action">强修复或高潮日，先兑现强票，别等分歧砸脸。</span></td></tr>
+          <tr><th>主升</th><td><span class="mantra-wrong">空仓</span></td><td><span class="mantra-right">确认后重仓</span></td><td><span class="mantra-action">主升确认后要敢于集中仓位，不要小仓位看戏。</span></td></tr>
+          <tr><th>退潮</th><td><span class="mantra-wrong">追涨</span></td><td><span class="mantra-right">空仓等待</span></td><td><span class="mantra-action">退潮期不追涨，不接飞刀，等下一次启动。</span></td></tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
