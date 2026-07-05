@@ -180,6 +180,53 @@
     </div>
   </div>
 </section>
+<section class="next-day-expectation" data-next-day-expectation>
+  <style>
+    .next-day-expectation{position:relative;overflow:hidden;margin:18px 0 22px;padding:22px;border-radius:24px;background:linear-gradient(135deg,#090b11 0%,#111827 58%,#2a0d13 100%);border:1px solid rgba(255,255,255,.12);box-shadow:0 22px 58px rgba(9,11,17,.2);color:#f8fafc}
+    .next-day-expectation:before{content:"";position:absolute;inset:-120px -80px auto auto;width:300px;height:300px;border-radius:999px;background:radial-gradient(circle,rgba(127,29,29,.36),transparent 70%);pointer-events:none}
+    .next-day-expectation-inner{position:relative;z-index:1;display:grid;gap:15px}
+    .next-day-expectation-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-end;flex-wrap:wrap}
+    .next-day-expectation-kicker{display:inline-flex;align-items:center;gap:9px;width:max-content;padding:8px 13px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#fecdd3;font-size:13px;font-weight:900;letter-spacing:.08em}
+    .next-day-expectation-kicker:before{content:"";width:9px;height:9px;border-radius:999px;background:#fb7185;box-shadow:0 0 0 6px rgba(251,113,133,.12)}
+    .next-day-expectation-title{margin:0;font-size:clamp(1.55rem,2.5vw,2.25rem);line-height:1.18;color:#fff;letter-spacing:-.03em}
+    .next-day-expectation-note{margin:0;max-width:780px;color:rgba(248,250,252,.72);font-size:13px;line-height:1.7}
+    .next-day-table-wrap{overflow-x:auto;border-radius:18px;border:1px solid rgba(255,255,255,.1);background:rgba(5,7,12,.68)}
+    .next-day-table{width:100%;min-width:820px;border-collapse:separate;border-spacing:0;color:#e5e7eb}
+    .next-day-table th,.next-day-table td{padding:15px 16px;border-right:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);text-align:left;vertical-align:middle;font-weight:800}
+    .next-day-table th:last-child,.next-day-table td:last-child{border-right:0}
+    .next-day-table tr:last-child td,.next-day-table tr:last-child th{border-bottom:0}
+    .next-day-table thead th{background:#6f111b;color:#fff;font-size:14px;font-weight:1000;letter-spacing:.04em}
+    .next-day-table tbody th{width:156px;color:#d1d5db;background:rgba(255,255,255,.02)}
+    .next-day-table td{color:#aeb6c2;font-size:15px;line-height:1.55}
+    .next-day-table .hot{color:#fecdd3}
+    .next-day-table .ok{color:#e5e7eb}
+    .next-day-table .bad{color:#cbd5e1}
+    .next-day-table .action{color:#f3f4f6;font-weight:1000}
+    @media (max-width:720px){.next-day-expectation{padding:16px}.next-day-table{min-width:760px}.next-day-table th,.next-day-table td{padding:12px}}
+  </style>
+  <div class="next-day-expectation-inner">
+    <div class="next-day-expectation-head">
+      <div>
+        <span class="next-day-expectation-kicker">Next-Day Expectation</span>
+        <h2 class="next-day-expectation-title">隔日预期表</h2>
+      </div>
+      <p class="next-day-expectation-note">首板涨停时间决定隔日预期强弱；不及预期就先降低幻想，符合预期再看承接和分歧转强。</p>
+    </div>
+    <div class="next-day-table-wrap" aria-label="隔日预期表">
+      <table class="next-day-table">
+        <thead><tr><th>首板涨停时间</th><th>次日超预期</th><th>符合预期</th><th>不及预期</th><th>开盘1分钟</th></tr></thead>
+        <tbody>
+          <tr><th>一字板</th><td class="hot">&gt; 5%</td><td class="ok">5%~3%</td><td class="bad">&lt;3%</td><td class="action">迅速拉高到符合预期区间</td></tr>
+          <tr><th>10:00前</th><td class="hot">&gt;4%</td><td class="ok">3%~1%</td><td class="bad">&lt;1%</td><td class="action">迅速拉高到符合预期区间</td></tr>
+          <tr><th>10:00-11:30</th><td class="hot">&gt;3%</td><td class="ok">2%~0%</td><td class="bad">&lt;0%</td><td class="action">迅速拉高到符合预期区间</td></tr>
+          <tr><th>13:00-14:00</th><td class="hot">&gt;2%</td><td class="ok">2%~-0.5%</td><td class="bad">&lt;-1%</td><td class="action">迅速拉高到符合预期区间</td></tr>
+          <tr><th>14:00-15:00</th><td class="hot">&gt;2%</td><td class="ok">2%~-1%</td><td class="bad">&lt;-2%</td><td class="action">迅速拉高到符合预期区间</td></tr>
+          <tr><th>分歧烂板</th><td class="hot">&gt;1%</td><td class="ok">0%~-2%</td><td class="bad">&lt;-2%</td><td class="action">迅速拉高到符合预期区间</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
       <div class="hero-meta">
         <span>复盘者：章盟主</span>
         <span>情绪标签：修复</span>
