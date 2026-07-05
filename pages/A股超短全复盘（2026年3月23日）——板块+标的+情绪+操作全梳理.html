@@ -227,6 +227,42 @@
     </div>
   </div>
 </section>
+<section class="daily-knowledge-summary" data-daily-knowledge-summary>
+  <style>
+    .daily-knowledge-summary{position:relative;overflow:hidden;margin:18px 0 22px;padding:22px;border-radius:24px;background:radial-gradient(circle at 0% 0%,rgba(251,191,36,.18),transparent 30%),linear-gradient(135deg,rgba(255,255,255,.96),rgba(249,250,251,.9));border:1px solid rgba(120,53,15,.14);box-shadow:0 20px 52px rgba(67,43,16,.1);color:#1f2937}
+    .daily-knowledge-summary:before{content:"";position:absolute;right:-90px;top:-120px;width:300px;height:300px;border-radius:999px;background:radial-gradient(circle,rgba(217,119,6,.16),transparent 70%);pointer-events:none}
+    .daily-knowledge-inner{position:relative;z-index:1;display:grid;gap:16px}
+    .daily-knowledge-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-end;flex-wrap:wrap}
+    .daily-knowledge-kicker{display:inline-flex;align-items:center;gap:9px;width:max-content;padding:8px 13px;border-radius:999px;background:rgba(217,119,6,.1);border:1px solid rgba(217,119,6,.18);color:#92400e;font-size:13px;font-weight:900;letter-spacing:.08em}
+    .daily-knowledge-kicker:before{content:"";width:9px;height:9px;border-radius:999px;background:linear-gradient(135deg,#f59e0b,#ef4444);box-shadow:0 0 0 6px rgba(245,158,11,.12)}
+    .daily-knowledge-title{margin:0;font-size:clamp(1.55rem,2.5vw,2.25rem);line-height:1.18;color:#2b2118;letter-spacing:-.03em}
+    .daily-knowledge-note{margin:0;max-width:820px;color:#6b5b47;font-size:13px;line-height:1.7}
+    .daily-knowledge-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+    .knowledge-card{padding:16px;border-radius:18px;background:rgba(255,255,255,.88);border:1px solid rgba(120,53,15,.12);box-shadow:0 12px 30px rgba(67,43,16,.06)}
+    .knowledge-card strong{display:block;margin:0 0 8px;color:#7c2d12;font-size:15px}
+    .knowledge-card p{margin:0;color:#2f3a45;font-size:14px;line-height:1.75}
+    .knowledge-card em{font-style:normal;font-weight:900;color:#b45309}
+    @media (max-width:900px){.daily-knowledge-grid{grid-template-columns:1fr}}
+    @media (max-width:720px){.daily-knowledge-summary{padding:16px}}
+  </style>
+  <div class="daily-knowledge-inner">
+    <div class="daily-knowledge-head">
+      <div>
+        <span class="daily-knowledge-kicker">Daily Knowledge</span>
+        <h2 class="daily-knowledge-title">日常知识总结</h2>
+      </div>
+      <p class="daily-knowledge-note">每天新增一点，盘前先复读：看前排、看后排、看中军、看退潮、看对流、看吸血。</p>
+    </div>
+    <div class="daily-knowledge-grid">
+      <article class="knowledge-card"><strong>弱修复卖点</strong><p><em>前排上板，后排没有跟随上板反而冲高回落</em>，这是经典弱修复，也是很经典的卖点。</p></article>
+      <article class="knowledge-card"><strong>强回流确认</strong><p><em>前排上板，后排跟随上板</em>，说明题材不是单点脉冲，而是强回流。</p></article>
+      <article class="knowledge-card"><strong>大中军启动信号</strong><p><em>题材大中军，五百亿以上甚至千亿市值，上板</em>，是整体题材开始启动的最经典信号，也是绝对强势点。</p></article>
+      <article class="knowledge-card"><strong>退潮期禁忌</strong><p><em>题材退潮期不要追高同题材消息发酵</em>，这种最容易冲进去就被套。</p></article>
+      <article class="knowledge-card"><strong>对流题材节奏</strong><p><em>A 板块高潮时，去吸 B 板块的分歧</em>，这才是正确节奏，不要在高潮里追一致。</p></article>
+      <article class="knowledge-card"><strong>吸血题材识别</strong><p><em>A 板块上冲高潮，B 板块原本高潮但回落</em>，要警惕 A 正在吸血 B，别误把 B 的回落当正常分歧。</p></article>
+    </div>
+  </div>
+</section>
       <div class="hero-meta">
         <span>复盘者：章盟主</span>
         <span>情绪标签：冰点</span>
