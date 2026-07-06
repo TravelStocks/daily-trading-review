@@ -548,6 +548,8 @@
         
         
         
+        
+        
         <section class="tree-month">
         <div class="tree-month-head"><strong>2026.07</strong><span>4 篇</span></div>
         <div class="tree-links">
@@ -596,6 +598,53 @@
           <div class="stat"><span>更新方式</span><strong>Word 自动转页</strong></div>
         </div>
       </section>
+
+      <!-- HOME_FIXED_MODULES_START -->
+      <section class="home-fixed-modules" data-home-fixed-modules>
+        <style>
+          .home-fixed-modules{display:grid;grid-template-columns:1.28fr .72fr;gap:18px}
+          .home-fixed-card{padding:22px;border-radius:22px;background:rgba(255,255,255,.92);border:1px solid rgba(255,255,255,.72);box-shadow:var(--shadow);backdrop-filter:blur(14px)}
+          .home-fixed-card h2{margin:0 0 8px;font-size:1.2rem;color:#0d6b66}
+          .home-fixed-card p{margin:0;color:#56746c;font-size:14px;line-height:1.7}
+          .cycle-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;margin-top:16px}
+          .cycle-step{position:relative;min-height:132px;padding:13px 12px;border-radius:16px;border:1px solid rgba(16,74,63,.1);background:linear-gradient(180deg,rgba(248,252,250,.94),rgba(255,255,255,.94));display:grid;align-content:start;gap:8px}
+          .cycle-step:after{content:"";position:absolute;right:-10px;top:50%;width:10px;height:2px;background:rgba(14,159,110,.22)}
+          .cycle-step:last-child:after{display:none}
+          .cycle-step span{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:999px;background:rgba(14,159,110,.1);color:#0d6b66;font-size:12px;font-weight:900}
+          .cycle-step strong{font-size:16px;color:#15352f}
+          .cycle-step em{font-style:normal;font-size:12px;line-height:1.55;color:#56746c}
+          .cycle-step.active{border-color:rgba(14,159,110,.42);background:linear-gradient(180deg,rgba(14,159,110,.14),rgba(255,255,255,.96));box-shadow:0 16px 30px rgba(13,52,45,.08)}
+          .cycle-step.active span{background:#0e9f6e;color:#fff}
+          .truth-card{display:grid;gap:14px}
+          .truth-line{padding:18px;border-radius:18px;background:linear-gradient(135deg,rgba(14,159,110,.13),rgba(30,142,214,.1));border:1px solid rgba(14,159,110,.18);font-size:24px;font-weight:900;letter-spacing:.08em;color:#0d6b66;line-height:1.65}
+          .truth-line small{display:block;margin-top:6px;font-size:12px;font-weight:700;letter-spacing:0;color:#56746c}
+          .knowledge-grid{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+          .knowledge-card{padding:16px;border-radius:18px;border:1px solid rgba(16,74,63,.1);background:rgba(255,255,255,.88)}
+          .knowledge-card strong{display:block;margin-bottom:8px;color:#0d6b66}
+          .knowledge-card span{display:block;color:#244a43;font-size:13px;line-height:1.7}
+          .cycle-recent{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+          .cycle-recent li{display:inline-flex;gap:8px;align-items:center;padding:7px 10px;border-radius:999px;background:rgba(14,159,110,.08);border:1px solid rgba(14,159,110,.1);font-size:12px;color:#244a43}
+          .cycle-recent li span{color:#0d6b66;font-weight:800}
+          @media (max-width:1080px){.home-fixed-modules{grid-template-columns:1fr}.cycle-grid,.knowledge-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+          @media (max-width:640px){.cycle-grid,.knowledge-grid{grid-template-columns:1fr}.truth-line{font-size:20px}}
+        </style>
+        <section class="home-fixed-card">
+          <div class="section-head"><div><h2>情绪周期图</h2><p>首页固定查看当前周期位置：最新情绪为 冰点期，当前落点标记为 冰点。</p></div></div>
+          <div class="cycle-grid"><article class="cycle-step active"><span>1</span><strong>冰点</strong><em>恐慌释放，优先找修复预期</em></article><article class="cycle-step"><span>2</span><strong>修复</strong><em>弱转强验证，先看核心承接</em></article><article class="cycle-step"><span>3</span><strong>升温</strong><em>主线扩散，低位补涨开始</em></article><article class="cycle-step"><span>4</span><strong>高潮</strong><em>一致加速，准备兑现风险</em></article><article class="cycle-step"><span>5</span><strong>分歧</strong><em>去弱留强，只看抗跌核心</em></article><article class="cycle-step"><span>6</span><strong>退潮</strong><em>防回撤，空仓或轻仓等待</em></article></div>
+          <ul class="cycle-recent"><li><span>7/6</span><strong>冰点期</strong></li><li><span>7/3</span><strong>升温期</strong></li><li><span>7/2</span><strong>冰点期</strong></li><li><span>7/1</span><strong>高潮期</strong></li><li><span>6/30</span><strong>高潮期 / 科技趋势抱团</strong></li><li><span>6/29</span><strong>数据修复 / 主观假修复退潮</strong></li></ul>
+        </section>
+        <section class="home-fixed-card truth-card">
+          <div><h2>二十字真言</h2><p>每次复盘和盘前计划都先用这句话压住手。</p></div>
+          <div class="truth-line">主线为王 分歧上车<br>高潮兑现 弱则止损<br>空仓等待<small>主线为王分歧上车高潮兑现弱则止损空仓等待</small></div>
+        </section>
+        <section class="home-fixed-card knowledge-grid" aria-label="知识模块">
+          <article class="knowledge-card"><strong>知识模块 · 板块节奏</strong><span>双冰以上可做修复回流预期，双高潮以上可做砸盘预期。连续分歧看修复，连续高潮看兑现。</span></article>
+          <article class="knowledge-card"><strong>知识模块 · 板块同指</strong><span>同样图形里比较谁能回到零轴上方，谁回流强、谁回流无力，地位就会自然分层。</span></article>
+          <article class="knowledge-card"><strong>知识模块 · 爆发次日</strong><span>首板很多的题材爆发日，次日前排应一字或超预期，后排要有新首板续热，否则降级。</span></article>
+          <article class="knowledge-card"><strong>知识模块 · 交易计划</strong><span>每笔交易先写清：什么条件进场、对了怎么办、错了怎么办、最多亏多少。</span></article>
+        </section>
+      </section>
+      <!-- HOME_FIXED_MODULES_END -->
 
       <section class="limit-up-calculator-panel" data-limit-up-calculator>
 

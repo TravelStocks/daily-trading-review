@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-06 21:11:34",
+  "generated_at": "2026-07-06 21:26:41",
   "site_dir": "C:\\Users\\Administrator\\Desktop\\Codex\\daily-trading-review",
   "index_path": "C:\\Users\\Administrator\\Desktop\\Codex\\daily-trading-review\\index.html",
   "desktop_entry": "C:\\Users\\Administrator\\Desktop\\Codex\\daily-trading-review\\A股复盘站-首页.html",
@@ -331,6 +331,12 @@
     "editable_plan_table": true,
     "editable_holding_table": true,
     "delete_buttons": true,
+    "homepage_fixed_modules": {
+      "home_fixed_area": true,
+      "emotion_cycle": true,
+      "twenty_word_rule": true,
+      "knowledge_module": true
+    },
     "mandatory_modules": {
       "effect_positioning": true,
       "operation_plan": true,
