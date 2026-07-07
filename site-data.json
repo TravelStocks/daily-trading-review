@@ -1,5 +1,60 @@
 [
   {
+    "date_iso": "2026-07-07",
+    "date_label": "7/7",
+    "date_display": "2026.07.07",
+    "title": "章盟主式超短全景复盘（2026.7.7 周二）+ 7.8个股板块预案-AI文档",
+    "source_docx": "C:\\Users\\Administrator\\Desktop\\Codex\\output\\doc\\2026-07-07-a-share-review-ai-full.docx",
+    "page_path": "pages\\章盟主式超短全景复盘（2026.7.7 周二）+ 7.8个股板块预案-AI文档.html",
+    "author": "Raymond",
+    "intro": "??????",
+    "emotion_summary": "??????",
+    "emotion_label": "待核",
+    "emotion_score": 7,
+    "main_line_summary": [
+      "??????"
+    ],
+    "core_stock_summary": "核心票以源文档明日预案为准。",
+    "core_stock_list": [],
+    "next_focus_lines": [
+      "??????"
+    ],
+    "risk_summary": [
+      "严格按今日操作计划执行进出场，不用结果倒推理由。"
+    ],
+    "personal_reflection": [
+      "复盘重点从解释结果转向复盘决策过程：进场信号、离场信号、止损是否提前规定。",
+      "趋势来时要用 ETF 承接主线仓位，个股只在确定性更高时做弹性。",
+      "高潮或防守过热后必须提前写好减仓、止盈和走弱止损条件。"
+    ],
+    "operation_emotion_analysis": "一、今日操作结果\n- 按源文档执行 7.1 复盘：市场处于高潮与高低切换并存状态，主线以科技、创新药、证券、化工等轮动为核心。\n二、核心问题\n- 盘中强弱切换快，容易用事后结果给自己找舒服解释，必须回到交易前条件。\n三、核心反思\n- 每笔交易先写清什么条件进场、对了怎么办、错了怎么办、最多亏多少。",
+    "manual_rhythm_note": "双冰以上可做修复回流预期，双高潮以上可做砸盘预期！",
+    "stock_annotations": [],
+    "board_tags": [
+      "科技题材",
+      "创新药",
+      "证券"
+    ],
+    "status_tags": [
+      "待核",
+      "机构趋势",
+      "科技题材",
+      "高低切换",
+      "避险题材",
+      "今日操作计划"
+    ],
+    "summary_headline": "??????",
+    "research_bucket": "反思复盘",
+    "has_reflection": true,
+    "market_style_note": "?????????????",
+    "main_line_focus": "以源文档主线板块为准。",
+    "core_focus_note": "以源文档核心票为准。",
+    "tomorrow_focus_note": "按源文档明日预案执行。",
+    "risk_focus_note": "按计划止损，不临盘下移。",
+    "word_count_hint": 8545,
+    "updated_at": "2026-07-07 20:10:47"
+  },
+  {
     "date_iso": "2026-07-06",
     "date_label": "7/6",
     "date_display": "2026.07.06",
