@@ -7,10 +7,10 @@
     "source_docx": "C:\\Users\\Administrator\\Desktop\\Codex\\output\\doc\\2026-07-07-a-share-review-ai-full.docx",
     "page_path": "pages\\章盟主式超短全景复盘（2026.7.7 周二）+ 7.8个股板块预案-AI文档.html",
     "author": "Raymond",
-    "intro": "??????",
+    "intro": "7月7日市场进入冰点期，指数跌破4000点附近，短线以风险收缩、等待修复为主。",
     "emotion_summary": "??????",
-    "emotion_label": "待核",
-    "emotion_score": 7,
+    "emotion_label": "冰点期",
+    "emotion_score": 6,
     "main_line_summary": [
       "??????"
     ],
@@ -20,7 +20,8 @@
       "??????"
     ],
     "risk_summary": [
-      "严格按今日操作计划执行进出场，不用结果倒推理由。"
+      "源 AI Word 已问号污染，本页使用三表数据修复",
+      "弱修复或无修复时避免追后排"
     ],
     "personal_reflection": [
       "复盘重点从解释结果转向复盘决策过程：进场信号、离场信号、止损是否提前规定。",
@@ -52,7 +53,16 @@
     "tomorrow_focus_note": "按源文档明日预案执行。",
     "risk_focus_note": "按计划止损，不临盘下移。",
     "word_count_hint": 8545,
-    "updated_at": "2026-07-07 20:10:47"
+    "updated_at": "2026-07-07 20:10:47",
+    "market_summary": "沪指3990.24，量能25812，封板率0.59，断板23。",
+    "main_lines": [
+      "相对强势：芯片 5998、机器人 3745、并购重组 1037、稀土 -186、一季报增长 -734",
+      "相对弱势：算力 -7746、有色金属 -6331、CPO -6249、AI应用 -3882、锂电 -3348"
+    ],
+    "next_focus": [
+      "冰点后优先看修复回流是否成立",
+      "只做前排主动性和板块同指确认后的机会"
+    ]
   },
   {
     "date_iso": "2026-07-06",
