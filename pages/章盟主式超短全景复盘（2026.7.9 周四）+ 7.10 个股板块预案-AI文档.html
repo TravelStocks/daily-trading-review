@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>章盟主式超短全景复盘（2026.7.9 周四）+ 7.10 个股板块预案-AI文档</title>
+  <style>
+    :root{--bg:#eef7f4;--card:#ffffff;--line:rgba(18,75,66,.14);--text:#15352f;--muted:#607970;--accent:#0d9275;--blue:#1b7cb3;--amber:#b88415;--risk:#bf4d3d;--shadow:0 18px 42px rgba(12,55,49,.09);--r:20px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#f5fbf8,#e9f4ef);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif}
+    a{color:inherit}.layout{width:min(1580px,calc(100vw - 24px));margin:18px auto 40px;display:grid;grid-template-columns:300px minmax(0,1fr);gap:22px}.toc{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;padding:16px;border:1px solid var(--line);border-radius:var(--r);background:rgba(255,255,255,.92);box-shadow:var(--shadow)}
+    .back{display:inline-flex;margin-bottom:12px;padding:9px 12px;border-radius:999px;background:#e7f4ee;text-decoration:none;color:#0b6a60;font-weight:900}.toc h2{margin:4px 0 12px;font-size:20px}.toc-node{border-top:1px solid rgba(18,75,66,.1);padding:8px 0}.toc-node summary{display:flex;align-items:center;justify-content:space-between;gap:8px;cursor:pointer;list-style:none}.toc-node summary::-webkit-details-marker{display:none}.toc-node a{text-decoration:none;font-weight:900;color:#17443d}.toc-node span{font-size:12px;color:var(--muted)}.toc-children{display:grid;gap:6px;margin:8px 0 0 12px}.toc-children a{font-size:13px;color:#375c55;font-weight:600}
+    .hero,.section-card{border:1px solid rgba(255,255,255,.82);border-radius:var(--r);background:rgba(255,255,255,.94);box-shadow:var(--shadow)}.hero{padding:30px;margin-bottom:22px;background:linear-gradient(135deg,#f9fffc,#eef8f4 55%,#edf6ff)}.hero-kicker,.section-kicker{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.72);color:#0c7065;font-size:12px;font-weight:900;letter-spacing:0}.hero h1{margin:14px 0 10px;font-size:clamp(30px,4vw,58px);line-height:1.05}.hero-lead{max-width:1080px;font-size:17px;line-height:1.9;color:#284e46}.hero-stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.hero-stats span{padding:9px 12px;border-radius:999px;background:#e7f4ee;color:#0a675d;font-weight:800}
+    .section-card{padding:24px;margin:0 0 18px}.chapter-title{margin:10px 0 14px;font-size:28px}.subchapter-title{margin:22px 0 10px;color:#0f4d44;font-size:21px}.minor-title{margin:16px 0 8px;color:#24524a;font-size:17px}.body-line{margin:10px 0;color:#244a43;line-height:1.85}.bullet-line{padding-left:14px;border-left:4px solid rgba(13,146,117,.2)}.tone-action{background:linear-gradient(90deg,rgba(13,146,117,.08),transparent);padding:10px 12px;border-radius:14px}.tone-risk{background:linear-gradient(90deg,rgba(191,77,61,.08),transparent);padding:10px 12px;border-radius:14px}
+    .table-shell{overflow:auto;margin:16px 0;border:1px solid var(--line);border-radius:16px;background:#fff}.data-table{width:100%;border-collapse:collapse;min-width:760px}.data-table th,.data-table td{padding:10px 11px;border-bottom:1px solid rgba(18,75,66,.1);border-right:1px solid rgba(18,75,66,.08);vertical-align:top;text-align:left;font-size:13px;line-height:1.55;word-break:break-word}.data-table th{background:#e8f6f0;color:#0b6a60;font-weight:900}
+    .effect-positioning-module{margin:18px 0 22px;padding:20px;border:2px solid rgba(13,146,117,.24);border-radius:18px;background:linear-gradient(135deg,#eaf8f2,#fff8e8);box-shadow:0 18px 36px rgba(12,55,49,.1)}.module-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap}.module-title{margin:8px 0 0;font-size:25px}.module-status{font-size:12px;color:var(--muted)}.effect-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.effect-panel{padding:15px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.78)}.effect-panel.profit{border-left:6px solid var(--accent)}.effect-panel.loss{border-left:6px solid var(--risk)}.effect-panel h4{margin:0 0 10px}.effect-chipset{display:flex;flex-wrap:wrap;gap:8px}.effect-chip,.multi-chip{border:1px solid rgba(13,146,117,.24);border-radius:999px;padding:7px 10px;background:#f3fbf8;color:#0a675d;font-weight:850;cursor:pointer}.effect-chip.is-selected,.multi-chip.is-selected{background:var(--accent);color:#fff;border-color:var(--accent)}.loss .effect-chip.is-selected{background:var(--risk);border-color:var(--risk)}
+    .kiss-grid,.question-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.kiss-card,.question-grid article{padding:14px;border:1px solid var(--line);border-radius:16px;background:#fff}.kiss-card span{display:block;color:#0d6f64;font-weight:900}.kiss-card p{margin:8px 0 0;line-height:1.7}
+    .plan-toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}.plan-toolbar button,.plan-row-delete,.plan-row-save{border:0;border-radius:999px;padding:9px 13px;background:var(--accent);color:#fff;font-weight:900;cursor:pointer}.plan-toolbar button:nth-child(3){background:var(--blue)}.plan-toolbar button:nth-child(4),.plan-row-delete{background:#f0f5f2;color:#18443c;border:1px solid var(--line)}.plan-save-status{margin-left:auto;color:var(--muted);font-size:12px}.plan-table-wrap,.holding-table-wrap{overflow-x:visible;border:1px solid var(--line);border-radius:16px;background:#fff}.plan-table,.holding-table{width:100%;border-collapse:collapse;table-layout:fixed}.plan-table th,.plan-table td,.holding-table th,.holding-table td{padding:7px;border-bottom:1px solid rgba(20,74,66,.1);border-right:1px solid rgba(20,74,66,.08);vertical-align:top;text-align:left;font-size:11.5px;line-height:1.38;word-break:break-word;overflow-wrap:anywhere}.plan-table th,.holding-table th{background:#e9f7f1;color:#0a6259;font-weight:900}.plan-table td[contenteditable],.holding-table td[contenteditable]{outline:0;background:rgba(255,255,255,.96);cursor:text;border-radius:8px}.plan-table td[contenteditable]:focus,.holding-table td[contenteditable]:focus{background:#fff9df;box-shadow:inset 0 0 0 2px rgba(13,146,117,.26)}.multi-select-control{display:flex;flex-wrap:wrap;gap:4px}.multi-chip{font-size:10.5px;padding:4px 6px}.multi-add{display:flex;gap:4px;margin-top:5px}.multi-add input{width:64px;border:1px solid var(--line);border-radius:999px;padding:5px 7px}.multi-add button{border:1px solid var(--line);border-radius:999px;padding:5px 7px;background:#f0f5f2;color:#18443c;font-weight:900}.plan-row-actions{display:flex;flex-direction:column;gap:5px}.plan-row-save,.plan-row-delete{padding:6px 7px;border-radius:10px;font-size:11px}.holding-plan-editor{margin-top:18px}.source-note{margin-top:18px;color:var(--muted);font-size:13px}
+    @media (max-width:1180px){.layout{grid-template-columns:1fr}.toc{position:relative}.plan-table-wrap,.holding-table-wrap{overflow-x:auto}.plan-table{min-width:1080px}.holding-table{min-width:1480px}.effect-grid,.kiss-grid,.question-grid{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="toc">
+      <a class="back" href="../index.html">返回首页</a>
+      <h2>复盘目录</h2>
+      <details class="toc-node" open><summary><a href="#chapter-1-一-复盘总纲-03e653">一、复盘总纲</a><span>展开</span></summary><div class="toc-children"></div></details>
+<details class="toc-node" open><summary><a href="#chapter-2-二-市场风格与赚钱效应解析-cb50c9">二、市场风格与赚钱效应解析</a><span>展开</span></summary><div class="toc-children"><a href="#sub-2-1-一-市场风格-ab7013">（一）市场风格</a><a href="#sub-2-2-二-赚钱效应-7ef097">（二）赚钱效应</a></div></details>
+<details class="toc-node" open><summary><a href="#chapter-3-三-近4日板块强度-次日节奏预测表-059470">三、近4日板块强度 + 次日节奏预测表</a><span>展开</span></summary><div class="toc-children"></div></details>
+<details class="toc-node" open><summary><a href="#chapter-4-四-今日操作结果-核心失误-核心反思-f2029c">四、今日操作结果 + 核心失误 + 核心反思</a><span>展开</span></summary><div class="toc-children"><a href="#sub-4-1-一-今日操作结果-7e2259">（一）今日操作结果</a><a href="#sub-4-2-二-核心失误根源-0afa43">（二）核心失误根源</a><a href="#sub-4-3-三-深度核心反思-3a6577">（三）深度核心反思</a></div></details>
+<details class="toc-node" open><summary><a href="#chapter-5-五-操作与情绪复盘-kiss模型-89196b">五、操作与情绪复盘（KISS模型）</a><span>展开</span></summary><div class="toc-children"><a href="#sub-5-1-一-当日操作-情绪复盘-51df44">（一）当日操作&amp;情绪复盘</a><a href="#minor-5-2-1-核心失误-5a8e34">1. 核心失误</a><a href="#minor-5-3-2-正向进化-a52cc4">2. 正向进化</a><a href="#sub-5-4-二-kiss模型四维总结-8b015d">（二）KISS模型四维总结</a><a href="#minor-5-5-1-keep-保持-f4e0c6">1. Keep（保持）</a><a href="#minor-5-6-2-improve-改进-ee0430">2. Improve（改进）</a><a href="#minor-5-7-3-start-启动-838eea">3. Start（启动）</a><a href="#minor-5-8-4-stop-禁止-fccf83">4. Stop（禁止）</a></div></details>
+<details class="toc-node" open><summary><a href="#chapter-6-六-各主线板块详细解析-937d9c">六、各主线板块详细解析</a><span>展开</span></summary><div class="toc-children"><a href="#sub-6-1-1-断板反馈与短线情绪-98d178">1. 断板反馈与短线情绪</a><a href="#sub-6-2-2-连板梯队与一进二筛选-04f47a">2. 连板梯队与一进二筛选</a><a href="#sub-6-3-3-半导体-芯片-国产替代-b53572">3. 半导体/芯片/国产替代</a><a href="#sub-6-4-4-先进封装-封测-ae0c54">4. 先进封装/封测</a><a href="#sub-6-5-5-cpo-光通信-ai硬件-a79161">5. CPO/光通信/AI硬件</a><a href="#sub-6-6-6-pcb-元件-mlcc-1e03b9">6. PCB/元件/MLCC</a><a href="#sub-6-7-7-机器人-6f4ef5">7. 机器人</a><a href="#sub-6-8-8-创新药-消费-地产-锂电-防御-9b0bda">8. 创新药、消费、地产、锂电、防御</a></div></details>
+<details class="toc-node" open><summary><a href="#chapter-7-七-事件催化时间线-9293ac">七、事件催化时间线</a><span>展开</span></summary><div class="toc-children"></div></details>
+<details class="toc-node" open><summary><a href="#chapter-8-八-异动监管-龙虎榜与人气榜情况-40f05e">八、异动监管、龙虎榜与人气榜情况</a><span>展开</span></summary><div class="toc-children"><a href="#sub-8-1-一-异动监管-f37439">（一）异动监管</a><a href="#sub-8-2-二-龙虎榜与资金面-aac62e">（二）龙虎榜与资金面</a><a href="#sub-8-3-三-人气榜-5b62cb">（三）人气榜</a></div></details>
+<details class="toc-node" open><summary><a href="#chapter-9-九-跌停与炸板情况-d5f182">九、跌停与炸板情况</a><span>展开</span></summary><div class="toc-children"></div></details>
+<details class="toc-node" open><summary><a href="#chapter-10-十-核心关键票汇总-明日个股预案-442d11">十、核心关键票汇总 + 明日个股预案</a><span>展开</span></summary><div class="toc-children"><a href="#sub-10-1-一-核心关键票全梳理-a65d81">（一）核心关键票全梳理</a><a href="#sub-10-2-二-明日持仓与操作铁律-91f26e">（二）明日持仓与操作铁律</a></div></details>
+<details class="toc-node" open><summary><a href="#chapter-11-十一-大盘明日预期节奏-78977f">十一、大盘明日预期节奏</a><span>展开</span></summary><div class="toc-children"></div></details>
+<details class="toc-node" open><summary><a href="#chapter-12-十二-明日核心票弱转强-转强判定-板块预期细化表-2ab53a">十二、明日核心票弱转强/转强判定 + 板块预期细化表</a><span>展开</span></summary><div class="toc-children"></div></details>
+<details class="toc-node" open><summary><a href="#chapter-13-十三-龙头预备票-最终定稿-c57786">十三、龙头预备票（最终定稿）</a><span>展开</span></summary><div class="toc-children"><a href="#sub-13-1-一-总龙候选名单-3aea20">（一）总龙候选名单</a><a href="#sub-13-2-二-总龙唯一性排序-9f94e1">（二）总龙唯一性排序</a><a href="#sub-13-3-三-龙头七维核验明细-五维-双唯一性-a71302">（三）龙头七维核验明细（五维+双唯一性）</a><a href="#sub-13-4-四-明日总龙决胜观察要点-7cac4f">（四）明日总龙决胜观察要点</a></div></details>
+<details class="toc-node" open><summary><a href="#chapter-14-十四-口述信息全量归档与待确认信息-d62038">十四、口述信息全量归档与待确认信息</a><span>展开</span></summary><div class="toc-children"><a href="#sub-14-1-一-口述中已纳入的关键票池-446b2a">（一）口述中已纳入的关键票池</a><a href="#sub-14-2-二-待确认信息-d5edb4">（二）待确认信息</a></div></details>
+<details class="toc-node" open><summary><a href="#operation-plan">十五、今日操作计划</a><span>展开</span></summary><div class="toc-children"><a href="#operation-kiss">操作与情绪复盘（KISS模型）</a><a href="#theme-explosion-nextday-check">题材爆发日校验</a><a href="#operation-process-review">正确复盘重点</a><a href="#operation-plan-three-questions">书面计划三问</a><a href="#editable-operation-table">可编辑交易计划表</a><a href="#holding-handling-table">持仓处理计划表</a></div></details>
+    </aside>
+    <main class="content">
+      <section class="hero">
+        <div class="hero-kicker">Daily A-Share Review · 2026.07.09</div>
+        <h1>章盟主式超短全景复盘（2026.7.9 周四）+ 7.10 个股板块预案-AI文档</h1>
+        <p class="hero-lead">一、复盘总纲</p>
+        <div class="hero-stats">
+          <span>情绪：修复期</span><span>沪指：4036.59</span><span>量能：待核</span><span>源表：7 张</span>
+        </div>
+      </section>
+      <p class="body-line tone-risk">数据来源：用户当日完整口述复盘 + 2026-07-09-复盘三表数据.docx。本文按“章盟主式超短全景复盘”14章结构整理，保留核心判断、交易复盘、个股锚定、板块节奏、异动监管、龙虎榜、人气榜、明日操作计划与待确认信息。本文为个人复盘与交易计划整理，不构成投资建议。</p>
+<section class="section-card" id="chapter-1-一-复盘总纲-03e653"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">一、复盘总纲</h2>
+<div class="section-kicker">Market Snapshot</div><h3 id="market-snapshot-with-change" class="subchapter-title">近四日大盘情绪截图表（含涨跌幅）</h3><div class="table-shell" id="source-table-0"><table class="data-table"><thead><tr><th>周几</th><th>日期</th><th>沪指</th><th>深指</th><th>创业</th><th>科创</th><th>沪指量能</th><th>情绪强度</th><th>极端腾落数（涨停-跌停）</th><th>腾落数（上涨-下跌）</th><th>一板</th><th>二板</th><th>三板</th><th>高度板</th><th>封板率</th><th>断板</th></tr></thead><tbody><tr><td>周一</td><td>2026-07-06</td><td>4041.24（-0.06%）</td><td>15416.8（-1.16%）</td><td>3948.86（-1.77%）</td><td>1996.1（+1.04%）</td><td>30911</td><td>冰点期</td><td>18</td><td>-1461</td><td>56</td><td>5</td><td>1</td><td>5</td><td>0.61</td><td>41</td></tr><tr><td>周二</td><td>2026-07-07</td><td>3990.24（-1.26%）</td><td>15225.11（-1.24%）</td><td>3911.91（-0.94%）</td><td>2001.59（+0.28%）</td><td>25812</td><td>冰点期</td><td>3</td><td>-3896</td><td>28</td><td>3</td><td>0</td><td>6</td><td>0.59</td><td>23</td></tr><tr><td>周三</td><td>2026-07-08</td><td>3970.88（-0.49%）</td><td>14939.73（-1.87%）</td><td>3845.35（-1.70%）</td><td>2016.23（+0.73%）</td><td>25635</td><td>冰点期</td><td>5</td><td>-1999</td><td>38</td><td>6</td><td>1</td><td>7</td><td>0.77</td><td>14</td></tr><tr><td>周四</td><td>2026-07-09</td><td>4036.59（+1.65%）</td><td>15398.73（+3.07%）</td><td>4018.17（+4.49%）</td><td>2185.83（+8.41%）</td><td>29137</td><td>修复期</td><td>63</td><td>-292</td><td>69</td><td>4</td><td>1</td><td>8</td><td>0.82</td><td>17</td></tr></tbody></table></div>
+
+<p class="body-line">今天是科技线强修复日，也是短线情绪触底回升日。三大指数全天探底回升，沪指收 4036.59，口述涨幅 +1.65%；深指 15398.73；创业板 4018.17，口述涨幅 +4.49%；科创 2185.83，口述科创50涨幅 +8.41%。两市成交额约 2.9 万亿，三表数据为 29137 亿，口述盘后数据为 29322 亿，口径略有差异但都确认放量回归。</p>
+<p class="body-line">情绪方面，三表定义为“修复期”。涨停 75 家、跌停 12 家，极端腾落为 +63；上涨 2382 家、下跌 2674 家，个股仍跌多涨少，但科技权重大票和 ETF 把指数与情绪强行拉回。连板结构为一板 69、二板 4、三板 1、高度板 8、封板率 82%、断板 17。结论很清楚：短线见底，但不是普涨牛市，是科技权重和科技趋势的结构性强修复。</p>
+<p class="body-line tone-action">主线定性：科技主升三进入确认窗口，核心从泛科技继续缩容到国产半导体、半导体设备、先进封装、存储芯片、CPO/光通信、AI服务器硬件。机器人、创新药、消费、锂电、防御题材、杂毛题材继续被剃掉。</p>
+<p class="body-line tone-action">明日策略：7月10日不需要继续无脑二高潮，最舒服的是弱分化、企稳震荡、核心 ETF 横住。强势反弹大涨的次日，一般就是分化预期，不要要求很强的上涨，而是按震荡预期处理；分化本身反而是倒车接人的好时机。今天全面高潮，明天分化才知道谁在裸泳，核心强者会留下，杂毛会被市场剃掉。主仓锚定半导体设备 ETF 159516、芯片 ETF、科创半导体 ETF；个股锚定东山精密、长电科技、华天科技；半导体核心看中芯国际、北方华创、兆易创新、太极实业、中际旭创等大票强度。</p>
+<p class="body-line">宏观资产风格上，用户判断“中国资产/全国资产开始脱离韩国资产，走独立行情”。这一点如果继续验证，说明本轮科技反弹不只是跟随外部半导体映射，而是国产链、国产算力、国产芯片、国产存储开始走自己的独立定价。这个逻辑要和长鑫/长兴、DeepSeek、智谱自研芯片、国产链刺激放在一起看。</p>
+</section>
+<section class="section-card" id="chapter-2-二-市场风格与赚钱效应解析-cb50c9"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">二、市场风格与赚钱效应解析</h2>
+
+<section class="effect-positioning-module" data-effect-positioning data-date="2026-07-09" id="effect-positioning">
+  <div class="module-head">
+    <span class="section-kicker">Market Effect Map</span>
+    <h3 class="module-title">赚钱效应与亏钱效应定位</h3>
+    <span class="module-status" data-effect-status>本地已保存</span>
+  </div>
+  <div class="effect-grid">
+    <div class="effect-panel profit"><h4>赚钱效应</h4><div class="effect-chipset" data-effect-group="profit"></div></div>
+    <div class="effect-panel loss"><h4>亏钱效应</h4><div class="effect-chipset" data-effect-group="loss"></div></div>
+  </div>
+  <script type="application/json" data-effect-options>[&quot;抱团高位&quot;, &quot;机构趋势&quot;, &quot;短线情绪&quot;, &quot;高低切换&quot;, &quot;避险题材&quot;, &quot;科技题材&quot;, &quot;老登题材&quot;, &quot;混沌轮动&quot;, &quot;断板反包&quot;, &quot;N字启动&quot;]</script>
+  <script type="application/json" data-effect-defaults>{&quot;profit&quot;: [&quot;避险题材&quot;, &quot;机构趋势&quot;, &quot;高低切换&quot;, &quot;断板反包&quot;], &quot;loss&quot;: [&quot;抱团高位&quot;, &quot;科技题材&quot;, &quot;短线情绪&quot;, &quot;混沌轮动&quot;]}</script>
+</section>
+
+<h3 id="sub-2-1-一-市场风格-ab7013" class="subchapter-title">（一）市场风格</h3>
+<p class="body-line bullet-line">指数节奏：平开后冲高回落，盘中杀到 3939 附近，没有跌破前低 3929，随后在半导体消息刺激下探底回升。沪指和创业板重新站上 4000 点附近，科创方向大阳线最强。</p>
+<p class="body-line bullet-line">量能结构：成交额约 2.9 万亿，虽未站上 3 万亿，但相较前几日明显放量，足够支撑科技大票、ETF、中军趋势反弹。</p>
+<p class="body-line bullet-line">板块风格：科技强修复，尤其半导体设备、芯片、科创半导体、先进封装、存储芯片、CPO。非科技方向继续弱。</p>
+<p class="body-line bullet-line">资金风格：资金从连板小票转向科技权重大票、中屁股趋势票和 ETF。连板梯队断层，趋势龙才是主线。</p>
+<h3 id="sub-2-2-二-赚钱效应-7ef097" class="subchapter-title">（二）赚钱效应</h3>
+<p class="body-line bullet-line">涨跌结构：涨停 75、跌停 12，强修复确认，但个股仍跌多涨少，说明是结构性行情。</p>
+<p class="body-line bullet-line">连板结构：高度有 8 板，但 7、6、5、4 板断层，连板生态不健康。</p>
+<p class="body-line bullet-line">封板与断板：封板率 82%，断板 17，科技断板可修复，非科技断板继续被抛弃。</p>
+<p class="body-line bullet-line tone-action">明日关键：核心 ETF 是否横住，东山精密/长电科技/华天科技是否承接，科创和沪指是否企稳。</p>
+<div class="table-shell" id="source-table-1"><table class="data-table"><thead><tr><th>周几</th><th>日期</th><th>沪指</th><th>深指</th><th>创业</th><th>科创</th><th>成交额/量能</th><th>情绪强度</th><th>极端腾落数</th><th>腾落数</th><th>一板</th><th>二板</th><th>三板</th><th>高度板</th><th>封板率</th><th>断板</th></tr></thead><tbody><tr><td>周四</td><td>2026-07-09</td><td>4036.59</td><td>15398.73</td><td>4018.17</td><td>2185.83</td><td>29137亿/约29322亿</td><td>修复期</td><td>75-12=63</td><td>2382-2674=-292</td><td>69</td><td>4</td><td>1</td><td>8</td><td>82%</td><td>17</td></tr></tbody></table></div>
+<p class="body-line">辅助平台验证也指向同一个结论：淘股吧复盘口径显示短线确实见底，指数碰到 3939 后快速拉回，科技牛把前面几天的压抑一扫而空。题材成交额方面，长鑫/长兴科技相关约 792 亿，半导体约 641 亿，AI硬件约 563 亿，PCB约 161 亿，市场连板约 233 亿。连板虽然仍断层，但不再冰点；真正强的是科技趋势，而不是连板接力。</p>
+<p class="body-line">短线侠/短信侠视角里，昨天不是简单弱修复，更像“两兵”铺垫，今天才是强回流站稳。长鑫/长兴科技招股书/IPO消息把算力半导体产业链和存储芯片一起拉爆，PCB跟随东山精密修复，光通信强回流；AI应用、商业航天、电力、机器人、医药都弱。这个验证了今天的主线不是混沌轮动，而是科技主升三切入。</p>
+</section>
+<section class="section-card" id="chapter-3-三-近4日板块强度-次日节奏预测表-059470"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">三、近4日板块强度 + 次日节奏预测表</h2>
+
+  <div class="rhythm-usage-note" id="sector-rhythm-usage-note" style="margin:14px 0 18px;padding:14px 16px;border:1px solid rgba(13,148,136,.24);border-left:4px solid #0f766e;background:#ecfeff;border-radius:8px;color:#134e4a;">
+    <span class="section-kicker">Rhythm Read</span>
+    <p style="margin:6px 0 0;font-weight:700;">双冰以上可做修复回流预期，双高潮以上可做砸盘预期！</p>
+  </div>
+
+
+<p class="body-line tone-action">三表数值显示，今天芯片是绝对强度核心，2026/7/9 数值达到 34154；通信 7981、算力 8462、并购重组 3910、AI应用 3696、商业航天 3366也有回流，但主线级别不如芯片/半导体。用户口述板块节奏确认：半导体、芯片、存储芯片从连续弱修复直接切到强回流，CPO从弱回流切强回流，PCB/元件是跟随修复。</p>
+<div class="table-shell" id="source-table-2"><table class="data-table"><thead><tr><th>板块</th><th>7/6</th><th>7/7</th><th>7/8</th><th>7/9</th><th>次日节奏预测</th><th>核心判断</th></tr></thead><tbody><tr><td>芯片</td><td>8574（小分歧）</td><td>5998（大分歧）</td><td>4988（大分歧）</td><td>34154（高潮）</td><td>弱分化/横盘确认</td><td>今日最强，ETF主仓核心</td></tr><tr><td>通信</td><td>4595（强回流）</td><td>-8953（大分歧）</td><td>-4647（大分歧）</td><td>7981（强回流）</td><td>温和分化</td><td>CPO/光通信强回流</td></tr><tr><td>算力</td><td>6267（强回流）</td><td>-7746（大分歧）</td><td>12471（高潮）</td><td>8462（强回流）</td><td>震荡承接</td><td>AI服务器方向仍可观察</td></tr><tr><td>AI应用</td><td>-2965（大分歧）</td><td>-3882（大分歧）</td><td>4449（高潮）</td><td>3696（高潮）</td><td>弱跟随</td><td>不作为主攻</td></tr><tr><td>商业航天</td><td>-12495（大分歧）</td><td>-4536（大分歧）</td><td>-6147（大分歧）</td><td>3366（强回流）</td><td>弱轮动</td><td>强度不足</td></tr><tr><td>机器人</td><td>-7991（大分歧）</td><td>3745（高潮）</td><td>4259（高潮）</td><td>4994（高潮）</td><td>继续退潮</td><td>数值回流但口述反馈弱，不能主攻</td></tr><tr><td>元器件</td><td>-5093（大分歧）</td><td>-1050（小分歧）</td><td>-5348（大分歧）</td><td>573（强回流）</td><td>跟随修复</td><td>MLCC/元件弱于芯片和CPO</td></tr><tr><td>并购重组</td><td>2632（正常）</td><td>1037（大分歧）</td><td>2479（正常）</td><td>3910（强回流）</td><td>分化</td><td>看是否贴合科技</td></tr><tr><td>医疗</td><td>-183（小分歧）</td><td>-11372（大分歧）</td><td>-2869（大分歧）</td><td>379（强回流）</td><td>弱</td><td>创新药不看主攻</td></tr><tr><td>电池</td><td>-8233（大分歧）</td><td>-3083（小分歧）</td><td>-21873（大分歧）</td><td>-4277（小分歧）</td><td>继续弱</td><td>锂电被抛弃</td></tr><tr><td>有色金属</td><td>-7992（大分歧）</td><td>-6331（大分歧）</td><td>-7768（大分歧）</td><td>-161（小分歧）</td><td>弱</td><td>不看</td></tr><tr><td>电力</td><td>-822（小分歧）</td><td>-2292（大分歧）</td><td>-1157（大分歧）</td><td>-465（小分歧）</td><td>弱</td><td>不看</td></tr><tr><td>PCB/元件类补充</td><td>口述近4日显示PCB、元件7/9中回流</td><td></td><td></td><td></td><td>跟随CPO</td><td>PCB不是主动核心</td></tr></tbody></table></div>
+<p class="body-line">板块节奏结论：昨天不是简单弱修复，更像“两兵”铺垫；今天才是真强回流。后面主升三只锚定芯片、半导体设备、存储芯片、CPO。PCB、元件、MLCC是跟随；机器人、医药、消费、防御题材让位。</p>
+<p class="body-line tone-risk">用户手动板块节奏原表归档如下。原口述表中周二日期与周一均写为 2026/6/29，正式复盘按交易日逻辑将周二标为 2026/6/30（待确认）。</p>
+<div class="table-shell" id="source-table-3"><table class="data-table"><thead><tr><th>板块节奏</th><th>2026/6/29 周一</th><th>2026/6/30 周二（待确认）</th><th>2026/7/1 周三</th><th>2026/7/2 周四</th><th>2026/7/3 周五</th><th>2026/7/6 周一</th><th>2026/7/7 周二</th><th>2026/7/8 周三</th><th>2026/7/9 周四</th></tr></thead><tbody><tr><td>CPO</td><td>大分歧</td><td>中回流</td><td>大分歧</td><td>大分歧</td><td>弱修复</td><td>中分歧</td><td>中分歧</td><td>弱回流</td><td>强回流</td></tr><tr><td>PCB</td><td>大分歧</td><td>中回流</td><td>弱回流</td><td>大分歧</td><td>弱修复</td><td>中分歧</td><td>中分歧</td><td>中分歧</td><td>中回流</td></tr><tr><td>元件</td><td>大分歧</td><td>分歧延续</td><td>弱回流</td><td>大分歧</td><td>弱修复</td><td>中分歧</td><td>中分歧</td><td>中分歧</td><td>中回流</td></tr><tr><td>算力</td><td>中分歧</td><td>强回流</td><td>中分歧</td><td>大分歧</td><td>弱修复</td><td>小分歧</td><td>大分歧</td><td>强回流</td><td>中回流</td></tr><tr><td>光纤</td><td>大分歧</td><td>中回流</td><td>中回流</td><td>大分歧</td><td>弱修复</td><td>中分歧</td><td>中分歧</td><td>弱回流</td><td>中回流</td></tr><tr><td>PET铜箔</td><td>大分歧</td><td>小回流</td><td>中分歧</td><td>大分歧</td><td>弱修复</td><td>中分歧</td><td>中分歧</td><td>中分歧</td><td>中回流</td></tr><tr><td>半导体</td><td>弱回流</td><td>强回流</td><td>中分歧</td><td>大分歧</td><td>小分歧</td><td>小分歧</td><td>弱修复</td><td>弱修复</td><td>强回流</td></tr><tr><td>芯片</td><td>中回流</td><td>强回流</td><td>中分歧</td><td>大分歧</td><td>小分歧</td><td>弱修复</td><td>弱修复</td><td>弱修复</td><td>强回流</td></tr><tr><td>存储芯片</td><td>弱回流</td><td>小分歧</td><td>中分歧</td><td>大分歧</td><td>小分歧</td><td>弱修复</td><td>弱修复</td><td>弱修复</td><td>强回流</td></tr><tr><td>创新药</td><td>强回流-启动</td><td>强分化</td><td>强回流</td><td>弱分歧</td><td>弱修复</td><td>小分歧</td><td>大分歧</td><td>大分歧</td><td>大分歧</td></tr><tr><td>机器人</td><td>大分歧</td><td>强回流-启动</td><td>中分化</td><td>小分化</td><td>强回流-高潮</td><td>大分歧</td><td>大分歧</td><td>小分歧</td><td>大分歧</td></tr><tr><td>零售</td><td>强回流-启动</td><td>强分化</td><td>弱回流</td><td>弱分歧</td><td>无</td><td>无</td><td>无</td><td>无</td><td>无</td></tr><tr><td>证券</td><td>无</td><td>无</td><td>强回流-启动</td><td>中分歧</td><td>无</td><td>无</td><td>无</td><td>无</td><td>无</td></tr><tr><td>金融</td><td>无</td><td>无</td><td>强回流-启动</td><td>中分歧</td><td>无</td><td>无</td><td>无</td><td>无</td><td>无</td></tr></tbody></table></div>
+</section>
+<section class="section-card" id="chapter-4-四-今日操作结果-核心失误-核心反思-f2029c"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">四、今日操作结果 + 核心失误 + 核心反思</h2>
+<h3 id="sub-4-1-一-今日操作结果-7e2259" class="subchapter-title">（一）今日操作结果</h3>
+<p class="body-line tone-action">✅ 做对操作</p>
+<p class="body-line">1. 在科技主升三启动日敢于头铁，把 ETF 仓位推到约 80%，符合利弗摩尔式牛市启动确认后的金字塔加仓思路。</p>
+<p class="body-line">2. 主要使用 ETF 表达，避免强行分仓大票或追连板杂毛，方向选择正确。</p>
+<p class="body-line">3. 早盘对大名城、恒生医疗、半导体设备相关仓位做逢高处理，后续在大盘企稳后重新打确定性仓位。</p>
+<p class="body-line">4. 当前盈利约 4 个多点，说明交易方向和仓位进攻都有效。</p>
+<p class="body-line tone-action">❌ 做错操作/需要反思</p>
+<p class="body-line">1. 最佳买点在沪指靠近 3929 前低/3939探底区域，那里应该先下 2-3 成试探仓，但当时担心未企稳，勇气略欠。</p>
+<p class="body-line">2. 实际加仓偏晚，等企稳后追T/反T，逻辑没错，但利润少了一截。</p>
+<p class="body-line">3. 金字塔加仓结构可优化，启动确认初期前几笔应更重，后面盈利确认后轻加。</p>
+<p class="body-line">4. 做T技术和盯盘精度还要提高，冲高、下杀、企稳三个节点要更敏感。</p>
+<h3 id="sub-4-2-二-核心失误根源-0afa43" class="subchapter-title">（二）核心失误根源</h3>
+<p class="body-line">1. 执行层面：最便宜的位置看见了，但信心没有完全跟上判断。</p>
+<p class="body-line">2. 地位/预案层面：对科技主升三启动日的“关键支撑试错仓”规则还不够机械。</p>
+<p class="body-line">3. 节奏/买卖点层面：低点试探仓慢一拍，企稳追T没有问题，但赔率低于前低附近试错。</p>
+<h3 id="sub-4-3-三-深度核心反思-3a6577" class="subchapter-title">（三）深度核心反思</h3>
+<p class="body-line tone-action">今天不是方向错误，而是细节不够极致。真正高手在启动日要敢于在赔率最好的位置先上桌，而不是等完全确认后才加。以后遇到前低支撑、主线消息发酵、核心 ETF承接同时出现时，不需要一口气满仓，但必须允许自己先打 2-3 成试探仓。</p>
+</section>
+<section class="section-card" id="chapter-5-五-操作与情绪复盘-kiss模型-89196b"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">五、操作与情绪复盘（KISS模型）</h2>
+<h3 id="sub-5-1-一-当日操作-情绪复盘-51df44" class="subchapter-title">（一）当日操作&amp;情绪复盘</h3>
+<h4 id="minor-5-2-1-核心失误-5a8e34" class="minor-title">1. 核心失误</h4>
+<p class="body-line">1. 3929/3939附近未能更果断建仓。</p>
+<p class="body-line">2. 低吸节点和做T节奏略慢，导致盈利从潜在约 6 个点压到实际约 4 个点。</p>
+<p class="body-line">3. 加仓结构可从“后面确认再加”优化为“前重后轻”。</p>
+<h4 id="minor-5-3-2-正向进化-a52cc4" class="minor-title">2. 正向进化</h4>
+<p class="body-line">1. 判断科技强修复和主升三方向正确。</p>
+<p class="body-line">2. 敢于把仓位推到 80%，没有在启动日过度保守。</p>
+<p class="body-line tone-risk">3. 用 ETF 做主仓，规避个股大票分仓困难和杂毛风险。</p>
+<h3 id="sub-5-4-二-kiss模型四维总结-8b015d" class="subchapter-title">（二）KISS模型四维总结</h3>
+<h4 id="minor-5-5-1-keep-保持-f4e0c6" class="minor-title">1. Keep（保持）</h4>
+<p class="body-line">继续坚持 ETF 主仓打法，尤其半导体设备、芯片、科创半导体这种板块级行情，用 ETF 承接比拆买大票更适合当前资金体量。</p>
+<h4 id="minor-5-6-2-improve-改进-ee0430" class="minor-title">2. Improve（改进）</h4>
+<p class="body-line tone-action">提高做T精度，重点训练关键支撑位的试探仓、企稳确认后的加仓、冲高后的利润保护。</p>
+<h4 id="minor-5-7-3-start-启动-838eea" class="minor-title">3. Start（启动）</h4>
+<p class="body-line tone-action">建立启动日规则：指数接近前低且主线消息发酵，先下 2-3 成试探；不破前低并承接，加至 5-6 成；核心 ETF确认拉升，推到 8 成以上。</p>
+<p class="body-line tone-action">建立“冰点抄底仓位规则”：二冰开始抄底，先建 2-3 成仓；如果出现三冰，直接加到 5-6 成，越冰越加。核心逻辑是极致亏钱效应会孕育极致赚钱效应，一波超极致反弹就可能把前面亏损全部打回来，性价比和盈亏比都极高。关键是踩准回暖日，回暖日一旦确认，就是大回血节点。</p>
+<h4 id="minor-5-8-4-stop-禁止-fccf83" class="minor-title">4. Stop（禁止）</h4>
+<p class="body-line tone-action">停止等到完全确定才上仓，也停止在二高潮追尖。主线强时持有核心 ETF，杂毛轮动不碰。</p>
+</section>
+<section class="section-card" id="chapter-6-六-各主线板块详细解析-937d9c"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">六、各主线板块详细解析</h2>
+<h3 id="sub-6-1-1-断板反馈与短线情绪-98d178" class="subchapter-title">1. 断板反馈与短线情绪</h3>
+<p class="body-line bullet-line">催化/逻辑：情绪回暖不是普涨回暖，而是科技线把断板负反馈吸走。</p>
+<p class="body-line bullet-line tone-action">核心标的：有研硅、华天科技、有研新材、万通发展、科技断板反包票。</p>
+<p class="body-line bullet-line tone-risk">今日反馈：断板第3天整体正反馈改善，负反馈没有跌停；科技断板能反包，机器人、创新药、消费、防御题材反包失败。机器人方向有“中报预增 + 间接持有宇树科技/宇数科技（待确认）”口述逻辑，但没有走出持续性；间接投资长鑫/长兴科技方向反包更强。</p>
+<p class="body-line bullet-line tone-action">明日观察：科技断板反包次日能否继续走强；非科技支线是否继续补跌。</p>
+<p class="body-line bullet-line tone-risk">纪律/风险：只看科技断板修复，不看机器人和防御题材断板反包。</p>
+<p class="body-line tone-risk">细节归档：欢瑞世纪/欢乐世纪（待确认）出现 AI应用 20cm 反包，但趋势未走出来；“重达技术”（待确认）偏 AI服务器PCB逻辑，蹭上科技后有反包；中天精装、中石科技、新赛尔等边角科技票也有正反馈。宜宾纸业等消费票不行，万通发展昨天弱走势后今天还能红盘，说明少数辨识度票还有独立承接。</p>
+<h3 id="sub-6-2-2-连板梯队与一进二筛选-04f47a" class="subchapter-title">2. 连板梯队与一进二筛选</h3>
+<p class="body-line bullet-line">催化/逻辑：连板高度还在，但梯队断层严重。</p>
+<p class="body-line bullet-line tone-action">核心标的：恒尚节能（口述横向/恒向节能，板数待核）、浪潮信息、兴业股份、山东墨龙、浙江美大。</p>
+<p class="body-line bullet-line">今日反馈：高度板 8，但 7/6/5/4 板断层；大恒科技3进4失败，机器人结束感强；2进3只晋级一个机器人票且烂板，口述封单只有约800多万，资金认可度不足。</p>
+<p class="body-line bullet-line tone-action">明日观察：恒尚节能是否继续挑战高度；浪潮信息能否代表AI服务器走强。</p>
+<p class="body-line bullet-line tone-risk">纪律/风险：不硬做连板。科技这波走强趋势，不是连板接力。</p>
+<p class="body-line tone-risk">细节归档：恒尚节能/横向节能（待确认）7进8弱转强成功，因收购存储公司被市场归入存储芯片方向，明日看能否摸 9 板。浪潮信息一进二成功，是算力AI服务器核心；兴业股份偏光刻胶/半导体代理逻辑；山东墨龙偏石油，持续性一般；浙江美大偏AI硬件。易德龙、机器人、高速公路等杂毛题材冲高后回落，说明首板负反馈仍大。</p>
+<h3 id="sub-6-3-3-半导体-芯片-国产替代-b53572" class="subchapter-title">3. 半导体/芯片/国产替代</h3>
+<p class="body-line bullet-line">催化/逻辑：长鑫/长兴科技IPO招股书、国产存储、硅片涨价、封测紧缺、设备国产替代。</p>
+<p class="body-line bullet-line tone-action">核心标的：中芯国际、北方华创、中微公司、寒武纪、海光信息、兆易创新、太极实业、雅克科技、有研新材、东岳硅材。</p>
+<p class="body-line bullet-line">今日反馈：半导体涨停潮回归，九原公社涨停简图口述半导体18个涨停，中芯国际涨超13%创历史新高，芯片数值34154全场最强。设备、光刻机、电子化学品、第三代半导体、MCU芯片、玻璃基板等都围绕国产科技展开。</p>
+<p class="body-line bullet-line tone-action">明日观察：芯片 ETF、半导体设备159516、科创半导体ETF能否横住。</p>
+<p class="body-line bullet-line tone-risk">纪律/风险：芯片大票太多且单票资金占用大，优先ETF，不追后排杂毛。</p>
+<p class="body-line">细节归档：半导体设备ETF、科创半导体ETF、芯片ETF、半导体ETF均出现接近涨停级别表现，其中159516最猛，更偏上游设备，由北方华创等设备中军引领。半导体硅片盘中有涨价消息，有研硅、东岳硅材被顶出强趋势。今年主线继续围绕“涨价 + 业绩”。</p>
+<p class="body-line tone-action">图片补充归档：芯片方向快速轮动，短期实在找不到单一核心锚定时，先看两个中军的走势，同时用ETF承接板块强度。另一个思路是看国产链，昨晚有 DeepSeek 和智谱自研芯片消息，对国产链算刺激，芯片和芯片产业链的国产替代逻辑继续加分。芯片方向不强行点一个唯一龙，更多按“中军 + ETF + 国产链”处理。</p>
+<h3 id="sub-6-4-4-先进封装-封测-ae0c54" class="subchapter-title">4. 先进封装/封测</h3>
+<p class="body-line bullet-line">催化/逻辑：下半年进入共振黄金阶段，紧缺需求与紧缺产能推动涨价预期。</p>
+<p class="body-line bullet-line tone-action">核心标的：长电科技、华天科技、通富微电、深科技、同兴达、朗迪集团。</p>
+<p class="body-line bullet-line tone-action">今日反馈：长电、华天是封测双核心，龙虎榜口述两票合计资金进入约60多亿，主力认可度高。</p>
+<p class="body-line bullet-line tone-action">明日观察：长电、华天能否温和分化后继续承接。</p>
+<p class="body-line bullet-line tone-risk">纪律/风险：封测只锚定双核心，不扩散追边角后排。</p>
+<p class="body-line tone-action">细节归档：盘中先进封装消息强调进入下半年共振黄金阶段，从0到1进入偏1后的实质产业变化，核心矛盾变成紧缺需求和紧缺产能，最终仍指向涨价。长电科技、华天科技、通富微电、深科技构成封测/先进封装修复池。</p>
+<h3 id="sub-6-5-5-cpo-光通信-ai硬件-a79161" class="subchapter-title">5. CPO/光通信/AI硬件</h3>
+<p class="body-line bullet-line">催化/逻辑：AI服务器需求带动PCB、CPO、光通信、AI硬件修复。</p>
+<p class="body-line bullet-line tone-risk">核心标的：东山精密、中际旭创、天孚通信、光迅科技、新易盛、亨通光电/亨通股份、中天科技/中天精装（待确认）。</p>
+<p class="body-line bullet-line">今日反馈：东山精密是CPO/光/AI硬件趋势龙，光迅科技、东山精密涨停，通信数值7981强回流。</p>
+<p class="body-line bullet-line tone-action">明日观察：东山精密是否继续成为强趋势锚；中际旭创是否与东山形成双核心。</p>
+<p class="body-line bullet-line tone-risk">纪律/风险：CPO只看前排，星网锐捷等边角票资金流出则不追。</p>
+<p class="body-line">细节归档：亨通光电、亨通股份、中天科技/中天精装等偏跟随东山精密和中际旭创。天孚通信、光迅科技、新易盛都很强。AI服务器由浪潮信息带出，会牵引PCB、CPO、AI硬件、数据中心服务器需求。</p>
+<p class="body-line tone-action">图片补充归档：题材上，高位抗跌的是光里面的核心个股，重点锚定东山精密和中际旭创。光方向相比芯片更容易找到核心锚，东山和中际就是明日分化里的第一观察位；如果强反弹次日它们还能抗跌，说明资金仍在科技核心里抱团，不是普通轮动。</p>
+<h3 id="sub-6-6-6-pcb-元件-mlcc-1e03b9" class="subchapter-title">6. PCB/元件/MLCC</h3>
+<p class="body-line bullet-line">催化/逻辑：跟随CPO和AI硬件修复。</p>
+<p class="body-line bullet-line tone-risk">核心标的：生益科技、东山精密、中京电子、铜冠铜箔、宝鼎科技（待确认）。</p>
+<p class="body-line bullet-line">今日反馈：PCB中回流，但主动性不如芯片和CPO；元件、MLCC掉队。</p>
+<p class="body-line bullet-line tone-action">明日观察：PCB是否继续跟随东山精密，而不是独立走弱。</p>
+<p class="body-line bullet-line tone-risk">纪律/风险：PCB和元件是次级修复，不能当主攻。</p>
+<p class="body-line tone-risk">细节归档：宝鼎科技（口述“保鼎”，待确认）算跟随带队。中国巨石这类PCB没跟上，铜箔、元件、MLCC偏弱，说明这波不是所有硬件都能做，必须贴近CPO/AI硬件/半导体上游。</p>
+<h3 id="sub-6-7-7-机器人-6f4ef5" class="subchapter-title">7. 机器人</h3>
+<p class="body-line bullet-line">催化/逻辑：前期强势题材退潮，周六可能有消息催化但当前不主攻。</p>
+<p class="body-line bullet-line tone-risk">核心标的：大恒科技、世源股份/世运股份（待确认）、埃斯顿。</p>
+<p class="body-line bullet-line">今日反馈：大恒科技3进4失败，埃斯顿补跌，机器人只有约5个涨停，断板反包没走出来。</p>
+<p class="body-line bullet-line tone-action">明日观察：只看是否有超预期修复，不主动参与。</p>
+<p class="body-line bullet-line tone-risk">纪律/风险：机器人已经让位科技主升三。</p>
+<h3 id="sub-6-8-8-创新药-消费-地产-锂电-防御-9b0bda" class="subchapter-title">8. 创新药、消费、地产、锂电、防御</h3>
+<p class="body-line bullet-line">催化/逻辑：防御残余和旧方向轮动。</p>
+<p class="body-line bullet-line tone-action">核心标的：万邦医药、宜宾纸业、融捷股份等。</p>
+<p class="body-line bullet-line">今日反馈：创新药仍有一点持续性但不强；融捷股份2连跌停，锂电被抛弃；消费、地产、防御断板反包弱。</p>
+<p class="body-line bullet-line tone-action">明日观察：不作为主线，只看是否继续负反馈。</p>
+<p class="body-line bullet-line tone-risk">纪律/风险：非科技方向一律降低权重。</p>
+<p class="body-line">细节归档：证券有个股业绩较好，但板块没有顶出来；商业航天只有约两个涨停，强度不足；高新发展口述偏建筑装饰叠加并购算力，若市场不认可科技正宗性，容易被当杂毛剃掉。锂电、消费、防御都不是当下资金审美。</p>
+</section>
+<section class="section-card" id="chapter-7-七-事件催化时间线-9293ac"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">七、事件催化时间线</h2>
+<p class="body-line">1. 今日 2026-07-09：半导体硅片涨价消息发酵，有研硅、东岳硅材走强。</p>
+<p class="body-line tone-action">2. 今日 2026-07-09：先进封装进入下半年供需紧缺阶段，长电科技、华天科技顶出封测双核心。</p>
+<p class="body-line tone-risk">3. 今日 2026-07-09：长鑫/长兴科技（口述称长兴，待确认）IPO/招股书催化，存储芯片、半导体产业链、算力硬件集体强回流。口述称 7月16日要打新/申购，具体以公告为准。</p>
+<p class="body-line tone-risk">4. 明日 2026-07-10：三星/海力士存储相关消息待确认，若发酵则继续强化存储链。</p>
+<p class="body-line tone-risk">5. 周六 2026-07-11：机器人相关消息待确认，仅作观察。</p>
+<p class="body-line tone-risk">6. 下周 2026-07-13至2026-07-17：谷歌相关消息、算力/存储、光模块/CPO催化待确认。</p>
+<p class="body-line tone-risk">7. 下周三 2026-07-15：算力/存储相关催化待确认。</p>
+<p class="body-line tone-risk">8. 下周五 2026-07-17：CPO/光模块相关催化待确认。</p>
+</section>
+<section class="section-card" id="chapter-8-八-异动监管-龙虎榜与人气榜情况-40f05e"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">八、异动监管、龙虎榜与人气榜情况</h2>
+<h3 id="sub-8-1-一-异动监管-f37439" class="subchapter-title">（一）异动监管</h3>
+<p class="body-line tone-risk">恒尚节能（口述横向/恒向节能）虽为高度板，但是否触发异动待核。百合花、有研硅/有研系（待确认）已有异动口述印象；口述提到“圆规”（待确认）也在异动观察中。万邦医药疑似偷偷碰异动，对应创新药20cm弹性，但创新药不是当前主线。结论：今天异动监管不是核心矛盾，核心矛盾是科技权重大票能否继续趋势上攻。</p>
+<h3 id="sub-8-2-二-龙虎榜与资金面-aac62e" class="subchapter-title">（二）龙虎榜与资金面</h3>
+<p class="body-line tone-action">龙虎榜确认资金认可科技权重大票。浪潮信息中报预增叠加AI服务器，紫光股份跟随；长电科技、华天科技代表国产先进封装/封测；京东方A虽有资金流出但盘面仍拉起；太极实业、兆易创新、深科技、有研新材、东山精密、中兴通讯、中际旭创、通富微电、雅克科技、光迅科技、中芯国际、工业富联、天孚通信、长川科技、新易盛等构成科技趋势资金面核心。</p>
+<h3 id="sub-8-3-三-人气榜-5b62cb" class="subchapter-title">（三）人气榜</h3>
+<p class="body-line tone-action">三表人气榜显示，前排主要为科技大票和核心趋势票：</p>
+<div class="table-shell" id="source-table-4"><table class="data-table"><thead><tr><th>类别</th><th>2026-07-09</th></tr></thead><tbody><tr><td>热榜核心</td><td>京东方A、长电科技、华天科技、太极实业、浪潮信息、兆易创新、深科技、东山精密、有研新材、通富微电、东岳硅材、光迅科技、雅克科技、天孚通信、恒尚节能、中芯国际</td></tr><tr><td>前50常驻/强势</td><td>太极实业、中钨高新、盛和资源、国瓷材料、光迅科技、天娱数科、铜冠铜箔、中京电子、通鼎互联、寒武纪、博云新材、亨通股份</td></tr><tr><td>飙升票</td><td>同花顺热榜前50内未发现飙升超过30名个股</td></tr><tr><td>人气前排锚</td><td>京东方A热榜1、长电科技热榜2、太极实业热榜4</td></tr></tbody></table></div>
+<p class="body-line tone-action">人气榜结论：前排已经从连板小票切到科技大票、趋势中军和ETF。东山精密是CPO/光方向趋势龙，长电科技和华天科技是封测双核心，太极实业和兆易创新是存储核心，京东方A是玻璃基板/硬件权重锚。</p>
+</section>
+<section class="section-card" id="chapter-9-九-跌停与炸板情况-d5f182"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">九、跌停与炸板情况</h2>
+<p class="body-line">1. 跌停/强负反馈：三表确认跌停 12 个。口述中锂电约3个、机器人约2个、消费/立案调查/建筑装饰/并购算力/科技杂毛均有负反馈。</p>
+<p class="body-line">2. 断板反包：科技断板反包强，非科技断板反包弱。有研硅、华天科技、有研新材等半导体反包强；机器人、消费、防御题材失败。</p>
+<p class="body-line tone-risk">3. 炸板/回封：今天封板率 82%，封板质量明显好转，但后排杂毛仍有被砸风险。</p>
+<p class="body-line">4. 高位断板：连板梯队断层，7/6/5/4板断档，说明接力生态仍不健康。</p>
+<p class="body-line tone-action">5. 明日观察重点：跌停是否继续维持低位，科技后排是否温和分化而不是大面积补跌。</p>
+<p class="body-line">跌停结论：亏钱效应没有扩散，市场是在科技主升三切换中主动剃杂毛。被剃掉的是机器人、锂电、消费、防御、建筑装饰、边角科技；留下的是半导体、存储、CPO、AI服务器、封测设备。</p>
+</section>
+<section class="section-card" id="chapter-10-十-核心关键票汇总-明日个股预案-442d11"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">十、核心关键票汇总 + 明日个股预案</h2>
+<h3 id="sub-10-1-一-核心关键票全梳理-a65d81" class="subchapter-title">（一）核心关键票全梳理</h3>
+<div class="table-shell" id="source-table-5"><table class="data-table"><thead><tr><th>个股/工具</th><th>今日状态</th><th>明日核心预期</th><th>量能要求</th><th>风险点</th></tr></thead><tbody><tr><td>半导体设备ETF 159516</td><td>强修复核心</td><td>横盘承接或温和分化</td><td>不放巨量杀跌</td><td>二高潮追尖</td></tr><tr><td>芯片ETF</td><td>接近涨停级强度</td><td>主升三确认工具</td><td>放量横住</td><td>科技集体回落</td></tr><tr><td>科创半导体ETF</td><td>科创强修复核心</td><td>继续承接</td><td>科创不大阴</td><td>高位分歧</td></tr><tr><td>东山精密</td><td>CPO/光趋势龙</td><td>不破趋势，继续强</td><td>温和放量</td><td>冲高回落破锚</td></tr><tr><td>长电科技</td><td>封测核心</td><td>温和分化后承接</td><td>承接资金继续</td><td>封测后排拖累</td></tr><tr><td>华天科技</td><td>封测核心</td><td>与长电共振</td><td>资金认可延续</td><td>烂板/冲高回落</td></tr><tr><td>太极实业</td><td>存储核心</td><td>长鑫链继续发酵</td><td>不能放量大阴</td><td>消息兑现</td></tr><tr><td>兆易创新</td><td>存储/芯片核心</td><td>趋势继续</td><td>大票承接</td><td>半导体分化</td></tr><tr><td>中际旭创</td><td>光模块核心</td><td>与东山共振</td><td>趋势量健康</td><td>CPO弱分化过深</td></tr><tr><td>浪潮信息</td><td>AI服务器核心</td><td>2进3/趋势确认</td><td>资金继续认可</td><td>连板生态弱</td></tr><tr><td>京东方A</td><td>玻璃基板/业绩锚</td><td>稳住人气前排</td><td>大票承接</td><td>冲高回落</td></tr></tbody></table></div>
+<h3 id="sub-10-2-二-明日持仓与操作铁律-91f26e" class="subchapter-title">（二）明日持仓与操作铁律</h3>
+<p class="body-line">1. 现有仓位：约80%，主要为半导体设备159516、芯片ETF、科创半导体ETF。</p>
+<p class="body-line tone-action">2. 持有条件：沪指不破3929，科创不大阴，ETF横盘承接，东山/长电/华天不破核心地位。</p>
+<p class="body-line">3. 加仓条件：若大盘企稳、半导体主升确认、ETF弱分化不破，可从80%尝试提高到95%，新增15%仍打ETF。</p>
+<p class="body-line tone-action">4. 防守条件：若今日盈利约4个点后明日回撤约2个点，开始做T保护利润。</p>
+<p class="body-line tone-risk">5. 一句话执行：个股看强度，仓位打ETF；不追连板，不碰杂毛，不在二高潮追尖。</p>
+</section>
+<section class="section-card" id="chapter-11-十一-大盘明日预期节奏-78977f"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">十一、大盘明日预期节奏</h2>
+<p class="body-line tone-action">1. 指数节奏预判：明日最好走企稳震荡、小红或弱分化。今天已经强修复，明天不需要继续暴力二高潮。</p>
+<p class="body-line tone-risk">2. 情绪节奏预判：今天短线见底信号明确，明天看修复后承接。如果二高潮，持有可以但不追尖；如果弱分化且核心不破，反而更健康。</p>
+<p class="body-line">3. 板块节奏预判：芯片、半导体设备、存储芯片、CPO进入主升三确认窗口；PCB、元件跟随；机器人、医药、消费继续弱。</p>
+<p class="body-line tone-action">4. 操作适配节奏：弱分化持有，回撤做T保护，企稳确认再加ETF。指数重点看3929前低和3939今日探底区域。</p>
+<p class="body-line tone-risk">5. 分化预期：强势反弹大涨的次日，一般不要求继续强上攻，而是看震荡和分化。今天全面高潮，明天分化才知道谁在裸泳；能在分化里抗跌、横住、继续放量承接的，才是真核心。弱分化不是风险，反而是倒车接人的好时机。</p>
+<p class="body-line">技术细节：今天大盘形态类似探底回升，CCI从下沿回到下沿线附近，同时触及下方缺口支撑后反拉，短线支撑有效。后续如果继续反弹，大概率是科技主升三的再缩容炒作，方向往国产替代、半导体上游、设备材料、存储封测走。</p>
+</section>
+<section class="section-card" id="chapter-12-十二-明日核心票弱转强-转强判定-板块预期细化表-2ab53a"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">十二、明日核心票弱转强/转强判定 + 板块预期细化表</h2>
+<div class="table-shell" id="source-table-6"><table class="data-table"><thead><tr><th>板块</th><th>板块节奏</th><th>核心标的</th><th>今日状态</th><th>明日弱转强/转强判定</th><th>形态预期</th><th>板块预期</th></tr></thead><tbody><tr><td>半导体设备</td><td>强修复高潮</td><td>159516、北方华创、中微公司</td><td>全场最强之一</td><td>ETF横盘不破，设备中军不大跌</td><td>弱分化健康</td><td>主升三核心</td></tr><tr><td>芯片/科创半导体</td><td>强回流</td><td>芯片ETF、科创半导体ETF、中芯国际</td><td>涨停级强度</td><td>ETF承接继续，科创不大阴；中军稳住，国产链继续发酵</td><td>高位震荡</td><td>主仓核心</td></tr><tr><td>存储芯片</td><td>强回流</td><td>太极实业、兆易创新、深科技</td><td>长鑫催化</td><td>消息继续发酵，核心不破</td><td>温和分化</td><td>继续观察</td></tr><tr><td>CPO/光通信</td><td>强回流</td><td>东山精密、中际旭创、天孚通信、光迅科技</td><td>前排强</td><td>东山/中际分化日抗跌，光模块共振</td><td>强趋势</td><td>科技双核心</td></tr><tr><td>封测/先进封装</td><td>强回流</td><td>长电科技、华天科技、通富微电</td><td>双核心确认</td><td>长电华天不被砸</td><td>分化承接</td><td>主线分支</td></tr><tr><td>PCB/元件</td><td>中回流</td><td>生益科技、中京电子、铜冠铜箔</td><td>跟随修复</td><td>不能脱离CPO单独弱</td><td>弱跟随</td><td>次级</td></tr><tr><td>机器人</td><td>弱</td><td>大恒科技、埃斯顿</td><td>退潮</td><td>除非超预期反包</td><td>不参与</td><td>暂不看</td></tr><tr><td>创新药/防御</td><td>弱</td><td>万邦医药等</td><td>非主线</td><td>不看主动进攻</td><td>轮动</td><td>防守残余</td></tr></tbody></table></div>
+</section>
+<section class="section-card" id="chapter-13-十三-龙头预备票-最终定稿-c57786"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">十三、龙头预备票（最终定稿）</h2>
+<h3 id="sub-13-1-一-总龙候选名单-3aea20" class="subchapter-title">（一）总龙候选名单</h3>
+<p class="body-line bullet-line tone-action">核心候选：东山精密、长电科技、华天科技、太极实业、兆易创新、中际旭创、半导体设备ETF159516、芯片ETF、科创半导体ETF。</p>
+<p class="body-line bullet-line">切换候选：浪潮信息、京东方A、北方华创、中芯国际、中微公司、通富微电、深科技、天孚通信、光迅科技。</p>
+<p class="body-line bullet-line">暂不纳入：机器人、创新药、消费、锂电、证券、金融、杂毛连板。</p>
+<h3 id="sub-13-2-二-总龙唯一性排序-9f94e1" class="subchapter-title">（二）总龙唯一性排序</h3>
+<p class="body-line">趋势龙排序：东山精密 &gt; 长电科技/华天科技 &gt; 太极实业/兆易创新 &gt; 中际旭创 &gt; 半导体设备ETF/芯片ETF/科创半导体ETF。</p>
+<p class="body-line tone-action">说明：如果按单票趋势龙看，东山精密是CPO/光/AI硬件主升三核心锚；封测看长电、华天双核心；存储看太极、兆易；芯片方向大票太多，最佳表达是ETF。</p>
+<h3 id="sub-13-3-三-龙头七维核验明细-五维-双唯一性-a71302" class="subchapter-title">（三）龙头七维核验明细（五维+双唯一性）</h3>
+<div class="table-shell" id="source-table-7"><table class="data-table"><thead><tr><th>标的</th><th>身位</th><th>领涨性</th><th>抗跌性</th><th>市场性</th><th>价值性</th><th>题材内唯一性</th><th>题材之间连板高度唯一性</th><th>五维/七维结论</th><th>100%异动监管距离</th><th>题材梯队完整性</th><th>题材持续性</th><th>筹码结构&amp;量能健康度</th></tr></thead><tbody><tr><td>东山精密</td><td>趋势核心</td><td>强</td><td>强</td><td>高</td><td>AI硬件/CPO/PCB</td><td>光方向核心锚</td><td>非连板体系</td><td>趋势龙第一锚</td><td>不按连板监管</td><td>CPO完整</td><td>高</td><td>放量修复，需明日承接</td></tr><tr><td>长电科技</td><td>封测核心</td><td>强</td><td>中强</td><td>高</td><td>先进封装</td><td>封测双核心之一</td><td>非连板体系</td><td>封测主锚</td><td>待核</td><td>封测完整</td><td>高</td><td>资金认可高</td></tr><tr><td>华天科技</td><td>封测核心</td><td>强</td><td>中强</td><td>高</td><td>先进封装</td><td>封测双核心之一</td><td>非连板体系</td><td>封测主锚</td><td>待核</td><td>封测完整</td><td>高</td><td>需看是否烂板转强</td></tr><tr><td>太极实业</td><td>存储核心</td><td>强</td><td>中强</td><td>高</td><td>存储/封测</td><td>存储链核心</td><td>非连板体系</td><td>存储锚</td><td>待核</td><td>存储完整</td><td>中高</td><td>看消息延续</td></tr><tr><td>兆易创新</td><td>芯片存储核心</td><td>强</td><td>强</td><td>高</td><td>存储/MCU</td><td>存储核心大票</td><td>非连板体系</td><td>中军锚</td><td>待核</td><td>完整</td><td>高</td><td>大票趋势健康</td></tr><tr><td>ETF三件套</td><td>板块工具</td><td>强</td><td>强</td><td>最高</td><td>分散板块风险</td><td>板块级唯一表达</td><td>非连板体系</td><td>主仓最优</td><td>无</td><td>覆盖完整</td><td>高</td><td>明日看横盘承接</td></tr></tbody></table></div>
+<h3 id="sub-13-4-四-明日总龙决胜观察要点-7cac4f" class="subchapter-title">（四）明日总龙决胜观察要点</h3>
+<p class="body-line">1. 东山精密是否继续强于普通PCB和普通CPO，维持趋势龙地位。</p>
+<p class="body-line">2. 中际旭创是否与东山精密一起成为光方向双锚，分化时不裸泳。</p>
+<p class="body-line">3. 长电科技、华天科技是否能在强修复后温和分化，不出现大幅杀跌。</p>
+<p class="body-line">4. 芯片/半导体设备/科创半导体 ETF 是否横住，确认主升三不是一日游。</p>
+<p class="body-line">5. 沪指是否守住3929，科创是否不大阴反包。</p>
+<p class="body-line tone-risk">6. 若二高潮，持有不追尖；若弱分化承接，继续按主升三执行。</p>
+<p class="body-line tone-action">核心交易规则：这波不找连板龙，找趋势龙；不强行分仓大票，主仓放在ETF。强反弹次日按分化处理，分化里看谁还强；二冰建仓，三冰加仓，越冰越接核心，回暖日才是大回血日。</p>
+</section>
+<section class="section-card" id="chapter-14-十四-口述信息全量归档与待确认信息-d62038"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">十四、口述信息全量归档与待确认信息</h2>
+<h3 id="sub-14-1-一-口述中已纳入的关键票池-446b2a" class="subchapter-title">（一）口述中已纳入的关键票池</h3>
+<p class="body-line tone-risk">东山精密、中际旭创、长电科技、华天科技、太极实业、兆易创新、雅克科技、生益科技、京东方A、中芯国际、寒武纪、海光信息、中微公司、北方华创、华虹公司、江波龙、深科技、通富微电、浪潮信息、紫光股份、中兴通讯、工业富联、天孚通信、光迅科技、新易盛、长川科技、有研新材、有研硅、东岳硅材、上海合晶、领先股份、同兴达、朗迪集团、合肥城建、恒百集团、恒尚节能、山东墨龙、浙江美大、兴业股份、万邦医药、融捷股份、埃斯顿、大恒科技、宜宾纸业、万通发展、中京电子、铜冠铜箔、通鼎互联、国瓷材料、中钨高新、盛和资源、博云新材、亨通股份、天娱数科、欢瑞世纪/欢乐世纪、重达技术（待确认）、中天精装、中石科技、新赛尔、易德龙、高新发展、宝鼎科技、星网锐捷、百合花、三安光电、中科曙光、中国长城、中国巨石、澜起科技/蓝启科技（待确认）。</p>
+<h3 id="sub-14-2-二-待确认信息-d5edb4" class="subchapter-title">（二）待确认信息</h3>
+<p class="body-line tone-risk">1. 口述“长兴科技/长兴存储”大概率对应“长鑫科技/长鑫存储”相关催化，正式名称待确认。</p>
+<p class="body-line tone-risk">2. 口述“横向节能/恒向节能”与三表“恒尚节能”需统一核验，板数口述8板、热榜显示7天7板，实际连板数待确认。</p>
+<p class="body-line tone-risk">3. 口述“世源股份/世运股份”“新网锐捷/星网锐捷”“中山精密/东山精密”“中继续创/中际旭创”等语音识别项已按上下文修正或标注待确认。</p>
+<p class="body-line">4. 龙虎榜具体资金净额以交易所/软件最终数据为准，口述“60多亿、十几个亿、两个多亿”等只作为资金认可度判断。</p>
+<p class="body-line tone-action">5. 明日及下周事件催化，如三星/海力士、谷歌、算力存储、光模块/CPO、机器人会议等，均待进一步核验具体日期和内容。</p>
+<p class="body-line">6. 三表成交额29137亿与口述盘后29322亿口径略有差异，正文按约2.9万亿处理。</p>
+<p class="body-line">7. “中国资产/全国资产脱离韩国资产走独立行情”的判断，属于用户主观市场风格判断，后续需通过A股科技资产相对海外半导体链的独立强度继续验证。</p>
+<p class="body-line">8. 图片补充中的 DeepSeek、智谱自研芯片消息对国产链刺激，具体消息源、时间和产业落点待进一步核验。</p>
+<p class="body-line tone-action">最终定稿一句话：2026年7月9日是科技主升三强修复确认日，短线见底但反转仍需验证。明天最优解不是继续强求大涨，而是弱分化承接；分化才知道谁在裸泳，倒车接人看核心抗跌。主仓继续看半导体设备、芯片、科创半导体 ETF，个股锚定东山精密、中际旭创、长电科技、华天科技，机器人、医药、消费、锂电、杂毛连板全部降权。</p>
+</section>
+
+<section class="section-card plan-section" id="operation-plan">
+  <div class="section-kicker">Plan Before Trade</div>
+  <h2 class="chapter-title">十五、今日操作计划</h2>
+  <p class="body-line tone-action">复盘只是在找自己舒服的解释时，会偏离交易系统。这个模块固定把“进场条件、离场条件、最多亏多少”写到桌面上，先复盘过程，再讨论结果。</p>
+  <h3 id="operation-kiss" class="subchapter-title">操作与情绪复盘（KISS模型）</h3>
+  <div class="kiss-grid" data-kiss-three-section><article class="kiss-card"><span>今日操作结果</span><p>按源文档复盘：今天属于退潮末期冰点反核试错，计划重点转向指数支撑、核心承接和止损条件。</p></article><article class="kiss-card"><span>核心失误</span><p>不能只根据结果给自己找舒服解释，必须回看每笔交易的进场信号、离场动作和止损是否提前规定。</p></article><article class="kiss-card"><span>核心反思</span><p>趋势行情用 ETF 承接主线仓位；个股只在题材强度、分时主动性和风险边界都清楚时动手。</p></article></div>
+  <h3 id="theme-explosion-nextday-check" class="subchapter-title">题材爆发日次日强度校验</h3>
+  <div class="kiss-grid theme-explosion-grid"><article class="kiss-card"><span>前排必须超预期</span><p>首板很多的题材爆发日，次日前排正常应该开一字或极强高开，才能证明资金认可题材强度；如果前排都开不出一字，说明题材强度低于预期，要降低接力仓位。</p></article><article class="kiss-card"><span>后排要继续补首板</span><p>爆发次日不能只靠昨天的前排硬顶，后排还应该有新的首板继续顶出来，维持板块热度和扩散强度；如果没有新增首板，说明题材热度开始衰减。</p></article><article class="kiss-card"><span>分化日看前排封单与后排扩散</span><p>强分化不是单纯看涨停数量，而是看前排是否一字锁死、换手前排是否主动回封、后排是否仍有首板补涨；三者同时满足，题材才可能继续走主线。</p></article><article class="kiss-card"><span>不及预期时快速降级</span><p>如果前排不一字、后排无新增首板、核心开盘后承接弱，就把题材从主攻降级为轮动套利，不再按高潮延续去重仓追高。</p></article></div>
+
+  <h3 id="operation-process-review" class="subchapter-title">正确复盘重点</h3>
+  <p class="body-line tone-action">一笔交易从决定进场到决定离场，中间到底做了哪些动作？看到什么具体信号准备动手？这个信号是系统提前规定，还是盘中临场决定？</p>
+  <p class="body-line tone-risk">进场之后是否设置止损，盘中有没有因为害怕手动下移止损？止盈是进场前规划好，还是利润回吐后慌张平掉？不要只盯结果，要盯过程。</p>
+  <h3 id="operation-plan-three-questions" class="subchapter-title">书面计划三问</h3>
+  <div class="question-grid"><article>我在什么条件下进场？</article><article>对了怎么办，错了怎么办？</article><article>这笔最多亏多少？</article></div>
+  <h3 id="editable-operation-table" class="subchapter-title">可编辑交易计划表</h3>
+  <section class="plan-editor" data-operation-plan>
+    <div class="plan-toolbar">
+      <button type="button" data-add-row="目前持仓票">新增持仓票</button>
+      <button type="button" data-add-row="计划内票">新增计划内票</button>
+      <button type="button" data-export-plan>导出CSV</button>
+      <button type="button" data-reset-plan>恢复默认</button>
+      <span class="plan-save-status" data-save-status>本地已保存</span>
+    </div>
+    <div class="plan-table-wrap"><table class="plan-table">
+      <thead><tr><th>类型</th><th>标的</th><th>个股预期定位</th><th>隔日操作策略</th><th>什么条件进场</th><th>什么条件离场</th><th>最多亏多少</th><th>备注</th><th>操作</th></tr></thead>
+      <tbody data-plan-body></tbody>
+    </table></div>
+  </section>
+  <h3 id="holding-handling-table" class="subchapter-title">持仓处理计划表</h3>
+  <section class="holding-plan-editor" data-holding-plan>
+    <div class="plan-toolbar">
+      <button type="button" data-add-holding-row>新增持仓处理</button>
+      <button type="button" data-export-holding>导出CSV</button>
+      <button type="button" data-reset-holding>恢复默认</button>
+      <span class="plan-save-status" data-holding-save-status>本地已保存</span>
+    </div>
+    <div class="holding-table-wrap"><table class="holding-table">
+      <thead><tr><th>题材</th><th>标的</th><th>仓位比例</th><th>预期定位</th><th>当日涨幅</th><th>封板状态</th><th>隔日开盘预期</th><th>隔日分时预期</th><th>隔日操作策略</th><th>当日题材情况</th><th>隔日题材预期</th><th>止损条件</th><th>操作</th></tr></thead>
+      <tbody data-holding-plan-body></tbody>
+    </table></div>
+  </section>
+  <script type="application/json" data-plan-defaults>[{&quot;type&quot;: &quot;目前持仓票&quot;, &quot;stock&quot;: &quot;半导体设备ETF 159516&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;龙头核心做T或格局&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;不放巨量杀跌&quot;, &quot;exit&quot;: &quot;二高潮追尖&quot;, &quot;maxLoss&quot;: &quot;二高潮追尖&quot;, &quot;note&quot;: &quot;科技ETF/芯片半导体&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;芯片ETF&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;龙头核心做T或格局&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;放量横住&quot;, &quot;exit&quot;: &quot;科技集体回落&quot;, &quot;maxLoss&quot;: &quot;科技集体回落&quot;, &quot;note&quot;: &quot;科技ETF/芯片半导体&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;科创半导体ETF&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;龙头核心做T或格局&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;科创不大阴&quot;, &quot;exit&quot;: &quot;高位分歧&quot;, &quot;maxLoss&quot;: &quot;高位分歧&quot;, &quot;note&quot;: &quot;科技ETF/芯片半导体&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;东山精密&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;龙头核心做T或格局&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;温和放量&quot;, &quot;exit&quot;: &quot;冲高回落破锚&quot;, &quot;maxLoss&quot;: &quot;冲高回落破锚&quot;, &quot;note&quot;: &quot;待核&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;长电科技&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;走弱止损&quot;], &quot;entry&quot;: &quot;承接资金继续&quot;, &quot;exit&quot;: &quot;封测后排拖累&quot;, &quot;maxLoss&quot;: &quot;封测后排拖累&quot;, &quot;note&quot;: &quot;半导体封测&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;华天科技&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;走弱止损&quot;], &quot;entry&quot;: &quot;资金认可延续&quot;, &quot;exit&quot;: &quot;烂板/冲高回落&quot;, &quot;maxLoss&quot;: &quot;烂板/冲高回落&quot;, &quot;note&quot;: &quot;待核&quot;}, {&quot;type&quot;: &quot;目前持仓票&quot;, &quot;stock&quot;: &quot;太极实业&quot;, &quot;position&quot;: [&quot;龙头预备&quot;], &quot;nextStrategy&quot;: [&quot;走弱止损&quot;], &quot;entry&quot;: &quot;不能放量大阴&quot;, &quot;exit&quot;: &quot;消息兑现&quot;, &quot;maxLoss&quot;: &quot;消息兑现&quot;, &quot;note&quot;: &quot;存储芯片&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;兆易创新&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;龙头核心做T或格局&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;大票承接&quot;, &quot;exit&quot;: &quot;半导体分化&quot;, &quot;maxLoss&quot;: &quot;半导体分化&quot;, &quot;note&quot;: &quot;待核&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;中际旭创&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;走弱止损&quot;], &quot;entry&quot;: &quot;趋势量健康&quot;, &quot;exit&quot;: &quot;CPO弱分化过深&quot;, &quot;maxLoss&quot;: &quot;CPO弱分化过深&quot;, &quot;note&quot;: &quot;待核&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;浪潮信息&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;龙头核心做T或格局&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;资金继续认可&quot;, &quot;exit&quot;: &quot;连板生态弱&quot;, &quot;maxLoss&quot;: &quot;连板生态弱&quot;, &quot;note&quot;: &quot;待核&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;京东方A&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;走弱止损&quot;], &quot;entry&quot;: &quot;大票承接&quot;, &quot;exit&quot;: &quot;冲高回落&quot;, &quot;maxLoss&quot;: &quot;冲高回落&quot;, &quot;note&quot;: &quot;玻璃基板/面板&quot;}]</script>
+  <script type="application/json" data-holding-defaults>[{&quot;theme&quot;: &quot;科技ETF/芯片半导体&quot;, &quot;stock&quot;: &quot;半导体设备ETF 159516&quot;, &quot;positionSize&quot;: &quot;约20%当前持仓&quot;, &quot;position&quot;: &quot;观察试错&quot;, &quot;dayGain&quot;: &quot;强修复核心&quot;, &quot;limitStatus&quot;: &quot;ETF无封板&quot;, &quot;nextOpen&quot;: &quot;横盘承接或温和分化&quot;, &quot;nextIntraday&quot;: &quot;不放巨量杀跌&quot;, &quot;nextStrategy&quot;: &quot;承接好则持有；若科技集体回落或放量大阴则走&quot;, &quot;themeToday&quot;: &quot;强修复核心&quot;, &quot;themeNext&quot;: &quot;横盘承接或温和分化&quot;, &quot;stopLoss&quot;: &quot;二高潮追尖&quot;}]</script>
+</section>
+
+      <p class="source-note">Source Word: C:\Users\Administrator\Desktop\Codex\output\doc\2026-07-09-a-share-full-review-AI-doc.docx</p>
+    </main>
+  </div>
+  
+<script>
+(function(){
+  const decodeJson = text => String(text || '').replace(/&quot;/g,'"').replace(/&#34;/g,'"').replace(/&#39;/g,"'").replace(/&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');
+  const parseJsonNode = (node, fallback) => {
+    const raw = node ? node.textContent : '';
+    for (const candidate of [raw, decodeJson(raw)]) {
+      try { return JSON.parse(candidate); } catch (error) {}
+    }
+    return fallback;
+  };
+  document.querySelectorAll('.toc-node').forEach((node, index) => {
+    const key = 'a-share-detail-toc-2026-07-09-' + index;
+    const saved = localStorage.getItem(key);
+    if (saved === 'closed') node.open = false;
+    if (saved === 'open') node.open = true;
+    node.addEventListener('toggle', () => localStorage.setItem(key, node.open ? 'open' : 'closed'));
+  });
+  const effectRoot = document.querySelector('[data-effect-positioning]');
+  if (effectRoot) {
+    const options = parseJsonNode(effectRoot.querySelector('[data-effect-options]'), []);
+    const defaults = parseJsonNode(effectRoot.querySelector('[data-effect-defaults]'), {profit: [], loss: []});
+    const status = effectRoot.querySelector('[data-effect-status]');
+    const key = 'a-share-effect-positioning-2026-07-09-v1';
+    let state = defaults;
+    try { state = JSON.parse(localStorage.getItem(key) || 'null') || defaults; } catch (error) { state = defaults; }
+    const save = () => {
+      try { localStorage.setItem(key, JSON.stringify(state)); if (status) status.textContent = '本地已保存'; }
+      catch (error) { if (status) status.textContent = '本地保存失败'; }
+    };
+    const render = group => {
+      const target = effectRoot.querySelector(`[data-effect-group="${group}"]`);
+      if (!target) return;
+      target.innerHTML = options.map(option => {
+        const active = Array.isArray(state[group]) && state[group].includes(option);
+        return `<button type="button" class="effect-chip${active ? ' is-selected' : ''}" aria-pressed="${active}" data-effect-option="${option}" data-effect-click="${group}">${option}</button>`;
+      }).join('');
+    };
+    effectRoot.addEventListener('click', event => {
+      const button = event.target.closest('[data-effect-click]');
+      if (!button) return;
+      const group = button.dataset.effectClick;
+      const option = button.dataset.effectOption;
+      const set = new Set(Array.isArray(state[group]) ? state[group] : []);
+      set.has(option) ? set.delete(option) : set.add(option);
+      state[group] = Array.from(set);
+      render(group);
+      save();
+    });
+    render('profit'); render('loss'); save();
+  }
+  const root = document.querySelector('[data-operation-plan]');
+  const holdingRoot = document.querySelector('[data-holding-plan]');
+  if (!root) return;
+  const planDefaults = parseJsonNode(document.querySelector('[data-plan-defaults]'), []);
+  const holdingDefaults = parseJsonNode(document.querySelector('[data-holding-defaults]'), []);
+  const storageKey = 'a-share-operation-plan-2026-07-09-v2';
+  const optionKey = storageKey + '-options';
+  const holdingKey = 'a-share-holding-plan-2026-07-09-v1';
+  const defaultOptions = {position:['接力套利','龙头预备','观察试错'], nextStrategy:['冲高兑现套利','龙头核心做T或格局','走弱止损']};
+  const esc = value => String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#39;");
+  const normalizeSelection = value => Array.isArray(value) ? value.filter(Boolean) : String(value || '').split(/[、，,]/).map(x => x.trim()).filter(Boolean);
+  const rowIndexFromButton = button => {
+    const raw = button?.dataset?.index;
+    if (raw !== undefined && raw !== '') {
+      const parsed = Number(raw);
+      if (Number.isInteger(parsed) && parsed >= 0) return parsed;
+    }
+    const tr = button.closest('tr');
+    return tr && tr.parentElement ? Array.from(tr.parentElement.children).indexOf(tr) : -1;
+  };
+  let rows;
+  try { rows = JSON.parse(localStorage.getItem(storageKey) || 'null') || planDefaults; } catch (error) { rows = planDefaults; }
+  let options;
+  try { options = JSON.parse(localStorage.getItem(optionKey) || 'null') || defaultOptions; } catch (error) { options = defaultOptions; }
+  rows = rows.map(row => ({type:row.type||'', stock:row.stock||'', position:normalizeSelection(row.position), nextStrategy:normalizeSelection(row.nextStrategy), entry:row.entry||'', exit:row.exit||'', maxLoss:row.maxLoss||'', note:row.note||''}));
+  const unique = list => Array.from(new Set(list.filter(Boolean)));
+  options = {position: unique([...(defaultOptions.position||[]), ...(options.position||[]), ...rows.flatMap(r => r.position)]), nextStrategy: unique([...(defaultOptions.nextStrategy||[]), ...(options.nextStrategy||[]), ...rows.flatMap(r => r.nextStrategy)])};
+  const body = root.querySelector('[data-plan-body]');
+  const status = root.querySelector('[data-save-status]');
+  const save = () => {
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(rows));
+      localStorage.setItem(optionKey, JSON.stringify(options));
+      if (status) status.textContent = '本地已保存 ' + new Date().toLocaleTimeString('zh-CN', {hour:'2-digit', minute:'2-digit'});
+    } catch (error) {
+      if (status) status.textContent = '本地保存失败';
+    }
+  };
+  const textCell = (row, index, field) => `<td contenteditable="true" data-index="${index}" data-field="${field}" title="可直接编辑">${esc(row[field])}</td>`;
+  const multiCell = (row, index, field) => {
+    const selected = normalizeSelection(row[field]);
+    row[field] = selected;
+    const chips = unique([...(options[field]||[]), ...selected]).map(option => `<button type="button" class="multi-chip${selected.includes(option) ? ' is-selected' : ''}" data-index="${index}" data-field="${field}" data-option="${esc(option)}">${esc(option)}</button>`).join('');
+    return `<td class="multi-select-cell" data-multi-cell data-index="${index}" data-field="${field}"><div class="multi-select-control">${chips}</div><div class="multi-add"><input data-option-input placeholder="自定义"><button type="button" data-add-option>添加</button></div></td>`;
+  };
+  const render = () => {
+    body.innerHTML = rows.map((row, index) => `<tr>${textCell(row,index,'type')}${textCell(row,index,'stock')}${multiCell(row,index,'position')}${multiCell(row,index,'nextStrategy')}${textCell(row,index,'entry')}${textCell(row,index,'exit')}${textCell(row,index,'maxLoss')}${textCell(row,index,'note')}<td><div class="plan-row-actions"><button type="button" class="plan-row-save" data-index="${index}" data-save-row>保存</button><button type="button" class="plan-row-delete" data-index="${index}" data-delete-row>删除</button></div></td></tr>`).join('');
+  };
+  root.addEventListener('input', event => {
+    const cell = event.target.closest('[contenteditable][data-field]');
+    if (!cell) return;
+    const index = Number(cell.dataset.index);
+    rows[index][cell.dataset.field] = cell.textContent.trim();
+    save();
+  });
+  root.addEventListener('click', event => {
+    const add = event.target.closest('[data-add-row]');
+    if (add) { rows.push({type:add.dataset.addRow, stock:'', position:[], nextStrategy:[], entry:'', exit:'', maxLoss:'', note:''}); render(); save(); return; }
+    const del = event.target.closest('[data-delete-row]');
+    if (del) { const index = rowIndexFromButton(del); if (index >= 0) rows.splice(index, 1); render(); save(); return; }
+    const saveRow = event.target.closest('[data-save-row]');
+    if (saveRow) { save(); return; }
+    const reset = event.target.closest('[data-reset-plan]');
+    if (reset) { rows = JSON.parse(JSON.stringify(planDefaults)); options = JSON.parse(JSON.stringify(defaultOptions)); render(); save(); return; }
+    const chip = event.target.closest('[data-option]');
+    if (chip) {
+      const index = Number(chip.dataset.index), field = chip.dataset.field, value = chip.dataset.option;
+      const selected = new Set(normalizeSelection(rows[index][field]));
+      rows[index][field] = (event.ctrlKey || event.metaKey)
+        ? (selected.has(value) ? Array.from(selected).filter(x => x !== value) : Array.from(selected).concat(value))
+        : [value];
+      render(); save(); return;
+    }
+    const addOption = event.target.closest('[data-add-option]');
+    if (addOption) {
+      const cell = addOption.closest('[data-multi-cell]');
+      const input = cell.querySelector('[data-option-input]');
+      const value = input.value.trim();
+      if (!value) return;
+      const index = Number(cell.dataset.index), field = cell.dataset.field;
+      options[field] = unique([...(options[field]||[]), value]);
+      rows[index][field] = unique([...normalizeSelection(rows[index][field]), value]);
+      render(); save(); return;
+    }
+    const exportButton = event.target.closest('[data-export-plan]');
+    if (exportButton) exportCsv(['类型','标的','个股预期定位','隔日操作策略','什么条件进场','什么条件离场','最多亏多少','备注'], rows.map(r => [r.type,r.stock,normalizeSelection(r.position).join('、'),normalizeSelection(r.nextStrategy).join('、'),r.entry,r.exit,r.maxLoss,r.note]), '2026-07-09-今日操作计划.csv');
+  });
+  function exportCsv(header, rows, name) {
+    const csv = [header, ...rows].map(line => line.map(v => `"${String(v || '').replaceAll('"','""')}"`).join(',')).join('\n');
+    const blob = new Blob(['\ufeff' + csv], {type:'text/csv;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url; link.download = name; link.click(); URL.revokeObjectURL(url);
+  }
+  if (holdingRoot) {
+    const fields = ['theme','stock','positionSize','position','dayGain','limitStatus','nextOpen','nextIntraday','nextStrategy','themeToday','themeNext','stopLoss'];
+    let holdingRows;
+    try { holdingRows = JSON.parse(localStorage.getItem(holdingKey) || 'null') || holdingDefaults; } catch (error) { holdingRows = holdingDefaults; }
+    holdingRows = holdingRows.map(row => Object.fromEntries(fields.map(field => [field, row[field] || '待填'])));
+    const hBody = holdingRoot.querySelector('[data-holding-plan-body]');
+    const hStatus = holdingRoot.querySelector('[data-holding-save-status]');
+    const saveHolding = () => {
+      try { localStorage.setItem(holdingKey, JSON.stringify(holdingRows)); if (hStatus) hStatus.textContent = '本地已保存 ' + new Date().toLocaleTimeString('zh-CN', {hour:'2-digit', minute:'2-digit'}); }
+      catch (error) { if (hStatus) hStatus.textContent = '本地保存失败'; }
+    };
+    const renderHolding = () => {
+      hBody.innerHTML = holdingRows.map((row,index) => `<tr>${fields.map(field => `<td contenteditable="true" data-holding-index="${index}" data-holding-field="${field}">${esc(row[field])}</td>`).join('')}<td><div class="plan-row-actions"><button type="button" class="plan-row-save" data-index="${index}" data-holding-save>保存</button><button type="button" class="plan-row-delete" data-index="${index}" data-holding-delete>删除</button></div></td></tr>`).join('');
+    };
+    holdingRoot.addEventListener('input', event => {
+      const cell = event.target.closest('[contenteditable][data-holding-field]');
+      if (!cell) return;
+      holdingRows[Number(cell.dataset.holdingIndex)][cell.dataset.holdingField] = cell.textContent.trim();
+      saveHolding();
+    });
+    holdingRoot.addEventListener('click', event => {
+      if (event.target.closest('[data-add-holding-row]')) { holdingRows.push(Object.fromEntries(fields.map(f => [f, '待填']))); renderHolding(); saveHolding(); return; }
+      const del = event.target.closest('[data-holding-delete]');
+      if (del) { const index = rowIndexFromButton(del); if (index >= 0) holdingRows.splice(index, 1); renderHolding(); saveHolding(); return; }
+      if (event.target.closest('[data-holding-save]')) { saveHolding(); return; }
+      if (event.target.closest('[data-reset-holding]')) { holdingRows = JSON.parse(JSON.stringify(holdingDefaults)); renderHolding(); saveHolding(); return; }
+      if (event.target.closest('[data-export-holding]')) exportCsv(['题材','标的','仓位比例','预期定位','当日涨幅','封板状态','隔日开盘预期','隔日分时预期','隔日操作策略','当日题材情况','隔日题材预期','止损条件'], holdingRows.map(r => fields.map(f => r[f])), '2026-07-09-持仓处理计划.csv');
+    });
+    renderHolding(); saveHolding();
+  }
+  render(); save();
+})();
+</script>
+
+</body>
+</html>
