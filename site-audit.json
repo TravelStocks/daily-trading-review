@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17 06:24:20",
+  "generated_at": "2026-07-18 00:07:59",
   "site_dir": "C:\\Users\\Administrator\\Desktop\\Codex\\daily-trading-review",
   "index_path": "C:\\Users\\Administrator\\Desktop\\Codex\\daily-trading-review\\index.html",
   "desktop_entry": "C:\\Users\\Administrator\\Desktop\\Codex\\daily-trading-review\\A股复盘站-首页.html",
@@ -377,7 +377,8 @@
       "twenty_word_mantra": true,
       "emotion_cycle_chart": true,
       "next_day_expectation": true,
-      "daily_knowledge_summary": true
+      "daily_knowledge_summary": true,
+      "theme_rhythm_run": true
     },
     "mandatory_modules": {
       "effect_positioning": true,
