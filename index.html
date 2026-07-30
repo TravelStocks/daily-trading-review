@@ -684,6 +684,53 @@
             </div>
           </div>
         </section>
+        <section class="trading-system-profile" data-trading-system-profile>
+          <style>
+            .trading-system-profile{position:relative;margin:18px 0 22px;padding:22px;border-radius:24px;background:linear-gradient(135deg,#fffaf1 0%,#f3fbff 52%,#f7fff7 100%);border:1px solid rgba(16,74,63,.14);box-shadow:0 18px 46px rgba(13,52,45,.08)}
+            .trading-system-profile-inner{display:grid;gap:16px}
+            .trading-system-profile-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-end;flex-wrap:wrap}
+            .trading-system-profile-kicker{display:inline-flex;align-items:center;gap:9px;width:max-content;padding:8px 13px;border-radius:999px;background:rgba(255,143,31,.12);border:1px solid rgba(255,143,31,.24);color:#9a4b07;font-size:13px;font-weight:900;letter-spacing:.08em}
+            .trading-system-profile-kicker:before{content:"";width:9px;height:9px;border-radius:999px;background:linear-gradient(135deg,#ff8f1f,#0e9f6e);box-shadow:0 0 0 6px rgba(255,143,31,.12)}
+            .trading-system-profile-title{margin:0;font-size:clamp(1.45rem,2.3vw,2.1rem);line-height:1.18;color:#173b33}
+            .trading-system-profile-note{margin:0;color:#5a6f69;font-size:13px;line-height:1.7}
+            .trading-system-profile-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+            .trading-system-profile-panel{padding:16px;border-radius:18px;background:rgba(255,255,255,.86);border:1px solid rgba(16,74,63,.12)}
+            .trading-system-profile-panel h3{margin:0 0 12px;color:#0a625b;font-size:1.05rem}
+            .trading-system-profile-panel.challenge h3{color:#8b3f12}
+            .trading-system-tags{display:flex;flex-wrap:wrap;gap:10px}
+            .trading-system-tag{display:inline-flex;align-items:center;min-height:34px;padding:7px 11px;border-radius:999px;background:#e7f7f0;color:#0b5f55;border:1px solid rgba(14,159,110,.18);font-size:13px;font-weight:800;line-height:1.35}
+            .trading-system-profile-panel.challenge .trading-system-tag{background:#fff0e6;color:#8b3f12;border-color:rgba(255,143,31,.24)}
+            @media (max-width:760px){.trading-system-profile{padding:16px}.trading-system-profile-grid{grid-template-columns:1fr}.trading-system-tag{border-radius:12px}}
+          </style>
+          <div class="trading-system-profile-inner">
+            <div class="trading-system-profile-head">
+              <div>
+                <span class="trading-system-profile-kicker">Trading System Profile</span>
+                <h2 class="trading-system-profile-title">交易体系优缺点</h2>
+              </div>
+              <p class="trading-system-profile-note">盘前先分清：舒适区可以重拳出击，挑战区先降仓、写条件、用复盘刻意训练。</p>
+            </div>
+            <div class="trading-system-profile-grid">
+              <article class="trading-system-profile-panel">
+                <h3>优点-舒适区</h3>
+                <div class="trading-system-tags">
+                  <span class="trading-system-tag">短线情绪龙头的主升2阶段</span>
+                  <span class="trading-system-tag">趋势主升阶段的ETF</span>
+                  <span class="trading-system-tag">短线情绪的一进二</span>
+                </div>
+              </article>
+              <article class="trading-system-profile-panel challenge">
+                <h3>缺点-挑战区</h3>
+                <div class="trading-system-tags">
+                  <span class="trading-system-tag">短线情绪龙头的主升3阶段</span>
+                  <span class="trading-system-tag">趋势主升阶段的核心个股辨识度</span>
+                  <span class="trading-system-tag">短线情绪的补涨龙头</span>
+                  <span class="trading-system-tag">短线情绪的题材切换</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
         <section class="next-day-expectation" data-next-day-expectation>
           <style>
             .next-day-expectation{position:relative;overflow:hidden;margin:18px 0 22px;padding:22px;border-radius:24px;background:linear-gradient(135deg,#090b11 0%,#111827 58%,#2a0d13 100%);border:1px solid rgba(255,255,255,.12);box-shadow:0 22px 58px rgba(9,11,17,.2);color:#f8fafc}
