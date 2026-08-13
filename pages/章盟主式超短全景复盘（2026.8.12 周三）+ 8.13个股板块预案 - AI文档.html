@@ -17,7 +17,7 @@
     .plan-toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}.plan-toolbar button,.plan-row-delete,.plan-row-save{border:0;border-radius:999px;padding:9px 13px;background:var(--accent);color:#fff;font-weight:900;cursor:pointer}.plan-toolbar button:nth-child(3){background:var(--blue)}.plan-toolbar button:nth-child(4),.plan-row-delete{background:#f0f5f2;color:#18443c;border:1px solid var(--line)}.plan-save-status{margin-left:auto;color:var(--muted);font-size:12px}.plan-table-wrap,.holding-table-wrap{overflow-x:visible;border:1px solid var(--line);border-radius:16px;background:#fff}.plan-table,.holding-table{width:100%;border-collapse:collapse;table-layout:fixed}.plan-table th,.plan-table td,.holding-table th,.holding-table td{padding:7px;border-bottom:1px solid rgba(20,74,66,.1);border-right:1px solid rgba(20,74,66,.08);vertical-align:top;text-align:left;font-size:11.5px;line-height:1.38;word-break:break-word;overflow-wrap:anywhere}.plan-table th,.holding-table th{background:#e9f7f1;color:#0a6259;font-weight:900}.plan-table td[contenteditable],.holding-table td[contenteditable]{outline:0;background:rgba(255,255,255,.96);cursor:text;border-radius:8px}.plan-table td[contenteditable]:focus,.holding-table td[contenteditable]:focus{background:#fff9df;box-shadow:inset 0 0 0 2px rgba(13,146,117,.26)}.multi-select-control{display:flex;flex-wrap:wrap;gap:4px}.multi-chip{font-size:10.5px;padding:4px 6px}.multi-add{display:flex;gap:4px;margin-top:5px}.multi-add input{width:64px;border:1px solid var(--line);border-radius:999px;padding:5px 7px}.multi-add button{border:1px solid var(--line);border-radius:999px;padding:5px 7px;background:#f0f5f2;color:#18443c;font-weight:900}.plan-row-actions{display:flex;flex-direction:column;gap:5px}.plan-row-save,.plan-row-delete{padding:6px 7px;border-radius:10px;font-size:11px}.holding-plan-editor{margin-top:18px}.source-note{margin-top:18px;color:var(--muted);font-size:13px}
     @media (max-width:1180px){.layout{grid-template-columns:minmax(0,1fr)}.toc{position:relative;width:100%;max-width:100%}.content{width:100%;max-width:100%}.chapter-title,.subchapter-title,.minor-title{overflow-wrap:anywhere}.table-shell,.decision-table-wrap,.plan-table-wrap,.holding-table-wrap{max-width:100%;overflow-x:auto}.plan-table{min-width:1080px}.holding-table{min-width:1480px}.effect-grid,.kiss-grid,.question-grid{grid-template-columns:1fr}}
     @media (max-width:760px){.layout{width:calc(100vw - 16px);margin:8px auto 24px;gap:12px}.toc{max-height:54vh;padding:14px}.hero,.section-card{padding:18px}.hero h1{font-size:34px}.body-line,.source-note{overflow-wrap:anywhere;word-break:break-word}}
-
+    
 .theme-rhythm-run-grid{display:grid;gap:18px;margin-top:12px}.theme-rhythm-stage{padding:16px;border:1px solid rgba(16,74,63,.12);border-radius:16px;background:rgba(255,255,255,.78)}.theme-rhythm-stage h4{margin:0 0 12px;color:#0a625b;font-size:18px}.theme-rhythm-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.rhythm-usage-note .section-kicker{margin-bottom:4px}@media(max-width:760px){.theme-rhythm-card-grid{grid-template-columns:1fr}}
 </style>
 </head>
@@ -548,7 +548,7 @@
   <div class="section-kicker">Plan Before Trade</div>
   <h2 class="chapter-title">十五、今日操作计划</h2>
   <p class="body-line tone-action">复盘只是在找自己舒服的解释时，会偏离交易系统。这个模块固定把“进场条件、离场条件、最多亏多少”写到桌面上，先复盘过程，再讨论结果。</p>
-
+  
 <section class="operation-strategy-outline" id="operation-strategy-outline" data-operation-strategy-outline>
   <header class="operation-strategy-outline__header">
     <div><span>PLAN BEFORE TRADE</span><h3>明日战略总纲</h3></div>
@@ -577,7 +577,7 @@
   <h3 id="operation-plan-three-questions" class="subchapter-title">书面计划三问</h3>
   <div class="question-grid"><article>我在什么条件下进场？</article><article>对了怎么办，错了怎么办？</article><article>这笔最多亏多少？</article></div>
   <h3 id="editable-operation-table" class="subchapter-title">可编辑交易计划表</h3>
-  <section class="plan-editor" data-operation-plan>
+  <section class="plan-editor" data-operation-plan data-plan-cache-sanitizer="v1">
     <div class="plan-toolbar">
       <button type="button" data-add-row="目前持仓票">新增持仓票</button>
       <button type="button" data-add-row="计划内票">新增计划内票</button>
@@ -610,7 +610,7 @@
       <p class="source-note">Source Word: C:\Users\Administrator\Desktop\Codex\2026-08-12-章盟主式超短全景复盘-AI文档.md</p>
     </main>
   </div>
-
+  
 <script>
 (function(){
   const decodeJson = text => String(text || '').replace(/&quot;/g,'"').replace(/&#34;/g,'"').replace(/&#39;/g,"'").replace(/&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');
@@ -672,6 +672,17 @@
   const defaultOptions = {position:['接力套利','龙头预备','观察试错'], nextStrategy:['冲高兑现套利','龙头核心做T或格局','走弱止损']};
   const esc = value => String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#39;");
   const normalizeSelection = value => Array.isArray(value) ? value.filter(Boolean) : String(value || '').split(/[、，,]/).map(x => x.trim()).filter(Boolean);
+  const isCorruptedPlaceholder = value => {
+    const text = String(value ?? '').trim();
+    return Boolean(text) && (text.includes('\uFFFD') || /^[?？\s]+$/.test(text));
+  };
+  const cleanText = (value, fallback = '') => isCorruptedPlaceholder(value) ? String(fallback ?? '') : String(value ?? '');
+  const cleanSelection = (value, fallback = []) => {
+    const raw = normalizeSelection(value);
+    const hadCorruption = raw.some(item => isCorruptedPlaceholder(item));
+    const cleaned = raw.filter(item => !isCorruptedPlaceholder(item));
+    return hadCorruption && !cleaned.length ? normalizeSelection(fallback).filter(item => !isCorruptedPlaceholder(item)) : cleaned;
+  };
   const rowIndexFromButton = button => {
     const raw = button?.dataset?.index;
     if (raw !== undefined && raw !== '') {
@@ -685,9 +696,17 @@
   try { rows = JSON.parse(localStorage.getItem(storageKey) || 'null') || planDefaults; } catch (error) { rows = planDefaults; }
   let options;
   try { options = JSON.parse(localStorage.getItem(optionKey) || 'null') || defaultOptions; } catch (error) { options = defaultOptions; }
-  rows = rows.map(row => ({type:row.type||'', stock:row.stock||'', position:normalizeSelection(row.position), nextStrategy:normalizeSelection(row.nextStrategy), entry:row.entry||'', exit:row.exit||'', maxLoss:row.maxLoss||'', note:row.note||''}));
+  rows = rows.map((row, index) => {
+    const fallback = planDefaults.find(item => item.stock && item.stock === cleanText(row?.stock)) || planDefaults[index] || {};
+    return {
+      type:cleanText(row?.type, fallback.type), stock:cleanText(row?.stock, fallback.stock),
+      position:cleanSelection(row?.position, fallback.position), nextStrategy:cleanSelection(row?.nextStrategy, fallback.nextStrategy),
+      entry:cleanText(row?.entry, fallback.entry), exit:cleanText(row?.exit, fallback.exit),
+      maxLoss:cleanText(row?.maxLoss, fallback.maxLoss), note:cleanText(row?.note, fallback.note)
+    };
+  });
   const unique = list => Array.from(new Set(list.filter(Boolean)));
-  options = {position: unique([...(defaultOptions.position||[]), ...(options.position||[]), ...rows.flatMap(r => r.position)]), nextStrategy: unique([...(defaultOptions.nextStrategy||[]), ...(options.nextStrategy||[]), ...rows.flatMap(r => r.nextStrategy)])};
+  options = {position: unique([...(defaultOptions.position||[]), ...(options.position||[]), ...rows.flatMap(r => r.position)]).filter(item => !isCorruptedPlaceholder(item)), nextStrategy: unique([...(defaultOptions.nextStrategy||[]), ...(options.nextStrategy||[]), ...rows.flatMap(r => r.nextStrategy)]).filter(item => !isCorruptedPlaceholder(item))};
   const body = root.querySelector('[data-plan-body]');
   const status = root.querySelector('[data-save-status]');
   const save = () => {
@@ -759,7 +778,13 @@
     const fields = ['theme','stock','positionSize','position','dayGain','limitStatus','nextOpen','nextIntraday','nextStrategy','themeToday','themeNext','stopLoss'];
     let holdingRows;
     try { holdingRows = JSON.parse(localStorage.getItem(holdingKey) || 'null') || holdingDefaults; } catch (error) { holdingRows = holdingDefaults; }
-    holdingRows = holdingRows.map(row => Object.fromEntries(fields.map(field => [field, row[field] || '待填'])));
+    holdingRows = holdingRows.map((row, index) => {
+      const fallback = holdingDefaults.find(item => item.stock && item.stock === cleanText(row?.stock)) || holdingDefaults[index] || {};
+      return Object.fromEntries(fields.map(field => {
+        const emptyValue = field === 'stock' ? '' : '待填';
+        return [field, cleanText(row?.[field], fallback[field] || emptyValue) || emptyValue];
+      }));
+    });
     const hBody = holdingRoot.querySelector('[data-holding-plan-body]');
     const hStatus = holdingRoot.querySelector('[data-holding-save-status]');
     const saveHolding = () => {
