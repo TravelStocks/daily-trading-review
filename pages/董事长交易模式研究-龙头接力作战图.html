@@ -1,0 +1,2258 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>董事长交易模式研究 | 龙头接力作战图</title>
+  <meta name="description" content="围绕板块效应、持续性题材、强身位板、爆量弱转强、转强确认和炸板卖点整理的超短接力交易模式网页。">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23090907'/%3E%3Cpath d='M12 45h40M18 45V24m14 21V14m14 31V30' stroke='%2331d184' stroke-width='6' stroke-linecap='round'/%3E%3Cpath d='M12 18h12M40 18h12' stroke='%23d7b46a' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fira+Sans:wght@400;500;600;700;800&family=Noto+Serif+SC:wght@500;600;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #090907;
+      --ink-2: #111214;
+      --panel: #171819;
+      --panel-2: #1f2020;
+      --paper: #f5efe0;
+      --paper-dim: #cfc5ae;
+      --muted: #9d988d;
+      --line: rgba(245, 239, 224, 0.16);
+      --line-strong: rgba(245, 239, 224, 0.28);
+      --green: #31d184;
+      --green-ink: #061b12;
+      --red: #ff5b4f;
+      --red-ink: #2b0a08;
+      --gold: #d7b46a;
+      --blue: #6fa9ff;
+      --violet: #a889ff;
+      --shadow: 0 20px 80px rgba(0, 0, 0, 0.38);
+      --radius: 8px;
+      --mono: "Fira Code", "Cascadia Mono", Consolas, monospace;
+      --serif: "Noto Serif SC", "Microsoft YaHei", "PingFang SC", serif;
+      --sans: "Fira Sans", "Microsoft YaHei", "PingFang SC", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 96px;
+    }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(90deg, rgba(245, 239, 224, 0.025) 1px, transparent 1px) 0 0 / 40px 40px,
+        radial-gradient(circle at 25% 0%, rgba(255, 91, 79, 0.17), transparent 29rem),
+        radial-gradient(circle at 82% 12%, rgba(49, 209, 132, 0.12), transparent 24rem),
+        linear-gradient(180deg, #0b0b09 0%, #0e1110 48%, #080807 100%);
+      color: var(--paper);
+      font-family: var(--sans);
+      font-size: 16px;
+      line-height: 1.68;
+      letter-spacing: 0;
+      min-height: 100dvh;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      left: 16px;
+      top: 16px;
+      z-index: 20;
+      transform: translateY(-130%);
+      background: var(--paper);
+      color: var(--ink);
+      border-radius: 6px;
+      padding: 10px 14px;
+      font-weight: 700;
+      transition: transform 180ms ease;
+    }
+
+    .skip-link:focus {
+      transform: translateY(0);
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid var(--line);
+      background: rgba(9, 9, 7, 0.82);
+      backdrop-filter: blur(16px);
+    }
+
+    .topbar-inner {
+      width: min(1240px, calc(100% - 32px));
+      margin: 0 auto;
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .topbar-actions {
+      min-width: 0;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 210px;
+    }
+
+    .brand-mark {
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--line-strong);
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: var(--ink);
+      background:
+        linear-gradient(135deg, var(--paper) 0%, var(--gold) 50%, var(--green) 100%);
+      box-shadow: 0 0 0 4px rgba(215, 180, 106, 0.06);
+      font-family: var(--mono);
+      font-weight: 800;
+      letter-spacing: 0;
+    }
+
+    .brand-title {
+      display: block;
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: 0;
+    }
+
+    .brand-sub {
+      display: block;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 1.25;
+      margin-top: 3px;
+    }
+
+    .nav {
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 12px 0;
+      scrollbar-width: none;
+    }
+
+    .nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav a {
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      padding: 0 14px;
+      color: var(--paper-dim);
+      font-size: 14px;
+      transition: background 180ms ease, color 180ms ease, border-color 180ms ease;
+    }
+
+    .nav a:hover {
+      background: rgba(245, 239, 224, 0.08);
+      border-color: var(--line);
+      color: var(--paper);
+    }
+
+    .nav a.active,
+    .nav a[aria-current="true"] {
+      background: var(--paper);
+      border-color: transparent;
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .print-btn {
+      width: 44px;
+      height: 44px;
+      flex: 0 0 44px;
+      display: inline-grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--paper);
+      background: rgba(245, 239, 224, 0.06);
+      cursor: pointer;
+      transition: background 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease;
+    }
+
+    .print-btn:hover {
+      transform: translateY(-1px);
+      border-color: var(--line-strong);
+      background: rgba(245, 239, 224, 0.12);
+    }
+
+    .print-btn svg {
+      width: 20px;
+      height: 20px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    .section {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section.tight {
+      padding: 48px 0;
+    }
+
+    .wrap {
+      width: min(1240px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      min-height: calc(100dvh - 72px);
+      padding: 72px 0 64px;
+      display: grid;
+      align-items: center;
+      position: relative;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(360px, 0.95fr);
+      gap: 42px;
+      align-items: stretch;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold);
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin: 0 0 22px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 840px;
+      margin-bottom: 24px;
+      font-family: var(--serif);
+      font-size: 58px;
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .hero-lede {
+      max-width: 760px;
+      margin-bottom: 32px;
+      color: var(--paper-dim);
+      font-size: 20px;
+      line-height: 1.75;
+    }
+
+    .thesis {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .thesis-item {
+      min-height: 116px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      background: rgba(245, 239, 224, 0.04);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    }
+
+    .thesis-k {
+      display: block;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+
+    .thesis-v {
+      display: block;
+      font-family: var(--serif);
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.42;
+      color: var(--paper);
+    }
+
+    .hero-board {
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(245, 239, 224, 0.08), rgba(245, 239, 224, 0.03)),
+        #111211;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      min-height: 540px;
+      position: relative;
+    }
+
+    .board-head {
+      min-height: 54px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 18px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(0, 0, 0, 0.22);
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .board-lights {
+      display: flex;
+      gap: 7px;
+    }
+
+    .board-lights span {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--line-strong);
+    }
+
+    .board-lights span:nth-child(1) {
+      background: var(--red);
+    }
+
+    .board-lights span:nth-child(2) {
+      background: var(--gold);
+    }
+
+    .board-lights span:nth-child(3) {
+      background: var(--green);
+    }
+
+    .signal-stack {
+      padding: 22px;
+      display: grid;
+      gap: 12px;
+    }
+
+    .signal {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(8, 8, 7, 0.58);
+      padding: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .signal::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 4px;
+      background: var(--muted);
+    }
+
+    .signal.good::before {
+      background: var(--green);
+    }
+
+    .signal.watch::before {
+      background: var(--gold);
+    }
+
+    .signal.stop::before {
+      background: var(--red);
+    }
+
+    .signal-label {
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 12px;
+      margin-bottom: 8px;
+    }
+
+    .signal-title {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.28;
+    }
+
+    .signal p {
+      margin: 8px 0 0;
+      color: var(--paper-dim);
+      font-size: 14px;
+      line-height: 1.62;
+    }
+
+    .board-rule {
+      margin: 8px 22px 22px;
+      padding: 18px;
+      border-radius: var(--radius);
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 900;
+      line-height: 1.45;
+    }
+
+    .keyword-rail {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 34px;
+    }
+
+    .tag {
+      min-height: 36px;
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0 12px;
+      color: var(--paper-dim);
+      background: rgba(245, 239, 224, 0.04);
+      font-family: var(--mono);
+      font-size: 13px;
+    }
+
+    .tag.hot {
+      color: var(--ink);
+      background: var(--green);
+      border-color: transparent;
+      font-weight: 700;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.68fr) minmax(280px, 0.32fr);
+      gap: 32px;
+      align-items: end;
+      margin-bottom: 32px;
+    }
+
+    .section-kicker {
+      color: var(--gold);
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      margin-bottom: 0;
+      font-family: var(--serif);
+      font-size: 40px;
+      line-height: 1.16;
+      font-weight: 900;
+      letter-spacing: 0;
+      text-wrap: balance;
+    }
+
+    .section-note {
+      color: var(--paper-dim);
+      margin-bottom: 0;
+      font-size: 16px;
+    }
+
+    .decision-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      counter-reset: gate;
+    }
+
+    .gate {
+      min-height: 280px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(245, 239, 224, 0.045);
+      padding: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .gate::after {
+      counter-increment: gate;
+      content: "0" counter(gate);
+      position: absolute;
+      right: 12px;
+      top: 8px;
+      color: rgba(245, 239, 224, 0.10);
+      font-family: var(--mono);
+      font-size: 54px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .gate h3 {
+      margin-bottom: 16px;
+      font-family: var(--serif);
+      font-size: 22px;
+      line-height: 1.25;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gate ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 10px;
+      color: var(--paper-dim);
+      font-size: 14px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .gate li {
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .gate li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.78em;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .mode-band {
+      display: grid;
+      grid-template-columns: 0.86fr 1.14fr;
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .mode-primary {
+      border-radius: var(--radius);
+      border: 1px solid var(--line-strong);
+      background: var(--paper);
+      color: var(--ink);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 480px;
+    }
+
+    .mode-primary .label {
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 800;
+      color: rgba(9, 9, 7, 0.62);
+      margin-bottom: 20px;
+    }
+
+    .mode-primary h3 {
+      margin-bottom: 22px;
+      font-family: var(--serif);
+      font-size: 36px;
+      line-height: 1.16;
+      font-weight: 900;
+    }
+
+    .mode-primary p {
+      color: rgba(9, 9, 7, 0.76);
+      font-size: 18px;
+      line-height: 1.75;
+    }
+
+    .stamp {
+      width: fit-content;
+      border: 2px solid var(--red);
+      color: var(--red);
+      border-radius: 6px;
+      padding: 8px 12px;
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 900;
+      transform: rotate(-2deg);
+    }
+
+    .mode-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .mode-card {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(245, 239, 224, 0.045);
+      padding: 20px;
+      min-height: 232px;
+    }
+
+    .mode-card h3 {
+      margin-bottom: 12px;
+      font-family: var(--serif);
+      font-size: 24px;
+      line-height: 1.3;
+    }
+
+    .mode-card p {
+      color: var(--paper-dim);
+      margin-bottom: 16px;
+    }
+
+    .mode-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .pill {
+      min-height: 30px;
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 0 10px;
+      font-family: var(--mono);
+      font-size: 12px;
+      border: 1px solid var(--line);
+      color: var(--paper-dim);
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .pill.green {
+      color: var(--green);
+      border-color: rgba(49, 209, 132, 0.42);
+    }
+
+    .pill.red {
+      color: var(--red);
+      border-color: rgba(255, 91, 79, 0.42);
+    }
+
+    .pill.gold {
+      color: var(--gold);
+      border-color: rgba(215, 180, 106, 0.42);
+    }
+
+    .buy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .buy-card {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(245, 239, 224, 0.045);
+      overflow: hidden;
+      min-height: 390px;
+    }
+
+    .buy-top {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      background: rgba(0, 0, 0, 0.22);
+    }
+
+    .buy-top span {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .buy-card h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 23px;
+      line-height: 1.3;
+    }
+
+    .buy-body {
+      padding: 18px;
+    }
+
+    .buy-body p {
+      color: var(--paper-dim);
+    }
+
+    .sequence {
+      display: grid;
+      gap: 10px;
+      margin: 18px 0 0;
+    }
+
+    .seq-step {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      gap: 10px;
+      align-items: start;
+    }
+
+    .seq-step b {
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 8px;
+      color: var(--ink);
+      background: var(--gold);
+      font-family: var(--mono);
+      font-size: 12px;
+    }
+
+    .seq-step span {
+      color: var(--paper-dim);
+      font-size: 14px;
+    }
+
+    .accel-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .accel-core {
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(49, 209, 132, 0.14), rgba(245, 239, 224, 0.045)),
+        #111211;
+      padding: 28px;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow);
+    }
+
+    .accel-core h3 {
+      margin-bottom: 18px;
+      font-family: var(--serif);
+      font-size: 36px;
+      line-height: 1.16;
+    }
+
+    .accel-core p {
+      color: var(--paper-dim);
+      font-size: 17px;
+    }
+
+    .position-switch {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 12px;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    .position-state {
+      min-height: 126px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 16px;
+      background: rgba(0, 0, 0, 0.28);
+    }
+
+    .position-state b {
+      display: block;
+      margin-bottom: 8px;
+      font-family: var(--serif);
+      font-size: 25px;
+      line-height: 1.2;
+    }
+
+    .position-state span {
+      color: var(--paper-dim);
+      font-size: 14px;
+    }
+
+    .position-state.empty b {
+      color: var(--red);
+    }
+
+    .position-state.full b {
+      color: var(--green);
+    }
+
+    .switch-arrow {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      border: 1px solid var(--line-strong);
+      color: var(--gold);
+      font-family: var(--mono);
+      font-weight: 800;
+    }
+
+    .accel-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .accel-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(245, 239, 224, 0.045);
+      padding: 20px;
+      min-height: 250px;
+    }
+
+    .accel-card h3 {
+      margin-bottom: 12px;
+      font-family: var(--serif);
+      font-size: 25px;
+      line-height: 1.25;
+    }
+
+    .accel-card p {
+      color: var(--paper-dim);
+      margin-bottom: 16px;
+    }
+
+    .accel-card strong {
+      color: var(--paper);
+    }
+
+    .focus-mantra {
+      border-color: rgba(215, 180, 106, 0.38);
+      background:
+        linear-gradient(135deg, rgba(215, 180, 106, 0.12), rgba(245, 239, 224, 0.035)),
+        rgba(245, 239, 224, 0.04);
+    }
+
+    .evidence-gallery {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .evidence-card {
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: rgba(245, 239, 224, 0.045);
+      overflow: hidden;
+    }
+
+    .evidence-card.wide {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    .evidence-head {
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(0, 0, 0, 0.22);
+    }
+
+    .evidence-head h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 23px;
+      line-height: 1.25;
+    }
+
+    .ledger-stack {
+      display: grid;
+      gap: 10px;
+      padding: 12px;
+      background: #050505;
+    }
+
+    .ledger-stack img,
+    .evidence-card.single img {
+      width: 100%;
+      background: #050505;
+      object-fit: contain;
+    }
+
+    .ledger-stack img {
+      max-height: 420px;
+    }
+
+    .evidence-card.single img {
+      height: min(780px, 78vh);
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .evidence-card figcaption {
+      padding: 14px 16px;
+      color: var(--paper-dim);
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      line-height: 1.58;
+    }
+
+    .case-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .filter-btn {
+      min-height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0 15px;
+      cursor: pointer;
+      color: var(--paper-dim);
+      background: rgba(245, 239, 224, 0.04);
+      font: 700 14px/1 var(--sans);
+      transition: background 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease;
+    }
+
+    .filter-btn:hover {
+      transform: translateY(-1px);
+      border-color: var(--line-strong);
+      color: var(--paper);
+    }
+
+    .filter-btn[aria-pressed="true"] {
+      color: var(--ink);
+      background: var(--green);
+      border-color: transparent;
+    }
+
+    .case-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .case-card {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(245, 239, 224, 0.045);
+      padding: 18px;
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+    }
+
+    .case-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--line-strong);
+      background: rgba(245, 239, 224, 0.066);
+    }
+
+    .case-card.is-hidden {
+      display: none;
+    }
+
+    .case-head {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .case-card h3 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 22px;
+      line-height: 1.25;
+    }
+
+    .case-status {
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 8px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 11px;
+    }
+
+    .case-status.win {
+      color: var(--green);
+      border-color: rgba(49, 209, 132, 0.44);
+    }
+
+    .case-status.miss {
+      color: var(--red);
+      border-color: rgba(255, 91, 79, 0.44);
+    }
+
+    .case-card p {
+      color: var(--paper-dim);
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+
+    .case-rule {
+      margin-top: auto;
+      border-left: 3px solid var(--gold);
+      padding-left: 12px;
+      color: var(--paper);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .proof-band {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .proof-copy {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(245, 239, 224, 0.045);
+      padding: 24px;
+      position: sticky;
+      top: 96px;
+    }
+
+    .proof-copy h3 {
+      margin-bottom: 16px;
+      font-family: var(--serif);
+      font-size: 30px;
+      line-height: 1.24;
+    }
+
+    .proof-copy p {
+      color: var(--paper-dim);
+      font-size: 17px;
+    }
+
+    .danger-list {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: grid;
+      gap: 12px;
+    }
+
+    .danger-list li {
+      border: 1px solid rgba(255, 91, 79, 0.26);
+      border-radius: var(--radius);
+      padding: 14px 14px 14px 42px;
+      background: rgba(255, 91, 79, 0.055);
+      color: var(--paper-dim);
+      position: relative;
+    }
+
+    .danger-list li::before {
+      content: "";
+      position: absolute;
+      left: 16px;
+      top: 21px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--red);
+      box-shadow: 0 0 0 5px rgba(255, 91, 79, 0.12);
+    }
+
+    .proof-images {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .proof-figure {
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: #050505;
+    }
+
+    .proof-figure img {
+      width: 100%;
+      height: min(720px, 76vh);
+      aspect-ratio: 946 / 2048;
+      object-fit: cover;
+      object-position: top;
+      background: #050505;
+    }
+
+    .proof-figure figcaption {
+      padding: 14px;
+      color: var(--paper-dim);
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+      line-height: 1.55;
+    }
+
+    .rules-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .rule-column {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(245, 239, 224, 0.045);
+      overflow: hidden;
+    }
+
+    .rule-column h3 {
+      margin: 0;
+      padding: 18px;
+      border-bottom: 1px solid var(--line);
+      font-family: var(--serif);
+      font-size: 24px;
+    }
+
+    .rule-column ol {
+      margin: 0;
+      padding: 18px 18px 22px 40px;
+      color: var(--paper-dim);
+    }
+
+    .rule-column li {
+      margin-bottom: 13px;
+      padding-left: 4px;
+    }
+
+    .rule-column li::marker {
+      color: var(--gold);
+      font-family: var(--mono);
+      font-weight: 700;
+    }
+
+    .matrix {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: rgba(245, 239, 224, 0.04);
+    }
+
+    .matrix-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .matrix-row:last-child {
+      border-bottom: 0;
+    }
+
+    .matrix-cell {
+      min-height: 92px;
+      padding: 18px;
+      border-right: 1px solid var(--line);
+    }
+
+    .matrix-cell:last-child {
+      border-right: 0;
+    }
+
+    .matrix-cell strong {
+      display: block;
+      margin-bottom: 8px;
+      font-family: var(--serif);
+      font-size: 18px;
+      color: var(--paper);
+    }
+
+    .matrix-cell span {
+      color: var(--paper-dim);
+      font-size: 14px;
+    }
+
+    .matrix-cell.go {
+      background: rgba(49, 209, 132, 0.08);
+    }
+
+    .matrix-cell.wait {
+      background: rgba(215, 180, 106, 0.08);
+    }
+
+    .matrix-cell.stop {
+      background: rgba(255, 91, 79, 0.08);
+    }
+
+    .footer-note {
+      color: var(--muted);
+      font-size: 13px;
+      max-width: 820px;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(18px);
+      animation: rise 520ms ease forwards;
+    }
+
+    .reveal {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 420ms ease, transform 420ms ease;
+    }
+
+    .reveal.is-pending {
+      opacity: 0;
+      transform: translateY(18px);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .fade-in:nth-child(2) {
+      animation-delay: 80ms;
+    }
+
+    .fade-in:nth-child(3) {
+      animation-delay: 150ms;
+    }
+
+    @keyframes rise {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .fade-in {
+        opacity: 1;
+        transform: none;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .hero-grid,
+      .section-head,
+      .mode-band,
+      .proof-band,
+      .accel-panel,
+      .evidence-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .decision-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .case-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .rules-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .proof-copy {
+        position: static;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .topbar-inner {
+        width: min(100% - 24px, 1240px);
+        min-height: 64px;
+        display: block;
+        padding: 10px 0 6px;
+      }
+
+      html {
+        scroll-padding-top: 128px;
+      }
+
+      .topbar-actions {
+        margin-top: 8px;
+        align-items: start;
+      }
+
+      .brand {
+        min-width: 0;
+      }
+
+      .brand-title {
+        font-size: 17px;
+      }
+
+      .brand-sub {
+        font-size: 11px;
+      }
+
+      .nav {
+        flex: 1;
+        padding: 8px 0 0;
+      }
+
+      .nav a {
+        min-height: 40px;
+        padding: 0 12px;
+        font-size: 13px;
+      }
+
+      .print-btn {
+        margin-top: 6px;
+      }
+
+      .wrap {
+        width: min(100% - 24px, 1240px);
+      }
+
+      .section {
+        padding: 54px 0;
+      }
+
+      .hero {
+        padding: 44px 0 48px;
+      }
+
+      h1 {
+        font-size: 36px;
+        line-height: 1.16;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      .hero-lede {
+        font-size: 17px;
+      }
+
+      .thesis,
+      .decision-grid,
+      .mode-list,
+      .buy-grid,
+      .accel-grid,
+      .case-grid,
+      .proof-images,
+      .rules-grid,
+      .matrix-row {
+        grid-template-columns: 1fr;
+      }
+
+      .position-switch {
+        grid-template-columns: 1fr;
+      }
+
+      .switch-arrow {
+        transform: rotate(90deg);
+        margin-inline: auto;
+      }
+
+      .ledger-stack img {
+        max-height: none;
+      }
+
+      .evidence-card.single img {
+        height: min(640px, 74vh);
+      }
+
+      .hero-board {
+        min-height: auto;
+      }
+
+      .board-rule {
+        font-size: 19px;
+      }
+
+      .mode-primary {
+        min-height: auto;
+      }
+
+      .mode-primary h3 {
+        font-size: 29px;
+      }
+
+      .matrix-cell {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .matrix-cell:last-child {
+        border-bottom: 0;
+      }
+
+      .proof-figure img {
+        height: min(620px, 74vh);
+      }
+    }
+
+    @media print {
+      :root {
+        --ink: #111111;
+        --ink-2: #ffffff;
+        --panel: #ffffff;
+        --panel-2: #ffffff;
+        --paper: #ffffff;
+        --paper-dim: #222222;
+        --muted: #555555;
+        --line: #cccccc;
+        --line-strong: #999999;
+        --green: #106b40;
+        --red: #a3221b;
+        --gold: #8b640f;
+      }
+
+      html {
+        scroll-behavior: auto;
+        scroll-padding-top: 0;
+      }
+
+      body {
+        background: #ffffff;
+        color: #111111;
+        font-size: 11pt;
+      }
+
+      .topbar,
+      .skip-link,
+      .case-tools,
+      .proof-images {
+        display: none !important;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 0 0 20px;
+      }
+
+      .hero-grid,
+      .section-head,
+      .mode-band,
+      .proof-band {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 24px 0;
+        break-inside: avoid;
+      }
+
+      .hero-board,
+      .thesis-item,
+      .gate,
+      .mode-primary,
+      .mode-card,
+      .buy-card,
+      .case-card,
+      .proof-copy,
+      .rule-column,
+      .matrix {
+        box-shadow: none;
+      }
+
+      h1 {
+        font-size: 32pt;
+      }
+
+      h2 {
+        font-size: 22pt;
+      }
+
+      .hero-lede,
+      .section-note,
+      .mode-primary p,
+      .proof-copy p {
+        font-size: 11pt;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+
+  <header class="topbar" aria-label="页面导航">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="董事长交易模式研究首页">
+        <span class="brand-mark" aria-hidden="true">L3</span>
+        <span>
+          <span class="brand-title">董事长模式研究</span>
+          <span class="brand-sub">LONGTOU RELAY MAP</span>
+        </span>
+      </a>
+      <div class="topbar-actions">
+        <nav class="nav" aria-label="章节">
+          <a href="#logic">模式总纲</a>
+          <a href="#terrain">环境分层</a>
+          <a href="#buy">买点系统</a>
+          <a href="#acceleration">强加速</a>
+          <a href="#cases">案例库</a>
+          <a href="#errors">错误纪律</a>
+          <a href="#checklist">执行清单</a>
+        </nav>
+        <button class="print-btn" id="printButton" type="button" aria-label="打印网页">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6 9V3h12v6"></path>
+            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+            <path d="M6 14h12v7H6z"></path>
+            <path d="M8 7h8"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-copy fade-in">
+          <p class="eyebrow">Trading Playbook / Board Relay</p>
+          <h1>只在强板块里，接最强身位板。</h1>
+          <p class="hero-lede">这套模式的核心不是每天出手，而是等到环境、题材、身位、买点、仓位五件事同时对齐。环境好，敢在爆量弱转强里前置，甚至全仓重仓打强加速；环境差，空仓或板上就走。炸板和情绪变坏时，卖点必须比观点更硬。</p>
+
+          <div class="keyword-rail" aria-label="模式关键词">
+            <span class="tag hot">板块效应强</span>
+            <span class="tag">持续性板块</span>
+            <span class="tag">强身位板</span>
+            <span class="tag">爆量弱转强</span>
+            <span class="tag">转强确认</span>
+            <span class="tag">炸板直接走</span>
+            <span class="tag hot">全仓 / 空仓</span>
+          </div>
+
+          <div class="thesis" aria-label="三条总纲">
+            <div class="thesis-item">
+              <span class="thesis-k">01 / TARGET</span>
+              <span class="thesis-v">题材内最高、最强、最前排。</span>
+            </div>
+            <div class="thesis-item">
+              <span class="thesis-k">02 / ENTRY</span>
+              <span class="thesis-v">爆量弱转强前置，转强确认标准。</span>
+            </div>
+            <div class="thesis-item">
+              <span class="thesis-k">03 / EXIT</span>
+              <span class="thesis-v">分歧炸板、板块走弱，直接撤。</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-board fade-in" aria-label="交易判断仪表盘">
+          <div class="board-head">
+            <span>RELAY CONTROL BOARD</span>
+            <span class="board-lights" aria-hidden="true"><span></span><span></span><span></span></span>
+          </div>
+          <div class="signal-stack">
+            <article class="signal good">
+              <div class="signal-label">GO</div>
+              <h2 class="signal-title">板块先行，身位跟上</h2>
+              <p>首板或二三板已打出题材效应，涨停家数最好 >= 6，线内有三板以上高标。</p>
+            </article>
+            <article class="signal watch">
+              <div class="signal-label">WATCH</div>
+              <h2 class="signal-title">二板爆量，三板转强</h2>
+              <p>二进三是更舒服的确认点：筛掉一批杂票，再看谁能从分歧里升位。</p>
+            </article>
+            <article class="signal stop">
+              <div class="signal-label">STOP</div>
+              <h2 class="signal-title">龙头排不到，不买次强</h2>
+              <p>做错往往不是方向错，而是退而求其次。后排、低一位、杂毛都容易炸板。</p>
+            </article>
+          </div>
+          <div class="board-rule">有最强做最强；没有最强，就空着。</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="logic">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">01 / DECISION LOGIC</div>
+            <h2>五道门，决定今天能不能接力。</h2>
+          </div>
+          <p class="section-note">董事长模式的稳定性来自过滤，不来自预测。每一道门都要缩小可交易范围，直到只剩题材内真正有辨识度的强身位。</p>
+        </div>
+
+        <div class="decision-grid">
+          <article class="gate">
+            <h3>环境</h3>
+            <ul>
+              <li>短线赚钱效应是否有容错</li>
+              <li>高标是否被杀跌或监管压制</li>
+              <li>大盘是否支持资金做高度</li>
+            </ul>
+          </article>
+          <article class="gate">
+            <h3>板块</h3>
+            <ul>
+              <li>是否先出现强板块效应</li>
+              <li>是否是持续性题材，不是一天热闹</li>
+              <li>涨停家数最好 >= 6</li>
+            </ul>
+          </article>
+          <article class="gate">
+            <h3>身位</h3>
+            <ul>
+              <li>只看题材内最高板、最强板</li>
+              <li>多线并存时，选有三板以上高标的线</li>
+              <li>次强、低一位、后排直接剔除</li>
+            </ul>
+          </article>
+          <article class="gate">
+            <h3>买点</h3>
+            <ul>
+              <li>爆量弱转强是买点前置</li>
+              <li>转强确认是标准买点</li>
+              <li>环境越差，越需要确认</li>
+            </ul>
+          </article>
+          <article class="gate">
+            <h3>卖点</h3>
+            <ul>
+              <li>分歧炸板直接走</li>
+              <li>监管红线、情绪转弱主动降风险</li>
+              <li>做错不加戏，止损后空仓等</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="terrain">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">02 / MARKET TERRAIN</div>
+            <h2>环境不同，接力层级完全不同。</h2>
+          </div>
+          <p class="section-note">真正要避开的不是接力本身，而是情绪差时的中位非龙头接力。</p>
+        </div>
+
+        <div class="mode-band">
+          <article class="mode-primary">
+            <div>
+              <div class="label">CORE RULE</div>
+              <h3>三进四、四进五、五进六，只给真正龙头。</h3>
+              <p>没有特别好的票，没有真正的龙头票，就不做中高位接力。尤其当一鸣食品这类高标被杀、监管压制明显、短线容错变差时，中位接力容易直接爆炸。</p>
+            </div>
+            <div class="stamp">非龙头，不接中位</div>
+          </article>
+
+          <div class="mode-list">
+            <article class="mode-card">
+              <h3>环境差：低位试错</h3>
+              <p>做一进二或二进三，重点看新题材能否打出板块效应。二进三更优，因为已经筛掉一批不够强的标的。</p>
+              <div class="mode-meta">
+                <span class="pill green">一进二</span>
+                <span class="pill green">二进三</span>
+                <span class="pill red">不乱接中位</span>
+              </div>
+            </article>
+            <article class="mode-card">
+              <h3>环境好：龙头升位</h3>
+              <p>有高标、有容错、有板块回流预期时，才看三板以上强身位的爆量弱转强和转强确认。</p>
+              <div class="mode-meta">
+                <span class="pill green">爆量弱转强</span>
+                <span class="pill gold">转强确认</span>
+              </div>
+            </article>
+            <article class="mode-card">
+              <h3>三板分水岭</h3>
+              <p>二板爆量烂板后，三板缩量转强、弱转强、T字回封，是博弈主升切入的重要节点。</p>
+              <div class="mode-meta">
+                <span class="pill gold">二进三定龙</span>
+                <span class="pill green">主升先手</span>
+              </div>
+            </article>
+            <article class="mode-card">
+              <h3>五板分水岭</h3>
+              <p>五板也可以接，但必须板上确认。连续加速不爆量，后面再爆量往往意味着风险释放。</p>
+              <div class="mode-meta">
+                <span class="pill gold">板上确认</span>
+                <span class="pill red">防加速末端</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="buy">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">03 / ENTRY SYSTEM</div>
+            <h2>两个买点，一个禁区。</h2>
+          </div>
+          <p class="section-note">董事长的厉害之处，是在关键标的上敢把仓位打够；但他也会在确认失败、炸板或监管压力出现时快速撤。</p>
+        </div>
+
+        <div class="buy-grid">
+          <article class="buy-card">
+            <div class="buy-top">
+              <h3>买点前置</h3>
+              <span>AGGRESSIVE</span>
+            </div>
+            <div class="buy-body">
+              <p>环境和板块已经走强时，围绕强身位板做爆量弱转强、爆量炸板回封。利新能源、传智教育这类动作，核心是提前拿到关键票仓位。</p>
+              <div class="sequence">
+                <div class="seq-step"><b>1</b><span>板块先打出强效应</span></div>
+                <div class="seq-step"><b>2</b><span>标的是题材前排身位</span></div>
+                <div class="seq-step"><b>3</b><span>分歧爆量后回封，博弈次日转强</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="buy-card">
+            <div class="buy-top">
+              <h3>标准买点</h3>
+              <span>CONFIRMED</span>
+            </div>
+            <div class="buy-body">
+              <p>环境不够放松时，等转强确认再打。比如二板爆量烂板后，三板弱转强成功，或者四板极致弱转强再确认参与。</p>
+              <div class="sequence">
+                <div class="seq-step"><b>1</b><span>二板或前一日充分换手</span></div>
+                <div class="seq-step"><b>2</b><span>次日主动转强，不被板块拖垮</span></div>
+                <div class="seq-step"><b>3</b><span>板上确认，避免盘中想象</span></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="buy-card">
+            <div class="buy-top">
+              <h3>禁区</h3>
+              <span>NO TRADE</span>
+            </div>
+            <div class="buy-body">
+              <p>龙头买不到，就退而求其次；题材有热度，就随便找低一位；中位不是最强，却想蹭情绪。这些都不是模式，是亏损来源。</p>
+              <div class="sequence">
+                <div class="seq-step"><b>1</b><span>题材内不是最高身位，不做</span></div>
+                <div class="seq-step"><b>2</b><span>板块效应弱，不做</span></div>
+                <div class="seq-step"><b>3</b><span>高标杀跌压制中位，不做</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="acceleration">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">04 / ACCELERATION & POSITION</div>
+            <h2>强加速的牛，不只是快，是敢在模式里极致切换。</h2>
+          </div>
+          <p class="section-note">小肉来自隔夜竞价抢加速板，大肉来自扫板打板、板上扫进去。共同前提只有一个：强板块效应下，二板及以上高标升位。</p>
+        </div>
+
+        <div class="accel-panel">
+          <article class="accel-core">
+            <div>
+              <div class="eyebrow">Position Switch</div>
+              <h3>不是建仓、加仓、减仓、清仓，而是全仓和空仓。</h3>
+              <p>他强在仓位管理的极致：环境好、板块强、模式内机会出现时，敢重仓甚至全仓打进去；生态恶劣、A股整体情绪极差、板块或高标不对时，马上走，割肉也果断。不是每天都有仓位，而是只在自己的模式里给仓位。</p>
+            </div>
+            <div class="position-switch" aria-label="仓位切换">
+              <div class="position-state empty">
+                <b>空仓</b>
+                <span>环境差、生态恶劣、高标杀跌、模式外诱惑多时，先把自己从市场噪音里拔出来。</span>
+              </div>
+              <div class="switch-arrow" aria-hidden="true">↔</div>
+              <div class="position-state full">
+                <b>全仓</b>
+                <span>强板块效应 + 二板以上高标升位 + 量能受控 + 情绪支持，才值得重击。</span>
+              </div>
+            </div>
+          </article>
+
+          <div class="accel-grid">
+            <article class="accel-card">
+              <h3>小肉：隔夜竞价抢加速</h3>
+              <p>当题材和高标已经明牌，竞价阶段抢加速板，吃的是强一致的溢价。这类机会反应要快，但必须建立在板块效应和整体情绪允许的前提上。</p>
+              <div class="mode-meta">
+                <span class="pill green">竞价抢</span>
+                <span class="pill gold">二板以上</span>
+              </div>
+            </article>
+            <article class="accel-card">
+              <h3>大肉：扫板打板</h3>
+              <p>真正的大肉，多数是在板上扫进去。不是低吸想象，而是在强板块里做高标升位，确认资金态度后把仓位打满。</p>
+              <div class="mode-meta">
+                <span class="pill green">扫板</span>
+                <span class="pill green">打板</span>
+                <span class="pill gold">高标升位</span>
+              </div>
+            </article>
+            <article class="accel-card">
+              <h3>量能与情绪控制</h3>
+              <p>强加速不是无脑冲。量能、环境、短线情绪、板块持续性都要对齐。环境好时买点前置；环境差时，即使上板也可以板上走。</p>
+              <div class="mode-meta">
+                <span class="pill gold">量能受控</span>
+                <span class="pill red">环境差就走</span>
+              </div>
+            </article>
+            <article class="accel-card focus-mantra">
+              <h3>模式少而精</h3>
+              <p><strong>专注做好自己的模式就足够了。</strong>模式少而精，才能屏蔽市场噪音和自己的情绪干扰，快速识别机会和陷阱，长期获得概率优势。贪多去学别人的模式，往往要先用大亏去磨合。</p>
+              <div class="mode-meta">
+                <span class="pill gold">少而精</span>
+                <span class="pill green">概率优势</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="evidence-gallery" aria-label="强加速与仓位切换截图证据">
+          <figure class="evidence-card wide">
+            <div class="evidence-head">
+              <h3>交易记录：强加速、强板块与空仓切换</h3>
+            </div>
+            <div class="ledger-stack">
+              <img src="../assets/chairman-trading-mode/acceleration-ledger-01.png" alt="第72届顽主杯交易记录上半部分截图，展示资金曲线、日期收益和操作备注" width="812" height="571" loading="lazy">
+              <img src="../assets/chairman-trading-mode/acceleration-ledger-02.png" alt="第72届顽主杯交易记录下半部分截图，展示后续收益、空仓记录和总结文字" width="815" height="571" loading="lazy">
+            </div>
+            <figcaption>这组记录用于复盘他的强加速手法和全仓/空仓切换，不作为新的交易指令。重点看：隔夜、竞价、开盘抢、扫板/打板、环境差时主动空仓。</figcaption>
+          </figure>
+
+          <figure class="evidence-card single">
+            <div class="evidence-head">
+              <h3>情绪流顶板选手：只做连板小票</h3>
+            </div>
+            <img src="../assets/chairman-trading-mode/contest-emotion-flow.png" alt="百万组第一名暴涨基金董事长比赛截图，展示资金曲线、个股盈亏榜和情绪流连板小票说明" width="829" height="4168" loading="lazy">
+            <figcaption>外部案例截图：强调纯粹的情绪流顶板、只做二板以上连板小票，以及强势环境下的身位进攻。</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">05 / CASE LIBRARY</div>
+            <h2>案例不是记股票名，是记当时的条件。</h2>
+          </div>
+          <p class="section-note">同一只票换个市场环境，结论可能完全不同。这里按模式要素拆解，而不是做事后崇拜。</p>
+        </div>
+
+        <div class="case-tools" aria-label="案例筛选">
+          <button class="filter-btn" type="button" data-filter="all" aria-pressed="true">全部案例</button>
+          <button class="filter-btn" type="button" data-filter="win" aria-pressed="false">有效模式</button>
+          <button class="filter-btn" type="button" data-filter="accel" aria-pressed="false">强加速</button>
+          <button class="filter-btn" type="button" data-filter="miss" aria-pressed="false">犯错样本</button>
+          <button class="filter-btn" type="button" data-filter="exit" aria-pressed="false">卖点纪律</button>
+        </div>
+
+        <div class="case-grid">
+          <article class="case-card" data-kind="win accel">
+            <div class="case-head">
+              <h3>龙柏传媒</h3>
+              <span class="case-status win">强加速</span>
+            </div>
+            <p>在强板块效应和情绪支持下敢于打进去，体现模式内机会反应快、仓位敢给。</p>
+            <div class="case-rule">强加速要敢，但前提是环境、题材、身位、量能都对。</div>
+          </article>
+
+          <article class="case-card" data-kind="win accel">
+            <div class="case-head">
+              <h3>顽主杯记录</h3>
+              <span class="case-status win">仓位</span>
+            </div>
+            <p>从 331 万到 1646 万的资金曲线，本质是模式专注、强加速、强板块和空仓纪律共同作用。</p>
+            <div class="case-rule">仓位不是平均分配，而是模式成立时重击、模式不成立时退出。</div>
+          </article>
+
+          <article class="case-card" data-kind="win">
+            <div class="case-head">
+              <h3>敬业达</h3>
+              <span class="case-status win">有效</span>
+            </div>
+            <p>AI应用分支龙头，二板爆量后次日转强一字，直接打板进入。</p>
+            <div class="case-rule">没有主线时，做分支龙头的低位升位。</div>
+          </article>
+
+          <article class="case-card" data-kind="win">
+            <div class="case-head">
+              <h3>万象德农</h3>
+              <span class="case-status win">有效</span>
+            </div>
+            <p>农业首板已有题材效应，二板爆量烂板，三板弱转强，四五板继续加速。</p>
+            <div class="case-rule">板块效应先行，二进三做题材最强身位。</div>
+          </article>
+
+          <article class="case-card" data-kind="win accel">
+            <div class="case-head">
+              <h3>百花医药</h3>
+              <span class="case-status win">强加速</span>
+            </div>
+            <p>三板时已进入观察，四板极致弱转强后参与，属于确认后上车。</p>
+            <div class="case-rule">二板及二板以上爆量板，都进入观察池。</div>
+          </article>
+
+          <article class="case-card" data-kind="win accel">
+            <div class="case-head">
+              <h3>利新能源</h3>
+              <span class="case-status win">强加速</span>
+            </div>
+            <p>7月21日爆量板，偏前置买点，后续到风险点强制离场。</p>
+            <div class="case-rule">前置买点的价值在于关键票敢打够仓位。</div>
+          </article>
+
+          <article class="case-card" data-kind="win accel">
+            <div class="case-head">
+              <h3>传智教育</h3>
+              <span class="case-status win">强加速</span>
+            </div>
+            <p>7月31日爆量炸板回封，属于爆量弱转强前置动作。</p>
+            <div class="case-rule">强板块和强身位共同给前置买点定价。</div>
+          </article>
+
+          <article class="case-card" data-kind="win">
+            <div class="case-head">
+              <h3>国芳集团</h3>
+              <span class="case-status win">可做</span>
+            </div>
+            <p>消费方向龙头，若对应板块效应满足，可以作为题材前排参与。</p>
+            <div class="case-rule">分支龙头可以做，前提是它真是线内最强。</div>
+          </article>
+
+          <article class="case-card" data-kind="miss">
+            <div class="case-head">
+              <h3>亿利达 / 康盛</h3>
+              <span class="case-status miss">犯错</span>
+            </div>
+            <p>液冷方向本该做更强的康盛，却选择低一位的亿利达，结果炸板并小亏出局。</p>
+            <div class="case-rule">题材确定后，低一位不是替代品。</div>
+          </article>
+
+          <article class="case-card" data-kind="miss exit">
+            <div class="case-head">
+              <h3>中关村 / 汉森制药</h3>
+              <span class="case-status miss">犯错</span>
+            </div>
+            <p>创新药分支龙头汉森制药没排上，退而求其次做中关村，后排低开杀跌造成大回撤。</p>
+            <div class="case-rule">杂票多看一眼，就是纪律被松动。</div>
+          </article>
+
+          <article class="case-card" data-kind="exit">
+            <div class="case-head">
+              <h3>金健米业</h3>
+              <span class="case-status">卖点</span>
+            </div>
+            <p>四板晋级龙头，但受高标一字闷杀和板块低开回调拖累，高开后跳水，水下约 -1% 果断止损。</p>
+            <div class="case-rule">龙头也会受情绪拖累，卖点不能讲情怀。</div>
+          </article>
+
+          <article class="case-card" data-kind="win">
+            <div class="case-head">
+              <h3>时代出版</h3>
+              <span class="case-status win">可做</span>
+            </div>
+            <p>给出较高溢价，说明低位分支强身位在合适环境里可以有效套利。</p>
+            <div class="case-rule">不是所有低位都是试错，强身位低位是机会。</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="errors">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">06 / ERROR DISCIPLINE</div>
+            <h2>董事长也会犯错，所以纪律必须写在页面上。</h2>
+          </div>
+          <p class="section-note">两张截图不是用来证明他永远正确，而是提醒你：强者也会被后排和情绪误伤，区别在于他会很快认错。</p>
+        </div>
+
+        <div class="proof-band">
+          <div class="proof-copy">
+            <h3>错误通常不是看错题材，而是降低了标的标准。</h3>
+            <p>排不到龙头，选择次强；看到题材热，买了低一位；情绪高标杀跌，还去做中位。这些动作会把一个原本清晰的模式，变成随手交易。</p>
+            <ul class="danger-list">
+              <li>龙头买不到，不代表可以买后排。</li>
+              <li>板块效应弱，单独高度不可靠。</li>
+              <li>分歧炸板时，卖点优先级高于预期。</li>
+              <li>亏损后空仓等待，比急着修正更重要。</li>
+            </ul>
+          </div>
+
+          <div class="proof-images">
+            <figure class="proof-figure">
+              <img src="../assets/chairman-trading-mode/error-zhongguancun.jpg" alt="中关村错误案例截图，体现龙头汉森制药排不到后退而求其次带来的回撤风险" width="946" height="2048" loading="lazy">
+              <figcaption>创新药方向：龙头没排上，退而求其次做中关村，后排低开杀跌后扩大回撤。</figcaption>
+            </figure>
+            <figure class="proof-figure">
+              <img src="../assets/chairman-trading-mode/error-jinjianmiye.jpg" alt="金健米业卖点纪律截图，体现高标情绪杀跌时果断止损" width="946" height="2048" loading="lazy">
+              <figcaption>金健米业：即使是四板晋级龙头，遇到高标情绪杀跌和板块回调，也要按卖点离场。</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="checklist">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <div class="section-kicker">07 / EXECUTION CHECKLIST</div>
+            <h2>盘中只问这些问题。</h2>
+          </div>
+          <p class="section-note">把复杂判断拆成固定问题，减少临场被分时、盈亏和情绪牵着走。</p>
+        </div>
+
+        <div class="rules-grid">
+          <article class="rule-column">
+            <h3>买入前</h3>
+            <ol>
+              <li>今天短线环境是否支持接力？</li>
+              <li>这个板块是否已经打出强效应？</li>
+              <li>它是不是题材内最高、最强、最前排？</li>
+              <li>买点是前置，还是确认？</li>
+              <li>如果炸板，能不能立刻执行卖点？</li>
+            </ol>
+          </article>
+          <article class="rule-column">
+            <h3>持仓中</h3>
+            <ol>
+              <li>板块是否继续回流，而不是只靠单票硬顶？</li>
+              <li>是否接近监管红线或异动压力？</li>
+              <li>高标是否出现一字闷杀或集体杀跌？</li>
+              <li>分歧是良性换手，还是承接失效？</li>
+              <li>仓位是否只给了关键标的？</li>
+            </ol>
+          </article>
+          <article class="rule-column">
+            <h3>卖出时</h3>
+            <ol>
+              <li>炸板后不要幻想二次转强。</li>
+              <li>板块低开回调，高开跳水要先保命。</li>
+              <li>不是龙头的票，亏损容忍度更低。</li>
+              <li>错了就走，走完再等下一次共振。</li>
+              <li>卖飞可以复盘，亏大通常是纪律问题。</li>
+            </ol>
+          </article>
+          <article class="rule-column">
+            <h3>仓位与专注</h3>
+            <ol>
+              <li>模式内机会是否值得重仓，而不是随手轻仓试错？</li>
+              <li>模式不成立时，是否能直接空仓？</li>
+              <li>今天是不是在学太多别人的模式，导致噪音变多？</li>
+              <li>是否只做自己最熟的强板块高标升位？</li>
+              <li>全仓前，是否已经写清楚失败后的卖点？</li>
+            </ol>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tight" aria-label="行动矩阵">
+      <div class="wrap">
+        <div class="matrix">
+          <div class="matrix-row">
+            <div class="matrix-cell go">
+              <strong>可以前置</strong>
+              <span>环境好，板块强，身位真龙头，爆量弱转强或炸板回封。</span>
+            </div>
+            <div class="matrix-cell wait">
+              <strong>等待确认</strong>
+              <span>环境一般，板块有效但不够放松，等三板或四板转强确认。</span>
+            </div>
+            <div class="matrix-cell stop">
+              <strong>必须放弃</strong>
+              <span>龙头排不到、只剩次强后排，或高标杀跌压制中位。</span>
+            </div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell go">
+              <strong>低位优先</strong>
+              <span>情绪差时做一进二、二进三，二进三更容易确认身位。</span>
+            </div>
+            <div class="matrix-cell wait">
+              <strong>中位只给龙</strong>
+              <span>三进四、四进五、五进六，必须是情绪和题材共同认可的龙头。</span>
+            </div>
+            <div class="matrix-cell stop">
+              <strong>卖点无条件</strong>
+              <span>分歧炸板、监管压力、板块走弱、情绪杀高标，先走再说。</span>
+            </div>
+          </div>
+          <div class="matrix-row">
+            <div class="matrix-cell go">
+              <strong>强加速重击</strong>
+              <span>强板块效应下，二板及以上高标升位，隔夜竞价、扫板、打板才有意义。</span>
+            </div>
+            <div class="matrix-cell wait">
+              <strong>全仓/空仓</strong>
+              <span>不是所有行情都要有仓位。模式成立敢重击，模式不成立就空仓。</span>
+            </div>
+            <div class="matrix-cell stop">
+              <strong>不贪多</strong>
+              <span>模式少而精，才能屏蔽噪音。贪多学别人模式，往往先亏钱磨合。</span>
+            </div>
+          </div>
+        </div>
+        <p class="footer-note">仅为个人交易模式复盘与学习整理，不构成任何投资建议。实际交易需结合当日市场环境、流动性、监管变化与自身风险承受能力。</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    const filterButtons = Array.from(document.querySelectorAll(".filter-btn"));
+    const caseCards = Array.from(document.querySelectorAll(".case-card"));
+    const navLinks = Array.from(document.querySelectorAll(".nav a"));
+    const sections = Array.from(document.querySelectorAll("main section[id]"));
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const filter = button.dataset.filter;
+        filterButtons.forEach((item) => item.setAttribute("aria-pressed", String(item === button)));
+        caseCards.forEach((card) => {
+          const kinds = card.dataset.kind.split(" ");
+          const visible = filter === "all" || kinds.includes(filter);
+          card.classList.toggle("is-hidden", !visible);
+        });
+      });
+    });
+
+    const setActiveNav = () => {
+      const y = window.scrollY + 140;
+      let current = sections[0]?.id;
+
+      sections.forEach((section) => {
+        if (section.offsetTop <= y) {
+          current = section.id;
+        }
+      });
+
+      navLinks.forEach((link) => {
+        const isActive = link.getAttribute("href") === `#${current}`;
+        link.classList.toggle("active", isActive);
+        if (isActive) {
+          link.setAttribute("aria-current", "true");
+        } else {
+          link.removeAttribute("aria-current");
+        }
+      });
+    };
+
+    const revealTargets = Array.from(document.querySelectorAll(
+      ".gate, .mode-primary, .mode-card, .buy-card, .accel-core, .accel-card, .evidence-card, .case-card, .proof-copy, .proof-figure, .rule-column, .matrix"
+    ));
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if ("IntersectionObserver" in window && !reducedMotion) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            entry.target.classList.remove("is-pending");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealTargets.forEach((target, index) => {
+        target.classList.add("reveal", "is-pending");
+        target.style.transitionDelay = `${Math.min(index * 28, 240)}ms`;
+        observer.observe(target);
+      });
+    } else {
+      revealTargets.forEach((target) => target.classList.add("is-visible"));
+    }
+
+    document.getElementById("printButton")?.addEventListener("click", () => window.print());
+    window.addEventListener("scroll", setActiveNav, { passive: true });
+    setActiveNav();
+  </script>
+</body>
+</html>
