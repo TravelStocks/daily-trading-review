@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>章盟主式超短全景复盘（2026.9.16 周三）+ 9.17个股板块预案 - AI文档</title>
+  <style>
+    :root{--bg:#eef7f4;--card:#ffffff;--line:rgba(18,75,66,.14);--text:#15352f;--muted:#607970;--accent:#0d9275;--blue:#1b7cb3;--amber:#b88415;--risk:#bf4d3d;--shadow:0 18px 42px rgba(12,55,49,.09);--r:20px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#f5fbf8,#e9f4ef);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif}
+    a{color:inherit}.layout{width:min(1580px,calc(100vw - 24px));margin:18px auto 40px;display:grid;grid-template-columns:300px minmax(0,1fr);gap:22px}.toc,.content,.hero,.section-card{min-width:0}.toc{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;padding:16px;border:1px solid var(--line);border-radius:var(--r);background:rgba(255,255,255,.92);box-shadow:var(--shadow)}
+    .back{display:inline-flex;margin-bottom:12px;padding:9px 12px;border-radius:999px;background:#e7f4ee;text-decoration:none;color:#0b6a60;font-weight:900}.toc h2{margin:4px 0 12px;font-size:20px}.toc-node{border-top:1px solid rgba(18,75,66,.1);padding:8px 0}.toc-node summary{display:flex;align-items:center;justify-content:space-between;gap:8px;cursor:pointer;list-style:none}.toc-node summary::-webkit-details-marker{display:none}.toc-node a{text-decoration:none;font-weight:900;color:#17443d}.toc-node span{font-size:12px;color:var(--muted)}.toc-children{display:grid;gap:6px;margin:8px 0 0 12px}.toc-children a{font-size:13px;color:#375c55;font-weight:600}
+    .hero,.section-card{border:1px solid rgba(255,255,255,.82);border-radius:var(--r);background:rgba(255,255,255,.94);box-shadow:var(--shadow)}.hero{padding:30px;margin-bottom:22px;background:linear-gradient(135deg,#f9fffc,#eef8f4 55%,#edf6ff)}.hero-kicker,.section-kicker{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.72);color:#0c7065;font-size:12px;font-weight:900;letter-spacing:0}.hero h1{margin:14px 0 10px;font-size:clamp(30px,4vw,58px);line-height:1.05}.hero-lead{max-width:1080px;font-size:17px;line-height:1.9;color:#284e46}.hero-stats{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}.hero-stats span{padding:9px 12px;border-radius:999px;background:#e7f4ee;color:#0a675d;font-weight:800}
+    .section-card{padding:24px;margin:0 0 18px}.chapter-title{margin:10px 0 14px;font-size:28px}.subchapter-title{margin:22px 0 10px;color:#0f4d44;font-size:21px}.minor-title{margin:16px 0 8px;color:#24524a;font-size:17px}.body-line,.source-note{overflow-wrap:anywhere;word-break:break-word}.body-line{margin:10px 0;color:#244a43;line-height:1.85}.bullet-line{padding-left:14px;border-left:4px solid rgba(13,146,117,.2)}.tone-action{background:linear-gradient(90deg,rgba(13,146,117,.08),transparent);padding:10px 12px;border-radius:14px}.tone-risk{background:linear-gradient(90deg,rgba(191,77,61,.08),transparent);padding:10px 12px;border-radius:14px}
+    .table-shell{overflow:auto;margin:16px 0;border:1px solid var(--line);border-radius:16px;background:#fff}.data-table{width:100%;border-collapse:collapse;min-width:760px}.data-table th,.data-table td{padding:10px 11px;border-bottom:1px solid rgba(18,75,66,.1);border-right:1px solid rgba(18,75,66,.08);vertical-align:top;text-align:left;font-size:13px;line-height:1.55;word-break:break-word}.data-table th{background:#e8f6f0;color:#0b6a60;font-weight:900}
+    .effect-positioning-module{margin:18px 0 22px;padding:20px;border:2px solid rgba(13,146,117,.24);border-radius:18px;background:linear-gradient(135deg,#eaf8f2,#fff8e8);box-shadow:0 18px 36px rgba(12,55,49,.1)}.module-head{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;flex-wrap:wrap}.module-title{margin:8px 0 0;font-size:25px}.module-status{font-size:12px;color:var(--muted)}.effect-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}.effect-panel{padding:15px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.78)}.effect-panel.profit{border-left:6px solid var(--accent)}.effect-panel.loss{border-left:6px solid var(--risk)}.effect-panel h4{margin:0 0 10px}.effect-chipset{display:flex;flex-wrap:wrap;gap:8px}.effect-chip,.multi-chip{border:1px solid rgba(13,146,117,.24);border-radius:999px;padding:7px 10px;background:#f3fbf8;color:#0a675d;font-weight:850;cursor:pointer}.effect-chip.is-selected,.multi-chip.is-selected{background:var(--accent);color:#fff;border-color:var(--accent)}.loss .effect-chip.is-selected{background:var(--risk);border-color:var(--risk)}
+    .kiss-grid,.question-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.kiss-card,.question-grid article{padding:14px;border:1px solid var(--line);border-radius:16px;background:#fff}.kiss-card span{display:block;color:#0d6f64;font-weight:900}.kiss-card p{margin:8px 0 0;line-height:1.7}
+    .plan-toolbar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}.plan-toolbar button,.plan-row-delete,.plan-row-save{border:0;border-radius:999px;padding:9px 13px;background:var(--accent);color:#fff;font-weight:900;cursor:pointer}.plan-toolbar button:nth-child(3){background:var(--blue)}.plan-toolbar button:nth-child(4),.plan-row-delete{background:#f0f5f2;color:#18443c;border:1px solid var(--line)}.plan-save-status{margin-left:auto;color:var(--muted);font-size:12px}.plan-table-wrap,.holding-table-wrap{overflow-x:visible;border:1px solid var(--line);border-radius:16px;background:#fff}.plan-table,.holding-table{width:100%;border-collapse:collapse;table-layout:fixed}.plan-table th,.plan-table td,.holding-table th,.holding-table td{padding:7px;border-bottom:1px solid rgba(20,74,66,.1);border-right:1px solid rgba(20,74,66,.08);vertical-align:top;text-align:left;font-size:11.5px;line-height:1.38;word-break:break-word;overflow-wrap:anywhere}.plan-table th,.holding-table th{background:#e9f7f1;color:#0a6259;font-weight:900}.plan-table td[contenteditable],.holding-table td[contenteditable]{outline:0;background:rgba(255,255,255,.96);cursor:text;border-radius:8px}.plan-table td[contenteditable]:focus,.holding-table td[contenteditable]:focus{background:#fff9df;box-shadow:inset 0 0 0 2px rgba(13,146,117,.26)}.multi-select-control{display:flex;flex-wrap:wrap;gap:4px}.multi-chip{font-size:10.5px;padding:4px 6px}.multi-add{display:flex;gap:4px;margin-top:5px}.multi-add input{width:64px;border:1px solid var(--line);border-radius:999px;padding:5px 7px}.multi-add button{border:1px solid var(--line);border-radius:999px;padding:5px 7px;background:#f0f5f2;color:#18443c;font-weight:900}.plan-row-actions{display:flex;flex-direction:column;gap:5px}.plan-row-save,.plan-row-delete{padding:6px 7px;border-radius:10px;font-size:11px}.holding-plan-editor{margin-top:18px}.source-note{margin-top:18px;color:var(--muted);font-size:13px}
+    @media (max-width:1180px){.layout{grid-template-columns:minmax(0,1fr)}.toc{position:relative;width:100%;max-width:100%}.content{width:100%;max-width:100%}.chapter-title,.subchapter-title,.minor-title{overflow-wrap:anywhere}.table-shell,.decision-table-wrap,.plan-table-wrap,.holding-table-wrap{max-width:100%;overflow-x:auto}.plan-table{min-width:1080px}.holding-table{min-width:1480px}.effect-grid,.kiss-grid,.question-grid{grid-template-columns:1fr}}
+    @media (max-width:760px){.layout{width:calc(100vw - 16px);margin:8px auto 24px;gap:12px}.toc{max-height:54vh;padding:14px}.hero,.section-card{padding:18px}.hero h1{font-size:34px}.body-line,.source-note{overflow-wrap:anywhere;word-break:break-word}}
+    </style>
+</head>
+<body class="review-workbench" id="page-top"><div class="reading-progress" data-reading-progress></div><div class="mobile-toc-scrim" data-toc-scrim></div><div class="workbench-tools" aria-label="页面工具"><button type="button" data-toc-toggle>目录</button><button type="button" data-back-top>顶部</button></div>
+  <div class="layout">
+    <aside class="toc">
+      <div class="toc-utility"><a class="back" href="../index.html">返回首页</a><button class="toc-mobile-close" type="button" data-toc-close>关闭</button></div>
+      <h2>复盘导航</h2><p class="toc-caption">按阶段展开章节，当前阅读位置会自动高亮。</p><div class="toc-scroll">
+      <div class="toc-phase-label">01 盘面定性</div><details class="toc-node"><summary><a href="#chapter-1-一-复盘总纲-03e653">一、复盘总纲</a><span>展开</span></summary><div class="toc-children"></div></details>
+<details class="toc-node"><summary><a href="#chapter-2-二-市场风格与赚钱效应解析-cb50c9">二、市场风格与赚钱效应解析</a><span>展开</span></summary><div class="toc-children"><a href="#sub-2-1-一-市场风格-ab7013">（一）市场风格</a><a href="#sub-2-2-二-赚钱效应-7ef097">（二）赚钱效应</a></div></details>
+<details class="toc-node"><summary><a href="#chapter-3-三-近4日板块强度-次日节奏预测表-f65244">三、近4日板块强度+次日节奏预测表</a><span>展开</span></summary><div class="toc-children"></div></details>
+<div class="toc-phase-label">02 盘后拆解</div><details class="toc-node"><summary><a href="#chapter-4-四-今日操作结果-核心失误-核心反思-6f01e5">四、今日操作结果+核心失误+核心反思</a><span>展开</span></summary><div class="toc-children"><a href="#sub-4-1-一-今日操作结果-7e2259">（一）今日操作结果</a><a href="#sub-4-2-二-核心失误根源-0afa43">（二）核心失误根源</a><a href="#sub-4-3-三-深度核心反思-3a6577">（三）深度核心反思</a></div></details>
+<details class="toc-node"><summary><a href="#chapter-5-五-操作与情绪复盘-kiss模型-keep-improve-start-stop-7bee20">五、操作与情绪复盘（KISS模型：Keep/Improve/Start/Stop）</a><span>展开</span></summary><div class="toc-children"><a href="#sub-5-1-一-当日操作-情绪复盘-51df44">（一）当日操作&amp;情绪复盘</a><a href="#minor-5-2-1-核心失误-5a8e34">1. 核心失误</a><a href="#minor-5-3-2-正向进化-a52cc4">2. 正向进化</a><a href="#sub-5-4-二-kiss模型四维总结-keep-improve-start-stop-7ee0e2">（二）KISS模型四维总结（Keep/Improve/Start/Stop）</a><a href="#minor-5-5-1-keep-保持-持续坚守的正确操作-04c374">1. Keep（保持：持续坚守的正确操作）</a><a href="#minor-5-6-2-improve-改进-持续优化的操作细节-7ac712">2. Improve（改进：持续优化的操作细节）</a><a href="#minor-5-7-3-start-启动-全新执行的交易规则-2290b7">3. Start（启动：全新执行的交易规则）</a><a href="#minor-5-8-4-stop-禁止-彻底杜绝的错误行为-74080e">4. Stop（禁止：彻底杜绝的错误行为）</a></div></details>
+<details class="toc-node"><summary><a href="#chapter-6-六-各主线板块详细解析-937d9c">六、各主线板块详细解析</a><span>展开</span></summary><div class="toc-children"><a href="#intraday-mainline">日内主线表</a><a href="#theme-t1">1. 电力/风电/海峡</a><a href="#theme-t2">2. 光通信/CPO/PCB/半导体</a><a href="#theme-t3">3. 半导体材料/光刻胶/化工</a><a href="#theme-t4">4. AI安全/消费/汽车/旧周期</a></div></details>
+<details class="toc-node"><summary><a href="#chapter-7-七-事件催化时间线-9293ac">七、事件催化时间线</a><span>展开</span></summary><div class="toc-children"></div></details>
+<details class="toc-node"><summary><a href="#chapter-8-八-异动监管-龙虎榜与人气榜情况-40f05e">八、异动监管、龙虎榜与人气榜情况</a><span>展开</span></summary><div class="toc-children"><a href="#sub-8-1-一-异动监管-f37439">（一）异动监管</a><a href="#sub-8-2-二-龙虎榜与资金面-aac62e">（二）龙虎榜与资金面</a><a href="#sub-8-3-三-人气榜-5b62cb">（三）人气榜</a></div></details>
+<details class="toc-node"><summary><a href="#chapter-9-九-跌停与炸板情况-d5f182">九、跌停与炸板情况</a><span>展开</span></summary><div class="toc-children"></div></details>
+<div class="toc-phase-label">03 明日推演</div><details class="toc-node"><summary><a href="#chapter-10-十-核心关键票汇总-明日个股预案-1c8c87">十、明日作战推演总纲</a><span>展开</span></summary><div class="toc-children"><a href="#next-day-market-outlook">大盘明日预期</a><a href="#next-day-theme-outlook">板块题材预期</a><a href="#next-day-core-stock-checks">核心票判定</a><a href="#next-day-scenario-playbooks">情景推演</a></div></details>
+<details class="toc-node"><summary><a href="#chapter-11-十一-大盘明日预期节奏-78977f">十一、大盘与板块题材预期节奏</a><span>展开</span></summary><div class="toc-children"><a href="#next-day-market-outlook">大盘明日预期</a><a href="#next-day-theme-outlook">板块题材预期</a></div></details>
+<details class="toc-node"><summary><a href="#chapter-12-十二-明日核心票弱转强-转强判定-板块预期细化表-3ffd87">十二、核心票弱转强判定+情景推演</a><span>展开</span></summary><div class="toc-children"><a href="#next-day-core-stock-checks">弱转强判定</a><a href="#next-day-scenario-playbooks">情景推演与预案</a></div></details>
+<details class="toc-node"><summary><a href="#chapter-13-十三-龙头预备票-最终定稿-c57786">十三、龙头预备票（最终定稿）</a><span>展开</span></summary><div class="toc-children"><a href="#sub-13-1-一-总龙候选名单-3aea20">（一）总龙候选名单</a><a href="#sub-13-2-二-总龙唯一性排序-9f94e1">（二）总龙唯一性排序</a><a href="#leader-competition-watch">卡位观察</a><a href="#sub-13-3-三-龙头七维核验明细-五维-双唯一性-a71302">（三）龙头七维核验明细（五维+双唯一性）</a><a href="#sub-13-4-四-明日总龙决胜观察要点-7cac4f">（四）明日总龙决胜观察要点</a></div></details>
+<details class="toc-node"><summary><a href="#chapter-14-十四-口述信息全量归档与待确认信息-d62038">十四、口述信息全量归档与待确认信息</a><span>展开</span></summary><div class="toc-children"><a href="#sub-14-1-一-口述中已纳入的关键票池-446b2a">（一）口述中已纳入的关键票池</a><a href="#sub-14-2-二-待确认信息-d5edb4">（二）待确认信息</a><a href="#sub-14-3-三-本轮原始口述归档-7dc0d4">（三）本轮原始口述归档</a></div></details>
+<div class="toc-phase-label">04 交易执行</div><details class="toc-node"><summary><a href="#operation-plan">十五、今日操作计划</a><span>展开</span></summary><div class="toc-children"><a href="#operation-strategy-outline">明日战略总纲</a><a href="#operation-kiss">操作与情绪复盘（KISS模型）</a><a href="#second-review-2026-07-22">盘后二次复盘</a><a href="#theme-rhythm-run">题材节奏运行</a><a href="#operation-process-review">正确复盘重点</a><a href="#operation-plan-three-questions">书面计划三问</a><a href="#editable-operation-table">可编辑交易计划表</a><a href="#holding-handling-table">持仓处理计划表</a></div></details>
+      </div>
+    </aside>
+    <main class="content">
+      <section class="hero">
+        <div class="hero-kicker">Daily A-Share Review · 2026.09.16</div>
+        <h1>章盟主式超短全景复盘（2026.9.16 周三）+ 9.17个股板块预案 - AI文档</h1>
+        <p class="hero-lead">一、复盘总纲</p>
+        <div class="hero-stats">
+          <span>情绪：高潮期</span><span>沪指：3891.6</span><span>量能：18391</span><span>源表：7 张</span>
+        </div>
+      <nav class="review-route" aria-label="复盘阅读路径"><a href="#phase-overview"><span>01</span><strong>盘面定性</strong><small>指数 · 情绪 · 板块节奏</small></a><a href="#phase-diagnosis"><span>02</span><strong>盘后拆解</strong><small>主线 · 催化 · 负反馈</small></a><a href="#phase-playbook"><span>03</span><strong>明日推演</strong><small>大盘 · 板块 · 核心票</small></a><a href="#phase-execution"><span>04</span><strong>交易执行</strong><small>条件 · 仓位 · 止损</small></a></nav></section>
+      <p class="body-line tone-risk">数据来源：用户当日完整口述复盘 + 2026-09-16复盘三表数据文档。本文按用户指定的新版“章盟主式超短全景复盘”结构整理，保留核心判断、交易复盘、个股锚定、板块节奏、异动监管、龙虎榜、人气榜、明日操作计划与待确认信息。三表文档中的大盘情绪表、板块轮动表、人气榜已写入正文；口述中未核验的龙虎榜、异动监管、板块容量、事件催化与语音识别不确定股名，统一标记为待确认/未核验。</p>
+<div class="phase-divider" id="phase-overview"><span>PHASE 01</span><strong>盘面定性</strong><p>先确定指数、情绪与板块节奏，再决定今天是什么市场。</p></div>
+<section class="section-card" id="chapter-1-一-复盘总纲-03e653" data-phase="overview" data-chapter-number="01"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">一、复盘总纲</h2>
+
+<section class="recap-summary-modules" data-recap-summary-modules>
+  <header class="recap-summary-modules__header">
+    <div><span>RECAP BRIEF</span><h3>复盘结论总览</h3></div>
+    <p>先定市场，再定情绪；先看主线矛盾，最后执行明日战略。</p>
+  </header>
+  <div class="recap-summary-modules__body"><article class="recap-summary-row" data-summary-section="R1"><header class="recap-summary-row__title"><span>R1</span><h4>今日市场定性</h4><p>指数与情绪同步修复</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>指数反弹</strong><p>沪指+0.71%，创业+1.96%，科创+4.14%，量能回到18391亿。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>情绪高潮</strong><p>涨停89、跌停4、封板率89%，短线从冰点修复到高潮。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>不直接反转</strong><p>一根阳线只能确认修复，明日分化质量才确认持续性。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>双主线</strong><p>短线看闽东，趋势看科技；两条线都不追一致高潮。</p></li></ol></article><article class="recap-summary-row" data-summary-section="R2"><header class="recap-summary-row__title"><span>R2</span><h4>情绪状态</h4><p>高标分化后的唯一性选择</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>闽东胜出</strong><p>闽东电力跌停翘起后6板回封，是唯一高标锚。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>AI证伪</strong><p>中新赛克跌停，AI安全不再作为短线主攻。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>旧周期退潮</strong><p>消费、农业、汽车只看止跌，不做反抽幻想。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>科技小高潮</strong><p>通信、芯片、PCB、半导体材料放量共振。</p></li></ol></article><article class="recap-summary-row" data-summary-section="R3"><header class="recap-summary-row__title"><span>R3</span><h4>主线矛盾</h4><p>高位抱团与趋势容量并行</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>短线矛盾</strong><p>闽东要靠电力/风电/海峡助攻证明7板质量。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>趋势矛盾</strong><p>科技今天强启动，明天关键是分化承接而非继续高潮。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>资金对流</strong><p>闽东若继续吸血，科技小票追高性价比会下降。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>风险锚</strong><p>中新赛克、国芳、桂林等负反馈不能继续扩散。</p></li></ol></article><article class="recap-summary-row is-strategy" data-summary-section="R4"><header class="recap-summary-row__title"><span>R4</span><h4>明日战略总纲</h4><p>先处理持仓，再等分化选强</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>先看闽东</strong><p>有助攻、健康换手、回封强则持有；无助攻或弱走按条件单处理。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>再看科技</strong><p>科技低开或小高开分化承接才考虑ETF或前排试仓。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>只选强者</strong><p>西陇、通鼎、中晶等只做分化选强，不做高开一致追涨。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>远离证伪</strong><p>AI安全、汽车、消费旧周期不做弱修复幻想。</p></li></ol></article></div>
+</section>
+
+<style>
+.recap-summary-modules{margin:18px 0 26px;border-top:3px solid #0b7166;border-bottom:1px solid #d5e3df;background:#fbfdfc;color:#173e38}
+.recap-summary-modules__header{display:flex;align-items:end;justify-content:space-between;gap:20px;padding:18px 20px;border-bottom:1px solid #d5e3df;background:#eef6f3}
+.recap-summary-modules__header span{display:block;color:#0b7166;font-size:10px;font-weight:850;letter-spacing:.16em}.recap-summary-modules__header h3{margin:3px 0 0;font-size:24px;letter-spacing:0}.recap-summary-modules__header p{margin:0;color:#607b75;font-size:13px}
+.recap-summary-row{display:grid;grid-template-columns:190px minmax(0,1fr);border-bottom:1px solid #e0eae7}.recap-summary-row:last-child{border-bottom:0}.recap-summary-row__title{padding:20px;border-right:1px solid #e0eae7}.recap-summary-row__title span{display:block;color:#7a9690;font-size:11px;font-weight:850}.recap-summary-row__title h4{margin:5px 0 6px;font-size:18px;letter-spacing:0;color:#0a5d55}.recap-summary-row__title p{margin:0;color:#78908b;font-size:12px;line-height:1.55}
+.recap-summary-points{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:0;padding:0;list-style:none}.recap-summary-point{padding:18px 16px;border-right:1px solid #e5eeeb}.recap-summary-point:last-child{border-right:0}.recap-summary-point__order{display:block;margin-bottom:7px;color:#0b7166;font-size:11px;font-weight:850}.recap-summary-point strong{display:block;margin-bottom:6px;font-size:14px;color:#173e38}.recap-summary-point p{margin:0;color:#506c66;font-size:13px;line-height:1.65;overflow-wrap:anywhere}
+.recap-summary-row.is-strategy{background:#fffaf0}.recap-summary-row.is-strategy .recap-summary-row__title{background:#123f39;color:#fff}.recap-summary-row.is-strategy .recap-summary-row__title h4{color:#fff}.recap-summary-row.is-strategy .recap-summary-row__title span,.recap-summary-row.is-strategy .recap-summary-row__title p{color:#acd9cf}.recap-summary-row.is-strategy .recap-summary-point__order{color:#a56d0d}.recap-summary-row.is-strategy .recap-summary-point strong{color:#714d0d}
+@media(max-width:980px){.recap-summary-row{grid-template-columns:150px minmax(0,1fr)}.recap-summary-points{grid-template-columns:repeat(2,minmax(0,1fr))}.recap-summary-point:nth-child(2){border-right:0}.recap-summary-point:nth-child(-n+2){border-bottom:1px solid #e5eeeb}}
+@media(max-width:650px){.recap-summary-modules__header{display:block}.recap-summary-modules__header p{margin-top:7px}.recap-summary-row{grid-template-columns:1fr}.recap-summary-row__title{padding:16px;border-right:0;border-bottom:1px solid #e0eae7}.recap-summary-points{grid-template-columns:1fr}.recap-summary-point{padding:14px 16px;border-right:0;border-bottom:1px solid #e5eeeb}.recap-summary-point:last-child{border-bottom:0}}
+</style>
+
+<div class="section-kicker">Market Snapshot</div><h3 id="market-snapshot-with-change" class="subchapter-title">近四日大盘情绪截图表（含涨跌幅）</h3><div class="table-shell" id="source-table-0"><table class="data-table"><thead><tr><th>周几</th><th>日期</th><th>沪指</th><th>深指</th><th>创业</th><th>科创</th><th>沪指量能</th><th>情绪强度</th><th>极端腾落数（涨停-跌停）</th><th>腾落数（上涨-下跌）</th><th>一板</th><th>二板</th><th>三板</th><th>高度板</th><th>封板率</th><th>断板</th></tr></thead><tbody><tr><td>周三</td><td>2026-09-09</td><td>3951.51（+0.28%）</td><td>13723.32（+0.15%）</td><td>3354.97（-0.14%）</td><td>1580.06（-0.69%）</td><td>18556</td><td>退潮期</td><td>48-7</td><td>1729-3369</td><td>33</td><td>10</td><td>4</td><td>5</td><td>64%</td><td>27</td></tr><tr><td>周一</td><td>2026-09-14</td><td>3885.33（-0.07%）</td><td>13384.57（-0.64%）</td><td>3285.58（-1.10%）</td><td>1528.27（-1.62%）</td><td>16292</td><td>修复期</td><td>55-16</td><td>None</td><td>44</td><td>7</td><td>3</td><td>4</td><td>65%</td><td>30</td></tr><tr><td>周二</td><td>2026-09-15</td><td>3864.28（-0.54%）</td><td>13287.97（-0.72%）</td><td>3247.92（-1.15%）</td><td>1551.96（+1.55%）</td><td>16127</td><td>冰点期</td><td>32-27</td><td>1054-4103</td><td>25</td><td>3</td><td>2</td><td>5</td><td>57%</td><td>24</td></tr><tr><td>周三</td><td>2026-09-16</td><td>3891.6（+0.71%）</td><td>13454.74（+1.26%）</td><td>3311.47（+1.96%）</td><td>1616.19（+4.14%）</td><td>18391</td><td>高潮期</td><td>89-4</td><td>3888-1134</td><td>77</td><td>9</td><td>1</td><td>6</td><td>89%</td><td>11</td></tr></tbody></table></div>
+
+<section class="decision-dashboard" id="decision-dashboard" data-decision-dashboard data-review-date="2026-09-16">
+  <style>
+    .decision-dashboard{margin:20px 0 28px;color:#143c38;font-family:inherit}
+    .decision-dashboard *{box-sizing:border-box}
+    .decision-dashboard__head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:12px}
+    .decision-dashboard__head h2{margin:0;font-size:24px;line-height:1.25;letter-spacing:0}
+    .decision-dashboard__head p{margin:0;color:#607a76;font-size:13px;text-align:right}
+    .decision-band{padding:18px 0;border-top:1px solid #cfe0dc}
+    .decision-band:first-of-type{border-top:3px solid #14877d}
+    .decision-band__title{display:flex;align-items:center;gap:10px;margin:0 0 10px;font-size:18px;letter-spacing:0}
+    .decision-band__index{display:grid;place-items:center;width:26px;height:26px;border-radius:6px;background:#e0f3ef;color:#08736b;font-size:13px;font-weight:800}
+    .decision-table-wrap{width:100%;overflow-x:auto;border:1px solid #d8e5e2;border-radius:8px;background:#fff}
+    .decision-table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:13px}
+    .decision-table th{padding:10px 8px;background:#e9f5f2;color:#075f59;text-align:left;vertical-align:middle;font-weight:800;border-right:1px solid #d8e5e2}
+    .decision-table td{padding:10px 8px;line-height:1.55;vertical-align:top;border-top:1px solid #e4ecea;border-right:1px solid #e4ecea;overflow-wrap:anywhere}
+    .decision-table th:last-child,.decision-table td:last-child{border-right:0}
+    .decision-table tbody tr:nth-child(even){background:#f9fcfb}
+    .scenario-name{font-weight:800;color:#103f3a}
+    .scenario-level{display:inline-block;padding:3px 7px;border-radius:5px;background:#fff2d6;color:#8a4b00;font-weight:700;white-space:nowrap}
+    .source-note{margin:10px 0 0;padding-left:10px;border-left:3px solid #f2a43a;color:#647975;font-size:12px;line-height:1.6}
+    .stock-pool-table th:nth-child(1){width:8%}.stock-pool-table th:nth-child(2){width:10%}.stock-pool-table th:nth-child(3){width:14%}
+    .stock-pool-table th:nth-child(4){width:18%}.stock-pool-table th:nth-child(5){width:19%}.stock-pool-table th:nth-child(6){width:19%}.stock-pool-table th:nth-child(7){width:12%}
+    .hazard-table th:nth-child(1){width:15%}.hazard-table th:nth-child(2){width:22%}.hazard-table th:nth-child(3){width:22%}.hazard-table th:nth-child(4){width:21%}.hazard-table th:nth-child(5){width:20%}
+    .hazard-label{font-weight:800;color:#a33a2c}.hazard-table th{background:#fff0ec;color:#9d382b}
+    @media (max-width:900px){.decision-dashboard__head{align-items:flex-start;flex-direction:column}.decision-dashboard__head p{text-align:left}.decision-table{min-width:980px}}
+  </style>
+
+  <div class="decision-dashboard__head">
+    <h2>盘面决策摘要</h2>
+    <p>证据截止 2026-09-16T21:00:00+08:00 · 事实与推演分开记录</p>
+  </div>
+
+  <section class="decision-band" id="four-scenarios" data-four-scenarios>
+    <h3 class="decision-band__title"><span class="decision-band__index">01</span>四种场景</h3>
+    <div class="decision-table-wrap">
+      <table class="decision-table scenario-table">
+        <thead><tr><th>场景</th><th>级别</th><th>确认信号</th><th>交易动作</th><th>撤退信号</th></tr></thead>
+        <tbody>
+          <tr><td class="scenario-name">主线加强</td><td><span class="scenario-level">主场景</span></td><td>闽东先承接后主动上板，乐山电力、吉鑫科技、平潭发展等助攻不出现大负反馈</td><td>继续处理闽东持仓，强则格局，不在7板无确认处盲目加仓</td><td>闽东弱开弱走、放量不能回封，或两个助攻方向同时分歧走弱</td></tr>
+          <tr><td class="scenario-name">分歧回流</td><td><span class="scenario-level">次场景</span></td><td>通鼎互联、东材科技、有研新材、西陇科学或ETF588170/159516出现放量企稳</td><td>选不到强股时用ETF试仓，个股只做分化选强</td><td>科技高开过多后砸盘，核心一起冲高回落</td></tr>
+          <tr><td class="scenario-name">退潮切换</td><td><span class="scenario-level">低概率</span></td><td>芯片、通信、PCB、半导体材料继续放量，ETF不破关键承接</td><td>降低短线接力仓，切到趋势ETF或科技前排小仓</td><td>科技无法承接闽东分歧，趋势与短线同时走弱</td></tr>
+          <tr><td class="scenario-name">全面退潮</td><td><span class="scenario-level">风险场景</span></td><td>跌停数重新扩大，AI安全和旧周期负反馈继续拖累高标</td><td>执行条件单，减仓或空仓等待下一次冰点</td><td>跌停维持低位且至少一条主线完成分歧回流</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="decision-band" id="stock-pool" data-stock-pool>
+    <h3 class="decision-band__title"><span class="decision-band__index">02</span>标的池</h3>
+    <div class="decision-table-wrap">
+      <table class="decision-table stock-pool-table">
+        <thead><tr><th>层级</th><th>题材</th><th>标的</th><th>定位</th><th>进场触发</th><th>风控</th><th>来源</th></tr></thead>
+        <tbody><tr><td>S级核心</td><td>电力/风电/海峡</td><td>闽东电力</td><td>唯一6板，高位跌停翘起后放量回封</td><td>7板健康换手且有电力/风电/海峡助攻</td><td>弱开弱走、回封失败或助攻方向同时转弱</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260916" target="_blank" rel="noreferrer">东方财富</a> / <a href="https://www.10jqka.com.cn/" target="_blank" rel="noreferrer">同花顺</a> / <a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>A级前排</td><td>科技趋势</td><td>588170/159516</td><td>科技共振时个股难选，用ETF承接趋势平均溢价</td><td>低开或小高开后回踩不破、放量企稳</td><td>指数和科技双高开砸盘或ETF跌破承接</td><td><a href="https://www.duanxianxia.com/web/platerotat" target="_blank" rel="noreferrer">短线侠</a> / <a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>A级前排</td><td>PCB/光刻胶</td><td>西陇科学</td><td>科技小票分化选强候选，平台突破感较好</td><td>科技分化后主动承接，PCB/光刻胶继续有补涨</td><td>只冲高不带板块或科技核心回落</td><td><a href="https://www.duanxianxia.com/web/platerotat" target="_blank" rel="noreferrer">短线侠</a> / <a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>A级前排</td><td>通信/CPO</td><td>通鼎互联</td><td>热榜2且2连板，通信前排辨识度</td><td>2进3分化后仍放量承接</td><td>CPO后排无溢价或高开低走</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260916" target="_blank" rel="noreferrer">东方财富</a> / <a href="https://www.10jqka.com.cn/" target="_blank" rel="noreferrer">同花顺</a> / <a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>A级前排</td><td>半导体材料</td><td>有研新材</td><td>热榜17首板涨停，半导体材料核心</td><td>材料线继续补强，科技分化不杀</td><td>材料端被CPO虹吸，首板无溢价</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260916" target="_blank" rel="noreferrer">东方财富</a> / <a href="https://www.10jqka.com.cn/" target="_blank" rel="noreferrer">同花顺</a> / <a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>B级观察</td><td>PCB趋势</td><td>超声电子</td><td>PCB趋势锚，适合分化承接观察</td><td>PCB回流且异动空间舒适</td><td>中位负反馈扩大</td><td><a href="https://www.duanxianxia.com/web/platerotat" target="_blank" rel="noreferrer">短线侠</a> / <a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>B级观察</td><td>海峡助攻</td><td>平潭发展</td><td>热榜10首板涨停，海峡方向助攻闽东</td><td>海峡分化不杀并继续助攻闽东</td><td>海峡高开低走拖累闽东</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260916" target="_blank" rel="noreferrer">东方财富</a> / <a href="https://www.10jqka.com.cn/" target="_blank" rel="noreferrer">同花顺</a> / <a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>R级风险</td><td>AI安全</td><td>中新赛克</td><td>高标跌停，题材被证伪</td><td>不设买入触发，仅作风险锚</td><td>若继续核按钮，压制高标情绪</td><td><a href="http://push2ex.eastmoney.com/getTopicDTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260916" target="_blank" rel="noreferrer">东方财富</a> / <a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>R级风险</td><td>旧周期消费</td><td>国芳集团</td><td>消费旧周期负反馈锚</td><td>不做反抽幻想</td><td>跌停扩散会拖累高标</td><td><a href="http://push2ex.eastmoney.com/getTopicDTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260916" target="_blank" rel="noreferrer">东方财富</a> / <a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a></td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="decision-band" id="intraday-hazards" data-intraday-hazards>
+    <h3 class="decision-band__title"><span class="decision-band__index">03</span>日内雷区</h3>
+    <div class="decision-table-wrap">
+      <table class="decision-table hazard-table">
+        <thead><tr><th>雷区</th><th>危险信号</th><th>禁止动作</th><th>解除条件</th><th>关联标的/板块</th></tr></thead>
+        <tbody><tr><td class="hazard-label">科技小高潮追高</td><td>指数和科技双高开，CPO/芯片核心竞价一致。</td><td>禁止追高小票和ETF。</td><td>分化后回踩不破并放量企稳。</td><td>588170/159516、通鼎互联、西陇科学</td></tr><tr><td class="hazard-label">闽东无助攻硬格局</td><td>电力/风电/海峡无一字或强板助攻，闽东放量不能回封。</td><td>禁止幻想7板必成。</td><td>闽东主动回封且至少一条助攻线转强。</td><td>闽东电力、平潭发展、乐山电力</td></tr><tr><td class="hazard-label">被证伪题材弱修复</td><td>中新赛克跌停后AI安全只做局部反抽。</td><td>禁止参与AI安全/AI应用弱修复。</td><td>重新出现容量、梯队和前排主动性。</td><td>中新赛克、博汇科技</td></tr><tr><td class="hazard-label">旧周期反抽诱多</td><td>国芳、桂林、龙版传媒止跌不充分。</td><td>禁止把退潮止跌当新主线。</td><td>跌停收敛且新主线完成确认。</td><td>国芳集团、桂林旅游、金健米业</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Required placeholder: INTRADAY_WATCHPOINT_CARDS_HTML -->
+<section class="decision-band intraday-watchpoints" id="intraday-watchpoints" data-intraday-watchpoints>
+  <h3 class="decision-band__title"><span class="decision-band__index">04</span>盘内看点</h3>
+  <p class="intraday-watchpoints__note">按时间与行为拆解盘面：竞价先定方向，尾盘看资金最终选择，反包板验证核心赚钱效应。</p>
+  <div class="intraday-watchpoints__grid"><article class="intraday-watchpoint-card" data-watchpoint-type="竞价定调"><div class="intraday-watchpoint-card__head"><h4>竞价定调</h4><span class="intraday-watchpoint-card__status">核心高标恐慌后抢筹</span></div><div class="intraday-watchpoint-card__body"><p class="intraday-watchpoint-card__item"><strong>盘面事实</strong>闽东电力竞价跌停封单逐步减少，20分后撤单抢筹拉红；精确金额来自口述待核。</p><p class="intraday-watchpoint-card__item"><strong>核心标的</strong>闽东电力</p><p class="intraday-watchpoint-card__item"><strong>交易含义</strong>高位抱团资金仍愿意承接唯一高度。</p><p class="intraday-watchpoint-card__item"><strong>次日验证</strong>7板竞价不能再弱开弱走，需有助攻同步。</p></div><div class="intraday-watchpoint-card__source">来源：用户文档 / 骑牛股</div></article><article class="intraday-watchpoint-card" data-watchpoint-type="尾盘异动"><div class="intraday-watchpoint-card__head"><h4>尾盘异动</h4><span class="intraday-watchpoint-card__status">午后回封确认</span></div><div class="intraday-watchpoint-card__body"><p class="intraday-watchpoint-card__item"><strong>盘面事实</strong>闽东拉板后炸板，午后最终回封；科技趋势维持强势。</p><p class="intraday-watchpoint-card__item"><strong>核心标的</strong>闽东电力 / 通鼎互联 / 有研新材</p><p class="intraday-watchpoint-card__item"><strong>交易含义</strong>短线抱团与科技趋势并行，明日进入分化检验。</p><p class="intraday-watchpoint-card__item"><strong>次日验证</strong>尾盘回封票需次日给溢价，科技不能高开低走。</p></div><div class="intraday-watchpoint-card__source">来源：用户文档 / 东方财富</div></article><article class="intraday-watchpoint-card" data-watchpoint-type="反包板"><div class="intraday-watchpoint-card__head"><h4>反包板</h4><span class="intraday-watchpoint-card__status">高位抱团模型复现</span></div><div class="intraday-watchpoint-card__body"><p class="intraday-watchpoint-card__item"><strong>盘面事实</strong>用户将闽东类比龙版传媒6板与桂林旅游跌停翘板后的高位抱团图形。</p><p class="intraday-watchpoint-card__item"><strong>核心标的</strong>闽东电力 / 龙版传媒 / 桂林旅游</p><p class="intraday-watchpoint-card__item"><strong>交易含义</strong>这是高位情绪抱团，不是低位题材首日启动。</p><p class="intraday-watchpoint-card__item"><strong>次日验证</strong>看地位、承接、量能和助攻是否继续同时成立。</p></div><div class="intraday-watchpoint-card__source">来源：用户文档</div></article></div>
+</section>
+<style>
+.intraday-watchpoints{border-top-color:#cfe0dc}.intraday-watchpoints__note{margin:-2px 0 12px;color:#607a76;font-size:12px;line-height:1.65}
+.intraday-watchpoints__grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.intraday-watchpoint-card{min-width:0;border:1px solid #d8e5e2;border-top:3px solid var(--watch-accent,#14877d);border-radius:8px;background:#fff;overflow:hidden}
+.intraday-watchpoint-card[data-watchpoint-type="竞价定调"]{--watch-accent:#16857b}.intraday-watchpoint-card[data-watchpoint-type="尾盘异动"]{--watch-accent:#d28a25}.intraday-watchpoint-card[data-watchpoint-type="反包板"]{--watch-accent:#b64c3c}
+.intraday-watchpoint-card__head{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px 12px;background:#f7fbfa}.intraday-watchpoint-card__head h4{margin:0;color:#123f3a;font-size:16px;letter-spacing:0}.intraday-watchpoint-card__status{padding:3px 6px;border-radius:4px;background:#edf5f3;color:#416961;font-size:11px;font-weight:800}
+.intraday-watchpoint-card__body{display:grid;grid-template-columns:1fr 1fr}.intraday-watchpoint-card__item{margin:0;padding:10px 12px;border-top:1px solid #e5eeec;color:#365650;font-size:12px;line-height:1.6}.intraday-watchpoint-card__item:nth-child(odd){border-right:1px solid #e5eeec}.intraday-watchpoint-card__item strong{display:block;margin-bottom:3px;color:#0b675f}.intraday-watchpoint-card__source{padding:8px 12px;border-top:1px solid #e5eeec;color:#6f817d;font-size:11px}
+@media(max-width:980px){.intraday-watchpoints__grid{grid-template-columns:1fr}.intraday-watchpoint-card__body{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.intraday-watchpoint-card__body{grid-template-columns:1fr}.intraday-watchpoint-card__item:nth-child(odd){border-right:0}}
+</style>
+
+
+
+<section class="decision-band post-market-intelligence" id="post-market-intelligence" data-post-market-intelligence>
+  <style>
+    .post-market-intelligence{--pm-teal:#08736b;--pm-ink:#173f3a;--pm-line:#d8e5e2;--pm-soft:#f3faf8;--pm-warn:#a34c12}
+    .post-market-intelligence__head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:10px}
+    .post-market-intelligence__head .decision-band__title{margin:0}
+    .post-market-intelligence__time{color:#687f7b;font-size:12px;white-space:nowrap}
+    .post-market-intelligence__summary{margin:0 0 18px;padding:12px 14px;border-left:4px solid #f0a135;background:#fff7e8;color:#5b3b13;font-size:14px;font-weight:700;line-height:1.7}
+    .post-market-group{margin-top:18px}
+    .post-market-group__title{display:flex;align-items:center;gap:8px;margin:0 0 8px;color:var(--pm-ink);font-size:15px;letter-spacing:0}
+    .post-market-group__title span{display:grid;place-items:center;width:23px;height:23px;border-radius:5px;background:#e4f3f0;color:var(--pm-teal);font-size:11px;font-weight:800}
+    .post-market-table-wrap{width:100%;overflow-x:auto;border:1px solid var(--pm-line);border-radius:8px;background:#fff;overscroll-behavior-inline:contain}
+    .post-market-table{width:100%;border-collapse:collapse;table-layout:fixed;font-size:12px}
+    .post-market-table th{padding:9px 7px;background:#edf7f5;color:#075f59;text-align:left;vertical-align:middle;font-weight:800;border-right:1px solid var(--pm-line)}
+    .post-market-table td{padding:9px 7px;color:#254a45;line-height:1.55;vertical-align:top;border-top:1px solid #e6eeec;border-right:1px solid #e6eeec;overflow-wrap:anywhere}
+    .post-market-table th:last-child,.post-market-table td:last-child{border-right:0}
+    .post-market-table tbody tr:nth-child(even){background:#fbfdfc}
+    .post-market-table a{color:#08736b;font-weight:700;text-decoration:none}
+    .post-market-table a:hover{text-decoration:underline}
+    .post-market-table .status-badge{display:inline-block;padding:2px 6px;border-radius:4px;background:#e4f3f0;color:#08675f;font-weight:800;white-space:nowrap}
+    .post-market-table .status-badge.is-lead{background:#fff0dc;color:#9a4b09}
+    .post-market-table .status-badge.is-unverified{background:#fbe6e2;color:#9f3527}
+    .post-market-table--overseas th:nth-child(1){width:13%}.post-market-table--overseas th:nth-child(2){width:13%}.post-market-table--overseas th:nth-child(3){width:18%}.post-market-table--overseas th:nth-child(4){width:20%}.post-market-table--overseas th:nth-child(5){width:25%}.post-market-table--overseas th:nth-child(6){width:11%}
+    .post-market-table--catalyst th:nth-child(1){width:20%}.post-market-table--catalyst th:nth-child(2){width:12%}.post-market-table--catalyst th:nth-child(3){width:12%}.post-market-table--catalyst th:nth-child(4){width:8%}.post-market-table--catalyst th:nth-child(5){width:18%}.post-market-table--catalyst th:nth-child(6){width:20%}.post-market-table--catalyst th:nth-child(7){width:10%}
+    .post-market-table--focus th:nth-child(1){width:12%}.post-market-table--focus th:nth-child(2){width:20%}.post-market-table--focus th:nth-child(3){width:19%}.post-market-table--focus th:nth-child(4){width:9%}.post-market-table--focus th:nth-child(5){width:16%}.post-market-table--focus th:nth-child(6){width:16%}.post-market-table--focus th:nth-child(7){width:8%}
+    .post-market-rumors{margin:12px 0 0;padding:10px 12px;border:1px solid #ecd7c0;border-radius:8px;background:#fffbf5}
+    .post-market-rumors strong{display:block;margin-bottom:6px;color:var(--pm-warn);font-size:13px}
+    .post-market-rumors ul{margin:0;padding-left:18px;color:#71513c;font-size:12px;line-height:1.65}
+    @media(max-width:900px){.post-market-intelligence__head{align-items:flex-start;flex-direction:column}.post-market-intelligence__time{white-space:normal}.post-market-table{min-width:980px}.post-market-intelligence__summary{font-size:13px}}
+  </style>
+
+  <div class="post-market-intelligence__head">
+    <h3 class="decision-band__title"><span class="decision-band__index">05</span>盘后情报</h3>
+    <span class="post-market-intelligence__time">更新至 2026-09-16T21:00:00+08:00</span>
+  </div>
+  <p class="post-market-intelligence__summary"><strong>盘后结论：</strong>盘后核心是两条线：闽东代表短线唯一高度，科技代表趋势容量；明日都看分化承接而不是追高潮。</p>
+
+  <section class="post-market-group" data-post-market-overseas>
+    <h4 class="post-market-group__title"><span>5.1</span>海外市场映射</h4>
+    <div class="post-market-table-wrap">
+      <table class="post-market-table post-market-table--overseas">
+        <thead><tr><th>市场/方向</th><th>表现</th><th>核心驱动</th><th>A股映射</th><th>次日验证</th><th>来源</th></tr></thead>
+        <tbody><tr><td>美股科技/韩国市场</td><td>盘前需复核</td><td>影响A股科技趋势分化质量</td><td>CPO、半导体、PCB、ETF 588170/159516</td><td>若海外科技不差，A股科技低开分化更适合低吸。</td><td><a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>FOMC利率窗口</td><td>事件落地待确认</td><td>影响全球风险偏好和成长股估值</td><td>科创、创业板、半导体、CPO</td><td>落地前后避免高开追涨。</td><td><a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noreferrer">Federal Reserve</a></td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="post-market-group" data-post-market-catalysts>
+    <h4 class="post-market-group__title"><span>5.2</span>事件催化</h4>
+    <div class="post-market-table-wrap">
+      <table class="post-market-table post-market-table--catalyst">
+        <thead><tr><th>事件</th><th>方向</th><th>确认度</th><th>热度</th><th>A股映射</th><th>次日验证</th><th>来源</th></tr></thead>
+        <tbody><tr><td>电子信息十五五规划线索</td><td>科技</td><td><span class="status-badge is-lead">社区线索</span></td><td>中</td><td>半导体、CPO、PCB、消费电子</td><td>只看盘面资金是否继续放量承接。</td><td><a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a> / <a href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">韭研公社</a></td></tr><tr><td>光博会验证光互联高景气</td><td>CPO/光通信</td><td><span class="status-badge is-lead">社区线索</span></td><td>高</td><td>通鼎互联、永鼎股份、光迅科技</td><td>前排分化后不能集体冲高回落。</td><td><a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a> / <a href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">韭研公社</a></td></tr><tr><td>福建美丽中国先行区文件</td><td>海峡/福建</td><td><span class="status-badge is-unverified">未确认</span></td><td>中</td><td>闽东电力、平潭发展、瑞达期货</td><td>以海峡板块分化是否承接闽东为准。</td><td><a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a> / <a href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">韭研公社</a></td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="post-market-group" data-post-market-focus>
+    <h4 class="post-market-group__title"><span>5.3</span>市场关注</h4>
+    <div class="post-market-table-wrap">
+      <table class="post-market-table post-market-table--focus">
+        <thead><tr><th>方向</th><th>催化逻辑</th><th>盘面基础</th><th>情绪</th><th>关注标的</th><th>次日验证</th><th>来源</th></tr></thead>
+        <tbody><tr><td>短线高标</td><td>闽东6板破局</td><td>6板唯一高度，热榜第一。</td><td>高位抱团</td><td>闽东电力</td><td>7板换手、助攻和回封质量。</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260916" target="_blank" rel="noreferrer">东方财富</a> / <a href="https://www.10jqka.com.cn/" target="_blank" rel="noreferrer">同花顺</a> / <a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>科技趋势</td><td>CPO/PCB/半导体放量共振</td><td>通信15469、芯片12891、化工6798。</td><td>机构趋势/科技题材</td><td>通鼎互联 / 有研新材 / 东材科技 / 588170/159516</td><td>低开或小高开承接。</td><td><a href="https://www.duanxianxia.com/web/platerotat" target="_blank" rel="noreferrer">短线侠</a> / <a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>旧周期风险</td><td>AI安全跌停证伪、消费退潮</td><td>中新赛克等高标负反馈。</td><td>亏钱效应</td><td>中新赛克 / 国芳集团 / 桂林旅游</td><td>跌停不扩散即可，不做主攻。</td><td><a href="http://push2ex.eastmoney.com/getTopicDTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260916" target="_blank" rel="noreferrer">东方财富</a> / <a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a></td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <aside class="post-market-rumors" data-post-market-rumors>
+    <strong>未确认线索处理</strong>
+    <ul><li><strong>未确认｜2026-09-17利率决议具体影响</strong>：盘前只作风险偏好观察，不提前定方向。 （来源：<a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noreferrer">Federal Reserve</a> / <a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a>）</li><li><strong>社区线索｜外部复盘口径的板块容量数字</strong>：只保留容量级别判断，精确数不作已确认事实。 （来源：<a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a>）</li><li><strong>未确认｜福建海峡文件对板块的直接催化</strong>：次日只看海峡板块分化承接，不靠消息硬做。 （来源：<a href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">韭研公社</a> / <a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档</a>）</li></ul>
+  </aside>
+</section>
+
+
+  <p class="source-note">证据来源：<a href="https://www.duanxianxia.com/web/platerotat" target="_blank" rel="noreferrer">短线侠：9月16日板块轮动强度</a>；<a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260916" target="_blank" rel="noreferrer">东方财富：9月16日涨停池/连板梯队</a>；<a href="http://push2ex.eastmoney.com/getTopicZBPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260916" target="_blank" rel="noreferrer">东方财富：9月16日炸板池</a>；<a href="http://push2ex.eastmoney.com/getTopicDTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260916" target="_blank" rel="noreferrer">东方财富：9月16日跌停池</a>；<a href="https://www.qiniugu.com/bonus.html" target="_blank" rel="noreferrer">骑牛股：9月16日情绪与连板统计</a>；<a href="https://www.10jqka.com.cn/" target="_blank" rel="noreferrer">同花顺：9月16日24小时热榜</a>；<a href="file:///C:/Users/Administrator/Desktop/Codex/A%E8%82%A1%E5%A4%8D%E7%9B%98%E8%BE%93%E5%87%BA/2026-09-16-%E7%AB%A0%E7%9B%9F%E4%B8%BB%E5%BC%8F%E8%B6%85%E7%9F%AD%E5%85%A8%E6%99%AF%E5%A4%8D%E7%9B%98-AI%E6%96%87%E6%A1%A3-%E5%AE%8C%E6%95%B4%E4%B8%8D%E9%81%97%E6%BC%8F%E7%89%88.md" target="_blank" rel="noreferrer">用户文档：9月16日章盟主式超短全景复盘AI文档</a>；<a href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">韭研公社：事件催化时间线</a>；<a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noreferrer">Federal Reserve：FOMC会议窗口</a>。待核项：闽东电力仓位口述存在半仓与8.5成两种表述，页面按待核保留。；竞价封单约7000万、开板次数、龙虎榜净流入、异动监管距离均需盘前逐项核验。；中晶科技、澳弘电子、吉鑫科技、天融信等口述音译已做高置信修正，但仍保留待确认语义。；光通信300多亿、半导体151亿、PCB121亿等板块容量来自外部复盘口述，精确值未核。；FOMC和福建文件等事件催化仅作观察线索，不作为已确认买点。</p>
+</section>
+
+
+
+<p class="body-line tone-risk">三表数据显示，2026-09-16 盘面进入“高潮期”：沪指3891.6，深指13454.74，创业板3311.47，科创1616.19，沪指量能18391；涨停89家、跌停4家，极端腾落数89-4，腾落数3888-1134；一板77、二板9、三板1、高度板6，封板率0.89，断板11。指数与情绪同步探底修复，但仍不能因为一根阳线直接确认反转，明日分化质量才是核心验证。</p>
+<p class="body-line tone-risk">今日口述主线先从连板与短线情绪展开：短线高标分化非常剧烈，AI安全方向被中新赛克（口述“中新赛克”，待确认）跌停直接证伪，题材持续性被用户判断为“没有持续性”，后续不再作为短线主攻方向。</p>
+<p class="body-line">连板高度上，闽东电力完成6板晋级，并且是从跌停附近被翘起后放量进攻封板，属于非常强的高位修复与主动进攻反馈。其强势不仅来自电力，还叠加风电、福建、海峡、算力等复合属性，用户将其类比为圣阳股份一类“多题材杂合高标”。</p>
+<p class="body-line tone-risk">但连板结构并不算完整：4板与6板各有一个，用户判断4板继续晋级5板、3板继续晋级4板的概率都不高；科技方向二板存在中晶科技（口述“中金/中晶科技”，待确认）、通鼎互联、西陇科学等辨识度，但更偏趋势与小票弹性，不是纯连板高度打法。</p>
+<p class="body-line tone-action">主板短线之外，今日最强的其实是科技趋势：半导体产业链、光通信/CPO、PCB、硅材料、光刻胶等方向出现放量共振，用户判断属于科技方向“小高潮”。如果个股不好选，可以用ETF替代，比如588170、159516这类标的，形态上是探底假阳线后连续两根爆量大阳线，明日重点看分化后的低吸机会。</p>
+<p class="body-line">板块云图与外部复盘进一步确认科技内部强度：半导体元件、消费电子、光学光电子、电子化学品表现很猛，CPO、存储芯片、半导体、光刻机/光刻胶、PCB等分支都有强反馈；银行没有明显护盘，电池与宁德时代方向偏弱，贵金属也有明显表现。外部复盘口径里，光通信容量约300多亿、半导体151亿、PCB 121亿，三条科技容量足以支撑指数上攻；海峡约60亿，消费、电池、机器人均不足10亿，液冷约16亿，说明真正能扛指数的是科技容量方向。</p>
+<p class="body-line tone-action">短线题材层面，用户当前结论非常明确：AI安全/AI应用不看，汽车不看，消费仍有负反馈，农业负反馈缓和，真正具备持续性的只剩电力，尤其是电力、风电、海峡围绕闽东电力轮动接力。风电昨日高潮弱启动，今日分歧；海峡今日爆发，把闽东电力从分歧中重新捞起，明日就看风电/电力回流与海峡分化之间能否形成继续承接。</p>
+</section>
+<section class="section-card" id="chapter-2-二-市场风格与赚钱效应解析-cb50c9" data-phase="overview" data-chapter-number="02"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">二、市场风格与赚钱效应解析</h2>
+
+<section class="effect-positioning-module" data-effect-positioning data-date="2026-09-16" id="effect-positioning">
+  <div class="module-head">
+    <span class="section-kicker">Market Effect Map</span>
+    <h3 class="module-title">赚钱效应与亏钱效应定位</h3>
+    <span class="module-status" data-effect-status>本地已保存</span>
+  </div>
+  <div class="effect-grid">
+    <div class="effect-panel profit"><h4>赚钱效应</h4><div class="effect-chipset" data-effect-group="profit"></div></div>
+    <div class="effect-panel loss"><h4>亏钱效应</h4><div class="effect-chipset" data-effect-group="loss"></div></div>
+  </div>
+  <script type="application/json" data-effect-options>[&quot;抱团高位&quot;, &quot;机构趋势&quot;, &quot;短线情绪&quot;, &quot;高低切换&quot;, &quot;避险题材&quot;, &quot;科技题材&quot;, &quot;老登题材&quot;, &quot;混沌轮动&quot;, &quot;断板反包&quot;, &quot;N字启动&quot;]</script>
+  <script type="application/json" data-effect-defaults>{&quot;profit&quot;: [&quot;抱团高位&quot;, &quot;机构趋势&quot;, &quot;短线情绪&quot;, &quot;科技题材&quot;], &quot;loss&quot;: [&quot;老登题材&quot;, &quot;混沌轮动&quot;, &quot;高低切换&quot;]}</script>
+</section>
+
+<h3 id="sub-2-1-一-市场风格-ab7013" class="subchapter-title">（一）市场风格</h3>
+<p class="body-line bullet-line">指数节奏：三大指数早盘全线低开、弱势震荡后探底回升，创业板和科创50领涨；三表收盘数值为沪指3891.6、深指13454.74、创业板3311.47、科创1616.19，外部复盘口径为沪指+0.71%、创业板+1.96%。</p>
+<p class="body-line bullet-line">量能结构：三表沪指量能18391，外部复盘口径两市成交额18524亿，较昨日极致缩量明显改善，但还未到2万亿级别。量能足以支持反弹，但尚不足以直接确认反转。</p>
+<p class="body-line bullet-line">板块风格：短线主线从AI安全、算力分歧后收缩，电力/风电/海峡成为围绕闽东电力的轮动助攻方向；同时科技趋势强共振，半导体元件、消费电子、光学光电子、电子化学品、CPO、存储芯片、PCB、光刻胶、半导体上游材料等扩散明显。</p>
+<p class="body-line bullet-line tone-action">资金风格：高标分歧极端，资金抛弃被证伪题材；趋势资金回流科技，科技ETF与产业链核心票同步放量。银行未明显护盘，电池/宁德时代方向偏弱，贵金属有避险/轮动表现。</p>
+<h3 id="sub-2-2-二-赚钱效应-7ef097" class="subchapter-title">（二）赚钱效应</h3>
+<p class="body-line bullet-line">涨跌结构：三表显示涨停89家、跌停4家，极端腾落数89-4，腾落数3888-1134，用户口述“约90涨停、4跌停、2000多家上涨”与三表方向一致。</p>
+<p class="body-line bullet-line tone-risk">连板结构：一板77、二板9、三板1、高度板6；6板闽东电力晋级，4板澳弘电子（口述“澳弘电子”，待确认）晋级，3板仅一个20cm票晋级（口述未明确名称），二板科技小票有辨识度。</p>
+<p class="body-line bullet-line tone-risk">封板与断板：中新赛克（待确认）作为AI安全高标直接跌停，属于题材证伪级别负反馈；电力方向无特别强负反馈，但助攻强度有所回落。</p>
+<p class="body-line bullet-line tone-action">明日关键：风电/电力看回流，海峡看分化或分歧，科技方向强启动后看分化；大盘按震荡预期处理，这种节奏对低吸分化承接更舒服。继续回避AI安全、汽车、消费、锂电、机器人等弱持续性方向。</p>
+<div class="table-shell" id="source-table-1"><table class="data-table"><thead><tr><th>周几</th><th>日期</th><th>沪指</th><th>深指</th><th>创业</th><th>科创</th><th>沪指量能</th><th>情绪强度</th><th>极端腾落数</th><th>腾落数</th><th>一板</th><th>二板</th><th>三板</th><th>高度板</th><th>封板率</th><th>断板</th></tr></thead><tbody><tr><td>周三</td><td>2026-09-16</td><td>3891.6</td><td>13454.74</td><td>3311.47</td><td>1616.19</td><td>18391</td><td>高潮期</td><td>89-4</td><td>3888-1134</td><td>77</td><td>9</td><td>1</td><td>6</td><td>0.89</td><td>11</td></tr></tbody></table></div>
+</section>
+<section class="section-card" id="chapter-3-三-近4日板块强度-次日节奏预测表-f65244" data-phase="overview" data-chapter-number="03"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">三、近4日板块强度+次日节奏预测表</h2>
+
+  <div class="rhythm-usage-note" id="sector-rhythm-usage-note" style="margin:14px 0 18px;padding:14px 16px;border:1px solid rgba(13,148,136,.24);border-left:4px solid #0f766e;background:#ecfeff;border-radius:8px;color:#134e4a;">
+    <span class="section-kicker">Rhythm Read</span>
+    <p style="margin:6px 0 0;font-weight:700;">双冰以上可做修复回流预期，双高潮以上可做砸盘预期！</p>
+  </div>
+
+
+<div class="table-shell" id="source-table-2"><table class="data-table"><thead><tr><th>大题材板块</th><th>2026/9/9</th><th>2026/9/14</th><th>2026/9/15</th><th>2026/9/16</th><th>次日节奏预测</th><th>核心判断</th></tr></thead><tbody><tr><td>有色金属</td><td>1385（高潮）</td><td>-89（大分歧）</td><td>-1185（大分歧）</td><td>159（高潮）</td><td>弱修复观察</td><td>今日不承担主线，更多是轮动边缘。</td></tr><tr><td>电力</td><td>1030（强回流）</td><td>1007（强回流）</td><td>163（大分歧）</td><td>1064（强回流）</td><td>看回流</td><td>量化不算最强，但短线地位最强，核心锚是闽东电力；风电/电力/海峡轮流助攻。</td></tr><tr><td>AI应用</td><td>-3057（大分歧）</td><td>8118（高潮）</td><td>-852（小分歧）</td><td>1695（强回流）</td><td>弱修复不追</td><td>数据修复不等于AI安全可做，中新赛克跌停已证伪短线持续性。</td></tr><tr><td>算力</td><td>-954（小分歧）</td><td>4189（高潮）</td><td>-2062（大分歧）</td><td>4591（高潮）</td><td>分化承接</td><td>可并入科技趋势观察，但与AI安全连板共振失败，不单独做弱连板。</td></tr><tr><td>机器人</td><td>-1259（大分歧）</td><td>2293（高潮）</td><td>-780（大分歧）</td><td>3172（高潮）</td><td>暂不看持续性</td><td>数据回暖，但用户判断题材弱，除非明日超预期放量带队。</td></tr><tr><td>光伏</td><td>-54（小分歧）</td><td>535（强回流）</td><td>-716（大分歧）</td><td>1655（高潮）</td><td>轮动观察</td><td>非主线，不抢科技核心资金。</td></tr><tr><td>化工</td><td>1824（正常）</td><td>-1162（小分歧）</td><td>184（大分歧）</td><td>6798（高潮）</td><td>看分化承接</td><td>半导体上游材料、光刻胶、碳化硅带动，强于普通化工。</td></tr><tr><td>电网</td><td>1273（强回流）</td><td>1246（强回流）</td><td>-739（大分歧）</td><td>1114（强回流）</td><td>跟随电力</td><td>可作为电力外延助攻，核心仍看闽东。</td></tr><tr><td>人工智能</td><td>-2496（大分歧）</td><td>-765（小分歧）</td><td>-2092（大分歧）</td><td>-77（小分歧）</td><td>继续弱</td><td>和AI应用/安全区分，整体并未真正转强。</td></tr><tr><td>商业航天</td><td>324（强回流）</td><td>118（大分歧）</td><td>-104（小分歧）</td><td>840（高潮）</td><td>边缘轮动</td><td>非明日主攻。</td></tr><tr><td>芯片</td><td>271（大分歧）</td><td>3945（正常）</td><td>2517（小分歧）</td><td>12891（高潮）</td><td>强启动后分化</td><td>今日最强趋势主线之一，明日只做良性分化，不追高潮。</td></tr><tr><td>黄金</td><td>1088（强回流）</td><td>339（小分歧）</td><td>-489（大分歧）</td><td>1317（高潮）</td><td>轮动/避险</td><td>用户口述贵金属也起来了，但不是当前短线主线。</td></tr><tr><td>石油石化</td><td>621（高潮）</td><td>-78（小分歧）</td><td>206（正常）</td><td>40（大分歧）</td><td>无主线性</td><td>不看。</td></tr><tr><td>通信</td><td>3783（小分歧）</td><td>7978（强回流）</td><td>2652（大分歧）</td><td>15469（高潮）</td><td>强启动后分化</td><td>今日最强方向，CPO、光通信、光纤为科技核心发动机。</td></tr><tr><td>智能驾驶</td><td>-153（大分歧）</td><td>-70（小分歧）</td><td>-430（大分歧）</td><td>138（强回流）</td><td>无持续性</td><td>不看。</td></tr><tr><td>军工</td><td>1096（强回流）</td><td>-666（大分歧）</td><td>-1583（大分歧）</td><td>616（强回流）</td><td>弱修复</td><td>非主攻。</td></tr><tr><td>天然气</td><td>-21（小分歧）</td><td>-1（小分歧）</td><td>-597（大分歧）</td><td>93（强回流）</td><td>无持续性</td><td>不看。</td></tr><tr><td>医疗</td><td>-1552（大分歧）</td><td>4050（高潮）</td><td>-1020（大分歧）</td><td>463（正常）</td><td>个别情绪票观察</td><td>哈药股份作为创新药人气锚待核，板块不作主攻。</td></tr><tr><td>农业</td><td>4986（强回流）</td><td>-4970（大分歧）</td><td>-5879（大分歧）</td><td>2915（强回流）</td><td>修复尾声</td><td>万向德农拉情绪，金健米业负反馈缓和，更多是退潮修复。</td></tr><tr><td>一季报增长</td><td>-458（大分歧）</td><td>-458（大分歧）</td><td>-458（大分歧）</td><td>-458（大分歧）</td><td>无持续性</td><td>不看。</td></tr><tr><td>并购重组</td><td>1258（正常）</td><td>1442（强回流）</td><td>341（大分歧）</td><td>2437（强回流）</td><td>题材底噪</td><td>可观察个股，不作主线。</td></tr><tr><td>电池</td><td>-457（小分歧）</td><td>378（大分歧）</td><td>3827（高潮）</td><td>2731（强回流）</td><td>弱支线观察</td><td>数据为正，但用户判断宁德时代/新能源方向不舒服，英联股份也不作为主攻。</td></tr><tr><td>元器件</td><td>540（大分歧）</td><td>2446（强回流）</td><td>565（大分歧）</td><td>1752（强回流）</td><td>跟随科技分化</td><td>MLCC、PCB、电子材料补涨，核心看风华高科、双星新材、东材科技等。</td></tr><tr><td>稀土</td><td>5（强回流）</td><td>21（强回流）</td><td>-265（大分歧）</td><td>161（强回流）</td><td>弱轮动</td><td>不看。</td></tr><tr><td>煤炭</td><td>2798（高潮）</td><td>-178（小分歧）</td><td>-415（大分歧）</td><td>-282（小分歧）</td><td>弱</td><td>不看。</td></tr><tr><td>海峡两岸/福建本地</td><td>未核</td><td>未核</td><td>未核</td><td>未核</td><td>明日看分化</td><td>作为闽东电力助攻，不单独追高；平潭发展、瑞达期货待核。</td></tr><tr><td>PCB/CPO/半导体材料</td><td>未核</td><td>未核</td><td>未核</td><td>未核</td><td>明日看分化选强</td><td>可并入通信、芯片、化工、元器件四条线观察，是科技趋势核心。</td></tr><tr><td>消费/旅游/传媒</td><td>未核</td><td>未核</td><td>未核</td><td>未核</td><td>看止跌</td><td>国芳集团、桂林旅游、龙版传媒仍是负反馈压力源，不做。</td></tr><tr><td>汽车</td><td>未核</td><td>未核</td><td>未核</td><td>未核</td><td>暂不看</td><td>无持续性，不进入明日核心观察。</td></tr></tbody></table></div>
+</section>
+<div class="phase-divider" id="phase-diagnosis" data-tone="dark"><span>PHASE 02</span><strong>盘后拆解</strong><p>复盘操作、主线、催化与负反馈，识别真正的主动性和风险来源。</p></div>
+<section class="section-card" id="chapter-4-四-今日操作结果-核心失误-核心反思-6f01e5" data-phase="diagnosis" data-chapter-number="04"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">四、今日操作结果+核心失误+核心反思</h2>
+<h3 id="sub-4-1-一-今日操作结果-7e2259" class="subchapter-title">（一）今日操作结果</h3>
+<p class="body-line tone-action">✅ 做对操作</p>
+<p class="body-line bullet-line">已从题材持续性角度抛弃AI安全/AI应用方向，不再因前期辨识度硬看。</p>
+<p class="body-line bullet-line">能识别闽东电力的主动进攻性质：从跌停翘起、放量封板、叠加多题材，是今日高标中最强的情绪锚。</p>
+<p class="body-line bullet-line">能把科技趋势与短线接力区分开：科技今天是放量共振的小高潮，个股不好选时用ETF承接趋势，不强迫自己在小票里硬选。</p>
+<p class="body-line bullet-line">闽东电力持仓处理非常稳：竞价阶段20分前跌停且有约7000多万封单，封单逐步减少，20分后撤单抢筹拉红，小高开后冲高、回踩均线、再拉板，盘中炸板后午后回封。全程一股未卖，提前设置动态条件单，接受小亏离场预案，但没有被触发。</p>
+<p class="body-line bullet-line tone-action">对高位抱团图形的理解进化：龙版传媒6板、桂林旅游断板后的跌停翘板，都属于高位情绪不好时资金做抱团的典型形态。今天闽东电力把这个模型再次走出来，后续需要重点强化。</p>
+<p class="body-line bullet-line tone-action">今日操作接近满分：半仓持有闽东电力，日内收益约4.83%（口述），耐心持股，不乱卖、不乱加仓，条件单设置合理，仓位控制舒服。短线尚未完全退潮时没有冲动加仓，这一点非常关键。</p>
+<p class="body-line tone-action">❌ 做错操作/需要反思</p>
+<p class="body-line bullet-line">唯一不足是科技趋势左侧先手没有拿到。盘中10点到11点附近，588170回踩约4个点不破，是科技放量大阳线后的左侧黄金博弈点，可以先拿仓位，但当时主要盯短线，没有快速切换到科技趋势。</p>
+<p class="body-line bullet-line">盘中全局盯盘不足：上班环境下只能盯一个方向，今天短线持仓处理很好，但科技趋势变化没有第一时间跟上，导致丧失ETF先手权。</p>
+<p class="body-line bullet-line tone-risk">从实盘高手跟踪看，“董事长”也会因为题材判断和板位选择出现回撤：闽东电力方向选对，但中新赛克/AI安全方向选错，说明强板接力不能替代题材持续性验证。</p>
+<h3 id="sub-4-2-二-核心失误根源-0afa43" class="subchapter-title">（二）核心失误根源</h3>
+<p class="body-line bullet-line">执行层面：持仓执行很好，一股未卖；不足是盘中科技趋势没有及时切换视角，588170/159516的左侧博弈点没上车。</p>
+<p class="body-line bullet-line">地位/预案层面：若仍对AI安全、算力、汽车等持续性不足方向抱有幻想，容易被断板负反馈牵引。</p>
+<p class="body-line bullet-line">节奏/买卖点层面：高标极端分歧日，不应追被证伪题材的弱修复；趋势方向出现放量大阳线和回踩不破时，要敢于用ETF拿先手。</p>
+<h3 id="sub-4-3-三-深度核心反思-3a6577" class="subchapter-title">（三）深度核心反思</h3>
+<p class="body-line tone-risk">今日连板给出的核心教训是：题材被证伪时，不能用“高标曾经有辨识度”去替代“今天还有持续性”。中新赛克（待确认）作为AI安全高标直接跌停后，AI安全/AI应用方向的短线预期已经被破坏，后续即使有局部修复，也只能先按弱修复处理。</p>
+<p class="body-line tone-risk">董事长这笔实盘跟踪可以作为反面样本：他做闽东电力的方向是对的，但AI安全/中新赛克这一笔叙事选错了。用户判断其本质是强板接力思路过于前置，4进5想吃溢价，但当时AI安全板块强度并不够，昨日只有约5个板（口述，待核），且题材容量、对抗板块、量能结构都不足以支撑盲目接力。小题材叠加情绪不佳时，交易只能做唯一性，不能因为实盘高手参与就放宽标准。</p>
+<p class="body-line">中新赛克的问题不只是跌停结果，而是买点确认不足：盘中爆量弱转强看似有吸引力，但量能节奏和筹码结构不够好，应该等真正转强确认后再处理。后续规则要升级为：强板接力只在题材容量、梯队强度、唯一性、量能结构同时通过时才允许参与；若只是板块局部强、个股盘中弱转强但没有完成确认，宁可错过，也不提前下注。</p>
+<p class="body-line tone-action">相反，闽东电力的价值在于它不仅晋级，而且是从极端位置主动拉起、放量进攻并封住，说明资金愿意在高位分歧中重新选择它作为情绪出口。明日的关键不是盲目拔高预期，而是看它能否继续稳住电力/海峡方向的梯队与助攻。</p>
+<p class="body-line tone-action">科技趋势今天给出的另一条线是“放量企稳后的产业链共振”。芯片、通信、算力、半导体、CPO、PCB、硅材料、光刻胶、碳化硅等方向不是简单短线连板，而是趋势资金在指数企稳与产业催化下同步回流。明日不适合无脑追高，低开分化反而更舒服，小高开还能观察，高开过多则性价比下降。</p>
+<p class="body-line tone-action">今天最大的交易收获是“高位抱团的跌停撤单抢筹模型”开始真正内化：高位情绪差、市场没有其他更好方向时，核心票先跌停制造恐慌，再撤单抢筹拉红，小高开/红盘承接后回踩均线不破，随后拉板、炸板、午后回封。这种图形不是低位题材启动，而是高位情绪抱团，核心在于地位、承接、量能和助攻是否同时成立。</p>
+<p class="body-line">今天最大的交易遗憾是科技趋势没有拿到先手。588170在盘中回踩不破时已经给出左侧博弈点，哪怕不选个股，用ETF拿平均溢价也足够舒服。后续规则要升级：当科技放量大阳线、板块强共振、ETF回踩关键涨幅不破时，可以先用ETF试仓，而不是等全部确认后再追。</p>
+<p class="body-line tone-action">今天的操作更重要的正反馈是“系统重新顺回来”：仓位管理、条件单管理、短线炒作情绪管理、板块效应、板块节奏、个股节奏、量能关系、资金对流与吸血、以及闽东是否卡住科技分歧，这些要素都重新形成闭环。后续要把这种耐心和克制固定下来。</p>
+</section>
+<section class="section-card" id="chapter-5-五-操作与情绪复盘-kiss模型-keep-improve-start-stop-7bee20" data-phase="diagnosis" data-chapter-number="05"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">五、操作与情绪复盘（KISS模型：Keep/Improve/Start/Stop）</h2>
+<h3 id="sub-5-1-一-当日操作-情绪复盘-51df44" class="subchapter-title">（一）当日操作&amp;情绪复盘</h3>
+<h4 id="minor-5-2-1-核心失误-5a8e34" class="minor-title">1. 核心失误</h4>
+<p class="body-line bullet-line">科技趋势左侧先手没有拿到，588170/159516在盘中回踩不破时未能及时介入。</p>
+<p class="body-line bullet-line tone-action">盘中只盯短线方向，没有把科技趋势、ETF、主力净流入一起纳入实时观察。</p>
+<h4 id="minor-5-3-2-正向进化-a52cc4" class="minor-title">2. 正向进化</h4>
+<p class="body-line bullet-line">对题材持续性的判断足够坚决：AI安全、AI应用、汽车直接剔除。</p>
+<p class="body-line bullet-line">对“高标强弱”的判断不只看板数，而看是否主动进攻、是否放量承接、是否能带动题材。</p>
+<p class="body-line bullet-line">对趋势方向开始使用ETF思维：选不出最强个股时，用ETF承接板块趋势，避免在分化日被小票波动带偏。</p>
+<p class="body-line bullet-line tone-risk">闽东电力持仓纪律成熟：高位剧烈波动中没有被跌停竞价吓出，也没有被盘中炸板洗出，靠地位、量能、助攻和条件单执行。</p>
+<p class="body-line bullet-line tone-action">仓位控制进步明显：半仓参与核心总龙，既吃到约4.83%收益，又没有在短线未完全退潮时冲动加仓。</p>
+<h3 id="sub-5-4-二-kiss模型四维总结-keep-improve-start-stop-7ee0e2" class="subchapter-title">（二）KISS模型四维总结（Keep/Improve/Start/Stop）</h3>
+<h4 id="minor-5-5-1-keep-保持-持续坚守的正确操作-04c374" class="minor-title">1. Keep（保持：持续坚守的正确操作）</h4>
+<p class="body-line tone-risk">继续保持“题材证伪后立即移出核心池”的纪律。</p>
+<p class="body-line tone-action">继续保持半仓核心持仓、条件单保护、盘中不乱加仓的交易节奏。短线情绪未完全退潮前，宁可少赚，也不把仓位打满。</p>
+<h4 id="minor-5-6-2-improve-改进-持续优化的操作细节-7ac712" class="minor-title">2. Improve（改进：持续优化的操作细节）</h4>
+<p class="body-line tone-risk">对闽东电力这类多题材高标，需要拆分它的真实带动方向：电力、风电、福建、海峡、算力到底是哪条线在贡献强度，不能混成一个笼统强势票。</p>
+<p class="body-line tone-risk">对科技趋势需要建立分化日买点框架：小高潮当天不追情绪峰值，次日低开或小高开看承接，高开过多则放弃性价比。</p>
+<p class="body-line">对盘中左侧博弈需要建立更快的响应机制：当板块放量共振、ETF回踩不破、主力资金净流入明确时，不必等到所有个股都确认，可先用ETF拿小仓位先手。</p>
+<p class="body-line">对强板接力需要增加“题材唯一性+转强确认”过滤器：高手买了不等于可以买，板块看起来强也不等于持续性成立，尤其是AI安全这种小容量、弱持续性题材，必须等量能结构和板块梯队真正确认。</p>
+<h4 id="minor-5-7-3-start-启动-全新执行的交易规则-2290b7" class="minor-title">3. Start（启动：全新执行的交易规则）</h4>
+<p class="body-line tone-action">次日开始把“是否有助攻、是否无强负反馈、是否有主动放量进攻”作为高位票观察三条件。</p>
+<p class="body-line tone-action">科技方向启动ETF替代规则：当产业链整体共振而个股难选时，优先观察588170、159516等ETF的分化承接，而不是强行切到辨识度不足的小票。</p>
+<p class="body-line tone-action">启动“高位抱团跌停撤单抢筹模型”记录：竞价跌停封单减少、20分后抢筹拉红、小高开/红盘承接、回踩均线不破、放量拉板、炸板后回封，是后续总龙抱团的重要观察模板。</p>
+<p class="body-line">启动“实盘高手反向校验”记录：跟踪董事长等高手时，不只看其买入方向，还要拆解他是否买在题材持续性、板块容量、唯一性和量能确认都成立的位置；若高手买错，要把错误样本转化为自己的风控规则。</p>
+<h4 id="minor-5-8-4-stop-禁止-彻底杜绝的错误行为-74080e" class="minor-title">4. Stop（禁止：彻底杜绝的错误行为）</h4>
+<p class="body-line">停止关注已经被高标跌停证伪的AI安全/AI应用方向；停止在汽车、消费等无持续性方向里寻找低质量反抽。</p>
+<p class="body-line">停止在明确放量趋势启动时只盯短线接力，忽视ETF左侧仓位工具。</p>
+<p class="body-line">停止盲目相信“高手强板接力=确定性”。高手也会回撤，也会选错题材；自己的系统必须优先于外部榜样。</p>
+</section>
+<section class="section-card" id="chapter-6-六-各主线板块详细解析-937d9c" data-phase="diagnosis" data-chapter-number="06"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">六、各主线板块详细解析</h2>
+<section class="theme-analysis-flow" id="intraday-mainline" data-intraday-mainline data-theme-analysis-flow>
+  <style>
+    .theme-analysis-flow{margin:14px 0 4px}
+    .theme-analysis-intro{margin:0 0 20px;padding:12px 14px;border-left:4px solid #0d9275;background:#f2faf7;color:#496b65;line-height:1.65}
+    .theme-analysis-block{padding:24px 0;border-top:2px solid #cfe2de}
+    .theme-analysis-block:first-of-type{border-top:0;padding-top:4px}
+    .theme-analysis-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:10px}
+    .theme-analysis-title{margin:0;color:#0b675f;font-size:22px}
+    .theme-analysis-meta{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
+    .theme-analysis-chip{display:inline-flex;padding:4px 8px;border:1px solid #cfe2de;border-radius:4px;background:#f7fbfa;color:#305f58;font-size:12px;font-weight:800}
+    .theme-stock-table-wrap{width:100%;overflow-x:auto;border:1px solid #d8e5e2;border-radius:8px;background:#fff}
+    .theme-stock-table{width:100%;min-width:960px;border-collapse:collapse;table-layout:fixed;font-size:12.5px}
+    .theme-stock-table th{padding:9px 8px;background:#e9f5f2;color:#075f59;text-align:left;border-right:1px solid #d8e5e2}
+    .theme-stock-table td{padding:9px 8px;line-height:1.55;vertical-align:top;border-top:1px solid #e4ecea;border-right:1px solid #e4ecea;overflow-wrap:anywhere}
+    .theme-stock-table th:nth-child(1){width:15%}.theme-stock-table th:nth-child(2){width:18%}.theme-stock-table th:nth-child(3){width:21%}.theme-stock-table th:nth-child(4){width:25%}.theme-stock-table th:nth-child(5){width:21%}
+    .theme-stock-table th:last-child,.theme-stock-table td:last-child{border-right:0}
+    .theme-stock-table tbody tr:nth-child(even){background:#f9fcfb}
+    .theme-stock-name{font-weight:900;color:#0c4d46}
+    .limit-up-tag{display:inline-block;padding:3px 6px;border-radius:4px;background:#fff1df;color:#9a4e05;font-weight:800}
+    .limit-up-tag.is-trend{background:#eef5ff;color:#285f94}
+    .theme-analysis-copy{display:grid;grid-template-columns:1fr 1.35fr 1fr;margin-top:10px;border:1px solid #dde9e6;border-radius:8px;overflow:hidden;background:#fff}
+    .theme-analysis-copy p{margin:0;padding:11px 12px;color:#31534d;line-height:1.65;border-right:1px solid #e4ecea}
+    .theme-analysis-copy p:last-child{border-right:0}
+    .theme-analysis-copy strong{display:block;margin-bottom:3px;color:#0b675f}
+    @media (max-width:900px){.theme-analysis-head{align-items:flex-start;flex-direction:column}.theme-analysis-meta{justify-content:flex-start}.theme-analysis-copy{grid-template-columns:1fr}.theme-analysis-copy p{border-right:0;border-bottom:1px solid #e4ecea}.theme-analysis-copy p:last-child{border-bottom:0}}
+  </style>
+  <h3 class="theme-analysis-title">日内主线表 × 题材详细解析</h3>
+  <p class="theme-analysis-intro">按题材连续复盘：每个板块先看核心标的的真实涨停表现与市场地位，再看日内节奏、板块分析和次日验证。趋势核心未涨停时明确标注，不与封板票混写。</p>
+  <article class="theme-analysis-block" id="theme-t1" data-theme-section><div class="theme-analysis-head"><h4 class="theme-analysis-title">1. 电力/风电/海峡</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">短线最高优先级</span><span class="theme-analysis-chip">电力1064（正常）/ 海峡定性爆发 / 风电分歧后待回流</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">闽东电力<br><small>000993</small></td><td><span class="limit-up-tag">6天6板/跌停翘起后放量回封</span></td><td>短线总龙核心候选</td><td>主动性强；领涨性看次日助攻</td><td>7板健康换手并带动电力/海峡</td></tr><tr><td class="theme-stock-name">平潭发展<br><small>000592</small></td><td><span class="limit-up-tag">首板涨停/热榜10</span></td><td>海峡方向人气助攻</td><td>助攻闽东海峡属性</td><td>分化不大杀</td></tr><tr><td class="theme-stock-name">乐山电力<br><small>600644</small></td><td><span class="limit-up-tag">电力助攻，状态待核</span></td><td>电力支线助攻</td><td>弱助攻</td><td>开盘反馈不能拖累闽东</td></tr><tr><td class="theme-stock-name">吉鑫科技<br><small>601218</small></td><td><span class="limit-up-tag">口述一字/秒板，待核</span></td><td>风电助攻观察</td><td>助攻强度待核</td><td>不能一字转弱</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>闽东电力竞价跌停撤单抢筹，盘中放量拉板并午后回封。</p><p><strong>板块分析</strong>闽东是唯一高标和多题材复合锚，明日不是追高无脑买，而是看助攻与换手质量。</p><p><strong>次日验证</strong>闽东7板健康，电力/风电/海峡至少一条线有一字、强板或秒板助攻。</p></div></article><article class="theme-analysis-block" id="theme-t2" data-theme-section><div class="theme-analysis-head"><h4 class="theme-analysis-title">2. 光通信/CPO/PCB/半导体</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">趋势主升候选</span><span class="theme-analysis-chip">通信15469（高潮）/ 芯片12891（高潮）/ 元器件1752（正常偏强）</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">通鼎互联<br><small>002491</small></td><td><span class="limit-up-tag">2天2板/热榜2</span></td><td>CPO/通信二板辨识度</td><td>科技低位主动性较强</td><td>分化后继续承接</td></tr><tr><td class="theme-stock-name">永鼎股份<br><small>600105</small></td><td><span class="limit-up-tag">首板涨停/热榜14</span></td><td>光纤方向前排</td><td>CPO助攻</td><td>首板溢价与容量承接</td></tr><tr><td class="theme-stock-name">光迅科技<br><small>002281</small></td><td><span class="limit-up-tag">首板涨停/热榜35</span></td><td>光通信容量核心</td><td>容量趋势锚</td><td>不高开低走</td></tr><tr><td class="theme-stock-name">东材科技<br><small>601208</small></td><td><span class="limit-up-tag">首板涨停/热榜36</span></td><td>电子材料/PCB支撑</td><td>材料助攻</td><td>科技分化中保留强度</td></tr><tr><td class="theme-stock-name">超声电子<br><small>000823</small></td><td><span class="limit-up-tag">趋势核心，是否涨停待核</span></td><td>PCB趋势锚</td><td>主动性需次日确认</td><td>分化低吸承接</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>科技产业链放量共振，CPO、PCB、半导体、消费电子、光学光电子扩散。</p><p><strong>板块分析</strong>这是趋势资金回流，不是纯短线连板。明日低开或小高开分化承接才舒服。</p><p><strong>次日验证</strong>ETF 588170/159516回踩不破，核心票不集体冲高回落。</p></div></article><article class="theme-analysis-block" id="theme-t3" data-theme-section><div class="theme-analysis-head"><h4 class="theme-analysis-title">3. 半导体材料/光刻胶/化工</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">科技内部轮动</span><span class="theme-analysis-chip">化工6798（强回流）/ 芯片12891（高潮）</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">中晶科技<br><small>003026</small></td><td><span class="limit-up-tag">2连板，名称由口述修正待核</span></td><td>半导体材料小票核心</td><td>二板辨识度</td><td>2进3分化承接</td></tr><tr><td class="theme-stock-name">西陇科学<br><small>002584</small></td><td><span class="limit-up-tag">平台突破/涨停状态待核</span></td><td>PCB/光刻胶候选</td><td>分化选强候选</td><td>主动承接而非被动冲高</td></tr><tr><td class="theme-stock-name">有研新材<br><small>600206</small></td><td><span class="limit-up-tag">首板涨停/热榜17</span></td><td>半导体材料核心</td><td>材料线助攻</td><td>资金净流入延续</td></tr><tr><td class="theme-stock-name">有研硅<br><small>688432</small></td><td><span class="limit-up-tag">首板涨停/热榜43</span></td><td>硅材料弹性锚</td><td>材料支撑</td><td>科创趋势承接</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>碳化硅、硅材料、光刻胶与电子化学品带动化工强度。</p><p><strong>板块分析</strong>化工强来自科技上游材料，不能当传统化工炒作；看西陇科学、中晶科技、有研新材承接。</p><p><strong>次日验证</strong>材料端不被CPO虹吸，二板和首板继续有溢价。</p></div></article><article class="theme-analysis-block" id="theme-t4" data-theme-section><div class="theme-analysis-head"><h4 class="theme-analysis-title">4. AI安全/消费/汽车/旧周期</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">退潮与风险</span><span class="theme-analysis-chip">AI应用1695（修复但题材证伪）/ 农业2915（退潮修复）/ 汽车未入主线</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">中新赛克<br><small>002912</small></td><td><span class="limit-up-tag">高标跌停/AI安全证伪</span></td><td>风险锚</td><td>主动性丧失</td><td>不再拖累高标</td></tr><tr><td class="theme-stock-name">国芳集团<br><small>601086</small></td><td><span class="limit-up-tag">旧周期负反馈，状态待核</span></td><td>消费旧龙风险锚</td><td>退潮观察</td><td>止跌即可</td></tr><tr><td class="theme-stock-name">桂林旅游<br><small>000978</small></td><td><span class="limit-up-tag">旧周期负反馈，状态待核</span></td><td>旅游风险锚</td><td>退潮观察</td><td>止跌即可</td></tr><tr><td class="theme-stock-name">万向德农<br><small>600371</small></td><td><span class="limit-up-tag">农业反抽涨停，待核</span></td><td>农业修复火苗</td><td>修复而非主线</td><td>不转为追高</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>中新赛克跌停，消费旧周期仍有国芳、桂林、龙版传媒等负反馈。</p><p><strong>板块分析</strong>这里不做弱修复幻想，只把负反馈是否扩散作为大盘和短线情绪风控指标。</p><p><strong>次日验证</strong>跌停不扩散即可；不能因为局部反抽重新纳入主攻。</p></div></article>
+</section>
+
+</section>
+<section class="section-card" id="chapter-7-七-事件催化时间线-9293ac" data-phase="diagnosis" data-chapter-number="07"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">七、事件催化时间线</h2>
+<!-- Required placeholders: DATE_START, DATE_END, EVENT_COUNT, TIMELINE_ITEMS_HTML, TIMELINE_SOURCE_URL -->
+<div class="event-catalyst-timeline" data-event-catalyst-timeline data-date-start="2026-09-16" data-date-end="2026-09-30">
+  <div class="event-timeline-summary">
+    <div><span class="section-kicker">Catalyst Window</span><h3>事件催化时间线（D0 至 D+14）</h3></div>
+    <div class="event-window-badge">2026-09-16 - 2026-09-30 · 6 项</div>
+  </div>
+  <p class="source-note">数据优先参考 <a href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">韭研公社时间轴</a>。事件等级来自站点热度，只用于排序；交易判断为复盘推演，临近日期须复核。</p>
+  <div class="event-timeline-track"><article class="event-timeline-item is-today" data-event-date="2026-09-16"><div class="event-item-head"><span class="event-date">2026-09-16 · 周三</span><span class="event-day-label">D0 今日</span></div><h4 class="event-item-title">科技趋势放量共振</h4><div class="event-theme-tags"><span class="event-theme-tag">CPO</span><span class="event-theme-tag">PCB</span><span class="event-theme-tag">半导体</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">强 · 兑现</span></p><p><strong>盘面推演</strong>科技小高潮已兑现，明日看分化承接。</p><p><strong>验证与风险</strong>高开一致容易砸盘。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article><article class="event-timeline-item is-next" data-event-date="2026-09-17"><div class="event-item-head"><span class="event-date">2026-09-17 · 周四</span><span class="event-day-label">D+1</span></div><h4 class="event-item-title">FOMC利率窗口与A股分化检验</h4><div class="event-theme-tags"><span class="event-theme-tag">科技</span><span class="event-theme-tag">指数</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">中 · 分歧检验</span></p><p><strong>盘面推演</strong>海外风险偏好影响科技承接。</p><p><strong>验证与风险</strong>事件落地前后避免追高。</p></div><a class="event-source-link" href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-09-18"><div class="event-item-head"><span class="event-date">2026-09-18 · 周五</span><span class="event-day-label">D+2</span></div><h4 class="event-item-title">闽东7板后高标反馈复核</h4><div class="event-theme-tags"><span class="event-theme-tag">电力</span><span class="event-theme-tag">海峡</span><span class="event-theme-tag">短线情绪</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">中 · 分歧检验</span></p><p><strong>盘面推演</strong>确认高位抱团是否转入新周期。</p><p><strong>验证与风险</strong>无助攻高标容易补跌。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-09-22"><div class="event-item-head"><span class="event-date">2026-09-22 · 周二</span><span class="event-day-label">D+6</span></div><h4 class="event-item-title">科技产业链轮动复核</h4><div class="event-theme-tags"><span class="event-theme-tag">半导体</span><span class="event-theme-tag">CPO</span><span class="event-theme-tag">PCB</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 窗口观察</span></p><p><strong>盘面推演</strong>回看科技是否从小高潮进入趋势主升。</p><p><strong>验证与风险</strong>只轮动不持续则ETF也要降仓。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-09-25"><div class="event-item-head"><span class="event-date">2026-09-25 · 周五</span><span class="event-day-label">D+9</span></div><h4 class="event-item-title">节前资金风险偏好观察</h4><div class="event-theme-tags"><span class="event-theme-tag">消费</span><span class="event-theme-tag">旅游</span><span class="event-theme-tag">科技</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 窗口观察</span></p><p><strong>盘面推演</strong>旧消费若仍不修复，不用节日逻辑强做。</p><p><strong>验证与风险</strong>节前缩量时追高风险放大。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-09-30"><div class="event-item-head"><span class="event-date">2026-09-30 · 周三</span><span class="event-day-label">D+14</span></div><h4 class="event-item-title">D+14周期复核</h4><div class="event-theme-tags"><span class="event-theme-tag">全市场</span><span class="event-theme-tag">主线复核</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 窗口观察</span></p><p><strong>盘面推演</strong>复核闽东后短线周期与科技趋势谁成为主线。</p><p><strong>验证与风险</strong>无官方新增催化时不补造事件。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article></div>
+</div>
+<style>
+.event-catalyst-timeline{margin:14px 0 4px;padding:20px;border:1px solid rgba(18,75,66,.14);border-radius:16px;background:linear-gradient(135deg,#f7fffb,#fffaf0)}
+.event-timeline-summary{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;flex-wrap:wrap}.event-timeline-summary h3{margin:9px 0 0;font-size:23px;color:#114d44}.event-window-badge{padding:8px 11px;border:1px solid rgba(13,146,117,.22);border-radius:999px;background:#fff;color:#0a6b60;font-size:12px;font-weight:900}
+.event-timeline-track{position:relative;display:grid;gap:14px;margin-top:18px;padding-left:26px}.event-timeline-track:before{content:"";position:absolute;top:10px;bottom:10px;left:8px;width:2px;background:linear-gradient(#0d9275,#e2a52f)}
+.event-timeline-item{position:relative;padding:14px 15px;border:1px solid rgba(18,75,66,.13);border-radius:12px;background:#fff}.event-timeline-item:before{content:"";position:absolute;left:-24px;top:19px;width:12px;height:12px;border:3px solid #eef8f3;border-radius:50%;background:#0d9275;box-shadow:0 0 0 1px rgba(13,146,117,.3)}.event-timeline-item.is-today{border-color:rgba(191,77,61,.35);box-shadow:0 10px 26px rgba(191,77,61,.08)}.event-timeline-item.is-today:before{background:#bf4d3d}.event-timeline-item.is-next:before{background:#e2a52f}
+.event-item-head{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}.event-date{font-size:15px;font-weight:950;color:#0b655b}.event-day-label{font-size:11px;color:#fff;padding:4px 7px;border-radius:999px;background:#66827a}.event-timeline-item.is-today .event-day-label{background:#bf4d3d}.event-timeline-item.is-next .event-day-label{background:#b88415}
+.event-item-title{margin:9px 0 7px;font-size:16px;line-height:1.55;color:#173f38}.event-theme-tags{display:flex;flex-wrap:wrap;gap:6px}.event-theme-tag{padding:4px 7px;border-radius:999px;background:#eaf7f1;color:#087064;font-size:11px;font-weight:850}.event-impact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}.event-impact-grid p{margin:0;padding:9px 10px;border-radius:9px;background:#f7faf8;color:#365851;font-size:12px;line-height:1.55}.event-impact-grid strong{display:block;margin-bottom:3px;color:#0c665b}.event-level{font-size:11px;font-weight:900;color:#8a6012}.event-source-link{display:inline-block;margin-top:9px;color:#1476a8;font-size:11px;font-weight:800}
+@media(max-width:760px){.event-catalyst-timeline{padding:15px}.event-impact-grid{grid-template-columns:1fr}.event-timeline-track{padding-left:22px}.event-timeline-item:before{left:-20px}.event-timeline-summary h3{font-size:20px}}
+</style>
+
+</section>
+<section class="section-card" id="chapter-8-八-异动监管-龙虎榜与人气榜情况-40f05e" data-phase="diagnosis" data-chapter-number="08"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">八、异动监管、龙虎榜与人气榜情况</h2>
+<h3 id="sub-8-1-一-异动监管-f37439" class="subchapter-title">（一）异动监管</h3>
+<p class="body-line tone-action">用户口述判断：闽东电力当前异动压力较舒服，因大盘上涨，若2026-09-17继续涨停，预计也未触及异动；超声电子若明日涨停，也预计未触及异动。以上为口述判断，具体异动监管距离待核验。</p>
+<p class="body-line tone-action">PCB/科技趋势票的异动逻辑与短线高标不同：用户判断超声电子、华正新材这类趋势票不一定看100%短线异动，更要观察20日/30日200%异动空间（口述待核），因此若趋势放量健康，仍有参与价值。</p>
+<h3 id="sub-8-2-二-龙虎榜与资金面-aac62e" class="subchapter-title">（二）龙虎榜与资金面</h3>
+<p class="body-line tone-action">龙虎榜与资金面待核验。用户口述观察如下：人气第一为闽东电力，第二为通鼎互联（口述“通顶”），平潭发展、超声电子、有研新材、太极实业、西陇科学等也在前排；西陇科学人气不错，且主力进入较多，适合按科技小票核心观察。</p>
+<p class="body-line tone-risk">资金流向上，用户判断今日科技不是出货，而是放量进货：新易盛（待核）、永鼎股份、光迅科技、有研新材（口述“有研新材”，待确认）、北方华创等有主力净流入；宁德时代、比亚迪等新能源方向流出较多。全市场主力净流入科技，确认科技方向不是骗炮，而是有资金真实介入。</p>
+<h3 id="sub-8-3-三-人气榜-5b62cb" class="subchapter-title">（三）人气榜</h3>
+<p class="body-line">三表人气榜原始表格存在类别列错位情况：左列没有显示“人气常驻票/人气飙升票/人气关键票”这类标签，而是直接出现一组股票。为避免遗漏，先保留三表原始抽取内容，再按复盘逻辑整理为可读版。</p>
+<p class="body-line">三表原始抽取内容：</p>
+<div class="table-shell" id="source-table-3"><table class="data-table"><thead><tr><th>原始左列/类别列</th><th>2026-09-16</th></tr></thead><tbody><tr><td>闽东电力(000993,热榜3,5天5板)、双星新材(002585,热榜10,3天3板)、通鼎互联(002491,热榜14,首板涨停)、华正新材(603186,热榜24,首板涨停)、中新赛克(002912,热榜26,4天4板)、诺德股份(600110,热榜34,首板涨停)、大金重工(002487,热榜41,首板涨停)</td><td>闽东电力(000993,热榜1,6天6板)、通鼎互联(002491,热榜2,2天2板)、平潭发展(000592,热榜10,首板涨停)、永鼎股份(600105,热榜14,首板涨停)、有研新材(600206,热榜17,首板涨停)、星网锐捷(002396,热榜28,首板涨停)、光迅科技(002281,热榜35,首板涨停)、东材科技(601208,热榜36,首板涨停)、欣旺达(300207,热榜38,11.67%)、有研硅(688432,热榜43,首板涨停)</td></tr><tr><td>同花顺热榜前50内未发现飙升超过30名个股</td><td>同花顺热榜前50内未发现飙升超过30名个股</td></tr><tr><td>远东股份(600869,热榜5)、宇树科技(688836,热榜8)</td><td>远东股份(600869,热榜4)</td></tr></tbody></table></div>
+<p class="body-line">按复盘逻辑整理后：</p>
+<div class="table-shell" id="source-table-4"><table class="data-table"><thead><tr><th>类别</th><th>2026-09-16</th></tr></thead><tbody><tr><td>人气常驻/核心热榜票</td><td>闽东电力(000993,热榜1,6天6板)、通鼎互联(002491,热榜2,2天2板)、平潭发展(000592,热榜10,首板涨停)、永鼎股份(600105,热榜14,首板涨停)、有研新材(600206,热榜17,首板涨停)、星网锐捷(002396,热榜28,首板涨停)、光迅科技(002281,热榜35,首板涨停)、东材科技(601208,热榜36,首板涨停)、欣旺达(300207,热榜38,11.67%)、有研硅(688432,热榜43,首板涨停)</td></tr><tr><td>人气飙升票</td><td>同花顺热榜前50内未发现飙升超过30名个股</td></tr><tr><td>人气关键票</td><td>远东股份(600869,热榜4)</td></tr><tr><td>口述补充人气票</td><td>金健米业、哈药股份、风华高科、双星新材、太极实业、超声电子、露笑科技、澳弘电子（待确认）、西陇科学、云南锗业、东山精密、588170、159516</td></tr><tr><td>三表原始左列补充票</td><td>闽东电力(000993,热榜3,5天5板)、双星新材(002585,热榜10,3天3板)、通鼎互联(002491,热榜14,首板涨停)、华正新材(603186,热榜24,首板涨停)、中新赛克(002912,热榜26,4天4板)、诺德股份(600110,热榜34,首板涨停)、大金重工(002487,热榜41,首板涨停)、远东股份(600869,热榜5)、宇树科技(688836,热榜8)</td></tr></tbody></table></div>
+<p class="body-line tone-action">当前人气结构的含义是：闽东电力热榜第一，是短线投机绝对核心，也是情绪回暖总龙；通鼎互联热榜第二且2天2板，说明科技二板核心已被市场认可；平潭发展热榜第十，说明海峡/福建对闽东有助攻；永鼎股份、光迅科技、有研新材、东材科技、有研硅等集中在科技链，说明今天不是单一票行情，而是科技趋势集体抬头。农业退潮龙金健米业仍在用户口述人气观察里，说明农业退潮接近尾声；消费退潮仍未完全结束，用户判断今日是第3天、明日第4天，可能接近尾声但暂不参与。</p>
+</section>
+<section class="section-card" id="chapter-9-九-跌停与炸板情况-d5f182" data-phase="diagnosis" data-chapter-number="09"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">九、跌停与炸板情况</h2>
+<p class="body-line bullet-line tone-risk">跌停/强负反馈：国芳集团、桂林旅游二连跌停；中新赛克（待确认）直接跌停/继续调整，AI安全题材被证伪；龙版传媒、金健米业等高位股继续调整。</p>
+<p class="body-line bullet-line">断板反包：万向德农日内反抽涨停，是农业退潮修复与短线高位股修复的火苗；金健米业没有跌停，说明农业负反馈明显缓和。</p>
+<p class="body-line bullet-line">炸板/回封：闽东电力从跌停附近翘起并放量封板，属于高位强修复；盘中拉板后炸板，午后最终回封，是高位抱团“跌停撤单抢筹-拉红承接-回踩均线-拉板炸板-午后回封”的典型案例。</p>
+<p class="body-line bullet-line tone-risk">高位断板：中新赛克（待确认）为核心负反馈；国芳集团、桂林旅游、龙版传媒等仍是消费/旅游/传媒退潮链条的压力源。</p>
+<p class="body-line bullet-line tone-action">明日观察重点：AI安全负反馈是否扩散，消费是否止跌，闽东电力是否继续稳住高标情绪，科技趋势小高潮后是否出现健康分化承接。后市核心博弈是高位股修复能否延续，以及科技股反弹能否继续放量。</p>
+</section>
+<div class="phase-divider" id="phase-playbook"><span>PHASE 03</span><strong>明日推演</strong><p>按大盘、板块、核心票、情景预案的顺序建立次日剧本。</p></div>
+<section class="section-card" id="chapter-10-十-核心关键票汇总-明日个股预案-1c8c87" data-phase="playbook" data-chapter-number="10"><h2 class="chapter-title">十、明日作战推演总纲（大盘 → 板块 → 核心票）</h2>
+<section class="next-day-playbook" data-next-day-playbook data-date="2026-09-16">
+  <header class="next-day-playbook__header">
+    <div>
+      <span class="next-day-playbook__kicker">NEXT-DAY PLAYBOOK</span>
+      <h3>明日作战推演</h3>
+    </div>
+    <p>明日按震荡分化预期处理：短线先看闽东7板质量，趋势看科技小高潮后的承接。</p>
+  </header>
+
+  <ol class="next-day-playbook__flow" aria-label="明日决策顺序">
+    <li><span>01</span>大盘定风险预算</li>
+    <li><span>02</span>板块定进攻方向</li>
+    <li><span>03</span>核心票定触发动作</li>
+    <li><span>04</span>情景切换定仓位</li>
+  </ol>
+
+  <div class="next-day-playbook__step" id="chapter-11-十一-大盘明日预期节奏-78977f" data-market-outlook>
+    <div class="next-day-playbook__step-head">
+      <span>01</span>
+      <div><small>MARKET FIRST</small><h4>十一、大盘与板块题材预期节奏</h4></div>
+    </div>
+    <div class="market-outlook-grid" id="next-day-market-outlook">
+      <article><span>基准预期</span><p>指数震荡，科技和短线高标分化检验。</p></article>
+      <article class="is-positive"><span>转强确认</span><p>量能维持、跌停不扩散、科技低吸承接和闽东助攻同时成立。</p></article>
+      <article class="is-risk"><span>风险证伪</span><p>指数与科技双高开砸盘，闽东弱开弱走，高标负反馈扩散。</p></article>
+      <article class="is-action"><span>执行边界</span><p>不追双高潮，只做持仓处理和分化后的强者。</p></article>
+    </div>
+
+    <div class="next-day-playbook__subsection" id="next-day-theme-outlook" data-theme-outlook>
+      <div class="next-day-playbook__subhead"><h5>板块题材预期节奏</h5><p>先验证题材强度，再把动作下沉到核心票。</p></div>
+      <div class="table-shell next-day-playbook__table-shell">
+        <table class="next-day-playbook__table">
+          <thead><tr><th>优先级</th><th>板块题材</th><th>当前节奏</th><th>核心锚</th><th>明日预期</th><th>转强确认</th><th>证伪信号</th><th>执行</th></tr></thead>
+          <tbody><tr><td><span class="playbook-priority">第一</span></td><td>电力/风电/海峡</td><td>闽东6板破局，高位抱团。</td><td>闽东电力、平潭发展、乐山电力、吉鑫科技</td><td>风电/电力回流，海峡分化但不杀。</td><td>闽东7板健康回封且后排有助攻。</td><td>闽东无助攻放量不能回封。</td><td>先处理持仓，不盲目加仓。</td></tr><tr><td><span class="playbook-priority">第二</span></td><td>科技趋势</td><td>CPO/PCB/半导体放量小高潮。</td><td>588170、159516、通鼎互联、西陇科学、有研新材</td><td>良性分化后低吸承接。</td><td>ETF回踩不破，核心票不集体冲高回落。</td><td>科技高开一致砸盘。</td><td>ETF或前排小仓试错。</td></tr><tr><td><span class="playbook-priority">第三</span></td><td>半导体材料/光刻胶</td><td>科技内部扩散。</td><td>中晶科技、西陇科学、有研新材、有研硅</td><td>二板和首板分化选强。</td><td>材料端继续补涨且不被CPO虹吸。</td><td>平台突破失败或高开低走。</td><td>只做主动承接票。</td></tr><tr><td><span class="playbook-priority">风险</span></td><td>AI安全/旧周期</td><td>题材证伪和退潮。</td><td>中新赛克、国芳集团、桂林旅游</td><td>止跌即可，不看主攻。</td><td>仅作为风险收敛信号。</td><td>跌停扩散拖累高标。</td><td>不参与弱修复。</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="next-day-playbook__step" id="chapter-12-十二-明日核心票弱转强-转强判定-板块预期细化表-3ffd87" data-core-stock-checks>
+    <div class="next-day-playbook__step-head">
+      <span>02</span>
+      <div><small>CORE STOCK CHECK</small><h4>十二、核心票弱转强/转强判定</h4></div>
+    </div>
+    <p class="next-day-playbook__guide">只在大盘风险预算与板块强度通过后执行个股预案。主动性、板块跟随和失败条件必须同时核对。</p>
+    <div class="table-shell next-day-playbook__table-shell" id="next-day-core-stock-checks">
+      <table class="next-day-playbook__table is-core">
+        <thead><tr><th>板块</th><th>核心票</th><th>预期定位</th><th>今日状态</th><th>开盘预期</th><th>弱转强/转强判定</th><th>板块确认</th><th>失败信号</th><th>操作预案</th></tr></thead>
+        <tbody><tr><td>电力/风电/海峡</td><td>闽东电力</td><td>短线总龙核心候选</td><td>6板回封，跌停翘起后放量进攻。</td><td>不能弱开弱走。</td><td>健康换手后主动上板。</td><td>电力/风电/海峡至少一条线助攻。</td><td>放量不能回封或助攻全弱。</td><td>持有观察，按条件单处理。</td></tr><tr><td>科技趋势</td><td>588170/159516</td><td>ETF趋势工具</td><td>连续放量大阳后小高潮。</td><td>低开或小高开更舒服。</td><td>回踩不破并放量企稳。</td><td>CPO/PCB/芯片不集体回落。</td><td>高开一致砸盘。</td><td>小仓低吸，不追高。</td></tr><tr><td>PCB/光刻胶</td><td>西陇科学</td><td>分化选强候选</td><td>平台突破感较强，涨停状态待核。</td><td>不高开过多。</td><td>主动承接并带科技小票。</td><td>PCB/光刻胶继续有补涨。</td><td>冲高回落且板块无助攻。</td><td>只做确认，不提前赌。</td></tr><tr><td>通信/CPO</td><td>通鼎互联</td><td>CPO二板辨识度</td><td>2连板且热榜第二。</td><td>分化后有承接。</td><td>2进3换手健康。</td><td>永鼎、光迅等容量不弱。</td><td>CPO高开低走。</td><td>只做分歧转强。</td></tr></tbody>
+      </table>
+    </div>
+
+    <div class="next-day-playbook__subsection" id="next-day-scenario-playbooks" data-scenario-playbooks>
+      <div class="next-day-playbook__subhead"><h5>情景推演与执行预案</h5><p>盘前不猜唯一答案，盘中按触发条件切换剧本。</p></div>
+      <div class="scenario-playbook-grid"><article class="scenario-playbook-card"><div class="scenario-playbook-card__head"><h6>闽东续强+科技良性分化</h6><span>主场景</span></div><dl><dt>大盘触发</dt><dd>指数震荡不破位。</dd><dt>板块验证</dt><dd>闽东有助攻，科技低吸承接。</dd><dt>核心动作</dt><dd>持有闽东，科技ETF小仓试错。</dd><dt>仓位计划</dt><dd>围绕现有仓位，谨慎加工具仓。</dd><dt>切换条件</dt><dd>闽东弱走或科技高开砸盘则降级。</dd></dl></article><article class="scenario-playbook-card"><div class="scenario-playbook-card__head"><h6>科技承接强于短线</h6><span>次场景</span></div><dl><dt>大盘触发</dt><dd>指数震荡，量能维持。</dd><dt>板块验证</dt><dd>科技核心持续放量，闽东分歧但不崩。</dd><dt>核心动作</dt><dd>降低短线加仓欲望，转向ETF和科技前排。</dd><dt>仓位计划</dt><dd>小仓分批，不追一致。</dd><dt>切换条件</dt><dd>ETF跌破承接则撤。</dd></dl></article><article class="scenario-playbook-card"><div class="scenario-playbook-card__head"><h6>闽东孤军7板</h6><span>低概率</span></div><dl><dt>大盘触发</dt><dd>高标抱团继续但板块助攻弱。</dd><dt>板块验证</dt><dd>闽东封住但后排不跟。</dd><dt>核心动作</dt><dd>持仓可格局，但不加仓。</dd><dt>仓位计划</dt><dd>只保留核心仓。</dd><dt>切换条件</dt><dd>开板无承接立即处理。</dd></dl></article><article class="scenario-playbook-card is-risk"><div class="scenario-playbook-card__head"><h6>全面分化退潮</h6><span>风险场景</span></div><dl><dt>大盘触发</dt><dd>指数与科技双高开砸盘。</dd><dt>板块验证</dt><dd>闽东弱走，科技核心一起回落。</dd><dt>核心动作</dt><dd>执行条件单，降低仓位。</dd><dt>仓位计划</dt><dd>轻仓或空仓。</dd><dt>切换条件</dt><dd>跌停收敛并出现新核心再恢复观察。</dd></dl></article></div>
+      <div class="playbook-execution-order">
+        <strong>执行顺序</strong>
+        <ol><li>第一步先看闽东竞价与助攻。</li><li>第二步看科技ETF是否低开/小高开后承接。</li><li>第三步只在分化中选强，不追双高潮。</li><li>第四步AI安全、消费、汽车继续排除。</li></ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.next-day-playbook{margin-top:18px;border:1px solid rgba(9,83,73,.18);border-top:4px solid #086c62;background:#f8fcfa;color:#173f39;box-shadow:0 16px 36px rgba(25,75,67,.08)}
+.next-day-playbook__header{display:grid;grid-template-columns:minmax(250px,.7fr) minmax(360px,1.3fr);gap:24px;align-items:end;padding:24px 26px 20px;background:#0d4f47;color:#fff}
+.next-day-playbook__header h3{margin:5px 0 0;font-size:28px;letter-spacing:0}.next-day-playbook__header p{margin:0;color:#d9eee9;line-height:1.75}
+.next-day-playbook__kicker{font-size:11px;font-weight:800;color:#92d8ca;letter-spacing:.16em}
+.next-day-playbook__flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;margin:0;padding:0;list-style:none;border-bottom:1px solid #cfe1dc;background:#e9f4f1}
+.next-day-playbook__flow li{display:flex;align-items:center;gap:9px;padding:13px 16px;border-right:1px solid #cfe1dc;font-size:13px;font-weight:750}.next-day-playbook__flow li:last-child{border-right:0}.next-day-playbook__flow span{color:#0b786c;font-variant-numeric:tabular-nums}
+.next-day-playbook__step{padding:24px 26px;border-bottom:1px solid #d6e5e1;scroll-margin-top:20px}.next-day-playbook__step:last-child{border-bottom:0}
+.next-day-playbook__step-head{display:flex;gap:12px;align-items:center;margin-bottom:16px}.next-day-playbook__step-head>span{display:grid;place-items:center;width:38px;height:38px;background:#0b6f64;color:#fff;font-weight:850}.next-day-playbook__step-head small{display:block;color:#6b8d86;font-size:10px;font-weight:850;letter-spacing:.14em}.next-day-playbook__step-head h4{margin:2px 0 0;font-size:21px;letter-spacing:0;color:#123e38}
+.market-outlook-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.market-outlook-grid article{min-height:118px;padding:15px;border:1px solid #d4e3df;background:#fff}.market-outlook-grid article span{display:block;margin-bottom:8px;color:#0b6f64;font-size:12px;font-weight:850}.market-outlook-grid article p{margin:0;font-size:14px;line-height:1.65}.market-outlook-grid .is-positive{border-top:3px solid #1b8b5f}.market-outlook-grid .is-risk{border-top:3px solid #c64f45}.market-outlook-grid .is-action{border-top:3px solid #c58b24}
+.next-day-playbook__subsection{margin-top:22px}.next-day-playbook__subhead{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:10px}.next-day-playbook__subhead h5{margin:0;font-size:18px;letter-spacing:0;color:#0a5e55}.next-day-playbook__subhead p{margin:0;color:#607c76;font-size:13px}
+.next-day-playbook__table-shell{overflow:auto;border:1px solid #cfe0dc;background:#fff}.next-day-playbook__table{width:100%;min-width:1120px;border-collapse:collapse;table-layout:fixed}.next-day-playbook__table th{padding:11px 9px;background:#dfeeea;color:#075f56;font-size:12px;text-align:left;border-right:1px solid #c9ddd8}.next-day-playbook__table td{padding:11px 9px;border-top:1px solid #dce8e5;border-right:1px solid #e5eeec;vertical-align:top;font-size:12.5px;line-height:1.55;overflow-wrap:anywhere}.next-day-playbook__table tr:hover td{background:#f2f8f6}.next-day-playbook__table th:first-child,.next-day-playbook__table td:first-child{width:68px}.next-day-playbook__table.is-core{min-width:1280px}.playbook-priority{display:inline-block;padding:3px 7px;background:#0b6f64;color:#fff;font-size:11px;font-weight:800}.playbook-priority.is-watch{background:#687b76}.playbook-priority.is-risk{background:#a94c43}
+.next-day-playbook__guide{margin:-4px 0 14px;padding:11px 13px;border-left:3px solid #c58b24;background:#fff8e9;color:#665124;font-size:13px;line-height:1.65}
+.scenario-playbook-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.scenario-playbook-card{border:1px solid #d2e2de;background:#fff}.scenario-playbook-card__head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 14px;background:#e8f3f0}.scenario-playbook-card__head h6{margin:0;font-size:15px;letter-spacing:0}.scenario-playbook-card__head span{font-size:11px;font-weight:850;color:#0b6f64}.scenario-playbook-card dl{display:grid;grid-template-columns:86px 1fr;margin:0}.scenario-playbook-card dt,.scenario-playbook-card dd{margin:0;padding:9px 11px;border-top:1px solid #e3ecea;font-size:12.5px;line-height:1.55}.scenario-playbook-card dt{background:#f7faf9;color:#4c6d66;font-weight:800}.scenario-playbook-card.is-risk .scenario-playbook-card__head{background:#f9e9e6}.scenario-playbook-card.is-risk .scenario-playbook-card__head span{color:#a54037}
+.playbook-execution-order{display:grid;grid-template-columns:100px 1fr;gap:12px;margin-top:12px;padding:14px 16px;background:#123f39;color:#fff}.playbook-execution-order strong{color:#99d7ca}.playbook-execution-order ol{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px;margin:0;padding-left:20px}.playbook-execution-order li{line-height:1.55;color:#e3f2ee;font-size:13px}
+@media(max-width:980px){.next-day-playbook__header{grid-template-columns:1fr}.next-day-playbook__flow,.market-outlook-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.next-day-playbook__flow li:nth-child(2){border-right:0}.scenario-playbook-grid{grid-template-columns:1fr}}
+@media(max-width:640px){.next-day-playbook__header,.next-day-playbook__step{padding:18px}.next-day-playbook__flow,.market-outlook-grid{grid-template-columns:1fr}.next-day-playbook__flow li{border-right:0;border-bottom:1px solid #cfe1dc}.next-day-playbook__subhead{display:block}.next-day-playbook__subhead p{margin-top:5px}.playbook-execution-order{grid-template-columns:1fr}.playbook-execution-order ol{grid-template-columns:1fr}}
+</style>
+</section>
+<section class="section-card" id="chapter-13-十三-龙头预备票-最终定稿-c57786" data-phase="playbook" data-chapter-number="13"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">十三、龙头预备票（最终定稿）</h2>
+<h3 id="sub-13-1-一-总龙候选名单-3aea20" class="subchapter-title">（一）总龙候选名单</h3>
+<p class="body-line bullet-line tone-action">核心候选：闽东电力。</p>
+<p class="body-line bullet-line tone-risk">切换候选：三板及以上仍只有闽东电力最好做；澳弘电子（待确认）虽为PCB高位且量能健康，但股价偏高、接力性价比不如闽东。二板科技里通鼎互联、西陇科学、中晶科技（待确认）最好做，均只作趋势/二板核心候选，不参与总龙排序。</p>
+<p class="body-line bullet-line tone-risk">暂不纳入：中新赛克（待确认）、天融信（待确认）、汽车方向、消费负反馈链条、锂电池弱支线、机器人弱题材。</p>
+<h3 id="sub-13-2-二-总龙唯一性排序-9f94e1" class="subchapter-title">（二）总龙唯一性排序</h3>
+<p class="body-line tone-risk">闽东电力 &gt; 澳弘电子（待确认，量能健康但性价比一般） &gt; 通鼎互联/西陇科学/中晶科技（待确认，二板科技三强，不参与短线总龙PK）。</p>
+<p class="body-line">闽东电力是当前唯一完成6板、且从极端分歧中主动放量进攻封住的高位票，地位已经确认，若2026-09-17完成7板则基本成为绝对龙头。澳弘电子虽晋级4板，但用户判断继续向上空间有限；科技方向更偏趋势主线，不与闽东电力做短线总龙高度比较。</p>
+<p class="body-line tone-risk">板位选择上，三板及以上优先闽东电力；二板科技方向优先通鼎互联、西陇科学、中晶科技（待确认）。奥弘电子（待确认）虽然量能关系可以，但位置和股价都不如闽东舒服；博汇科技因AI安全负反馈不做。</p>
+<aside class="leader-competition-watch" id="leader-competition-watch" data-leader-competition-watch>
+  <style>
+    .leader-competition-watch{margin:16px 0 18px;border:1px solid rgba(13,112,99,.2);border-left:4px solid #0d7063;background:#f7fbfa}
+    .leader-competition-watch__head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:14px 16px;border-bottom:1px solid rgba(13,112,99,.14)}
+    .leader-competition-watch__head h4{margin:0;color:#084f47;font-size:18px}
+    .leader-competition-watch__head p{max-width:760px;margin:0;color:#52635f;line-height:1.65}
+    .leader-competition-watch__grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+    .leader-competition-watch__item{display:grid;grid-template-columns:94px 1fr;gap:10px;padding:13px 16px;border-bottom:1px solid rgba(13,112,99,.1)}
+    .leader-competition-watch__item:nth-child(odd){border-right:1px solid rgba(13,112,99,.1)}
+    .leader-competition-watch__item strong{color:#0d7063}
+    .leader-competition-watch__item span{color:#344742;line-height:1.65}
+    @media(max-width:760px){.leader-competition-watch__head{display:grid}.leader-competition-watch__grid{grid-template-columns:1fr}.leader-competition-watch__item:nth-child(odd){border-right:0}.leader-competition-watch__item{grid-template-columns:86px 1fr}}
+  </style>
+  <div class="leader-competition-watch__head">
+    <h4>卡位观察</h4>
+    <p>二进三、三进四、四进五都是唯一性竞争节点，重点识别低位卡高位与同身位互卡。</p>
+  </div>
+  <div class="leader-competition-watch__grid"><div class="leader-competition-watch__item"><strong>低位卡高位</strong><span>低身位票用更强的主动性、量能和板块带动，争夺并替代高位票的辨识度。</span></div><div class="leader-competition-watch__item"><strong>同身位互卡</strong><span>同板数个股比较先后手、封单、换手、回封质量和后排跟随，不能只看谁先涨停。</span></div><div class="leader-competition-watch__item"><strong>量能护卡</strong><span>晋级票必须用健康换手或放量回封守住地位；缩量硬顶、开板无承接都容易被卡掉。</span></div><div class="leader-competition-watch__item"><strong>败方联动</strong><span>卡位胜出不代表与败方完全脱钩；败方若封死跌停或持续深水，会拖累胜者与同高度情绪。</span></div><div class="leader-competition-watch__item"><strong>执行纪律</strong><span>唯一性未确认前不打板；胜出者转强、败方负反馈可控且板块跟随后，再按龙头预备处理。</span></div></div>
+</aside>
+
+<h3 id="sub-13-3-三-龙头七维核验明细-五维-双唯一性-a71302" class="subchapter-title">（三）龙头七维核验明细（五维+双唯一性）</h3>
+<p class="body-line tone-risk">主动性与领涨性分开看：主动性是先于板块回流、先找方向；领涨性是上板后能带动后排补涨跟随上板。龙头若只有主动回流、没有后排跟随领涨，预期要降级；龙头带不动题材，题材容易死，题材死又会反过来提高龙头炸板风险。</p>
+<aside class="leader-uniqueness-note" data-leader-uniqueness-knowledge><div class="leader-uniqueness-note__head"><span>◆ 龙头唯一性</span><h4>同身位唯一性竞争与量能确认</h4></div><ol class="leader-uniqueness-note__list"><li><strong>竞争阶段</strong><span>龙版传媒、大晟文化、欢瑞世纪同处4板时，题材内与跨题材高度唯一性都未确定，先观察、不抢板。</span></li><li><strong>量能门槛</strong><span>连续一字晋级的个股，到4板必须充分放量并完成回封；放不出量或回封弱，最容易在卡位中掉队。</span></li><li><strong>确认买点</strong><span>龙版传媒4板充分放量胜出，5板缩量转强确认；健康路径是两个半放量、一个全放量，再完成转强。</span></li><li><strong>败方反馈</strong><span>同身位竞争结束后，胜者与败者仍处于同一情绪单元。败者可以弱，但不能跌停或持续深水，否则会反向拖累胜者与高标情绪。</span></li><li><strong>七维结论</strong><span>三四板出现多只同身位票时，必须同时比较题材内唯一性与题材之间连板高度唯一性，最终定论前不打板。</span></li></ol></aside>
+<p class="body-line">主动性与领涨性分开看：主动性是先于板块回流、先找方向；领涨性是上板后能带动后排补涨跟随上板。龙头若只有主动回流、没有后排跟随领涨，预期要降级；龙头带不动题材，题材容易死，题材死又会反过来带炸龙头。</p>
+<div class="table-shell" id="source-table-7"><table class="data-table"><thead><tr><th>标的</th><th>身位</th><th>领涨性</th><th>主动性</th><th>抗跌性</th><th>市场性</th><th>价值性</th><th>题材内唯一性</th><th>题材之间连板高度唯一性</th><th>五维/七维结论</th><th>100%异动监管距离</th><th>题材梯队完整性</th><th>题材持续性</th><th>筹码结构&amp;量能健康度</th></tr></thead><tbody><tr><td>闽东电力</td><td>6板</td><td>强，电力/海峡核心</td><td>竞价恐慌后主动抢筹拉红，盘中放量上板，是全场最强主动核心。</td><td>强，从跌停附近拉起并封板</td><td>强，高标情绪锚</td><td>叠加电力、风电、福建、海峡、算力等复合属性</td><td>强，电力方向第一锚</td><td>强，当前最高连板</td><td>当前总龙核心候选，7板则绝对龙头</td><td>用户口述明日涨停也未触及，待核</td><td>电力口述7个涨停，海峡助攻，梯队可用</td><td>强，用户判断短线唯一持续方向</td><td>放量进攻，跌停撤单抢筹后回封，健康度需次日验证</td></tr><tr><td>澳弘电子（待确认）</td><td>4板</td><td>中，PCB小票核心</td><td>PCB四板候选，主动性弱于闽东，继续晋级难度更高。</td><td>待核</td><td>中</td><td>PCB方向弹性</td><td>中</td><td>弱于闽东电力</td><td>候选但不强推</td><td>待核</td><td>PCB分支有扩散，但用户判断继续高度有限</td><td>中</td><td>口述量能关系健康，但股价偏高，接力性价比一般</td></tr><tr><td>中晶科技（待确认）/通鼎互联/西陇科学</td><td>2板</td><td>中，科技二板三强</td><td>CPO二板辨识度，主动性看科技分化后承接。</td><td>待核</td><td>中</td><td>科技趋势弹性</td><td>待确认</td><td>不具备高度唯一性</td><td>二板里最好做的科技候选，不作总龙</td><td>待核</td><td>科技产业链涨停扩散较强</td><td>强，但偏趋势</td><td>通鼎已放量，西陇量能不过度，中晶小票弹性，明日看分化承接</td></tr><tr><td>超声电子/华正新材</td><td>趋势</td><td>中，PCB趋势核心</td><td>PCB趋势锚，主动性需要分化承接确认。</td><td>待核</td><td>中</td><td>PCB/电子材料趋势弹性</td><td>待确认</td><td>不参与短线高度唯一性</td><td>科技趋势备选</td><td>用户口述明日涨停也较舒服，待核</td><td>PCB分支较强</td><td>强，但偏趋势</td><td>需看20/30日异动与量能健康</td></tr></tbody></table></div>
+<h3 id="sub-13-4-四-明日总龙决胜观察要点-7cac4f" class="subchapter-title">（四）明日总龙决胜观察要点</h3>
+<p class="body-line bullet-line">闽东电力是否继续高位健康换手，而不是缩量加速后炸板。</p>
+<p class="body-line bullet-line tone-risk">电力/海峡是否继续出现助攻，尤其乐山电力、吉鑫科技（待确认）反馈是否转强。</p>
+<p class="body-line bullet-line">AI安全负反馈是否继续扩散，若扩散则会压制高位接力。</p>
+<p class="body-line bullet-line tone-action">科技方向能否在小高潮后完成健康分化，ETF 588170、159516及核心共振票低开/小高开承接是否强。</p>
+<p class="body-line bullet-line">不把科技趋势票强行当连板总龙做，短线总龙只看闽东电力。</p>
+<p class="body-line tone-action">核心交易规则：短线龙头只看闽东电力，科技趋势只等分化承接；不做已经被证伪题材的弱修复幻想。</p>
+</section>
+<section class="section-card" id="chapter-14-十四-口述信息全量归档与待确认信息-d62038" data-phase="playbook" data-chapter-number="14"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">十四、口述信息全量归档与待确认信息</h2><details class="archive-disclosure"><summary>口述信息与待确认内容</summary><div class="archive-content">
+<h3 id="sub-14-1-一-口述中已纳入的关键票池-446b2a" class="subchapter-title">（一）口述中已纳入的关键票池</h3>
+<p class="body-line tone-risk">闽东电力、中新赛克（口述“中新赛克”，待确认）、圣阳股份、澳弘电子（口述“奥红/澳弘电子”，待确认）、中晶科技（口述“中金/中晶科技”，待确认）、通鼎互联、永鼎股份、华脉科技、光迅科技、青山纸业、东田微、新易盛、北方华创、太极实业、风华高科、双星新材、西陇科学、东材科技、超声电子、华正新材、有研新材、露笑科技、奥士康、有研硅（待确认）、立昂微、瑞丰高材（口述“瑞丰高材”，待确认）、中岩大地、威尔高、泰福泵业、星辉股份、星网锐捷、欣旺达、诺德股份、大金重工、宇树科技、云南锗业、东山精密、远东股份（口述“远东”，待确认）、平潭发展、瑞达期货（待确认）、588170、159516、乐山电力、吉鑫科技（口述“吉鑫科技”，待确认）、会稽山、英联股份、博汇科技、万向德农、金健米业、哈药股份、宁德时代、比亚迪、三一重工、山推股份、柳工、恒立液压、龙版传媒、国芳集团（口述“国芳集团”，待确认）、桂林旅游、天融信（口述“天融信/天融信”，待确认）。</p>
+<h3 id="sub-14-2-二-待确认信息-d5edb4" class="subchapter-title">（二）待确认信息</h3>
+<p class="body-line bullet-line">“中新赛克”是否为“中新赛克”。</p>
+<p class="body-line bullet-line">“澳弘电子/澳弘电子”是否为“澳弘电子”。</p>
+<p class="body-line bullet-line">“中晶科技/中晶科技”高度疑似“中晶科技”，但准确名称待三表或盘面确认。</p>
+<p class="body-line bullet-line">“吉鑫科技”是否为“吉鑫科技”。</p>
+<p class="body-line bullet-line">“国芳集团”是否为“国芳集团”。</p>
+<p class="body-line bullet-line">“天融信”是否为“天融信”。</p>
+<p class="body-line bullet-line">“天融信”是否仍指“天融信”。</p>
+<p class="body-line bullet-line">“东材科技”已高置信修正为“东材科技”，仍待三表/盘面确认。</p>
+<p class="body-line bullet-line tone-risk">“有研硅/有研硅”准确名称与状态待确认。</p>
+<p class="body-line bullet-line">“露笑科技”已高置信修正为“露笑科技”，仍待三表校验。</p>
+<p class="body-line bullet-line tone-risk">瑞达期货是否为海峡方向首板/异动标的待确认。</p>
+<p class="body-line bullet-line">福建省人民政府“美丽中国先行区”相关文件名称、发布时间与海峡板块催化关系待核验。</p>
+<p class="body-line bullet-line">2026-09-17利率决议具体会议、是否加息与落地结果待核验。</p>
+<p class="body-line bullet-line tone-risk">博汇科技是否归属AI安全方向及当日状态待确认；当前按“AI安全负反馈链条，不看”处理。</p>
+<p class="body-line bullet-line tone-risk">“远东”疑似远东股份，具体名称与所属光纤/算力方向待确认。</p>
+<p class="body-line bullet-line tone-risk">双星新材是否归属MLCC/消费电子链条待确认。</p>
+<p class="body-line bullet-line tone-risk">哈药股份作为创新药总龙的人气状态待确认。</p>
+<p class="body-line bullet-line">平潭发展、瑞达期货与海峡板块的人气/涨停状态待三表校验。</p>
+<p class="body-line bullet-line">新易盛、永鼎股份、光迅科技、有研新材（口述“有研新材”）、北方华创的主力净流入情况待龙虎榜/资金数据校验。</p>
+<p class="body-line bullet-line">宁德时代、比亚迪等新能源方向主力流出情况待资金数据校验。</p>
+<p class="body-line bullet-line">闽东电力、超声电子、华正新材的异动监管距离、20日/30日200%异动空间待核验。</p>
+<p class="body-line bullet-line">今日成交额口述约1.85万亿、未到2万亿，需三表或行情数据校验。</p>
+<p class="body-line bullet-line tone-action">明日美股、韩国市场对A股科技分化质量的影响待次日盘前观察。</p>
+<p class="body-line bullet-line">外部复盘口径的板块容量数据（光通信300多亿、半导体151亿、PCB121亿、海峡60亿、液冷16亿、消费/电池/机器人不足10亿）待核验。</p>
+<p class="body-line bullet-line">瑞丰高材（口述“瑞丰高材”）、中岩大地、威尔高、华脉科技、青山纸业、东田微、泰福泵业、星辉股份、立昂微等涨停/涨幅状态待三表或行情数据校验。</p>
+<p class="body-line bullet-line">工程机械方向三一重工、山推股份、柳工、恒立液压下挫情况待核验。</p>
+<p class="body-line bullet-line">二进三唯一20cm晋级票名称口述未明确，需后续按连板梯队核验。</p>
+<p class="body-line bullet-line">电力方向助攻数量与板位存在口述摇摆：“两个首板/一个二板一个首板”待三表校验。</p>
+<p class="body-line bullet-line">2026-09-16三表数据中的大盘情绪、板块轮动、人气榜已补入正文；龙虎榜、异动监管距离仍待核验。</p>
+<p class="body-line bullet-line tone-risk">三表人气榜原始左列存在类别错位，已将错位左列股票全部保留；其准确类别归属待确认。</p>
+<p class="body-line bullet-line">董事长实盘高手跟踪中的具体持仓、买点、仓位分布和当日盈亏待核验；当前仅按用户口述提炼交易反思。</p>
+<p class="body-line bullet-line">AI安全方向昨日涨停数量约5个、板块强度不足以支撑强板接力的判断待三表校验。</p>
+<h3 id="sub-14-3-三-本轮原始口述归档-7dc0d4" class="subchapter-title">（三）本轮原始口述归档</h3>
+<p class="body-line tone-risk">先看连板这边。AI安全方向，中新赛克（口述“中新赛克”，待确认）被证伪，题材没有持续性，四板直接跌停，被市场抛弃。闽东电力今天从跌停附近翘起后放量进攻，6板封住，叠加电力、风电、福建、海峡、算力等多题材，类似圣阳股份这种杂合属性，高标里非常强。电力和海峡两个题材挺强，3进4出了澳弘电子（口述“澳弘电子”，待确认）这个PCB小票核心，但用户判断它走不了太多。二进三只进了一个20cm，其他因为AI安全、算力不行而断掉。当前4板和6板各有一个，4板预计不容易晋级5板，3板也不容易晋级4板，高度基本没得打。二板里中晶科技（待确认）、通鼎互联、西陇科学等科技小票有辨识度，偏趋势更好。短线题材里，电力有乐山电力首板助攻，吉鑫科技（待确认）一字助攻但自身反馈待确认，整体回落较多但没有特别强负反馈。农业万向德农拉情绪，金健米业没有跌停，农业负反馈变小，情绪比昨天极致缩量回暖。消费方向龙版传媒、国芳集团（待确认）、桂林旅游仍未止跌，两个跌停板明天要观察。AI应用/AI安全不看，汽车不看，短线题材基本只剩电力有持续性。</p>
+<p class="body-line tone-risk">第二段口述补充：科技趋势今天很猛，如果选不了个股，可以选ETF，例如588170、159516，形态上是探底假阳线后连续两根爆量放量大阳线。今天科技算小高潮，明天看分化，低开可以进，小高开也勉强能进，高开则不好说。半导体代表科技方向，催化包括电子信息十五五规划、科技探底回升节点、光博会验证光互联高景气；CPO最猛，其次PCB。今天首板节点票大量爆出，放量情绪好，科技共振标的包括中晶科技（待确认）、通鼎互联、西陇科学、东材科技、超声电子、有研新材、华正新材、澳弘电子（待确认）、奥士康、有研硅（待确认）等。电力方向有梯队，口述有7个涨停，电力本身有大会、风机涨价等逻辑，海峡板块也有标的异动并受国庆消息发酵，闽东电力是电力与海峡两重属性共振，地位已经确认；若7板顶上去，就是绝对龙头，但7板位置不适合加仓，合理加仓点应在6板附近，目前8.5成仓已较合适。短线除电力外，大消费和锂电池也各有二板身位，会稽山代表消费、英联股份代表锂电，但因为科技可以做，电力更强，所以消费和锂电不看；海峡两岸放进来，看作闽东电力助攻。AI安全里的博汇科技也不看，因为天融信/中新赛克负反馈太重。今日口述市场数据：涨停约90家、跌停约4家，封板率高，腾落数和极端腾落数回暖，科创板指、创业板指、深成指放量企稳，上证相对一般。</p>
+<p class="body-line tone-risk">第三段口述补充：板块节奏上，短线侠/板块节奏口径里，风电昨天是高潮弱启动，今天看续强但实际分化；吉鑫科技（口述“吉鑫科技”，待确认）一字/秒板顶出来后分歧较大，差点走弱，但海峡板块今日启动爆发，把闽东电力重新捞起来。闽东电力本质是风电、电力、海峡三个板块的身位票；今天风电分歧，明天看回流预期；今天海峡爆发，明天看分化或分歧，两个板块轮流接力。芯片、通信、算力今日都很猛，属于高潮启动、放量共振启动，明天同样是分化预期。化工之所以强，是因为科技方向里很多是半导体上游材料，碳化硅价格回升、12英寸碳化硅衬底涨价逻辑发酵，有研硅（待确认）、有研新材、露笑科技、中晶科技（待确认）等顶出来。西陇科学偏PCB、光刻胶、氢氟酸（口述音近，待确认），平台突破感不错。海峡板块催化来自福建省人民政府印发“福建省美丽中国先行区”相关文件（待核验），瑞达期货（待确认）也有海峡相关异动。机器人很弱，不看持续性；农业因有海峡助攻，也不单独看；消费、电池继续不看。明天风电/电力看回流，海峡看分化，科技看分化，大盘预期震荡，节奏比较舒服。时间轴上，用户判断本周和下周大事件不多，主要看消息刺激；2026-09-17 利率决议是重要外部点，关注是否加息和事件落地，具体会议与结果待核验。</p>
+<p class="body-line tone-risk">第四段口述补充：板块和ETF角度，今日大盘云图里半导体元件、消费电子、光学光电子、电子化学品很猛；银行没有明显护盘，电池和宁德时代方向不好，贵金属也起来了。板块里半导体、光刻机、CPO、存储芯片表现突出，CPO和存储芯片涨得最猛，但科技内部后续可能轮动到PCB、光刻胶等分支。ETF方面，588170、159516表现很好，如果选不到好票，可以做这两个；不一定拿涨停溢价，拿平均溢价也舒服。若明日科技趋势在分化分歧后放量企稳，这两个ETF可以作为上仓位工具。人气榜上，第一名闽东电力是短线投机绝对核心、情绪回暖总龙；CPO方向通鼎互联、永鼎股份在前排，平潭发展因热度高且涨停上榜，远东股份（待确认）偏光纤/算力但强度不如核心。有研新材是半导体核心，风华高科是MLCC核心，双星新材也有反馈，金健米业是农业退潮总龙，农业退潮接近结束，消费退潮今日第3天、明日第4天，预计也快结束但暂不做。哈药股份是创新药总龙，太极实业是存储芯片核心。前十之后，超声电子、有研硅（待确认）、光迅科技、露笑科技、万向德农、东材科技、澳弘电子（待确认）、西陇科学、云南锗业、东山精密等也有表现。用户归纳的科技核心是通鼎互联、有研新材、太极实业、超声电子、有研硅、东材科技、华正新材、西陇科学，其中西陇科学最舒服，中晶科技（口述“中晶科技”，待确认）相对没有那么猛。</p>
+<p class="body-line tone-risk">第五段口述补充：持仓处理上，今天闽东电力非常舒服但过程很危险。竞价20分前都是跌停，并有约7000多万封单，封单逐步减少，20分后撤单抢筹，直接拉红，小高开后冲高、放量、回踩均线，再直接拉板，拉板后炸板，午后最终回封。用户将其类比龙版传媒6板和桂林旅游断板后的跌停翘板形态，认为这是高位情绪不好、资金没有其他方向时做抱团的典型图形。今天一股没卖，设好动态条件单，接受-2%左右小亏离场预案，但最终没有触发，操作和情绪都较完美。唯一不足是盘中科技趋势左侧黄金博弈点没有第一时间上车，588170在10点到11点附近回踩约4个点不破时可以做，至少有约2个点收益，但当时只盯短线，没有盯全盘。明日计划：第一看西陇科学，作为PCB与CPO/科技共振的小票核心，分化选强、分歧选强可进；第二看588170、159516，前提是科技不是骗炮，而是放量大阳线后的正常回调，明日良性分化、放量企稳、无大负反馈时可上仓位；第三看闽东电力能否冲7板，关键看海峡两岸、电力/风电是否有一字板、强板或秒板助攻，有助攻就安心持有，没有则看盘中量能关系和动态条件单。退潮周期上，用户判断当前退潮进入第4天，明日第5天、后日第6天，预计第5-6天退潮基本结束并进入混沌，可能直接切科技主升。异动方面，用户口述闽东电力明日涨停也未触及异动，超声电子明日涨停也未触及异动；PCB趋势票如超声电子、华正新材更看20/30日200%异动空间。龙虎榜/资金上，用户口述闽东电力人气第一，通鼎互联人气第二，平潭发展、超声电子、有研新材、太极实业、西陇科学靠前；西陇科学主力进入较多。科技方向主力净流入明显，新易盛、永鼎股份、光迅科技、有研新材（口述“有研新材”，待确认）、北方华创等有资金进入；宁德时代、比亚迪等新能源方向流出较多。用户据此判断今天科技不是出货，而是放量进货。</p>
+<p class="body-line tone-risk">第六段口述补充：龙头仍然肯定是闽东电力。板位上，PCB的澳弘电子（口述“奥宏/澳弘电子”，待确认）量能关系健康，但股价太高，虽然可以看但没那么好做；博汇科技因AI安全负反馈不做。二板里，通鼎互联已放量，可以做；西陇科学（口述“系统科学”，待确认）量没放太多但也可以做；中晶科技（口述“中晶科技”，待确认）作为小票也可以做。三板及以上最好做的是闽东电力，二板最好做的是通鼎互联、西陇科学、中晶科技（待确认）。整体市场上，四个指数都向上顶并放量，但量能还不算极致，口述约1.85万亿、未到2万亿；若能到2万亿会更舒服。今日情绪确实回暖，2000多家上涨已经很久没看到，明日希望分化不要太强。健康的腾落数路径应是+2000多后逐步回到+1000多、-几百，再重新+2000/+3000；如果明日直接-2000/-3000，就是骗炮和不健康趋势。明日指数和板块不要双高开，双高容易砸盘；科技低开可观察，小高开看承接，高潮不进科技，指数和板块双高潮绝对不要追。同时要看美股和韩国市场变化。今日操作上，用户口述收益约4.83%，半仓持有，仓位控制舒服；耐心持股、不乱操作、不乱加仓、条件单保护都做得好。在短线没有完全退潮时，克制不加仓非常关键。仓位管理、条件单管理、短线炒作情绪管理、板块效应、板块节奏、个股节奏、量能关系、资金对流/吸血、闽东是否卡科技分歧，这些要素都重新回到体系里。</p>
+<p class="body-line tone-risk">第七段口述补充：引用淘股吧“湖南人”复盘口径，今天盘面很舒服，半导体、CPO、科创双创顶出的强度很好。容量结构上，光通信约300多亿、半导体151亿、PCB 121亿，三者容量都很大，所以能撑指数上攻；海峡约60亿，消费和电池不足10亿，机器人不足10亿，液冷约16亿，农业和黄酒不看，电力未记。海峡虽爆发，但60亿容量仍不如PCB 120亿，闽东电力强在同时叠加海峡和电力，短线抱团唯一核心仍是电力。三大指数早盘全线低开，小幅弱势震荡后展开震荡反弹，创业板和科创50领涨；外部复盘口径为沪指涨0.71%、创业板涨1.96%、两市成交额18524亿、个股涨多跌少。盘面上，算力硬件继续活跃，PCB澳弘电子4连板，瑞丰高材（待确认）、中岩大地、威尔高涨停；光纤华脉科技、永鼎股份涨停；CPO东田微涨超14%并创历史新高，光迅科技、青山纸业涨停；液冷服务器泰福泵业、星辉股份双双20cm涨停；半导体材料走强，中晶科技2连板，立昂微、有研硅、有研新材涨停。下跌方向是工程机械，三一重工、山推股份、柳工、恒立液压等下挫。指数昨日继续调整后，今日终于触底反弹，资金高低切换，高位股继续调整，国芳集团、桂林旅游二连跌停，中新赛克、龙版传媒、金健米业等继续调整。科技股/AI硬件反复活跃带动短线情绪回暖，PCB、CPO、MLCC、半导体等全线活跃，多股走出连板持续性；闽东电力逆势6连板带动福建本地股炒作，万向德农日内反抽涨停，是短线高位股修复的火苗。后市主要看高位股修复与科技股反弹持续性的博弈，短线一根阳线不足以支撑反转，需要等待后续进一步放量反弹。</p>
+<p class="body-line tone-risk">第八段口述补充：实盘高手跟踪里，“董事长”这边也要作为样本观察。他选闽东电力是对的，但选中新赛克/AI安全这个叙事不太好，说明高手也会错、也会回撤。他偏好做强板接力，五板接闽东但没接太多，四板阶段接中新赛克较多，导致今天亏损较大。用户判断，在题材比较小、情绪不太好的阶段，只能做唯一性；董事长可能觉得闽东五板高度偏高，所以想在中新赛克4进5吃溢价，但AI安全昨日板块强度并不够，只有约5个板（待核），题材容量和持续性不足。不能盲目相信板块强度本身，要结合其他题材对抗、大容量承接、个股量能节奏和转强确认。中新赛克盘中爆量弱转强看似可以，但量能结构不够好，买点太前置，应该等真正转强确认后再去做。</p>
+</div></details></section>
+
+<div class="phase-divider" id="phase-execution" data-tone="warm"><span>PHASE 04</span><strong>交易执行</strong><p>把战略落到进场、离场、仓位与最大亏损，盘中只按条件行动。</p></div>
+<section class="section-card plan-section" id="operation-plan" data-phase="execution" data-chapter-number="15">
+  <div class="section-kicker">Plan Before Trade</div>
+  <h2 class="chapter-title">十五、今日操作计划</h2>
+  <p class="body-line tone-action">复盘只是在找自己舒服的解释时，会偏离交易系统。这个模块固定把“进场条件、离场条件、最多亏多少”写到桌面上，先复盘过程，再讨论结果。</p>
+
+<section class="operation-strategy-outline" id="operation-strategy-outline" data-operation-strategy-outline>
+  <header class="operation-strategy-outline__header">
+    <div><span>PLAN BEFORE TRADE</span><h3>明日战略总纲</h3></div>
+    <p>先处理持仓，再等分化选强</p>
+  </header>
+  <ol class="operation-strategy-outline__grid"><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第一</span><strong>先看闽东</strong><p>有助攻、健康换手、回封强则持有；无助攻或弱走按条件单处理。</p></li><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第二</span><strong>再看科技</strong><p>科技低开或小高开分化承接才考虑ETF或前排试仓。</p></li><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第三</span><strong>只选强者</strong><p>西陇、通鼎、中晶等只做分化选强，不做高开一致追涨。</p></li><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第四</span><strong>远离证伪</strong><p>AI安全、汽车、消费旧周期不做弱修复幻想。</p></li></ol>
+</section>
+
+<style>
+.operation-strategy-outline{margin:16px 0 24px;border-top:3px solid #0b7166;border-bottom:1px solid #d6e4e0;background:#fffaf0;color:#173e38}
+.operation-strategy-outline__header{display:flex;align-items:end;justify-content:space-between;gap:18px;padding:16px 18px;background:#123f39;color:#fff}
+.operation-strategy-outline__header span{display:block;color:#acd9cf;font-size:10px;font-weight:850;letter-spacing:.12em}.operation-strategy-outline__header h3{margin:3px 0 0;font-size:22px;letter-spacing:0}.operation-strategy-outline__header p{max-width:560px;margin:0;color:#d5ebe6;font-size:13px;line-height:1.6;text-align:right}
+.operation-strategy-outline__grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:0;padding:0;list-style:none}.operation-strategy-outline__item{min-width:0;padding:16px;border-right:1px solid #e8dfcc}.operation-strategy-outline__item:last-child{border-right:0}.operation-strategy-outline__order{display:block;margin-bottom:7px;color:#a56d0d;font-size:11px;font-weight:850}.operation-strategy-outline__item strong{display:block;margin-bottom:6px;color:#714d0d;font-size:14px}.operation-strategy-outline__item p{margin:0;color:#506c66;font-size:13px;line-height:1.65;overflow-wrap:anywhere}
+@media(max-width:980px){.operation-strategy-outline__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.operation-strategy-outline__item:nth-child(2){border-right:0}.operation-strategy-outline__item:nth-child(-n+2){border-bottom:1px solid #e8dfcc}}
+@media(max-width:650px){.operation-strategy-outline__header{display:block}.operation-strategy-outline__header p{margin-top:7px;text-align:left}.operation-strategy-outline__grid{grid-template-columns:1fr}.operation-strategy-outline__item{border-right:0;border-bottom:1px solid #e8dfcc}.operation-strategy-outline__item:last-child{border-bottom:0}}
+</style>
+
+  <h3 id="operation-kiss" class="subchapter-title">操作与情绪复盘（KISS模型）</h3>
+  <div class="kiss-grid" data-kiss-three-section><article class="kiss-card"><span>今日操作结果</span><p>缩量冰点里没有乱追科技反抽，聚焦医药总龙哈药股份，方向和标的选择正确。</p></article><article class="kiss-card"><span>核心失误</span><p>昨天哈药股份龙头地位确认更早，但没有在更舒服的位置上足仓；今天再上仓，确认度更高但性价比下降。</p></article><article class="kiss-card"><span>核心反思</span><p>明天只按预期表处理：一字或大高开快速封板才符合预期，低开、平开、冲板失败或炸板不回封先降风险。</p></article></div>
+
+  <h3 id="second-review-2026-07-22" class="subchapter-title">盘后二次复盘：闽东高位抱团与科技趋势先手</h3>
+  <div class="kiss-grid second-review-grid"><article class="kiss-card"><span>闽东模型</span><p>跌停封单减少、撤单抢筹拉红、回踩均线不破、放量上板、炸板后午后回封，是高位抱团资金重新选择唯一高度。</p></article><article class="kiss-card"><span>科技遗憾</span><p>588170在10点到11点附近回踩约4个点不破，是趋势ETF左侧黄金点；当时只盯短线，先手没拿到。</p></article><article class="kiss-card"><span>题材证伪</span><p>中新赛克跌停后，AI安全不再是短线主攻。高标辨识度不能替代题材持续性。</p></article><article class="kiss-card"><span>高手校验</span><p>董事长做闽东方向正确，但AI安全叙事错误；跟踪高手也要用自己的题材、容量和量能系统过滤。</p></article><article class="kiss-card"><span>明日节奏</span><p>闽东看7板质量，科技看分化承接；双高潮不追，低开或小高开更舒服。</p></article></div>
+
+<h3 id="theme-rhythm-run" class="subchapter-title">题材节奏运行</h3>
+  <div class="theme-rhythm-run-grid"><section class="theme-rhythm-stage"><h4>一、首日启动爆发</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>两个以上一字定方向</span><p>题材首日启动时，最好至少有两个以上一字板把方向钉住，说明资金共识不是单票脉冲。</p></article><article class="kiss-card"><span>存在身位领先龙头</span><p>题材内部最好有一个身位领先的龙头，用它锚定题材高度、分歧承接和次日预期。</p></article><article class="kiss-card"><span>容量和连板梯队存在</span><p>题材不能只有小票脉冲，要同时看到容量票、中军或趋势票，以及连板梯队的完整性。</p></article><article class="kiss-card"><span>逻辑正宗且越新越好</span><p>题材逻辑要正宗，最好是新逻辑、新催化、新叙事；旧题材借消息反抽要主动降级。</p></article></div></section><section class="theme-rhythm-stage"><h4>二、次日分化抗跌</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>前排必须超预期</span><p>首板很多的题材爆发日，次日前排正常应该开一字或极强高开，才能证明资金认可题材强度；如果前排都开不出一字，说明题材强度低于预期，要降低接力仓位。</p></article><article class="kiss-card"><span>后排要继续补首板</span><p>爆发次日不能只靠昨天的前排硬顶，后排还应该有新的首板继续顶出来，维持板块热度和扩散强度；如果没有新增首板，说明题材热度开始衰减。</p></article><article class="kiss-card"><span>分化日看前排封单与后排扩散</span><p>强分化不是单纯看涨停数量，而是看前排是否一字锁死、换手前排是否主动回封、后排是否仍有首板补涨；三者同时满足，题材才可能继续走主线。</p></article><article class="kiss-card"><span>不及预期时快速降级</span><p>如果前排不一字、后排无新增首板、核心开盘后承接弱，就把题材从主攻降级为轮动套利，不再按高潮延续去重仓追高。</p></article></div></section><section class="theme-rhythm-stage"><h4>三、后续轮动节奏</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>前排不断抗跌领涨</span><p>主升题材里，前排核心要不断抗跌、领涨、主动修复，不能只靠后排乱冲维持表面热度。</p></article><article class="kiss-card"><span>后排不断首板助攻</span><p>后排要持续有新首板补涨，给前排提供题材扩散和情绪助攻，说明资金仍愿意在板块内挖掘。</p></article><article class="kiss-card"><span>前后排脱节不严重</span><p>前排强、后排全崩，说明题材只剩抱团；后排强、前排不强，说明没有核心。健康主升要前后排节奏相对同步。</p></article><article class="kiss-card"><span>断板仍趋势向上</span><p>前排即使断板，也应该承接健康、趋势向上；只要没有大负反馈，题材仍可能通过轮动和反包维持生命力。</p></article><article class="kiss-card"><span>高位  中位  低位跟上梯队</span><p>一个题材运行的时候，不仅仅是高位连板继续，中位也要有一两个顶住强度，低位也要有几个补首板助攻。中位和低位任意一个断掉、负反馈严重或冲高回落，都是龙头可能断板的吹哨信号。</p></article><article class="kiss-card"><span>题材证伪情况判断</span><p>盯盘时先看前排辨识度，再看后排负反馈。若只是部分前排辨识度回落、龙头仍主动向上，题材只是开始出问题但未完全证伪；若龙头、前排辨识度和后排同分时回落，说明题材整体分歧被确认，龙头也不能独善其身，要按证伪处理。</p></article><article class="kiss-card"><span>高位抱团撤单抢筹</span><p>高位情绪差时，核心票跌停制造恐慌后撤单抢筹拉红，若回踩均线不破并回封，可视为资金重新选择高标。</p></article><article class="kiss-card"><span>趋势ETF先手</span><p>产业链放量共振而个股难选时，用ETF承接趋势；放量大阳后的分化回踩不破，是先手点。</p></article><article class="kiss-card"><span>高手也要被系统校验</span><p>实盘高手参与不能替代题材持续性、容量、唯一性和量能确认。高手买错时，要转化为自己的风控样本。</p></article></div></section><section class="theme-rhythm-stage"><h4>四、龙头见顶结束</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>后排跌停吹哨</span><p>题材主升阶段，后排不应该直接跌停；一旦后排出现跌停，就是题材持续性开始见顶的吹哨信号。</p></article><article class="kiss-card"><span>辨识度标的深水</span><p>主升题材里，辨识度标的可以断板，但不应该冲高回落后直接跳到深水；这代表前排正反馈开始转弱。</p></article><article class="kiss-card"><span>前排负反馈不能大</span><p>前排应该持续趋势正反馈，可以分歧、可以断板，但不能出现大跳水、大阴线、深水负反馈。</p></article><article class="kiss-card"><span>后排负反馈不能极端</span><p>后排可以弱，但不能出现跌停这种极端负反馈；后排跌停扩散，说明资金已经开始从题材内部撤退。</p></article><article class="kiss-card"><span>历史对照看吹哨</span><p>强分化日不一定结束，关键看有没有跌停和辨识度深水。比如医药强分化但无跌停时还能回流；等后排跌停出现，龙头高度就容易接近尾声。</p></article><article class="kiss-card"><span>执行上快速降级</span><p>当前排辨识度走弱叠加后排跌停，主升预期要立刻降级为退潮预警；不再按龙头加速处理，只做减仓、止盈或离场。</p></article></div></section></div>
+
+  <h3 id="operation-process-review" class="subchapter-title">正确复盘重点</h3>
+  <p class="body-line tone-action">一笔交易从决定进场到决定离场，中间到底做了哪些动作？看到什么具体信号准备动手？这个信号是系统提前规定，还是盘中临场决定？</p>
+  <p class="body-line tone-risk">进场之后是否设置止损，盘中有没有因为害怕手动下移止损？止盈是进场前规划好，还是利润回吐后慌张平掉？不要只盯结果，要盯过程。</p>
+  <h3 id="operation-plan-three-questions" class="subchapter-title">书面计划三问</h3>
+  <div class="question-grid"><article>我在什么条件下进场？</article><article>对了怎么办，错了怎么办？</article><article>这笔最多亏多少？</article></div>
+  <h3 id="editable-operation-table" class="subchapter-title">可编辑交易计划表</h3>
+  <section class="plan-editor" data-operation-plan data-plan-cache-sanitizer="v1">
+    <div class="plan-toolbar">
+      <button type="button" data-add-row="目前持仓票">新增持仓票</button>
+      <button type="button" data-add-row="计划内票">新增计划内票</button>
+      <button type="button" data-export-plan>导出CSV</button>
+      <button type="button" data-reset-plan>恢复默认</button>
+      <span class="plan-save-status" data-save-status>本地已保存</span>
+    </div>
+    <div class="plan-table-wrap"><table class="plan-table">
+      <thead><tr><th>类型</th><th>标的</th><th>个股预期定位</th><th>隔日操作策略</th><th>什么条件进场</th><th>什么条件离场</th><th>最多亏多少</th><th>备注</th><th>操作</th></tr></thead>
+      <tbody data-plan-body></tbody>
+    </table></div>
+  </section>
+  <h3 id="holding-handling-table" class="subchapter-title">持仓处理计划表</h3>
+  <section class="holding-plan-editor" data-holding-plan>
+    <div class="plan-toolbar">
+      <button type="button" data-add-holding-row>新增持仓处理</button>
+      <button type="button" data-export-holding>导出CSV</button>
+      <button type="button" data-reset-holding>恢复默认</button>
+      <span class="plan-save-status" data-holding-save-status>本地已保存</span>
+    </div>
+    <div class="holding-table-wrap"><table class="holding-table">
+      <thead><tr><th>题材</th><th>标的</th><th>仓位比例</th><th>预期定位</th><th>当日涨幅</th><th>封板状态</th><th>隔日开盘预期</th><th>隔日分时预期</th><th>隔日操作策略</th><th>当日题材情况</th><th>隔日题材预期</th><th>止损条件</th><th>操作</th></tr></thead>
+      <tbody data-holding-plan-body></tbody>
+    </table></div>
+  </section>
+  <script type="application/json" data-plan-defaults>[{&quot;type&quot;: &quot;目前持仓票&quot;, &quot;stock&quot;: &quot;闽东电力&quot;, &quot;position&quot;: [&quot;龙头预备&quot;, &quot;龙头核心做T或格局&quot;], &quot;nextStrategy&quot;: [&quot;龙头核心做T或格局&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;已有持仓；明日只看7板节点的健康换手、放量承接与电力/风电/海峡助攻。&quot;, &quot;exit&quot;: &quot;无助攻、弱开弱走、放量不能回封，或动态条件单触发就先处理。&quot;, &quot;maxLoss&quot;: &quot;按动态条件单执行；接受小亏，不允许从盈利票变成大亏。&quot;, &quot;note&quot;: &quot;半仓/8.5成口述待核&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;西陇科学&quot;, &quot;position&quot;: [&quot;接力套利&quot;, &quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;PCB、光刻胶、科技分化后仍选强，并且西陇主动承接、平台突破不回落。&quot;, &quot;exit&quot;: &quot;科技高开过多被砸，或西陇只冲高不带板块。&quot;, &quot;maxLoss&quot;: &quot;分化选强失败即退出。&quot;, &quot;note&quot;: &quot;科技小票优先&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;588170/159516&quot;, &quot;position&quot;: [&quot;观察试错&quot;, &quot;机构趋势&quot;], &quot;nextStrategy&quot;: [&quot;龙头核心做T或格局&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;科技小高潮次日低开或小高开，ETF回踩不破、放量企稳、无大负反馈。&quot;, &quot;exit&quot;: &quot;指数与科技双高开后砸盘，或放量大阳后的分化失守。&quot;, &quot;maxLoss&quot;: &quot;趋势试仓小亏即撤。&quot;, &quot;note&quot;: &quot;趋势ETF工具&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;通鼎互联/中晶科技&quot;, &quot;position&quot;: [&quot;接力套利&quot;, &quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;科技二板分化后仍有承接，CPO/半导体梯队继续补强。&quot;, &quot;exit&quot;: &quot;二板高开秒砸、后排无首板助攻或科技分支退潮。&quot;, &quot;maxLoss&quot;: &quot;二板接力失败即撤。&quot;, &quot;note&quot;: &quot;二板辨识度&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;超声电子/华正新材&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;PCB趋势核心低开承接，板块回流且异动空间仍舒适。&quot;, &quot;exit&quot;: &quot;PCB中位负反馈扩大，或科技资金只拉CPO不拉PCB。&quot;, &quot;maxLoss&quot;: &quot;趋势核心破位即撤。&quot;, &quot;note&quot;: &quot;PCB趋势锚&quot;}]</script>
+  <script type="application/json" data-holding-defaults>[{&quot;theme&quot;: &quot;电力/风电/海峡&quot;, &quot;stock&quot;: &quot;闽东电力&quot;, &quot;positionSize&quot;: &quot;半仓；8.5成口述待核&quot;, &quot;position&quot;: &quot;短线总龙核心候选 / 6板唯一高度&quot;, &quot;dayGain&quot;: &quot;约+10% / 6连板；持仓收益口述约+4.83%&quot;, &quot;limitStatus&quot;: &quot;跌停附近翘起，放量进攻，炸板后午后回封&quot;, &quot;nextOpen&quot;: &quot;不能弱开弱走；小高开或平开后需快速承接&quot;, &quot;nextIntraday&quot;: &quot;最好健康换手后再上7板，并带电力/风电/海峡助攻&quot;, &quot;nextStrategy&quot;: &quot;有助攻就持有，不加无确认仓；无助攻或回封失败按条件单处理&quot;, &quot;themeToday&quot;: &quot;电力、风电、海峡轮流助攻，闽东是唯一高标情绪出口&quot;, &quot;themeNext&quot;: &quot;风电/电力看回流，海峡看分化；两个方向不能同时拖累闽东&quot;, &quot;stopLoss&quot;: &quot;动态条件单；弱开弱走、放量不能回封、后排大负反馈或条件单触发即走&quot;}]</script>
+</section>
+
+      <p class="source-note">Source Word: C:\Users\Administrator\Desktop\Codex\A股复盘输出\2026-09-16-章盟主式超短全景复盘-AI文档-完整不遗漏版.md</p>
+    </main>
+  </div>
+
+<script>
+(function(){
+  const decodeJson = text => String(text || '').replace(/&quot;/g,'"').replace(/&#34;/g,'"').replace(/&#39;/g,"'").replace(/&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');
+  const parseJsonNode = (node, fallback) => {
+    const raw = node ? node.textContent : '';
+    for (const candidate of [raw, decodeJson(raw)]) {
+      try { return JSON.parse(candidate); } catch (error) {}
+    }
+    return fallback;
+  };
+  document.querySelectorAll('.toc-node').forEach((node, index) => {
+    const key = 'a-share-detail-toc-2026-09-16-' + index;
+    const saved = localStorage.getItem(key);
+    if (saved === 'closed') node.open = false;
+    if (saved === 'open') node.open = true;
+    node.addEventListener('toggle', () => localStorage.setItem(key, node.open ? 'open' : 'closed'));
+  });
+  const effectRoot = document.querySelector('[data-effect-positioning]');
+  if (effectRoot) {
+    const options = parseJsonNode(effectRoot.querySelector('[data-effect-options]'), []);
+    const defaults = parseJsonNode(effectRoot.querySelector('[data-effect-defaults]'), {profit: [], loss: []});
+    const status = effectRoot.querySelector('[data-effect-status]');
+    const key = 'a-share-effect-positioning-2026-09-16-v1';
+    let state = defaults;
+    try { state = JSON.parse(localStorage.getItem(key) || 'null') || defaults; } catch (error) { state = defaults; }
+    const save = () => {
+      try { localStorage.setItem(key, JSON.stringify(state)); if (status) status.textContent = '本地已保存'; }
+      catch (error) { if (status) status.textContent = '本地保存失败'; }
+    };
+    const render = group => {
+      const target = effectRoot.querySelector(`[data-effect-group="${group}"]`);
+      if (!target) return;
+      target.innerHTML = options.map(option => {
+        const active = Array.isArray(state[group]) && state[group].includes(option);
+        return `<button type="button" class="effect-chip${active ? ' is-selected' : ''}" aria-pressed="${active}" data-effect-option="${option}" data-effect-click="${group}">${option}</button>`;
+      }).join('');
+    };
+    effectRoot.addEventListener('click', event => {
+      const button = event.target.closest('[data-effect-click]');
+      if (!button) return;
+      const group = button.dataset.effectClick;
+      const option = button.dataset.effectOption;
+      const set = new Set(Array.isArray(state[group]) ? state[group] : []);
+      set.has(option) ? set.delete(option) : set.add(option);
+      state[group] = Array.from(set);
+      render(group);
+      save();
+    });
+    render('profit'); render('loss'); save();
+  }
+  const root = document.querySelector('[data-operation-plan]');
+  const holdingRoot = document.querySelector('[data-holding-plan]');
+  if (!root) return;
+  const planDefaults = parseJsonNode(document.querySelector('[data-plan-defaults]'), []);
+  const holdingDefaults = parseJsonNode(document.querySelector('[data-holding-defaults]'), []);
+  const storageKey = 'a-share-operation-plan-2026-09-16-v2';
+  const optionKey = storageKey + '-options';
+  const holdingKey = 'a-share-holding-plan-2026-09-16-v1';
+  const defaultOptions = {position:['接力套利','龙头预备','观察试错'], nextStrategy:['冲高兑现套利','龙头核心做T或格局','走弱止损']};
+  const esc = value => String(value ?? '').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'","&#39;");
+  const normalizeSelection = value => Array.isArray(value) ? value.filter(Boolean) : String(value || '').split(/[、，,]/).map(x => x.trim()).filter(Boolean);
+  const isCorruptedPlaceholder = value => {
+    const text = String(value ?? '').trim();
+    return Boolean(text) && (text.includes('\uFFFD') || /^[?？\s]+$/.test(text));
+  };
+  const cleanText = (value, fallback = '') => isCorruptedPlaceholder(value) ? String(fallback ?? '') : String(value ?? '');
+  const cleanSelection = (value, fallback = []) => {
+    const raw = normalizeSelection(value);
+    const hadCorruption = raw.some(item => isCorruptedPlaceholder(item));
+    const cleaned = raw.filter(item => !isCorruptedPlaceholder(item));
+    return hadCorruption && !cleaned.length ? normalizeSelection(fallback).filter(item => !isCorruptedPlaceholder(item)) : cleaned;
+  };
+  const rowIndexFromButton = button => {
+    const raw = button?.dataset?.index;
+    if (raw !== undefined && raw !== '') {
+      const parsed = Number(raw);
+      if (Number.isInteger(parsed) && parsed >= 0) return parsed;
+    }
+    const tr = button.closest('tr');
+    return tr && tr.parentElement ? Array.from(tr.parentElement.children).indexOf(tr) : -1;
+  };
+  let rows;
+  try { rows = JSON.parse(localStorage.getItem(storageKey) || 'null') || planDefaults; } catch (error) { rows = planDefaults; }
+  let options;
+  try { options = JSON.parse(localStorage.getItem(optionKey) || 'null') || defaultOptions; } catch (error) { options = defaultOptions; }
+  rows = rows.map((row, index) => {
+    const fallback = planDefaults.find(item => item.stock && item.stock === cleanText(row?.stock)) || planDefaults[index] || {};
+    return {
+      type:cleanText(row?.type, fallback.type), stock:cleanText(row?.stock, fallback.stock),
+      position:cleanSelection(row?.position, fallback.position), nextStrategy:cleanSelection(row?.nextStrategy, fallback.nextStrategy),
+      entry:cleanText(row?.entry, fallback.entry), exit:cleanText(row?.exit, fallback.exit),
+      maxLoss:cleanText(row?.maxLoss, fallback.maxLoss), note:cleanText(row?.note, fallback.note)
+    };
+  });
+  const unique = list => Array.from(new Set(list.filter(Boolean)));
+  options = {position: unique([...(defaultOptions.position||[]), ...(options.position||[]), ...rows.flatMap(r => r.position)]).filter(item => !isCorruptedPlaceholder(item)), nextStrategy: unique([...(defaultOptions.nextStrategy||[]), ...(options.nextStrategy||[]), ...rows.flatMap(r => r.nextStrategy)]).filter(item => !isCorruptedPlaceholder(item))};
+  const body = root.querySelector('[data-plan-body]');
+  const status = root.querySelector('[data-save-status]');
+  const save = () => {
+    try {
+      localStorage.setItem(storageKey, JSON.stringify(rows));
+      localStorage.setItem(optionKey, JSON.stringify(options));
+      if (status) status.textContent = '本地已保存 ' + new Date().toLocaleTimeString('zh-CN', {hour:'2-digit', minute:'2-digit'});
+    } catch (error) {
+      if (status) status.textContent = '本地保存失败';
+    }
+  };
+  const textCell = (row, index, field) => `<td contenteditable="true" data-index="${index}" data-field="${field}" title="可直接编辑">${esc(row[field])}</td>`;
+  const multiCell = (row, index, field) => {
+    const selected = normalizeSelection(row[field]);
+    row[field] = selected;
+    const chips = unique([...(options[field]||[]), ...selected]).map(option => `<button type="button" class="multi-chip${selected.includes(option) ? ' is-selected' : ''}" data-index="${index}" data-field="${field}" data-option="${esc(option)}">${esc(option)}</button>`).join('');
+    return `<td class="multi-select-cell" data-multi-cell data-index="${index}" data-field="${field}"><div class="multi-select-control">${chips}</div><div class="multi-add"><input data-option-input placeholder="自定义"><button type="button" data-add-option>添加</button></div></td>`;
+  };
+  const render = () => {
+    body.innerHTML = rows.map((row, index) => `<tr>${textCell(row,index,'type')}${textCell(row,index,'stock')}${multiCell(row,index,'position')}${multiCell(row,index,'nextStrategy')}${textCell(row,index,'entry')}${textCell(row,index,'exit')}${textCell(row,index,'maxLoss')}${textCell(row,index,'note')}<td><div class="plan-row-actions"><button type="button" class="plan-row-save" data-index="${index}" data-save-row>保存</button><button type="button" class="plan-row-delete" data-index="${index}" data-delete-row>删除</button></div></td></tr>`).join('');
+  };
+  root.addEventListener('input', event => {
+    const cell = event.target.closest('[contenteditable][data-field]');
+    if (!cell) return;
+    const index = Number(cell.dataset.index);
+    rows[index][cell.dataset.field] = cell.textContent.trim();
+    save();
+  });
+  root.addEventListener('click', event => {
+    const add = event.target.closest('[data-add-row]');
+    if (add) { rows.push({type:add.dataset.addRow, stock:'', position:[], nextStrategy:[], entry:'', exit:'', maxLoss:'', note:''}); render(); save(); return; }
+    const del = event.target.closest('[data-delete-row]');
+    if (del) { const index = rowIndexFromButton(del); if (index >= 0) rows.splice(index, 1); render(); save(); return; }
+    const saveRow = event.target.closest('[data-save-row]');
+    if (saveRow) { save(); return; }
+    const reset = event.target.closest('[data-reset-plan]');
+    if (reset) { rows = JSON.parse(JSON.stringify(planDefaults)); options = JSON.parse(JSON.stringify(defaultOptions)); render(); save(); return; }
+    const chip = event.target.closest('[data-option]');
+    if (chip) {
+      const index = Number(chip.dataset.index), field = chip.dataset.field, value = chip.dataset.option;
+      const selected = new Set(normalizeSelection(rows[index][field]));
+      rows[index][field] = (event.ctrlKey || event.metaKey)
+        ? (selected.has(value) ? Array.from(selected).filter(x => x !== value) : Array.from(selected).concat(value))
+        : [value];
+      render(); save(); return;
+    }
+    const addOption = event.target.closest('[data-add-option]');
+    if (addOption) {
+      const cell = addOption.closest('[data-multi-cell]');
+      const input = cell.querySelector('[data-option-input]');
+      const value = input.value.trim();
+      if (!value) return;
+      const index = Number(cell.dataset.index), field = cell.dataset.field;
+      options[field] = unique([...(options[field]||[]), value]);
+      rows[index][field] = unique([...normalizeSelection(rows[index][field]), value]);
+      render(); save(); return;
+    }
+    const exportButton = event.target.closest('[data-export-plan]');
+    if (exportButton) exportCsv(['类型','标的','个股预期定位','隔日操作策略','什么条件进场','什么条件离场','最多亏多少','备注'], rows.map(r => [r.type,r.stock,normalizeSelection(r.position).join('、'),normalizeSelection(r.nextStrategy).join('、'),r.entry,r.exit,r.maxLoss,r.note]), '2026-09-16-今日操作计划.csv');
+  });
+  function exportCsv(header, rows, name) {
+    const csv = [header, ...rows].map(line => line.map(v => `"${String(v || '').replaceAll('"','""')}"`).join(',')).join('\n');
+    const blob = new Blob(['\ufeff' + csv], {type:'text/csv;charset=utf-8'});
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url; link.download = name; link.click(); URL.revokeObjectURL(url);
+  }
+  if (holdingRoot) {
+    const fields = ['theme','stock','positionSize','position','dayGain','limitStatus','nextOpen','nextIntraday','nextStrategy','themeToday','themeNext','stopLoss'];
+    let holdingRows;
+    try { holdingRows = JSON.parse(localStorage.getItem(holdingKey) || 'null') || holdingDefaults; } catch (error) { holdingRows = holdingDefaults; }
+    holdingRows = holdingRows.map((row, index) => {
+      const fallback = holdingDefaults.find(item => item.stock && item.stock === cleanText(row?.stock)) || holdingDefaults[index] || {};
+      return Object.fromEntries(fields.map(field => {
+        const emptyValue = field === 'stock' ? '' : '待填';
+        return [field, cleanText(row?.[field], fallback[field] || emptyValue) || emptyValue];
+      }));
+    });
+    const hBody = holdingRoot.querySelector('[data-holding-plan-body]');
+    const hStatus = holdingRoot.querySelector('[data-holding-save-status]');
+    const saveHolding = () => {
+      try { localStorage.setItem(holdingKey, JSON.stringify(holdingRows)); if (hStatus) hStatus.textContent = '本地已保存 ' + new Date().toLocaleTimeString('zh-CN', {hour:'2-digit', minute:'2-digit'}); }
+      catch (error) { if (hStatus) hStatus.textContent = '本地保存失败'; }
+    };
+    const renderHolding = () => {
+      hBody.innerHTML = holdingRows.map((row,index) => `<tr>${fields.map(field => `<td contenteditable="true" data-holding-index="${index}" data-holding-field="${field}">${esc(row[field])}</td>`).join('')}<td><div class="plan-row-actions"><button type="button" class="plan-row-save" data-index="${index}" data-holding-save>保存</button><button type="button" class="plan-row-delete" data-index="${index}" data-holding-delete>删除</button></div></td></tr>`).join('');
+    };
+    holdingRoot.addEventListener('input', event => {
+      const cell = event.target.closest('[contenteditable][data-holding-field]');
+      if (!cell) return;
+      holdingRows[Number(cell.dataset.holdingIndex)][cell.dataset.holdingField] = cell.textContent.trim();
+      saveHolding();
+    });
+    holdingRoot.addEventListener('click', event => {
+      if (event.target.closest('[data-add-holding-row]')) { holdingRows.push(Object.fromEntries(fields.map(f => [f, '待填']))); renderHolding(); saveHolding(); return; }
+      const del = event.target.closest('[data-holding-delete]');
+      if (del) { const index = rowIndexFromButton(del); if (index >= 0) holdingRows.splice(index, 1); renderHolding(); saveHolding(); return; }
+      if (event.target.closest('[data-holding-save]')) { saveHolding(); return; }
+      if (event.target.closest('[data-reset-holding]')) { holdingRows = JSON.parse(JSON.stringify(holdingDefaults)); renderHolding(); saveHolding(); return; }
+      if (event.target.closest('[data-export-holding]')) exportCsv(['题材','标的','仓位比例','预期定位','当日涨幅','封板状态','隔日开盘预期','隔日分时预期','隔日操作策略','当日题材情况','隔日题材预期','止损条件'], holdingRows.map(r => fields.map(f => r[f])), '2026-09-16-持仓处理计划.csv');
+    });
+    renderHolding(); saveHolding();
+  }
+  render(); save();
+})();
+</script>
+
+<!-- Locked canonical detail-page shell: editorial-flow-v3. Daily builds may populate content but must not alter this shell unless the user explicitly requests a redesign. Inject once after all daily modules are rendered. -->
+<style data-detail-workbench-style data-layout-version="editorial-flow-v3">
+:root{--wb-bg:#edf1ef;--wb-paper:#fff;--wb-ink:#172825;--wb-muted:#667571;--wb-line:#d8dfdc;--wb-line-strong:#bcc9c5;--wb-green:#087467;--wb-green-dark:#153f39;--wb-cyan:#e9f5f2;--wb-red:#b84e43;--wb-red-soft:#fbefed;--wb-gold:#a97016;--wb-gold-soft:#fff7e8;--wb-blue:#356f91;--wb-shadow:0 12px 30px rgba(25,50,45,.07)}
+html{scroll-padding-top:18px}.review-workbench{margin:0;background:var(--wb-bg);color:var(--wb-ink);font-family:"Source Han Sans SC","Noto Sans CJK SC","Microsoft YaHei","PingFang SC",sans-serif;letter-spacing:0}.review-workbench::before{content:"";position:fixed;inset:0 0 auto;height:3px;background:#d6ddda;z-index:120}.reading-progress{position:fixed;inset:0 auto auto 0;width:0;height:3px;background:var(--wb-green);z-index:121;transition:width .08s linear}
+.review-workbench .layout{width:min(1720px,calc(100vw - 24px));margin:12px auto 34px;display:grid;grid-template-columns:252px minmax(0,1fr);gap:18px;align-items:start}.review-workbench .content{min-width:0;border:1px solid var(--wb-line);background:var(--wb-paper);box-shadow:var(--wb-shadow)}
+.review-workbench .toc{position:sticky;top:12px;max-height:calc(100vh - 24px);padding:0;overflow:hidden;border:1px solid var(--wb-line);border-radius:6px;background:#f9fbfa;box-shadow:none}.toc-utility{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center;padding:14px;border-bottom:1px solid var(--wb-line);background:#fff}.toc-utility .back{margin:0;padding:0;border:0;border-radius:0;background:transparent;color:var(--wb-green);font-size:13px}.toc-mobile-close{display:none;border:0;background:transparent;color:var(--wb-muted);font:inherit;cursor:pointer}.review-workbench .toc>h2{margin:0;padding:15px 14px 8px;font-size:18px;color:var(--wb-ink)}.toc-caption{margin:0;padding:0 14px 12px;color:var(--wb-muted);font-size:11px;line-height:1.5}.toc-scroll{max-height:calc(100vh - 132px);overflow:auto;padding:0 8px 14px;scrollbar-width:thin;scrollbar-color:#9db3ad transparent}.toc-phase-label{display:flex;align-items:center;gap:8px;margin:12px 6px 5px;color:var(--wb-muted);font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}.toc-phase-label::after{content:"";height:1px;flex:1;background:var(--wb-line)}.review-workbench .toc-node{margin:0;border-top:0;padding:0}.review-workbench .toc-node summary{min-height:38px;padding:8px 8px;border-left:3px solid transparent}.review-workbench .toc-node summary:hover{background:#eef4f2}.review-workbench .toc-node summary>a{min-width:0;color:#304642;font-size:12px;font-weight:750;line-height:1.45}.review-workbench .toc-node summary>span{font-size:10px}.review-workbench .toc-node.is-active summary{border-left-color:var(--wb-green);background:var(--wb-cyan)}.review-workbench .toc-node.is-active summary>a{color:var(--wb-green-dark)}.review-workbench .toc-children{gap:0;margin:0 0 5px;padding-left:18px;border-left:1px solid var(--wb-line)}.review-workbench .toc-children a{padding:5px 7px;color:#647671;font-size:11px;font-weight:550;line-height:1.4}.review-workbench .toc-children a:hover{color:var(--wb-green);background:#f0f6f4}
+.review-workbench .hero{position:relative;margin:0;padding:28px 34px 24px;border:0;border-bottom:1px solid var(--wb-line);border-radius:0;background:#f8fbfa;box-shadow:none;overflow:hidden}.review-workbench .hero::after{content:"A-SHARE / DAILY REVIEW";position:absolute;right:26px;top:22px;color:#c4ceca;font-size:10px;font-weight:850;letter-spacing:.12em}.review-workbench .hero-kicker{padding:0;border:0;border-radius:0;background:transparent;color:var(--wb-green);font-size:11px;letter-spacing:.08em}.review-workbench .hero h1{max-width:1050px;margin:11px 0 10px;color:#132d29;font-size:clamp(28px,3vw,42px);line-height:1.18;letter-spacing:0}.review-workbench .hero-lead{max-width:1120px;margin:0;color:#49615c;font-size:15px;line-height:1.8}.review-workbench .hero-stats{display:flex;gap:0;margin-top:17px;border-top:1px solid var(--wb-line);border-bottom:1px solid var(--wb-line)}.review-workbench .hero-stats span{padding:9px 14px;border-right:1px solid var(--wb-line);border-radius:0;background:transparent;color:#3a5751;font-size:12px;font-weight:700}.review-route{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:18px;border:1px solid var(--wb-line);background:#fff}.review-route a{display:grid;grid-template-columns:32px minmax(0,1fr);grid-template-rows:auto auto;column-gap:10px;padding:12px 14px;border-right:1px solid var(--wb-line);text-decoration:none}.review-route a:last-child{border-right:0}.review-route span{grid-row:1/3;color:var(--wb-green);font-size:18px;font-weight:850}.review-route strong{font-size:13px}.review-route small{margin-top:3px;color:var(--wb-muted);font-size:10px;line-height:1.4}
+.phase-divider{display:grid;grid-template-columns:90px minmax(160px,.45fr) minmax(0,1fr);gap:18px;align-items:center;padding:16px 28px;border-bottom:1px solid var(--wb-line);background:#f2f5f3}.phase-divider span{color:var(--wb-green);font-size:10px;font-weight:850;letter-spacing:.1em}.phase-divider strong{font-family:"Source Han Serif SC","Noto Serif CJK SC","STSong",serif;font-size:22px;color:var(--wb-green-dark)}.phase-divider p{margin:0;color:var(--wb-muted);font-size:12px;line-height:1.6}.phase-divider[data-tone="dark"]{background:var(--wb-green-dark)}.phase-divider[data-tone="dark"] span,.phase-divider[data-tone="dark"] p{color:#b7d5ce}.phase-divider[data-tone="dark"] strong{color:#fff}.phase-divider[data-tone="warm"]{background:var(--wb-gold-soft)}.phase-divider[data-tone="warm"] span{color:var(--wb-gold)}
+.review-workbench .section-card{position:relative;margin:0;padding:26px 30px 30px;border:0;border-bottom:1px solid var(--wb-line);border-radius:0;background:#fff;box-shadow:none}.review-workbench .section-card[data-phase="overview"]{background:#fff}.review-workbench .section-card[data-phase="diagnosis"]{background:#fcfdfc}.review-workbench .section-card[data-phase="playbook"]{background:#fff}.review-workbench .section-card[data-phase="execution"]{background:#fbfcfb}.review-workbench .content>.body-line{max-width:none;margin:0;padding:13px 30px;border:0;border-bottom:1px solid var(--wb-line);border-radius:0;background:#fafcfb;color:#667570;font-size:12px;line-height:1.7}.review-workbench .section-kicker{padding:0;border:0;border-radius:0;background:transparent;color:var(--wb-green);font-size:10px;letter-spacing:.08em}.review-workbench .chapter-title{display:flex;align-items:baseline;gap:10px;margin:7px 0 18px;padding-bottom:13px;border-bottom:2px solid var(--wb-green-dark);color:var(--wb-green-dark);font-family:"Source Han Serif SC","Noto Serif CJK SC","STSong",serif;font-size:25px;line-height:1.35;letter-spacing:0}.review-workbench .section-card[data-chapter-number]>.chapter-title::before{content:attr(data-chapter-number);color:var(--wb-green);font-family:"Segoe UI",sans-serif;font-size:11px;font-weight:850;letter-spacing:.08em}.review-workbench .subchapter-title{margin:25px 0 12px;padding-left:11px;border-left:3px solid var(--wb-green);color:#1b403a;font-size:18px;line-height:1.45;letter-spacing:0}.review-workbench .minor-title{margin:19px 0 9px;color:#354f4a;font-size:15px;letter-spacing:0}.review-workbench .body-line{max-width:118ch;margin:9px 0;color:#344f49;font-size:14px;line-height:1.8}.review-workbench .bullet-line{padding-left:12px;border-left:2px solid #dce7e3}.review-workbench .tone-action,.review-workbench .tone-risk{padding:10px 12px;border-radius:4px;background:#f2f8f6}.review-workbench .tone-action{border-left:3px solid var(--wb-green)}.review-workbench .tone-risk{border-left:3px solid var(--wb-red);background:var(--wb-red-soft)}
+.review-workbench .table-shell,.review-workbench .decision-table-wrap,.review-workbench .post-market-table-wrap,.review-workbench .theme-stock-table-wrap,.review-workbench .plan-table-wrap,.review-workbench .holding-table-wrap{position:relative;margin:13px 0 18px;border:1px solid var(--wb-line-strong);border-radius:4px;background:#fff;box-shadow:none;scrollbar-width:thin;scrollbar-color:#96aaa5 #edf1ef}.review-workbench table{font-variant-numeric:tabular-nums}.review-workbench .data-table th,.review-workbench .data-table td,.review-workbench .decision-table th,.review-workbench .decision-table td,.review-workbench .post-market-table th,.review-workbench .post-market-table td,.review-workbench .theme-stock-table th,.review-workbench .theme-stock-table td,.review-workbench .next-day-playbook__table th,.review-workbench .next-day-playbook__table td{padding:9px 10px;border-color:#e0e6e3;font-size:12px;line-height:1.55}.review-workbench table thead th{position:sticky;top:0;z-index:2;background:#e7f1ee;color:#184e46}.review-workbench table tbody tr:nth-child(even){background:#fafcfb}.review-workbench table tbody tr:hover{background:#f0f7f5}
+.review-workbench .decision-dashboard,.review-workbench .theme-analysis-flow,.review-workbench .next-day-playbook,.review-workbench .event-catalyst-timeline,.review-workbench .recap-summary-modules,.review-workbench .operation-strategy-outline{border-radius:0;box-shadow:none}.review-workbench .decision-dashboard{margin:18px -30px -30px;border:0;border-top:1px solid var(--wb-line);background:#f8faf9}.review-workbench .decision-dashboard__head{padding:20px 30px}.review-workbench .decision-band{margin:0;padding:20px 30px;border-top:1px solid var(--wb-line);border-radius:0;background:#fff}.review-workbench .decision-band__title{font-size:18px}.review-workbench .decision-band__index{border-radius:3px}.review-workbench .recap-summary-modules{margin:16px 0 22px}.review-workbench .recap-summary-modules__header{padding:14px 16px}.review-workbench .recap-summary-row{grid-template-columns:165px minmax(0,1fr)}.review-workbench .recap-summary-row__title{padding:16px}.review-workbench .recap-summary-point{padding:15px 13px}.review-workbench .effect-positioning-module{margin:15px 0;padding:16px;border:1px solid var(--wb-line-strong);border-radius:5px;background:#f6faf8;box-shadow:none}.review-workbench .effect-panel,.review-workbench .kiss-card,.review-workbench .question-grid article,.review-workbench .theme-rhythm-stage{border-radius:5px;box-shadow:none}.review-workbench .theme-analysis-flow{margin:0 -30px -30px;border:0}.review-workbench .theme-analysis-flow>h3,.review-workbench .theme-analysis-flow>.theme-analysis-intro{margin-left:30px;margin-right:30px}.review-workbench .theme-analysis-block{margin:0;border-radius:0;border-width:1px 0 0;background:#fff}.review-workbench .theme-analysis-head{padding:17px 30px}.review-workbench .theme-stock-table-wrap{width:auto;margin:0 30px}.review-workbench .theme-analysis-copy{margin:14px 30px 20px;border-radius:4px}.review-workbench .event-catalyst-timeline{margin:0 -30px -30px;padding:22px 30px;background:#f8faf9}.review-workbench .next-day-playbook{margin:0 -30px -30px;border:0}.review-workbench .next-day-playbook__header{border-radius:0}.review-workbench .next-day-playbook__step{border-radius:0}.review-workbench .scenario-playbook-card{border-radius:5px}.review-workbench .operation-strategy-outline{margin:17px 0 24px}.review-workbench .theme-rhythm-card-grid{gap:8px}.review-workbench .theme-rhythm-stage{padding:14px;background:#fff}.review-workbench .plan-toolbar{position:sticky;top:4px;z-index:6;padding:8px;border:1px solid var(--wb-line);border-radius:4px;background:rgba(255,255,255,.96)}.review-workbench .plan-toolbar button,.review-workbench .plan-row-save,.review-workbench .plan-row-delete{border-radius:4px}.review-workbench .plan-table-wrap,.review-workbench .holding-table-wrap{overflow-x:visible}.review-workbench .plan-table th,.review-workbench .plan-table td,.review-workbench .holding-table th,.review-workbench .holding-table td{padding:6px;font-size:10.5px;line-height:1.36}.review-workbench .multi-chip{border-radius:999px}.review-workbench .source-note{color:#73827e;font-size:11px}
+.archive-disclosure{margin-top:14px;border:1px solid var(--wb-line);border-radius:4px;background:#fafcfb}.archive-disclosure>summary{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 16px;color:var(--wb-green-dark);font-size:13px;font-weight:800;cursor:pointer;list-style:none}.archive-disclosure>summary::-webkit-details-marker{display:none}.archive-disclosure>summary::after{content:"展开完整归档";color:var(--wb-muted);font-size:11px;font-weight:550}.archive-disclosure[open]>summary{border-bottom:1px solid var(--wb-line)}.archive-disclosure[open]>summary::after{content:"收起归档"}.archive-content{padding:4px 16px 18px}.archive-content .subchapter-title{font-size:16px}.workbench-tools{display:none}.mobile-toc-scrim{display:none}
+@media(max-width:1180px){.review-workbench .layout{grid-template-columns:220px minmax(0,1fr)}.review-workbench .section-card{padding-left:22px;padding-right:22px}.review-workbench .decision-dashboard,.review-workbench .theme-analysis-flow,.review-workbench .event-catalyst-timeline,.review-workbench .next-day-playbook{margin-left:-22px;margin-right:-22px}.review-workbench .decision-dashboard__head,.review-workbench .decision-band,.review-workbench .theme-analysis-head,.review-workbench .event-catalyst-timeline{padding-left:22px;padding-right:22px}.review-workbench .theme-analysis-flow>h3,.review-workbench .theme-analysis-flow>.theme-analysis-intro,.review-workbench .theme-stock-table-wrap,.review-workbench .theme-analysis-copy{margin-left:22px;margin-right:22px}.review-workbench .plan-table-wrap,.review-workbench .holding-table-wrap{overflow-x:auto}.review-workbench .plan-table{min-width:1080px}.review-workbench .holding-table{min-width:1480px}}
+@media(max-width:820px){html{scroll-padding-top:60px}.review-workbench .layout{width:100%;margin:0;display:block}.review-workbench .content{border:0;box-shadow:none}.review-workbench .toc{position:fixed;inset:0 auto 0 0;width:min(340px,88vw);max-height:none;border-radius:0;z-index:150;transform:translateX(-102%);transition:transform .2s ease}.review-workbench.toc-open .toc{transform:translateX(0)}.review-workbench.toc-open{overflow:hidden}.toc-mobile-close{display:inline-flex}.toc-scroll{max-height:calc(100vh - 132px)}.mobile-toc-scrim{display:block;position:fixed;inset:0;background:rgba(12,29,26,.45);z-index:140;opacity:0;pointer-events:none;transition:opacity .2s}.review-workbench.toc-open .mobile-toc-scrim{opacity:1;pointer-events:auto}.workbench-tools{display:flex;position:fixed;right:12px;bottom:12px;z-index:130;border:1px solid var(--wb-line-strong);border-radius:5px;background:#fff;box-shadow:var(--wb-shadow);overflow:hidden}.workbench-tools button{min-width:54px;padding:10px 11px;border:0;border-right:1px solid var(--wb-line);background:#fff;color:var(--wb-green-dark);font:inherit;font-size:12px;font-weight:800;cursor:pointer}.workbench-tools button:last-child{border-right:0}.review-workbench .hero{padding:22px 18px 18px}.review-workbench .hero::after{display:none}.review-workbench .hero h1{font-size:27px}.review-workbench .hero-lead{font-size:14px}.review-workbench .hero-stats{overflow-x:auto}.review-workbench .hero-stats span{min-width:max-content;padding:8px 10px}.review-route{grid-template-columns:repeat(2,minmax(0,1fr))}.review-route a:nth-child(2){border-right:0}.review-route a:nth-child(-n+2){border-bottom:1px solid var(--wb-line)}.phase-divider{grid-template-columns:58px 1fr;padding:14px 18px}.phase-divider strong{font-size:19px}.phase-divider p{grid-column:1/-1}.review-workbench .section-card{padding:22px 16px 26px}.review-workbench .chapter-title{font-size:22px}.review-workbench .decision-dashboard,.review-workbench .theme-analysis-flow,.review-workbench .event-catalyst-timeline,.review-workbench .next-day-playbook{margin-left:-16px;margin-right:-16px}.review-workbench .decision-dashboard__head,.review-workbench .decision-band,.review-workbench .theme-analysis-head,.review-workbench .event-catalyst-timeline{padding-left:16px;padding-right:16px}.review-workbench .theme-analysis-flow>h3,.review-workbench .theme-analysis-flow>.theme-analysis-intro,.review-workbench .theme-stock-table-wrap,.review-workbench .theme-analysis-copy{margin-left:16px;margin-right:16px}.review-workbench .recap-summary-row{grid-template-columns:1fr}.review-workbench .recap-summary-points{grid-template-columns:1fr}.review-workbench .recap-summary-point{border-right:0;border-bottom:1px solid #e5eeeb}.review-workbench .effect-grid,.review-workbench .kiss-grid,.review-workbench .question-grid{grid-template-columns:1fr}.review-workbench .plan-toolbar{position:static}.archive-content{padding-left:12px;padding-right:12px}}
+/* Compact research-brief presentation: conclusion first, evidence second, action last. */
+.review-workbench{background:#f3f5f4;color:#1a2724}.review-workbench::before{height:2px;background:#0b7568}.reading-progress{height:2px;background:#d69a2d}
+.review-workbench .layout{width:min(1560px,calc(100vw - 20px));margin:10px auto 28px;grid-template-columns:220px minmax(0,1fr);gap:12px}.review-workbench .content{border:1px solid #dce2df;box-shadow:none}
+.review-workbench .toc{top:10px;max-height:calc(100vh - 20px);border-radius:3px;background:#fff}.toc-utility{padding:11px 12px}.review-workbench .toc>h2{padding:12px 12px 5px;font-size:16px}.toc-caption{padding:0 12px 8px;font-size:10.5px}.toc-scroll{max-height:calc(100vh - 108px);padding:0 6px 10px}.toc-phase-label{margin:10px 5px 4px;font-size:9.5px}.review-workbench .toc-node summary{min-height:34px;padding:6px 7px}.review-workbench .toc-node summary>a{font-size:11.5px}.review-workbench .toc-children a{padding:4px 6px;font-size:10.5px}
+.review-workbench .hero{padding:21px 26px 17px;background:#fff}.review-workbench .hero::after{right:22px;top:18px;font-size:9px}.review-workbench .hero-kicker{font-size:10px}.review-workbench .hero h1{max-width:980px;margin:8px 0 7px;font-size:32px;line-height:1.24}.review-workbench .hero-lead{max-width:96ch;font-size:13px;line-height:1.65}.review-workbench .hero-stats{margin-top:12px}.review-workbench .hero-stats span{padding:7px 10px;font-size:11px}.review-route{margin-top:12px}.review-route a{grid-template-columns:27px minmax(0,1fr);column-gap:7px;padding:9px 10px}.review-route span{font-size:15px}.review-route strong{font-size:12px}.review-route small{font-size:9.5px}
+.phase-divider{grid-template-columns:68px 145px minmax(0,1fr);gap:12px;padding:10px 22px;border-top:2px solid #1b554d;background:#f7f9f8}.phase-divider span{font-size:9px}.phase-divider strong{font-family:"Source Han Sans SC","Microsoft YaHei",sans-serif;font-size:17px}.phase-divider p{font-size:11px;line-height:1.5}.phase-divider[data-tone="dark"]{border-top-color:#1b554d;background:#eef3f1}.phase-divider[data-tone="dark"] span,.phase-divider[data-tone="dark"] p{color:#61746f}.phase-divider[data-tone="dark"] strong{color:#183f39}.phase-divider[data-tone="warm"]{border-top-color:#c58a21;background:#fffaf0}
+.review-workbench .section-card{padding:19px 24px 23px;background:#fff!important}.review-workbench .content>.body-line{padding:9px 24px;font-size:11px;line-height:1.55}.review-workbench .section-kicker{font-size:9px}.review-workbench .chapter-title{gap:8px;margin:4px 0 13px;padding-bottom:9px;border-bottom:1px solid #1b554d;font-family:"Source Han Sans SC","Microsoft YaHei",sans-serif;font-size:21px}.review-workbench .section-card[data-chapter-number]>.chapter-title::before{font-size:9px}.review-workbench .subchapter-title{margin:18px 0 9px;padding-left:8px;border-left-width:2px;font-size:16px}.review-workbench .minor-title{margin:14px 0 7px;font-size:14px}.review-workbench .body-line{max-width:102ch;margin:6px 0;font-size:13px;line-height:1.65}.review-workbench .bullet-line{padding-left:10px}.review-workbench .tone-action,.review-workbench .tone-risk{padding:8px 10px;border-radius:2px}
+.review-workbench .content>.hero+.body-line,.review-workbench .content>.hero+.body-line+.body-line{display:none}
+.review-workbench .table-shell,.review-workbench .decision-table-wrap,.review-workbench .post-market-table-wrap,.review-workbench .theme-stock-table-wrap,.review-workbench .plan-table-wrap,.review-workbench .holding-table-wrap{margin:9px 0 13px;border-color:#d8dfdc;border-radius:2px}.review-workbench .data-table th,.review-workbench .data-table td,.review-workbench .decision-table th,.review-workbench .decision-table td,.review-workbench .post-market-table th,.review-workbench .post-market-table td,.review-workbench .theme-stock-table th,.review-workbench .theme-stock-table td,.review-workbench .next-day-playbook__table th,.review-workbench .next-day-playbook__table td{padding:7px 8px;font-size:11.5px;line-height:1.45}.review-workbench table thead th{background:#edf4f1;color:#174f47}.review-workbench table tbody tr:nth-child(even){background:#fbfcfb}.review-workbench table tbody tr:hover{background:#f2f7f5}.review-workbench .scenario-table tbody tr:first-child{background:#f0f8f5}.review-workbench .scenario-table tbody tr:last-child{background:#fff5f3}.review-workbench .scenario-level,.review-workbench .limit-up-tag,.review-workbench .theme-analysis-chip{border-radius:2px}
+.review-workbench #source-table-1,.review-workbench #source-table-9,.review-workbench #source-table-11,.review-workbench #source-table-12{overflow:visible;border:0;background:transparent}.review-workbench #source-table-1 table,.review-workbench #source-table-9 table,.review-workbench #source-table-11 table,.review-workbench #source-table-12 table{min-width:0!important;table-layout:auto}.review-workbench #source-table-1 th,.review-workbench #source-table-9 th,.review-workbench #source-table-11 th,.review-workbench #source-table-12 th{position:static;padding:9px 11px;border:0;border-left:3px solid #0b7568;background:#eef5f2;color:#16463f;white-space:normal;font-size:12px;line-height:1.55;text-align:left}.review-workbench #source-table-9 th{border-left-color:#c58a21;background:#fff9ed}.review-workbench #source-table-11 th,.review-workbench #source-table-12 th{background:#f5f8f7}
+.review-workbench .recap-summary-modules{margin:11px 0 16px;border-top-width:2px}.review-workbench .recap-summary-modules__header{padding:10px 12px}.review-workbench .recap-summary-modules__header span{font-size:9px}.review-workbench .recap-summary-modules__header h3{font-size:18px}.review-workbench .recap-summary-modules__header p{font-size:11px}.review-workbench .recap-summary-row{grid-template-columns:138px minmax(0,1fr)}.review-workbench .recap-summary-row__title{padding:12px}.review-workbench .recap-summary-row__title h4{font-size:15px}.review-workbench .recap-summary-row__title p{font-size:10.5px}.review-workbench .recap-summary-point{padding:11px 10px}.review-workbench .recap-summary-point__order{margin-bottom:4px;font-size:9px}.review-workbench .recap-summary-point strong{margin-bottom:4px;font-size:12px}.review-workbench .recap-summary-point p{font-size:11.5px;line-height:1.5}
+.review-workbench .decision-dashboard{margin:12px -24px -23px;background:#fff}.review-workbench .decision-dashboard__head{padding:14px 24px 10px}.review-workbench .decision-dashboard__head h2{font-size:19px}.review-workbench .decision-dashboard__head p{font-size:10.5px}.review-workbench .decision-band{padding:14px 24px}.review-workbench .decision-band__title{margin-bottom:8px;font-size:15px}.review-workbench .decision-band__index{width:22px;height:22px;font-size:11px}.review-workbench .intraday-watchpoints__note{margin:0 0 8px;font-size:11px}.review-workbench .intraday-watchpoint-card,.review-workbench .scenario-playbook-card,.review-workbench .market-outlook-grid article{border-radius:2px;box-shadow:none}.review-workbench .post-market-intelligence__summary{padding:9px 11px;border-radius:2px;font-size:12px}.review-workbench .post-market-group{margin-top:13px}.review-workbench .post-market-group__title{font-size:13px}
+.review-workbench .effect-positioning-module{margin:10px 0;padding:12px;border-radius:2px}.review-workbench .effect-panel,.review-workbench .kiss-card,.review-workbench .question-grid article,.review-workbench .theme-rhythm-stage{border-radius:2px}.review-workbench .effect-panel{padding:12px}.review-workbench .effect-panel h4,.review-workbench .kiss-card span{font-size:13px}.review-workbench .kiss-card{padding:12px}.review-workbench .kiss-card p{font-size:12px;line-height:1.55}
+.review-workbench .theme-analysis-flow{margin:0 -24px -23px}.review-workbench .theme-analysis-flow>h3,.review-workbench .theme-analysis-flow>.theme-analysis-intro{margin-left:24px;margin-right:24px}.review-workbench .theme-analysis-flow>h3{font-size:19px}.review-workbench .theme-analysis-intro{margin-bottom:12px;padding:9px 11px;font-size:11.5px}.review-workbench .theme-analysis-block{padding:0 0 14px}.review-workbench .theme-analysis-head{padding:12px 24px 8px}.review-workbench .theme-analysis-title{font-size:17px}.review-workbench .theme-stock-table-wrap{margin:0 24px}.review-workbench .theme-analysis-copy{margin:8px 24px 14px;border-radius:2px}.review-workbench .theme-analysis-copy p{padding:8px 9px;font-size:11.5px;line-height:1.5}.review-workbench .theme-analysis-copy strong{font-size:11px}
+.review-workbench .event-catalyst-timeline{margin:0 -24px -23px;padding:16px 24px}.review-workbench .event-timeline-summary h3{font-size:18px}.review-workbench .event-window-badge{border-radius:2px}.review-workbench .event-timeline-item,.review-workbench .event-impact-grid>div{border-radius:2px}.review-workbench .next-day-playbook{margin:0 -24px -23px}.review-workbench .next-day-playbook__header,.review-workbench .next-day-playbook__step{padding:15px 24px}.review-workbench .next-day-playbook__header h3{font-size:20px}.review-workbench .next-day-playbook__flow li{padding:9px 10px}.review-workbench .next-day-playbook__step-head h4,.review-workbench .next-day-playbook__subhead h5{font-size:16px}.review-workbench .next-day-playbook__guide{padding:8px 10px;font-size:11.5px}.review-workbench .market-outlook-grid article{padding:10px}.review-workbench .market-outlook-grid article p{font-size:11.5px;line-height:1.5}.review-workbench .scenario-playbook-card{padding:11px}
+.review-workbench .operation-strategy-outline{margin:11px 0 16px}.review-workbench .operation-strategy-outline__header{padding:10px 12px}.review-workbench .operation-strategy-outline__item{padding:11px}.review-workbench .theme-rhythm-card-grid{gap:6px}.review-workbench .theme-rhythm-stage{padding:11px}.review-workbench .plan-toolbar{padding:6px}.review-workbench .plan-table th,.review-workbench .plan-table td,.review-workbench .holding-table th,.review-workbench .holding-table td{padding:5px;font-size:10px;line-height:1.3}.review-workbench .multi-chip{border-radius:2px}.review-workbench .source-note{margin-top:7px;font-size:10px;line-height:1.45}
+.archive-disclosure{margin-top:9px;border-radius:2px}.archive-disclosure>summary{padding:10px 12px;font-size:12px}.archive-content{padding:2px 12px 14px}.workbench-tools{border-radius:3px;box-shadow:0 4px 12px rgba(25,50,45,.12)}
+@media(max-width:1180px){.review-workbench .layout{grid-template-columns:205px minmax(0,1fr)}.review-workbench .section-card{padding-left:18px;padding-right:18px}.review-workbench .decision-dashboard,.review-workbench .theme-analysis-flow,.review-workbench .event-catalyst-timeline,.review-workbench .next-day-playbook{margin-left:-18px;margin-right:-18px}.review-workbench .decision-dashboard__head,.review-workbench .decision-band,.review-workbench .theme-analysis-head,.review-workbench .event-catalyst-timeline,.review-workbench .next-day-playbook__header,.review-workbench .next-day-playbook__step{padding-left:18px;padding-right:18px}.review-workbench .theme-analysis-flow>h3,.review-workbench .theme-analysis-flow>.theme-analysis-intro,.review-workbench .theme-stock-table-wrap,.review-workbench .theme-analysis-copy{margin-left:18px;margin-right:18px}}
+@media(max-width:820px){.review-workbench .hero{padding:18px 16px 15px}.review-workbench .hero h1{font-size:24px;line-height:1.28}.review-workbench .hero-lead{font-size:12.5px}.review-workbench .section-card{padding:18px 14px 21px}.review-workbench .chapter-title{font-size:19px}.phase-divider{grid-template-columns:52px 1fr;padding:10px 14px}.phase-divider strong{font-size:16px}.review-workbench .decision-dashboard,.review-workbench .theme-analysis-flow,.review-workbench .event-catalyst-timeline,.review-workbench .next-day-playbook{margin-left:-14px;margin-right:-14px}.review-workbench .decision-dashboard__head,.review-workbench .decision-band,.review-workbench .theme-analysis-head,.review-workbench .event-catalyst-timeline,.review-workbench .next-day-playbook__header,.review-workbench .next-day-playbook__step{padding-left:14px;padding-right:14px}.review-workbench .theme-analysis-flow>h3,.review-workbench .theme-analysis-flow>.theme-analysis-intro,.review-workbench .theme-stock-table-wrap,.review-workbench .theme-analysis-copy{margin-left:14px;margin-right:14px}.review-workbench .recap-summary-row{grid-template-columns:1fr}.review-workbench .recap-summary-points{grid-template-columns:1fr}.review-workbench .recap-summary-point{padding:10px 12px}.workbench-tools button{padding:9px 10px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.review-workbench .toc,.mobile-toc-scrim{transition:none}}
+
+/* Editorial trading notebook: concise hierarchy, softer rhythm, decisive color. */
+:root{--wb-bg:#f2f4f1;--wb-paper:#fffefb;--wb-ink:#1b2c28;--wb-muted:#697772;--wb-line:#dce3df;--wb-line-strong:#c5d0cb;--wb-green:#08776c;--wb-green-dark:#153f39;--wb-cyan:#eaf6f3;--wb-red:#c85247;--wb-red-soft:#fff1ef;--wb-gold:#bd8120;--wb-gold-soft:#fff7e7;--wb-blue:#3e7397;--wb-blue-soft:#eef5fa;--wb-shadow:0 14px 38px rgba(34,55,49,.08)}
+.review-workbench{background:var(--wb-bg);font-size:14px}.review-workbench::before{height:3px;background:#173f39}.reading-progress{height:3px;background:#e1a337}.review-workbench a,.review-workbench button,.review-workbench summary{transition:color .16s ease,background-color .16s ease,border-color .16s ease,box-shadow .16s ease}.review-workbench :focus-visible{outline:3px solid rgba(8,119,108,.28);outline-offset:2px}
+.review-workbench .layout{width:min(1580px,calc(100vw - 28px));margin:14px auto 34px;grid-template-columns:230px minmax(0,1fr);gap:16px}.review-workbench .content{border:1px solid var(--wb-line);border-radius:8px;background:var(--wb-paper);box-shadow:var(--wb-shadow);overflow:hidden}
+.review-workbench .toc{top:14px;max-height:calc(100vh - 28px);border-radius:8px;background:#fff;box-shadow:0 8px 24px rgba(34,55,49,.05)}.toc-utility{padding:12px 14px}.toc-utility .back{font-size:12px;font-weight:800}.review-workbench .toc>h2{padding:14px 14px 6px;font-size:18px}.toc-caption{padding:0 14px 10px;font-size:11px}.toc-scroll{max-height:calc(100vh - 118px);padding:0 8px 14px}.toc-phase-label{margin:13px 6px 5px;color:#8a9692;font-size:9.5px}.review-workbench .toc-node summary{min-height:38px;padding:7px 8px;border-left:0;border-radius:5px}.review-workbench .toc-node summary:hover{background:#f1f7f5}.review-workbench .toc-node summary>a{font-size:12px;line-height:1.5}.review-workbench .toc-node.is-active summary{box-shadow:inset 3px 0 0 var(--wb-green);background:var(--wb-cyan)}.review-workbench .toc-children{margin:2px 0 6px 11px;padding-left:10px}.review-workbench .toc-children a{padding:5px 7px;border-radius:4px;font-size:11px}
+.review-workbench .hero{padding:32px 38px 28px;border-bottom:1px solid var(--wb-line);background:#fffefb}.review-workbench .hero::after{content:"REVIEW / DECIDE / EXECUTE";right:32px;top:27px;color:#aab6b1;font-size:9px}.review-workbench .hero-kicker{display:inline-flex;align-items:center;gap:7px;color:var(--wb-green);font-size:11px;font-weight:850}.review-workbench .hero-kicker::before{content:"●";color:#28a899;font-size:9px}.review-workbench .hero h1{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;max-width:950px;margin:12px 0 8px;font-size:38px;line-height:1.18}.hero-title-date{flex-basis:100%;color:var(--wb-green);font-size:12px;font-weight:850;letter-spacing:.08em}.hero-title-main{color:#152f2a}.hero-title-plan{padding:5px 9px;border-radius:999px;background:var(--wb-gold-soft);color:#8a5b10;font-size:14px;font-weight:800}.review-workbench .hero-lead{max-width:72ch;color:#586b65;font-size:14px;line-height:1.7}.review-workbench .hero-stats{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;border:0}.review-workbench .hero-stats span{padding:7px 10px;border:1px solid #d7e5e0;border-radius:999px;background:#f4faf8;color:#31534c;font-size:11.5px}.review-workbench .hero-stats span::before{margin-right:5px;color:var(--wb-green);font-weight:900}.review-workbench .hero-stats span:nth-child(1)::before{content:"◎"}.review-workbench .hero-stats span:nth-child(2)::before{content:"沪"}.review-workbench .hero-stats span:nth-child(3)::before{content:"量"}.review-workbench .hero-stats span:nth-child(4)::before{content:"源"}
+.review-route{gap:9px;margin-top:18px;border:0;background:transparent}.review-route a{grid-template-columns:34px minmax(0,1fr);padding:12px 13px;border:1px solid var(--wb-line);border-radius:7px;background:#fbfcfa}.review-route a:last-child{border-right:1px solid var(--wb-line)}.review-route a:hover{border-color:#9bbcb4;background:#f2f8f6;box-shadow:0 6px 14px rgba(34,55,49,.06)}.review-route span{display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--wb-cyan);font-size:12px}.review-route strong{font-size:13px}.review-route small{font-size:10.5px}
+.review-workbench .content>.hero+.body-line,.review-workbench .content>.hero+.body-line+.body-line{display:none}.review-workbench #source-table-1{margin:0;padding:18px 30px;border:0;border-bottom:1px solid var(--wb-line);background:#f6faf8}.review-workbench #source-table-1 table{min-width:0!important;table-layout:auto}.review-workbench #source-table-1 th{position:static;max-width:92ch;padding:15px 18px;border:0;border-left:4px solid var(--wb-green);border-radius:6px;background:#fff;color:#21463f;font-size:14px;line-height:1.75;text-align:left;box-shadow:0 4px 14px rgba(34,55,49,.05)}.review-workbench #source-table-1 th::before{content:"◎";margin-right:8px;color:var(--wb-green);font-size:16px}
+.phase-divider{grid-template-columns:78px 170px minmax(0,720px);gap:14px;padding:14px 30px;border-top:0;border-bottom:1px solid var(--wb-line);background:#f6f7f4}.phase-divider span{font-size:9.5px}.phase-divider strong{font-size:18px}.phase-divider strong::before{margin-right:8px;color:var(--wb-green)}#phase-overview strong::before{content:"◎"}#phase-diagnosis strong::before{content:"◇"}#phase-playbook strong::before{content:"→"}#phase-execution strong::before{content:"✓"}.phase-divider p{font-size:11.5px;line-height:1.6}.phase-divider[data-tone="dark"]{background:#eef5f2}.phase-divider[data-tone="warm"]{background:#fff8eb}
+.review-workbench .section-card{padding:28px 32px 34px;background:#fff!important}.review-workbench .content>.body-line{padding:12px 32px;font-size:12px}.review-workbench .chapter-title{gap:9px;margin:5px 0 20px;padding-bottom:12px;border-bottom:1px solid #b9cbc5;font-size:24px}.review-workbench .section-card[data-chapter-number]>.chapter-title::before{display:grid;place-items:center;min-width:28px;height:28px;border-radius:50%;background:var(--wb-cyan);font-size:10px}.review-workbench .subchapter-title{display:flex;align-items:center;gap:8px;margin:25px 0 12px;padding-left:0;border-left:0;font-size:18px}.review-workbench .subchapter-title::before{content:"◆";color:var(--wb-green);font-size:10px}.review-workbench .minor-title{display:flex;align-items:center;gap:7px;margin:18px 0 9px;font-size:15px}.review-workbench .minor-title::before{content:"·";color:var(--wb-gold);font-size:20px;line-height:1}.review-workbench .body-line{max-width:82ch;margin:8px 0;color:#3e554f;font-size:14px;line-height:1.8}.review-workbench .body-line.is-fragmented{display:grid;gap:5px;max-width:86ch}.brief-fragment{position:relative;display:block;padding-left:15px}.brief-fragment::before{content:"·";position:absolute;left:2px;color:var(--wb-green);font-weight:900}.review-workbench .bullet-line{padding:7px 10px 7px 16px;border-left:0;border-radius:5px;background:#f6f9f7}.review-workbench .tone-action,.review-workbench .tone-risk{max-width:88ch;padding:11px 13px;border-radius:6px}.review-workbench .tone-action::before{content:"→ ";color:var(--wb-green);font-weight:900}.review-workbench .tone-risk::before{content:"⚠ ";color:var(--wb-red);font-weight:900}
+.review-workbench .table-shell,.review-workbench .decision-table-wrap,.review-workbench .post-market-table-wrap,.review-workbench .theme-stock-table-wrap,.review-workbench .plan-table-wrap,.review-workbench .holding-table-wrap{margin:12px 0 18px;border-color:var(--wb-line);border-radius:7px;overflow:auto}.review-workbench .data-table th,.review-workbench .data-table td,.review-workbench .decision-table th,.review-workbench .decision-table td,.review-workbench .post-market-table th,.review-workbench .post-market-table td,.review-workbench .theme-stock-table th,.review-workbench .theme-stock-table td,.review-workbench .next-day-playbook__table th,.review-workbench .next-day-playbook__table td{padding:9px 10px;font-size:12px;line-height:1.55}.review-workbench table thead th{background:#edf5f2;color:#184e46}.review-workbench table tbody tr:nth-child(even){background:#fbfcfa}.review-workbench table tbody tr:hover{background:#f1f7f5}.review-workbench .scenario-table tbody tr:first-child{background:#edf8f4}.review-workbench .scenario-table tbody tr:last-child{background:#fff3f1}.review-workbench .scenario-level,.review-workbench .limit-up-tag,.review-workbench .theme-analysis-chip{border-radius:999px}
+.review-workbench .recap-summary-modules{margin:16px 0 24px;border:0;background:transparent}.review-workbench .recap-summary-modules__header{align-items:center;padding:16px 18px;border:1px solid #cfe0da;border-radius:8px;background:#eef7f4}.review-workbench .recap-summary-modules__header h3{font-size:21px}.review-workbench .recap-summary-modules__header p{max-width:48ch;font-size:12px;line-height:1.6}.review-workbench .recap-summary-modules__body{display:grid;gap:11px;margin-top:11px}.review-workbench .recap-summary-row{grid-template-columns:168px minmax(0,1fr);border:1px solid var(--wb-line);border-radius:8px;background:#fff;overflow:hidden}.review-workbench .recap-summary-row__title{padding:17px;border-right:1px solid var(--wb-line);background:#f9fbfa}.review-workbench .recap-summary-row__title h4{display:flex;align-items:center;gap:7px;font-size:16px}.review-workbench .recap-summary-row[data-summary-section="R1"] h4::before{content:"◎"}.review-workbench .recap-summary-row[data-summary-section="R2"] h4::before{content:"↕"}.review-workbench .recap-summary-row[data-summary-section="R3"] h4::before{content:"◆"}.review-workbench .recap-summary-row[data-summary-section="R4"] h4::before{content:"→"}.review-workbench .recap-summary-row__title p{font-size:11.5px;line-height:1.6}.review-workbench .recap-summary-points{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 14px;padding:12px 14px}.review-workbench .recap-summary-point{position:relative;min-height:82px;padding:11px 10px 11px 15px;border:0!important;box-shadow:inset 2px 0 0 #e1ebe7}.review-workbench .recap-summary-point__order{display:inline-block;margin:0 0 6px;padding:2px 6px;border-radius:999px;background:var(--wb-cyan);font-size:9.5px}.review-workbench .recap-summary-point strong{font-size:13px}.review-workbench .recap-summary-point p{max-width:38ch;font-size:12px;line-height:1.65}.review-workbench .recap-summary-row.is-strategy{background:#fff}.review-workbench .recap-summary-row.is-strategy .recap-summary-row__title{background:#173f39}.review-workbench .recap-summary-row.is-strategy .recap-summary-point__order{background:#fff1cf}
+.review-workbench .decision-dashboard{margin:18px -32px -34px;padding:0 0 18px;background:#f4f6f4}.review-workbench .decision-dashboard__head{padding:24px 32px 14px}.review-workbench .decision-dashboard__head h2{font-size:22px}.review-workbench .decision-dashboard__head p{max-width:70ch;font-size:12px}.review-workbench .decision-band{margin:10px 24px;padding:18px 20px;border:1px solid var(--wb-line);border-radius:8px;background:#fff}.review-workbench .decision-band__title{margin-bottom:11px;font-size:17px}.review-workbench .decision-band__title::after{content:"  ·  看信号，再动作";color:#8a9894;font-size:10px;font-weight:550}.review-workbench .decision-band__index{width:27px;height:27px;border-radius:50%}.review-workbench .intraday-watchpoint-card,.review-workbench .scenario-playbook-card,.review-workbench .market-outlook-grid article{border-radius:8px;box-shadow:0 5px 14px rgba(34,55,49,.04)}.review-workbench .post-market-intelligence__summary{padding:12px 14px;border-radius:7px}.review-workbench .post-market-group__title::before{content:"◇ ";color:var(--wb-blue)}
+.review-workbench .effect-positioning-module{margin:15px 0;padding:17px;border-radius:8px;background:#f5faf8}.review-workbench .effect-panel,.review-workbench .kiss-card,.review-workbench .question-grid article,.review-workbench .theme-rhythm-stage{border-radius:8px;box-shadow:0 4px 12px rgba(34,55,49,.035)}.review-workbench .effect-panel{padding:15px}.review-workbench .effect-panel h4,.review-workbench .kiss-card span{font-size:14px}.review-workbench .kiss-card{padding:15px}.review-workbench .kiss-card p{font-size:13px;line-height:1.7}.review-workbench .source-note{margin-top:9px;color:#7a8883;font-size:10.5px}.review-workbench .source-note::before{content:"⌁ ";color:var(--wb-blue)}
+.review-workbench .theme-analysis-flow{margin:0 -32px -34px;padding:22px 0 20px;background:#f4f6f4}.review-workbench .theme-analysis-flow>h3,.review-workbench .theme-analysis-flow>.theme-analysis-intro{margin-left:32px;margin-right:32px}.review-workbench .theme-analysis-flow>h3{font-size:22px}.review-workbench .theme-analysis-intro{max-width:82ch;margin-bottom:15px;padding:11px 13px;border-radius:7px;font-size:12px;line-height:1.65}.review-workbench .theme-analysis-block{margin:12px 24px;padding:0 0 16px;border:1px solid var(--wb-line);border-radius:8px;background:#fff;overflow:hidden}.review-workbench .theme-analysis-head{padding:17px 20px 12px;background:#fbfcfa}.review-workbench .theme-analysis-title{font-size:18px}.review-workbench .theme-analysis-title::before{content:"◆ ";color:var(--wb-green);font-size:11px}.review-workbench .theme-stock-table-wrap{margin:0 20px}.review-workbench .theme-analysis-copy{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 20px 0;border:0;background:transparent}.review-workbench .theme-analysis-copy p{max-width:none;padding:11px 12px;border:1px solid #e4ebe8;border-radius:6px;background:#fafcfb;font-size:12px;line-height:1.65}.review-workbench .theme-analysis-copy strong{display:block;margin-bottom:5px;font-size:11px}.review-workbench .theme-analysis-copy p:nth-child(1) strong::before{content:"↻ ";color:var(--wb-blue)}.review-workbench .theme-analysis-copy p:nth-child(2) strong::before{content:"◎ ";color:var(--wb-green)}.review-workbench .theme-analysis-copy p:nth-child(3) strong::before{content:"→ ";color:var(--wb-gold)}
+.review-workbench .event-catalyst-timeline{margin:0 -32px -34px;padding:24px 32px;background:#f4f6f4}.review-workbench .event-timeline-summary h3{font-size:21px}.review-workbench .event-window-badge,.review-workbench .event-timeline-item,.review-workbench .event-impact-grid>div{border-radius:7px}.review-workbench .next-day-playbook{margin:0 -32px -34px}.review-workbench .next-day-playbook__header{padding:23px 32px;border-radius:0}.review-workbench .next-day-playbook__header h3{font-size:23px}.review-workbench .next-day-playbook__flow{gap:8px}.review-workbench .next-day-playbook__flow li{padding:11px 12px;border-radius:6px}.review-workbench .next-day-playbook__step{padding:22px 32px}.review-workbench .next-day-playbook__step-head h4,.review-workbench .next-day-playbook__subhead h5{font-size:17px}.review-workbench .next-day-playbook__guide{max-width:78ch;padding:10px 12px;border-radius:6px;font-size:12px}.review-workbench .market-outlook-grid article,.review-workbench .scenario-playbook-card{padding:14px}
+.review-workbench .operation-strategy-outline{margin:16px 0 23px;border-radius:8px;overflow:hidden}.review-workbench .operation-strategy-outline__header{padding:15px 17px}.review-workbench .operation-strategy-outline__item{padding:14px}.review-workbench .theme-rhythm-card-grid{gap:9px}.review-workbench .theme-rhythm-stage{padding:15px}.review-workbench .plan-toolbar{padding:8px;border-radius:7px}.review-workbench .plan-toolbar button,.review-workbench .plan-row-save,.review-workbench .plan-row-delete{min-height:34px;border-radius:6px}.review-workbench .plan-table th,.review-workbench .plan-table td,.review-workbench .holding-table th,.review-workbench .holding-table td{padding:6px;font-size:10.5px;line-height:1.42}.review-workbench .multi-chip{border-radius:999px}.archive-disclosure{margin-top:13px;border-radius:7px}.archive-disclosure>summary{padding:13px 15px;font-size:12.5px}.workbench-tools{border-radius:8px;box-shadow:0 8px 22px rgba(25,50,45,.14)}
+@media(max-width:1180px){.review-workbench .layout{grid-template-columns:210px minmax(0,1fr)}.review-workbench .section-card{padding-left:24px;padding-right:24px}.review-workbench .decision-dashboard,.review-workbench .theme-analysis-flow,.review-workbench .event-catalyst-timeline,.review-workbench .next-day-playbook{margin-left:-24px;margin-right:-24px}.review-workbench .decision-dashboard__head,.review-workbench .event-catalyst-timeline,.review-workbench .next-day-playbook__header,.review-workbench .next-day-playbook__step{padding-left:24px;padding-right:24px}.review-workbench .theme-analysis-flow>h3,.review-workbench .theme-analysis-flow>.theme-analysis-intro{margin-left:24px;margin-right:24px}.review-workbench .theme-analysis-copy{grid-template-columns:1fr}.review-workbench .plan-table-wrap,.review-workbench .holding-table-wrap{overflow-x:auto}}
+@media(max-width:820px){.review-workbench .layout{width:100%;margin:0}.review-workbench .content{border-radius:0}.review-workbench .hero{padding:24px 17px 20px}.review-workbench .hero h1{display:block;font-size:30px;line-height:1.22}.hero-title-date,.hero-title-main,.hero-title-plan{display:block}.hero-title-main{margin-top:7px}.hero-title-plan{width:max-content;margin-top:10px}.review-workbench .hero-lead{font-size:14px}.review-workbench .hero-stats{gap:6px}.review-workbench .hero-stats span{padding:6px 8px}.review-route{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.review-route a{border-right:1px solid var(--wb-line)!important;border-bottom:1px solid var(--wb-line)!important}.review-workbench #source-table-1{padding:14px}.review-workbench #source-table-1 th{padding:13px 14px;font-size:13px}.phase-divider{grid-template-columns:1fr;padding:13px 17px;gap:4px}.phase-divider span{display:none}.phase-divider p{grid-column:auto}.review-workbench .section-card{padding:24px 15px 28px}.review-workbench .chapter-title{font-size:21px}.review-workbench .body-line{font-size:14px}.review-workbench .recap-summary-modules__header{display:block}.review-workbench .recap-summary-modules__header p{margin-top:6px}.review-workbench .recap-summary-row{grid-template-columns:1fr}.review-workbench .recap-summary-row__title{border-right:0;border-bottom:1px solid var(--wb-line)}.review-workbench .recap-summary-points{grid-template-columns:1fr;padding:11px 12px}.review-workbench .recap-summary-point{min-height:auto;border:0!important;box-shadow:inset 2px 0 0 #e1ebe7}.review-workbench .decision-dashboard,.review-workbench .theme-analysis-flow,.review-workbench .event-catalyst-timeline,.review-workbench .next-day-playbook{margin-left:-15px;margin-right:-15px}.review-workbench .decision-dashboard__head,.review-workbench .event-catalyst-timeline,.review-workbench .next-day-playbook__header,.review-workbench .next-day-playbook__step{padding-left:15px;padding-right:15px}.review-workbench .decision-band,.review-workbench .theme-analysis-block{margin-left:10px;margin-right:10px}.review-workbench .theme-analysis-flow>h3,.review-workbench .theme-analysis-flow>.theme-analysis-intro{margin-left:15px;margin-right:15px}.review-workbench .theme-stock-table-wrap,.review-workbench .theme-analysis-copy{margin-left:12px;margin-right:12px}.review-workbench .theme-analysis-copy{grid-template-columns:1fr}.workbench-tools button{min-width:48px;min-height:44px;padding:8px}.review-workbench .plan-toolbar button,.review-workbench .plan-row-save,.review-workbench .plan-row-delete{min-height:44px}}
+@media(prefers-reduced-motion:reduce){.review-workbench *{scroll-behavior:auto!important;transition-duration:.01ms!important}}
+</style>
+<script data-detail-workbench-script>
+(function(){
+  const body=document.body;
+  const progress=document.querySelector('[data-reading-progress]');
+  const toc=document.querySelector('.toc');
+  const toggle=document.querySelector('[data-toc-toggle]');
+  const close=document.querySelector('[data-toc-close]');
+  const scrim=document.querySelector('[data-toc-scrim]');
+  const topButton=document.querySelector('[data-back-top]');
+  const heroTitle=document.querySelector('.hero h1');
+  if(heroTitle){
+    const fullTitle=heroTitle.textContent.trim();
+    const date=fullTitle.match(/(20\d{2})[.\/-](\d{1,2})[.\/-](\d{1,2})/);
+    const weekday=fullTitle.match(/周[一二三四五六日天]/)?.[0]||'';
+    const planDate=fullTitle.match(/\+\s*(\d{1,2}[.\/-]\d{1,2})\s*个股板块预案/)?.[1]||'';
+    if(date){
+      heroTitle.setAttribute('aria-label',fullTitle);
+      heroTitle.innerHTML='<span class="hero-title-date">'+date[1]+'.'+date[2]+'.'+date[3]+(weekday?' · '+weekday:'')+'</span>'+
+        '<span class="hero-title-main">每日 A 股超短复盘</span>'+
+        (planDate?'<span class="hero-title-plan">'+planDate.replace('/','.')+' 交易预案</span>':'');
+    }
+  }
+  const heroLead=document.querySelector('.hero-lead');
+  if(heroLead&&heroLead.textContent.includes('复盘总纲'))heroLead.textContent='先定市场，再抓主线，最后按条件执行。';
+  document.querySelectorAll('.body-line').forEach(line=>{
+    if(line.children.length||line.classList.contains('source-note'))return;
+    const text=line.textContent.trim();
+    if(text.length<90)return;
+    const fragments=(text.match(/[^。；]+[。；]?/g)||[]).map(item=>item.trim()).filter(Boolean);
+    if(fragments.length<2||fragments.length>8)return;
+    line.classList.add('is-fragmented');
+    line.replaceChildren(...fragments.map(fragment=>{const span=document.createElement('span');span.className='brief-fragment';span.textContent=fragment;return span;}));
+  });
+  if(toggle){toggle.textContent='☰';toggle.setAttribute('aria-label','打开复盘目录');toggle.title='复盘目录';}
+  if(topButton){topButton.textContent='↑';topButton.setAttribute('aria-label','回到页面顶部');topButton.title='回到顶部';}
+  if(close){close.textContent='×';close.setAttribute('aria-label','关闭复盘目录');close.title='关闭目录';}
+  const closeToc=()=>body.classList.remove('toc-open');
+  toggle?.addEventListener('click',()=>body.classList.toggle('toc-open'));
+  close?.addEventListener('click',closeToc);scrim?.addEventListener('click',closeToc);
+  topButton?.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+  toc?.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',event=>{
+    const target=document.querySelector(link.getAttribute('href'));
+    if(!target)return;
+    event.preventDefault();
+    const disclosure=target?.closest('.archive-disclosure');if(disclosure) disclosure.open=true;
+    closeToc();
+    requestAnimationFrame(()=>{target.scrollIntoView({behavior:'instant',block:'start'});history.replaceState(null,'',link.getAttribute('href'))});
+  }));
+  const updateProgress=()=>{const max=document.documentElement.scrollHeight-innerHeight;const value=max>0?Math.min(100,scrollY/max*100):0;if(progress)progress.style.width=value+'%'};
+  addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+  const nodes=[...document.querySelectorAll('.toc-node')];
+  const sections=[...document.querySelectorAll('.section-card[id]')];
+  const linkMap=new Map(nodes.map(node=>[node.querySelector('summary a')?.getAttribute('href')?.slice(1),node]));
+  const setActive=id=>{nodes.forEach(node=>node.classList.remove('is-active'));const node=linkMap.get(id);if(node){node.classList.add('is-active');node.open=true}};
+  if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{const visible=entries.filter(x=>x.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top)[0];if(visible)setActive(visible.target.id)},{rootMargin:'-12% 0px -72% 0px',threshold:[0,.1]});sections.forEach(section=>observer.observe(section));}
+  nodes.forEach((node,index)=>node.open=index===0);
+})();
+</script>
+
+</body>
+</html>
