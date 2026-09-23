@@ -43,8 +43,16 @@ def build(root):
     for r in sorted(records,key=lambda r:r['date_iso']):
         path=r['page_path'].replace('\\','/'); url='https://travelstocks.github.io/daily-trading-review/'+quote(path,safe='/')
         html=(root/path).read_text(encoding='utf-8-sig')
-        days.append(dict(date=r['date_iso'],label=r.get('emotion_label',''),summary=r.get('emotion_summary',''),url=url,title=r['title'],updatedAt=r.get('updated_at',''),sections=sections(html)))
+        day_record=dict(date=r['date_iso'],label=r.get('emotion_label',''),summary=r.get('emotion_summary',''),url=url,title=r['title'],updatedAt=r.get('updated_at',''),sections=sections(html),metrics={})
+        days.append(day_record)
         parser=Tables(); parser.feed(html)
+        for rows in parser.tables:
+            if not rows or '日期' not in rows[0] or not any('沪指' in h for h in rows[0]): continue
+            row=next((row for row in rows[1:] if len(row)>rows[0].index('日期') and row[rows[0].index('日期')]==r['date_iso']),None)
+            if row:
+                for i,h in enumerate(rows[0]):
+                    if i<len(row) and not re.search('情绪|周几|日期',h) and row[i] not in ('None','null','未核','—','-',''):
+                        day_record['metrics'].setdefault(h,row[i])
         for rows in parser.tables:
             if not rows or not rows[0] or not re.search('板块|题材',rows[0][0]): continue
             dates={}
