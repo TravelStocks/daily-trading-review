@@ -47,7 +47,137 @@
       .role-中军{background:#e7f4ee;color:#0d6b66}.role-弹性{background:#fff0ee;color:#ad4437}.role-退潮锚{background:#f4e9ee;color:#88415f}
       @media(max-width:1320px){.trading-reference-grid{grid-template-columns:1fr}}
       @media(max-width:720px){.chapter-title{margin-top:38px;gap:10px}.chapter-number{width:36px;height:36px;border-radius:11px}.table-card{padding:10px;margin-inline:-8px}}
-    </style></head>
+    </style><style id="dragon-decision-room-style">
+/* Dragon decision room: hierarchy first, evidence second. */
+.dragon-decision-room {
+  --dragon-ink: #103b35;
+  --dragon-green: #087565;
+  --dragon-mint: #dff4ed;
+  --dragon-gold: #bc812b;
+  --dragon-line: rgba(16, 59, 53, .14);
+  overflow: hidden;
+}
+.dragon-decision-room > .section-kicker { color: var(--dragon-green); letter-spacing: .14em; }
+.dragon-decision-room > .chapter-title { margin-bottom: 18px; }
+.dragon-decision-room > .chapter-title span:last-child { letter-spacing: -.03em; }
+.dragon-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(310px, .8fr);
+  gap: 24px;
+  margin: 4px 0 30px;
+  padding: clamp(24px, 4vw, 42px);
+  color: #f7fffc;
+  background:
+    radial-gradient(circle at 92% 12%, rgba(214, 171, 83, .23), transparent 30%),
+    linear-gradient(135deg, #0d433b 0%, #0a5e51 58%, #087565 100%);
+  border-radius: 26px;
+  box-shadow: 0 22px 48px rgba(8, 62, 53, .18);
+}
+.dragon-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 999px;
+  color: #d6f7ec;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .12em;
+}
+.dragon-hero h3 { margin: 18px 0 10px; color: #fff; font-size: clamp(1.7rem, 3vw, 2.55rem); line-height: 1.14; letter-spacing: -.04em; }
+.dragon-hero p { max-width: 760px; margin: 0; color: rgba(245,255,252,.82); font-size: 16px; line-height: 1.8; }
+.dragon-hero-metrics { display: grid; grid-template-columns: repeat(3, 1fr); align-self: end; gap: 10px; }
+.dragon-hero-metrics div { min-width: 0; padding: 18px 12px; text-align: center; background: rgba(255,255,255,.10); border: 1px solid rgba(255,255,255,.16); border-radius: 16px; backdrop-filter: blur(8px); }
+.dragon-hero-metrics strong { display: block; color: #fff3cf; font: 750 clamp(1.7rem, 3vw, 2.4rem)/1 ui-monospace, SFMono-Regular, Consolas, monospace; }
+.dragon-hero-metrics span { display: block; margin-top: 9px; color: rgba(255,255,255,.76); font-size: 12px; line-height: 1.35; }
+.high-board-module, .leader-candidate-module { margin: 30px 0 38px; }
+.module-heading-row { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 16px; }
+.module-heading-row > div { display: flex; align-items: center; gap: 12px; }
+.module-heading-row h3 { margin: 0; color: var(--dragon-ink); font-size: clamp(1.25rem, 2vw, 1.65rem); letter-spacing: -.02em; }
+.module-heading-row p { max-width: 560px; margin: 0; color: #60756f; font-size: 14px; line-height: 1.6; text-align: right; }
+.module-heading-row.compact { align-items: center; }
+.module-index { display: inline-grid; place-items: center; min-width: 38px; height: 30px; padding: 0 9px; color: #fff; background: var(--dragon-ink); border-radius: 9px; font: 700 12px/1 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .08em; }
+.high-board-table-shell, .dragon-matrix-shell { overflow: auto; border: 1px solid var(--dragon-line); border-radius: 18px; background: #fff; box-shadow: 0 12px 30px rgba(26, 68, 60, .08); scrollbar-color: #7fc1b2 #edf6f3; }
+.high-board-table { width: 100%; min-width: 970px; border-collapse: separate; border-spacing: 0; color: #173f39; font-size: 14px; }
+.high-board-table caption, .dragon-matrix caption { caption-side: bottom; padding: 13px 16px; color: #6c7f7b; background: #f7faf9; border-top: 1px solid var(--dragon-line); font-size: 12px; line-height: 1.6; text-align: left; }
+.high-board-table thead th { padding: 14px 16px; color: #eafff8; background: #114f46; border-right: 1px solid rgba(255,255,255,.12); font-size: 13px; text-align: left; white-space: nowrap; }
+.high-board-table thead th:first-child { border-radius: 17px 0 0; }
+.high-board-table thead th:last-child { border-radius: 0 17px 0 0; }
+.high-board-table tbody td { padding: 15px 16px; border-right: 1px solid #e4eeeb; border-bottom: 1px solid #e4eeeb; vertical-align: middle; line-height: 1.5; }
+.high-board-table tbody tr:last-child td { border-bottom: 0; }
+.high-board-table tbody tr:nth-child(even) td { background: #f8fbfa; }
+.high-board-table tbody tr.height-four td { background: #fffaf0; }
+.high-board-table tbody tr:hover td { background: #edf8f4; }
+.high-board-table td:nth-child(2) strong, .high-board-table td:last-child strong { display: block; color: #103b35; font-size: 15px; }
+.high-board-table td small { display: block; margin-top: 3px; color: #71827e; font-size: 12px; }
+.high-board-table td:nth-child(3) { white-space: nowrap; }
+.height-badge { display: inline-flex; align-items: center; justify-content: center; min-width: 48px; min-height: 30px; margin-right: 8px; color: #fff; background: var(--dragon-green); border-radius: 9px; font-weight: 800; }
+.height-four .height-badge { background: #a46113; }
+.volume-chip { display: inline-flex; align-items: center; min-height: 28px; margin: 2px 5px 2px 0; padding: 0 8px; border: 1px solid transparent; border-radius: 999px; font-size: 12px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.volume-chip.start { color: #086759; background: #e5f7f1; border-color: #bde9dc; }
+.volume-chip.shrink { color: #536964; background: #f1f5f4; border-color: #dce6e3; }
+.volume-chip.half { color: #81540d; background: #fff5d9; border-color: #f2dda2; }
+.volume-chip.full { color: #a13a31; background: #fff0ed; border-color: #f4c7bf; }
+.data-source-line { margin: 10px 4px 0; color: #71827e; font-size: 12px; line-height: 1.65; }
+.leader-pick-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.leader-pick { position: relative; min-height: 182px; padding: 22px; background: linear-gradient(180deg, #fff, #f7faf9); border: 1px solid var(--dragon-line); border-radius: 18px; }
+.leader-pick::after { content: ""; position: absolute; inset: auto 22px 0; height: 3px; background: #b9d8d1; border-radius: 999px 999px 0 0; }
+.leader-pick-primary { color: #f5fffb; background: linear-gradient(145deg, #0c493f, #087565); border-color: transparent; box-shadow: 0 18px 34px rgba(8, 93, 79, .17); }
+.leader-pick-primary::after { background: #e6bd6d; }
+.leader-pick > span { display: inline-block; color: #087565; font-size: 12px; font-weight: 800; letter-spacing: .08em; }
+.leader-pick-primary > span { color: #f4dca6; }
+.leader-pick h4 { margin: 14px 0 8px; color: var(--dragon-ink); font-size: 1.4rem; }
+.leader-pick-primary h4 { color: #fff; }
+.leader-pick p { margin: 0; color: #61736f; font-size: 14px; line-height: 1.72; }
+.leader-pick-primary p { color: rgba(247,255,252,.8); }
+.leader-exclusion { margin-top: 12px; padding: 13px 16px; color: #586e68; background: #f3f7f6; border-left: 3px solid #8ebfb3; border-radius: 8px; font-size: 13px; line-height: 1.65; }
+.leader-exclusion strong { color: var(--dragon-ink); }
+.dragon-decision-room .leader-competition-watch, .dragon-decision-room .leader-uniqueness-note { border-radius: 18px; box-shadow: none; }
+.matrix-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin: 18px 0 10px; padding: 0 2px; }
+.matrix-toolbar > div { display: flex; align-items: center; gap: 10px; }
+.matrix-toolbar strong { color: var(--dragon-ink); font-size: 16px; }
+.matrix-toolbar > span { color: #71827e; font-size: 12px; }
+.dragon-matrix { min-width: 1840px; border-collapse: separate; border-spacing: 0; font-size: 13px; }
+.dragon-matrix thead th { position: sticky; top: 0; z-index: 2; min-width: 102px; padding: 13px 12px; color: #effff9; background: #124c44; border-right: 1px solid rgba(255,255,255,.12); line-height: 1.45; text-align: left; }
+.dragon-matrix thead th:nth-child(4), .dragon-matrix thead th:nth-child(n+8) { min-width: 185px; }
+.dragon-matrix tbody td { padding: 14px 12px; color: #304f49; background: #fff; border-right: 1px solid #e3ece9; border-bottom: 1px solid #e3ece9; line-height: 1.58; vertical-align: top; }
+.dragon-matrix tbody tr:nth-child(even) td { background: #f8fbfa; }
+.dragon-matrix tbody tr.candidate-first td { background: #fffaf0; }
+.dragon-matrix thead th:first-child, .dragon-matrix tbody td:first-child { position: sticky; left: 0; z-index: 3; min-width: 112px; }
+.dragon-matrix thead th:nth-child(2), .dragon-matrix tbody td:nth-child(2) { position: sticky; left: 112px; z-index: 3; min-width: 112px; box-shadow: 7px 0 14px rgba(20, 73, 64, .07); }
+.dragon-matrix thead th:first-child, .dragon-matrix thead th:nth-child(2) { z-index: 4; background: #0b3f38; }
+.dragon-matrix tbody td.matrix-stock { color: #0b4f44; font-size: 14px; font-weight: 800; }
+.dragon-matrix tbody td.matrix-height { color: #9a6116; font-weight: 750; }
+.decision-checklist { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 16px 0 0; padding: 0; list-style: none; }
+.decision-checklist li { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 12px; align-items: start; min-height: 92px; padding: 17px; background: #f8fbfa; border: 1px solid var(--dragon-line); border-radius: 15px; }
+.decision-checklist li:last-child { grid-column: 1 / -1; color: #f7fffc; background: #103f38; border-color: #103f38; }
+.decision-checklist strong { display: grid; place-items: center; width: 36px; height: 36px; color: #087565; background: #dff4ed; border-radius: 10px; font: 800 12px/1 ui-monospace, SFMono-Regular, Consolas, monospace; }
+.decision-checklist li:last-child strong { color: #103f38; background: #f1dba9; }
+.decision-checklist span { font-size: 14px; line-height: 1.68; }
+@media (max-width: 900px) {
+  .dragon-hero { grid-template-columns: 1fr; }
+  .leader-pick-grid { grid-template-columns: 1fr; }
+  .leader-pick { min-height: auto; }
+  .decision-checklist { grid-template-columns: 1fr; }
+  .decision-checklist li:last-child { grid-column: auto; }
+}
+@media (max-width: 640px) {
+  .dragon-hero { margin-inline: -10px; padding: 22px 18px; border-radius: 20px; }
+  .dragon-hero-metrics { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+  .dragon-hero-metrics div { padding: 13px 5px; border-radius: 12px; }
+  .dragon-hero-metrics span { font-size: 10px; }
+  .module-heading-row { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .module-heading-row p { text-align: left; }
+  .high-board-table-shell, .dragon-matrix-shell { margin-inline: -10px; border-radius: 14px; }
+  .matrix-toolbar { align-items: flex-start; flex-direction: column; }
+  .decision-checklist li { grid-template-columns: 36px minmax(0, 1fr); min-height: auto; padding: 14px; }
+  .decision-checklist strong { width: 32px; height: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .high-board-table tbody tr { transition: none; }
+}
+</style></head>
 <body class="review-workbench" id="page-top"><div class="reading-progress" data-reading-progress=""></div><div class="mobile-toc-scrim" data-toc-scrim=""></div><div aria-label="页面工具" class="workbench-tools"><button data-toc-toggle="" type="button">目录</button><button data-back-top="" type="button">顶部</button></div>
 <div class="layout">
 <aside class="toc">
@@ -64,7 +194,7 @@
 <div class="toc-phase-label">03 明日推演</div><details class="toc-node"><summary><a href="#chapter-10-十-核心关键票汇总-明日个股预案-1c8c87">09 · 明日作战推演总纲（大盘 → 板块 → 核心票）</a><span>展开</span></summary><div class="toc-children"><a href="#next-day-market-outlook">大盘明日预期</a><a href="#next-day-theme-outlook">板块题材预期</a><a href="#next-day-core-stock-checks">核心票判定</a><a href="#next-day-scenario-playbooks">情景推演</a></div></details>
 <details class="toc-node"><summary><a href="#chapter-11-十一-大盘明日预期节奏-78977f">大盘与板块题材预期节奏</a><span>展开</span></summary><div class="toc-children"><a href="#next-day-market-outlook">大盘明日预期</a><a href="#next-day-theme-outlook">板块题材预期</a></div></details>
 <details class="toc-node"><summary><a href="#chapter-12-十二-明日核心票弱转强-转强判定-板块预期细化表-3ffd87">核心票弱转强判定+情景推演</a><span>展开</span></summary><div class="toc-children"><a href="#next-day-core-stock-checks">弱转强判定</a><a href="#next-day-scenario-playbooks">情景推演与预案</a></div></details>
-<details class="toc-node"><summary><a href="#chapter-13-十三-龙头预备票-最终定稿-c57786">10 · 龙头预备票（最终定稿）</a><span>展开</span></summary><div class="toc-children"><a href="#sub-13-1-一-总龙候选名单-3aea20">总龙候选名单</a><a href="#sub-13-2-二-总龙唯一性排序-9f94e1">总龙唯一性排序</a><a href="#leader-competition-watch">卡位观察</a><a href="#sub-13-3-三-龙头七维核验明细-五维-双唯一性-a71302">龙头七维核验明细（五维+双唯一性）</a><a href="#sub-13-4-四-明日总龙决胜观察要点-7cac4f">明日总龙决胜观察要点</a></div></details>
+<details class="toc-node"><summary><a href="#chapter-13-十三-龙头预备票-最终定稿-c57786">10 · 龙头预备票</a><span>展开</span></summary><div class="toc-children"><a href="#high-board-positions">三板及以上身位</a><a href="#leader-candidate-shortlist">总龙候选分级</a><a href="#leader-uniqueness-ranking">唯一性与卡位</a><a href="#leader-competition-watch">卡位观察</a><a href="#leader-seven-dimension-check">七维核验证据</a><a href="#leader-decision-checklist">明日决胜清单</a></div></details>
 <details class="toc-node"><summary><a href="#chapter-14-十四-口述信息全量归档与待确认信息-d62038">11 · 口述信息全量归档与待确认信息</a><span>展开</span></summary><div class="toc-children"><a href="#sub-14-1-一-口述中已纳入的关键票池-446b2a">口述中已纳入的关键票池</a><a href="#sub-14-2-二-待确认信息-d5edb4">待确认信息</a></div></details>
 <div class="toc-phase-label">04 交易执行</div><details class="toc-node"><summary><a href="#operation-plan">12 · 今日操作计划</a><span>展开</span></summary><div class="toc-children"><a href="#operation-strategy-outline">明日战略总纲</a><a href="#second-review-2026-07-22">盘后二次复盘</a><a href="#theme-rhythm-run">题材节奏运行</a><a href="#operation-process-review">正确复盘重点</a><a href="#operation-plan-three-questions">书面计划三问</a><a href="#editable-operation-table">可编辑交易计划表</a><a href="#holding-handling-table">持仓处理计划表</a></div></details>
 </div>
@@ -462,14 +592,68 @@
 @media(max-width:640px){.next-day-playbook__header,.next-day-playbook__step{padding:18px}.next-day-playbook__flow,.market-outlook-grid{grid-template-columns:1fr}.next-day-playbook__flow li{border-right:0;border-bottom:1px solid #cfe1dc}.next-day-playbook__subhead{display:block}.next-day-playbook__subhead p{margin-top:5px}.playbook-execution-order{grid-template-columns:1fr}.playbook-execution-order ol{grid-template-columns:1fr}}
 </style>
 </section>
-<section class="section-card" data-chapter-number="13" data-phase="playbook" id="chapter-13-十三-龙头预备票-最终定稿-c57786"><div class="section-kicker">Daily Review</div><h2 class="chapter-title"><span class="chapter-number">10</span><span>龙头预备票（最终定稿）</span></h2>
-<h3 class="subchapter-title" id="sub-13-1-一-总龙候选名单-3aea20">（一）总龙候选名单</h3>
-<p class="body-line bullet-line tone-action">核心候选：新华文轩。</p>
-<p class="body-line bullet-line tone-action">条件观察：大亚圣象仅在科技硬件全面强回流时重新评估，不列入主动交易计划。</p>
-<p class="body-line bullet-line">切换候选：暂无；低位二板缺少强题材和完整板块效应。</p>
-<p class="body-line bullet-line">高度锚但暂不作为交易候选：新华传媒。</p>
-<p class="body-line bullet-line">暂不纳入：天威视讯、南威软件、我爱我家、华丽家族、奥佳华。</p>
-<h3 class="subchapter-title" id="sub-13-2-二-总龙唯一性排序-9f94e1">（二）总龙唯一性排序</h3>
+<section class="section-card dragon-decision-room" data-chapter-number="13" data-phase="playbook" id="chapter-13-十三-龙头预备票-最终定稿-c57786"><div class="section-kicker">Decision Desk · 盘中唯一性</div><h2 class="chapter-title"><span class="chapter-number">10</span><span>龙头预备票</span></h2><div aria-label="龙头预备票决策原则" class="dragon-hero">
+<div class="dragon-hero-copy">
+<span class="dragon-eyebrow">明日决胜台</span>
+<h3>身位先看全，龙头再做唯一</h3>
+<p>盯盘时把所有龙头预备票放在同一屏比较。短线龙头只有一个，先看同身位互卡，再看主动性、板块带动与量能确认。</p>
+</div>
+<div aria-label="高位连板概览" class="dragon-hero-metrics">
+<div><strong>7</strong><span>三板及以上</span></div>
+<div><strong>2</strong><span>四板最高标</span></div>
+<div><strong>5</strong><span>三板竞争层</span></div>
+</div>
+</div>
+<div class="high-board-module" id="high-board-positions">
+<div class="module-heading-row">
+<div>
+<span class="module-index">01</span>
+<h3>三板及以上身位个股</h3>
+</div>
+<p>只统计截至 2026-09-23 仍保持连板的个股，断板失败票不混入身位竞争。</p>
+</div>
+<div aria-label="三板及以上身位个股表" class="high-board-table-shell" role="region" tabindex="0">
+<table class="high-board-table">
+<caption>量能口径：首板成交量达到前 5 日均量 1.2 倍记为起量；一字板或板间量比不高于 0.75 记为缩量；0.75–1.5 为半放量；高于 1.5 为全放量。</caption>
+<thead>
+<tr>
+<th scope="col">题材</th>
+<th scope="col">个股</th>
+<th scope="col">连板情况</th>
+<th scope="col">连板放量情况</th>
+<th scope="col">当前板量能情况</th>
+</tr>
+</thead>
+<tbody>
+<tr class="height-four"><td>文化传媒 / AI应用</td><td><strong>新华文轩</strong><small>601811</small></td><td><span class="height-badge">4板</span><span>并列最高</span></td><td><span class="volume-chip start">起量 1</span><span class="volume-chip shrink">缩量 1</span><span class="volume-chip half">半放量 1</span><span class="volume-chip full">全放量 1</span></td><td><strong>T字全放量</strong><small>较前一板 4.10 倍，需防次日继续爆量</small></td></tr>
+<tr class="height-four"><td>PCB / 芯片</td><td><strong>大亚圣象</strong><small>000910</small></td><td><span class="height-badge">4板</span><span>并列最高</span></td><td><span class="volume-chip start">起量 1</span><span class="volume-chip shrink">缩量 1</span><span class="volume-chip half">半放量 1</span><span class="volume-chip full">全放量 1</span></td><td><strong>缩量换手</strong><small>较前一板 0.52 倍，量能关系尚可</small></td></tr>
+<tr><td>文化传媒 / 重组</td><td><strong>新华传媒</strong><small>600825</small></td><td><span class="height-badge">3板</span><span>高度锚</span></td><td><span class="volume-chip start">起量 0</span><span class="volume-chip shrink">缩量 3</span><span class="volume-chip half">半放量 0</span><span class="volume-chip full">全放量 0</span></td><td><strong>连续一字缩量</strong><small>三板均无有效换手，筹码未检验</small></td></tr>
+<tr><td>AI应用 / 软件</td><td><strong>南威软件</strong><small>603636</small></td><td><span class="height-badge">3板</span><span>后排换手</span></td><td><span class="volume-chip start">起量 1</span><span class="volume-chip shrink">缩量 1</span><span class="volume-chip half">半放量 0</span><span class="volume-chip full">全放量 1</span></td><td><strong>开板全放量</strong><small>较前一板 4.29 倍，承接质量待验证</small></td></tr>
+<tr><td>房地产</td><td><strong>我爱我家</strong><small>000560</small></td><td><span class="height-badge">3板</span><span>前排</span></td><td><span class="volume-chip start">起量 1</span><span class="volume-chip shrink">缩量 0</span><span class="volume-chip half">半放量 2</span><span class="volume-chip full">全放量 0</span></td><td><strong>换手半放量</strong><small>较前一板 0.77 倍，节奏相对平稳</small></td></tr>
+<tr><td>房地产</td><td><strong>华远控股</strong><small>600743</small></td><td><span class="height-badge">3板</span><span>前排</span></td><td><span class="volume-chip start">起量 0</span><span class="volume-chip shrink">缩量 2</span><span class="volume-chip half">半放量 0</span><span class="volume-chip full">全放量 1</span></td><td><strong>开板全放量</strong><small>较前一板 10.92 倍，分歧显著放大</small></td></tr>
+<tr><td>房地产</td><td><strong>华丽家族</strong><small>600503</small></td><td><span class="height-badge">3板</span><span>后排</span></td><td><span class="volume-chip start">起量 1</span><span class="volume-chip shrink">缩量 0</span><span class="volume-chip half">半放量 0</span><span class="volume-chip full">全放量 2</span></td><td><strong>尾盘回封全放量</strong><small>较前一板 2.11 倍，次日先看弱转强</small></td></tr>
+</tbody>
+</table>
+</div>
+<p class="data-source-line">数据依据：腾讯证券前复权日线与当日涨停形态；量能分类用于同一连板链比较，不代替换手率、封单和盘口承接判断。</p>
+</div>
+
+
+
+
+
+<div class="leader-candidate-module" id="leader-candidate-shortlist">
+<div class="module-heading-row compact">
+<div><span class="module-index">02</span><h3>总龙候选：先分级，再观察</h3></div>
+<p>不把“有身位”直接等同于“可交易”。</p>
+</div>
+<div class="leader-pick-grid">
+<article class="leader-pick leader-pick-primary"><span>唯一主动观察</span><h4>新华文轩</h4><p>4板高标，兼具传媒、AI应用与收购催化。明日只看先于板块转强并完成5板确认。</p></article>
+<article class="leader-pick"><span>条件观察</span><h4>大亚圣象</h4><p>同为4板，但科技仍偏轮动。只有PCB、芯片、通信全面强回流时才重新评估。</p></article>
+<article class="leader-pick"><span>高度锚 · 不追</span><h4>新华传媒</h4><p>连续一字打开空间，但缺少换手检验；观察封单与助攻作用，不作为主动交易候选。</p></article>
+</div>
+<div class="leader-exclusion"><strong>暂不纳入：</strong>天威视讯、南威软件、我爱我家、华丽家族、奥佳华。低位候选尚未形成题材强度与唯一性。</div>
+</div><h3 class="subchapter-title" id="leader-uniqueness-ranking">（三）唯一性排序与卡位逻辑</h3>
 <p class="body-line tone-action">新华文轩 &gt; 新华传媒（高度锚、不参与） &gt; 大亚圣象（仅条件观察）。</p>
 <p class="body-line tone-action">用户最终计划只主动观察新华文轩。其优势是4板高标、新华与华字辈辨识度、收购催化、文化传媒与AI应用属性，以及相对健康的量能关系；新华传媒负责无量一字打开高度，但目前不提供交易机会。大亚圣象虽同为4板，因科技仅是轮动回流，暂不作为主动计划。</p>
 <aside class="leader-competition-watch" data-leader-competition-watch="" id="leader-competition-watch">
@@ -491,18 +675,21 @@
 </div>
 <div class="leader-competition-watch__grid"><div class="leader-competition-watch__item"><strong>低位卡高位</strong><span>低身位票用更强的主动性、量能和板块带动，争夺并替代高位票的辨识度。</span></div><div class="leader-competition-watch__item"><strong>同身位互卡</strong><span>同板数个股比较先后手、封单、换手、回封质量和后排跟随，不能只看谁先涨停。</span></div><div class="leader-competition-watch__item"><strong>量能护卡</strong><span>晋级票必须用健康换手或放量回封守住地位；缩量硬顶、开板无承接都容易被卡掉。</span></div><div class="leader-competition-watch__item"><strong>败方联动</strong><span>卡位胜出不代表与败方完全脱钩；败方若封死跌停或持续深水，会拖累胜者与同高度情绪。</span></div><div class="leader-competition-watch__item"><strong>执行纪律</strong><span>唯一性未确认前不打板；胜出者转强、败方负反馈可控且板块跟随后，再按龙头预备处理。</span></div></div>
 </aside>
-<h3 class="subchapter-title" id="sub-13-3-三-龙头七维核验明细-五维-双唯一性-a71302">（三）龙头七维核验明细（五维+双唯一性）</h3>
+<h3 class="subchapter-title" id="leader-seven-dimension-check">（四）龙头七维核验明细</h3>
 <p class="body-line">主动性与领涨性分开看：主动性是先于板块回流、先找方向；领涨性是上板后能带动后排补涨跟随上板。龙头若只有主动回流、没有后排跟随领涨，预期要降级；龙头带不动题材，题材容易死，题材死又会反过来带炸龙头。</p>
 <aside class="leader-uniqueness-note" data-leader-uniqueness-knowledge=""><div class="leader-uniqueness-note__head"><span>◆ 龙头唯一性</span><h4>同身位唯一性竞争与量能确认</h4></div><ol class="leader-uniqueness-note__list"><li><strong>竞争阶段</strong><span>龙版传媒、大晟文化、欢瑞世纪同处4板时，题材内与跨题材高度唯一性都未确定，先观察、不抢板。</span></li><li><strong>量能门槛</strong><span>连续一字晋级的个股，到4板必须充分放量并完成回封；放不出量或回封弱，最容易在卡位中掉队。</span></li><li><strong>确认买点</strong><span>龙版传媒4板充分放量胜出，5板缩量转强确认；健康路径是两个半放量、一个全放量，再完成转强。</span></li><li><strong>败方反馈</strong><span>同身位竞争结束后，胜者与败者仍处于同一情绪单元。败者可以弱，但不能跌停或持续深水，否则会反向拖累胜者与高标情绪。</span></li><li><strong>七维结论</strong><span>三四板出现多只同身位票时，必须同时比较题材内唯一性与题材之间连板高度唯一性，最终定论前不打板。</span></li></ol></aside>
-<div class="table-shell" id="source-table-7"><table class="data-table"><thead><tr><th>标的</th><th>身位</th><th>领涨性</th><th>主动性</th><th>抗跌性</th><th>市场性</th><th>价值性</th><th>题材内唯一性</th><th>题材之间连板高度唯一性</th><th>五维/七维结论</th><th>100%异动监管距离</th><th>题材梯队完整性</th><th>题材持续性</th><th>筹码结构&amp;量能健康度</th></tr></thead><tbody><tr><td>新华文轩</td><td>4板并列最高</td><td>强</td><td>明日需先于传媒回流起势并率先封5板，不能只靠新华传媒反推。</td><td>强</td><td>强</td><td>相对较好</td><td>较强，但受新华传媒一字影响</td><td>否，与大亚圣象并列</td><td>第一候选</td><td>用户估算约2个涨停板空间，6板附近压力增大</td><td>传媒/AI有3板与2板助攻</td><td>分歧后待修复</td><td>首板、二板已放量，三板缩量，四板T字；五板宜温和放量</td></tr><tr><td>大亚圣象</td><td>4板并列最高</td><td>强</td><td>需先于PCB/芯片回流并带动科技首板扩散，才有五板主动性。</td><td>强</td><td>中强</td><td>一般</td><td>PCB高标之一</td><td>否，与新华文轩并列</td><td>条件观察，不列入主动计划</td><td>待核</td><td>PCB首板较多、澳弘电子助攻</td><td>当前较强但轮动快</td><td>今日量能关系尚可，明日需避免爆量</td></tr><tr><td>天威视讯</td><td>2板</td><td>中</td><td>低位一字强度锚，主动性需看开板换手后的承接。</td><td>强</td><td>中</td><td>一般</td><td>低位传媒/算力锚</td><td>否</td><td>强度锚，暂不主动参与</td><td>相对较远，待核</td><td>有新华传媒、新华文轩上方梯队</td><td>取决于AI/传媒修复</td><td>一字板，重点看封单增减</td></tr><tr><td>新华传媒</td><td>3板</td><td>强</td><td>一字高度锚，封单可助攻但主动换手证据不足。</td><td>强</td><td>强</td><td>待核</td><td>重组+传媒高度核心</td><td>否</td><td>高度锚，不宜追</td><td>连续一字，风险累积</td><td>梯队较完整</td><td>取决于重组预期</td><td>无换手，筹码检验不足</td></tr></tbody></table></div>
-<h3 class="subchapter-title" id="sub-13-4-四-明日总龙决胜观察要点-7cac4f">（四）明日总龙决胜观察要点</h3>
-<p class="body-line">1. 闽东电力是否继续封死跌停；这是所有高位交易的前置条件。</p>
-<p class="body-line">2. 新华文轩是否出现起量或半放量、健康换手并完成5板的板上确认；不做半路。</p>
-<p class="body-line">3. 新华传媒封单是否稳定，并对新华文轩形成明确助攻。</p>
-<p class="body-line tone-action">4. 大亚圣象仅用于观察科技强度；除非PCB、芯片、通信全面强回流，否则不纳入主动交易计划。</p>
-<p class="body-line tone-action">5. 新华传媒若连续晋级，9月29日将对应7板、9月30日对应8板；重点是突破高度后能否把空间转化为板块赚钱效应。</p>
-<p class="body-line">6. 若两只4板均断板，则取消连板总龙预判；不转做高位断板票，优先处理持仓并等待新的首板周期。</p>
-<p class="body-line tone-action">当日核心交易规则：先处理南华生物旧仓；新仓只等新华文轩5板的板上确认。没有确认就空仓，总仓位不超过五成。</p>
+<div class="matrix-toolbar">
+<div><span class="module-index">04</span><strong>候选证据矩阵</strong></div>
+<span>共 14 项核验 · 横向查看完整字段</span>
+</div><div aria-label="龙头七维核验明细，可横向滚动" class="table-shell dragon-matrix-shell" id="source-table-7" role="region" tabindex="0"><table class="data-table dragon-matrix"><caption>证据层：横向查看主动性、唯一性、异动距离、梯队与量能；盘中先看前面的身位总览和候选结论。</caption><thead><tr><th scope="col">标的</th><th scope="col">身位</th><th scope="col">领涨性</th><th scope="col">主动性</th><th scope="col">抗跌性</th><th scope="col">市场性</th><th scope="col">价值性</th><th scope="col">题材内唯一性</th><th scope="col">题材之间连板高度唯一性</th><th scope="col">五维/七维结论</th><th scope="col">100%异动监管距离</th><th scope="col">题材梯队完整性</th><th scope="col">题材持续性</th><th scope="col">筹码结构&amp;量能健康度</th></tr></thead><tbody><tr class="candidate-row candidate-first"><td class="matrix-stock">新华文轩</td><td class="matrix-height">4板并列最高</td><td>强</td><td>明日需先于传媒回流起势并率先封5板，不能只靠新华传媒反推。</td><td>强</td><td>强</td><td>相对较好</td><td>较强，但受新华传媒一字影响</td><td>否，与大亚圣象并列</td><td>第一候选</td><td>用户估算约2个涨停板空间，6板附近压力增大</td><td>传媒/AI有3板与2板助攻</td><td>分歧后待修复</td><td>首板、二板已放量，三板缩量，四板T字；五板宜温和放量</td></tr><tr class="candidate-row candidate-watch"><td class="matrix-stock">大亚圣象</td><td class="matrix-height">4板并列最高</td><td>强</td><td>需先于PCB/芯片回流并带动科技首板扩散，才有五板主动性。</td><td>强</td><td>中强</td><td>一般</td><td>PCB高标之一</td><td>否，与新华文轩并列</td><td>条件观察，不列入主动计划</td><td>待核</td><td>PCB首板较多、澳弘电子助攻</td><td>当前较强但轮动快</td><td>今日量能关系尚可，明日需避免爆量</td></tr><tr class="candidate-row candidate-watch"><td class="matrix-stock">天威视讯</td><td class="matrix-height">2板</td><td>中</td><td>低位一字强度锚，主动性需看开板换手后的承接。</td><td>强</td><td>中</td><td>一般</td><td>低位传媒/算力锚</td><td>否</td><td>强度锚，暂不主动参与</td><td>相对较远，待核</td><td>有新华传媒、新华文轩上方梯队</td><td>取决于AI/传媒修复</td><td>一字板，重点看封单增减</td></tr><tr class="candidate-row candidate-watch"><td class="matrix-stock">新华传媒</td><td class="matrix-height">3板</td><td>强</td><td>一字高度锚，封单可助攻但主动换手证据不足。</td><td>强</td><td>强</td><td>待核</td><td>重组+传媒高度核心</td><td>否</td><td>高度锚，不宜追</td><td>连续一字，风险累积</td><td>梯队较完整</td><td>取决于重组预期</td><td>无换手，筹码检验不足</td></tr></tbody></table></div>
+<h3 class="subchapter-title" id="leader-decision-checklist">（五）明日决胜清单</h3><ol class="decision-checklist"><li><strong>01</strong><span>闽东电力是否继续封死跌停；这是所有高位交易的前置条件。</span></li><li><strong>02</strong><span>新华文轩是否出现起量或半放量、健康换手并完成5板的板上确认；不做半路。</span></li><li><strong>03</strong><span>新华传媒封单是否稳定，并对新华文轩形成明确助攻。</span></li><li><strong>04</strong><span>大亚圣象仅用于观察科技强度；除非PCB、芯片、通信全面强回流，否则不纳入主动交易计划。</span></li><li><strong>05</strong><span>新华传媒若连续晋级，9月29日将对应7板、9月30日对应8板；重点是突破高度后能否把空间转化为板块赚钱效应。</span></li><li><strong>06</strong><span>若两只4板均断板，则取消连板总龙预判；不转做高位断板票，优先处理持仓并等待新的首板周期。</span></li><li><strong>07</strong><span>当日核心交易规则：先处理南华生物旧仓；新仓只等新华文轩5板的板上确认。没有确认就空仓，总仓位不超过五成。</span></li></ol>
+
+
+
+
+
+
+
 </section>
 <section class="section-card" data-chapter-number="14" data-phase="playbook" id="chapter-14-十四-口述信息全量归档与待确认信息-d62038"><div class="section-kicker">Daily Review</div><h2 class="chapter-title"><span class="chapter-number">11</span><span>口述信息全量归档与待确认信息</span></h2><details class="archive-disclosure"><summary>口述信息与待确认内容</summary><div class="archive-content">
 <h3 class="subchapter-title" id="sub-14-1-一-口述中已纳入的关键票池-446b2a">（一）口述中已纳入的关键票池</h3>
