@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档</title>
+<style>
     :root{--bg:#eef7f4;--card:#ffffff;--line:rgba(18,75,66,.14);--text:#15352f;--muted:#607970;--accent:#0d9275;--blue:#1b7cb3;--amber:#b88415;--risk:#bf4d3d;--shadow:0 18px 42px rgba(12,55,49,.09);--r:20px}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#f5fbf8,#e9f4ef);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif}
     a{color:inherit}.layout{width:min(1580px,calc(100vw - 24px));margin:18px auto 40px;display:grid;grid-template-columns:300px minmax(0,1fr);gap:22px}.toc,.content,.hero,.section-card{min-width:0}.toc{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;padding:16px;border:1px solid var(--line);border-radius:var(--r);background:rgba(255,255,255,.92);box-shadow:var(--shadow)}
@@ -18,13 +19,38 @@
     @media (max-width:1180px){.layout{grid-template-columns:minmax(0,1fr)}.toc{position:relative;width:100%;max-width:100%}.content{width:100%;max-width:100%}.chapter-title,.subchapter-title,.minor-title{overflow-wrap:anywhere}.table-shell,.decision-table-wrap,.plan-table-wrap,.holding-table-wrap{max-width:100%;overflow-x:auto}.plan-table{min-width:1080px}.holding-table{min-width:1480px}.effect-grid,.kiss-grid,.question-grid{grid-template-columns:1fr}}
     @media (max-width:760px){.layout{width:calc(100vw - 16px);margin:8px auto 24px;gap:12px}.toc{max-height:54vh;padding:14px}.hero,.section-card{padding:18px}.hero h1{font-size:34px}.body-line,.source-note{overflow-wrap:anywhere;word-break:break-word}}
     </style>
-</head>
-<body class="review-workbench" id="page-top"><div class="reading-progress" data-reading-progress></div><div class="mobile-toc-scrim" data-toc-scrim></div><div class="workbench-tools" aria-label="页面工具"><button type="button" data-toc-toggle>目录</button><button type="button" data-back-top>顶部</button></div>
-  <div class="layout">
-    <aside class="toc">
-      <div class="toc-utility"><a class="back" href="../index.html">返回首页</a><button class="toc-mobile-close" type="button" data-toc-close>关闭</button></div>
-      <h2>复盘导航</h2><p class="toc-caption">按阶段展开章节，当前阅读位置会自动高亮。</p><div class="toc-scroll">
-      <div class="toc-phase-label">01 盘面定性</div><details class="toc-node"><summary><a href="#chapter-1-一-复盘总纲-03e653">一、复盘总纲</a><span>展开</span></summary><div class="toc-children"></div></details>
+<style id="editorial-layout-v2">
+      .summary-card-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .trading-reference-grid{display:grid;grid-template-columns:minmax(360px,.82fr) minmax(760px,1.38fr);gap:18px;margin-top:24px;align-items:stretch}
+      .trading-reference-grid>.emotion-cycle-chart,.trading-reference-grid>.next-day-expectation{height:100%;margin-top:0}
+      .content{padding:clamp(22px,3.2vw,46px);background:rgba(255,255,252,.96);border:1px solid rgba(16,74,63,.1)}
+      .chapter-title{display:flex;align-items:center;gap:14px;margin:48px 0 20px;padding:0 0 14px;border-bottom:1px solid rgba(16,74,63,.14);font-size:clamp(1.5rem,2.5vw,2.1rem)}
+      .chapter-title:before{display:none}
+      .chapter-title:first-child{margin-top:0}
+      .chapter-number{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:42px;height:42px;border-radius:13px;background:#123b36;color:#fff;font-size:14px;font-variant-numeric:tabular-nums;letter-spacing:.08em;box-shadow:0 8px 18px rgba(18,59,54,.16)}
+      .body-line{max-width:980px;margin-bottom:10px;padding:3px 2px;border:0;background:transparent;color:#263f3a;font-size:16px;line-height:1.82}
+      .body-line.tone-core,.body-line.tone-action,.body-line.tone-risk{max-width:none;padding:14px 16px;border:1px solid rgba(16,74,63,.12);border-left-width:4px;background:#f8fbf9}
+      .table-card{margin:22px 0 28px;padding:16px;background:#fff;border:1px solid rgba(16,74,63,.12);box-shadow:0 12px 28px rgba(13,52,45,.05)}
+      .table-title{display:flex;align-items:baseline;gap:10px;margin-bottom:12px;color:#0d6b66}
+      .table-title>span{font-size:11px;font-weight:900;letter-spacing:.12em;color:#628178}
+      .table-title>strong{font-size:16px;letter-spacing:.01em}
+      .table-wrap{border-radius:12px}
+      th,td{padding:11px 13px;font-size:13px;line-height:1.62}
+      tbody tr:nth-child(even) td{background:#fbfdfc}
+      tbody tr:hover td{background:#f1f8f4}
+      .role-cell{width:82px;white-space:nowrap}
+      .role-chip{display:inline-flex;align-items:center;justify-content:center;min-width:58px;padding:5px 9px;border-radius:999px;background:#e7f4ee;color:#0d6b66;font-weight:900;font-size:12px}
+      .role-龙头{background:#fff0d5;color:#8b5400}.role-前排{background:#e5f3ff;color:#145f8e}.role-后排{background:#eef1f3;color:#52616b}
+      .role-中军{background:#e7f4ee;color:#0d6b66}.role-弹性{background:#fff0ee;color:#ad4437}.role-退潮锚{background:#f4e9ee;color:#88415f}
+      @media(max-width:1320px){.trading-reference-grid{grid-template-columns:1fr}}
+      @media(max-width:720px){.chapter-title{margin-top:38px;gap:10px}.chapter-number{width:36px;height:36px;border-radius:11px}.table-card{padding:10px;margin-inline:-8px}}
+    </style></head>
+<body class="review-workbench" id="page-top"><div class="reading-progress" data-reading-progress=""></div><div class="mobile-toc-scrim" data-toc-scrim=""></div><div aria-label="页面工具" class="workbench-tools"><button data-toc-toggle="" type="button">目录</button><button data-back-top="" type="button">顶部</button></div>
+<div class="layout">
+<aside class="toc">
+<div class="toc-utility"><a class="back" href="../index.html">返回首页</a><button class="toc-mobile-close" data-toc-close="" type="button">关闭</button></div>
+<h2>复盘导航</h2><p class="toc-caption">按阶段展开章节，当前阅读位置会自动高亮。</p><div class="toc-scroll">
+<div class="toc-phase-label">01 盘面定性</div><details class="toc-node"><summary><a href="#chapter-1-一-复盘总纲-03e653">一、复盘总纲</a><span>展开</span></summary><div class="toc-children"></div></details>
 <details class="toc-node"><summary><a href="#chapter-2-二-市场风格与赚钱效应解析-cb50c9">二、市场风格与赚钱效应解析</a><span>展开</span></summary><div class="toc-children"><a href="#sub-2-1-一-市场风格-ab7013">（一）市场风格</a><a href="#sub-2-2-二-赚钱效应-7ef097">（二）赚钱效应</a></div></details>
 <details class="toc-node"><summary><a href="#chapter-3-三-近4日板块强度-次日节奏预测表-f65244">三、近4日板块强度+次日节奏预测表</a><span>展开</span></summary><div class="toc-children"></div></details>
 <div class="toc-phase-label">02 盘后拆解</div><details class="toc-node"><summary><a href="#chapter-4-四-今日操作结果-核心失误-核心反思-6f01e5">四、今日操作结果+核心失误+核心反思</a><span>展开</span></summary><div class="toc-children"><a href="#sub-4-1-一-今日操作结果-7e2259">（一）今日操作结果</a><a href="#sub-4-2-二-核心失误根源-0afa43">（二）核心失误根源</a><a href="#sub-4-3-三-深度核心反思-3a6577">（三）深度核心反思</a></div></details>
@@ -39,29 +65,27 @@
 <details class="toc-node"><summary><a href="#chapter-13-十三-龙头预备票-最终定稿-c57786">十三、龙头预备票（最终定稿）</a><span>展开</span></summary><div class="toc-children"><a href="#sub-13-1-一-总龙候选名单-3aea20">（一）总龙候选名单</a><a href="#sub-13-2-二-总龙唯一性排序-9f94e1">（二）总龙唯一性排序</a><a href="#leader-competition-watch">卡位观察</a><a href="#sub-13-3-三-龙头七维核验明细-五维-双唯一性-a71302">（三）龙头七维核验明细（五维+双唯一性）</a><a href="#sub-13-4-四-明日总龙决胜观察要点-7cac4f">（四）明日总龙决胜观察要点</a></div></details>
 <details class="toc-node"><summary><a href="#chapter-14-十四-口述信息全量归档与待确认信息-d62038">十四、口述信息全量归档与待确认信息</a><span>展开</span></summary><div class="toc-children"><a href="#sub-14-1-一-口述中已纳入的关键票池-446b2a">（一）口述中已纳入的关键票池</a><a href="#sub-14-2-二-待确认信息-d5edb4">（二）待确认信息</a></div></details>
 <div class="toc-phase-label">04 交易执行</div><details class="toc-node"><summary><a href="#operation-plan">十五、今日操作计划</a><span>展开</span></summary><div class="toc-children"><a href="#operation-strategy-outline">明日战略总纲</a><a href="#operation-kiss">操作与情绪复盘（KISS模型）</a><a href="#second-review-2026-07-22">盘后二次复盘</a><a href="#theme-rhythm-run">题材节奏运行</a><a href="#operation-process-review">正确复盘重点</a><a href="#operation-plan-three-questions">书面计划三问</a><a href="#editable-operation-table">可编辑交易计划表</a><a href="#holding-handling-table">持仓处理计划表</a></div></details>
-      </div>
-    </aside>
-    <main class="content">
-      <section class="hero">
-        <div class="hero-kicker">Daily A-Share Review · 2026.09.23</div>
-        <h1>章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档</h1>
-        <p class="hero-lead">一、复盘总纲</p>
-        <div class="hero-stats">
-          <span>情绪：退潮期</span><span>沪指：3936.52</span><span>量能：待核</span><span>源表：7 张</span>
-        </div>
-      <nav class="review-route" aria-label="复盘阅读路径"><a href="#phase-overview"><span>01</span><strong>盘面定性</strong><small>指数 · 情绪 · 板块节奏</small></a><a href="#phase-diagnosis"><span>02</span><strong>盘后拆解</strong><small>主线 · 催化 · 负反馈</small></a><a href="#phase-playbook"><span>03</span><strong>明日推演</strong><small>大盘 · 板块 · 核心票</small></a><a href="#phase-execution"><span>04</span><strong>交易执行</strong><small>条件 · 仓位 · 止损</small></a></nav></section>
-      <p class="body-line tone-action">数据来源：用户当日完整口述复盘 + 2026-09-23-复盘三表数据文档 + 当日公开行情核验。本文按新版“章盟主式超短全景复盘”14章结构整理，保留用户对情绪、连板、量能、题材轮动和明日剧本的核心判断。指数与涨跌停数据以三表口径为主；公开行情交叉核验见同花顺收盘快讯、第一财经连板追踪和当日连板梯队。</p>
+</div>
+</aside>
+<main class="content">
+<section class="hero">
+<div class="hero-kicker">Daily A-Share Review · 2026.09.23</div>
+<h1>章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档</h1>
+<p class="hero-lead">一、复盘总纲</p>
+<div class="hero-stats">
+<span>情绪：退潮期</span><span>沪指：3936.52</span><span>量能：待核</span><span>源表：7 张</span>
+</div>
+<nav aria-label="复盘阅读路径" class="review-route"><a href="#phase-overview"><span>01</span><strong>盘面定性</strong><small>指数 · 情绪 · 板块节奏</small></a><a href="#phase-diagnosis"><span>02</span><strong>盘后拆解</strong><small>主线 · 催化 · 负反馈</small></a><a href="#phase-playbook"><span>03</span><strong>明日推演</strong><small>大盘 · 板块 · 核心票</small></a><a href="#phase-execution"><span>04</span><strong>交易执行</strong><small>条件 · 仓位 · 止损</small></a></nav></section>
+<p class="body-line tone-action">数据来源：用户当日完整口述复盘 + 2026-09-23-复盘三表数据文档 + 当日公开行情核验。本文按新版“章盟主式超短全景复盘”14章结构整理，保留用户对情绪、连板、量能、题材轮动和明日剧本的核心判断。指数与涨跌停数据以三表口径为主；公开行情交叉核验见同花顺收盘快讯、第一财经连板追踪和当日连板梯队。</p>
 <div class="phase-divider" id="phase-overview"><span>PHASE 01</span><strong>盘面定性</strong><p>先确定指数、情绪与板块节奏，再决定今天是什么市场。</p></div>
-<section class="section-card" id="chapter-1-一-复盘总纲-03e653" data-phase="overview" data-chapter-number="01"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">一、复盘总纲</h2>
-
-<section class="recap-summary-modules" data-recap-summary-modules>
-  <header class="recap-summary-modules__header">
-    <div><span>RECAP BRIEF</span><h3>复盘结论总览</h3></div>
-    <p>先定市场，再定情绪；先看主线矛盾，最后执行明日战略。</p>
-  </header>
-  <div class="recap-summary-modules__body"><article class="recap-summary-row" data-summary-section="R1"><header class="recap-summary-row__title"><span>R1</span><h4>今日市场定性</h4><p>缩量回调，退潮显性化。</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>指数小跌</strong><p>四大指数均小幅收绿，尚非指数级恐慌。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>成交缩量</strong><p>成交17650亿元，较前一日明显缩量。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>个股偏弱</strong><p>上涨1757家、下跌3366家，亏钱效应扩散。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>高位退潮</strong><p>4板以上晋级全部失败，监管与高度压制显性化。</p></li></ol></article><article class="recap-summary-row" data-summary-section="R2"><header class="recap-summary-row__title"><span>R2</span><h4>情绪状态</h4><p>分歧加剧，进入退潮。</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>跌停扩大</strong><p>涨停51、跌停13，高位负反馈明显。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>梯队断层</strong><p>39首板、3二板、7三板、2四板，高度降至4板。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>封板下降</strong><p>封板率66%、炸板26家，追涨容错率下降。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>修复待证</strong><p>明日先看负反馈锚是否收敛。</p></li></ol></article><article class="recap-summary-row" data-summary-section="R3"><header class="recap-summary-row__title"><span>R3</span><h4>主线矛盾</h4><p>科技承接与高位退潮并存。</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>科技相对强</strong><p>芯片、通信、算力数值居前，但仍属轮动。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>传媒待修复</strong><p>AI应用转负，需新华文轩主动带回。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>地产切低</strong><p>涨停家数尚可，但持续性和股性不足。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>医药走弱</strong><p>南华生物4进5失败，先止跌再谈反包。</p></li></ol></article><article class="recap-summary-row is-strategy" data-summary-section="R4"><header class="recap-summary-row__title"><span>R4</span><h4>明日战略总纲</h4><p>先处理旧仓，再确认唯一核心。</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>处理南华生物</strong><p>冲高不封则分批减仓，弱开弱走不补仓。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>先看负反馈</strong><p>闽东电力与高位断板票必须先止跌。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>等待5板确认</strong><p>新华文轩只做板上确认，大亚圣象仅条件观察。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>控制总仓位</strong><p>不半路、不补弱，无核心就空仓，仓位不超过五成。</p></li></ol></article></div>
+<section class="section-card" data-chapter-number="01" data-phase="overview" id="chapter-1-一-复盘总纲-03e653"><div class="section-kicker">Daily Review</div><h2 class="chapter-title"><span class="chapter-number">01</span><span>复盘总纲</span></h2>
+<section class="recap-summary-modules" data-recap-summary-modules="">
+<header class="recap-summary-modules__header">
+<div><span>RECAP BRIEF</span><h3>复盘结论总览</h3></div>
+<p>先定市场，再定情绪；先看主线矛盾，最后执行明日战略。</p>
+</header>
+<div class="recap-summary-modules__body"><article class="recap-summary-row" data-summary-section="R1"><header class="recap-summary-row__title"><span>R1</span><h4>今日市场定性</h4><p>缩量回调，退潮显性化。</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>指数小跌</strong><p>四大指数均小幅收绿，尚非指数级恐慌。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>成交缩量</strong><p>成交17650亿元，较前一日明显缩量。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>个股偏弱</strong><p>上涨1757家、下跌3366家，亏钱效应扩散。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>高位退潮</strong><p>4板以上晋级全部失败，监管与高度压制显性化。</p></li></ol></article><article class="recap-summary-row" data-summary-section="R2"><header class="recap-summary-row__title"><span>R2</span><h4>情绪状态</h4><p>分歧加剧，进入退潮。</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>跌停扩大</strong><p>涨停51、跌停13，高位负反馈明显。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>梯队断层</strong><p>39首板、3二板、7三板、2四板，高度降至4板。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>封板下降</strong><p>封板率66%、炸板26家，追涨容错率下降。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>修复待证</strong><p>明日先看负反馈锚是否收敛。</p></li></ol></article><article class="recap-summary-row" data-summary-section="R3"><header class="recap-summary-row__title"><span>R3</span><h4>主线矛盾</h4><p>科技承接与高位退潮并存。</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>科技相对强</strong><p>芯片、通信、算力数值居前，但仍属轮动。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>传媒待修复</strong><p>AI应用转负，需新华文轩主动带回。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>地产切低</strong><p>涨停家数尚可，但持续性和股性不足。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>医药走弱</strong><p>南华生物4进5失败，先止跌再谈反包。</p></li></ol></article><article class="recap-summary-row is-strategy" data-summary-section="R4"><header class="recap-summary-row__title"><span>R4</span><h4>明日战略总纲</h4><p>先处理旧仓，再确认唯一核心。</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>处理南华生物</strong><p>冲高不封则分批减仓，弱开弱走不补仓。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>先看负反馈</strong><p>闽东电力与高位断板票必须先止跌。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>等待5板确认</strong><p>新华文轩只做板上确认，大亚圣象仅条件观察。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>控制总仓位</strong><p>不半路、不补弱，无核心就空仓，仓位不超过五成。</p></li></ol></article></div>
 </section>
-
 <style>
 .recap-summary-modules{margin:18px 0 26px;border-top:3px solid #0b7166;border-bottom:1px solid #d5e3df;background:#fbfdfc;color:#173e38}
 .recap-summary-modules__header{display:flex;align-items:end;justify-content:space-between;gap:20px;padding:18px 20px;border-bottom:1px solid #d5e3df;background:#eef6f3}
@@ -72,11 +96,9 @@
 @media(max-width:980px){.recap-summary-row{grid-template-columns:150px minmax(0,1fr)}.recap-summary-points{grid-template-columns:repeat(2,minmax(0,1fr))}.recap-summary-point:nth-child(2){border-right:0}.recap-summary-point:nth-child(-n+2){border-bottom:1px solid #e5eeeb}}
 @media(max-width:650px){.recap-summary-modules__header{display:block}.recap-summary-modules__header p{margin-top:7px}.recap-summary-row{grid-template-columns:1fr}.recap-summary-row__title{padding:16px;border-right:0;border-bottom:1px solid #e0eae7}.recap-summary-points{grid-template-columns:1fr}.recap-summary-point{padding:14px 16px;border-right:0;border-bottom:1px solid #e5eeeb}.recap-summary-point:last-child{border-bottom:0}}
 </style>
-
-<div class="section-kicker">Market Snapshot</div><h3 id="market-snapshot-with-change" class="subchapter-title">近四日大盘情绪截图表（含涨跌幅）</h3><div class="table-shell" id="source-table-0"><table class="data-table"><thead><tr><th>周几</th><th>日期</th><th>沪指</th><th>深指</th><th>创业</th><th>科创</th><th>沪指量能</th><th>情绪强度</th><th>极端腾落数（涨停-跌停）</th><th>腾落数（上涨-下跌）</th><th>一板</th><th>二板</th><th>三板</th><th>高度板</th><th>封板率</th><th>断板</th></tr></thead><tbody><tr><td>周三</td><td>2026-09-16</td><td>3891.60（+0.71%）</td><td>13454.74（+1.26%）</td><td>3311.47（+1.96%）</td><td>1616.19（+4.14%）</td><td>18391</td><td>高潮期</td><td>89-4</td><td>3888-1134</td><td>77</td><td>9</td><td>1</td><td>6</td><td>89%</td><td>11</td></tr><tr><td>周一</td><td>2026-09-21</td><td>3949.91（+0.97%）</td><td>13730.02（+0.65%）</td><td>3399.59（+0.80%）</td><td>1657.48（+0.29%）</td><td>20315</td><td>高潮期</td><td>101-2</td><td>4216-914</td><td>80</td><td>13</td><td>5</td><td>5</td><td>80%</td><td>25</td></tr><tr><td>周二</td><td>2026-09-22</td><td>3952.13（+0.06%）</td><td>13723.74（-0.05%）</td><td>3399.93（+0.01%）</td><td>1665.04（+0.46%）</td><td>21356</td><td>分歧期</td><td>62-3</td><td>2284-2783</td><td>38</td><td>17</td><td>4</td><td>6</td><td>78%</td><td>18</td></tr><tr><td>周三</td><td>2026-09-23</td><td>3936.52（-0.39%）</td><td>13636.07（-0.64%）</td><td>3379.61（-0.60%）</td><td>1660.85（-0.25%）</td><td>17650</td><td>退潮期</td><td>51-13</td><td>1757-3366</td><td>39</td><td>3</td><td>7</td><td>4</td><td>66%</td><td>26</td></tr></tbody></table></div>
-
-<section class="decision-dashboard" id="decision-dashboard" data-decision-dashboard data-review-date="2026-09-23">
-  <style>
+<div class="section-kicker">Market Snapshot</div><h3 class="subchapter-title" id="market-snapshot-with-change">近四日大盘情绪截图表（含涨跌幅）</h3><div class="table-shell" id="source-table-0"><table class="data-table"><thead><tr><th>周几</th><th>日期</th><th>沪指</th><th>深指</th><th>创业</th><th>科创</th><th>沪指量能</th><th>情绪强度</th><th>极端腾落数（涨停-跌停）</th><th>腾落数（上涨-下跌）</th><th>一板</th><th>二板</th><th>三板</th><th>高度板</th><th>封板率</th><th>断板</th></tr></thead><tbody><tr><td>周三</td><td>2026-09-16</td><td>3891.60（+0.71%）</td><td>13454.74（+1.26%）</td><td>3311.47（+1.96%）</td><td>1616.19（+4.14%）</td><td>18391</td><td>高潮期</td><td>89-4</td><td>3888-1134</td><td>77</td><td>9</td><td>1</td><td>6</td><td>89%</td><td>11</td></tr><tr><td>周一</td><td>2026-09-21</td><td>3949.91（+0.97%）</td><td>13730.02（+0.65%）</td><td>3399.59（+0.80%）</td><td>1657.48（+0.29%）</td><td>20315</td><td>高潮期</td><td>101-2</td><td>4216-914</td><td>80</td><td>13</td><td>5</td><td>5</td><td>80%</td><td>25</td></tr><tr><td>周二</td><td>2026-09-22</td><td>3952.13（+0.06%）</td><td>13723.74（-0.05%）</td><td>3399.93（+0.01%）</td><td>1665.04（+0.46%）</td><td>21356</td><td>分歧期</td><td>62-3</td><td>2284-2783</td><td>38</td><td>17</td><td>4</td><td>6</td><td>78%</td><td>18</td></tr><tr><td>周三</td><td>2026-09-23</td><td>3936.52（-0.39%）</td><td>13636.07（-0.64%）</td><td>3379.61（-0.60%）</td><td>1660.85（-0.25%）</td><td>17650</td><td>退潮期</td><td>51-13</td><td>1757-3366</td><td>39</td><td>3</td><td>7</td><td>4</td><td>66%</td><td>26</td></tr></tbody></table></div>
+<section class="decision-dashboard" data-decision-dashboard="" data-review-date="2026-09-23" id="decision-dashboard">
+<style>
     .decision-dashboard{margin:20px 0 28px;color:#143c38;font-family:inherit}
     .decision-dashboard *{box-sizing:border-box}
     .decision-dashboard__head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:12px}
@@ -101,52 +123,47 @@
     .hazard-label{font-weight:800;color:#a33a2c}.hazard-table th{background:#fff0ec;color:#9d382b}
     @media (max-width:900px){.decision-dashboard__head{align-items:flex-start;flex-direction:column}.decision-dashboard__head p{text-align:left}.decision-table{min-width:980px}}
   </style>
-
-  <div class="decision-dashboard__head">
-    <h2>盘面决策摘要</h2>
-    <p>证据截止 2026-09-23T23:05:00+08:00 · 事实与推演分开记录</p>
-  </div>
-
-  <section class="decision-band" id="four-scenarios" data-four-scenarios>
-    <h3 class="decision-band__title"><span class="decision-band__index">01</span>四种场景</h3>
-    <div class="decision-table-wrap">
-      <table class="decision-table scenario-table">
-        <thead><tr><th>场景</th><th>级别</th><th>确认信号</th><th>交易动作</th><th>撤退信号</th></tr></thead>
-        <tbody>
-          <tr><td class="scenario-name">主线加强</td><td><span class="scenario-level">低概率</span></td><td>指数向上、封板率回升、题材前中低位同步正反馈</td><td>只做率先确认的唯一核心，不做后排补涨想象</td><td>核心爆量失控、后排无首板助攻或闽东电力继续封死跌停</td></tr>
-          <tr><td class="scenario-name">分歧回流</td><td><span class="scenario-level">主场景</span></td><td>新华文轩健康换手晋级，或大亚圣象带PCB/芯片扩散；断板票不再扩大跌停</td><td>先处理南华生物，再等板上确认；无确认就保持轻仓</td><td>两只四板同时断板，闽东电力与断板票继续补跌</td></tr>
-          <tr><td class="scenario-name">退潮切换</td><td><span class="scenario-level">次场景</span></td><td>新方向有身位、容量和后排助攻，原主线前排同步降级</td><td>只记录新线，不在首日末端追后排；等待次日分化确认</td><td>新方向只有孤立涨停或尾盘偷袭，缺少梯队</td></tr>
-          <tr><td class="scenario-name">全面退潮</td><td><span class="scenario-level">风险场景</span></td><td>断板票无修复，科技与地产均冲高回落</td><td>退出弱势持仓，降至防守仓位或空仓</td><td>负反馈锚开板回升，唯一核心主动封板并带回板块</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="decision-band" id="stock-pool" data-stock-pool>
-    <h3 class="decision-band__title"><span class="decision-band__index">02</span>标的池</h3>
-    <div class="decision-table-wrap">
-      <table class="decision-table stock-pool-table">
-        <thead><tr><th>层级</th><th>题材</th><th>标的</th><th>定位</th><th>进场触发</th><th>风控</th><th>来源</th></tr></thead>
-        <tbody><tr><td>S级核心</td><td>传媒/AI/重组</td><td>新华文轩</td><td>4板并列最高，唯一主动交易候选</td><td>健康换手后率先5板，新华传媒稳定并带题材回流</td><td>爆量失控、被大亚圣象卡位或板块无助攻</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" target="_blank" rel="noreferrer">东方财富</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" target="_blank" rel="noreferrer">用户文档</a> / <a href="https://www.jiuyangongshe.com/" target="_blank" rel="noreferrer">韭研公社</a></td></tr><tr><td>S级核心</td><td>PCB/科技硬件</td><td>大亚圣象</td><td>4板并列最高，科技回流条件核心</td><td>PCB、芯片、通信同步强回流且率先5板</td><td>科技仍是轮动或与新华文轩PK失去主动性</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" target="_blank" rel="noreferrer">东方财富</a> / <a href="https://www.duanxianxia.com/web/platerotat" target="_blank" rel="noreferrer">短线侠</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>A级前排</td><td>传媒/重组</td><td>新华传媒</td><td>3板一字高度锚</td><td>只观察封单与首次开板承接，不参与无量一字</td><td>撤单、开板无承接或不能助攻新华文轩</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" target="_blank" rel="noreferrer">东方财富</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" target="_blank" rel="noreferrer">用户文档</a> / <a href="https://www.jiuyangongshe.com/" target="_blank" rel="noreferrer">韭研公社</a></td></tr><tr><td>A级前排</td><td>复合铜箔</td><td>澳弘电子</td><td>9天7板、当前2板辨识度</td><td>科技回流时主动回封并形成后排扩散</td><td>高开冲落或板块无新增涨停</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" target="_blank" rel="noreferrer">东方财富</a> / <a href="https://www.duanxianxia.com/web/platerotat" target="_blank" rel="noreferrer">短线侠</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>A级观察</td><td>医药</td><td>南华生物</td><td>4进5失败，当前持仓处理</td><td>不新增；仅医药同步修复且主动反包时保留小仓</td><td>低开走弱、冲高不封或医药无修复</td><td><a href="http://push2ex.eastmoney.com/getTopicZBPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" target="_blank" rel="noreferrer">东方财富</a> / <a href="https://www.duanxianxia.com/web/platerotat" target="_blank" rel="noreferrer">短线侠</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>B级观察</td><td>传媒/算力</td><td>天威视讯</td><td>2板低位强度锚</td><td>传媒回流且开板换手仍强</td><td>一字撤单后无承接</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" target="_blank" rel="noreferrer">东方财富</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>B级观察</td><td>房地产</td><td>我爱我家</td><td>3板地产前排</td><td>前排持续溢价且出现新增首板助攻</td><td>万科A等容量票继续炸板，地产冲高回落</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" target="_blank" rel="noreferrer">东方财富</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>R级回避</td><td>高位退潮</td><td>闽东电力/内蒙新华/华瓷股份</td><td>监管与高度压制下的强负反馈组</td><td>只观察止跌，不做左侧反包</td><td>继续跌停或深水扩散</td><td><a href="http://push2ex.eastmoney.com/getTopicDTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" target="_blank" rel="noreferrer">东方财富</a> / <a href="https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12616949&amp;stockid=000993" target="_blank" rel="noreferrer">闽东电力公告</a> / <a href="https://finance.eastmoney.com/a/202609223881495484.html" target="_blank" rel="noreferrer">东方财富</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" target="_blank" rel="noreferrer">用户文档</a></td></tr></tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="decision-band" id="intraday-hazards" data-intraday-hazards>
-    <h3 class="decision-band__title"><span class="decision-band__index">03</span>日内雷区</h3>
-    <div class="decision-table-wrap">
-      <table class="decision-table hazard-table">
-        <thead><tr><th>雷区</th><th>危险信号</th><th>禁止动作</th><th>解除条件</th><th>关联标的/板块</th></tr></thead>
-        <tbody><tr><td class="hazard-label">高位断板左侧博弈</td><td>闽东电力跌停、4板以上晋级全败。</td><td>不把翘板当默认反包买点。</td><td>断板票批量止跌、主动反包并带板块扩散。</td><td>闽东电力/内蒙新华/南华生物</td></tr><tr><td class="hazard-label">两只四板未决先手</td><td>新华文轩与大亚圣象仍在竞争跨题材唯一高度。</td><td>不在板前半路押注胜者。</td><td>一方率先5板且题材后排同步助攻。</td><td>新华文轩/大亚圣象</td></tr><tr><td class="hazard-label">科技轮动追高</td><td>芯片、通信数值强，但ETF与容量票带动不足。</td><td>不追开盘一致和无身位后排。</td><td>低开承接、容量票主动领涨并出现涨停扩散。</td><td>PCB/芯片/通信</td></tr><tr><td class="hazard-label">弱势持仓补仓</td><td>南华生物4进5失败且医疗强度转负。</td><td>不因均线承接或反包想象继续加仓。</td><td>医药同步回流、个股主动反包并封稳。</td><td>南华生物/医药</td></tr></tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- Required placeholder: INTRADAY_WATCHPOINT_CARDS_HTML -->
-<section class="decision-band intraday-watchpoints" id="intraday-watchpoints" data-intraday-watchpoints>
-  <h3 class="decision-band__title"><span class="decision-band__index">04</span>盘内看点</h3>
-  <p class="intraday-watchpoints__note">按时间与行为拆解盘面：竞价先定方向，尾盘看资金最终选择，反包板验证核心赚钱效应。</p>
-  <div class="intraday-watchpoints__grid"><article class="intraday-watchpoint-card" data-watchpoint-type="竞价定调"><div class="intraday-watchpoint-card__head"><h4>竞价定调</h4><span class="intraday-watchpoint-card__status">高位风险优先，精确封单未核</span></div><div class="intraday-watchpoint-card__body"><p class="intraday-watchpoint-card__item"><strong>盘面事实</strong>闽东电力监管风险发酵，高位票承压；新华传媒等一字强度的精确封单金额未核。</p><p class="intraday-watchpoint-card__item"><strong>核心标的</strong>闽东电力 / 新华传媒 / 新华文轩 / 大亚圣象</p><p class="intraday-watchpoint-card__item"><strong>交易含义</strong>先判断负反馈是否扩散，再决定是否允许高位接力。</p><p class="intraday-watchpoint-card__item"><strong>次日验证</strong>闽东电力能否开板，新华传媒封单是否稳定，两只4板谁先主动。</p></div><div class="intraday-watchpoint-card__source">来源：闽东电力公告 / 东方财富 / 东方财富 / 用户文档</div></article><article class="intraday-watchpoint-card" data-watchpoint-type="尾盘异动"><div class="intraday-watchpoint-card__head"><h4>尾盘异动</h4><span class="intraday-watchpoint-card__status">地产尾盘封板，科技未形成全面带动</span></div><div class="intraday-watchpoint-card__body"><p class="intraday-watchpoint-card__item"><strong>盘面事实</strong>华丽家族尾盘封板质量一般；科技ETF约0.9%的口述体感未对应具体产品。</p><p class="intraday-watchpoint-card__item"><strong>核心标的</strong>华丽家族 / 我爱我家 / 大亚圣象</p><p class="intraday-watchpoint-card__item"><strong>交易含义</strong>地产更像低位切换，科技仍需用主动核心与扩散证明升级。</p><p class="intraday-watchpoint-card__item"><strong>次日验证</strong>地产前排是否有溢价与新增首板，科技能否从轮动转强回流。</p></div><div class="intraday-watchpoint-card__source">来源：东方财富 / 用户文档 / 短线侠</div></article><article class="intraday-watchpoint-card" data-watchpoint-type="反包板"><div class="intraday-watchpoint-card__head"><h4>反包板</h4><span class="intraday-watchpoint-card__status">未形成有效模式</span></div><div class="intraday-watchpoint-card__body"><p class="intraday-watchpoint-card__item"><strong>盘面事实</strong>内蒙新华虽从跌停附近翘板，但断板票没有集体止跌或形成有效反包。</p><p class="intraday-watchpoint-card__item"><strong>核心标的</strong>内蒙新华 / 南华生物 / 华瓷股份</p><p class="intraday-watchpoint-card__item"><strong>交易含义</strong>个别翘板只服务于退出，不能提前定义为新赚钱模式。</p><p class="intraday-watchpoint-card__item"><strong>次日验证</strong>断板票是否批量止跌、主动反包并带来板块扩散。</p></div><div class="intraday-watchpoint-card__source">来源：东方财富 / 东方财富 / 用户文档</div></article></div>
+<div class="decision-dashboard__head">
+<h2>盘面决策摘要</h2>
+<p>证据截止 2026-09-23T23:05:00+08:00 · 事实与推演分开记录</p>
+</div>
+<section class="decision-band" data-four-scenarios="" id="four-scenarios">
+<h3 class="decision-band__title"><span class="decision-band__index">01</span>四种场景</h3>
+<div class="decision-table-wrap">
+<table class="decision-table scenario-table">
+<thead><tr><th>场景</th><th>级别</th><th>确认信号</th><th>交易动作</th><th>撤退信号</th></tr></thead>
+<tbody>
+<tr><td class="scenario-name">主线加强</td><td><span class="scenario-level">低概率</span></td><td>指数向上、封板率回升、题材前中低位同步正反馈</td><td>只做率先确认的唯一核心，不做后排补涨想象</td><td>核心爆量失控、后排无首板助攻或闽东电力继续封死跌停</td></tr>
+<tr><td class="scenario-name">分歧回流</td><td><span class="scenario-level">主场景</span></td><td>新华文轩健康换手晋级，或大亚圣象带PCB/芯片扩散；断板票不再扩大跌停</td><td>先处理南华生物，再等板上确认；无确认就保持轻仓</td><td>两只四板同时断板，闽东电力与断板票继续补跌</td></tr>
+<tr><td class="scenario-name">退潮切换</td><td><span class="scenario-level">次场景</span></td><td>新方向有身位、容量和后排助攻，原主线前排同步降级</td><td>只记录新线，不在首日末端追后排；等待次日分化确认</td><td>新方向只有孤立涨停或尾盘偷袭，缺少梯队</td></tr>
+<tr><td class="scenario-name">全面退潮</td><td><span class="scenario-level">风险场景</span></td><td>断板票无修复，科技与地产均冲高回落</td><td>退出弱势持仓，降至防守仓位或空仓</td><td>负反馈锚开板回升，唯一核心主动封板并带回板块</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="decision-band" data-stock-pool="" id="stock-pool">
+<h3 class="decision-band__title"><span class="decision-band__index">02</span>标的池</h3>
+<div class="decision-table-wrap">
+<table class="decision-table stock-pool-table">
+<thead><tr><th>层级</th><th>题材</th><th>标的</th><th>定位</th><th>进场触发</th><th>风控</th><th>来源</th></tr></thead>
+<tbody><tr><td>S级核心</td><td>传媒/AI/重组</td><td>新华文轩</td><td>4板并列最高，唯一主动交易候选</td><td>健康换手后率先5板，新华传媒稳定并带题材回流</td><td>爆量失控、被大亚圣象卡位或板块无助攻</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" rel="noreferrer" target="_blank">东方财富</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" rel="noreferrer" target="_blank">用户文档</a> / <a href="https://www.jiuyangongshe.com/" rel="noreferrer" target="_blank">韭研公社</a></td></tr><tr><td>S级核心</td><td>PCB/科技硬件</td><td>大亚圣象</td><td>4板并列最高，科技回流条件核心</td><td>PCB、芯片、通信同步强回流且率先5板</td><td>科技仍是轮动或与新华文轩PK失去主动性</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" rel="noreferrer" target="_blank">东方财富</a> / <a href="https://www.duanxianxia.com/web/platerotat" rel="noreferrer" target="_blank">短线侠</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" rel="noreferrer" target="_blank">用户文档</a></td></tr><tr><td>A级前排</td><td>传媒/重组</td><td>新华传媒</td><td>3板一字高度锚</td><td>只观察封单与首次开板承接，不参与无量一字</td><td>撤单、开板无承接或不能助攻新华文轩</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" rel="noreferrer" target="_blank">东方财富</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" rel="noreferrer" target="_blank">用户文档</a> / <a href="https://www.jiuyangongshe.com/" rel="noreferrer" target="_blank">韭研公社</a></td></tr><tr><td>A级前排</td><td>复合铜箔</td><td>澳弘电子</td><td>9天7板、当前2板辨识度</td><td>科技回流时主动回封并形成后排扩散</td><td>高开冲落或板块无新增涨停</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" rel="noreferrer" target="_blank">东方财富</a> / <a href="https://www.duanxianxia.com/web/platerotat" rel="noreferrer" target="_blank">短线侠</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" rel="noreferrer" target="_blank">用户文档</a></td></tr><tr><td>A级观察</td><td>医药</td><td>南华生物</td><td>4进5失败，当前持仓处理</td><td>不新增；仅医药同步修复且主动反包时保留小仓</td><td>低开走弱、冲高不封或医药无修复</td><td><a href="http://push2ex.eastmoney.com/getTopicZBPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" rel="noreferrer" target="_blank">东方财富</a> / <a href="https://www.duanxianxia.com/web/platerotat" rel="noreferrer" target="_blank">短线侠</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" rel="noreferrer" target="_blank">用户文档</a></td></tr><tr><td>B级观察</td><td>传媒/算力</td><td>天威视讯</td><td>2板低位强度锚</td><td>传媒回流且开板换手仍强</td><td>一字撤单后无承接</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" rel="noreferrer" target="_blank">东方财富</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" rel="noreferrer" target="_blank">用户文档</a></td></tr><tr><td>B级观察</td><td>房地产</td><td>我爱我家</td><td>3板地产前排</td><td>前排持续溢价且出现新增首板助攻</td><td>万科A等容量票继续炸板，地产冲高回落</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" rel="noreferrer" target="_blank">东方财富</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" rel="noreferrer" target="_blank">用户文档</a></td></tr><tr><td>R级回避</td><td>高位退潮</td><td>闽东电力/内蒙新华/华瓷股份</td><td>监管与高度压制下的强负反馈组</td><td>只观察止跌，不做左侧反包</td><td>继续跌停或深水扩散</td><td><a href="http://push2ex.eastmoney.com/getTopicDTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" rel="noreferrer" target="_blank">东方财富</a> / <a href="https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12616949&amp;stockid=000993" rel="noreferrer" target="_blank">闽东电力公告</a> / <a href="https://finance.eastmoney.com/a/202609223881495484.html" rel="noreferrer" target="_blank">东方财富</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" rel="noreferrer" target="_blank">用户文档</a></td></tr></tbody>
+</table>
+</div>
+</section>
+<section class="decision-band" data-intraday-hazards="" id="intraday-hazards">
+<h3 class="decision-band__title"><span class="decision-band__index">03</span>日内雷区</h3>
+<div class="decision-table-wrap">
+<table class="decision-table hazard-table">
+<thead><tr><th>雷区</th><th>危险信号</th><th>禁止动作</th><th>解除条件</th><th>关联标的/板块</th></tr></thead>
+<tbody><tr><td class="hazard-label">高位断板左侧博弈</td><td>闽东电力跌停、4板以上晋级全败。</td><td>不把翘板当默认反包买点。</td><td>断板票批量止跌、主动反包并带板块扩散。</td><td>闽东电力/内蒙新华/南华生物</td></tr><tr><td class="hazard-label">两只四板未决先手</td><td>新华文轩与大亚圣象仍在竞争跨题材唯一高度。</td><td>不在板前半路押注胜者。</td><td>一方率先5板且题材后排同步助攻。</td><td>新华文轩/大亚圣象</td></tr><tr><td class="hazard-label">科技轮动追高</td><td>芯片、通信数值强，但ETF与容量票带动不足。</td><td>不追开盘一致和无身位后排。</td><td>低开承接、容量票主动领涨并出现涨停扩散。</td><td>PCB/芯片/通信</td></tr><tr><td class="hazard-label">弱势持仓补仓</td><td>南华生物4进5失败且医疗强度转负。</td><td>不因均线承接或反包想象继续加仓。</td><td>医药同步回流、个股主动反包并封稳。</td><td>南华生物/医药</td></tr></tbody>
+</table>
+</div>
+</section>
+<!-- Required placeholder: INTRADAY_WATCHPOINT_CARDS_HTML -->
+<section class="decision-band intraday-watchpoints" data-intraday-watchpoints="" id="intraday-watchpoints">
+<h3 class="decision-band__title"><span class="decision-band__index">04</span>盘内看点</h3>
+<p class="intraday-watchpoints__note">按时间与行为拆解盘面：竞价先定方向，尾盘看资金最终选择，反包板验证核心赚钱效应。</p>
+<div class="intraday-watchpoints__grid"><article class="intraday-watchpoint-card" data-watchpoint-type="竞价定调"><div class="intraday-watchpoint-card__head"><h4>竞价定调</h4><span class="intraday-watchpoint-card__status">高位风险优先，精确封单未核</span></div><div class="intraday-watchpoint-card__body"><p class="intraday-watchpoint-card__item"><strong>盘面事实</strong>闽东电力监管风险发酵，高位票承压；新华传媒等一字强度的精确封单金额未核。</p><p class="intraday-watchpoint-card__item"><strong>核心标的</strong>闽东电力 / 新华传媒 / 新华文轩 / 大亚圣象</p><p class="intraday-watchpoint-card__item"><strong>交易含义</strong>先判断负反馈是否扩散，再决定是否允许高位接力。</p><p class="intraday-watchpoint-card__item"><strong>次日验证</strong>闽东电力能否开板，新华传媒封单是否稳定，两只4板谁先主动。</p></div><div class="intraday-watchpoint-card__source">来源：闽东电力公告 / 东方财富 / 东方财富 / 用户文档</div></article><article class="intraday-watchpoint-card" data-watchpoint-type="尾盘异动"><div class="intraday-watchpoint-card__head"><h4>尾盘异动</h4><span class="intraday-watchpoint-card__status">地产尾盘封板，科技未形成全面带动</span></div><div class="intraday-watchpoint-card__body"><p class="intraday-watchpoint-card__item"><strong>盘面事实</strong>华丽家族尾盘封板质量一般；科技ETF约0.9%的口述体感未对应具体产品。</p><p class="intraday-watchpoint-card__item"><strong>核心标的</strong>华丽家族 / 我爱我家 / 大亚圣象</p><p class="intraday-watchpoint-card__item"><strong>交易含义</strong>地产更像低位切换，科技仍需用主动核心与扩散证明升级。</p><p class="intraday-watchpoint-card__item"><strong>次日验证</strong>地产前排是否有溢价与新增首板，科技能否从轮动转强回流。</p></div><div class="intraday-watchpoint-card__source">来源：东方财富 / 用户文档 / 短线侠</div></article><article class="intraday-watchpoint-card" data-watchpoint-type="反包板"><div class="intraday-watchpoint-card__head"><h4>反包板</h4><span class="intraday-watchpoint-card__status">未形成有效模式</span></div><div class="intraday-watchpoint-card__body"><p class="intraday-watchpoint-card__item"><strong>盘面事实</strong>内蒙新华虽从跌停附近翘板，但断板票没有集体止跌或形成有效反包。</p><p class="intraday-watchpoint-card__item"><strong>核心标的</strong>内蒙新华 / 南华生物 / 华瓷股份</p><p class="intraday-watchpoint-card__item"><strong>交易含义</strong>个别翘板只服务于退出，不能提前定义为新赚钱模式。</p><p class="intraday-watchpoint-card__item"><strong>次日验证</strong>断板票是否批量止跌、主动反包并带来板块扩散。</p></div><div class="intraday-watchpoint-card__source">来源：东方财富 / 东方财富 / 用户文档</div></article></div>
 </section>
 <style>
 .intraday-watchpoints{border-top-color:#cfe0dc}.intraday-watchpoints__note{margin:-2px 0 12px;color:#607a76;font-size:12px;line-height:1.65}
@@ -157,11 +174,8 @@
 @media(max-width:980px){.intraday-watchpoints__grid{grid-template-columns:1fr}.intraday-watchpoint-card__body{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.intraday-watchpoint-card__body{grid-template-columns:1fr}.intraday-watchpoint-card__item:nth-child(odd){border-right:0}}
 </style>
-
-
-
-<section class="decision-band post-market-intelligence" id="post-market-intelligence" data-post-market-intelligence>
-  <style>
+<section class="decision-band post-market-intelligence" data-post-market-intelligence="" id="post-market-intelligence">
+<style>
     .post-market-intelligence{--pm-teal:#08736b;--pm-ink:#173f3a;--pm-line:#d8e5e2;--pm-soft:#f3faf8;--pm-warn:#a34c12}
     .post-market-intelligence__head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:10px}
     .post-market-intelligence__head .decision-band__title{margin:0}
@@ -189,82 +203,70 @@
     .post-market-rumors ul{margin:0;padding-left:18px;color:#71513c;font-size:12px;line-height:1.65}
     @media(max-width:900px){.post-market-intelligence__head{align-items:flex-start;flex-direction:column}.post-market-intelligence__time{white-space:normal}.post-market-table{min-width:980px}.post-market-intelligence__summary{font-size:13px}}
   </style>
-
-  <div class="post-market-intelligence__head">
-    <h3 class="decision-band__title"><span class="decision-band__index">05</span>盘后情报</h3>
-    <span class="post-market-intelligence__time">更新至 2026-09-23T23:05:00+08:00</span>
-  </div>
-  <p class="post-market-intelligence__summary"><strong>盘后结论：</strong>监管与高位断板把情绪压入退潮，芯片/通信仍有相对强度。次日先看负反馈锚收敛，再看新华文轩与大亚圣象谁用主动性和板块扩散赢得5板唯一性。</p>
-
-  <section class="post-market-group" data-post-market-overseas>
-    <h4 class="post-market-group__title"><span>5.1</span>海外市场映射</h4>
-    <div class="post-market-table-wrap">
-      <table class="post-market-table post-market-table--overseas">
-        <thead><tr><th>市场/方向</th><th>表现</th><th>核心驱动</th><th>A股映射</th><th>次日验证</th><th>来源</th></tr></thead>
-        <tbody><tr><td>美股科技/半导体</td><td>韭研公社盘前资料称纳指与科技线偏强；本页不采用未核验的精确涨幅。</td><td>AI Agent、服务器CPU与AI硬件需求预期。</td><td>芯片、通信、PCB、复合铜箔。</td><td>A股科技能否低开承接并形成主动涨停扩散。</td><td><a href="https://www.jiuyangongshe.com/" target="_blank" rel="noreferrer">韭研公社</a> / <a href="https://www.jiuyangongshe.com/a/1hvf6ax95lm" target="_blank" rel="noreferrer">韭研公社</a></td></tr></tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="post-market-group" data-post-market-catalysts>
-    <h4 class="post-market-group__title"><span>5.2</span>事件催化</h4>
-    <div class="post-market-table-wrap">
-      <table class="post-market-table post-market-table--catalyst">
-        <thead><tr><th>事件</th><th>方向</th><th>确认度</th><th>热度</th><th>A股映射</th><th>次日验证</th><th>来源</th></tr></thead>
-        <tbody><tr><td>Meta Connect 2026（9月23日至24日）</td><td>端侧AI/智能眼镜/芯片</td><td><span class="status-badge is-lead">社区线索</span></td><td>中</td><td>端侧AI、芯片、消费电子。</td><td>是否出现独立于指数的主动核心与首板扩散。</td><td><a href="https://www.jiuyangongshe.com/" target="_blank" rel="noreferrer">韭研公社</a> / <a href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">韭研公社</a></td></tr><tr><td>闽东电力严重异常波动与内蒙新华监管工作函</td><td>高位情绪</td><td><span class="status-badge">已确认</span></td><td>高</td><td>所有高位连板和断板反包。</td><td>闽东电力能否开板，监管负反馈是否继续扩散。</td><td><a href="https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12616949&amp;stockid=000993" target="_blank" rel="noreferrer">闽东电力公告</a> / <a href="https://finance.eastmoney.com/a/202609223881495484.html" target="_blank" rel="noreferrer">东方财富</a></td></tr><tr><td>新华文轩收购事项与传媒重组线</td><td>传媒/并购重组</td><td><span class="status-badge">已确认</span></td><td>中</td><td>新华文轩、新华传媒、南威软件。</td><td>新华文轩能否健康换手晋级并带回传媒/AI应用。</td><td><a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" target="_blank" rel="noreferrer">用户文档</a> / <a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" target="_blank" rel="noreferrer">东方财富</a></td></tr></tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="post-market-group" data-post-market-focus>
-    <h4 class="post-market-group__title"><span>5.3</span>市场关注</h4>
-    <div class="post-market-table-wrap">
-      <table class="post-market-table post-market-table--focus">
-        <thead><tr><th>方向</th><th>催化逻辑</th><th>盘面基础</th><th>情绪</th><th>关注标的</th><th>次日验证</th><th>来源</th></tr></thead>
-        <tbody><tr><td>PCB/芯片/通信</td><td>AI硬件景气与科技映射</td><td>芯片6583、通信5446、算力4600；大亚圣象4板。</td><td>相对强但仍是轮动</td><td>大亚圣象 / 澳弘电子 / 沃格光电</td><td>能否从轮动升级为强回流并补首板。</td><td><a href="https://www.duanxianxia.com/web/platerotat" target="_blank" rel="noreferrer">短线侠</a> / <a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" target="_blank" rel="noreferrer">东方财富</a> / <a href="https://www.jiuyangongshe.com/" target="_blank" rel="noreferrer">韭研公社</a></td></tr><tr><td>传媒/AI应用/重组</td><td>并购重组与AI应用社区热度</td><td>AI应用强度-1669，新华文轩4板、新华传媒3板。</td><td>主线分歧后待修复</td><td>新华文轩 / 新华传媒 / 南威软件</td><td>新华文轩先于板块回流并带动后排。</td><td><a href="https://www.duanxianxia.com/web/platerotat" target="_blank" rel="noreferrer">短线侠</a> / <a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" target="_blank" rel="noreferrer">东方财富</a> / <a href="https://www.jiuyangongshe.com/" target="_blank" rel="noreferrer">韭研公社</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>房地产</td><td>低位切换与政策预期</td><td>我爱我家、华远控股、华丽家族3板。</td><td>低位弱启动</td><td>我爱我家 / 华远控股 / 华丽家族</td><td>前排溢价与新增首板助攻。</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" target="_blank" rel="noreferrer">东方财富</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>医药</td><td>前期强势后的兑现</td><td>医疗强度-84，南华生物4进5失败。</td><td>高位分歧</td><td>南华生物 / 新华制药 / 百花医药</td><td>先止跌，再看主动反包。</td><td><a href="https://www.duanxianxia.com/web/platerotat" target="_blank" rel="noreferrer">短线侠</a> / <a href="http://push2ex.eastmoney.com/getTopicZBPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" target="_blank" rel="noreferrer">东方财富</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" target="_blank" rel="noreferrer">用户文档</a></td></tr></tbody>
-      </table>
-    </div>
-  </section>
-
-  <aside class="post-market-rumors" data-post-market-rumors>
-    <strong>未确认线索处理</strong>
-    <ul><li><strong>未确认｜OpenAI下周存在明确产品事件</strong>：只放入D+14观察窗口，等待官方日期与内容。 （来源：<a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" target="_blank" rel="noreferrer">用户文档</a> / <a href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">韭研公社</a>）</li><li><strong>未确认｜用户盘面工具给出的高标100%异动剩余空间</strong>：盘前按交易所公告与偏离值逐只复核。 （来源：<a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" target="_blank" rel="noreferrer">用户文档</a>）</li><li><strong>未确认｜科技ETF日内上涨约0.9%</strong>：ETF名称未提供，不映射具体产品，不作为直接买点。 （来源：<a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" target="_blank" rel="noreferrer">用户文档</a>）</li></ul>
-  </aside>
+<div class="post-market-intelligence__head">
+<h3 class="decision-band__title"><span class="decision-band__index">05</span>盘后情报</h3>
+<span class="post-market-intelligence__time">更新至 2026-09-23T23:05:00+08:00</span>
+</div>
+<p class="post-market-intelligence__summary"><strong>盘后结论：</strong>监管与高位断板把情绪压入退潮，芯片/通信仍有相对强度。次日先看负反馈锚收敛，再看新华文轩与大亚圣象谁用主动性和板块扩散赢得5板唯一性。</p>
+<section class="post-market-group" data-post-market-overseas="">
+<h4 class="post-market-group__title"><span>5.1</span>海外市场映射</h4>
+<div class="post-market-table-wrap">
+<table class="post-market-table post-market-table--overseas">
+<thead><tr><th>市场/方向</th><th>表现</th><th>核心驱动</th><th>A股映射</th><th>次日验证</th><th>来源</th></tr></thead>
+<tbody><tr><td>美股科技/半导体</td><td>韭研公社盘前资料称纳指与科技线偏强；本页不采用未核验的精确涨幅。</td><td>AI Agent、服务器CPU与AI硬件需求预期。</td><td>芯片、通信、PCB、复合铜箔。</td><td>A股科技能否低开承接并形成主动涨停扩散。</td><td><a href="https://www.jiuyangongshe.com/" rel="noreferrer" target="_blank">韭研公社</a> / <a href="https://www.jiuyangongshe.com/a/1hvf6ax95lm" rel="noreferrer" target="_blank">韭研公社</a></td></tr></tbody>
+</table>
+</div>
 </section>
-
-
-  <p class="source-note">证据来源：<a href="https://www.duanxianxia.com/web/platerotat" target="_blank" rel="noreferrer">短线侠：9月23日板块轮动强度</a>；<a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" target="_blank" rel="noreferrer">东方财富：9月23日涨停池与连板梯队</a>；<a href="http://push2ex.eastmoney.com/getTopicZBPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" target="_blank" rel="noreferrer">东方财富：9月23日炸板池</a>；<a href="http://push2ex.eastmoney.com/getTopicDTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" target="_blank" rel="noreferrer">东方财富：9月23日跌停池</a>；<a href="https://www.10jqka.com.cn/" target="_blank" rel="noreferrer">同花顺：9月23日24小时热榜</a>；<a href="https://www.jiuyangongshe.com/" target="_blank" rel="noreferrer">韭研公社：9月23日热点、词云与时间轴</a>；<a href="https://www.jiuyangongshe.com/a/1hvf6ax95lm" target="_blank" rel="noreferrer">韭研公社：9月23日盘前纪要</a>；<a href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">韭研公社：事件时间轴</a>；<a href="https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12616949&amp;stockid=000993" target="_blank" rel="noreferrer">闽东电力公告：股票交易严重异常波动暨风险提示</a>；<a href="https://finance.eastmoney.com/a/202609223881495484.html" target="_blank" rel="noreferrer">东方财富：内蒙新华收到监管工作函</a>；<a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" target="_blank" rel="noreferrer">用户文档：9月23日章盟主式超短全景复盘</a>；<a href="C:/Users/Administrator/Desktop/A股复盘三表数据文档/audits/2026-09-23-source-audit.json" target="_blank" rel="noreferrer">三表审计：9月23日收盘与板块审计</a>。待核项：竞价封单金额、尾盘逐笔成交与用户口述的部分分时细节未逐笔核验，页面统一标注未核。；新华文轩、华瓷股份、澳弘电子等100%异动监管剩余空间来自用户盘面工具估算，未按交易所公式逐项复算。；Meta Connect与OpenAI相关时间线主要来自韭研公社社区资料；OpenAI事件名称与日期未确认。；科技ETF名称与代码未提供，约0.9%的日内体感不映射为具体产品事实。；海外市场不写未核验的精确涨跌幅，只保留社区线索和次日A股验证条件。</p>
+<section class="post-market-group" data-post-market-catalysts="">
+<h4 class="post-market-group__title"><span>5.2</span>事件催化</h4>
+<div class="post-market-table-wrap">
+<table class="post-market-table post-market-table--catalyst">
+<thead><tr><th>事件</th><th>方向</th><th>确认度</th><th>热度</th><th>A股映射</th><th>次日验证</th><th>来源</th></tr></thead>
+<tbody><tr><td>Meta Connect 2026（9月23日至24日）</td><td>端侧AI/智能眼镜/芯片</td><td><span class="status-badge is-lead">社区线索</span></td><td>中</td><td>端侧AI、芯片、消费电子。</td><td>是否出现独立于指数的主动核心与首板扩散。</td><td><a href="https://www.jiuyangongshe.com/" rel="noreferrer" target="_blank">韭研公社</a> / <a href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">韭研公社</a></td></tr><tr><td>闽东电力严重异常波动与内蒙新华监管工作函</td><td>高位情绪</td><td><span class="status-badge">已确认</span></td><td>高</td><td>所有高位连板和断板反包。</td><td>闽东电力能否开板，监管负反馈是否继续扩散。</td><td><a href="https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12616949&amp;stockid=000993" rel="noreferrer" target="_blank">闽东电力公告</a> / <a href="https://finance.eastmoney.com/a/202609223881495484.html" rel="noreferrer" target="_blank">东方财富</a></td></tr><tr><td>新华文轩收购事项与传媒重组线</td><td>传媒/并购重组</td><td><span class="status-badge">已确认</span></td><td>中</td><td>新华文轩、新华传媒、南威软件。</td><td>新华文轩能否健康换手晋级并带回传媒/AI应用。</td><td><a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" rel="noreferrer" target="_blank">用户文档</a> / <a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" rel="noreferrer" target="_blank">东方财富</a></td></tr></tbody>
+</table>
+</div>
 </section>
-
-
-
+<section class="post-market-group" data-post-market-focus="">
+<h4 class="post-market-group__title"><span>5.3</span>市场关注</h4>
+<div class="post-market-table-wrap">
+<table class="post-market-table post-market-table--focus">
+<thead><tr><th>方向</th><th>催化逻辑</th><th>盘面基础</th><th>情绪</th><th>关注标的</th><th>次日验证</th><th>来源</th></tr></thead>
+<tbody><tr><td>PCB/芯片/通信</td><td>AI硬件景气与科技映射</td><td>芯片6583、通信5446、算力4600；大亚圣象4板。</td><td>相对强但仍是轮动</td><td>大亚圣象 / 澳弘电子 / 沃格光电</td><td>能否从轮动升级为强回流并补首板。</td><td><a href="https://www.duanxianxia.com/web/platerotat" rel="noreferrer" target="_blank">短线侠</a> / <a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" rel="noreferrer" target="_blank">东方财富</a> / <a href="https://www.jiuyangongshe.com/" rel="noreferrer" target="_blank">韭研公社</a></td></tr><tr><td>传媒/AI应用/重组</td><td>并购重组与AI应用社区热度</td><td>AI应用强度-1669，新华文轩4板、新华传媒3板。</td><td>主线分歧后待修复</td><td>新华文轩 / 新华传媒 / 南威软件</td><td>新华文轩先于板块回流并带动后排。</td><td><a href="https://www.duanxianxia.com/web/platerotat" rel="noreferrer" target="_blank">短线侠</a> / <a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" rel="noreferrer" target="_blank">东方财富</a> / <a href="https://www.jiuyangongshe.com/" rel="noreferrer" target="_blank">韭研公社</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" rel="noreferrer" target="_blank">用户文档</a></td></tr><tr><td>房地产</td><td>低位切换与政策预期</td><td>我爱我家、华远控股、华丽家族3板。</td><td>低位弱启动</td><td>我爱我家 / 华远控股 / 华丽家族</td><td>前排溢价与新增首板助攻。</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" rel="noreferrer" target="_blank">东方财富</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" rel="noreferrer" target="_blank">用户文档</a></td></tr><tr><td>医药</td><td>前期强势后的兑现</td><td>医疗强度-84，南华生物4进5失败。</td><td>高位分歧</td><td>南华生物 / 新华制药 / 百花医药</td><td>先止跌，再看主动反包。</td><td><a href="https://www.duanxianxia.com/web/platerotat" rel="noreferrer" target="_blank">短线侠</a> / <a href="http://push2ex.eastmoney.com/getTopicZBPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" rel="noreferrer" target="_blank">东方财富</a> / <a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" rel="noreferrer" target="_blank">用户文档</a></td></tr></tbody>
+</table>
+</div>
+</section>
+<aside class="post-market-rumors" data-post-market-rumors="">
+<strong>未确认线索处理</strong>
+<ul><li><strong>未确认｜OpenAI下周存在明确产品事件</strong>：只放入D+14观察窗口，等待官方日期与内容。 （来源：<a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" rel="noreferrer" target="_blank">用户文档</a> / <a href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">韭研公社</a>）</li><li><strong>未确认｜用户盘面工具给出的高标100%异动剩余空间</strong>：盘前按交易所公告与偏离值逐只复核。 （来源：<a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" rel="noreferrer" target="_blank">用户文档</a>）</li><li><strong>未确认｜科技ETF日内上涨约0.9%</strong>：ETF名称未提供，不映射具体产品，不作为直接买点。 （来源：<a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" rel="noreferrer" target="_blank">用户文档</a>）</li></ul>
+</aside>
+</section>
+<p class="source-note">证据来源：<a href="https://www.duanxianxia.com/web/platerotat" rel="noreferrer" target="_blank">短线侠：9月23日板块轮动强度</a>；<a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" rel="noreferrer" target="_blank">东方财富：9月23日涨停池与连板梯队</a>；<a href="http://push2ex.eastmoney.com/getTopicZBPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" rel="noreferrer" target="_blank">东方财富：9月23日炸板池</a>；<a href="http://push2ex.eastmoney.com/getTopicDTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260923" rel="noreferrer" target="_blank">东方财富：9月23日跌停池</a>；<a href="https://www.10jqka.com.cn/" rel="noreferrer" target="_blank">同花顺：9月23日24小时热榜</a>；<a href="https://www.jiuyangongshe.com/" rel="noreferrer" target="_blank">韭研公社：9月23日热点、词云与时间轴</a>；<a href="https://www.jiuyangongshe.com/a/1hvf6ax95lm" rel="noreferrer" target="_blank">韭研公社：9月23日盘前纪要</a>；<a href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">韭研公社：事件时间轴</a>；<a href="https://vip.stock.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?id=12616949&amp;stockid=000993" rel="noreferrer" target="_blank">闽东电力公告：股票交易严重异常波动暨风险提示</a>；<a href="https://finance.eastmoney.com/a/202609223881495484.html" rel="noreferrer" target="_blank">东方财富：内蒙新华收到监管工作函</a>；<a href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" rel="noreferrer" target="_blank">用户文档：9月23日章盟主式超短全景复盘</a>；<a href="C:/Users/Administrator/Desktop/A股复盘三表数据文档/audits/2026-09-23-source-audit.json" rel="noreferrer" target="_blank">三表审计：9月23日收盘与板块审计</a>。待核项：竞价封单金额、尾盘逐笔成交与用户口述的部分分时细节未逐笔核验，页面统一标注未核。；新华文轩、华瓷股份、澳弘电子等100%异动监管剩余空间来自用户盘面工具估算，未按交易所公式逐项复算。；Meta Connect与OpenAI相关时间线主要来自韭研公社社区资料；OpenAI事件名称与日期未确认。；科技ETF名称与代码未提供，约0.9%的日内体感不映射为具体产品事实。；海外市场不写未核验的精确涨跌幅，只保留社区线索和次日A股验证条件。</p>
+</section>
 <p class="body-line">9月23日指数缩量回调：沪指3936.52点、深指13636.07点、创业板3379.61点、科创50指数1660.85点；沪深成交额约1.765万亿元，较前一日明显缩量。三表口径上涨1757家、下跌3366家，市场整体偏弱。</p>
 <p class="body-line">短线周期从9月21日情绪高潮、9月22日情绪分化，演化至今日分歧加剧并呈现退潮特征。三表记录涨停51家、跌停13家、炸板26家、封板率66%，连板高度降至4板。闽东电力跌停成为最强负反馈，高位的华瓷股份6进7、内蒙新华5进6、南华生物4进5全部失败，监管压力与高度压制同时显性化。</p>
 <p class="body-line tone-action">今日亏钱效应集中在高位连板、新股、传媒、AI应用、华字辈、消费及医药；赚钱效应仅局部存在于PCB、复合铜箔、芯片、通信等科技内部轮动，以及地产、仪器仪表的低位尝试。科技虽有小反弹、趋势承接尚可，但进攻力度不强，属于轮动回流而非主升；用户观察的进攻方向ETF仅约上涨0.9%，全天反复震荡，未形成有效带动。地产虽有约5只涨停，但更多是高低切，题材股性和持续性均不足。并购重组仍是相对可跟踪的暗线，但板块内部负反馈也不小。</p>
 <p class="body-line tone-action">明日不是无条件看修复，而是观察“退潮后的首次修复是否成立”。核心剧本是新华文轩放出健康换手量后率先晋级，并带动文化传媒、AI应用及并购重组线回流；第二剧本是PCB、复合铜箔、芯片、通信继续强回流，由大亚圣象等科技高标取得身位优势。此前设想的“断板后转趋势反包”今日没有得到盘面证据：断板票红盘者很少、没有形成有效反包，情绪对失败票的容错率极低。若闽东电力继续大单跌停且4板双双断板，则放弃高位接力和断板博弈，以处理持仓、等待新周期为主。</p>
 </section>
-<section class="section-card" id="chapter-2-二-市场风格与赚钱效应解析-cb50c9" data-phase="overview" data-chapter-number="02"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">二、市场风格与赚钱效应解析</h2>
-
-<section class="effect-positioning-module" data-effect-positioning data-date="2026-09-23" id="effect-positioning">
-  <div class="module-head">
-    <span class="section-kicker">Market Effect Map</span>
-    <h3 class="module-title">赚钱效应与亏钱效应定位</h3>
-    <span class="module-status" data-effect-status>本地已保存</span>
-  </div>
-  <div class="effect-grid">
-    <div class="effect-panel profit"><h4>赚钱效应</h4><div class="effect-chipset" data-effect-group="profit"></div></div>
-    <div class="effect-panel loss"><h4>亏钱效应</h4><div class="effect-chipset" data-effect-group="loss"></div></div>
-  </div>
-  <script type="application/json" data-effect-options>[&quot;抱团高位&quot;, &quot;机构趋势&quot;, &quot;短线情绪&quot;, &quot;高低切换&quot;, &quot;避险题材&quot;, &quot;科技题材&quot;, &quot;老登题材&quot;, &quot;混沌轮动&quot;, &quot;断板反包&quot;, &quot;N字启动&quot;]</script>
-  <script type="application/json" data-effect-defaults>{&quot;profit&quot;: [&quot;科技题材&quot;, &quot;高低切换&quot;, &quot;机构趋势&quot;], &quot;loss&quot;: [&quot;抱团高位&quot;, &quot;短线情绪&quot;, &quot;混沌轮动&quot;, &quot;断板反包&quot;]}</script>
+<section class="section-card" data-chapter-number="02" data-phase="overview" id="chapter-2-二-市场风格与赚钱效应解析-cb50c9"><div class="section-kicker">Daily Review</div><h2 class="chapter-title"><span class="chapter-number">02</span><span>市场风格与赚钱效应解析</span></h2>
+<section class="effect-positioning-module" data-date="2026-09-23" data-effect-positioning="" id="effect-positioning">
+<div class="module-head">
+<span class="section-kicker">Market Effect Map</span>
+<h3 class="module-title">赚钱效应与亏钱效应定位</h3>
+<span class="module-status" data-effect-status="">本地已保存</span>
+</div>
+<div class="effect-grid">
+<div class="effect-panel profit"><h4>赚钱效应</h4><div class="effect-chipset" data-effect-group="profit"></div></div>
+<div class="effect-panel loss"><h4>亏钱效应</h4><div class="effect-chipset" data-effect-group="loss"></div></div>
+</div>
+<script data-effect-options="" type="application/json">[&quot;抱团高位&quot;, &quot;机构趋势&quot;, &quot;短线情绪&quot;, &quot;高低切换&quot;, &quot;避险题材&quot;, &quot;科技题材&quot;, &quot;老登题材&quot;, &quot;混沌轮动&quot;, &quot;断板反包&quot;, &quot;N字启动&quot;]</script>
+<script data-effect-defaults="" type="application/json">{&quot;profit&quot;: [&quot;科技题材&quot;, &quot;高低切换&quot;, &quot;机构趋势&quot;], &quot;loss&quot;: [&quot;抱团高位&quot;, &quot;短线情绪&quot;, &quot;混沌轮动&quot;, &quot;断板反包&quot;]}</script>
 </section>
-
-<h3 id="sub-2-1-一-市场风格-ab7013" class="subchapter-title">（一）市场风格</h3>
+<h3 class="subchapter-title" id="sub-2-1-一-市场风格-ab7013">（一）市场风格</h3>
 <p class="body-line bullet-line">指数节奏：四大指数小幅收绿，属于缩量回调，不是指数级恐慌，但个股跌多涨少。</p>
 <p class="body-line bullet-line">量能结构：沪深成交额约17650亿元，较昨日显著缩量，修复需要量能重新回流。</p>
 <p class="body-line bullet-line">板块风格：科技内部轮动强于纯情绪题材，但反弹力度有限；地产、仪器仪表属于低位弱启动或切低。</p>
 <p class="body-line bullet-line tone-risk">资金风格：高位监管票退潮，资金仅局部转向PCB、复合铜箔、芯片、通信及低位题材试错；断板票尚未形成反包趋势，不能把个别翘板误判为新赚钱模式。</p>
-<h3 id="sub-2-2-二-赚钱效应-7ef097" class="subchapter-title">（二）赚钱效应</h3>
+<h3 class="subchapter-title" id="sub-2-2-二-赚钱效应-7ef097">（二）赚钱效应</h3>
 <p class="body-line bullet-line">涨跌结构：三表口径51家涨停、13家跌停，上涨1757家、下跌3366家。</p>
 <p class="body-line bullet-line">连板结构：39只首板、3只二板、7只三板、2只四板；4板以上晋级全部失败。</p>
 <p class="body-line bullet-line">首板反馈：前一日38只首板，今日仅3只晋级二板；同时，一鸣食品、中国出版、五洲医疗等前一日首板/强势票出现明显负反馈，五洲医疗盘中一度回调约11.56%。今日新产生39只首板，但其次日溢价仍需9月24日验证。</p>
@@ -273,20 +275,17 @@
 <p class="body-line bullet-line tone-risk">明日关键：市场需要回流修复，但不能预设回流必然发生；先看闽东电力等负反馈是否收敛，再看新华文轩能否完成4进5。</p>
 <div class="table-shell" id="source-table-1"><table class="data-table"><thead><tr><th>周几</th><th>日期</th><th>沪指</th><th>深指</th><th>创业</th><th>科创</th><th>沪深量能/亿元</th><th>情绪强度</th><th>极端腾落数</th><th>腾落数</th><th>一板</th><th>二板</th><th>三板</th><th>高度板</th><th>封板率</th><th>断板/炸板</th></tr></thead><tbody><tr><td>周三</td><td>2026-09-23</td><td>3936.52</td><td>13636.07</td><td>3379.61</td><td>1660.85</td><td>17650</td><td>退潮期</td><td>51-13</td><td>1757-3366</td><td>39</td><td>3</td><td>7</td><td>4</td><td>66%</td><td>26</td></tr></tbody></table></div>
 </section>
-<section class="section-card" id="chapter-3-三-近4日板块强度-次日节奏预测表-f65244" data-phase="overview" data-chapter-number="03"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">三、近4日板块强度+次日节奏预测表</h2>
-
-  <div class="rhythm-usage-note" id="sector-rhythm-usage-note" style="margin:14px 0 18px;padding:14px 16px;border:1px solid rgba(13,148,136,.24);border-left:4px solid #0f766e;background:#ecfeff;border-radius:8px;color:#134e4a;">
-    <span class="section-kicker">Rhythm Read</span>
-    <p style="margin:6px 0 0;font-weight:700;">双冰以上可做修复回流预期，双高潮以上可做砸盘预期！</p>
-  </div>
-
-
+<section class="section-card" data-chapter-number="03" data-phase="overview" id="chapter-3-三-近4日板块强度-次日节奏预测表-f65244"><div class="section-kicker">Daily Review</div><h2 class="chapter-title"><span class="chapter-number">03</span><span>近4日板块强度+次日节奏预测表</span></h2>
+<div class="rhythm-usage-note" id="sector-rhythm-usage-note" style="margin:14px 0 18px;padding:14px 16px;border:1px solid rgba(13,148,136,.24);border-left:4px solid #0f766e;background:#ecfeff;border-radius:8px;color:#134e4a;">
+<span class="section-kicker">Rhythm Read</span>
+<p style="margin:6px 0 0;font-weight:700;">双冰以上可做修复回流预期，双高潮以上可做砸盘预期！</p>
+</div>
 <p class="body-line">下表采用三表数据源最近四个可用交易日的板块强度值；数值用于比较相对强弱，不等同于涨跌幅。</p>
 <div class="table-shell" id="source-table-2"><table class="data-table"><thead><tr><th>大题材板块</th><th>2026/9/16</th><th>2026/9/21</th><th>2026/9/22</th><th>2026/9/23</th><th>次日节奏预测</th><th>核心判断</th></tr></thead><tbody><tr><td>有色金属</td><td>159（大分歧）</td><td>2107（高潮）</td><td>185（大分歧）</td><td>452（小分歧）</td><td>震荡</td><td>有承接但不是短线核心</td></tr><tr><td>电力</td><td>1064（强回流）</td><td>400（强回流）</td><td>145（强回流）</td><td>-2077（大分歧）</td><td>弱修复/继续承压</td><td>闽东电力跌停压制全线</td></tr><tr><td>AI应用</td><td>1695（小分歧）</td><td>6189（强回流）</td><td>8048（高潮）</td><td>-1669（小分歧）</td><td>分歧后看修复</td><td>强转弱明显，必须由核心票带回</td></tr><tr><td>算力</td><td>4591（强回流）</td><td>1113（大分歧）</td><td>3988（强回流）</td><td>4600（强回流）</td><td>偏强轮动</td><td>连续两日增强，可承接科技回流</td></tr><tr><td>机器人</td><td>3172（强回流）</td><td>2202（正常）</td><td>181（大分歧）</td><td>3776（强回流）</td><td>轮动修复</td><td>强度回升，但高标辨识度一般</td></tr><tr><td>光伏</td><td>1655（高潮）</td><td>-126（大分歧）</td><td>-94（大分歧）</td><td>-1040（大分歧）</td><td>偏弱</td><td>连续负值，暂不优先</td></tr><tr><td>化工</td><td>6798（高潮）</td><td>5217（强回流）</td><td>-272（小分歧）</td><td>-214（小分歧）</td><td>弱震荡</td><td>高潮后未能恢复</td></tr><tr><td>电网</td><td>1114（高潮）</td><td>325（高潮）</td><td>119（正常）</td><td>-982（大分歧）</td><td>承压</td><td>与电力高标负反馈共振</td></tr><tr><td>人工智能</td><td>-77（小分歧）</td><td>-334（小分歧）</td><td>25（强回流）</td><td>-2590（大分歧）</td><td>等待止跌</td><td>泛AI弱于算力与硬件</td></tr><tr><td>商业航天</td><td>840（强回流）</td><td>1475（高潮）</td><td>-39（小分歧）</td><td>618（正常）</td><td>弱轮动</td><td>有回流但强度有限</td></tr><tr><td>芯片</td><td>12891（强回流）</td><td>5416（小分歧）</td><td>6187（正常）</td><td>6583（正常）</td><td>强回流预期</td><td>四日持续强，是明日科技首要观察</td></tr><tr><td>黄金</td><td>1317（高潮）</td><td>67（大分歧）</td><td>-34（小分歧）</td><td>-453（大分歧）</td><td>偏弱</td><td>无明显短线催化</td></tr><tr><td>石油石化</td><td>40（小分歧）</td><td>529（高潮）</td><td>-236（大分歧）</td><td>-25（小分歧）</td><td>中性</td><td>缺少辨识度</td></tr><tr><td>通信</td><td>15469（高潮）</td><td>3549（小分歧）</td><td>2055（大分歧）</td><td>5446（正常）</td><td>偏强回流</td><td>今日明显增强，可与PCB共振</td></tr><tr><td>智能驾驶</td><td>138（大分歧）</td><td>1942（高潮）</td><td>437（强回流）</td><td>-857（大分歧）</td><td>分歧</td><td>暂无梯队支持</td></tr><tr><td>军工</td><td>616（正常）</td><td>975（强回流）</td><td>776（强回流）</td><td>66（大分歧）</td><td>震荡偏弱</td><td>强度递减</td></tr><tr><td>天然气</td><td>93（大分歧）</td><td>638（高潮）</td><td>447（强回流）</td><td>-252（大分歧）</td><td>弱震荡</td><td>不具主线特征</td></tr><tr><td>医疗/医药</td><td>未核</td><td>未核</td><td>未核</td><td>未核</td><td>分歧后弱修复</td><td>高位负反馈明显，不宜先手追涨</td></tr><tr><td>农业</td><td>2915（高潮）</td><td>3241（高潮）</td><td>-437（小分歧）</td><td>36（大分歧）</td><td>个股轮动</td><td>金健米业、万向德农为观察锚</td></tr><tr><td>一季报增长</td><td>-458（大分歧）</td><td>-458（大分歧）</td><td>-458（大分歧）</td><td>-458（大分歧）</td><td>偏弱</td><td>非当前交易主线</td></tr><tr><td>并购重组</td><td>2437（强回流）</td><td>1401（小分歧）</td><td>3226（强回流）</td><td>1221（小分歧）</td><td>修复候选</td><td>连续为正，强度回落但逻辑未灭</td></tr><tr><td>电池</td><td>2731（高潮）</td><td>1986（强回流）</td><td>-530（小分歧）</td><td>653（小分歧）</td><td>轮动</td><td>有所回流但梯队一般</td></tr><tr><td>元器件</td><td>1752（强回流）</td><td>1632（强回流）</td><td>764（正常）</td><td>-401（小分歧）</td><td>分歧</td><td>科技内部强弱切换</td></tr><tr><td>稀土</td><td>161（强回流）</td><td>136（强回流）</td><td>300（高潮）</td><td>-253（大分歧）</td><td>偏弱</td><td>持续性不足</td></tr><tr><td>煤炭</td><td>-282（大分歧）</td><td>464（强回流）</td><td>515（强回流）</td><td>-983（大分歧）</td><td>继续承压</td><td>今日明显转弱</td></tr><tr><td>PCB/复合铜箔</td><td>未核</td><td>未核</td><td>未核</td><td>未核</td><td>轮动反弹</td><td>大亚圣象、澳弘电子为高度锚；强度尚不足以定义主升</td></tr><tr><td>房地产</td><td>未核</td><td>未核</td><td>未核</td><td>未核</td><td>看分化，不追一致</td><td>高低切明显，板块股性偏差</td></tr><tr><td>仪器仪表</td><td>未核</td><td>未核</td><td>未核</td><td>未核</td><td>弱启动验证</td><td>暂视为小题材试错</td></tr></tbody></table></div>
 </section>
-<div class="phase-divider" id="phase-diagnosis" data-tone="dark"><span>PHASE 02</span><strong>盘后拆解</strong><p>复盘操作、主线、催化与负反馈，识别真正的主动性和风险来源。</p></div>
-<section class="section-card" id="chapter-4-四-今日操作结果-核心失误-核心反思-6f01e5" data-phase="diagnosis" data-chapter-number="04"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">四、今日操作结果+核心失误+核心反思</h2>
-<h3 id="sub-4-1-一-今日操作结果-7e2259" class="subchapter-title">（一）今日操作结果</h3>
+<div class="phase-divider" data-tone="dark" id="phase-diagnosis"><span>PHASE 02</span><strong>盘后拆解</strong><p>复盘操作、主线、催化与负反馈，识别真正的主动性和风险来源。</p></div>
+<section class="section-card" data-chapter-number="04" data-phase="diagnosis" id="chapter-4-四-今日操作结果-核心失误-核心反思-6f01e5"><div class="section-kicker">Daily Review</div><h2 class="chapter-title"><span class="chapter-number">04</span><span>今日操作结果+核心失误+核心反思</span></h2>
+<h3 class="subchapter-title" id="sub-4-1-一-今日操作结果-7e2259">（一）今日操作结果</h3>
 <p class="body-line tone-action">✅ 做对操作</p>
 <p class="body-line tone-risk">1. 内蒙新华处理优秀。 用户准确识别其多空结构：多方依赖新华传媒一字强度、新华系辨识度及5进6唯一高标预期；空方则来自监管工作函、闽东电力跌停负反馈、潜在停牌与流动性风险。没有在第一次下杀时恐慌割肉，而是耐心等待反抽。</p>
 <p class="body-line tone-risk">2. 执行纪律清晰。 内蒙新华拉高后设置三组条件单分批退出，不追求卖在最高点，以“不赚多但不亏、控制回撤”为目标；用户评价卖点和过程均接近预案最优执行。</p>
@@ -296,37 +295,19 @@
 <p class="body-line tone-risk">1. 南华生物4进5的回封预期未兑现，说明“医药最高标”不能抵消退潮日、爆量和闽东电力负反馈的系统性压力。</p>
 <p class="body-line tone-risk">2. 南华生物虽有分批控制，但单票最大亏损线尚未量化；明日必须以条件单和冲高处理为主，不能因为期待反包再次被动加仓。</p>
 <p class="body-line tone-risk">3. “分歧后次日应转强”只能作为剧本，不能替代竞价、量能、新华传媒封单和板块联动确认。</p>
-<h3 id="sub-4-2-二-核心失误根源-0afa43" class="subchapter-title">（二）核心失误根源</h3>
+<h3 class="subchapter-title" id="sub-4-2-二-核心失误根源-0afa43">（二）核心失误根源</h3>
 <p class="body-line">1. 执行层面：内蒙新华执行没有明显问题；南华生物的改进点是把“走弱停止加仓”进一步升级为明确的减仓与退出触发条件。</p>
 <p class="body-line tone-risk">2. 地位/预案层面：南华生物虽是医药高标，但医药板块当天并未提供足够回封助力；地位不能脱离板块强度单独判断。</p>
 <p class="body-line">3. 节奏/买卖点层面：退潮期只能用试错仓参与反包或回封预期，不应把均线承接等同于确定性买点。</p>
-<h3 id="sub-4-3-三-深度核心反思-3a6577" class="subchapter-title">（三）深度核心反思</h3>
+<h3 class="subchapter-title" id="sub-4-3-三-深度核心反思-3a6577">（三）深度核心反思</h3>
 <p class="body-line tone-action">今天最重要的进步不是判断每只股票都正确，而是开始用多空力量和条件单管理不确定性。内蒙新华的卖出说明盘感已经从“猜涨跌”进化到“识别监管负反馈—等待多方自救—利用流动性退出”；这类操作即使利润不大，也能稳定控制回撤。</p>
 <p class="body-line tone-action">南华生物无法提前确定是否回封5板，交易优势只能来自分批试仓、走弱停买和明日及时处理。公开数据为成交13.48亿元、换手31.79%、主力净流出约4.02亿元，而非换手50%以上；对约40多亿元流通市值的高标而言，仍属于显著放量和筹码松动。南华生物当日数据</p>
 <p class="body-line tone-action">退潮日的核心目标不是扩大收益，而是保留下一次主线启动时的出手机会。两成多仓位是合格状态；明日即使参与修复，总仓位也应控制在四至五成以内。</p>
 </section>
-<section class="section-card" id="chapter-5-五-操作与情绪复盘-kiss模型-keep-improve-start-stop-7bee20" data-phase="diagnosis" data-chapter-number="05"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">五、操作与情绪复盘（KISS模型：Keep/Improve/Start/Stop）</h2>
-<h3 id="sub-5-1-一-当日操作-情绪复盘-51df44" class="subchapter-title">（一）当日操作&amp;情绪复盘</h3>
-<h4 id="minor-5-2-1-核心失误-5a8e34" class="minor-title">1. 核心失误</h4>
-<p class="body-line">1. 南华生物的板块支撑和回封概率估计偏乐观。</p>
-<p class="body-line">2. 尚未为南华生物写出精确的单票最大亏损值，容易在冲高与反包预期之间犹豫。</p>
-<h4 id="minor-5-3-2-正向进化-a52cc4" class="minor-title">2. 正向进化</h4>
-<p class="body-line">1. 内蒙新华能够读懂新华传媒支撑与监管函压制之间的多空博弈，耐心等待反抽退出。</p>
-<p class="body-line">2. 开始用三组条件单分批卖出，不再要求卖在绝对最高点。</p>
-<p class="body-line tone-risk">3. 南华生物分批买入、走弱停买；总仓位保持两成多，没有在退潮期扩大风险敞口。</p>
-<h3 id="sub-5-4-二-kiss模型四维总结-8b015d" class="subchapter-title">（二）KISS模型四维总结</h3>
-<h4 id="minor-5-5-1-keep-保持-f4e0c6" class="minor-title">1. Keep（保持）</h4>
-<p class="body-line">保持“先看情绪锚，再看题材，再看个股量价”的顺序；继续使用条件单、分批交易和低仓位试错。</p>
-<h4 id="minor-5-6-2-improve-改进-ee0430" class="minor-title">2. Improve（改进）</h4>
-<p class="body-line">为每笔试错单预先写清三项：停止加仓条件、分批退出条件、单票最大亏损；把“盘感正确”沉淀为可重复执行的规则。</p>
-<h4 id="minor-5-7-3-start-启动-838eea" class="minor-title">3. Start（启动）</h4>
-<p class="body-line tone-action">启动明日三步计划：先处理南华生物持仓；再等新华文轩5板的板上确认；若无核心机会，仅观察低开的科技ETF或保持空仓。</p>
-<h4 id="minor-5-8-4-stop-禁止-fccf83" class="minor-title">4. Stop（禁止）</h4>
-<p class="body-line">停止在走弱后继续补仓；停止半路追新华文轩；停止参与连续一字后首次开板；总仓位不得超过四至五成。</p>
-</section>
-<section class="section-card" id="chapter-6-六-各主线板块详细解析-937d9c" data-phase="diagnosis" data-chapter-number="06"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">六、各主线板块详细解析</h2>
-<section class="theme-analysis-flow" id="intraday-mainline" data-intraday-mainline data-theme-analysis-flow>
-  <style>
+
+<section class="section-card" data-chapter-number="06" data-phase="diagnosis" id="chapter-6-六-各主线板块详细解析-937d9c"><div class="section-kicker">Daily Review</div><h2 class="chapter-title"><span class="chapter-number">05</span><span>各主线板块详细解析</span></h2>
+<section class="theme-analysis-flow" data-intraday-mainline="" data-theme-analysis-flow="" id="intraday-mainline">
+<style>
     .theme-analysis-flow{margin:14px 0 4px}
     .theme-analysis-intro{margin:0 0 20px;padding:12px 14px;border-left:4px solid #0d9275;background:#f2faf7;color:#496b65;line-height:1.65}
     .theme-analysis-block{padding:24px 0;border-top:2px solid #cfe2de}
@@ -351,21 +332,20 @@
     .theme-analysis-copy strong{display:block;margin-bottom:3px;color:#0b675f}
     @media (max-width:900px){.theme-analysis-head{align-items:flex-start;flex-direction:column}.theme-analysis-meta{justify-content:flex-start}.theme-analysis-copy{grid-template-columns:1fr}.theme-analysis-copy p{border-right:0;border-bottom:1px solid #e4ecea}.theme-analysis-copy p:last-child{border-bottom:0}}
   </style>
-  <h3 class="theme-analysis-title">日内主线表 × 题材详细解析</h3>
-  <p class="theme-analysis-intro">按题材连续复盘：每个板块先看核心标的的真实涨停表现与市场地位，再看日内节奏、板块分析和次日验证。趋势核心未涨停时明确标注，不与封板票混写。</p>
-  <article class="theme-analysis-block" id="theme-l1" data-theme-section><div class="theme-analysis-head"><h4 class="theme-analysis-title">1. PCB/复合铜箔/芯片/通信</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">相对强线</span><span class="theme-analysis-chip">芯片6583 / 通信5446 / 算力4600</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">大亚圣象<br><small>000910</small></td><td><span class="limit-up-tag">4板 / 封板</span></td><td>科技最高标之一</td><td>有领涨身位，主动性需用率先5板和板块扩散确认。</td><td>先于科技回流封板。</td></tr><tr><td class="theme-stock-name">澳弘电子<br><small>605058</small></td><td><span class="limit-up-tag">2板 / 9天7板</span></td><td>复合铜箔辨识度</td><td>辨识度高，需避免高开冲落。</td><td>主动回封并带后排。</td></tr><tr><td class="theme-stock-name">沃格光电<br><small>603773</small></td><td><span class="limit-up-tag">首板 / 封板</span></td><td>PCB首板助攻</td><td>低位扩散样本，主动性待次日。</td><td>首板溢价与二板承接。</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>退潮中承接资金，但ETF和容量票带动不足。</p><p><strong>板块分析</strong>科技内部强于纯情绪题材；大亚圣象与澳弘电子有身位，仍需新增首板确认从轮动升级。</p><p><strong>次日验证</strong>大亚圣象主动5板、澳弘电子正反馈、板块补首板。</p></div></article><article class="theme-analysis-block" id="theme-l2" data-theme-section><div class="theme-analysis-head"><h4 class="theme-analysis-title">2. 文化传媒/AI应用/并购重组</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">修复候选</span><span class="theme-analysis-chip">AI应用-1669 / 并购重组1221</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">新华文轩<br><small>601811</small></td><td><span class="limit-up-tag">4板 / T字</span></td><td>第一龙头候选</td><td>领涨性强；主动性待率先5板确认。</td><td>适度放量后板上确认。</td></tr><tr><td class="theme-stock-name">新华传媒<br><small>600825</small></td><td><span class="limit-up-tag">3板 / 一字</span></td><td>高度与强度锚</td><td>可助攻题材，主动换手证据不足。</td><td>封单稳定或开板强回封。</td></tr><tr><td class="theme-stock-name">南威软件<br><small>603636</small></td><td><span class="limit-up-tag">3板 / 封板</span></td><td>AI应用中位</td><td>维持中位梯队，服从新华文轩。</td><td>不出现深水负反馈。</td></tr><tr><td class="theme-stock-name">天威视讯<br><small>002238</small></td><td><span class="limit-up-tag">2板 / 一字</span></td><td>低位强度锚</td><td>提供后排助攻，主动性待开板。</td><td>封单与换手承接。</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>前期高潮后强分歧，梯队尚未完全瓦解。</p><p><strong>板块分析</strong>新华文轩与新华传媒保留梯队；只有新华文轩主动5板并带后排，修复才成立。</p><p><strong>次日验证</strong>新华文轩健康换手5板，新华传媒封单稳定，后排有新增涨停。</p></div></article><article class="theme-analysis-block" id="theme-l3" data-theme-section><div class="theme-analysis-head"><h4 class="theme-analysis-title">3. 房地产</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">低位切换</span><span class="theme-analysis-chip">约5只涨停 / 持续性待证</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">我爱我家<br><small>000560</small></td><td><span class="limit-up-tag">3板 / 封板</span></td><td>地产前排</td><td>前排领涨，板块主动性仍需容量票确认。</td><td>竞价溢价与三进四。</td></tr><tr><td class="theme-stock-name">华远控股<br><small>600743</small></td><td><span class="limit-up-tag">3板 / 封板</span></td><td>地产并列前排</td><td>与我爱我家竞争辨识度。</td><td>换手质量与卡位。</td></tr><tr><td class="theme-stock-name">华丽家族<br><small>600503</small></td><td><span class="limit-up-tag">3板 / 尾盘封板</span></td><td>尾盘跟随</td><td>主动性偏弱，封板质量一般。</td><td>是否有溢价而非低开补跌。</td></tr><tr><td class="theme-stock-name">万科A<br><small>000002</small></td><td><span class="limit-up-tag is-trend">未涨停 / 炸板</span></td><td>地产容量锚</td><td>容量带动未兑现。</td><td>能否止跌并提供板块承接。</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>资金由高位切低，尾盘仍有封板。</p><p><strong>板块分析</strong>三只3板构成前排，但容量票反馈不稳；只看溢价和新增首板，不追单日一致。</p><p><strong>次日验证</strong>前排晋级、万科A承接、低位首板继续扩散。</p></div></article><article class="theme-analysis-block" id="theme-l4" data-theme-section><div class="theme-analysis-head"><h4 class="theme-analysis-title">4. 医药</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">退潮风险线</span><span class="theme-analysis-chip">医疗-84</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">南华生物<br><small>000504</small></td><td><span class="limit-up-tag is-trend">未涨停 / 4进5失败 / +5.37%</span></td><td>医药高标断板</td><td>主动性与领涨性均降级。</td><td>冲高是否主动封板并带医药回流。</td></tr><tr><td class="theme-stock-name">新华制药<br><small>000756</small></td><td><span class="limit-up-tag is-trend">未涨停 / 强负反馈</span></td><td>医药辨识度</td><td>负反馈拖累题材。</td><td>能否止跌而非继续扩散。</td></tr><tr><td class="theme-stock-name">百花医药<br><small>600721</small></td><td><span class="limit-up-tag is-trend">未涨停 / 待核</span></td><td>医药前排观察</td><td>精确分时未核。</td><td>与南华是否同步修复。</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>前两日强势后的兑现，高位与中位负反馈。</p><p><strong>板块分析</strong>南华生物有承接但4进5失败；当前只允许持仓处理，不提前押注反包模式。</p><p><strong>次日验证</strong>先止跌，再看南华主动反包和板块同步修复。</p></div></article><article class="theme-analysis-block" id="theme-l5" data-theme-section><div class="theme-analysis-head"><h4 class="theme-analysis-title">5. 高位退潮与断板反馈</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">风险锚</span><span class="theme-analysis-chip">4板以上晋级全败</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">闽东电力<br><small>000993</small></td><td><span class="limit-up-tag is-trend">未涨停 / 跌停</span></td><td>监管负反馈锚</td><td>对高位情绪形成负带动。</td><td>能否开板并缩小封单。</td></tr><tr><td class="theme-stock-name">内蒙新华<br><small>603230</small></td><td><span class="limit-up-tag is-trend">未涨停 / 5进6失败</span></td><td>前高标断板</td><td>翘板有承接，但未带出反包模式。</td><td>是否止跌修复而非补跌。</td></tr><tr><td class="theme-stock-name">华瓷股份<br><small>001216</small></td><td><span class="limit-up-tag is-trend">未涨停 / 6进7失败</span></td><td>空间突破失败</td><td>高度优势消失。</td><td>是否止跌，具体监管状态待核。</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>监管与高度压制触发高位集体断板。</p><p><strong>板块分析</strong>闽东电力是最强负反馈；内蒙新华翘板未形成批量反包，反抽优先服务退出。</p><p><strong>次日验证</strong>闽东电力开板、内蒙新华止跌、断板票不再扩大跌停。</p></div></article>
+<h3 class="theme-analysis-title">日内主线表 × 题材详细解析</h3>
+<p class="theme-analysis-intro">按题材连续复盘：每个板块先看核心标的的真实涨停表现与市场地位，再看日内节奏、板块分析和次日验证。趋势核心未涨停时明确标注，不与封板票混写。</p>
+<article class="theme-analysis-block" data-theme-section="" id="theme-l1"><div class="theme-analysis-head"><h4 class="theme-analysis-title">1. PCB/复合铜箔/芯片/通信</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">相对强线</span><span class="theme-analysis-chip">芯片6583 / 通信5446 / 算力4600</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>角色</th><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="role-cell"><span class="role-chip role-龙头">龙头</span></td><td class="theme-stock-name">大亚圣象<br/><small>000910</small></td><td><span class="limit-up-tag">4板 / 封板</span></td><td>科技最高标之一</td><td>有领涨身位，主动性需用率先5板和板块扩散确认。</td><td>先于科技回流封板。</td></tr><tr><td class="role-cell"><span class="role-chip role-弹性">弹性</span></td><td class="theme-stock-name">澳弘电子<br/><small>605058</small></td><td><span class="limit-up-tag">2板 / 9天7板</span></td><td>复合铜箔辨识度</td><td>辨识度高，需避免高开冲落。</td><td>主动回封并带后排。</td></tr><tr><td class="role-cell"><span class="role-chip role-后排">后排</span></td><td class="theme-stock-name">沃格光电<br/><small>603773</small></td><td><span class="limit-up-tag">首板 / 封板</span></td><td>PCB首板助攻</td><td>低位扩散样本，主动性待次日。</td><td>首板溢价与二板承接。</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>退潮中承接资金，但ETF和容量票带动不足。</p><p><strong>板块分析</strong>科技内部强于纯情绪题材；大亚圣象与澳弘电子有身位，仍需新增首板确认从轮动升级。</p><p><strong>次日验证</strong>大亚圣象主动5板、澳弘电子正反馈、板块补首板。</p></div></article><article class="theme-analysis-block" data-theme-section="" id="theme-l2"><div class="theme-analysis-head"><h4 class="theme-analysis-title">2. 文化传媒/AI应用/并购重组</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">修复候选</span><span class="theme-analysis-chip">AI应用-1669 / 并购重组1221</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>角色</th><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="role-cell"><span class="role-chip role-龙头">龙头</span></td><td class="theme-stock-name">新华文轩<br/><small>601811</small></td><td><span class="limit-up-tag">4板 / T字</span></td><td>第一龙头候选</td><td>领涨性强；主动性待率先5板确认。</td><td>适度放量后板上确认。</td></tr><tr><td class="role-cell"><span class="role-chip role-前排">前排</span></td><td class="theme-stock-name">新华传媒<br/><small>600825</small></td><td><span class="limit-up-tag">3板 / 一字</span></td><td>高度与强度锚</td><td>可助攻题材，主动换手证据不足。</td><td>封单稳定或开板强回封。</td></tr><tr><td class="role-cell"><span class="role-chip role-后排">后排</span></td><td class="theme-stock-name">南威软件<br/><small>603636</small></td><td><span class="limit-up-tag">3板 / 封板</span></td><td>AI应用中位</td><td>维持中位梯队，服从新华文轩。</td><td>不出现深水负反馈。</td></tr><tr><td class="role-cell"><span class="role-chip role-后排">后排</span></td><td class="theme-stock-name">天威视讯<br/><small>002238</small></td><td><span class="limit-up-tag">2板 / 一字</span></td><td>低位强度锚</td><td>提供后排助攻，主动性待开板。</td><td>封单与换手承接。</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>前期高潮后强分歧，梯队尚未完全瓦解。</p><p><strong>板块分析</strong>新华文轩与新华传媒保留梯队；只有新华文轩主动5板并带后排，修复才成立。</p><p><strong>次日验证</strong>新华文轩健康换手5板，新华传媒封单稳定，后排有新增涨停。</p></div></article><article class="theme-analysis-block" data-theme-section="" id="theme-l3"><div class="theme-analysis-head"><h4 class="theme-analysis-title">3. 房地产</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">低位切换</span><span class="theme-analysis-chip">约5只涨停 / 持续性待证</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>角色</th><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="role-cell"><span class="role-chip role-前排">前排</span></td><td class="theme-stock-name">我爱我家<br/><small>000560</small></td><td><span class="limit-up-tag">3板 / 封板</span></td><td>地产前排</td><td>前排领涨，板块主动性仍需容量票确认。</td><td>竞价溢价与三进四。</td></tr><tr><td class="role-cell"><span class="role-chip role-前排">前排</span></td><td class="theme-stock-name">华远控股<br/><small>600743</small></td><td><span class="limit-up-tag">3板 / 封板</span></td><td>地产并列前排</td><td>与我爱我家竞争辨识度。</td><td>换手质量与卡位。</td></tr><tr><td class="role-cell"><span class="role-chip role-后排">后排</span></td><td class="theme-stock-name">华丽家族<br/><small>600503</small></td><td><span class="limit-up-tag">3板 / 尾盘封板</span></td><td>尾盘跟随</td><td>主动性偏弱，封板质量一般。</td><td>是否有溢价而非低开补跌。</td></tr><tr><td class="role-cell"><span class="role-chip role-中军">中军</span></td><td class="theme-stock-name">万科A<br/><small>000002</small></td><td><span class="limit-up-tag is-trend">未涨停 / 炸板</span></td><td>地产容量锚</td><td>容量带动未兑现。</td><td>能否止跌并提供板块承接。</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>资金由高位切低，尾盘仍有封板。</p><p><strong>板块分析</strong>三只3板构成前排，但容量票反馈不稳；只看溢价和新增首板，不追单日一致。</p><p><strong>次日验证</strong>前排晋级、万科A承接、低位首板继续扩散。</p></div></article><article class="theme-analysis-block" data-theme-section="" id="theme-l4"><div class="theme-analysis-head"><h4 class="theme-analysis-title">4. 医药</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">退潮风险线</span><span class="theme-analysis-chip">医疗-84</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>角色</th><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="role-cell"><span class="role-chip role-退潮锚">退潮锚</span></td><td class="theme-stock-name">南华生物<br/><small>000504</small></td><td><span class="limit-up-tag is-trend">未涨停 / 4进5失败 / +5.37%</span></td><td>医药高标断板</td><td>主动性与领涨性均降级。</td><td>冲高是否主动封板并带医药回流。</td></tr><tr><td class="role-cell"><span class="role-chip role-弹性">弹性</span></td><td class="theme-stock-name">新华制药<br/><small>000756</small></td><td><span class="limit-up-tag is-trend">未涨停 / 强负反馈</span></td><td>医药辨识度</td><td>负反馈拖累题材。</td><td>能否止跌而非继续扩散。</td></tr><tr><td class="role-cell"><span class="role-chip role-前排">前排</span></td><td class="theme-stock-name">百花医药<br/><small>600721</small></td><td><span class="limit-up-tag is-trend">未涨停 / 待核</span></td><td>医药前排观察</td><td>精确分时未核。</td><td>与南华是否同步修复。</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>前两日强势后的兑现，高位与中位负反馈。</p><p><strong>板块分析</strong>南华生物有承接但4进5失败；当前只允许持仓处理，不提前押注反包模式。</p><p><strong>次日验证</strong>先止跌，再看南华主动反包和板块同步修复。</p></div></article><article class="theme-analysis-block" data-theme-section="" id="theme-l5"><div class="theme-analysis-head"><h4 class="theme-analysis-title">5. 高位退潮与断板反馈</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">风险锚</span><span class="theme-analysis-chip">4板以上晋级全败</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>角色</th><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="role-cell"><span class="role-chip role-退潮锚">退潮锚</span></td><td class="theme-stock-name">闽东电力<br/><small>000993</small></td><td><span class="limit-up-tag is-trend">未涨停 / 跌停</span></td><td>监管负反馈锚</td><td>对高位情绪形成负带动。</td><td>能否开板并缩小封单。</td></tr><tr><td class="role-cell"><span class="role-chip role-退潮锚">退潮锚</span></td><td class="theme-stock-name">内蒙新华<br/><small>603230</small></td><td><span class="limit-up-tag is-trend">未涨停 / 5进6失败</span></td><td>前高标断板</td><td>翘板有承接，但未带出反包模式。</td><td>是否止跌修复而非补跌。</td></tr><tr><td class="role-cell"><span class="role-chip role-退潮锚">退潮锚</span></td><td class="theme-stock-name">华瓷股份<br/><small>001216</small></td><td><span class="limit-up-tag is-trend">未涨停 / 6进7失败</span></td><td>空间突破失败</td><td>高度优势消失。</td><td>是否止跌，具体监管状态待核。</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>监管与高度压制触发高位集体断板。</p><p><strong>板块分析</strong>闽东电力是最强负反馈；内蒙新华翘板未形成批量反包，反抽优先服务退出。</p><p><strong>次日验证</strong>闽东电力开板、内蒙新华止跌、断板票不再扩大跌停。</p></div></article>
 </section>
-
 </section>
-<section class="section-card" id="chapter-7-七-事件催化时间线-9293ac" data-phase="diagnosis" data-chapter-number="07"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">七、事件催化时间线</h2>
+<section class="section-card" data-chapter-number="07" data-phase="diagnosis" id="chapter-7-七-事件催化时间线-9293ac"><div class="section-kicker">Daily Review</div><h2 class="chapter-title"><span class="chapter-number">06</span><span>事件催化时间线</span></h2>
 <!-- Required placeholders: DATE_START, DATE_END, EVENT_COUNT, TIMELINE_ITEMS_HTML, TIMELINE_SOURCE_URL -->
-<div class="event-catalyst-timeline" data-event-catalyst-timeline data-date-start="2026-09-23" data-date-end="2026-10-07">
-  <div class="event-timeline-summary">
-    <div><span class="section-kicker">Catalyst Window</span><h3>事件催化时间线（D0 至 D+14）</h3></div>
-    <div class="event-window-badge">2026-09-23 - 2026-10-07 · 7 项</div>
-  </div>
-  <p class="source-note">数据优先参考 <a href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">韭研公社时间轴</a>。事件等级来自站点热度，只用于排序；交易判断为复盘推演，临近日期须复核。</p>
-  <div class="event-timeline-track"><article class="event-timeline-item is-today" data-event-date="2026-09-23"><div class="event-item-head"><span class="event-date">2026-09-23 · 周三</span><span class="event-day-label">D0 今日</span></div><h4 class="event-item-title">Meta Connect 2026开启</h4><div class="event-theme-tags"><span class="event-theme-tag">端侧AI</span><span class="event-theme-tag">智能眼镜</span><span class="event-theme-tag">芯片</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">中 · 兑现</span></p><p><strong>盘面推演</strong>可映射端侧AI与科技硬件，但A股需用主动核心和涨停扩散确认。</p><p><strong>验证与风险</strong>来自社区日历，具体产品与发布时间需官方复核。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article><article class="event-timeline-item is-next" data-event-date="2026-09-24"><div class="event-item-head"><span class="event-date">2026-09-24 · 周四</span><span class="event-day-label">D+1</span></div><h4 class="event-item-title">Meta Connect次日与退潮修复窗口</h4><div class="event-theme-tags"><span class="event-theme-tag">端侧AI</span><span class="event-theme-tag">芯片</span><span class="event-theme-tag">短线情绪</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 分歧检验</span></p><p><strong>盘面推演</strong>先看负反馈收敛，再看科技或传媒谁完成回流。</p><p><strong>验证与风险</strong>市场修复不是事件必然结果。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-09-25"><div class="event-item-head"><span class="event-date">2026-09-25 · 周五</span><span class="event-day-label">D+2</span></div><h4 class="event-item-title">周末前资金收缩窗口</h4><div class="event-theme-tags"><span class="event-theme-tag">流动性</span><span class="event-theme-tag">高位情绪</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 窗口观察</span></p><p><strong>盘面推演</strong>若量能继续下降，高位与无梯队后排承压。</p><p><strong>验证与风险</strong>不是独立题材催化。</p></div><a class="event-source-link" href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-09-28"><div class="event-item-head"><span class="event-date">2026-09-28 · 周一</span><span class="event-day-label">D+5</span></div><h4 class="event-item-title">OpenAI相关消息窗口</h4><div class="event-theme-tags"><span class="event-theme-tag">AI应用</span><span class="event-theme-tag">算力</span><span class="event-theme-tag">芯片</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 预热</span></p><p><strong>盘面推演</strong>若有官方事件，观察AI应用和算力是否形成新增主线。</p><p><strong>验证与风险</strong>事件名称与日期未核，不作为直接买点。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-09-30"><div class="event-item-head"><span class="event-date">2026-09-30 · 周三</span><span class="event-day-label">D+7</span></div><h4 class="event-item-title">月末与季末资金面窗口</h4><div class="event-theme-tags"><span class="event-theme-tag">指数</span><span class="event-theme-tag">流动性</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 窗口观察</span></p><p><strong>盘面推演</strong>关注节前缩量和机构调仓对趋势股的影响。</p><p><strong>验证与风险</strong>只作资金面观察。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-10-01"><div class="event-item-head"><span class="event-date">2026-10-01 · 周四</span><span class="event-day-label">D+8</span></div><h4 class="event-item-title">国庆假期窗口</h4><div class="event-theme-tags"><span class="event-theme-tag">节前效应</span><span class="event-theme-tag">旅游消费</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 窗口观察</span></p><p><strong>盘面推演</strong>假期主题只看资金是否提前形成梯队。</p><p><strong>验证与风险</strong>不把节日概念等同持续主线。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-10-07"><div class="event-item-head"><span class="event-date">2026-10-07 · 周三</span><span class="event-day-label">D+14</span></div><h4 class="event-item-title">D+14窗口终点</h4><div class="event-theme-tags"><span class="event-theme-tag">节后预期</span><span class="event-theme-tag">流动性</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 窗口观察</span></p><p><strong>盘面推演</strong>复核假期信息与节后主线预期。</p><p><strong>验证与风险</strong>临近日期需重新抓取正式时间轴。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article></div>
+<div class="event-catalyst-timeline" data-date-end="2026-10-07" data-date-start="2026-09-23" data-event-catalyst-timeline="">
+<div class="event-timeline-summary">
+<div><span class="section-kicker">Catalyst Window</span><h3>事件催化时间线（D0 至 D+14）</h3></div>
+<div class="event-window-badge">2026-09-23 - 2026-10-07 · 7 项</div>
+</div>
+<p class="source-note">数据优先参考 <a href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">韭研公社时间轴</a>。事件等级来自站点热度，只用于排序；交易判断为复盘推演，临近日期须复核。</p>
+<div class="event-timeline-track"><article class="event-timeline-item is-today" data-event-date="2026-09-23"><div class="event-item-head"><span class="event-date">2026-09-23 · 周三</span><span class="event-day-label">D0 今日</span></div><h4 class="event-item-title">Meta Connect 2026开启</h4><div class="event-theme-tags"><span class="event-theme-tag">端侧AI</span><span class="event-theme-tag">智能眼镜</span><span class="event-theme-tag">芯片</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">中 · 兑现</span></p><p><strong>盘面推演</strong>可映射端侧AI与科技硬件，但A股需用主动核心和涨停扩散确认。</p><p><strong>验证与风险</strong>来自社区日历，具体产品与发布时间需官方复核。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">查看韭研公社时间轴来源</a></article><article class="event-timeline-item is-next" data-event-date="2026-09-24"><div class="event-item-head"><span class="event-date">2026-09-24 · 周四</span><span class="event-day-label">D+1</span></div><h4 class="event-item-title">Meta Connect次日与退潮修复窗口</h4><div class="event-theme-tags"><span class="event-theme-tag">端侧AI</span><span class="event-theme-tag">芯片</span><span class="event-theme-tag">短线情绪</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 分歧检验</span></p><p><strong>盘面推演</strong>先看负反馈收敛，再看科技或传媒谁完成回流。</p><p><strong>验证与风险</strong>市场修复不是事件必然结果。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-09-25"><div class="event-item-head"><span class="event-date">2026-09-25 · 周五</span><span class="event-day-label">D+2</span></div><h4 class="event-item-title">周末前资金收缩窗口</h4><div class="event-theme-tags"><span class="event-theme-tag">流动性</span><span class="event-theme-tag">高位情绪</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 窗口观察</span></p><p><strong>盘面推演</strong>若量能继续下降，高位与无梯队后排承压。</p><p><strong>验证与风险</strong>不是独立题材催化。</p></div><a class="event-source-link" href="C:/Users/Administrator/Desktop/Codex/A股复盘输出/章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx" rel="noreferrer" target="_blank">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-09-28"><div class="event-item-head"><span class="event-date">2026-09-28 · 周一</span><span class="event-day-label">D+5</span></div><h4 class="event-item-title">OpenAI相关消息窗口</h4><div class="event-theme-tags"><span class="event-theme-tag">AI应用</span><span class="event-theme-tag">算力</span><span class="event-theme-tag">芯片</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 预热</span></p><p><strong>盘面推演</strong>若有官方事件，观察AI应用和算力是否形成新增主线。</p><p><strong>验证与风险</strong>事件名称与日期未核，不作为直接买点。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-09-30"><div class="event-item-head"><span class="event-date">2026-09-30 · 周三</span><span class="event-day-label">D+7</span></div><h4 class="event-item-title">月末与季末资金面窗口</h4><div class="event-theme-tags"><span class="event-theme-tag">指数</span><span class="event-theme-tag">流动性</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 窗口观察</span></p><p><strong>盘面推演</strong>关注节前缩量和机构调仓对趋势股的影响。</p><p><strong>验证与风险</strong>只作资金面观察。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-10-01"><div class="event-item-head"><span class="event-date">2026-10-01 · 周四</span><span class="event-day-label">D+8</span></div><h4 class="event-item-title">国庆假期窗口</h4><div class="event-theme-tags"><span class="event-theme-tag">节前效应</span><span class="event-theme-tag">旅游消费</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 窗口观察</span></p><p><strong>盘面推演</strong>假期主题只看资金是否提前形成梯队。</p><p><strong>验证与风险</strong>不把节日概念等同持续主线。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-10-07"><div class="event-item-head"><span class="event-date">2026-10-07 · 周三</span><span class="event-day-label">D+14</span></div><h4 class="event-item-title">D+14窗口终点</h4><div class="event-theme-tags"><span class="event-theme-tag">节后预期</span><span class="event-theme-tag">流动性</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 窗口观察</span></p><p><strong>盘面推演</strong>复核假期信息与节后主线预期。</p><p><strong>验证与风险</strong>临近日期需重新抓取正式时间轴。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">查看韭研公社时间轴来源</a></article></div>
 </div>
 <style>
 .event-catalyst-timeline{margin:14px 0 4px;padding:20px;border:1px solid rgba(18,75,66,.14);border-radius:16px;background:linear-gradient(135deg,#f7fffb,#fffaf0)}
@@ -376,10 +356,9 @@
 .event-item-title{margin:9px 0 7px;font-size:16px;line-height:1.55;color:#173f38}.event-theme-tags{display:flex;flex-wrap:wrap;gap:6px}.event-theme-tag{padding:4px 7px;border-radius:999px;background:#eaf7f1;color:#087064;font-size:11px;font-weight:850}.event-impact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}.event-impact-grid p{margin:0;padding:9px 10px;border-radius:9px;background:#f7faf8;color:#365851;font-size:12px;line-height:1.55}.event-impact-grid strong{display:block;margin-bottom:3px;color:#0c665b}.event-level{font-size:11px;font-weight:900;color:#8a6012}.event-source-link{display:inline-block;margin-top:9px;color:#1476a8;font-size:11px;font-weight:800}
 @media(max-width:760px){.event-catalyst-timeline{padding:15px}.event-impact-grid{grid-template-columns:1fr}.event-timeline-track{padding-left:22px}.event-timeline-item:before{left:-20px}.event-timeline-summary h3{font-size:20px}}
 </style>
-
 </section>
-<section class="section-card" id="chapter-8-八-异动监管-龙虎榜与人气榜情况-40f05e" data-phase="diagnosis" data-chapter-number="08"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">八、异动监管、龙虎榜与人气榜情况</h2>
-<h3 id="sub-8-1-一-异动监管-f37439" class="subchapter-title">（一）异动监管</h3>
+<section class="section-card" data-chapter-number="08" data-phase="diagnosis" id="chapter-8-八-异动监管-龙虎榜与人气榜情况-40f05e"><div class="section-kicker">Daily Review</div><h2 class="chapter-title"><span class="chapter-number">07</span><span>异动监管、龙虎榜与人气榜情况</span></h2>
+<h3 class="subchapter-title" id="sub-8-1-一-异动监管-f37439">（一）异动监管</h3>
 <p class="body-line bullet-line">闽东电力：公司公告显示9月9日至9月22日累计涨幅偏离值达到100.02%，属于严重异常波动；今日跌停成为监管负反馈锚。</p>
 <p class="body-line bullet-line tone-risk">内蒙新华：5连板后收到上交所监管工作函，并提示“击鼓传花”及估值风险。</p>
 <p class="body-line bullet-line tone-risk">南华生物：此前发布交易风险提示，重组事项已终止且无CRO业务，题材预期存在纠偏压力。</p>
@@ -387,16 +366,16 @@
 <p class="body-line tone-risk">用户依据盘面工具估算的“100%异动监管剩余空间”如下。该数值会随个股涨幅、对应指数偏离值及统计窗口动态变化，只作为次日风险标尺，不代表股票仍可安全上涨的幅度。</p>
 <div class="table-shell" id="source-table-3"><table class="data-table"><thead><tr><th>标的</th><th>用户估算的剩余空间</th><th>明日含义</th></tr></thead><tbody><tr><td>华瓷股份</td><td>约3个百分点</td><td>已处强监管压制区，继续大涨容易触发异动约束</td></tr><tr><td>澳弘电子</td><td>约3个百分点</td><td>累计涨幅大，明日加速空间有限</td></tr><tr><td>金健米业</td><td>约5个百分点</td><td>上行空间受限，需防冲高兑现</td></tr><tr><td>内蒙新华</td><td>约1个涨停板以上</td><td>理论空间略大，但已有监管工作函，不能只看数值</td></tr><tr><td>新华文轩</td><td>约2个涨停板、用户判断难触及7板</td><td>当前4板，若继续晋级至6板附近将再次面对明显压制</td></tr><tr><td>南华生物</td><td>约3个涨停板</td><td>今日已断板，先看承接与反包，不能机械按剩余空间交易</td></tr></tbody></table></div>
 <p class="body-line tone-action">复盘结论：核心高标普遍接近异动阈值，监管不是单只股票问题，而是整个连板空间的共同天花板。明日必须把“剩余异动空间”置于身位、量能与板块共振之前检查。</p>
-<h3 id="sub-8-2-二-龙虎榜与资金面-aac62e" class="subchapter-title">（二）龙虎榜与资金面</h3>
+<h3 class="subchapter-title" id="sub-8-2-二-龙虎榜与资金面-aac62e">（二）龙虎榜与资金面</h3>
 <p class="body-line">南华生物因日换手率达到31.79%登上龙虎榜：前五席位合计买入8284.70万元、卖出1.535亿元，净卖出7066.58万元；其中两家机构合计净买入2586.88万元，营业部席位合计净卖出9653.46万元。用户口述的“流出4个多亿”对应全日主力资金净流出约4.02亿元，不是龙虎榜净卖出额。龙虎榜明细</p>
 <p class="body-line">华瓷股份、新华传媒、内蒙新华、哈药股份等高辨识度票仍聚集人气，但今日全市场资金并未形成明显一致方向。用户判断“主力进货少、出货也不集中”，与缩量环境相符；科技虽回流，却没有看到足够明确的增量资金持续推进，因此只能定义为存量轮动。</p>
-<h3 id="sub-8-3-三-人气榜-5b62cb" class="subchapter-title">（三）人气榜</h3>
+<h3 class="subchapter-title" id="sub-8-3-三-人气榜-5b62cb">（三）人气榜</h3>
 <div class="table-shell" id="source-table-4"><table class="data-table"><thead><tr><th>类别</th><th>2026-09-23</th></tr></thead><tbody><tr><td>人气常驻票</td><td>沈鼓集团（热榜1）、金健米业（热榜5）</td></tr><tr><td>人气关键票</td><td>凯达重工（热榜9）、新华传媒（12）、我爱我家（18）、沃格光电（25）、澳弘电子（26）、江淮汽车（34）、新华文轩（38）、万向德农（39）</td></tr><tr><td>人气飙升票</td><td>同花顺热榜前50内无飙升超过30名个股；参考：瑞斯康达飙升榜10、上升39名但未进入热榜前50</td></tr></tbody></table></div>
 <p class="body-line">人气结构显示，资金注意力仍集中在新股、高度票、PCB与地产前排，但高人气未能转化为普遍赚钱效应。</p>
 <p class="body-line tone-action">用户盘面观察的人气榜口径与三表分类口径略有不同：榜首仍是沈鼓集团（口述“神股/C沈鼓”），哈药股份、京东方A、闽东电力、万科A、沃格光电、新华传媒等受到关注。其结构并未指向统一情绪主线，而是分散在新股、医药、科技、地产与高标负反馈之间。万科A涨停后炸板，说明地产虽回流但内部承接并不稳定；沃格光电的涨停也未能把科技轮动升级成全面进攻。公开收盘复盘亦显示PCB活跃、地产分化、传媒普跌。</p>
 <p class="body-line tone-action">新华传媒当前更适合作为空间锚观察：9月23日为3板，若连续晋级，则9月24日为4板、9月25日为5板、9月28日为6板、9月29日为7板、9月30日为8板。真正的龙头标准不是机械数板，而是它能否跨越当前高度压制，并在开板后仍提供可复制的赚钱效应。</p>
 </section>
-<section class="section-card" id="chapter-9-九-跌停与炸板情况-d5f182" data-phase="diagnosis" data-chapter-number="09"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">九、跌停与炸板情况</h2>
+<section class="section-card" data-chapter-number="09" data-phase="diagnosis" id="chapter-9-九-跌停与炸板情况-d5f182"><div class="section-kicker">Daily Review</div><h2 class="chapter-title"><span class="chapter-number">08</span><span>跌停与炸板情况</span></h2>
 <p class="body-line">1. 跌停/强负反馈：闽东电力、新华制药、华媒控股，以及传媒、医药、华字辈多只深水或跌停标的。</p>
 <p class="body-line">2. 断板反包：今日没有形成有效反包模式。内蒙新华虽从跌停附近翘板，但未能带出断板票集体修复；多数断板票红盘幅度有限或继续承压，说明情绪暂不“原谅”失败票。</p>
 <p class="body-line">3. 首板次日反馈：一鸣食品盘中触及跌停，中国出版明显走弱，五洲医疗盘中一度跌约11.56%；即使一进二仍有3只晋级，也不足以抵消首板端的强负反馈。五洲医疗盘中表现、一鸣食品触及跌停</p>
@@ -405,70 +384,64 @@
 <p class="body-line tone-action">6. 明日观察重点：先防断板票补跌，再看闽东电力封单变化以及新华文轩能否独立完成4进5；不把断板翘板视为默认买点。</p>
 </section>
 <div class="phase-divider" id="phase-playbook"><span>PHASE 03</span><strong>明日推演</strong><p>按大盘、板块、核心票、情景预案的顺序建立次日剧本。</p></div>
-<section class="section-card" id="chapter-10-十-核心关键票汇总-明日个股预案-1c8c87" data-phase="playbook" data-chapter-number="10"><h2 class="chapter-title">十、明日作战推演总纲（大盘 → 板块 → 核心票）</h2>
-<section class="next-day-playbook" data-next-day-playbook data-date="2026-09-23">
-  <header class="next-day-playbook__header">
-    <div>
-      <span class="next-day-playbook__kicker">NEXT-DAY PLAYBOOK</span>
-      <h3>明日作战推演</h3>
-    </div>
-    <p>9月24日按大盘承接、负反馈收敛、板块回流、核心票板上确认依次执行；先处理南华生物，再决定是否开新仓。</p>
-  </header>
-
-  <ol class="next-day-playbook__flow" aria-label="明日决策顺序">
-    <li><span>01</span>大盘定风险预算</li>
-    <li><span>02</span>板块定进攻方向</li>
-    <li><span>03</span>核心票定触发动作</li>
-    <li><span>04</span>情景切换定仓位</li>
-  </ol>
-
-  <div class="next-day-playbook__step" id="chapter-11-十一-大盘明日预期节奏-78977f" data-market-outlook>
-    <div class="next-day-playbook__step-head">
-      <span>01</span>
-      <div><small>MARKET FIRST</small><h4>十一、大盘与板块题材预期节奏</h4></div>
-    </div>
-    <div class="market-outlook-grid" id="next-day-market-outlook">
-      <article><span>基准预期</span><p>指数横盘震荡，情绪存在退潮后的首次修复窗口。</p></article>
-      <article class="is-positive"><span>转强确认</span><p>成交回流、跌停收敛、昨日涨停收益和封板率同步改善。</p></article>
-      <article class="is-risk"><span>风险证伪</span><p>闽东电力继续封死跌停、两只4板均断板、炸板继续扩大。</p></article>
-      <article class="is-action"><span>执行边界</span><p>总仓位上限四至五成；不半路、不补弱、无确认就空仓。</p></article>
-    </div>
-
-    <div class="next-day-playbook__subsection" id="next-day-theme-outlook" data-theme-outlook>
-      <div class="next-day-playbook__subhead"><h5>板块题材预期节奏</h5><p>先验证题材强度，再把动作下沉到核心票。</p></div>
-      <div class="table-shell next-day-playbook__table-shell">
-        <table class="next-day-playbook__table">
-          <thead><tr><th>优先级</th><th>板块题材</th><th>当前节奏</th><th>核心锚</th><th>明日预期</th><th>转强确认</th><th>证伪信号</th><th>执行</th></tr></thead>
-          <tbody><tr><td><span class="playbook-priority">主攻</span></td><td>传媒/AI应用/重组</td><td>高潮后强分歧</td><td>新华文轩、新华传媒、南威软件</td><td>看首次修复</td><td>新华文轩健康换手5板并带后排回流</td><td>新华传媒撤单、AI应用无扩散</td><td>只做新华文轩板上确认</td></tr><tr><td><span class="playbook-priority is-watch">观察</span></td><td>PCB/芯片/通信</td><td>强势轮动</td><td>大亚圣象、澳弘电子、沃格光电</td><td>低开承接后看强回流</td><td>大亚圣象率先5板且板块补首板</td><td>ETF与容量票再冲高回落</td><td>大亚圣象仅条件观察，ETF小仓</td></tr><tr><td><span class="playbook-priority is-watch">观察</span></td><td>房地产</td><td>低位切换</td><td>我爱我家、华远控股、华丽家族</td><td>看前排溢价</td><td>前排晋级且新增首板助攻</td><td>万科A等继续炸板、尾盘板无溢价</td><td>不作为优先方向</td></tr><tr><td><span class="playbook-priority is-risk">回避</span></td><td>医药/高位断板</td><td>退潮与筹码松动</td><td>南华生物、新华制药、华瓷股份</td><td>先止跌再谈修复</td><td>断板票主动反包并带板块</td><td>低开低走、补跌扩散</td><td>处理持仓，不新增</td></tr></tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <div class="next-day-playbook__step" id="chapter-12-十二-明日核心票弱转强-转强判定-板块预期细化表-3ffd87" data-core-stock-checks>
-    <div class="next-day-playbook__step-head">
-      <span>02</span>
-      <div><small>CORE STOCK CHECK</small><h4>十二、核心票弱转强/转强判定</h4></div>
-    </div>
-    <p class="next-day-playbook__guide">只在大盘风险预算与板块强度通过后执行个股预案。主动性、板块跟随和失败条件必须同时核对。</p>
-    <div class="table-shell next-day-playbook__table-shell" id="next-day-core-stock-checks">
-      <table class="next-day-playbook__table is-core">
-        <thead><tr><th>板块</th><th>核心票</th><th>预期定位</th><th>今日状态</th><th>开盘预期</th><th>弱转强/转强判定</th><th>板块确认</th><th>失败信号</th><th>操作预案</th></tr></thead>
-        <tbody><tr><td>传媒/AI/重组</td><td>新华文轩</td><td>4板并列最高、第一候选</td><td>4连板/T字换手不足</td><td>竞价不弱，适度放量而非爆量</td><td>健康换手后率先封5板</td><td>新华传媒稳定、传媒/AI新增助攻</td><td>爆量失控、被大亚圣象卡位</td><td>只等板上确认，不半路</td></tr><tr><td>PCB/科技硬件</td><td>大亚圣象</td><td>4板并列最高、条件候选</td><td>4连板</td><td>分歧承接，不宜一致爆量</td><td>先于科技回流封5板</td><td>PCB、芯片、通信同步强回流</td><td>科技无扩散或失去主动性</td><td>只观察，不预埋</td></tr><tr><td>医药</td><td>南华生物</td><td>当前持仓处理</td><td>4进5失败，收涨5.37%</td><td>平开/小低开承接；高开主动反包更优</td><td>主动封板并带医药止跌</td><td>医药前排同步修复</td><td>冲高不封、弱开弱走</td><td>条件单分批减仓或退出</td></tr><tr><td>传媒高度锚</td><td>新华传媒</td><td>3板一字助攻</td><td>3连板一字</td><td>封单稳定且不明显撤单</td><td>继续一字或开板强回封</td><td>能反推新华文轩和传媒回流</td><td>撤单、开板无承接</td><td>只观察，不参与无量一字</td></tr></tbody>
-      </table>
-    </div>
-
-    <div class="next-day-playbook__subsection" id="next-day-scenario-playbooks" data-scenario-playbooks>
-      <div class="next-day-playbook__subhead"><h5>情景推演与执行预案</h5><p>盘前不猜唯一答案，盘中按触发条件切换剧本。</p></div>
-      <div class="scenario-playbook-grid"><article class="scenario-playbook-card"><div class="scenario-playbook-card__head"><h6>负反馈收敛、核心修复</h6><span>主场景</span></div><dl><dt>大盘触发</dt><dd>指数稳住5日线，跌停不再扩大。</dd><dt>板块验证</dt><dd>传媒或科技至少一条主动回流。</dd><dt>核心动作</dt><dd>先处理南华生物，再等新华文轩板上确认。</dd><dt>仓位计划</dt><dd>不超过四至五成。</dd><dt>切换条件</dt><dd>两只4板均失去承接。</dd></dl></article><article class="scenario-playbook-card"><div class="scenario-playbook-card__head"><h6>科技接棒</h6><span>次场景</span></div><dl><dt>大盘触发</dt><dd>指数稳定但高位情绪仍弱。</dd><dt>板块验证</dt><dd>PCB/芯片/通信低开强回流。</dd><dt>核心动作</dt><dd>大亚圣象观察5板，ETF小仓替代后排。</dd><dt>仓位计划</dt><dd>轻仓试错。</dd><dt>切换条件</dt><dd>科技再次冲高回落。</dd></dl></article><article class="scenario-playbook-card"><div class="scenario-playbook-card__head"><h6>传媒强修复</h6><span>低概率</span></div><dl><dt>大盘触发</dt><dd>成交明显回流、封板率快速提升。</dd><dt>板块验证</dt><dd>新华文轩5板并带AI应用扩散。</dd><dt>核心动作</dt><dd>只做唯一核心板上确认。</dd><dt>仓位计划</dt><dd>确认后仍不超过五成。</dd><dt>切换条件</dt><dd>新华传媒撤单或新华文轩爆量。</dd></dl></article><article class="scenario-playbook-card is-risk"><div class="scenario-playbook-card__head"><h6>退潮延续</h6><span>风险场景</span></div><dl><dt>大盘触发</dt><dd>跌停与炸板继续增加。</dd><dt>板块验证</dt><dd>两只4板同时断板，断板票继续补跌。</dd><dt>核心动作</dt><dd>退出南华生物，停止高位博弈。</dd><dt>仓位计划</dt><dd>降至防守仓位或空仓。</dd><dt>切换条件</dt><dd>负反馈锚开板回升、唯一核心主动封板。</dd></dl></article></div>
-      <div class="playbook-execution-order">
-        <strong>执行顺序</strong>
-        <ol><li>先看闽东电力和高位断板票是否止跌。</li><li>再看传媒/AI或科技硬件谁形成板块回流。</li><li>处理南华生物旧仓，只等新华文轩板上确认。</li><li>无唯一核心就空仓，总仓位不超过五成。</li></ol>
-      </div>
-    </div>
-  </div>
+<section class="section-card" data-chapter-number="10" data-phase="playbook" id="chapter-10-十-核心关键票汇总-明日个股预案-1c8c87"><h2 class="chapter-title"><span class="chapter-number">09</span><span>明日作战推演总纲（大盘 → 板块 → 核心票）</span></h2>
+<section class="next-day-playbook" data-date="2026-09-23" data-next-day-playbook="">
+<header class="next-day-playbook__header">
+<div>
+<span class="next-day-playbook__kicker">NEXT-DAY PLAYBOOK</span>
+<h3>明日作战推演</h3>
+</div>
+<p>9月24日按大盘承接、负反馈收敛、板块回流、核心票板上确认依次执行；先处理南华生物，再决定是否开新仓。</p>
+</header>
+<ol aria-label="明日决策顺序" class="next-day-playbook__flow">
+<li><span>01</span>大盘定风险预算</li>
+<li><span>02</span>板块定进攻方向</li>
+<li><span>03</span>核心票定触发动作</li>
+<li><span>04</span>情景切换定仓位</li>
+</ol>
+<div class="next-day-playbook__step" data-market-outlook="" id="chapter-11-十一-大盘明日预期节奏-78977f">
+<div class="next-day-playbook__step-head">
+<span>01</span>
+<div><small>MARKET FIRST</small><h4>十一、大盘与板块题材预期节奏</h4></div>
+</div>
+<div class="market-outlook-grid" id="next-day-market-outlook">
+<article><span>基准预期</span><p>指数横盘震荡，情绪存在退潮后的首次修复窗口。</p></article>
+<article class="is-positive"><span>转强确认</span><p>成交回流、跌停收敛、昨日涨停收益和封板率同步改善。</p></article>
+<article class="is-risk"><span>风险证伪</span><p>闽东电力继续封死跌停、两只4板均断板、炸板继续扩大。</p></article>
+<article class="is-action"><span>执行边界</span><p>总仓位上限四至五成；不半路、不补弱、无确认就空仓。</p></article>
+</div>
+<div class="next-day-playbook__subsection" data-theme-outlook="" id="next-day-theme-outlook">
+<div class="next-day-playbook__subhead"><h5>板块题材预期节奏</h5><p>先验证题材强度，再把动作下沉到核心票。</p></div>
+<div class="table-shell next-day-playbook__table-shell">
+<table class="next-day-playbook__table">
+<thead><tr><th>优先级</th><th>板块题材</th><th>当前节奏</th><th>核心锚</th><th>明日预期</th><th>转强确认</th><th>证伪信号</th><th>执行</th></tr></thead>
+<tbody><tr><td><span class="playbook-priority">主攻</span></td><td>传媒/AI应用/重组</td><td>高潮后强分歧</td><td>新华文轩、新华传媒、南威软件</td><td>看首次修复</td><td>新华文轩健康换手5板并带后排回流</td><td>新华传媒撤单、AI应用无扩散</td><td>只做新华文轩板上确认</td></tr><tr><td><span class="playbook-priority is-watch">观察</span></td><td>PCB/芯片/通信</td><td>强势轮动</td><td>大亚圣象、澳弘电子、沃格光电</td><td>低开承接后看强回流</td><td>大亚圣象率先5板且板块补首板</td><td>ETF与容量票再冲高回落</td><td>大亚圣象仅条件观察，ETF小仓</td></tr><tr><td><span class="playbook-priority is-watch">观察</span></td><td>房地产</td><td>低位切换</td><td>我爱我家、华远控股、华丽家族</td><td>看前排溢价</td><td>前排晋级且新增首板助攻</td><td>万科A等继续炸板、尾盘板无溢价</td><td>不作为优先方向</td></tr><tr><td><span class="playbook-priority is-risk">回避</span></td><td>医药/高位断板</td><td>退潮与筹码松动</td><td>南华生物、新华制药、华瓷股份</td><td>先止跌再谈修复</td><td>断板票主动反包并带板块</td><td>低开低走、补跌扩散</td><td>处理持仓，不新增</td></tr></tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="next-day-playbook__step" data-core-stock-checks="" id="chapter-12-十二-明日核心票弱转强-转强判定-板块预期细化表-3ffd87">
+<div class="next-day-playbook__step-head">
+<span>02</span>
+<div><small>CORE STOCK CHECK</small><h4>十二、核心票弱转强/转强判定</h4></div>
+</div>
+<p class="next-day-playbook__guide">只在大盘风险预算与板块强度通过后执行个股预案。主动性、板块跟随和失败条件必须同时核对。</p>
+<div class="table-shell next-day-playbook__table-shell" id="next-day-core-stock-checks">
+<table class="next-day-playbook__table is-core">
+<thead><tr><th>板块</th><th>核心票</th><th>预期定位</th><th>今日状态</th><th>开盘预期</th><th>弱转强/转强判定</th><th>板块确认</th><th>失败信号</th><th>操作预案</th></tr></thead>
+<tbody><tr><td>传媒/AI/重组</td><td>新华文轩</td><td>4板并列最高、第一候选</td><td>4连板/T字换手不足</td><td>竞价不弱，适度放量而非爆量</td><td>健康换手后率先封5板</td><td>新华传媒稳定、传媒/AI新增助攻</td><td>爆量失控、被大亚圣象卡位</td><td>只等板上确认，不半路</td></tr><tr><td>PCB/科技硬件</td><td>大亚圣象</td><td>4板并列最高、条件候选</td><td>4连板</td><td>分歧承接，不宜一致爆量</td><td>先于科技回流封5板</td><td>PCB、芯片、通信同步强回流</td><td>科技无扩散或失去主动性</td><td>只观察，不预埋</td></tr><tr><td>医药</td><td>南华生物</td><td>当前持仓处理</td><td>4进5失败，收涨5.37%</td><td>平开/小低开承接；高开主动反包更优</td><td>主动封板并带医药止跌</td><td>医药前排同步修复</td><td>冲高不封、弱开弱走</td><td>条件单分批减仓或退出</td></tr><tr><td>传媒高度锚</td><td>新华传媒</td><td>3板一字助攻</td><td>3连板一字</td><td>封单稳定且不明显撤单</td><td>继续一字或开板强回封</td><td>能反推新华文轩和传媒回流</td><td>撤单、开板无承接</td><td>只观察，不参与无量一字</td></tr></tbody>
+</table>
+</div>
+<div class="next-day-playbook__subsection" data-scenario-playbooks="" id="next-day-scenario-playbooks">
+<div class="next-day-playbook__subhead"><h5>情景推演与执行预案</h5><p>盘前不猜唯一答案，盘中按触发条件切换剧本。</p></div>
+<div class="scenario-playbook-grid"><article class="scenario-playbook-card"><div class="scenario-playbook-card__head"><h6>负反馈收敛、核心修复</h6><span>主场景</span></div><dl><dt>大盘触发</dt><dd>指数稳住5日线，跌停不再扩大。</dd><dt>板块验证</dt><dd>传媒或科技至少一条主动回流。</dd><dt>核心动作</dt><dd>先处理南华生物，再等新华文轩板上确认。</dd><dt>仓位计划</dt><dd>不超过四至五成。</dd><dt>切换条件</dt><dd>两只4板均失去承接。</dd></dl></article><article class="scenario-playbook-card"><div class="scenario-playbook-card__head"><h6>科技接棒</h6><span>次场景</span></div><dl><dt>大盘触发</dt><dd>指数稳定但高位情绪仍弱。</dd><dt>板块验证</dt><dd>PCB/芯片/通信低开强回流。</dd><dt>核心动作</dt><dd>大亚圣象观察5板，ETF小仓替代后排。</dd><dt>仓位计划</dt><dd>轻仓试错。</dd><dt>切换条件</dt><dd>科技再次冲高回落。</dd></dl></article><article class="scenario-playbook-card"><div class="scenario-playbook-card__head"><h6>传媒强修复</h6><span>低概率</span></div><dl><dt>大盘触发</dt><dd>成交明显回流、封板率快速提升。</dd><dt>板块验证</dt><dd>新华文轩5板并带AI应用扩散。</dd><dt>核心动作</dt><dd>只做唯一核心板上确认。</dd><dt>仓位计划</dt><dd>确认后仍不超过五成。</dd><dt>切换条件</dt><dd>新华传媒撤单或新华文轩爆量。</dd></dl></article><article class="scenario-playbook-card is-risk"><div class="scenario-playbook-card__head"><h6>退潮延续</h6><span>风险场景</span></div><dl><dt>大盘触发</dt><dd>跌停与炸板继续增加。</dd><dt>板块验证</dt><dd>两只4板同时断板，断板票继续补跌。</dd><dt>核心动作</dt><dd>退出南华生物，停止高位博弈。</dd><dt>仓位计划</dt><dd>降至防守仓位或空仓。</dd><dt>切换条件</dt><dd>负反馈锚开板回升、唯一核心主动封板。</dd></dl></article></div>
+<div class="playbook-execution-order">
+<strong>执行顺序</strong>
+<ol><li>先看闽东电力和高位断板票是否止跌。</li><li>再看传媒/AI或科技硬件谁形成板块回流。</li><li>处理南华生物旧仓，只等新华文轩板上确认。</li><li>无唯一核心就空仓，总仓位不超过五成。</li></ol>
+</div>
+</div>
+</div>
 </section>
-
 <style>
 .next-day-playbook{margin-top:18px;border:1px solid rgba(9,83,73,.18);border-top:4px solid #086c62;background:#f8fcfa;color:#173f39;box-shadow:0 16px 36px rgba(25,75,67,.08)}
 .next-day-playbook__header{display:grid;grid-template-columns:minmax(250px,.7fr) minmax(360px,1.3fr);gap:24px;align-items:end;padding:24px 26px 20px;background:#0d4f47;color:#fff}
@@ -488,18 +461,18 @@
 @media(max-width:640px){.next-day-playbook__header,.next-day-playbook__step{padding:18px}.next-day-playbook__flow,.market-outlook-grid{grid-template-columns:1fr}.next-day-playbook__flow li{border-right:0;border-bottom:1px solid #cfe1dc}.next-day-playbook__subhead{display:block}.next-day-playbook__subhead p{margin-top:5px}.playbook-execution-order{grid-template-columns:1fr}.playbook-execution-order ol{grid-template-columns:1fr}}
 </style>
 </section>
-<section class="section-card" id="chapter-13-十三-龙头预备票-最终定稿-c57786" data-phase="playbook" data-chapter-number="13"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">十三、龙头预备票（最终定稿）</h2>
-<h3 id="sub-13-1-一-总龙候选名单-3aea20" class="subchapter-title">（一）总龙候选名单</h3>
+<section class="section-card" data-chapter-number="13" data-phase="playbook" id="chapter-13-十三-龙头预备票-最终定稿-c57786"><div class="section-kicker">Daily Review</div><h2 class="chapter-title"><span class="chapter-number">10</span><span>龙头预备票（最终定稿）</span></h2>
+<h3 class="subchapter-title" id="sub-13-1-一-总龙候选名单-3aea20">（一）总龙候选名单</h3>
 <p class="body-line bullet-line tone-action">核心候选：新华文轩。</p>
 <p class="body-line bullet-line tone-action">条件观察：大亚圣象仅在科技硬件全面强回流时重新评估，不列入主动交易计划。</p>
 <p class="body-line bullet-line">切换候选：暂无；低位二板缺少强题材和完整板块效应。</p>
 <p class="body-line bullet-line">高度锚但暂不作为交易候选：新华传媒。</p>
 <p class="body-line bullet-line">暂不纳入：天威视讯、南威软件、我爱我家、华丽家族、奥佳华。</p>
-<h3 id="sub-13-2-二-总龙唯一性排序-9f94e1" class="subchapter-title">（二）总龙唯一性排序</h3>
+<h3 class="subchapter-title" id="sub-13-2-二-总龙唯一性排序-9f94e1">（二）总龙唯一性排序</h3>
 <p class="body-line tone-action">新华文轩 &gt; 新华传媒（高度锚、不参与） &gt; 大亚圣象（仅条件观察）。</p>
 <p class="body-line tone-action">用户最终计划只主动观察新华文轩。其优势是4板高标、新华与华字辈辨识度、收购催化、文化传媒与AI应用属性，以及相对健康的量能关系；新华传媒负责无量一字打开高度，但目前不提供交易机会。大亚圣象虽同为4板，因科技仅是轮动回流，暂不作为主动计划。</p>
-<aside class="leader-competition-watch" id="leader-competition-watch" data-leader-competition-watch>
-  <style>
+<aside class="leader-competition-watch" data-leader-competition-watch="" id="leader-competition-watch">
+<style>
     .leader-competition-watch{margin:16px 0 18px;border:1px solid rgba(13,112,99,.2);border-left:4px solid #0d7063;background:#f7fbfa}
     .leader-competition-watch__head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:14px 16px;border-bottom:1px solid rgba(13,112,99,.14)}
     .leader-competition-watch__head h4{margin:0;color:#084f47;font-size:18px}
@@ -511,18 +484,17 @@
     .leader-competition-watch__item span{color:#344742;line-height:1.65}
     @media(max-width:760px){.leader-competition-watch__head{display:grid}.leader-competition-watch__grid{grid-template-columns:1fr}.leader-competition-watch__item:nth-child(odd){border-right:0}.leader-competition-watch__item{grid-template-columns:86px 1fr}}
   </style>
-  <div class="leader-competition-watch__head">
-    <h4>卡位观察</h4>
-    <p>二进三、三进四、四进五都是唯一性竞争节点，重点识别低位卡高位与同身位互卡。</p>
-  </div>
-  <div class="leader-competition-watch__grid"><div class="leader-competition-watch__item"><strong>低位卡高位</strong><span>低身位票用更强的主动性、量能和板块带动，争夺并替代高位票的辨识度。</span></div><div class="leader-competition-watch__item"><strong>同身位互卡</strong><span>同板数个股比较先后手、封单、换手、回封质量和后排跟随，不能只看谁先涨停。</span></div><div class="leader-competition-watch__item"><strong>量能护卡</strong><span>晋级票必须用健康换手或放量回封守住地位；缩量硬顶、开板无承接都容易被卡掉。</span></div><div class="leader-competition-watch__item"><strong>败方联动</strong><span>卡位胜出不代表与败方完全脱钩；败方若封死跌停或持续深水，会拖累胜者与同高度情绪。</span></div><div class="leader-competition-watch__item"><strong>执行纪律</strong><span>唯一性未确认前不打板；胜出者转强、败方负反馈可控且板块跟随后，再按龙头预备处理。</span></div></div>
+<div class="leader-competition-watch__head">
+<h4>卡位观察</h4>
+<p>二进三、三进四、四进五都是唯一性竞争节点，重点识别低位卡高位与同身位互卡。</p>
+</div>
+<div class="leader-competition-watch__grid"><div class="leader-competition-watch__item"><strong>低位卡高位</strong><span>低身位票用更强的主动性、量能和板块带动，争夺并替代高位票的辨识度。</span></div><div class="leader-competition-watch__item"><strong>同身位互卡</strong><span>同板数个股比较先后手、封单、换手、回封质量和后排跟随，不能只看谁先涨停。</span></div><div class="leader-competition-watch__item"><strong>量能护卡</strong><span>晋级票必须用健康换手或放量回封守住地位；缩量硬顶、开板无承接都容易被卡掉。</span></div><div class="leader-competition-watch__item"><strong>败方联动</strong><span>卡位胜出不代表与败方完全脱钩；败方若封死跌停或持续深水，会拖累胜者与同高度情绪。</span></div><div class="leader-competition-watch__item"><strong>执行纪律</strong><span>唯一性未确认前不打板；胜出者转强、败方负反馈可控且板块跟随后，再按龙头预备处理。</span></div></div>
 </aside>
-
-<h3 id="sub-13-3-三-龙头七维核验明细-五维-双唯一性-a71302" class="subchapter-title">（三）龙头七维核验明细（五维+双唯一性）</h3>
+<h3 class="subchapter-title" id="sub-13-3-三-龙头七维核验明细-五维-双唯一性-a71302">（三）龙头七维核验明细（五维+双唯一性）</h3>
 <p class="body-line">主动性与领涨性分开看：主动性是先于板块回流、先找方向；领涨性是上板后能带动后排补涨跟随上板。龙头若只有主动回流、没有后排跟随领涨，预期要降级；龙头带不动题材，题材容易死，题材死又会反过来带炸龙头。</p>
-<aside class="leader-uniqueness-note" data-leader-uniqueness-knowledge><div class="leader-uniqueness-note__head"><span>◆ 龙头唯一性</span><h4>同身位唯一性竞争与量能确认</h4></div><ol class="leader-uniqueness-note__list"><li><strong>竞争阶段</strong><span>龙版传媒、大晟文化、欢瑞世纪同处4板时，题材内与跨题材高度唯一性都未确定，先观察、不抢板。</span></li><li><strong>量能门槛</strong><span>连续一字晋级的个股，到4板必须充分放量并完成回封；放不出量或回封弱，最容易在卡位中掉队。</span></li><li><strong>确认买点</strong><span>龙版传媒4板充分放量胜出，5板缩量转强确认；健康路径是两个半放量、一个全放量，再完成转强。</span></li><li><strong>败方反馈</strong><span>同身位竞争结束后，胜者与败者仍处于同一情绪单元。败者可以弱，但不能跌停或持续深水，否则会反向拖累胜者与高标情绪。</span></li><li><strong>七维结论</strong><span>三四板出现多只同身位票时，必须同时比较题材内唯一性与题材之间连板高度唯一性，最终定论前不打板。</span></li></ol></aside>
+<aside class="leader-uniqueness-note" data-leader-uniqueness-knowledge=""><div class="leader-uniqueness-note__head"><span>◆ 龙头唯一性</span><h4>同身位唯一性竞争与量能确认</h4></div><ol class="leader-uniqueness-note__list"><li><strong>竞争阶段</strong><span>龙版传媒、大晟文化、欢瑞世纪同处4板时，题材内与跨题材高度唯一性都未确定，先观察、不抢板。</span></li><li><strong>量能门槛</strong><span>连续一字晋级的个股，到4板必须充分放量并完成回封；放不出量或回封弱，最容易在卡位中掉队。</span></li><li><strong>确认买点</strong><span>龙版传媒4板充分放量胜出，5板缩量转强确认；健康路径是两个半放量、一个全放量，再完成转强。</span></li><li><strong>败方反馈</strong><span>同身位竞争结束后，胜者与败者仍处于同一情绪单元。败者可以弱，但不能跌停或持续深水，否则会反向拖累胜者与高标情绪。</span></li><li><strong>七维结论</strong><span>三四板出现多只同身位票时，必须同时比较题材内唯一性与题材之间连板高度唯一性，最终定论前不打板。</span></li></ol></aside>
 <div class="table-shell" id="source-table-7"><table class="data-table"><thead><tr><th>标的</th><th>身位</th><th>领涨性</th><th>主动性</th><th>抗跌性</th><th>市场性</th><th>价值性</th><th>题材内唯一性</th><th>题材之间连板高度唯一性</th><th>五维/七维结论</th><th>100%异动监管距离</th><th>题材梯队完整性</th><th>题材持续性</th><th>筹码结构&amp;量能健康度</th></tr></thead><tbody><tr><td>新华文轩</td><td>4板并列最高</td><td>强</td><td>明日需先于传媒回流起势并率先封5板，不能只靠新华传媒反推。</td><td>强</td><td>强</td><td>相对较好</td><td>较强，但受新华传媒一字影响</td><td>否，与大亚圣象并列</td><td>第一候选</td><td>用户估算约2个涨停板空间，6板附近压力增大</td><td>传媒/AI有3板与2板助攻</td><td>分歧后待修复</td><td>首板、二板已放量，三板缩量，四板T字；五板宜温和放量</td></tr><tr><td>大亚圣象</td><td>4板并列最高</td><td>强</td><td>需先于PCB/芯片回流并带动科技首板扩散，才有五板主动性。</td><td>强</td><td>中强</td><td>一般</td><td>PCB高标之一</td><td>否，与新华文轩并列</td><td>条件观察，不列入主动计划</td><td>待核</td><td>PCB首板较多、澳弘电子助攻</td><td>当前较强但轮动快</td><td>今日量能关系尚可，明日需避免爆量</td></tr><tr><td>天威视讯</td><td>2板</td><td>中</td><td>低位一字强度锚，主动性需看开板换手后的承接。</td><td>强</td><td>中</td><td>一般</td><td>低位传媒/算力锚</td><td>否</td><td>强度锚，暂不主动参与</td><td>相对较远，待核</td><td>有新华传媒、新华文轩上方梯队</td><td>取决于AI/传媒修复</td><td>一字板，重点看封单增减</td></tr><tr><td>新华传媒</td><td>3板</td><td>强</td><td>一字高度锚，封单可助攻但主动换手证据不足。</td><td>强</td><td>强</td><td>待核</td><td>重组+传媒高度核心</td><td>否</td><td>高度锚，不宜追</td><td>连续一字，风险累积</td><td>梯队较完整</td><td>取决于重组预期</td><td>无换手，筹码检验不足</td></tr></tbody></table></div>
-<h3 id="sub-13-4-四-明日总龙决胜观察要点-7cac4f" class="subchapter-title">（四）明日总龙决胜观察要点</h3>
+<h3 class="subchapter-title" id="sub-13-4-四-明日总龙决胜观察要点-7cac4f">（四）明日总龙决胜观察要点</h3>
 <p class="body-line">1. 闽东电力是否继续封死跌停；这是所有高位交易的前置条件。</p>
 <p class="body-line">2. 新华文轩是否出现起量或半放量、健康换手并完成5板的板上确认；不做半路。</p>
 <p class="body-line">3. 新华传媒封单是否稳定，并对新华文轩形成明确助攻。</p>
@@ -531,10 +503,10 @@
 <p class="body-line">6. 若两只4板均断板，则取消连板总龙预判；不转做高位断板票，优先处理持仓并等待新的首板周期。</p>
 <p class="body-line tone-action">当日核心交易规则：先处理南华生物旧仓；新仓只等新华文轩5板的板上确认。没有确认就空仓，总仓位不超过五成。</p>
 </section>
-<section class="section-card" id="chapter-14-十四-口述信息全量归档与待确认信息-d62038" data-phase="playbook" data-chapter-number="14"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">十四、口述信息全量归档与待确认信息</h2><details class="archive-disclosure"><summary>口述信息与待确认内容</summary><div class="archive-content">
-<h3 id="sub-14-1-一-口述中已纳入的关键票池-446b2a" class="subchapter-title">（一）口述中已纳入的关键票池</h3>
+<section class="section-card" data-chapter-number="14" data-phase="playbook" id="chapter-14-十四-口述信息全量归档与待确认信息-d62038"><div class="section-kicker">Daily Review</div><h2 class="chapter-title"><span class="chapter-number">11</span><span>口述信息全量归档与待确认信息</span></h2><details class="archive-disclosure"><summary>口述信息与待确认内容</summary><div class="archive-content">
+<h3 class="subchapter-title" id="sub-14-1-一-口述中已纳入的关键票池-446b2a">（一）口述中已纳入的关键票池</h3>
 <p class="body-line">闽东电力、内蒙新华、南华生物、华瓷股份、博通集成、新华文轩、大亚圣象、新华传媒、我爱我家、华丽家族、华媒控股、新华制药、华仁药业、延华智能、百花医药、澳弘电子、天威视讯、奥佳华、南威软件、金健米业、万向德农、沃格光电、江淮汽车、沈鼓集团、凯达重工、瑞斯康达、哈药股份、京东方A、万科A、一鸣食品、中国出版、五洲医疗。</p>
-<h3 id="sub-14-2-二-待确认信息-d5edb4" class="subchapter-title">（二）待确认信息</h3>
+<h3 class="subchapter-title" id="sub-14-2-二-待确认信息-d5edb4">（二）待确认信息</h3>
 <p class="body-line">1. 新华文轩拟以34,574.70万元收购四川民族出版社100%股权已公告，但尚需履行国资监管程序；新华传媒发行股份收购界面财联社事项的后续方案与审批进展也需继续跟踪。</p>
 <p class="body-line">2. “奥红电池”按当日梯队高置信度规范为“澳弘电子”；“伯通集成”规范为“博通集成”；“华煤控股”规范为“华媒控股”；“研华智能”结合前一日梯队规范为“延华智能”。</p>
 <p class="body-line">3. “C神股”结合人气榜暂按“C沈鼓/沈鼓集团”理解。</p>
@@ -552,21 +524,18 @@
 <p class="body-line">15. 口述“五洲传/五洲医疗12cm”按上下文规范为“五洲医疗盘中约-12%”；公开报道盘中最大回调约11.56%。</p>
 <p class="body-line">16. 本文为复盘与次日验证计划，不构成投资建议。</p>
 </div></details></section>
+<div class="phase-divider" data-tone="warm" id="phase-execution"><span>PHASE 04</span><strong>交易执行</strong><p>把战略落到进场、离场、仓位与最大亏损，盘中只按条件行动。</p></div>
+<section class="section-card plan-section" data-chapter-number="15" data-phase="execution" id="operation-plan">
+<div class="section-kicker">Plan Before Trade</div>
+<h2 class="chapter-title"><span class="chapter-number">12</span><span>今日操作计划</span></h2>
+<p class="body-line tone-action">复盘只是在找自己舒服的解释时，会偏离交易系统。这个模块固定把“进场条件、离场条件、最多亏多少”写到桌面上，先复盘过程，再讨论结果。</p>
+<section class="operation-strategy-outline" data-operation-strategy-outline="" id="operation-strategy-outline">
+<header class="operation-strategy-outline__header">
 
-<div class="phase-divider" id="phase-execution" data-tone="warm"><span>PHASE 04</span><strong>交易执行</strong><p>把战略落到进场、离场、仓位与最大亏损，盘中只按条件行动。</p></div>
-<section class="section-card plan-section" id="operation-plan" data-phase="execution" data-chapter-number="15">
-  <div class="section-kicker">Plan Before Trade</div>
-  <h2 class="chapter-title">十五、今日操作计划</h2>
-  <p class="body-line tone-action">复盘只是在找自己舒服的解释时，会偏离交易系统。这个模块固定把“进场条件、离场条件、最多亏多少”写到桌面上，先复盘过程，再讨论结果。</p>
-
-<section class="operation-strategy-outline" id="operation-strategy-outline" data-operation-strategy-outline>
-  <header class="operation-strategy-outline__header">
-    <div><span>PLAN BEFORE TRADE</span><h3>明日战略总纲</h3></div>
-    <p>先处理旧仓，再确认唯一核心。</p>
-  </header>
-  <ol class="operation-strategy-outline__grid"><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第一</span><strong>处理南华生物</strong><p>冲高不封则分批减仓，弱开弱走不补仓。</p></li><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第二</span><strong>先看负反馈</strong><p>闽东电力与高位断板票必须先止跌。</p></li><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第三</span><strong>等待5板确认</strong><p>新华文轩只做板上确认，大亚圣象仅条件观察。</p></li><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第四</span><strong>控制总仓位</strong><p>不半路、不补弱，无核心就空仓，仓位不超过五成。</p></li></ol>
+<p>先处理旧仓，再确认唯一核心。</p>
+</header>
+<ol class="operation-strategy-outline__grid"><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第一</span><strong>处理南华生物</strong><p>冲高不封则分批减仓，弱开弱走不补仓。</p></li><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第二</span><strong>先看负反馈</strong><p>闽东电力与高位断板票必须先止跌。</p></li><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第三</span><strong>等待5板确认</strong><p>新华文轩只做板上确认，大亚圣象仅条件观察。</p></li><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第四</span><strong>控制总仓位</strong><p>不半路、不补弱，无核心就空仓，仓位不超过五成。</p></li></ol>
 </section>
-
 <style>
 .operation-strategy-outline{margin:16px 0 24px;border-top:3px solid #0b7166;border-bottom:1px solid #d6e4e0;background:#fffaf0;color:#173e38}
 .operation-strategy-outline__header{display:flex;align-items:end;justify-content:space-between;gap:18px;padding:16px 18px;background:#123f39;color:#fff}
@@ -576,55 +545,49 @@
 @media(max-width:650px){.operation-strategy-outline__header{display:block}.operation-strategy-outline__header p{margin-top:7px;text-align:left}.operation-strategy-outline__grid{grid-template-columns:1fr}.operation-strategy-outline__item{border-right:0;border-bottom:1px solid #e8dfcc}.operation-strategy-outline__item:last-child{border-bottom:0}}
 </style>
 
-  <h3 id="operation-kiss" class="subchapter-title">操作与情绪复盘（KISS模型）</h3>
-  <div class="kiss-grid" data-kiss-three-section><article class="kiss-card"><span>今日操作结果</span><p>缩量冰点里没有乱追科技反抽，聚焦医药总龙哈药股份，方向和标的选择正确。</p></article><article class="kiss-card"><span>核心失误</span><p>昨天哈药股份龙头地位确认更早，但没有在更舒服的位置上足仓；今天再上仓，确认度更高但性价比下降。</p></article><article class="kiss-card"><span>核心反思</span><p>明天只按预期表处理：一字或大高开快速封板才符合预期，低开、平开、冲板失败或炸板不回封先降风险。</p></article></div>
 
-  <h3 id="second-review-2026-07-22" class="subchapter-title">盘后二次复盘：退潮后的首次修复只等确认</h3>
-  <div class="kiss-grid second-review-grid"><article class="kiss-card"><span>今日做对</span><p>内蒙新华用三组条件单分批退出；南华生物分批试仓、走弱停买；总仓位保持两成多。</p></article><article class="kiss-card"><span>核心问题</span><p>南华生物的高标地位不能抵消退潮、爆量和板块弱化，均线承接只够支持试错。</p></article><article class="kiss-card"><span>明日先看负反馈</span><p>先看闽东电力能否开板、高位断板票是否止跌，再看4板双核心能否晋级。</p></article><article class="kiss-card"><span>修复不是默认</span><p>只有涨停股次日收益、接板收益和封板率同步改善，才把修复视为成立。</p></article><article class="kiss-card"><span>执行纪律</span><p>先处理南华生物旧仓；新华文轩只等5板板上确认，不半路、不补弱、不超过五成仓。</p></article></div>
-
-<h3 id="theme-rhythm-run" class="subchapter-title">题材节奏运行</h3>
-  <div class="theme-rhythm-run-grid"><section class="theme-rhythm-stage"><h4>一、首日启动爆发</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>两个以上一字定方向</span><p>题材首日启动时，最好至少有两个以上一字板把方向钉住，说明资金共识不是单票脉冲。</p></article><article class="kiss-card"><span>存在身位领先龙头</span><p>题材内部最好有一个身位领先的龙头，用它锚定题材高度、分歧承接和次日预期。</p></article><article class="kiss-card"><span>容量和连板梯队存在</span><p>题材不能只有小票脉冲，要同时看到容量票、中军或趋势票，以及连板梯队的完整性。</p></article><article class="kiss-card"><span>逻辑正宗且越新越好</span><p>题材逻辑要正宗，最好是新逻辑、新催化、新叙事；旧题材借消息反抽要主动降级。</p></article></div></section><section class="theme-rhythm-stage"><h4>二、次日分化抗跌</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>前排必须超预期</span><p>首板很多的题材爆发日，次日前排正常应该开一字或极强高开，才能证明资金认可题材强度；如果前排都开不出一字，说明题材强度低于预期，要降低接力仓位。</p></article><article class="kiss-card"><span>后排要继续补首板</span><p>爆发次日不能只靠昨天的前排硬顶，后排还应该有新的首板继续顶出来，维持板块热度和扩散强度；如果没有新增首板，说明题材热度开始衰减。</p></article><article class="kiss-card"><span>分化日看前排封单与后排扩散</span><p>强分化不是单纯看涨停数量，而是看前排是否一字锁死、换手前排是否主动回封、后排是否仍有首板补涨；三者同时满足，题材才可能继续走主线。</p></article><article class="kiss-card"><span>不及预期时快速降级</span><p>如果前排不一字、后排无新增首板、核心开盘后承接弱，就把题材从主攻降级为轮动套利，不再按高潮延续去重仓追高。</p></article></div></section><section class="theme-rhythm-stage"><h4>三、后续轮动节奏</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>前排不断抗跌领涨</span><p>主升题材里，前排核心要不断抗跌、领涨、主动修复，不能只靠后排乱冲维持表面热度。</p></article><article class="kiss-card"><span>后排不断首板助攻</span><p>后排要持续有新首板补涨，给前排提供题材扩散和情绪助攻，说明资金仍愿意在板块内挖掘。</p></article><article class="kiss-card"><span>前后排脱节不严重</span><p>前排强、后排全崩，说明题材只剩抱团；后排强、前排不强，说明没有核心。健康主升要前后排节奏相对同步。</p></article><article class="kiss-card"><span>断板仍趋势向上</span><p>前排即使断板，也应该承接健康、趋势向上；只要没有大负反馈，题材仍可能通过轮动和反包维持生命力。</p></article><article class="kiss-card"><span>高位  中位  低位跟上梯队</span><p>一个题材运行的时候，不仅仅是高位连板继续，中位也要有一两个顶住强度，低位也要有几个补首板助攻。中位和低位任意一个断掉、负反馈严重或冲高回落，都是龙头可能断板的吹哨信号。</p></article><article class="kiss-card"><span>题材证伪情况判断</span><p>盯盘时先看前排辨识度，再看后排负反馈。若只是部分前排辨识度回落、龙头仍主动向上，题材只是开始出问题但未完全证伪；若龙头、前排辨识度和后排同分时回落，说明题材整体分歧被确认，龙头也不能独善其身，要按证伪处理。</p></article><article class="kiss-card"><span>高位退潮先看负反馈锚</span><p>闽东电力、内蒙新华、南华生物先止跌，修复交易才有前提。</p></article><article class="kiss-card"><span>两只四板竞争唯一性</span><p>新华文轩与大亚圣象需用主动性、题材助攻和量能质量决出五板唯一高度。</p></article><article class="kiss-card"><span>断板反包必须形成模式</span><p>个别翘板不等于赚钱效应，只有断板票批量止跌、主动反包并带扩散才可升级。</p></article></div></section><section class="theme-rhythm-stage"><h4>四、龙头见顶结束</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>后排跌停吹哨</span><p>题材主升阶段，后排不应该直接跌停；一旦后排出现跌停，就是题材持续性开始见顶的吹哨信号。</p></article><article class="kiss-card"><span>辨识度标的深水</span><p>主升题材里，辨识度标的可以断板，但不应该冲高回落后直接跳到深水；这代表前排正反馈开始转弱。</p></article><article class="kiss-card"><span>前排负反馈不能大</span><p>前排应该持续趋势正反馈，可以分歧、可以断板，但不能出现大跳水、大阴线、深水负反馈。</p></article><article class="kiss-card"><span>后排负反馈不能极端</span><p>后排可以弱，但不能出现跌停这种极端负反馈；后排跌停扩散，说明资金已经开始从题材内部撤退。</p></article><article class="kiss-card"><span>历史对照看吹哨</span><p>强分化日不一定结束，关键看有没有跌停和辨识度深水。比如医药强分化但无跌停时还能回流；等后排跌停出现，龙头高度就容易接近尾声。</p></article><article class="kiss-card"><span>执行上快速降级</span><p>当前排辨识度走弱叠加后排跌停，主升预期要立刻降级为退潮预警；不再按龙头加速处理，只做减仓、止盈或离场。</p></article></div></section></div>
-
-  <h3 id="operation-process-review" class="subchapter-title">正确复盘重点</h3>
-  <p class="body-line tone-action">一笔交易从决定进场到决定离场，中间到底做了哪些动作？看到什么具体信号准备动手？这个信号是系统提前规定，还是盘中临场决定？</p>
-  <p class="body-line tone-risk">进场之后是否设置止损，盘中有没有因为害怕手动下移止损？止盈是进场前规划好，还是利润回吐后慌张平掉？不要只盯结果，要盯过程。</p>
-  <h3 id="operation-plan-three-questions" class="subchapter-title">书面计划三问</h3>
-  <div class="question-grid"><article>我在什么条件下进场？</article><article>对了怎么办，错了怎么办？</article><article>这笔最多亏多少？</article></div>
-  <h3 id="editable-operation-table" class="subchapter-title">可编辑交易计划表</h3>
-  <section class="plan-editor" data-operation-plan data-plan-cache-sanitizer="v1">
-    <div class="plan-toolbar">
-      <button type="button" data-add-row="目前持仓票">新增持仓票</button>
-      <button type="button" data-add-row="计划内票">新增计划内票</button>
-      <button type="button" data-export-plan>导出CSV</button>
-      <button type="button" data-reset-plan>恢复默认</button>
-      <span class="plan-save-status" data-save-status>本地已保存</span>
-    </div>
-    <div class="plan-table-wrap"><table class="plan-table">
-      <thead><tr><th>类型</th><th>标的</th><th>个股预期定位</th><th>隔日操作策略</th><th>什么条件进场</th><th>什么条件离场</th><th>最多亏多少</th><th>备注</th><th>操作</th></tr></thead>
-      <tbody data-plan-body></tbody>
-    </table></div>
-  </section>
-  <h3 id="holding-handling-table" class="subchapter-title">持仓处理计划表</h3>
-  <section class="holding-plan-editor" data-holding-plan>
-    <div class="plan-toolbar">
-      <button type="button" data-add-holding-row>新增持仓处理</button>
-      <button type="button" data-export-holding>导出CSV</button>
-      <button type="button" data-reset-holding>恢复默认</button>
-      <span class="plan-save-status" data-holding-save-status>本地已保存</span>
-    </div>
-    <div class="holding-table-wrap"><table class="holding-table">
-      <thead><tr><th>题材</th><th>标的</th><th>仓位比例</th><th>预期定位</th><th>当日涨幅</th><th>封板状态</th><th>隔日开盘预期</th><th>隔日分时预期</th><th>隔日操作策略</th><th>当日题材情况</th><th>隔日题材预期</th><th>止损条件</th><th>操作</th></tr></thead>
-      <tbody data-holding-plan-body></tbody>
-    </table></div>
-  </section>
-  <script type="application/json" data-plan-defaults>[{&quot;type&quot;: &quot;目前持仓票&quot;, &quot;stock&quot;: &quot;南华生物&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;已有持仓，不追加；只有医药同步修复、个股主动反包且封板质量可靠时保留小博弈仓。&quot;, &quot;exit&quot;: &quot;冲高不能主动封板则分批减仓；低开走弱、医药无修复或反包失败即退出。&quot;, &quot;maxLoss&quot;: &quot;盘前填写单票最大亏损和条件单价格；不得用继续补仓替代止损。&quot;, &quot;note&quot;: &quot;先处理旧仓。&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;新华文轩&quot;, &quot;position&quot;: [&quot;龙头预备&quot;], &quot;nextStrategy&quot;: [&quot;龙头核心做T或格局&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;适度放量、健康换手后率先完成5板，新华传媒封单稳定并带传媒/AI应用回流；只等板上确认。&quot;, &quot;exit&quot;: &quot;半路不追；爆量失控、被大亚圣象卡位、新华传媒撤单或板块无助攻则取消。&quot;, &quot;maxLoss&quot;: &quot;确认仓失败即撤，总仓位上限四至五成。&quot;, &quot;note&quot;: &quot;唯一主动计划。&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;大亚圣象&quot;, &quot;position&quot;: [&quot;观察试错&quot;, &quot;龙头预备&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;PCB、复合铜箔、芯片、通信全面强回流，个股率先5板并形成后排涨停助攻。&quot;, &quot;exit&quot;: &quot;科技仅轮动、ETF继续冲高回落，或与新华文轩PK失去主动性。&quot;, &quot;maxLoss&quot;: &quot;只作条件观察，不主动预埋。&quot;, &quot;note&quot;: &quot;科技回流剧本。&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;新华传媒&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;走弱止损&quot;], &quot;entry&quot;: &quot;只观察一字封单和首次开板承接，不参与无量一字。&quot;, &quot;exit&quot;: &quot;封单明显撤退、开板无承接或不能对新华文轩形成助攻。&quot;, &quot;maxLoss&quot;: &quot;不作为主动交易候选。&quot;, &quot;note&quot;: &quot;空间高度锚。&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;半导体ETF（待确认代码）&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;低开且芯片、通信、算力核心同步承接，趋势未破时小仓观察。&quot;, &quot;exit&quot;: &quot;高开一致先兑现；再度冲高回落或板块无涨停扩散即减仓。&quot;, &quot;maxLoss&quot;: &quot;盘前确认ETF代码、仓位上限和最大亏损。&quot;, &quot;note&quot;: &quot;科技轮动工具。&quot;}]</script>
-  <script type="application/json" data-holding-defaults>[{&quot;theme&quot;: &quot;医药&quot;, &quot;stock&quot;: &quot;南华生物&quot;, &quot;positionSize&quot;: &quot;待填（总仓位两成多）&quot;, &quot;position&quot;: &quot;高标断板后的持仓处理&quot;, &quot;dayGain&quot;: &quot;+5.37%&quot;, &quot;limitStatus&quot;: &quot;4进5失败，未封板&quot;, &quot;nextOpen&quot;: &quot;平开或小低开有承接；高开主动反包更优&quot;, &quot;nextIntraday&quot;: &quot;冲高需主动封板；弱开弱走不补仓&quot;, &quot;nextStrategy&quot;: &quot;冲高不能主动封板则条件单分批减仓；医药无修复或反包失败即退出&quot;, &quot;themeToday&quot;: &quot;医疗强度-84，高位与中位负反馈明显&quot;, &quot;themeNext&quot;: &quot;先止跌再谈修复，不预设直接重启主升&quot;, &quot;stopLoss&quot;: &quot;盘前量化最大亏损和退出价格；走弱停止加仓并执行止损&quot;}]</script>
+<h3 class="subchapter-title" id="second-review-2026-07-22">盘后二次复盘：退潮后的首次修复只等确认</h3>
+<div class="kiss-grid second-review-grid"><article class="kiss-card"><span>今日做对</span><p>内蒙新华用三组条件单分批退出；南华生物分批试仓、走弱停买；总仓位保持两成多。</p></article><article class="kiss-card"><span>核心问题</span><p>南华生物的高标地位不能抵消退潮、爆量和板块弱化，均线承接只够支持试错。</p></article><article class="kiss-card"><span>明日先看负反馈</span><p>先看闽东电力能否开板、高位断板票是否止跌，再看4板双核心能否晋级。</p></article><article class="kiss-card"><span>修复不是默认</span><p>只有涨停股次日收益、接板收益和封板率同步改善，才把修复视为成立。</p></article><article class="kiss-card"><span>执行纪律</span><p>先处理南华生物旧仓；新华文轩只等5板板上确认，不半路、不补弱、不超过五成仓。</p></article></div>
+<h3 class="subchapter-title" id="theme-rhythm-run">题材节奏运行</h3>
+<div class="theme-rhythm-run-grid"><section class="theme-rhythm-stage"><h4>一、首日启动爆发</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>两个以上一字定方向</span><p>题材首日启动时，最好至少有两个以上一字板把方向钉住，说明资金共识不是单票脉冲。</p></article><article class="kiss-card"><span>存在身位领先龙头</span><p>题材内部最好有一个身位领先的龙头，用它锚定题材高度、分歧承接和次日预期。</p></article><article class="kiss-card"><span>容量和连板梯队存在</span><p>题材不能只有小票脉冲，要同时看到容量票、中军或趋势票，以及连板梯队的完整性。</p></article><article class="kiss-card"><span>逻辑正宗且越新越好</span><p>题材逻辑要正宗，最好是新逻辑、新催化、新叙事；旧题材借消息反抽要主动降级。</p></article></div></section><section class="theme-rhythm-stage"><h4>二、次日分化抗跌</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>前排必须超预期</span><p>首板很多的题材爆发日，次日前排正常应该开一字或极强高开，才能证明资金认可题材强度；如果前排都开不出一字，说明题材强度低于预期，要降低接力仓位。</p></article><article class="kiss-card"><span>后排要继续补首板</span><p>爆发次日不能只靠昨天的前排硬顶，后排还应该有新的首板继续顶出来，维持板块热度和扩散强度；如果没有新增首板，说明题材热度开始衰减。</p></article><article class="kiss-card"><span>分化日看前排封单与后排扩散</span><p>强分化不是单纯看涨停数量，而是看前排是否一字锁死、换手前排是否主动回封、后排是否仍有首板补涨；三者同时满足，题材才可能继续走主线。</p></article><article class="kiss-card"><span>不及预期时快速降级</span><p>如果前排不一字、后排无新增首板、核心开盘后承接弱，就把题材从主攻降级为轮动套利，不再按高潮延续去重仓追高。</p></article></div></section><section class="theme-rhythm-stage"><h4>三、后续轮动节奏</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>前排不断抗跌领涨</span><p>主升题材里，前排核心要不断抗跌、领涨、主动修复，不能只靠后排乱冲维持表面热度。</p></article><article class="kiss-card"><span>后排不断首板助攻</span><p>后排要持续有新首板补涨，给前排提供题材扩散和情绪助攻，说明资金仍愿意在板块内挖掘。</p></article><article class="kiss-card"><span>前后排脱节不严重</span><p>前排强、后排全崩，说明题材只剩抱团；后排强、前排不强，说明没有核心。健康主升要前后排节奏相对同步。</p></article><article class="kiss-card"><span>断板仍趋势向上</span><p>前排即使断板，也应该承接健康、趋势向上；只要没有大负反馈，题材仍可能通过轮动和反包维持生命力。</p></article><article class="kiss-card"><span>高位  中位  低位跟上梯队</span><p>一个题材运行的时候，不仅仅是高位连板继续，中位也要有一两个顶住强度，低位也要有几个补首板助攻。中位和低位任意一个断掉、负反馈严重或冲高回落，都是龙头可能断板的吹哨信号。</p></article><article class="kiss-card"><span>题材证伪情况判断</span><p>盯盘时先看前排辨识度，再看后排负反馈。若只是部分前排辨识度回落、龙头仍主动向上，题材只是开始出问题但未完全证伪；若龙头、前排辨识度和后排同分时回落，说明题材整体分歧被确认，龙头也不能独善其身，要按证伪处理。</p></article><article class="kiss-card"><span>高位退潮先看负反馈锚</span><p>闽东电力、内蒙新华、南华生物先止跌，修复交易才有前提。</p></article><article class="kiss-card"><span>两只四板竞争唯一性</span><p>新华文轩与大亚圣象需用主动性、题材助攻和量能质量决出五板唯一高度。</p></article><article class="kiss-card"><span>断板反包必须形成模式</span><p>个别翘板不等于赚钱效应，只有断板票批量止跌、主动反包并带扩散才可升级。</p></article></div></section><section class="theme-rhythm-stage"><h4>四、龙头见顶结束</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>后排跌停吹哨</span><p>题材主升阶段，后排不应该直接跌停；一旦后排出现跌停，就是题材持续性开始见顶的吹哨信号。</p></article><article class="kiss-card"><span>辨识度标的深水</span><p>主升题材里，辨识度标的可以断板，但不应该冲高回落后直接跳到深水；这代表前排正反馈开始转弱。</p></article><article class="kiss-card"><span>前排负反馈不能大</span><p>前排应该持续趋势正反馈，可以分歧、可以断板，但不能出现大跳水、大阴线、深水负反馈。</p></article><article class="kiss-card"><span>后排负反馈不能极端</span><p>后排可以弱，但不能出现跌停这种极端负反馈；后排跌停扩散，说明资金已经开始从题材内部撤退。</p></article><article class="kiss-card"><span>历史对照看吹哨</span><p>强分化日不一定结束，关键看有没有跌停和辨识度深水。比如医药强分化但无跌停时还能回流；等后排跌停出现，龙头高度就容易接近尾声。</p></article><article class="kiss-card"><span>执行上快速降级</span><p>当前排辨识度走弱叠加后排跌停，主升预期要立刻降级为退潮预警；不再按龙头加速处理，只做减仓、止盈或离场。</p></article></div></section></div>
+<h3 class="subchapter-title" id="operation-process-review">正确复盘重点</h3>
+<p class="body-line tone-action">一笔交易从决定进场到决定离场，中间到底做了哪些动作？看到什么具体信号准备动手？这个信号是系统提前规定，还是盘中临场决定？</p>
+<p class="body-line tone-risk">进场之后是否设置止损，盘中有没有因为害怕手动下移止损？止盈是进场前规划好，还是利润回吐后慌张平掉？不要只盯结果，要盯过程。</p>
+<h3 class="subchapter-title" id="operation-plan-three-questions">书面计划三问</h3>
+<div class="question-grid"><article>我在什么条件下进场？</article><article>对了怎么办，错了怎么办？</article><article>这笔最多亏多少？</article></div>
+<h3 class="subchapter-title" id="editable-operation-table">可编辑交易计划表</h3>
+<section class="plan-editor" data-operation-plan="" data-plan-cache-sanitizer="v1">
+<div class="plan-toolbar">
+<button data-add-row="目前持仓票" type="button">新增持仓票</button>
+<button data-add-row="计划内票" type="button">新增计划内票</button>
+<button data-export-plan="" type="button">导出CSV</button>
+<button data-reset-plan="" type="button">恢复默认</button>
+<span class="plan-save-status" data-save-status="">本地已保存</span>
+</div>
+<div class="plan-table-wrap"><table class="plan-table">
+<thead><tr><th>类型</th><th>标的</th><th>个股预期定位</th><th>隔日操作策略</th><th>什么条件进场</th><th>什么条件离场</th><th>最多亏多少</th><th>备注</th><th>操作</th></tr></thead>
+<tbody data-plan-body=""></tbody>
+</table></div>
 </section>
-
-      <p class="source-note">Source Word: C:\Users\Administrator\Desktop\Codex\A股复盘输出\章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx</p>
-    </main>
-  </div>
-
+<h3 class="subchapter-title" id="holding-handling-table">持仓处理计划表</h3>
+<section class="holding-plan-editor" data-holding-plan="">
+<div class="plan-toolbar">
+<button data-add-holding-row="" type="button">新增持仓处理</button>
+<button data-export-holding="" type="button">导出CSV</button>
+<button data-reset-holding="" type="button">恢复默认</button>
+<span class="plan-save-status" data-holding-save-status="">本地已保存</span>
+</div>
+<div class="holding-table-wrap"><table class="holding-table">
+<thead><tr><th>题材</th><th>标的</th><th>仓位比例</th><th>预期定位</th><th>当日涨幅</th><th>封板状态</th><th>隔日开盘预期</th><th>隔日分时预期</th><th>隔日操作策略</th><th>当日题材情况</th><th>隔日题材预期</th><th>止损条件</th><th>操作</th></tr></thead>
+<tbody data-holding-plan-body=""></tbody>
+</table></div>
+</section>
+<script data-plan-defaults="" type="application/json">[{&quot;type&quot;: &quot;目前持仓票&quot;, &quot;stock&quot;: &quot;南华生物&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;已有持仓，不追加；只有医药同步修复、个股主动反包且封板质量可靠时保留小博弈仓。&quot;, &quot;exit&quot;: &quot;冲高不能主动封板则分批减仓；低开走弱、医药无修复或反包失败即退出。&quot;, &quot;maxLoss&quot;: &quot;盘前填写单票最大亏损和条件单价格；不得用继续补仓替代止损。&quot;, &quot;note&quot;: &quot;先处理旧仓。&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;新华文轩&quot;, &quot;position&quot;: [&quot;龙头预备&quot;], &quot;nextStrategy&quot;: [&quot;龙头核心做T或格局&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;适度放量、健康换手后率先完成5板，新华传媒封单稳定并带传媒/AI应用回流；只等板上确认。&quot;, &quot;exit&quot;: &quot;半路不追；爆量失控、被大亚圣象卡位、新华传媒撤单或板块无助攻则取消。&quot;, &quot;maxLoss&quot;: &quot;确认仓失败即撤，总仓位上限四至五成。&quot;, &quot;note&quot;: &quot;唯一主动计划。&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;大亚圣象&quot;, &quot;position&quot;: [&quot;观察试错&quot;, &quot;龙头预备&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;PCB、复合铜箔、芯片、通信全面强回流，个股率先5板并形成后排涨停助攻。&quot;, &quot;exit&quot;: &quot;科技仅轮动、ETF继续冲高回落，或与新华文轩PK失去主动性。&quot;, &quot;maxLoss&quot;: &quot;只作条件观察，不主动预埋。&quot;, &quot;note&quot;: &quot;科技回流剧本。&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;新华传媒&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;走弱止损&quot;], &quot;entry&quot;: &quot;只观察一字封单和首次开板承接，不参与无量一字。&quot;, &quot;exit&quot;: &quot;封单明显撤退、开板无承接或不能对新华文轩形成助攻。&quot;, &quot;maxLoss&quot;: &quot;不作为主动交易候选。&quot;, &quot;note&quot;: &quot;空间高度锚。&quot;}, {&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;半导体ETF（待确认代码）&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;低开且芯片、通信、算力核心同步承接，趋势未破时小仓观察。&quot;, &quot;exit&quot;: &quot;高开一致先兑现；再度冲高回落或板块无涨停扩散即减仓。&quot;, &quot;maxLoss&quot;: &quot;盘前确认ETF代码、仓位上限和最大亏损。&quot;, &quot;note&quot;: &quot;科技轮动工具。&quot;}]</script>
+<script data-holding-defaults="" type="application/json">[{&quot;theme&quot;: &quot;医药&quot;, &quot;stock&quot;: &quot;南华生物&quot;, &quot;positionSize&quot;: &quot;待填（总仓位两成多）&quot;, &quot;position&quot;: &quot;高标断板后的持仓处理&quot;, &quot;dayGain&quot;: &quot;+5.37%&quot;, &quot;limitStatus&quot;: &quot;4进5失败，未封板&quot;, &quot;nextOpen&quot;: &quot;平开或小低开有承接；高开主动反包更优&quot;, &quot;nextIntraday&quot;: &quot;冲高需主动封板；弱开弱走不补仓&quot;, &quot;nextStrategy&quot;: &quot;冲高不能主动封板则条件单分批减仓；医药无修复或反包失败即退出&quot;, &quot;themeToday&quot;: &quot;医疗强度-84，高位与中位负反馈明显&quot;, &quot;themeNext&quot;: &quot;先止跌再谈修复，不预设直接重启主升&quot;, &quot;stopLoss&quot;: &quot;盘前量化最大亏损和退出价格；走弱停止加仓并执行止损&quot;}]</script>
+</section>
+<p class="source-note">Source Word: C:\Users\Administrator\Desktop\Codex\A股复盘输出\章盟主式超短全景复盘（2026.9.23 周三）+ 9.24个股板块预案 - AI文档.docx</p>
+</main>
+</div>
 <script>
 (function(){
   const decodeJson = text => String(text || '').replace(/&quot;/g,'"').replace(/&#34;/g,'"').replace(/&#39;/g,"'").replace(/&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');
@@ -827,9 +790,8 @@
   render(); save();
 })();
 </script>
-
 <!-- Locked canonical detail-page shell: editorial-flow-v3. Daily builds may populate content but must not alter this shell unless the user explicitly requests a redesign. Inject once after all daily modules are rendered. -->
-<style data-detail-workbench-style data-layout-version="editorial-flow-v3">
+<style data-detail-workbench-style="" data-layout-version="editorial-flow-v3">
 :root{--wb-bg:#edf1ef;--wb-paper:#fff;--wb-ink:#172825;--wb-muted:#667571;--wb-line:#d8dfdc;--wb-line-strong:#bcc9c5;--wb-green:#087467;--wb-green-dark:#153f39;--wb-cyan:#e9f5f2;--wb-red:#b84e43;--wb-red-soft:#fbefed;--wb-gold:#a97016;--wb-gold-soft:#fff7e8;--wb-blue:#356f91;--wb-shadow:0 12px 30px rgba(25,50,45,.07)}
 html{scroll-padding-top:18px}.review-workbench{margin:0;background:var(--wb-bg);color:var(--wb-ink);font-family:"Source Han Sans SC","Noto Sans CJK SC","Microsoft YaHei","PingFang SC",sans-serif;letter-spacing:0}.review-workbench::before{content:"";position:fixed;inset:0 0 auto;height:3px;background:#d6ddda;z-index:120}.reading-progress{position:fixed;inset:0 auto auto 0;width:0;height:3px;background:var(--wb-green);z-index:121;transition:width .08s linear}
 .review-workbench .layout{width:min(1720px,calc(100vw - 24px));margin:12px auto 34px;display:grid;grid-template-columns:252px minmax(0,1fr);gap:18px;align-items:start}.review-workbench .content{min-width:0;border:1px solid var(--wb-line);background:var(--wb-paper);box-shadow:var(--wb-shadow)}
@@ -884,7 +846,7 @@ html{scroll-padding-top:18px}.review-workbench{margin:0;background:var(--wb-bg);
 @media(max-width:820px){.review-workbench .layout{width:100%;margin:0}.review-workbench .content{border-radius:0}.review-workbench .hero{padding:24px 17px 20px}.review-workbench .hero h1{display:block;font-size:30px;line-height:1.22}.hero-title-date,.hero-title-main,.hero-title-plan{display:block}.hero-title-main{margin-top:7px}.hero-title-plan{width:max-content;margin-top:10px}.review-workbench .hero-lead{font-size:14px}.review-workbench .hero-stats{gap:6px}.review-workbench .hero-stats span{padding:6px 8px}.review-route{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.review-route a{border-right:1px solid var(--wb-line)!important;border-bottom:1px solid var(--wb-line)!important}.review-workbench #source-table-1{padding:14px}.review-workbench #source-table-1 th{padding:13px 14px;font-size:13px}.phase-divider{grid-template-columns:1fr;padding:13px 17px;gap:4px}.phase-divider span{display:none}.phase-divider p{grid-column:auto}.review-workbench .section-card{padding:24px 15px 28px}.review-workbench .chapter-title{font-size:21px}.review-workbench .body-line{font-size:14px}.review-workbench .recap-summary-modules__header{display:block}.review-workbench .recap-summary-modules__header p{margin-top:6px}.review-workbench .recap-summary-row{grid-template-columns:1fr}.review-workbench .recap-summary-row__title{border-right:0;border-bottom:1px solid var(--wb-line)}.review-workbench .recap-summary-points{grid-template-columns:1fr;padding:11px 12px}.review-workbench .recap-summary-point{min-height:auto;border:0!important;box-shadow:inset 2px 0 0 #e1ebe7}.review-workbench .decision-dashboard,.review-workbench .theme-analysis-flow,.review-workbench .event-catalyst-timeline,.review-workbench .next-day-playbook{margin-left:-15px;margin-right:-15px}.review-workbench .decision-dashboard__head,.review-workbench .event-catalyst-timeline,.review-workbench .next-day-playbook__header,.review-workbench .next-day-playbook__step{padding-left:15px;padding-right:15px}.review-workbench .decision-band,.review-workbench .theme-analysis-block{margin-left:10px;margin-right:10px}.review-workbench .theme-analysis-flow>h3,.review-workbench .theme-analysis-flow>.theme-analysis-intro{margin-left:15px;margin-right:15px}.review-workbench .theme-stock-table-wrap,.review-workbench .theme-analysis-copy{margin-left:12px;margin-right:12px}.review-workbench .theme-analysis-copy{grid-template-columns:1fr}.workbench-tools button{min-width:48px;min-height:44px;padding:8px}.review-workbench .plan-toolbar button,.review-workbench .plan-row-save,.review-workbench .plan-row-delete{min-height:44px}}
 @media(prefers-reduced-motion:reduce){.review-workbench *{scroll-behavior:auto!important;transition-duration:.01ms!important}}
 </style>
-<script data-detail-workbench-script>
+<script data-detail-workbench-script="">
 (function(){
   const body=document.body;
   const progress=document.querySelector('[data-reading-progress]');
@@ -942,6 +904,5 @@ html{scroll-padding-top:18px}.review-workbench{margin:0;background:var(--wb-bg);
   nodes.forEach((node,index)=>node.open=index===0);
 })();
 </script>
-
 </body>
 </html>
