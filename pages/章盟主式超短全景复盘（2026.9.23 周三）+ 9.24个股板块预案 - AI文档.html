@@ -1600,5 +1600,454 @@ html{scroll-padding-top:18px}.review-workbench{margin:0;background:var(--wb-bg);
   disclosure.append(summary, body);
 })();
 </script>
+<style id="editorial-reading-system-v3">
+/* Final reading system: balanced type, deliberate modules, comfortable density. */
+.tesla-review .phase-divider {
+  grid-template-columns: minmax(92px, 120px) minmax(250px, 390px) minmax(0, 1fr);
+  gap: clamp(22px, 3vw, 42px);
+  align-items: center;
+  padding: clamp(36px, 4.6vw, 62px) clamp(30px, 6vw, 88px);
+}
+.tesla-review .phase-divider > span {
+  align-self: center;
+  width: max-content;
+  padding: 8px 10px;
+  border: 1px solid #b8d6cf;
+  color: #08776c;
+  background: #f2faf7;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .14em;
+}
+.tesla-review .phase-divider strong {
+  font-size: clamp(2.15rem, 3.2vw, 3.35rem);
+  line-height: 1.08;
+  letter-spacing: -.045em;
+}
+.tesla-review .phase-divider p {
+  max-width: 48ch;
+  color: #4f5956;
+  font-size: 17px;
+  line-height: 1.8;
+}
+.tesla-review .section-card {
+  padding: clamp(58px, 6.8vw, 92px) clamp(28px, 4.6vw, 68px);
+}
+.tesla-review .section-kicker {
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: .15em;
+}
+.tesla-review .chapter-title {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  align-items: center;
+  gap: 18px;
+  max-width: none;
+  margin-bottom: 40px;
+  padding-bottom: 24px;
+  font-size: clamp(2.2rem, 3.15vw, 3.2rem);
+  line-height: 1.12;
+  letter-spacing: -.045em;
+}
+.tesla-review .section-card[data-chapter-number] > .chapter-title::before { display: none !important; }
+.tesla-review .chapter-title > span:last-child { max-width: 24ch; text-wrap: balance; }
+.tesla-review .chapter-number {
+  width: 52px;
+  height: 52px;
+  font-size: 14px;
+}
+.tesla-review .subchapter-title {
+  margin: 0 0 18px;
+  font-size: clamp(1.35rem, 1.8vw, 1.65rem);
+  line-height: 1.35;
+  letter-spacing: -.02em;
+}
+.tesla-review .body-line {
+  max-width: 96ch;
+  color: #2e3634;
+  font-size: 16.5px;
+  line-height: 1.82;
+}
+.tesla-review .table-shell { margin-top: 18px; }
+.tesla-review .data-table th,
+.tesla-review .data-table td {
+  padding: 13px 14px;
+  font-size: 14px;
+  line-height: 1.62;
+}
+.tesla-review .effect-positioning-module {
+  margin: 0 0 30px;
+  padding: 24px;
+  border: 1px solid #cddbd7;
+  background: #f5f8f7;
+}
+.tesla-review .effect-positioning-module .module-title { font-size: 27px; }
+.tesla-review .effect-panel { padding: 20px; }
+.tesla-review .effect-panel h4 { font-size: 18px; }
+.tesla-review .effect-chip { min-height: 36px; padding: 8px 12px; font-size: 13px; }
+
+.editorial-module-layout {
+  display: grid;
+  gap: 24px;
+  margin-top: 26px;
+}
+.editorial-module {
+  min-width: 0;
+  padding: clamp(24px, 3vw, 36px);
+  border: 1px solid #d8e0dd;
+  background: #f8faf9;
+}
+.editorial-module > .subchapter-title {
+  padding-bottom: 16px;
+  border-bottom: 1px solid #d4ddda;
+}
+.editorial-module > .subchapter-title::before {
+  width: 8px;
+  height: 8px;
+  content: "";
+  background: #08776c;
+}
+.editorial-module > .body-line {
+  max-width: none;
+  margin: 10px 0 0;
+  padding: 15px 17px;
+  border: 1px solid #e1e7e4;
+  border-left: 3px solid #9ebbb4;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.78;
+}
+.editorial-module > .body-line.tone-action {
+  border-left-color: #08776c;
+  background: #f2f8f6;
+}
+.editorial-module > .body-line.tone-risk {
+  border-left-color: #c85247;
+  background: #fff3f1;
+}
+.editorial-module > .body-line.module-label {
+  margin-top: 18px;
+  padding: 11px 14px;
+  border: 0;
+  color: #fff;
+  background: #173f39;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: .03em;
+}
+.editorial-module > .body-line.module-label::before { display: none; }
+.market-effect-modules {
+  grid-template-columns: 1fr;
+}
+.market-effect-modules .editorial-module {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 16px;
+  align-content: start;
+}
+.market-effect-modules .editorial-module > .subchapter-title,
+.market-effect-modules .editorial-module > .table-shell { grid-column: 1 / -1; }
+.market-effect-modules .editorial-module > .body-line { margin-top: 0; }
+.market-effect-modules #source-table-1 {
+  max-width: 100%;
+  margin: 8px 0 0;
+  padding: 0;
+  overflow-x: auto;
+  border: 1px solid #d8e0dd;
+  background: #fff;
+}
+.market-effect-modules #source-table-1 table {
+  min-width: 1320px !important;
+  table-layout: auto;
+}
+.market-effect-modules #source-table-1 th {
+  position: static;
+  padding: 12px 13px;
+  border: 0;
+  border-right: 1px solid #333;
+  border-left: 0;
+  border-radius: 0;
+  color: #fff;
+  background: #0b0d0d;
+  font-size: 13px;
+  line-height: 1.45;
+  white-space: nowrap;
+}
+.market-effect-modules #source-table-1 th::before { display: none; }
+.market-effect-modules #source-table-1 td {
+  min-width: 72px;
+  padding: 12px 13px;
+  font-size: 13.5px;
+  white-space: nowrap;
+}
+.operation-review-modules {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.operation-review-modules .editorial-module:first-child {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 16px;
+}
+.operation-review-modules .editorial-module:first-child > .subchapter-title,
+.operation-review-modules .editorial-module:first-child > .module-label { grid-column: 1 / -1; }
+.operation-review-modules .editorial-module:first-child > .body-line { margin-top: 0; }
+.risk-intel-modules {
+  grid-template-columns: 1fr;
+}
+.risk-intel-modules .editorial-module {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 16px;
+}
+.risk-intel-modules .editorial-module > .subchapter-title,
+.risk-intel-modules .editorial-module > .table-shell,
+.risk-intel-modules .editorial-module:first-child > .tone-action { grid-column: 1 / -1; }
+.risk-intel-modules .editorial-module > .body-line { margin-top: 0; }
+.risk-intel-modules .editorial-module:first-child > p.body-line:nth-of-type(5) { grid-column: 1 / -1; }
+.risk-intel-modules .editorial-module:nth-child(3) > .body-line:last-child { grid-column: 1 / -1; }
+#chapter-8-八-异动监管-龙虎榜与人气榜情况-40f05e .data-table th,
+#chapter-8-八-异动监管-龙虎榜与人气榜情况-40f05e .data-table td {
+  padding: 14px 16px;
+  font-size: 14.5px;
+}
+
+.loss-points-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 6px;
+}
+.loss-points-grid > .body-line {
+  max-width: none;
+  min-height: 112px;
+  margin: 0;
+  padding: 20px 22px;
+  border: 1px solid #dfe4e2;
+  border-top: 4px solid #252a29;
+  background: #fff;
+  font-size: 16px;
+  line-height: 1.78;
+}
+.loss-points-grid > .body-line.tone-action {
+  grid-column: 1 / -1;
+  min-height: auto;
+  border-top-color: #08776c;
+  background: #eff7f4;
+}
+
+#leader-seven-dimension-check + .body-line {
+  max-width: none;
+  margin: 0 0 18px;
+  padding: 18px 20px;
+  border-left: 4px solid #08776c;
+  background: #eef6f3;
+  font-size: 16px;
+  line-height: 1.78;
+}
+.tesla-review .leader-uniqueness-note {
+  display: grid;
+  grid-template-columns: minmax(230px, .72fr) minmax(0, 2fr);
+  margin: 18px 0 28px;
+  border: 1px solid #d4ddda;
+  overflow: hidden;
+  background: #fff;
+}
+.tesla-review .leader-uniqueness-note__head {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  padding: 28px;
+  color: #fff;
+  background: #101817;
+}
+.tesla-review .leader-uniqueness-note__head span {
+  color: #76d4c0;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+.tesla-review .leader-uniqueness-note__head h4 {
+  margin: 42px 0 0;
+  color: #fff;
+  font-size: clamp(1.55rem, 2.2vw, 2.15rem);
+  line-height: 1.22;
+}
+.tesla-review .leader-uniqueness-note__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tesla-review .leader-uniqueness-note__list li {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 14px;
+  padding: 22px;
+  border-right: 1px solid #dfe5e2;
+  border-bottom: 1px solid #dfe5e2;
+  color: #3e4845;
+  font-size: 14px;
+  line-height: 1.72;
+}
+.tesla-review .leader-uniqueness-note__list li:nth-child(2n) { border-right: 0; }
+.tesla-review .leader-uniqueness-note__list li:last-child {
+  grid-column: 1 / -1;
+  border-right: 0;
+  border-bottom: 0;
+  background: #f3f7f5;
+}
+.tesla-review .leader-uniqueness-note__list strong { color: #08776c; font-size: 13px; }
+.tesla-review .dragon-matrix th,
+.tesla-review .dragon-matrix td { padding: 14px 13px; font-size: 13.5px; line-height: 1.62; }
+.tesla-review .decision-checklist span { font-size: 15px; line-height: 1.75; }
+
+/* Narrative text inside legacy components must remain readable. */
+.tesla-review .recap-summary-modules__header p,
+.tesla-review .decision-dashboard__head p { font-size: 13.5px; line-height: 1.7; }
+.tesla-review .decision-table th,
+.tesla-review .decision-table td,
+.tesla-review .post-market-table th,
+.tesla-review .post-market-table td,
+.tesla-review .theme-stock-table th,
+.tesla-review .theme-stock-table td { padding: 12px 13px; font-size: 13.5px; line-height: 1.6; }
+.tesla-review .intraday-watchpoints__note,
+.tesla-review .intraday-watchpoint-card__item,
+.tesla-review .post-market-intelligence__summary {
+  font-size: 14px;
+  line-height: 1.72;
+}
+.tesla-review .intraday-watchpoint-card__status,
+.tesla-review .intraday-watchpoint-card__source,
+.tesla-review .post-market-intelligence__time { font-size: 12px; }
+.tesla-review .post-market-rumors li { font-size: 13.5px; line-height: 1.7; }
+.tesla-review .market-verdict__risk { font-size: 14px; }
+.tesla-review .market-thesis li { font-size: 14.5px; line-height: 1.72; }
+.tesla-review .market-thesis li strong { font-size: 13px; }
+.tesla-review .theme-analysis-intro { font-size: 14px; line-height: 1.72; }
+.tesla-review .theme-analysis-copy p { font-size: 14px; line-height: 1.7; }
+.tesla-review .theme-analysis-copy strong { font-size: 12.5px; }
+.tesla-review .event-impact-grid p,
+.tesla-review .market-outlook-grid article p { font-size: 14px; line-height: 1.68; }
+.tesla-review .next-day-playbook__guide { font-size: 14px; line-height: 1.72; }
+.tesla-review .scenario-playbook-card dt,
+.tesla-review .scenario-playbook-card dd { font-size: 13.5px; line-height: 1.62; }
+.tesla-review .kiss-card p,
+.tesla-review .question-grid article p { font-size: 14.5px; line-height: 1.72; }
+.tesla-review .kiss-card span,
+.tesla-review .question-grid article strong { font-size: 15px; }
+.tesla-review .high-board-table { font-size: 14px; }
+.tesla-review .high-board-table tbody td { font-size: 14px; line-height: 1.58; }
+
+@media (max-width: 1080px) {
+  .tesla-review .phase-divider { grid-template-columns: 100px minmax(220px, 320px) minmax(0, 1fr); }
+  .tesla-review .leader-uniqueness-note { grid-template-columns: 1fr; }
+  .tesla-review .leader-uniqueness-note__head { min-height: auto; }
+  .tesla-review .leader-uniqueness-note__head h4 { max-width: 22ch; margin-top: 18px; }
+}
+@media (max-width: 760px) {
+  .tesla-review .phase-divider {
+    grid-template-columns: 1fr;
+    gap: 13px;
+    padding: 34px 20px 38px;
+  }
+  .tesla-review .phase-divider > span { display: inline-flex; }
+  .tesla-review .phase-divider strong { font-size: clamp(2rem, 10vw, 2.8rem); }
+  .tesla-review .phase-divider p { font-size: 16px; }
+  .tesla-review .section-card { padding: 48px 18px; }
+  .tesla-review .chapter-title {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 12px;
+    margin-bottom: 28px;
+    font-size: clamp(1.85rem, 8.5vw, 2.45rem);
+  }
+  .tesla-review .chapter-number { width: 44px; height: 44px; }
+  .tesla-review .body-line,
+  .editorial-module > .body-line,
+  .loss-points-grid > .body-line { font-size: 16px; }
+  .operation-review-modules,
+  .operation-review-modules .editorial-module:first-child,
+  .market-effect-modules .editorial-module,
+  .risk-intel-modules .editorial-module:first-child,
+  .risk-intel-modules .editorial-module,
+  .loss-points-grid { grid-template-columns: 1fr; }
+  .operation-review-modules .editorial-module:first-child,
+  .operation-review-modules .editorial-module:first-child > .subchapter-title,
+  .operation-review-modules .editorial-module:first-child > .module-label,
+  .risk-intel-modules .editorial-module:first-child > .subchapter-title,
+  .risk-intel-modules .editorial-module:first-child > .table-shell,
+  .risk-intel-modules .editorial-module:first-child > .tone-action,
+  .risk-intel-modules .editorial-module:first-child > p.body-line:nth-of-type(5),
+  .risk-intel-modules .editorial-module > .subchapter-title,
+  .risk-intel-modules .editorial-module > .table-shell,
+  .risk-intel-modules .editorial-module:nth-child(3) > .body-line:last-child,
+  .market-effect-modules .editorial-module > .subchapter-title,
+  .market-effect-modules .editorial-module > .table-shell,
+  .loss-points-grid > .body-line.tone-action { grid-column: auto; }
+  .editorial-module { padding: 20px 16px; }
+  .tesla-review .leader-uniqueness-note__list { grid-template-columns: 1fr; }
+  .tesla-review .leader-uniqueness-note__list li,
+  .tesla-review .leader-uniqueness-note__list li:nth-child(2n),
+  .tesla-review .leader-uniqueness-note__list li:last-child {
+    grid-column: auto;
+    border-right: 0;
+    border-bottom: 1px solid #dfe5e2;
+  }
+  .tesla-review .leader-uniqueness-note__list li:last-child { border-bottom: 0; }
+  .tesla-review .data-table th,
+  .tesla-review .data-table td { font-size: 13.5px; }
+  .tesla-review .kiss-card p,
+  .tesla-review .question-grid article p { font-size: 16px; }
+}
+</style>
+<script id="editorial-module-layout-v3">
+(() => {
+  const modularize = (sectionId, layoutClass) => {
+    const section = document.getElementById(sectionId);
+    if (!section || section.querySelector(':scope > .editorial-module-layout')) return;
+    const headings = [...section.children].filter((node) => node.matches?.('h3.subchapter-title'));
+    if (!headings.length) return;
+    const layout = document.createElement('div');
+    layout.className = `editorial-module-layout ${layoutClass}`;
+    section.insertBefore(layout, headings[0]);
+    headings.forEach((heading, index) => {
+      const nextHeading = headings[index + 1] || null;
+      const module = document.createElement('section');
+      module.className = `editorial-module editorial-module-${index + 1}`;
+      if (heading.id) module.setAttribute('aria-labelledby', heading.id);
+      layout.append(module);
+      let node = heading;
+      while (node && node !== nextHeading) {
+        const next = node.nextSibling;
+        module.append(node);
+        node = next;
+      }
+      module.querySelectorAll(':scope > .body-line').forEach((line) => {
+        const text = line.textContent.trim();
+        if (text.startsWith('✅') || text.startsWith('❌')) line.classList.add('module-label');
+      });
+    });
+  };
+
+  modularize('chapter-2-二-市场风格与赚钱效应解析-cb50c9', 'market-effect-modules');
+  modularize('chapter-4-四-今日操作结果-核心失误-核心反思-6f01e5', 'operation-review-modules');
+  modularize('chapter-8-八-异动监管-龙虎榜与人气榜情况-40f05e', 'risk-intel-modules');
+
+  const lossSection = document.getElementById('chapter-9-九-跌停与炸板情况-d5f182');
+  if (lossSection && !lossSection.querySelector(':scope > .loss-points-grid')) {
+    const points = [...lossSection.children].filter((node) => node.matches?.('p.body-line'));
+    if (points.length) {
+      const grid = document.createElement('div');
+      grid.className = 'loss-points-grid';
+      lossSection.insertBefore(grid, points[0]);
+      points.forEach((point) => grid.append(point));
+    }
+  }
+})();
+</script>
 </body>
 </html>
