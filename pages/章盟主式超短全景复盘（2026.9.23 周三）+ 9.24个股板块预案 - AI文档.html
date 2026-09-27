@@ -1101,14 +1101,63 @@ html{scroll-padding-top:18px}.review-workbench{margin:0;background:var(--wb-bg);
     closeToc();
     requestAnimationFrame(()=>{target.scrollIntoView({behavior:'instant',block:'start'});history.replaceState(null,'',link.getAttribute('href'))});
   }));
-  const updateProgress=()=>{const max=document.documentElement.scrollHeight-innerHeight;const value=max>0?Math.min(100,scrollY/max*100):0;if(progress)progress.style.width=value+'%'};
-  addEventListener('scroll',updateProgress,{passive:true});updateProgress();
   const nodes=[...document.querySelectorAll('.toc-node')];
-  const sections=[...document.querySelectorAll('.section-card[id]')];
-  const linkMap=new Map(nodes.map(node=>[node.querySelector('summary a')?.getAttribute('href')?.slice(1),node]));
-  const setActive=id=>{nodes.forEach(node=>node.classList.remove('is-active'));const node=linkMap.get(id);if(node){node.classList.add('is-active');node.open=true}};
-  if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>{const visible=entries.filter(x=>x.isIntersecting).sort((a,b)=>a.boundingClientRect.top-b.boundingClientRect.top)[0];if(visible)setActive(visible.target.id)},{rootMargin:'-12% 0px -72% 0px',threshold:[0,.1]});sections.forEach(section=>observer.observe(section));}
-  nodes.forEach((node,index)=>node.open=index===0);
+  const tocScroll=toc?.querySelector('.toc-scroll');
+  const tocLinks=[...(toc?.querySelectorAll('a[href^="#"]')||[])];
+  nodes.forEach(node=>{
+    const link=node.querySelector('summary a');
+    if(!link||link.querySelector('.toc-title'))return;
+    const fullTitle=link.textContent.trim();
+    const match=fullTitle.match(/^(\d{2}\s*·)\s*(.+)$/);
+    const title=document.createElement('span');title.className='toc-title';title.textContent=match?match[2]:fullTitle;
+    if(match){
+      const index=document.createElement('span');index.className='toc-index';index.textContent=match[1].replace('·','');
+      link.replaceChildren(index,title);
+    }else{
+      link.classList.add('toc-title-only');
+      link.replaceChildren(title);
+    }
+  });
+  const tracked=[];const seen=new Set();
+  tocLinks.forEach(link=>{
+    const href=link.getAttribute('href');
+    const target=href&&document.querySelector(href);
+    if(!target||seen.has(href))return;
+    seen.add(href);tracked.push({href,target,link});
+  });
+  let activeHref='';
+  const setActive=href=>{
+    if(!href||href===activeHref)return;
+    activeHref=href;
+    tocLinks.forEach(link=>link.classList.toggle('is-active',link.getAttribute('href')===href));
+    nodes.forEach(node=>node.classList.remove('is-active'));
+    const activeLink=tocLinks.find(link=>link.getAttribute('href')===href);
+    const activeNode=activeLink?.closest('.toc-node');
+    if(activeNode){activeNode.classList.add('is-active');activeNode.open=true;}
+    if(tocScroll&&activeLink){
+      const box=tocScroll.getBoundingClientRect();const item=activeLink.getBoundingClientRect();
+      if(item.top<box.top+46||item.bottom>box.bottom-34){
+        const top=tocScroll.scrollTop+(item.top-box.top)-(box.height-item.height)/2;
+        tocScroll.scrollTo({top:Math.max(0,top),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+      }
+    }
+  };
+  const updateReadingState=()=>{
+    const max=document.documentElement.scrollHeight-innerHeight;
+    const value=max>0?Math.min(100,scrollY/max*100):0;
+    if(progress)progress.style.width=value+'%';
+    if(!tracked.length)return;
+    const marker=Math.min(280,Math.max(140,innerHeight*.28));
+    const ordered=tracked.map(item=>({...item,top:item.target.getBoundingClientRect().top})).sort((a,b)=>a.top-b.top);
+    const passed=ordered.filter(item=>item.top<=marker);
+    setActive((passed.at(-1)||ordered[0]).href);
+  };
+  let readingFrame=0;
+  const requestReadingUpdate=()=>{if(readingFrame)return;readingFrame=requestAnimationFrame(()=>{readingFrame=0;updateReadingState();});};
+  addEventListener('scroll',requestReadingUpdate,{passive:true});
+  addEventListener('resize',requestReadingUpdate,{passive:true});
+  if(!nodes.some(node=>node.open)&&nodes[0])nodes[0].open=true;
+  updateReadingState();
 })();
 </script>
 <style id="tesla-editorial-theme-style">
@@ -1132,7 +1181,7 @@ html{scroll-padding-top:18px}.review-workbench{margin:0;background:var(--wb-bg);
   max-width: none;
   margin: 0;
   display: grid;
-  grid-template-columns: 268px minmax(0, 1fr);
+  grid-template-columns: 300px minmax(0, 1fr);
   gap: 0;
   align-items: start;
 }
@@ -1142,7 +1191,7 @@ html{scroll-padding-top:18px}.review-workbench{margin:0;background:var(--wb-bg);
   z-index: 30;
   height: 100dvh;
   max-height: none;
-  padding: 26px 20px;
+  padding: 26px 16px;
   overflow: auto;
   color: var(--tesla-ink);
   background: rgba(255,255,255,.94);
@@ -1152,15 +1201,76 @@ html{scroll-padding-top:18px}.review-workbench{margin:0;background:var(--wb-bg);
   box-shadow: none;
   backdrop-filter: blur(18px);
 }
-.tesla-review .toc h2 { font-size: 23px; letter-spacing: -.04em; }
-.tesla-review .toc-node { border: 0; border-bottom: 1px solid rgba(23,26,32,.09); border-radius: 0; }
-.tesla-review .toc-node summary { min-height: 48px; }
-.tesla-review .toc-node a { color: var(--tesla-ink); }
+.tesla-review .toc h2 {
+  padding: 22px 18px 5px;
+  font-family: "Source Han Serif SC", "Noto Serif CJK SC", STSong, serif;
+  font-size: 28px;
+  font-weight: 750;
+  line-height: 1.08;
+  letter-spacing: -.055em;
+}
+.tesla-review .toc-caption { padding: 3px 18px 18px; color: #73777d; font-size: 10.5px; line-height: 1.65; }
+.tesla-review .toc-scroll { padding: 0 12px 24px; scrollbar-width: thin; scrollbar-color: #878d8a transparent; scroll-behavior: smooth; }
+.tesla-review .toc-scroll::-webkit-scrollbar { width: 5px; }
+.tesla-review .toc-scroll::-webkit-scrollbar-thumb { background: #878d8a; border-radius: 10px; }
+.tesla-review .toc-phase-label {
+  margin: 21px 8px 8px;
+  color: #8a8e94;
+  font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  font-size: 9px;
+  font-weight: 750;
+  letter-spacing: .14em;
+}
+.tesla-review .toc-phase-label:first-child { margin-top: 8px; }
+.tesla-review .toc-node { margin: 0 0 3px; border: 0; border-radius: 2px; }
+.tesla-review .toc-node summary {
+  min-height: 52px;
+  padding: 8px 10px;
+  border-left: 3px solid transparent;
+  border-bottom: 1px solid rgba(23,26,32,.08);
+  transition: color .18s ease, background .18s ease, border-color .18s ease;
+}
+.tesla-review .toc-node summary > a {
+  display: grid;
+  grid-template-columns: 28px minmax(0,1fr);
+  gap: 8px;
+  align-items: start;
+  min-width: 0;
+  color: var(--tesla-ink);
+  font-family: "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  text-decoration: none;
+}
+.tesla-review .toc-node summary > a.toc-title-only { grid-template-columns: minmax(0,1fr); padding-left: 2px; }
+.tesla-review .toc-index { padding-top: 2px; color: var(--tesla-signal); font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 10px; font-weight: 800; letter-spacing: .05em; }
+.tesla-review .toc-title { font-size: 13px; font-weight: 700; line-height: 1.48; letter-spacing: -.012em; }
+.tesla-review .toc-node summary > span { color: #96999e; font-size: 9px; font-weight: 600; }
 .tesla-review .toc-node[open] > summary,
-.tesla-review .toc-node summary:hover { background: var(--tesla-soft); }
-.tesla-review .toc-children a { border-radius: 2px; }
-.tesla-review .toc-children a:hover,
-.tesla-review .toc-children a.is-active { color: #fff; background: var(--tesla-black); }
+.tesla-review .toc-node summary:hover { background: #f1f2f2; }
+.tesla-review .toc-node.is-active > summary { color: #fff; background: var(--tesla-black); border-left-color: var(--tesla-signal); }
+.tesla-review .toc-node.is-active > summary .toc-title { color: #fff; }
+.tesla-review .toc-node.is-active > summary .toc-index,
+.tesla-review .toc-node.is-active > summary > span { color: #65d0b1; }
+.tesla-review .toc-children {
+  gap: 0;
+  margin: 0 0 8px 22px;
+  padding: 7px 0 7px 12px;
+  border-left: 1px solid #d8dcda;
+}
+.tesla-review .toc-children a {
+  position: relative;
+  min-height: 34px;
+  padding: 8px 9px 8px 13px;
+  border-radius: 2px;
+  color: #686d72;
+  font-family: "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  font-size: 11.5px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.tesla-review .toc-children a::before { content: ""; position: absolute; left: -15px; top: 16px; width: 5px; height: 5px; border-radius: 50%; background: #c4c9c7; }
+.tesla-review .toc-children a:hover { color: var(--tesla-ink); background: #f2f3f3; }
+.tesla-review .toc-children a.is-active { color: #086f5f; background: #eaf6f2; font-weight: 750; }
+.tesla-review .toc-children a.is-active::before { background: var(--tesla-signal); box-shadow: 0 0 0 4px rgba(13,145,116,.13); }
 .tesla-review main.content { min-width: 0; padding: 0; background: #fff; border: 0; border-radius: 0; box-shadow: none; }
 
 .tesla-review .hero {
@@ -1429,7 +1539,7 @@ html{scroll-padding-top:18px}.review-workbench{margin:0;background:var(--wb-bg);
   .tesla-review .hero-actions a { transition: none; }
 }
 @media (max-width: 980px) {
-  .tesla-review .layout { grid-template-columns: 220px minmax(0, 1fr); }
+  .tesla-review .layout { grid-template-columns: 250px minmax(0, 1fr); }
   .tesla-review .hero { padding-inline: 54px; }
   .tesla-review .review-route { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .tesla-review .review-route a:nth-child(2) { border-right: 0; }
