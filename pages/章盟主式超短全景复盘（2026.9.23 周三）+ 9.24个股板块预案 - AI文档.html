@@ -99,7 +99,7 @@
 .module-heading-row.compact { align-items: center; }
 .module-index { display: inline-grid; place-items: center; min-width: 38px; height: 30px; padding: 0 9px; color: #fff; background: var(--dragon-ink); border-radius: 9px; font: 700 12px/1 ui-monospace, SFMono-Regular, Consolas, monospace; letter-spacing: .08em; }
 .high-board-table-shell, .dragon-matrix-shell { overflow: auto; border: 1px solid var(--dragon-line); border-radius: 18px; background: #fff; box-shadow: 0 12px 30px rgba(26, 68, 60, .08); scrollbar-color: #7fc1b2 #edf6f3; }
-.high-board-table { width: 100%; min-width: 970px; border-collapse: separate; border-spacing: 0; color: #173f39; font-size: 14px; }
+.high-board-table { width: 100%; min-width: 1160px; border-collapse: separate; border-spacing: 0; color: #173f39; font-size: 14px; }
 .high-board-table caption, .dragon-matrix caption { caption-side: bottom; padding: 13px 16px; color: #6c7f7b; background: #f7faf9; border-top: 1px solid var(--dragon-line); font-size: 12px; line-height: 1.6; text-align: left; }
 .high-board-table thead th { padding: 14px 16px; color: #eafff8; background: #114f46; border-right: 1px solid rgba(255,255,255,.12); font-size: 13px; text-align: left; white-space: nowrap; }
 .high-board-table thead th:first-child { border-radius: 17px 0 0; }
@@ -114,7 +114,10 @@
 .high-board-table td:nth-child(3) { white-space: nowrap; }
 .height-badge { display: inline-flex; align-items: center; justify-content: center; min-width: 48px; min-height: 30px; margin-right: 8px; color: #fff; background: var(--dragon-green); border-radius: 9px; font-weight: 800; }
 .height-four .height-badge { background: #a46113; }
-.volume-chip { display: inline-flex; align-items: center; min-height: 28px; margin: 2px 5px 2px 0; padding: 0 8px; border: 1px solid transparent; border-radius: 999px; font-size: 12px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.volume-chip { display: inline-grid; grid-template-columns: auto auto; align-items: center; min-height: 34px; margin: 3px 5px 3px 0; padding: 0 8px; border: 1px solid transparent; border-radius: 6px; font-size: 12px; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.volume-chip b { font-weight: 850; }
+.volume-chip em { margin-left: 7px; padding-left: 7px; border-left: 1px solid currentColor; font-size: 11px; font-style: normal; font-weight: 700; opacity: .78; }
+.volume-chip.zero { opacity: .52; }
 .volume-chip.start { color: #086759; background: #e5f7f1; border-color: #bde9dc; }
 .volume-chip.shrink { color: #536964; background: #f1f5f4; border-color: #dce6e3; }
 .volume-chip.half { color: #81540d; background: #fff5d9; border-color: #f2dda2; }
@@ -648,7 +651,7 @@
 </div>
 <div aria-label="三板及以上身位个股表" class="high-board-table-shell" role="region" tabindex="0">
 <table class="high-board-table">
-<caption>量能口径：首板成交量达到前 5 日均量 1.2 倍记为起量；一字板或板间量比不高于 0.75 记为缩量；0.75–1.5 为半放量；高于 1.5 为全放量。</caption>
+<caption>量能口径：首板成交量达到前 5 日均量 1.2 倍记为起量；一字板或板间量比不高于 0.75 记为缩量；0.75–1.5 为半放量；高于 1.5 为全放量。每个标签同时标注数量与具体板位，四类板位合计必须完整覆盖当前连板链。</caption>
 <thead>
 <tr>
 <th scope="col">题材</th>
@@ -659,17 +662,17 @@
 </tr>
 </thead>
 <tbody>
-<tr class="height-four"><td>文化传媒 / AI应用</td><td><strong>新华文轩</strong><small>601811</small></td><td><span class="height-badge">4板</span><span>并列最高</span></td><td><span class="volume-chip start">起量 1</span><span class="volume-chip shrink">缩量 1</span><span class="volume-chip half">半放量 1</span><span class="volume-chip full">全放量 1</span></td><td><strong>T字全放量</strong><small>较前一板 4.10 倍，需防次日继续爆量</small></td></tr>
-<tr class="height-four"><td>PCB / 芯片</td><td><strong>大亚圣象</strong><small>000910</small></td><td><span class="height-badge">4板</span><span>并列最高</span></td><td><span class="volume-chip start">起量 1</span><span class="volume-chip shrink">缩量 1</span><span class="volume-chip half">半放量 1</span><span class="volume-chip full">全放量 1</span></td><td><strong>缩量换手</strong><small>较前一板 0.52 倍，量能关系尚可</small></td></tr>
-<tr><td>文化传媒 / 重组</td><td><strong>新华传媒</strong><small>600825</small></td><td><span class="height-badge">3板</span><span>高度锚</span></td><td><span class="volume-chip start">起量 0</span><span class="volume-chip shrink">缩量 3</span><span class="volume-chip half">半放量 0</span><span class="volume-chip full">全放量 0</span></td><td><strong>连续一字缩量</strong><small>三板均无有效换手，筹码未检验</small></td></tr>
-<tr><td>AI应用 / 软件</td><td><strong>南威软件</strong><small>603636</small></td><td><span class="height-badge">3板</span><span>后排换手</span></td><td><span class="volume-chip start">起量 1</span><span class="volume-chip shrink">缩量 1</span><span class="volume-chip half">半放量 0</span><span class="volume-chip full">全放量 1</span></td><td><strong>开板全放量</strong><small>较前一板 4.29 倍，承接质量待验证</small></td></tr>
-<tr><td>房地产</td><td><strong>我爱我家</strong><small>000560</small></td><td><span class="height-badge">3板</span><span>前排</span></td><td><span class="volume-chip start">起量 1</span><span class="volume-chip shrink">缩量 0</span><span class="volume-chip half">半放量 2</span><span class="volume-chip full">全放量 0</span></td><td><strong>换手半放量</strong><small>较前一板 0.77 倍，节奏相对平稳</small></td></tr>
-<tr><td>房地产</td><td><strong>华远控股</strong><small>600743</small></td><td><span class="height-badge">3板</span><span>前排</span></td><td><span class="volume-chip start">起量 0</span><span class="volume-chip shrink">缩量 2</span><span class="volume-chip half">半放量 0</span><span class="volume-chip full">全放量 1</span></td><td><strong>开板全放量</strong><small>较前一板 10.92 倍，分歧显著放大</small></td></tr>
-<tr><td>房地产</td><td><strong>华丽家族</strong><small>600503</small></td><td><span class="height-badge">3板</span><span>后排</span></td><td><span class="volume-chip start">起量 1</span><span class="volume-chip shrink">缩量 0</span><span class="volume-chip half">半放量 0</span><span class="volume-chip full">全放量 2</span></td><td><strong>尾盘回封全放量</strong><small>较前一板 2.11 倍，次日先看弱转强</small></td></tr>
+<tr class="height-four" data-board-height="4"><td>文化传媒 / AI应用</td><td><strong>新华文轩</strong><small>601811</small></td><td><span class="height-badge">4板</span><span>并列最高</span></td><td><span class="volume-chip start" data-boards="1"><b>起量 1</b><em>第1板</em></span><span class="volume-chip shrink" data-boards="3"><b>缩量 1</b><em>第3板</em></span><span class="volume-chip half" data-boards="2"><b>半放量 1</b><em>第2板</em></span><span class="volume-chip full" data-boards="4"><b>全放量 1</b><em>第4板</em></span></td><td><strong>T字全放量</strong><small>第4板较第3板 4.10 倍，需防次日继续爆量</small></td></tr>
+<tr class="height-four" data-board-height="4"><td>PCB / 芯片</td><td><strong>大亚圣象</strong><small>000910</small></td><td><span class="height-badge">4板</span><span>并列最高</span></td><td><span class="volume-chip start" data-boards="1"><b>起量 1</b><em>第1板</em></span><span class="volume-chip shrink" data-boards="4"><b>缩量 1</b><em>第4板</em></span><span class="volume-chip half" data-boards="3"><b>半放量 1</b><em>第3板</em></span><span class="volume-chip full" data-boards="2"><b>全放量 1</b><em>第2板</em></span></td><td><strong>缩量换手</strong><small>第4板较第3板 0.52 倍，量能关系尚可</small></td></tr>
+<tr data-board-height="3"><td>文化传媒 / 重组</td><td><strong>新华传媒</strong><small>600825</small></td><td><span class="height-badge">3板</span><span>高度锚</span></td><td><span class="volume-chip start zero" data-boards=""><b>起量 0</b><em>无</em></span><span class="volume-chip shrink" data-boards="1,2,3"><b>缩量 3</b><em>第1板 · 第2板 · 第3板</em></span><span class="volume-chip half zero" data-boards=""><b>半放量 0</b><em>无</em></span><span class="volume-chip full zero" data-boards=""><b>全放量 0</b><em>无</em></span></td><td><strong>连续一字缩量</strong><small>第1至第3板均无有效换手，筹码未检验</small></td></tr>
+<tr data-board-height="3"><td>AI应用 / 软件</td><td><strong>南威软件</strong><small>603636</small></td><td><span class="height-badge">3板</span><span>后排换手</span></td><td><span class="volume-chip start" data-boards="1"><b>起量 1</b><em>第1板</em></span><span class="volume-chip shrink" data-boards="2"><b>缩量 1</b><em>第2板</em></span><span class="volume-chip half zero" data-boards=""><b>半放量 0</b><em>无</em></span><span class="volume-chip full" data-boards="3"><b>全放量 1</b><em>第3板</em></span></td><td><strong>开板全放量</strong><small>第3板较第2板 4.29 倍，承接质量待验证</small></td></tr>
+<tr data-board-height="3"><td>房地产</td><td><strong>我爱我家</strong><small>000560</small></td><td><span class="height-badge">3板</span><span>前排</span></td><td><span class="volume-chip start" data-boards="1"><b>起量 1</b><em>第1板</em></span><span class="volume-chip shrink zero" data-boards=""><b>缩量 0</b><em>无</em></span><span class="volume-chip half" data-boards="2,3"><b>半放量 2</b><em>第2板 · 第3板</em></span><span class="volume-chip full zero" data-boards=""><b>全放量 0</b><em>无</em></span></td><td><strong>换手半放量</strong><small>第3板较第2板 0.77 倍，节奏相对平稳</small></td></tr>
+<tr data-board-height="3"><td>房地产</td><td><strong>华远控股</strong><small>600743</small></td><td><span class="height-badge">3板</span><span>前排</span></td><td><span class="volume-chip start zero" data-boards=""><b>起量 0</b><em>无</em></span><span class="volume-chip shrink" data-boards="1,2"><b>缩量 2</b><em>第1板 · 第2板</em></span><span class="volume-chip half zero" data-boards=""><b>半放量 0</b><em>无</em></span><span class="volume-chip full" data-boards="3"><b>全放量 1</b><em>第3板</em></span></td><td><strong>开板全放量</strong><small>第3板较第2板 10.92 倍，分歧显著放大</small></td></tr>
+<tr data-board-height="3"><td>房地产</td><td><strong>华丽家族</strong><small>600503</small></td><td><span class="height-badge">3板</span><span>后排</span></td><td><span class="volume-chip start" data-boards="1"><b>起量 1</b><em>第1板</em></span><span class="volume-chip shrink zero" data-boards=""><b>缩量 0</b><em>无</em></span><span class="volume-chip half zero" data-boards=""><b>半放量 0</b><em>无</em></span><span class="volume-chip full" data-boards="2,3"><b>全放量 2</b><em>第2板 · 第3板</em></span></td><td><strong>尾盘回封全放量</strong><small>第3板较第2板 2.11 倍，次日先看弱转强</small></td></tr>
 </tbody>
 </table>
 </div>
-<p class="data-source-line">数据依据：腾讯证券前复权日线与当日涨停形态；量能分类用于同一连板链比较，不代替换手率、封单和盘口承接判断。</p>
+<p class="data-source-line">数据依据：腾讯证券前复权日线与当日涨停形态。标签内的“第几板”按本轮连续涨停从首板顺序编号；量能分类用于同一连板链比较，不代替换手率、封单和盘口承接判断。</p>
 </div>
 <div class="leader-candidate-module" id="leader-candidate-shortlist">
 <div class="module-heading-row compact">
