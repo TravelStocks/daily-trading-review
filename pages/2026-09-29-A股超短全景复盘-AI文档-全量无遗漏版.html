@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>2026-09-29-A股超短全景复盘-AI文档-全量无遗漏版</title>
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>2026-09-29-A股超短全景复盘-AI文档-全量无遗漏版</title>
+<style>
     :root{--bg:#eef7f4;--card:#ffffff;--line:rgba(18,75,66,.14);--text:#15352f;--muted:#607970;--accent:#0d9275;--blue:#1b7cb3;--amber:#b88415;--risk:#bf4d3d;--shadow:0 18px 42px rgba(12,55,49,.09);--r:20px}
     *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#f5fbf8,#e9f4ef);color:var(--text);font-family:"Microsoft YaHei","PingFang SC","Segoe UI",sans-serif}
     a{color:inherit}.layout{width:min(1580px,calc(100vw - 24px));margin:18px auto 40px;display:grid;grid-template-columns:300px minmax(0,1fr);gap:22px}.toc,.content,.hero,.section-card{min-width:0}.toc{position:sticky;top:16px;max-height:calc(100vh - 32px);overflow:auto;padding:16px;border:1px solid var(--line);border-radius:var(--r);background:rgba(255,255,255,.92);box-shadow:var(--shadow)}
@@ -28,53 +29,71 @@
   #daily-three-judgments td p:last-child {margin-bottom:0}
   #daily-three-judgments .judgment-scroll:focus-visible {outline:2px solid var(--accent);outline-offset:3px}
 </style>
-</head>
-<body class="review-workbench" id="page-top"><div class="reading-progress" data-reading-progress></div><div class="mobile-toc-scrim" data-toc-scrim></div><div class="workbench-tools" aria-label="页面工具"><button type="button" data-toc-toggle>目录</button><button type="button" data-back-top>顶部</button></div>
-  <div class="layout">
-    <aside class="toc">
-      <div class="toc-utility"><a class="back" href="../index.html">返回首页</a><button class="toc-mobile-close" type="button" data-toc-close>关闭</button></div>
-      <h2>复盘导航</h2><p class="toc-caption">按阶段展开章节，当前阅读位置会自动高亮。</p><div class="toc-scroll">
-      <div class="toc-phase-label">01 盘面定性</div><details class="toc-node"><summary><a href="#chapter-1-一-复盘总纲-03e653">一、复盘总纲</a><span>展开</span></summary><div class="toc-children"></div></details>
-<details class="toc-node"><summary><a href="#chapter-2-二-市场风格与赚钱效应解析-cb50c9">二、市场风格与赚钱效应解析</a><span>展开</span></summary><div class="toc-children"><a href="#daily-three-judgments">每日三项判断</a><a href="#sub-2-1-一-市场风格-67c57d">一 市场风格</a><a href="#sub-2-2-二-赚钱效应-e1ab59">二 赚钱效应</a></div></details>
+<style id="trading-decision-framework-style">.trading-framework{margin:18px 0 22px;padding:14px 0;border-top:2px solid #087467;border-bottom:1px solid #d8dfdc;min-width:0}
+.trading-framework h3{margin:0 0 8px;font-size:16px;color:#174f47;letter-spacing:0}
+.framework-source{margin:0 0 12px;font-size:11px;color:#667571;line-height:1.6}
+.framework-chain{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:10px 0 14px;padding:10px 0;font-size:14px;font-weight:700}
+.framework-chain span{color:#667571;font-weight:400}
+.framework-points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}
+.framework-point{padding:11px 0;border-top:1px solid #e4e9e7;min-width:0}
+.framework-point h4{margin:0 0 5px;font-size:13px;color:#1c4038}
+.framework-point p,.framework-point li,.framework-notice{margin:0;font-size:12px;line-height:1.75;overflow-wrap:anywhere}
+.framework-budgets{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin-top:14px}
+.framework-budgets article{border-top:2px solid #b98632;padding:12px 0;min-width:0}
+.framework-budgets h4{margin:0 0 8px;font-size:14px}
+.framework-budgets p{font-size:12px;line-height:1.75;margin:6px 0}
+.framework-notice{padding:10px 0;color:#7b5522}
+.plan-field-label{display:block;margin-top:7px;color:#667571;font-size:10px;font-weight:600;line-height:1.4}
+.plan-field-label:first-child{margin-top:0}
+.plan-field-value[contenteditable]{min-height:24px;padding:4px 0;outline:0;overflow-wrap:anywhere;cursor:text}
+.plan-field-value[contenteditable]:empty::before{content:"待填";color:#889790}
+.plan-field-value[contenteditable]:focus{background:#fff7e8;box-shadow:inset 0 -2px #b98632}
+@media(max-width:680px){.framework-points,.framework-budgets{grid-template-columns:1fr;gap:0}.framework-chain{font-size:12px}.trading-framework{margin:14px 0}}
+</style></head>
+<body class="review-workbench" id="page-top"><div class="reading-progress" data-reading-progress=""></div><div class="mobile-toc-scrim" data-toc-scrim=""></div><div aria-label="页面工具" class="workbench-tools"><button data-toc-toggle="" type="button">目录</button><button data-back-top="" type="button">顶部</button></div>
+<div class="layout">
+<aside class="toc">
+<div class="toc-utility"><a class="back" href="../index.html">返回首页</a><button class="toc-mobile-close" data-toc-close="" type="button">关闭</button></div>
+<h2>复盘导航</h2><p class="toc-caption">按阶段展开章节，当前阅读位置会自动高亮。</p><div class="toc-scroll">
+<div class="toc-phase-label">01 盘面定性</div><details class="toc-node"><summary><a href="#chapter-1-一-复盘总纲-03e653">一、复盘总纲</a><span>展开</span></summary><div class="toc-children"><a data-framework-link="overview" href="#trading-framework-overview">交易决策顺序</a></div></details>
+<details class="toc-node"><summary><a href="#chapter-2-二-市场风格与赚钱效应解析-cb50c9">二、市场风格与赚钱效应解析</a><span>展开</span></summary><div class="toc-children"><a href="#daily-three-judgments">每日三项判断</a><a href="#sub-2-1-一-市场风格-67c57d">一 市场风格</a><a href="#sub-2-2-二-赚钱效应-e1ab59">二 赚钱效应</a><a data-framework-link="weather" href="#trading-framework-weather">天时 · 先确认市场允许做什么</a></div></details>
 <details class="toc-node"><summary><a href="#chapter-3-三-近4日板块强度-次日节奏预测表-f65244">三、近4日板块强度+次日节奏预测表</a><span>展开</span></summary><div class="toc-children"></div></details>
 <div class="toc-phase-label">02 盘后拆解</div><details class="toc-node"><summary><a href="#chapter-4-四-今日操作结果-核心失误与核心反思-9819a6">四 今日操作结果 核心失误与核心反思</a><span>展开</span></summary><div class="toc-children"><a href="#sub-4-1-一-今日操作结果-a8f4fb">一 今日操作结果</a><a href="#sub-4-2-二-核心失误根源-891df4">二 核心失误根源</a><a href="#sub-4-3-三-深度核心反思-a92d87">三 深度核心反思</a></div></details>
 <details class="toc-node"><summary><a href="#chapter-5-五-操作与情绪复盘-kiss模型-89196b">五、操作与情绪复盘（KISS模型）</a><span>展开</span></summary><div class="toc-children"><a href="#sub-5-1-一-当日操作与情绪复盘-702b94">一 当日操作与情绪复盘</a><a href="#sub-5-2-二-kiss四维总结-eff7d9">二 KISS四维总结</a></div></details>
-<details class="toc-node"><summary><a href="#chapter-6-六-各主线板块详细解析-937d9c">六、各主线板块详细解析</a><span>展开</span></summary><div class="toc-children"><a href="#intraday-mainline">日内主线表</a><a href="#theme-t1">1. 锂电池/固态电池</a><a href="#theme-t2">2. 文化传媒/AI应用</a><a href="#theme-t3">3. 机器人/汽车</a><a href="#theme-t4">4. 房地产</a><a href="#theme-t5">5. 通信/PCB/科技</a></div></details>
+<details class="toc-node"><summary><a href="#chapter-6-六-各主线板块详细解析-937d9c">六、各主线板块详细解析</a><span>展开</span></summary><div class="toc-children"><a href="#intraday-mainline">日内主线表</a><a href="#theme-t1">1. 锂电池/固态电池</a><a href="#theme-t2">2. 文化传媒/AI应用</a><a href="#theme-t3">3. 机器人/汽车</a><a href="#theme-t4">4. 房地产</a><a href="#theme-t5">5. 通信/PCB/科技</a><a data-framework-link="theme" href="#trading-framework-theme">地利 · 选择最有预期的题材</a></div></details>
 <details class="toc-node"><summary><a href="#chapter-7-七-事件催化时间线-9293ac">七、事件催化时间线</a><span>展开</span></summary><div class="toc-children"></div></details>
 <details class="toc-node"><summary><a href="#chapter-8-八-异动监管-龙虎榜与人气榜情况-40f05e">八、异动监管、龙虎榜与人气榜情况</a><span>展开</span></summary><div class="toc-children"><a href="#sub-8-1-一-异动监管-ff3108">一 异动监管</a><a href="#sub-8-2-二-龙虎榜与资金面-c445d8">二 龙虎榜与资金面</a><a href="#sub-8-3-三-人气榜-4b178d">三 人气榜</a></div></details>
 <details class="toc-node"><summary><a href="#chapter-9-九-跌停与炸板情况-d5f182">九、跌停与炸板情况</a><span>展开</span></summary><div class="toc-children"></div></details>
 <div class="toc-phase-label">03 明日推演</div><details class="toc-node"><summary><a href="#chapter-10-十-核心关键票汇总与明日个股预案-0aebc2">十、明日作战推演总纲</a><span>展开</span></summary><div class="toc-children"><a href="#next-day-market-outlook">大盘明日预期</a><a href="#next-day-theme-outlook">板块题材预期</a><a href="#next-day-core-stock-checks">核心票判定</a><a href="#next-day-scenario-playbooks">情景推演</a></div></details>
 <details class="toc-node"><summary><a href="#chapter-11-十一-大盘明日预期节奏-78977f">十一、大盘与板块题材预期节奏</a><span>展开</span></summary><div class="toc-children"><a href="#next-day-market-outlook">大盘明日预期</a><a href="#next-day-theme-outlook">板块题材预期</a></div></details>
 <details class="toc-node"><summary><a href="#chapter-12-十二-明日核心票弱转强与板块预期细化表-d1a570">十二 明日核心票弱转强与板块预期细化表</a><span>展开</span></summary><div class="toc-children"></div></details>
-<details class="toc-node"><summary><a href="#chapter-13-十三-龙头预备票-最终定稿-c57786">十三、龙头预备票（最终定稿）</a><span>展开</span></summary><div class="toc-children"><a href="#sub-13-1-一-总龙候选名单-8a1dfe">一 总龙候选名单</a><a href="#sub-13-2-二-总龙唯一性排序-846135">二 总龙唯一性排序</a><a href="#sub-13-3-三-龙头七维核验明细-3c5120">三 龙头七维核验明细</a><a href="#sub-13-4-四-明日总龙决胜观察要点-44a414">四 明日总龙决胜观察要点</a><a href="#sub-13-5-五-卡位观察-c53825">五 卡位观察</a><a href="#leader-competition-watch">卡位观察</a></div></details>
+<details class="toc-node"><summary><a href="#chapter-13-十三-龙头预备票-最终定稿-c57786">十三、龙头预备票（最终定稿）</a><span>展开</span></summary><div class="toc-children"><a href="#sub-13-1-一-总龙候选名单-8a1dfe">一 总龙候选名单</a><a href="#sub-13-2-二-总龙唯一性排序-846135">二 总龙唯一性排序</a><a href="#sub-13-3-三-龙头七维核验明细-3c5120">三 龙头七维核验明细</a><a href="#sub-13-4-四-明日总龙决胜观察要点-44a414">四 明日总龙决胜观察要点</a><a href="#sub-13-5-五-卡位观察-c53825">五 卡位观察</a><a href="#leader-competition-watch">卡位观察</a><a data-framework-link="core" href="#trading-framework-core">人和 · 选择最核心的个股</a></div></details>
 <details class="toc-node"><summary><a href="#chapter-14-十四-口述信息全量归档与待确认信息-d62038">十四、口述信息全量归档与待确认信息</a><span>展开</span></summary><div class="toc-children"><a href="#sub-14-1-一-已纳入的关键票池-d9de70">一 已纳入的关键票池</a><a href="#sub-14-2-二-待确认信息-d83f6f">二 待确认信息</a><a href="#sub-14-3-三-原始口述逐段归档-01964e">三 原始口述逐段归档</a></div></details>
-<div class="toc-phase-label">04 交易执行</div><details class="toc-node"><summary><a href="#operation-plan">十五、今日操作计划</a><span>展开</span></summary><div class="toc-children"><a href="#operation-strategy-outline">明日战略总纲</a><a href="#operation-kiss">操作与情绪复盘（KISS模型）</a><a href="#second-review-2026-07-22">7/22 ????</a><a href="#theme-rhythm-run">题材节奏运行</a><a href="#operation-process-review">正确复盘重点</a><a href="#operation-plan-three-questions">书面计划三问</a><a href="#editable-operation-table">可编辑交易计划表</a><a href="#holding-handling-table">持仓处理计划表</a></div></details>
-      </div>
-    </aside>
-    <main class="content">
-      <section class="hero">
-        <div class="hero-kicker">Daily A-Share Review · 2026.09.29</div>
-        <h1>2026-09-29-A股超短全景复盘-AI文档-全量无遗漏版</h1>
-        <p class="hero-lead">数据来源：用户当日完整口述复盘与2026-09-29复盘三表数据文档。本文保留用户对退潮周期、连板梯队、题材轮动、核心票、指数节奏、异动监管、人气榜和明日执行的原始判断；精确市场数值以三表数据为准，未核验的公告、监管、龙虎榜和口述歧义统一标记待确认。</p>
-        <div class="hero-stats">
-          <span>情绪：修复期</span><span>沪指：3830.45</span><span>量能：14092</span><span>源表：14 张</span>
-        </div>
-      <nav class="review-route" aria-label="复盘阅读路径"><a href="#phase-overview"><span>01</span><strong>盘面定性</strong><small>指数 · 情绪 · 板块节奏</small></a><a href="#phase-diagnosis"><span>02</span><strong>盘后拆解</strong><small>主线 · 催化 · 负反馈</small></a><a href="#phase-playbook"><span>03</span><strong>明日推演</strong><small>大盘 · 板块 · 核心票</small></a><a href="#phase-execution"><span>04</span><strong>交易执行</strong><small>条件 · 仓位 · 止损</small></a></nav></section>
-      <p class="body-line tone-risk">数据来源：用户当日完整口述复盘与2026-09-29复盘三表数据文档。本文保留用户对退潮周期、连板梯队、题材轮动、核心票、指数节奏、异动监管、人气榜和明日执行的原始判断；精确市场数值以三表数据为准，未核验的公告、监管、龙虎榜和口述歧义统一标记待确认。</p>
+<div class="toc-phase-label">04 交易执行</div><details class="toc-node"><summary><a href="#operation-plan">十五、今日操作计划</a><span>展开</span></summary><div class="toc-children"><a href="#operation-strategy-outline">明日战略总纲</a><a href="#operation-kiss">操作与情绪复盘（KISS模型）</a><a href="#second-review-2026-07-22">盘后二次复盘</a><a href="#theme-rhythm-run">题材节奏运行</a><a href="#operation-process-review">正确复盘重点</a><a href="#operation-plan-three-questions">书面计划三问</a><a href="#editable-operation-table">可编辑交易计划表</a><a href="#holding-handling-table">持仓处理计划表</a><a data-framework-link="execution" href="#trading-framework-execution">交易 · 从判断落实到动作</a></div></details>
+</div>
+</aside>
+<main class="content">
+<section class="hero">
+<div class="hero-kicker">Daily A-Share Review · 2026.09.29</div>
+<h1>2026-09-29-A股超短全景复盘-AI文档-全量无遗漏版</h1>
+<p class="hero-lead">数据来源：用户当日完整口述复盘与2026-09-29复盘三表数据文档。本文保留用户对退潮周期、连板梯队、题材轮动、核心票、指数节奏、异动监管、人气榜和明日执行的原始判断；精确市场数值以三表数据为准，未核验的公告、监管、龙虎榜和口述歧义统一标记待确认。</p>
+<div class="hero-stats">
+<span>情绪：修复期</span><span>沪指：3830.45</span><span>量能：14092</span><span>源表：14 张</span>
+</div>
+<nav aria-label="复盘阅读路径" class="review-route"><a href="#phase-overview"><span>01</span><strong>盘面定性</strong><small>指数 · 情绪 · 板块节奏</small></a><a href="#phase-diagnosis"><span>02</span><strong>盘后拆解</strong><small>主线 · 催化 · 负反馈</small></a><a href="#phase-playbook"><span>03</span><strong>明日推演</strong><small>大盘 · 板块 · 核心票</small></a><a href="#phase-execution"><span>04</span><strong>交易执行</strong><small>条件 · 仓位 · 止损</small></a></nav></section>
+<p class="body-line tone-risk">数据来源：用户当日完整口述复盘与2026-09-29复盘三表数据文档。本文保留用户对退潮周期、连板梯队、题材轮动、核心票、指数节奏、异动监管、人气榜和明日执行的原始判断；精确市场数值以三表数据为准，未核验的公告、监管、龙虎榜和口述歧义统一标记待确认。</p>
 <p class="body-line tone-action">核心结论：今天是退潮第2天的反核修复，不是新周期确认。指数与情绪均有企稳迹象，但市场仅有14092亿元量能，中位连板亏钱效应仍在，老周期尚未出清。锂电池是唯一具备首日启动特征的题材，时代万恒负责接受分化检验；新华传媒是当前唯一空间突破龙，主要任务是打开高度。9月30日以空仓为基准，最多一成仓试错电池分化前排。</p>
 <p class="body-line">工作台六项速览</p>
 <div class="table-shell" id="source-table-1"><table class="data-table"><thead><tr><th>模块</th><th>结论</th><th>关键证据</th><th>9月30日验证</th></tr></thead><tbody><tr><td>大盘</td><td>缩量横盘并初步企稳</td><td>沪指3830.45；量能14092亿元；CCI由负值趋平</td><td>再出现一根企稳K线并站稳</td></tr><tr><td>情绪</td><td>退潮第2天的反核修复</td><td>涨停56、跌停10；上涨3261、下跌1810；封板率88%</td><td>跌停继续收敛，中位负反馈不再扩大</td></tr><tr><td>题材与梯队</td><td>电池首日爆发，传媒有持续性</td><td>电池7341、AI应用5130、通信5926；二板7、三板1</td><td>电池分化后仍有前排和后排助攻</td></tr><tr><td>核心标的</td><td>新华传媒打高度，时代万恒验题材</td><td>新华传媒6板；时代万恒为锂电池升位二板</td><td>新华传媒6进7；时代万恒缩量转强或健康回封</td></tr><tr><td>四种场景</td><td>基准仍是节前弱修复</td><td>量能不足、主线未确认、老周期继续出清</td><td>高度、题材、梯队能否形成共振</td></tr><tr><td>明日计划</td><td>空仓为主，最多一成仓试错</td><td>节前出金、增量资金少、纯套利盈亏比低</td><td>未满足全部触发条件则不交易</td></tr></tbody></table></div>
 <div class="phase-divider" id="phase-overview"><span>PHASE 01</span><strong>盘面定性</strong><p>先确定指数、情绪与板块节奏，再决定今天是什么市场。</p></div>
-<section class="section-card" id="chapter-1-一-复盘总纲-03e653" data-phase="overview" data-chapter-number="01"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">一、复盘总纲</h2>
-
-<section class="recap-summary-modules" data-recap-summary-modules>
-  <header class="recap-summary-modules__header">
-    <div><span>RECAP BRIEF</span><h3>复盘结论总览</h3></div>
-    <p>先定市场，再定情绪；先看主线矛盾，最后执行明日战略。</p>
-  </header>
-  <div class="recap-summary-modules__body"><article class="recap-summary-row" data-summary-section="R1"><header class="recap-summary-row__title"><span>R1</span><h4>今日市场定性</h4><p>修复不等于新周期。</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>指数企稳</strong><p>沪指3830.45，四大指数小幅收涨，CCI趋平。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>量能不足</strong><p>成交14092亿元，节前缩量限制多线共振。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>反核修复</strong><p>上涨3261、下跌1810，跌停由高位降至10只。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>周期未定</strong><p>用户定位为退潮第2天，仍需连续止跌确认。</p></li></ol></article><article class="recap-summary-row" data-summary-section="R2"><header class="recap-summary-row__title"><span>R2</span><h4>情绪状态</h4><p>恐慌缓和，中位仍难。</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>涨跌停</strong><p>涨停56、跌停10，极端负反馈明显减少。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>梯队结构</strong><p>一板46、二板7、三板1、高度6板。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>封板质量</strong><p>封板率88%、断板8，修复质量尚可。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>亏钱位置</strong><p>老周期出清与中位接力仍是主要风险。</p></li></ol></article><article class="recap-summary-row" data-summary-section="R3"><header class="recap-summary-row__title"><span>R3</span><h4>主线矛盾</h4><p>电池启动，高度在传媒。</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>电池爆发</strong><p>强度7341，时代万恒承担第一次分化检验。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>传媒高度</strong><p>新华传媒6板负责打开空间，但扩散仍不足。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>科技修复</strong><p>AI应用5130、通信5926，仍需容量与梯队共振。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>其余轮动</strong><p>机器人、地产、PCB等暂按轮动或超跌处理。</p></li></ol></article><article class="recap-summary-row is-strategy" data-summary-section="R4"><header class="recap-summary-row__title"><span>R4</span><h4>明日战略总纲</h4><p>基准空仓，只做全条件确认。</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>先看指数</strong><p>再收一根企稳K线，跌停与中位负反馈继续收敛。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>再看电池</strong><p>时代万恒转强且后排一字或强二板助攻。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>观察高度</strong><p>新华传媒6进7是否健康打开市场空间。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>控制仓位</strong><p>大概率空仓，小概率不超过一成仓试错。</p></li></ol></article></div>
+<section class="section-card" data-chapter-number="01" data-phase="overview" id="chapter-1-一-复盘总纲-03e653"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">一、复盘总纲</h2><section class="trading-framework" data-trading-framework="overview" id="trading-framework-overview"><h3>交易决策顺序</h3><p class="framework-source">交易体系经验补充 · 2026-10-04；不改写当日事实、历史仓位或原始判断。</p><div class="framework-chain"><strong>阶段</strong><span aria-hidden="true">→</span><strong>模式</strong><span aria-hidden="true">→</span><strong>买点</strong><span aria-hidden="true">→</span><strong>预算（仓位）</strong><span aria-hidden="true">→</span><strong>卖点</strong></div><div class="framework-points"><article class="framework-point"><h4>先定阶段，再找买点</h4><p>阶段是前置条件，不是买后解释。每天分别标注新题材、旧题材、总龙与补涨所处阶段。</p></article><article class="framework-point"><h4>补涨与切换分开</h4><p>有补涨先看补涨；切换例外须有更强题材效应、合适节点和较低试错仓位。</p></article><article class="framework-point"><h4>没有模式内买点就等</h4><p>天时选模式，地利选题材，人和选核心；没有熟悉模式内的买点，就等待，不临场凑理由。</p></article></div></section>
+<section class="recap-summary-modules" data-recap-summary-modules="">
+<header class="recap-summary-modules__header">
+<div><span>RECAP BRIEF</span><h3>复盘结论总览</h3></div>
+<p>先定市场，再定情绪；先看主线矛盾，最后执行明日战略。</p>
+</header>
+<div class="recap-summary-modules__body"><article class="recap-summary-row" data-summary-section="R1"><header class="recap-summary-row__title"><span>R1</span><h4>今日市场定性</h4><p>修复不等于新周期。</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>指数企稳</strong><p>沪指3830.45，四大指数小幅收涨，CCI趋平。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>量能不足</strong><p>成交14092亿元，节前缩量限制多线共振。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>反核修复</strong><p>上涨3261、下跌1810，跌停由高位降至10只。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>周期未定</strong><p>用户定位为退潮第2天，仍需连续止跌确认。</p></li></ol></article><article class="recap-summary-row" data-summary-section="R2"><header class="recap-summary-row__title"><span>R2</span><h4>情绪状态</h4><p>恐慌缓和，中位仍难。</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>涨跌停</strong><p>涨停56、跌停10，极端负反馈明显减少。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>梯队结构</strong><p>一板46、二板7、三板1、高度6板。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>封板质量</strong><p>封板率88%、断板8，修复质量尚可。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>亏钱位置</strong><p>老周期出清与中位接力仍是主要风险。</p></li></ol></article><article class="recap-summary-row" data-summary-section="R3"><header class="recap-summary-row__title"><span>R3</span><h4>主线矛盾</h4><p>电池启动，高度在传媒。</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>电池爆发</strong><p>强度7341，时代万恒承担第一次分化检验。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>传媒高度</strong><p>新华传媒6板负责打开空间，但扩散仍不足。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>科技修复</strong><p>AI应用5130、通信5926，仍需容量与梯队共振。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>其余轮动</strong><p>机器人、地产、PCB等暂按轮动或超跌处理。</p></li></ol></article><article class="recap-summary-row is-strategy" data-summary-section="R4"><header class="recap-summary-row__title"><span>R4</span><h4>明日战略总纲</h4><p>基准空仓，只做全条件确认。</p></header><ol class="recap-summary-points"><li class="recap-summary-point"><span class="recap-summary-point__order">第一</span><strong>先看指数</strong><p>再收一根企稳K线，跌停与中位负反馈继续收敛。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第二</span><strong>再看电池</strong><p>时代万恒转强且后排一字或强二板助攻。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第三</span><strong>观察高度</strong><p>新华传媒6进7是否健康打开市场空间。</p></li><li class="recap-summary-point"><span class="recap-summary-point__order">第四</span><strong>控制仓位</strong><p>大概率空仓，小概率不超过一成仓试错。</p></li></ol></article></div>
 </section>
-
 <style>
 .recap-summary-modules{margin:18px 0 26px;border-top:3px solid #0b7166;border-bottom:1px solid #d5e3df;background:#fbfdfc;color:#173e38}
 .recap-summary-modules__header{display:flex;align-items:end;justify-content:space-between;gap:20px;padding:18px 20px;border-bottom:1px solid #d5e3df;background:#eef6f3}
@@ -85,11 +104,9 @@
 @media(max-width:980px){.recap-summary-row{grid-template-columns:150px minmax(0,1fr)}.recap-summary-points{grid-template-columns:repeat(2,minmax(0,1fr))}.recap-summary-point:nth-child(2){border-right:0}.recap-summary-point:nth-child(-n+2){border-bottom:1px solid #e5eeeb}}
 @media(max-width:650px){.recap-summary-modules__header{display:block}.recap-summary-modules__header p{margin-top:7px}.recap-summary-row{grid-template-columns:1fr}.recap-summary-row__title{padding:16px;border-right:0;border-bottom:1px solid #e0eae7}.recap-summary-points{grid-template-columns:1fr}.recap-summary-point{padding:14px 16px;border-right:0;border-bottom:1px solid #e5eeeb}.recap-summary-point:last-child{border-bottom:0}}
 </style>
-
-<div class="section-kicker">Market Snapshot</div><h3 id="market-snapshot-with-change" class="subchapter-title">近四日大盘情绪截图表（含涨跌幅）</h3><div class="table-shell" id="source-table-0"><table class="data-table"><thead><tr><th>周几</th><th>日期</th><th>沪指</th><th>深指</th><th>创业</th><th>科创</th><th>沪深量能/亿元</th><th>情绪强度</th><th>极端腾落数（涨停-跌停）</th><th>腾落数（上涨-下跌）</th><th>一板</th><th>二板</th><th>三板</th><th>高度板</th><th>封板率</th><th>断板</th></tr></thead><tbody><tr><td>周二</td><td>2026-09-22</td><td>3952.13（+0.06%）</td><td>13723.74（-0.05%）</td><td>3399.93（+0.01%）</td><td>1665.04（+0.46%）</td><td>21356</td><td>待核</td><td>62-3</td><td>2284-2783</td><td>38</td><td>17</td><td>4</td><td>6</td><td>78%</td><td>18</td></tr><tr><td>周三</td><td>2026-09-23</td><td>3936.52（-0.39%）</td><td>13636.07（-0.64%）</td><td>3379.61（-0.60%）</td><td>1660.85（-0.25%）</td><td>17650</td><td>退潮期</td><td>51-13</td><td>1757-3366</td><td>39</td><td>3</td><td>7</td><td>4</td><td>66%</td><td>26</td></tr><tr><td>周四</td><td>2026-09-24</td><td>3888.37（-1.22%）</td><td>13316.97（-2.34%）</td><td>3288.95（-2.68%）</td><td>1621.87（-2.35%）</td><td>16534</td><td>退潮期</td><td>51-13</td><td>1084-4001</td><td>38</td><td>8</td><td>1</td><td>5</td><td>84%</td><td>10</td></tr><tr><td>周二</td><td>2026-09-29</td><td>3830.45（+0.18%）</td><td>12901.95（+0.34%）</td><td>3142.56（+0.09%）</td><td>1569.34（+0.86%）</td><td>14092</td><td>修复期</td><td>56-10</td><td>3261-1810</td><td>46</td><td>7</td><td>1</td><td>6</td><td>88%</td><td>8</td></tr></tbody></table></div>
-
-<section class="decision-dashboard" id="decision-dashboard" data-decision-dashboard data-review-date="2026-09-29">
-  <style>
+<div class="section-kicker">Market Snapshot</div><h3 class="subchapter-title" id="market-snapshot-with-change">近四日大盘情绪截图表（含涨跌幅）</h3><div class="table-shell" id="source-table-0"><table class="data-table"><thead><tr><th>周几</th><th>日期</th><th>沪指</th><th>深指</th><th>创业</th><th>科创</th><th>沪深量能/亿元</th><th>情绪强度</th><th>极端腾落数（涨停-跌停）</th><th>腾落数（上涨-下跌）</th><th>一板</th><th>二板</th><th>三板</th><th>高度板</th><th>封板率</th><th>断板</th></tr></thead><tbody><tr><td>周二</td><td>2026-09-22</td><td>3952.13（+0.06%）</td><td>13723.74（-0.05%）</td><td>3399.93（+0.01%）</td><td>1665.04（+0.46%）</td><td>21356</td><td>待核</td><td>62-3</td><td>2284-2783</td><td>38</td><td>17</td><td>4</td><td>6</td><td>78%</td><td>18</td></tr><tr><td>周三</td><td>2026-09-23</td><td>3936.52（-0.39%）</td><td>13636.07（-0.64%）</td><td>3379.61（-0.60%）</td><td>1660.85（-0.25%）</td><td>17650</td><td>退潮期</td><td>51-13</td><td>1757-3366</td><td>39</td><td>3</td><td>7</td><td>4</td><td>66%</td><td>26</td></tr><tr><td>周四</td><td>2026-09-24</td><td>3888.37（-1.22%）</td><td>13316.97（-2.34%）</td><td>3288.95（-2.68%）</td><td>1621.87（-2.35%）</td><td>16534</td><td>退潮期</td><td>51-13</td><td>1084-4001</td><td>38</td><td>8</td><td>1</td><td>5</td><td>84%</td><td>10</td></tr><tr><td>周二</td><td>2026-09-29</td><td>3830.45（+0.18%）</td><td>12901.95（+0.34%）</td><td>3142.56（+0.09%）</td><td>1569.34（+0.86%）</td><td>14092</td><td>修复期</td><td>56-10</td><td>3261-1810</td><td>46</td><td>7</td><td>1</td><td>6</td><td>88%</td><td>8</td></tr></tbody></table></div>
+<section class="decision-dashboard" data-decision-dashboard="" data-review-date="2026-09-29" id="decision-dashboard">
+<style>
     .decision-dashboard{margin:20px 0 28px;color:#143c38;font-family:inherit}
     .decision-dashboard *{box-sizing:border-box}
     .decision-dashboard__head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin-bottom:12px}
@@ -114,52 +131,47 @@
     .hazard-label{font-weight:800;color:#a33a2c}.hazard-table th{background:#fff0ec;color:#9d382b}
     @media (max-width:900px){.decision-dashboard__head{align-items:flex-start;flex-direction:column}.decision-dashboard__head p{text-align:left}.decision-table{min-width:980px}}
   </style>
-
-  <div class="decision-dashboard__head">
-    <h2>盘面决策摘要</h2>
-    <p>证据截止 2026-09-29T22:50:00+08:00 · 事实与推演分开记录</p>
-  </div>
-
-  <section class="decision-band" id="four-scenarios" data-four-scenarios>
-    <h3 class="decision-band__title"><span class="decision-band__index">01</span>四种场景</h3>
-    <div class="decision-table-wrap">
-      <table class="decision-table scenario-table">
-        <thead><tr><th>场景</th><th>级别</th><th>确认信号</th><th>交易动作</th><th>撤退信号</th></tr></thead>
-        <tbody>
-          <tr><td class="scenario-name">主线加强</td><td><span class="scenario-level">低概率</span></td><td>时代万恒主动缩量上板，国轩高科等后排强势助攻，板块容量同步转强</td><td>只用不超过一成仓确认核心，不追后排，不把首日爆发直接当主升</td><td>时代万恒高开兑现、后排无一字或板块迅速回落</td></tr>
-          <tr><td class="scenario-name">分歧回流</td><td><span class="scenario-level">主场景</span></td><td>时代万恒分歧承接后主动回封，国轩高科及低位补涨保持正反馈</td><td>优先空仓观察；全部条件满足时一成仓试错时代万恒</td><td>核心与板块同步回落，或中位失败票出现深水与跌停</td></tr>
-          <tr><td class="scenario-name">退潮切换</td><td><span class="scenario-level">次场景</span></td><td>新华传媒6进7稳住高度，新方向出现主动核心与至少两个后排助攻</td><td>只记录新线，不做普通首日后排；等次日分化确认</td><td>只有单票高度或消息脉冲，没有梯队与容量</td></tr>
-          <tr><td class="scenario-name">全面退潮</td><td><span class="scenario-level">风险场景</span></td><td>新华传媒开板失控，时代万恒分化失败，跌停重新扩散</td><td>保持空仓，取消所有接力和反包计划</td><td>跌停收敛且核心主动回封，板块重新形成扩散</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="decision-band" id="stock-pool" data-stock-pool>
-    <h3 class="decision-band__title"><span class="decision-band__index">02</span>标的池</h3>
-    <div class="decision-table-wrap">
-      <table class="decision-table stock-pool-table">
-        <thead><tr><th>层级</th><th>题材</th><th>标的</th><th>定位</th><th>进场触发</th><th>风控</th><th>来源</th></tr></thead>
-        <tbody><tr><td>S级核心</td><td>锂电池</td><td>时代万恒</td><td>唯一二板题材核心候选，首日爆发后的分化检验锚</td><td>缩量转强或健康分歧回封，后排至少出现一字或强二板助攻</td><td>核心与板块同步回落、炸板无承接或后排快速负反馈</td><td><a href="https://docs.google.com/spreadsheets/d/1R4eo1t57Q37MWHF6bRxTIVRGsbksyz3whPjfvtfHoIE/edit" target="_blank" rel="noreferrer">三表审计</a> / <a href="https://travelstocks.github.io/daily-trading-review/" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>A级高度</td><td>传媒/AI应用</td><td>新华传媒</td><td>6板唯一空间突破龙，主要任务是打开高度</td><td>只观察6进7与首次有效分歧，不参与无量一字追高</td><td>封单持续衰减、开板直线跳水或高位负反馈扩散</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260929" target="_blank" rel="noreferrer">东方财富</a> / <a href="https://travelstocks.github.io/daily-trading-review/" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>A级助攻</td><td>锂电池</td><td>国轩高科</td><td>电池首板容量与后排助攻样本</td><td>竞价强、主动封板并与时代万恒形成前后排共振</td><td>冲高回落、板块无扩散或只剩独立容量表现</td><td><a href="https://www.10jqka.com.cn/" target="_blank" rel="noreferrer">同花顺</a> / <a href="https://travelstocks.github.io/daily-trading-review/" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>B级观察</td><td>机器人/汽车</td><td>雪龙集团</td><td>4板中位高标但题材效应弱</td><td>只观察充分放量回封与机器人后排扩散</td><td>继续无量加速、开板无承接或后排不跟</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260929" target="_blank" rel="noreferrer">东方财富</a> / <a href="https://travelstocks.github.io/daily-trading-review/" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>B级观察</td><td>机器人/汽车</td><td>襄阳轴承</td><td>3板中位样本，缺少板块助攻</td><td>只观察半放量回封与梯队修复</td><td>深水、炸板或与雪龙集团同步走弱</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260929" target="_blank" rel="noreferrer">东方财富</a> / <a href="https://travelstocks.github.io/daily-trading-review/" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>B级观察</td><td>地产</td><td>万科A</td><td>首板容量表态，题材持续性待验</td><td>地产补出完整梯队且万科保持主动性</td><td>高开兑现、孤立涨停或板块快速轮动</td><td><a href="https://www.10jqka.com.cn/" target="_blank" rel="noreferrer">同花顺</a> / <a href="https://travelstocks.github.io/daily-trading-review/" target="_blank" rel="noreferrer">用户文档</a></td></tr></tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="decision-band" id="intraday-hazards" data-intraday-hazards>
-    <h3 class="decision-band__title"><span class="decision-band__index">03</span>日内雷区</h3>
-    <div class="decision-table-wrap">
-      <table class="decision-table hazard-table">
-        <thead><tr><th>雷区</th><th>危险信号</th><th>禁止动作</th><th>解除条件</th><th>关联标的/板块</th></tr></thead>
-        <tbody><tr><td class="hazard-label">退潮修复误判新周期</td><td>跌停虽由56降至10，但老周期仍在出清，中位晋级率低。</td><td>不因单日普涨和反核就提高仓位。</td><td>连续止跌、负反馈收敛且新题材完成分化转强。</td><td>全市场/中位连板</td></tr><tr><td class="hazard-label">锂电池首日一致后追高</td><td>强度7341但尚未经历第一次分化，核心唯一性仍需验证。</td><td>不追后排，不把消息刺激当持续性。</td><td>时代万恒主动回封，国轩高科等后排继续助攻。</td><td>时代万恒/国轩高科/锂电池</td></tr><tr><td class="hazard-label">中位接力亏钱效应</td><td>雪龙集团、襄阳轴承缺乏完整题材梯队。</td><td>不做无板块效应的孤立三四板。</td><td>充分放量回封且中低位同时补强。</td><td>雪龙集团/襄阳轴承</td></tr><tr><td class="hazard-label">空间龙无量追高</td><td>新华传媒连续一字，封单口述值下降，首次分歧尚未完成。</td><td>不隔夜顶单，不用高度替代换手确认。</td><td>首次分歧充分换手回封并带动传媒后排。</td><td>新华传媒/传媒</td></tr></tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- Required placeholder: INTRADAY_WATCHPOINT_CARDS_HTML -->
-<section class="decision-band intraday-watchpoints" id="intraday-watchpoints" data-intraday-watchpoints>
-  <h3 class="decision-band__title"><span class="decision-band__index">04</span>盘内看点</h3>
-  <p class="intraday-watchpoints__note">按时间与行为拆解盘面：竞价先定方向，尾盘看资金最终选择，反包板验证核心赚钱效应。</p>
-  <div class="intraday-watchpoints__grid"><article class="intraday-watchpoint-card" data-watchpoint-type="竞价定调"><div class="intraday-watchpoint-card__head"><h4>竞价定调</h4><span class="intraday-watchpoint-card__status">先看退潮是否收敛</span></div><div class="intraday-watchpoint-card__body"><p class="intraday-watchpoint-card__item"><strong>盘面事实</strong>市场修复但仍处退潮第2天，跌停10只、中位晋级率低。</p><p class="intraday-watchpoint-card__item"><strong>核心标的</strong>新华传媒 / 时代万恒 / 雪龙集团</p><p class="intraday-watchpoint-card__item"><strong>交易含义</strong>竞价先判断高位与中位负反馈，再决定是否允许一成仓试错。</p><p class="intraday-watchpoint-card__item"><strong>次日验证</strong>新华传媒封单、时代万恒强弱、失败票是否继续核按钮。</p></div><div class="intraday-watchpoint-card__source">来源：三表审计 / 用户文档</div></article><article class="intraday-watchpoint-card" data-watchpoint-type="尾盘异动"><div class="intraday-watchpoint-card__head"><h4>尾盘异动</h4><span class="intraday-watchpoint-card__status">无明确新主线尾盘抢筹</span></div><div class="intraday-watchpoint-card__body"><p class="intraday-watchpoint-card__item"><strong>盘面事实</strong>用户复盘认为节前消息与增量资金不足，新增方向持续性较弱。</p><p class="intraday-watchpoint-card__item"><strong>核心标的</strong>万科A / 大金重工 / 华策股份</p><p class="intraday-watchpoint-card__item"><strong>交易含义</strong>按轮动和消息刺激看待，不预设次日持续。</p><p class="intraday-watchpoint-card__item"><strong>次日验证</strong>是否出现强上强、前中低位扩散与容量承接。</p></div><div class="intraday-watchpoint-card__source">来源：用户文档 / 短线侠</div></article><article class="intraday-watchpoint-card" data-watchpoint-type="反包板"><div class="intraday-watchpoint-card__head"><h4>反包板</h4><span class="intraday-watchpoint-card__status">反核修复但多为超跌</span></div><div class="intraday-watchpoint-card__body"><p class="intraday-watchpoint-card__item"><strong>盘面事实</strong>跌停显著减少，新华文轩等出现修复样本，但老周期仍在出清。</p><p class="intraday-watchpoint-card__item"><strong>核心标的</strong>新华文轩 / 澳弘电子 / 超声电子</p><p class="intraday-watchpoint-card__item"><strong>交易含义</strong>反包只证明情绪缓和，不能外推为稳定模式。</p><p class="intraday-watchpoint-card__item"><strong>次日验证</strong>反包次日是否有溢价，老周期负反馈是否继续下降。</p></div><div class="intraday-watchpoint-card__source">来源：东方财富 / 用户文档</div></article></div>
+<div class="decision-dashboard__head">
+<h2>盘面决策摘要</h2>
+<p>证据截止 2026-09-29T22:50:00+08:00 · 事实与推演分开记录</p>
+</div>
+<section class="decision-band" data-four-scenarios="" id="four-scenarios">
+<h3 class="decision-band__title"><span class="decision-band__index">01</span>四种场景</h3>
+<div class="decision-table-wrap">
+<table class="decision-table scenario-table">
+<thead><tr><th>场景</th><th>级别</th><th>确认信号</th><th>交易动作</th><th>撤退信号</th></tr></thead>
+<tbody>
+<tr><td class="scenario-name">主线加强</td><td><span class="scenario-level">低概率</span></td><td>时代万恒主动缩量上板，国轩高科等后排强势助攻，板块容量同步转强</td><td>只用不超过一成仓确认核心，不追后排，不把首日爆发直接当主升</td><td>时代万恒高开兑现、后排无一字或板块迅速回落</td></tr>
+<tr><td class="scenario-name">分歧回流</td><td><span class="scenario-level">主场景</span></td><td>时代万恒分歧承接后主动回封，国轩高科及低位补涨保持正反馈</td><td>优先空仓观察；全部条件满足时一成仓试错时代万恒</td><td>核心与板块同步回落，或中位失败票出现深水与跌停</td></tr>
+<tr><td class="scenario-name">退潮切换</td><td><span class="scenario-level">次场景</span></td><td>新华传媒6进7稳住高度，新方向出现主动核心与至少两个后排助攻</td><td>只记录新线，不做普通首日后排；等次日分化确认</td><td>只有单票高度或消息脉冲，没有梯队与容量</td></tr>
+<tr><td class="scenario-name">全面退潮</td><td><span class="scenario-level">风险场景</span></td><td>新华传媒开板失控，时代万恒分化失败，跌停重新扩散</td><td>保持空仓，取消所有接力和反包计划</td><td>跌停收敛且核心主动回封，板块重新形成扩散</td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="decision-band" data-stock-pool="" id="stock-pool">
+<h3 class="decision-band__title"><span class="decision-band__index">02</span>标的池</h3>
+<div class="decision-table-wrap">
+<table class="decision-table stock-pool-table">
+<thead><tr><th>层级</th><th>题材</th><th>标的</th><th>定位</th><th>进场触发</th><th>风控</th><th>来源</th></tr></thead>
+<tbody><tr><td>S级核心</td><td>锂电池</td><td>时代万恒</td><td>唯一二板题材核心候选，首日爆发后的分化检验锚</td><td>缩量转强或健康分歧回封，后排至少出现一字或强二板助攻</td><td>核心与板块同步回落、炸板无承接或后排快速负反馈</td><td><a href="https://docs.google.com/spreadsheets/d/1R4eo1t57Q37MWHF6bRxTIVRGsbksyz3whPjfvtfHoIE/edit" rel="noreferrer" target="_blank">三表审计</a> / <a href="https://travelstocks.github.io/daily-trading-review/" rel="noreferrer" target="_blank">用户文档</a></td></tr><tr><td>A级高度</td><td>传媒/AI应用</td><td>新华传媒</td><td>6板唯一空间突破龙，主要任务是打开高度</td><td>只观察6进7与首次有效分歧，不参与无量一字追高</td><td>封单持续衰减、开板直线跳水或高位负反馈扩散</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260929" rel="noreferrer" target="_blank">东方财富</a> / <a href="https://travelstocks.github.io/daily-trading-review/" rel="noreferrer" target="_blank">用户文档</a></td></tr><tr><td>A级助攻</td><td>锂电池</td><td>国轩高科</td><td>电池首板容量与后排助攻样本</td><td>竞价强、主动封板并与时代万恒形成前后排共振</td><td>冲高回落、板块无扩散或只剩独立容量表现</td><td><a href="https://www.10jqka.com.cn/" rel="noreferrer" target="_blank">同花顺</a> / <a href="https://travelstocks.github.io/daily-trading-review/" rel="noreferrer" target="_blank">用户文档</a></td></tr><tr><td>B级观察</td><td>机器人/汽车</td><td>雪龙集团</td><td>4板中位高标但题材效应弱</td><td>只观察充分放量回封与机器人后排扩散</td><td>继续无量加速、开板无承接或后排不跟</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260929" rel="noreferrer" target="_blank">东方财富</a> / <a href="https://travelstocks.github.io/daily-trading-review/" rel="noreferrer" target="_blank">用户文档</a></td></tr><tr><td>B级观察</td><td>机器人/汽车</td><td>襄阳轴承</td><td>3板中位样本，缺少板块助攻</td><td>只观察半放量回封与梯队修复</td><td>深水、炸板或与雪龙集团同步走弱</td><td><a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260929" rel="noreferrer" target="_blank">东方财富</a> / <a href="https://travelstocks.github.io/daily-trading-review/" rel="noreferrer" target="_blank">用户文档</a></td></tr><tr><td>B级观察</td><td>地产</td><td>万科A</td><td>首板容量表态，题材持续性待验</td><td>地产补出完整梯队且万科保持主动性</td><td>高开兑现、孤立涨停或板块快速轮动</td><td><a href="https://www.10jqka.com.cn/" rel="noreferrer" target="_blank">同花顺</a> / <a href="https://travelstocks.github.io/daily-trading-review/" rel="noreferrer" target="_blank">用户文档</a></td></tr></tbody>
+</table>
+</div>
+</section>
+<section class="decision-band" data-intraday-hazards="" id="intraday-hazards">
+<h3 class="decision-band__title"><span class="decision-band__index">03</span>日内雷区</h3>
+<div class="decision-table-wrap">
+<table class="decision-table hazard-table">
+<thead><tr><th>雷区</th><th>危险信号</th><th>禁止动作</th><th>解除条件</th><th>关联标的/板块</th></tr></thead>
+<tbody><tr><td class="hazard-label">退潮修复误判新周期</td><td>跌停虽由56降至10，但老周期仍在出清，中位晋级率低。</td><td>不因单日普涨和反核就提高仓位。</td><td>连续止跌、负反馈收敛且新题材完成分化转强。</td><td>全市场/中位连板</td></tr><tr><td class="hazard-label">锂电池首日一致后追高</td><td>强度7341但尚未经历第一次分化，核心唯一性仍需验证。</td><td>不追后排，不把消息刺激当持续性。</td><td>时代万恒主动回封，国轩高科等后排继续助攻。</td><td>时代万恒/国轩高科/锂电池</td></tr><tr><td class="hazard-label">中位接力亏钱效应</td><td>雪龙集团、襄阳轴承缺乏完整题材梯队。</td><td>不做无板块效应的孤立三四板。</td><td>充分放量回封且中低位同时补强。</td><td>雪龙集团/襄阳轴承</td></tr><tr><td class="hazard-label">空间龙无量追高</td><td>新华传媒连续一字，封单口述值下降，首次分歧尚未完成。</td><td>不隔夜顶单，不用高度替代换手确认。</td><td>首次分歧充分换手回封并带动传媒后排。</td><td>新华传媒/传媒</td></tr></tbody>
+</table>
+</div>
+</section>
+<!-- Required placeholder: INTRADAY_WATCHPOINT_CARDS_HTML -->
+<section class="decision-band intraday-watchpoints" data-intraday-watchpoints="" id="intraday-watchpoints">
+<h3 class="decision-band__title"><span class="decision-band__index">04</span>盘内看点</h3>
+<p class="intraday-watchpoints__note">按时间与行为拆解盘面：竞价先定方向，尾盘看资金最终选择，反包板验证核心赚钱效应。</p>
+<div class="intraday-watchpoints__grid"><article class="intraday-watchpoint-card" data-watchpoint-type="竞价定调"><div class="intraday-watchpoint-card__head"><h4>竞价定调</h4><span class="intraday-watchpoint-card__status">先看退潮是否收敛</span></div><div class="intraday-watchpoint-card__body"><p class="intraday-watchpoint-card__item"><strong>盘面事实</strong>市场修复但仍处退潮第2天，跌停10只、中位晋级率低。</p><p class="intraday-watchpoint-card__item"><strong>核心标的</strong>新华传媒 / 时代万恒 / 雪龙集团</p><p class="intraday-watchpoint-card__item"><strong>交易含义</strong>竞价先判断高位与中位负反馈，再决定是否允许一成仓试错。</p><p class="intraday-watchpoint-card__item"><strong>次日验证</strong>新华传媒封单、时代万恒强弱、失败票是否继续核按钮。</p></div><div class="intraday-watchpoint-card__source">来源：三表审计 / 用户文档</div></article><article class="intraday-watchpoint-card" data-watchpoint-type="尾盘异动"><div class="intraday-watchpoint-card__head"><h4>尾盘异动</h4><span class="intraday-watchpoint-card__status">无明确新主线尾盘抢筹</span></div><div class="intraday-watchpoint-card__body"><p class="intraday-watchpoint-card__item"><strong>盘面事实</strong>用户复盘认为节前消息与增量资金不足，新增方向持续性较弱。</p><p class="intraday-watchpoint-card__item"><strong>核心标的</strong>万科A / 大金重工 / 华策股份</p><p class="intraday-watchpoint-card__item"><strong>交易含义</strong>按轮动和消息刺激看待，不预设次日持续。</p><p class="intraday-watchpoint-card__item"><strong>次日验证</strong>是否出现强上强、前中低位扩散与容量承接。</p></div><div class="intraday-watchpoint-card__source">来源：用户文档 / 短线侠</div></article><article class="intraday-watchpoint-card" data-watchpoint-type="反包板"><div class="intraday-watchpoint-card__head"><h4>反包板</h4><span class="intraday-watchpoint-card__status">反核修复但多为超跌</span></div><div class="intraday-watchpoint-card__body"><p class="intraday-watchpoint-card__item"><strong>盘面事实</strong>跌停显著减少，新华文轩等出现修复样本，但老周期仍在出清。</p><p class="intraday-watchpoint-card__item"><strong>核心标的</strong>新华文轩 / 澳弘电子 / 超声电子</p><p class="intraday-watchpoint-card__item"><strong>交易含义</strong>反包只证明情绪缓和，不能外推为稳定模式。</p><p class="intraday-watchpoint-card__item"><strong>次日验证</strong>反包次日是否有溢价，老周期负反馈是否继续下降。</p></div><div class="intraday-watchpoint-card__source">来源：东方财富 / 用户文档</div></article></div>
 </section>
 <style>
 .intraday-watchpoints{border-top-color:#cfe0dc}.intraday-watchpoints__note{margin:-2px 0 12px;color:#607a76;font-size:12px;line-height:1.65}
@@ -170,11 +182,8 @@
 @media(max-width:980px){.intraday-watchpoints__grid{grid-template-columns:1fr}.intraday-watchpoint-card__body{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.intraday-watchpoint-card__body{grid-template-columns:1fr}.intraday-watchpoint-card__item:nth-child(odd){border-right:0}}
 </style>
-
-
-
-<section class="decision-band post-market-intelligence" id="post-market-intelligence" data-post-market-intelligence>
-  <style>
+<section class="decision-band post-market-intelligence" data-post-market-intelligence="" id="post-market-intelligence">
+<style>
     .post-market-intelligence{--pm-teal:#08736b;--pm-ink:#173f3a;--pm-line:#d8e5e2;--pm-soft:#f3faf8;--pm-warn:#a34c12}
     .post-market-intelligence__head{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:10px}
     .post-market-intelligence__head .decision-band__title{margin:0}
@@ -202,133 +211,117 @@
     .post-market-rumors ul{margin:0;padding-left:18px;color:#71513c;font-size:12px;line-height:1.65}
     @media(max-width:900px){.post-market-intelligence__head{align-items:flex-start;flex-direction:column}.post-market-intelligence__time{white-space:normal}.post-market-table{min-width:980px}.post-market-intelligence__summary{font-size:13px}}
   </style>
-
-  <div class="post-market-intelligence__head">
-    <h3 class="decision-band__title"><span class="decision-band__index">05</span>盘后情报</h3>
-    <span class="post-market-intelligence__time">更新至 2026-09-29T22:50:00+08:00</span>
-  </div>
-  <p class="post-market-intelligence__summary"><strong>盘后结论：</strong>节前缩量修复，锂电池成为唯一首日启动方向；传媒由新华传媒维持高度。所有交易都以分化确认和一成仓上限为前提。</p>
-
-  <section class="post-market-group" data-post-market-overseas>
-    <h4 class="post-market-group__title"><span>5.1</span>海外市场映射</h4>
-    <div class="post-market-table-wrap">
-      <table class="post-market-table post-market-table--overseas">
-        <thead><tr><th>市场/方向</th><th>表现</th><th>核心驱动</th><th>A股映射</th><th>次日验证</th><th>来源</th></tr></thead>
-        <tbody><tr><td>国庆跨节外盘</td><td>精确涨跌幅尚未发生，不提前预判。</td><td>海外科技、商品与风险偏好。</td><td>科技、锂电池、通信与周期。</td><td>节前只执行本土盘面确认，长假后再补海外映射。</td><td><a href="https://travelstocks.github.io/daily-trading-review/" target="_blank" rel="noreferrer">用户文档</a></td></tr></tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="post-market-group" data-post-market-catalysts>
-    <h4 class="post-market-group__title"><span>5.2</span>事件催化</h4>
-    <div class="post-market-table-wrap">
-      <table class="post-market-table post-market-table--catalyst">
-        <thead><tr><th>事件</th><th>方向</th><th>确认度</th><th>热度</th><th>A股映射</th><th>次日验证</th><th>来源</th></tr></thead>
-        <tbody><tr><td>新型电池产业规划线索</td><td>锂电池/固态电池</td><td><span class="status-badge is-unverified">未确认</span></td><td>高</td><td>时代万恒、国轩高科、诺德股份。</td><td>核验政策原文及个股直接业务关联，并以分化承接确认。</td><td><a href="https://travelstocks.github.io/daily-trading-review/" target="_blank" rel="noreferrer">用户文档</a> / <a href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">韭研公社</a></td></tr><tr><td>国庆休市窗口</td><td>跨节风险</td><td><span class="status-badge">已确认</span></td><td>中</td><td>节前缩量、仓位收缩与消息累积。</td><td>9月30日量能与风险偏好是否继续收缩。</td><td><a href="https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm" target="_blank" rel="noreferrer">中国政府网</a></td></tr></tbody>
-      </table>
-    </div>
-  </section>
-
-  <section class="post-market-group" data-post-market-focus>
-    <h4 class="post-market-group__title"><span>5.3</span>市场关注</h4>
-    <div class="post-market-table-wrap">
-      <table class="post-market-table post-market-table--focus">
-        <thead><tr><th>方向</th><th>催化逻辑</th><th>盘面基础</th><th>情绪</th><th>关注标的</th><th>次日验证</th><th>来源</th></tr></thead>
-        <tbody><tr><td>锂电池</td><td>首日启动与政策线索</td><td>板块强度7341，时代万恒2板，国轩高科首板。</td><td>首日爆发待分化</td><td>时代万恒 / 国轩高科 / 诺德股份</td><td>核心转强、后排一字与低位补涨。</td><td><a href="https://www.duanxianxia.com/web/platerotat" target="_blank" rel="noreferrer">短线侠</a> / <a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260929" target="_blank" rel="noreferrer">东方财富</a> / <a href="https://travelstocks.github.io/daily-trading-review/" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>传媒/AI应用</td><td>空间突破与消息回流</td><td>新华传媒6板，AI应用强度5130。</td><td>高度强、扩散不足</td><td>新华传媒 / 新华文轩 / 华策股份</td><td>空间龙能否继续打开高度并带动后排。</td><td><a href="https://www.duanxianxia.com/web/platerotat" target="_blank" rel="noreferrer">短线侠</a> / <a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260929" target="_blank" rel="noreferrer">东方财富</a> / <a href="https://travelstocks.github.io/daily-trading-review/" target="_blank" rel="noreferrer">用户文档</a></td></tr><tr><td>通信/PCB</td><td>超跌修复</td><td>通信强度5926，但亨通光电仍弱，内部反馈不一致。</td><td>强修复但分化</td><td>超声电子 / 亨通光电 / 善水科技</td><td>容量、ETF和涨停梯队能否共振。</td><td><a href="https://www.duanxianxia.com/web/platerotat" target="_blank" rel="noreferrer">短线侠</a> / <a href="https://www.10jqka.com.cn/" target="_blank" rel="noreferrer">同花顺</a> / <a href="https://travelstocks.github.io/daily-trading-review/" target="_blank" rel="noreferrer">用户文档</a></td></tr></tbody>
-      </table>
-    </div>
-  </section>
-
-  <aside class="post-market-rumors" data-post-market-rumors>
-    <strong>未确认线索处理</strong>
-    <ul><li><strong>未确认｜时代万恒直接受益全固态电池规划</strong>：核验政策原文与公司业务，不以口述关联作为买点。 （来源：<a href="https://travelstocks.github.io/daily-trading-review/" target="_blank" rel="noreferrer">用户文档</a>）</li><li><strong>未确认｜新华传媒短期不存在异动监管约束</strong>：逐日复算异常波动并查公告，页面不展示未经核验的剩余空间。 （来源：<a href="https://travelstocks.github.io/daily-trading-review/" target="_blank" rel="noreferrer">用户文档</a>）</li></ul>
-  </aside>
+<div class="post-market-intelligence__head">
+<h3 class="decision-band__title"><span class="decision-band__index">05</span>盘后情报</h3>
+<span class="post-market-intelligence__time">更新至 2026-09-29T22:50:00+08:00</span>
+</div>
+<p class="post-market-intelligence__summary"><strong>盘后结论：</strong>节前缩量修复，锂电池成为唯一首日启动方向；传媒由新华传媒维持高度。所有交易都以分化确认和一成仓上限为前提。</p>
+<section class="post-market-group" data-post-market-overseas="">
+<h4 class="post-market-group__title"><span>5.1</span>海外市场映射</h4>
+<div class="post-market-table-wrap">
+<table class="post-market-table post-market-table--overseas">
+<thead><tr><th>市场/方向</th><th>表现</th><th>核心驱动</th><th>A股映射</th><th>次日验证</th><th>来源</th></tr></thead>
+<tbody><tr><td>国庆跨节外盘</td><td>精确涨跌幅尚未发生，不提前预判。</td><td>海外科技、商品与风险偏好。</td><td>科技、锂电池、通信与周期。</td><td>节前只执行本土盘面确认，长假后再补海外映射。</td><td><a href="https://travelstocks.github.io/daily-trading-review/" rel="noreferrer" target="_blank">用户文档</a></td></tr></tbody>
+</table>
+</div>
 </section>
-
-
-  <p class="source-note">证据来源：<a href="https://www.duanxianxia.com/web/platerotat" target="_blank" rel="noreferrer">短线侠：9月29日板块轮动强度</a>；<a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260929" target="_blank" rel="noreferrer">东方财富：9月29日涨停池与连板梯队</a>；<a href="http://push2ex.eastmoney.com/getTopicZBPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260929" target="_blank" rel="noreferrer">东方财富：9月29日炸板池</a>；<a href="http://push2ex.eastmoney.com/getTopicDTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260929" target="_blank" rel="noreferrer">东方财富：9月29日跌停池</a>；<a href="https://www.10jqka.com.cn/" target="_blank" rel="noreferrer">同花顺：9月29日24小时热榜</a>；<a href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">韭研公社：事件催化时间线</a>；<a href="https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm" target="_blank" rel="noreferrer">中国政府网：2026年部分节假日安排</a>；<a href="https://travelstocks.github.io/daily-trading-review/" target="_blank" rel="noreferrer">用户文档：9月29日A股超短全景复盘全量文档</a>；<a href="https://docs.google.com/spreadsheets/d/1R4eo1t57Q37MWHF6bRxTIVRGsbksyz3whPjfvtfHoIE/edit" target="_blank" rel="noreferrer">三表审计：9月29日收盘、板块与热榜审计</a>。待核项：新型电池十五五规划原文及时代万恒与全固态电池的直接业务关联未核验。；新华传媒、新华文轩、华策股份的异动次数、累计涨幅、公告与实时监管状态待盘前核验。；龙虎榜席位、主力金额、部分跌停票名称与口述成交封单数据未完成双源确认。；最大账户损失尚未量化，未补齐前保持观察计划。</p>
+<section class="post-market-group" data-post-market-catalysts="">
+<h4 class="post-market-group__title"><span>5.2</span>事件催化</h4>
+<div class="post-market-table-wrap">
+<table class="post-market-table post-market-table--catalyst">
+<thead><tr><th>事件</th><th>方向</th><th>确认度</th><th>热度</th><th>A股映射</th><th>次日验证</th><th>来源</th></tr></thead>
+<tbody><tr><td>新型电池产业规划线索</td><td>锂电池/固态电池</td><td><span class="status-badge is-unverified">未确认</span></td><td>高</td><td>时代万恒、国轩高科、诺德股份。</td><td>核验政策原文及个股直接业务关联，并以分化承接确认。</td><td><a href="https://travelstocks.github.io/daily-trading-review/" rel="noreferrer" target="_blank">用户文档</a> / <a href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">韭研公社</a></td></tr><tr><td>国庆休市窗口</td><td>跨节风险</td><td><span class="status-badge">已确认</span></td><td>中</td><td>节前缩量、仓位收缩与消息累积。</td><td>9月30日量能与风险偏好是否继续收缩。</td><td><a href="https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm" rel="noreferrer" target="_blank">中国政府网</a></td></tr></tbody>
+</table>
+</div>
 </section>
-
-
-
+<section class="post-market-group" data-post-market-focus="">
+<h4 class="post-market-group__title"><span>5.3</span>市场关注</h4>
+<div class="post-market-table-wrap">
+<table class="post-market-table post-market-table--focus">
+<thead><tr><th>方向</th><th>催化逻辑</th><th>盘面基础</th><th>情绪</th><th>关注标的</th><th>次日验证</th><th>来源</th></tr></thead>
+<tbody><tr><td>锂电池</td><td>首日启动与政策线索</td><td>板块强度7341，时代万恒2板，国轩高科首板。</td><td>首日爆发待分化</td><td>时代万恒 / 国轩高科 / 诺德股份</td><td>核心转强、后排一字与低位补涨。</td><td><a href="https://www.duanxianxia.com/web/platerotat" rel="noreferrer" target="_blank">短线侠</a> / <a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260929" rel="noreferrer" target="_blank">东方财富</a> / <a href="https://travelstocks.github.io/daily-trading-review/" rel="noreferrer" target="_blank">用户文档</a></td></tr><tr><td>传媒/AI应用</td><td>空间突破与消息回流</td><td>新华传媒6板，AI应用强度5130。</td><td>高度强、扩散不足</td><td>新华传媒 / 新华文轩 / 华策股份</td><td>空间龙能否继续打开高度并带动后排。</td><td><a href="https://www.duanxianxia.com/web/platerotat" rel="noreferrer" target="_blank">短线侠</a> / <a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260929" rel="noreferrer" target="_blank">东方财富</a> / <a href="https://travelstocks.github.io/daily-trading-review/" rel="noreferrer" target="_blank">用户文档</a></td></tr><tr><td>通信/PCB</td><td>超跌修复</td><td>通信强度5926，但亨通光电仍弱，内部反馈不一致。</td><td>强修复但分化</td><td>超声电子 / 亨通光电 / 善水科技</td><td>容量、ETF和涨停梯队能否共振。</td><td><a href="https://www.duanxianxia.com/web/platerotat" rel="noreferrer" target="_blank">短线侠</a> / <a href="https://www.10jqka.com.cn/" rel="noreferrer" target="_blank">同花顺</a> / <a href="https://travelstocks.github.io/daily-trading-review/" rel="noreferrer" target="_blank">用户文档</a></td></tr></tbody>
+</table>
+</div>
+</section>
+<aside class="post-market-rumors" data-post-market-rumors="">
+<strong>未确认线索处理</strong>
+<ul><li><strong>未确认｜时代万恒直接受益全固态电池规划</strong>：核验政策原文与公司业务，不以口述关联作为买点。 （来源：<a href="https://travelstocks.github.io/daily-trading-review/" rel="noreferrer" target="_blank">用户文档</a>）</li><li><strong>未确认｜新华传媒短期不存在异动监管约束</strong>：逐日复算异常波动并查公告，页面不展示未经核验的剩余空间。 （来源：<a href="https://travelstocks.github.io/daily-trading-review/" rel="noreferrer" target="_blank">用户文档</a>）</li></ul>
+</aside>
+</section>
+<p class="source-note">证据来源：<a href="https://www.duanxianxia.com/web/platerotat" rel="noreferrer" target="_blank">短线侠：9月29日板块轮动强度</a>；<a href="http://push2ex.eastmoney.com/getTopicZTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260929" rel="noreferrer" target="_blank">东方财富：9月29日涨停池与连板梯队</a>；<a href="http://push2ex.eastmoney.com/getTopicZBPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260929" rel="noreferrer" target="_blank">东方财富：9月29日炸板池</a>；<a href="http://push2ex.eastmoney.com/getTopicDTPool?ut=7eea3edcaed734bea9cbfc24409ed989&amp;dpt=wz.ztzt&amp;Pageindex=0&amp;pagesize=500&amp;sort=fbt%3Aasc&amp;date=20260929" rel="noreferrer" target="_blank">东方财富：9月29日跌停池</a>；<a href="https://www.10jqka.com.cn/" rel="noreferrer" target="_blank">同花顺：9月29日24小时热榜</a>；<a href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">韭研公社：事件催化时间线</a>；<a href="https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm" rel="noreferrer" target="_blank">中国政府网：2026年部分节假日安排</a>；<a href="https://travelstocks.github.io/daily-trading-review/" rel="noreferrer" target="_blank">用户文档：9月29日A股超短全景复盘全量文档</a>；<a href="https://docs.google.com/spreadsheets/d/1R4eo1t57Q37MWHF6bRxTIVRGsbksyz3whPjfvtfHoIE/edit" rel="noreferrer" target="_blank">三表审计：9月29日收盘、板块与热榜审计</a>。待核项：新型电池十五五规划原文及时代万恒与全固态电池的直接业务关联未核验。；新华传媒、新华文轩、华策股份的异动次数、累计涨幅、公告与实时监管状态待盘前核验。；龙虎榜席位、主力金额、部分跌停票名称与口述成交封单数据未完成双源确认。；最大账户损失尚未量化，未补齐前保持观察计划。</p>
+</section>
 <p class="body-line tone-action">指数层面，沪指收于3830.45点，深指12901.95点，创业板3142.56点，科创板1569.34点。沪指量能14092亿元，约1.41万亿元，属于节前地量。用户观察到CCI指标由负值逐渐拉平，指数进入缩量横盘状态，可以视为初步企稳，但还需要9月30日再收一根站稳K线确认。</p>
 <p class="body-line">情绪层面，三表将市场标记为修复期：涨停56只、跌停10只，上涨3261只、下跌1810只；一板46只、二板7只、三板1只、高度6板，封板率88%，断板8只。用户的周期定位更严格：昨天是退潮高潮与退潮第1天，今天是退潮第2天，双冰或三冰后的反核预期得到验证，但缓和不等于止跌。</p>
 <p class="body-line">题材层面，电池当日强度7341，是唯一具备首日启动特征的方向；AI应用5130、通信5926构成修复和回流，但AI应用与传媒主要由新华传媒的高度支撑。机器人、PCB、地产、算力、消费、风电、染料、医药等方向或题材效应弱，或仅为超跌反弹，暂不作为主线。</p>
 <p class="body-line tone-action">操作层面，当前最优策略不是扩大交易，而是等待市场高度和题材持续性确认。新华传媒负责打开空间，时代万恒负责检验锂电池能否从一日启动转为持续行情。若第一名无法参与、第二名也不够强，则继续空仓，不做后排和纯套利。</p>
 </section>
-<section class="section-card" id="chapter-2-二-市场风格与赚钱效应解析-cb50c9" data-phase="overview" data-chapter-number="02"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">二、市场风格与赚钱效应解析</h2>
-
-<section id="daily-three-judgments" aria-labelledby="daily-three-judgments-title">
-  <h3 id="daily-three-judgments-title" class="subchapter-title">每日三项判断</h3>
-  <p class="judgment-note">依据 9 月 29 日复盘原文补充整理：先辨赚钱效应，再定适用模式，最后核验龙头身份。下列为当日判断与次日验证条件，未使用后续行情倒推。</p>
-  <div class="table-shell judgment-scroll" role="region" aria-label="每日三项判断，可横向滚动查看完整表格" tabindex="0">
-    <table class="data-table" data-daily-three-judgments aria-labelledby="daily-three-judgments-title">
-      <colgroup><col style="width:16%"><col style="width:32%"><col style="width:25%"><col style="width:27%"></colgroup>
-      <thead><tr><th scope="col">判断项</th><th scope="col">今日结论</th><th scope="col">关键证据</th><th scope="col">次日验证与失效条件</th></tr></thead>
-      <tbody>
-        <tr>
-          <th scope="row">赚钱效应的判断</th>
-          <td><p><strong>局部修复，不是普遍连板赚钱。</strong></p><p>赚钱集中于新华传媒的一字高度抱团、锂电池首日启动和双冰后的反核修复。</p><p>亏钱集中于中位接力、医药/农业/电力/AI应用老周期旧核心，以及普通超跌反包和无板块效应的独立票。</p></td>
-          <td><p>原文记录涨停 56、跌停 10，封板率 88%；量能仅 14092 亿元，中低位晋级率仍低。</p><p>恐慌缓和，但老周期负反馈尚未出清，不能将“修复期”直接等同于新周期主升。</p></td>
-          <td><p>观察跌停与中位负反馈是否继续收敛，电池分化后能否保留前排及后排助攻。</p><p>若只见前排冲高、后排回落，或老周期再度走弱，则仍按局部弱修复看待。</p></td>
-        </tr>
-        <tr>
-          <th scope="row">目前阶段最适用的战法模式</th>
-          <td><p><strong>原文执行基调：空仓等待，低位切换须有确认。</strong></p><p>当日出现反核修复，不等于次日继续追反核。切换观察聚焦时代万恒；新华传媒以空间高度观察为主，不把连续一字视为可直接参与的买点。</p></td>
-          <td><p>电池仅首日启动，持续性未确认；传媒有高度，后排扩散仍不足。</p><p>原文不认可普通超跌反包的持续性，也未确认总龙二波、补涨三板、趋势或监管战法的执行条件。</p></td>
-          <td><p>时代万恒缩量转强或健康换手回封，同时出现电池后排一字或强二板助攻，才符合原文的条件观察。</p><p>核心独强却无跟随、回封失败或题材持续性不足，继续等待，不将候选模式当作既定交易。</p></td>
-        </tr>
-        <tr>
-          <th scope="row">是否存在题材趋势总龙以及补涨龙</th>
-          <td><p><strong>趋势总龙：未确认。补涨龙：未确认。</strong></p><p>新华传媒是空间突破龙，不据此认定为题材趋势总龙；时代万恒是电池核心候选，国轩高科为容量助攻，均不能直接升级为已确认的总龙或补涨龙。</p></td>
-          <td><p>原文明确“当前没有完整意义上的下一周期总龙预备票”。新华传媒 6 板，但主动换手待验；时代万恒 2 板，题材持续性待验。</p><p>尚无证据充分的补涨梯队；新文轩仍按修复样本观察，不直接认定总龙二波。</p></td>
-          <td><p>趋势总龙需继续验证题材持续性、核心主动性与后排跟随；补涨龙需明确同题材承接关系、启动时点和辨识度。</p><p>未出现这些证据，维持“未确认”，不以最高板或单日涨停代替龙头判断。</p></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+<section class="section-card" data-chapter-number="02" data-phase="overview" id="chapter-2-二-市场风格与赚钱效应解析-cb50c9"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">二、市场风格与赚钱效应解析</h2><section class="trading-framework" data-trading-framework="weather" id="trading-framework-weather"><h3>天时 · 先确认市场允许做什么</h3><p class="framework-source">交易体系经验补充 · 2026-10-04；不改写当日事实、历史仓位或原始判断。</p><div class="framework-points"><article class="framework-point"><h4>赚钱效应 · 最重要</h4><p>钱在哪里赚、哪种模式有持续正反馈？先选市场实际奖励的打法。</p></article><article class="framework-point"><h4>情绪周期 · 次重要</h4><p>确认冰点、修复、主升、分歧或退潮，并区分新旧周期，不能把单日修复当作主升确认。</p></article><article class="framework-point"><h4>亏钱效应</h4><p>辨认亏损集中在哪些题材、身位和模式，检查极端负反馈是否扩散。</p></article><article class="framework-point"><h4>监管压力</h4><p>核验公告、异动距离和监管状态；不把经验节点当作固定监管规则。</p></article><article class="framework-point"><h4>连板高度限制</h4><p>看实际空间压制、同身位竞争和晋级反馈，不只看最高板数字。</p></article><article class="framework-point"><h4>市场主导风格</h4><p>分清短线情绪、机构趋势、容量趋势、抱团、高低切与混沌轮动。</p></article><article class="framework-point"><h4>短线炒作情绪</h4><p>结合接力生态、炸板与断板反馈、封板质量，决定参与还是等待。</p></article></div></section>
+<section aria-labelledby="daily-three-judgments-title" id="daily-three-judgments">
+<h3 class="subchapter-title" id="daily-three-judgments-title">每日三项判断</h3>
+<p class="judgment-note">依据 9 月 29 日复盘原文补充整理：先辨赚钱效应，再定适用模式，最后核验龙头身份。下列为当日判断与次日验证条件，未使用后续行情倒推。</p>
+<div aria-label="每日三项判断，可横向滚动查看完整表格" class="table-shell judgment-scroll" role="region" tabindex="0">
+<table aria-labelledby="daily-three-judgments-title" class="data-table" data-daily-three-judgments="">
+<colgroup><col style="width:16%"/><col style="width:32%"/><col style="width:25%"/><col style="width:27%"/></colgroup>
+<thead><tr><th scope="col">判断项</th><th scope="col">今日结论</th><th scope="col">关键证据</th><th scope="col">次日验证与失效条件</th></tr></thead>
+<tbody>
+<tr>
+<th scope="row">赚钱效应的判断</th>
+<td><p><strong>局部修复，不是普遍连板赚钱。</strong></p><p>赚钱集中于新华传媒的一字高度抱团、锂电池首日启动和双冰后的反核修复。</p><p>亏钱集中于中位接力、医药/农业/电力/AI应用老周期旧核心，以及普通超跌反包和无板块效应的独立票。</p></td>
+<td><p>原文记录涨停 56、跌停 10，封板率 88%；量能仅 14092 亿元，中低位晋级率仍低。</p><p>恐慌缓和，但老周期负反馈尚未出清，不能将“修复期”直接等同于新周期主升。</p></td>
+<td><p>观察跌停与中位负反馈是否继续收敛，电池分化后能否保留前排及后排助攻。</p><p>若只见前排冲高、后排回落，或老周期再度走弱，则仍按局部弱修复看待。</p></td>
+</tr>
+<tr>
+<th scope="row">目前阶段最适用的战法模式</th>
+<td><p><strong>原文执行基调：空仓等待，低位切换须有确认。</strong></p><p>当日出现反核修复，不等于次日继续追反核。切换观察聚焦时代万恒；新华传媒以空间高度观察为主，不把连续一字视为可直接参与的买点。</p></td>
+<td><p>电池仅首日启动，持续性未确认；传媒有高度，后排扩散仍不足。</p><p>原文不认可普通超跌反包的持续性，也未确认总龙二波、补涨三板、趋势或监管战法的执行条件。</p></td>
+<td><p>时代万恒缩量转强或健康换手回封，同时出现电池后排一字或强二板助攻，才符合原文的条件观察。</p><p>核心独强却无跟随、回封失败或题材持续性不足，继续等待，不将候选模式当作既定交易。</p></td>
+</tr>
+<tr>
+<th scope="row">是否存在题材趋势总龙以及补涨龙</th>
+<td><p><strong>趋势总龙：未确认。补涨龙：未确认。</strong></p><p>新华传媒是空间突破龙，不据此认定为题材趋势总龙；时代万恒是电池核心候选，国轩高科为容量助攻，均不能直接升级为已确认的总龙或补涨龙。</p></td>
+<td><p>原文明确“当前没有完整意义上的下一周期总龙预备票”。新华传媒 6 板，但主动换手待验；时代万恒 2 板，题材持续性待验。</p><p>尚无证据充分的补涨梯队；新文轩仍按修复样本观察，不直接认定总龙二波。</p></td>
+<td><p>趋势总龙需继续验证题材持续性、核心主动性与后排跟随；补涨龙需明确同题材承接关系、启动时点和辨识度。</p><p>未出现这些证据，维持“未确认”，不以最高板或单日涨停代替龙头判断。</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
-
-<section class="effect-positioning-module" data-effect-positioning data-date="2026-09-29" id="effect-positioning">
-  <div class="module-head">
-    <span class="section-kicker">Market Effect Map</span>
-    <h3 class="module-title">赚钱效应与亏钱效应定位</h3>
-    <span class="module-status" data-effect-status>本地已保存</span>
-  </div>
-  <div class="effect-grid">
-    <div class="effect-panel profit"><h4>赚钱效应</h4><div class="effect-chipset" data-effect-group="profit"></div></div>
-    <div class="effect-panel loss"><h4>亏钱效应</h4><div class="effect-chipset" data-effect-group="loss"></div></div>
-  </div>
-  <script type="application/json" data-effect-options>[&quot;抱团高位&quot;, &quot;机构趋势&quot;, &quot;短线情绪&quot;, &quot;高低切换&quot;, &quot;避险题材&quot;, &quot;科技题材&quot;, &quot;老登题材&quot;, &quot;混沌轮动&quot;, &quot;断板反包&quot;, &quot;N字启动&quot;]</script>
-  <script type="application/json" data-effect-defaults>{&quot;profit&quot;: [&quot;短线情绪&quot;, &quot;高低切换&quot;, &quot;断板反包&quot;], &quot;loss&quot;: [&quot;抱团高位&quot;, &quot;混沌轮动&quot;, &quot;老登题材&quot;]}</script>
+<section class="effect-positioning-module" data-date="2026-09-29" data-effect-positioning="" id="effect-positioning">
+<div class="module-head">
+<span class="section-kicker">Market Effect Map</span>
+<h3 class="module-title">赚钱效应与亏钱效应定位</h3>
+<span class="module-status" data-effect-status="">本地已保存</span>
+</div>
+<div class="effect-grid">
+<div class="effect-panel profit"><h4>赚钱效应</h4><div class="effect-chipset" data-effect-group="profit"></div></div>
+<div class="effect-panel loss"><h4>亏钱效应</h4><div class="effect-chipset" data-effect-group="loss"></div></div>
+</div>
+<script data-effect-options="" type="application/json">[&quot;抱团高位&quot;, &quot;机构趋势&quot;, &quot;短线情绪&quot;, &quot;高低切换&quot;, &quot;避险题材&quot;, &quot;科技题材&quot;, &quot;老登题材&quot;, &quot;混沌轮动&quot;, &quot;断板反包&quot;, &quot;N字启动&quot;]</script>
+<script data-effect-defaults="" type="application/json">{&quot;profit&quot;: [&quot;短线情绪&quot;, &quot;高低切换&quot;, &quot;断板反包&quot;], &quot;loss&quot;: [&quot;抱团高位&quot;, &quot;混沌轮动&quot;, &quot;老登题材&quot;]}</script>
 </section>
-
-<h3 id="sub-2-1-一-市场风格-67c57d" class="subchapter-title">一 市场风格</h3>
+<h3 class="subchapter-title" id="sub-2-1-一-市场风格-67c57d">一 市场风格</h3>
 <p class="body-line bullet-line">指数节奏：CCI由负值趋平，缩量横盘，属于探底后的初步企稳结构。</p>
 <p class="body-line bullet-line">量能结构：14092亿元，节前量能不足，不支持多题材同时活跃。</p>
 <p class="body-line bullet-line tone-action">板块风格：电池首日爆发，AI应用和传媒回流；通信修复强，但内部核心反馈分化。</p>
 <p class="body-line bullet-line">资金风格：反核、超跌修复与高度抱团并存；增量资金主要出现在新股，普通短线资金活跃度不足。</p>
-<h3 id="sub-2-2-二-赚钱效应-e1ab59" class="subchapter-title">二 赚钱效应</h3>
+<h3 class="subchapter-title" id="sub-2-2-二-赚钱效应-e1ab59">二 赚钱效应</h3>
 <p class="body-line bullet-line">涨跌结构：涨停56、跌停10，上涨3261、下跌1810，恐慌较前一日明显缓和。</p>
 <p class="body-line bullet-line">连板结构：一板46、二板7、三板1、高度6板。中低位晋级率低，连板并未形成普遍赚钱效应。</p>
 <p class="body-line bullet-line">封板与断板：封板率88%，断板8。修复质量尚可，但老周期负反馈仍在出清。</p>
 <p class="body-line">市场与情绪精确数据</p>
 <div class="table-shell" id="source-table-2"><table class="data-table"><thead><tr><th>周几</th><th>日期</th><th>沪指</th><th>深指</th><th>创业</th><th>科创</th><th>沪指量能</th><th>情绪强度</th><th>涨停跌停</th><th>上涨下跌</th><th>一板</th><th>二板</th><th>三板</th><th>高度</th><th>封板率</th><th>断板</th></tr></thead><tbody><tr><td>周二</td><td>2026-09-29</td><td>3830.45</td><td>12901.95</td><td>3142.56</td><td>1569.34</td><td>14092</td><td>修复期</td><td>56比10</td><td>3261比1810</td><td>46</td><td>7</td><td>1</td><td>6</td><td>88%</td><td>8</td></tr></tbody></table></div>
 </section>
-<section class="section-card" id="chapter-3-三-近4日板块强度-次日节奏预测表-f65244" data-phase="overview" data-chapter-number="03"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">三、近4日板块强度+次日节奏预测表</h2>
-
-  <div class="rhythm-usage-note" id="sector-rhythm-usage-note" style="margin:14px 0 18px;padding:14px 16px;border:1px solid rgba(13,148,136,.24);border-left:4px solid #0f766e;background:#ecfeff;border-radius:8px;color:#134e4a;">
-    <span class="section-kicker">Rhythm Read</span>
-    <p style="margin:6px 0 0;font-weight:700;">双冰以上可做修复回流预期，双高潮以上可做砸盘预期！</p>
-  </div>
-
-
+<section class="section-card" data-chapter-number="03" data-phase="overview" id="chapter-3-三-近4日板块强度-次日节奏预测表-f65244"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">三、近4日板块强度+次日节奏预测表</h2>
+<div class="rhythm-usage-note" id="sector-rhythm-usage-note" style="margin:14px 0 18px;padding:14px 16px;border:1px solid rgba(13,148,136,.24);border-left:4px solid #0f766e;background:#ecfeff;border-radius:8px;color:#134e4a;">
+<span class="section-kicker">Rhythm Read</span>
+<p style="margin:6px 0 0;font-weight:700;">双冰以上可做修复回流预期，双高潮以上可做砸盘预期！</p>
+</div>
 <p class="body-line">三表中的近4个交易日为9月22日、9月23日、9月24日和9月29日。电池7341、通信5926、AI应用5130是当日最强数值，但数值强不等于短线持续性已经确认。双冰以上可做修复回流预期，双高潮以上需要防范砸盘预期。</p>
 <div class="table-shell" id="source-table-3"><table class="data-table"><thead><tr><th>大题材板块</th><th>2026/09/22</th><th>2026/09/23</th><th>2026/09/24</th><th>2026/09/29</th><th>次日节奏预测</th><th>核心判断</th></tr></thead><tbody><tr><td>有色金属</td><td>185（强回流）</td><td>452（强回流）</td><td>-1408（大分歧）</td><td>102（强回流）</td><td>小修复</td><td>非主攻，观察即可</td></tr><tr><td>电力</td><td>145（强回流）</td><td>-2077（大分歧）</td><td>364（强回流）</td><td>952（强回流）</td><td>修复后分化</td><td>老周期出清，不提前预判回流</td></tr><tr><td>AI应用</td><td>8048（高潮）</td><td>-1669（小分歧）</td><td>-682（小分歧）</td><td>5130（强回流）</td><td>回流延续观察</td><td>新华传媒高度带动，缺少可做低位龙</td></tr><tr><td>算力</td><td>3988（强回流）</td><td>4600（强回流）</td><td>-780（小分歧）</td><td>1998（正常）</td><td>轮动修复</td><td>不看持续性</td></tr><tr><td>机器人</td><td>181（大分歧）</td><td>3776（强回流）</td><td>3974（强回流）</td><td>1406（小分歧）</td><td>继续分化</td><td>雪龙集团与襄阳轴承无后排助攻</td></tr><tr><td>光伏</td><td>-94（小分歧）</td><td>-1040（大分歧）</td><td>-493（小分歧）</td><td>-1196（大分歧）</td><td>弱</td><td>不看</td></tr><tr><td>化工</td><td>-272（大分歧）</td><td>-214（大分歧）</td><td>-1387（大分歧）</td><td>1186（强回流）</td><td>局部轮动</td><td>善水科技缺乏染料板块效应</td></tr><tr><td>电网</td><td>119（强回流）</td><td>-982（大分歧）</td><td>136（强回流）</td><td>-78（小分歧）</td><td>偏弱</td><td>不主动参与</td></tr><tr><td>人工智能</td><td>25（强回流）</td><td>-2590（大分歧）</td><td>-1400（大分歧）</td><td>89（强回流）</td><td>横盘</td><td>等待应用端确认</td></tr><tr><td>商业航天</td><td>-39（小分歧）</td><td>618（强回流）</td><td>619（强回流）</td><td>41（大分歧）</td><td>横盘</td><td>无主线信号</td></tr><tr><td>芯片</td><td>6187（高潮）</td><td>6583（高潮）</td><td>1249（大分歧）</td><td>-1650（小分歧）</td><td>弱修复预期</td><td>科技反弹属性，不作为主线</td></tr><tr><td>黄金</td><td>-34（小分歧）</td><td>-453（大分歧）</td><td>-873（大分歧）</td><td>407（强回流）</td><td>小修复</td><td>防御属性，非主攻</td></tr><tr><td>石油石化</td><td>-236（大分歧）</td><td>-25（小分歧）</td><td>-22（小分歧）</td><td>-160（大分歧）</td><td>弱</td><td>不看</td></tr><tr><td>通信</td><td>2055（正常）</td><td>5446（高潮）</td><td>-4747（大分歧）</td><td>5926（高潮）</td><td>强修复后分化</td><td>亨通光电仍弱，需二次确认</td></tr><tr><td>智能驾驶</td><td>437（强回流）</td><td>-857（大分歧）</td><td>-543（大分歧）</td><td>441（强回流）</td><td>小修复</td><td>缺乏核心</td></tr><tr><td>军工</td><td>776（强回流）</td><td>66（大分歧）</td><td>427（强回流）</td><td>350（正常）</td><td>小修复</td><td>不扩散</td></tr><tr><td>天然气</td><td>447（强回流）</td><td>-252（大分歧）</td><td>-556（大分歧）</td><td>-194（大分歧）</td><td>弱</td><td>不看</td></tr><tr><td>医疗</td><td>5196（强回流）</td><td>-84（大分歧）</td><td>-5832（大分歧）</td><td>375（强回流）</td><td>超跌修复</td><td>哈药周期旧产物继续出清</td></tr><tr><td>农业</td><td>-437（大分歧）</td><td>36（大分歧）</td><td>1155（高潮）</td><td>-393（大分歧）</td><td>弱</td><td>万向德农等老周期负反馈</td></tr><tr><td>一季报增长</td><td>-458（大分歧）</td><td>-458（大分歧）</td><td>-458（大分歧）</td><td>-458（大分歧）</td><td>弱</td><td>不看</td></tr><tr><td>并购重组</td><td>3226（强回流）</td><td>1221（小分歧）</td><td>862（大分歧）</td><td>2567（强回流）</td><td>局部活跃</td><td>没有形成持续主线</td></tr><tr><td>电池</td><td>-530（小分歧）</td><td>653（大分歧）</td><td>-1169（大分歧）</td><td>7341（高潮）</td><td>首日爆发后分化</td><td>唯一新启动方向，看时代万恒</td></tr><tr><td>元器件</td><td>764（高潮）</td><td>-401（大分歧）</td><td>-284（大分歧）</td><td>379（高潮）</td><td>修复</td><td>科技超跌属性</td></tr><tr><td>稀土</td><td>300（强回流）</td><td>-253（大分歧）</td><td>-189（大分歧）</td><td>96（强回流）</td><td>横盘</td><td>不主攻</td></tr><tr><td>煤炭</td><td>515（高潮）</td><td>-983（大分歧）</td><td>475（高潮）</td><td>13（高潮）</td><td>横盘</td><td>无持续性信号</td></tr></tbody></table></div>
 </section>
-<div class="phase-divider" id="phase-diagnosis" data-tone="dark"><span>PHASE 02</span><strong>盘后拆解</strong><p>复盘操作、主线、催化与负反馈，识别真正的主动性和风险来源。</p></div>
-<section class="section-card" id="chapter-4-四-今日操作结果-核心失误与核心反思-9819a6" data-phase="diagnosis" data-chapter-number="04"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">四 今日操作结果 核心失误与核心反思</h2>
-<h3 id="sub-4-1-一-今日操作结果-a8f4fb" class="subchapter-title">一 今日操作结果</h3>
+<div class="phase-divider" data-tone="dark" id="phase-diagnosis"><span>PHASE 02</span><strong>盘后拆解</strong><p>复盘操作、主线、催化与负反馈，识别真正的主动性和风险来源。</p></div>
+<section class="section-card" data-chapter-number="04" data-phase="diagnosis" id="chapter-4-四-今日操作结果-核心失误与核心反思-9819a6"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">四 今日操作结果 核心失误与核心反思</h2>
+<h3 class="subchapter-title" id="sub-4-1-一-今日操作结果-a8f4fb">一 今日操作结果</h3>
 <p class="body-line tone-action">今日实际操作为空仓观望，无持仓、无买卖、无当日盈亏需要记录。</p>
 <p class="body-line tone-action">做对操作</p>
 <p class="body-line bullet-line">识别到今天只是退潮第2天的反核修复，没有把跌停减少误判为新周期确立。</p>
@@ -339,26 +332,26 @@
 <p class="body-line bullet-line">口述中曾出现对新华传媒隔夜排单和重仓参与的强烈表达，但正式计划缺少对应的最大亏损和退出条件，不应直接转化为执行。</p>
 <p class="body-line bullet-line tone-risk">不能因为锂电池首日强度最高就提前确认主线，必须等第一次分化后的梯队、承接和后排反馈。</p>
 <p class="body-line bullet-line tone-risk">不能把纯套利当成节前低风险机会；当前纯套利胜率与盈亏比都偏低。</p>
-<h3 id="sub-4-2-二-核心失误根源-891df4" class="subchapter-title">二 核心失误根源</h3>
+<h3 class="subchapter-title" id="sub-4-2-二-核心失误根源-891df4">二 核心失误根源</h3>
 <p class="body-line bullet-line">执行层面：若参与，必须先设定一成仓上限、退出信号和最大账户损失。</p>
 <p class="body-line bullet-line">地位层面：题材内唯一性与跨题材高度唯一性必须分开，时代万恒题材内较强，但市场高度仍由新华传媒占据。</p>
 <p class="body-line bullet-line">节奏层面：反核修复只解决恐慌，不等于量能、主线和中位赚钱效应同步转强。</p>
-<h3 id="sub-4-3-三-深度核心反思-a92d87" class="subchapter-title">三 深度核心反思</h3>
+<h3 class="subchapter-title" id="sub-4-3-三-深度核心反思-a92d87">三 深度核心反思</h3>
 <p class="body-line">今天最大的进步是克制。行情差时，空仓不是错过，而是主动回避低胜率交易。天时还在突破阶段，地利没有持续题材，人和也缺少增量资金；三者未形成共振，就不应该用高频试错强行寻找机会。明天即使出手，也只能围绕电池分化前排做一成仓以内的验证性试错。</p>
 </section>
-<section class="section-card" id="chapter-5-五-操作与情绪复盘-kiss模型-89196b" data-phase="diagnosis" data-chapter-number="05"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">五、操作与情绪复盘（KISS模型）</h2>
-<h3 id="sub-5-1-一-当日操作与情绪复盘-702b94" class="subchapter-title">一 当日操作与情绪复盘</h3>
+<section class="section-card" data-chapter-number="05" data-phase="diagnosis" id="chapter-5-五-操作与情绪复盘-kiss模型-89196b"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">五、操作与情绪复盘（KISS模型）</h2>
+<h3 class="subchapter-title" id="sub-5-1-一-当日操作与情绪复盘-702b94">一 当日操作与情绪复盘</h3>
 <p class="body-line tone-risk">核心失误：没有实际交易失误，主要风险来自盘中可能产生的主观冲动，即把新华传媒打开高度或锂电池首日爆发误判为全面新周期。</p>
 <p class="body-line">正向进化：能够以空仓完成退潮第2天，明确将节前缩量、出金压力、监管压力、老周期出清和题材持续性共同纳入决策。</p>
-<h3 id="sub-5-2-二-kiss四维总结-eff7d9" class="subchapter-title">二 KISS四维总结</h3>
+<h3 class="subchapter-title" id="sub-5-2-二-kiss四维总结-eff7d9">二 KISS四维总结</h3>
 <p class="body-line bullet-line tone-action">Keep 保持：只做板块最核心前排，坚持第一名做不了就看第二名，第二名也弱就空仓。</p>
 <p class="body-line bullet-line tone-risk">Improve 改进：参与前补齐仓位、失败条件和最大亏损，避免用主观信心替代风险控制。</p>
 <p class="body-line bullet-line">Start 启动：把电池第一次分化写成触发卡，只在时代万恒转强且后排助攻时试错。</p>
 <p class="body-line bullet-line">Stop 禁止：停止中位接力、普通超跌反包、纯套利和节前无增量环境中的频繁出手。</p>
 </section>
-<section class="section-card" id="chapter-6-六-各主线板块详细解析-937d9c" data-phase="diagnosis" data-chapter-number="06"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">六、各主线板块详细解析</h2>
-<section class="theme-analysis-flow" id="intraday-mainline" data-intraday-mainline data-theme-analysis-flow>
-  <style>
+<section class="section-card" data-chapter-number="06" data-phase="diagnosis" id="chapter-6-六-各主线板块详细解析-937d9c"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">六、各主线板块详细解析</h2><section class="trading-framework" data-trading-framework="theme" id="trading-framework-theme"><h3>地利 · 选择最有预期的题材</h3><p class="framework-source">交易体系经验补充 · 2026-10-04；不改写当日事实、历史仓位或原始判断。</p><div class="framework-points"><article class="framework-point"><h4>题材强度</h4><p>同时看前排主动性、后排扩散、容量与高中低梯队，避免单票强等同板块强。</p></article><article class="framework-point"><h4>题材预期</h4><p>写清次日预期、催化与验证条件，也写清什么表现会推翻预期。</p></article><article class="framework-point"><h4>持续性与节奏</h4><p>核验回流、分歧与高潮是否连续，前后排是否同步；检查整体证伪与个股分歧的区别。</p></article><article class="framework-point"><h4>题材阶段</h4><p>分别标注新题材、旧题材、总龙与补涨的阶段，再选择匹配打法。</p></article><article class="framework-point"><h4>市场情绪锚 · 阵眼</h4><p>找整个市场的情绪核心，并区分板块核心与可能脱离板块的独立情绪锚；独立性须用实际走势验证。</p></article></div></section>
+<section class="theme-analysis-flow" data-intraday-mainline="" data-theme-analysis-flow="" id="intraday-mainline">
+<style>
     .theme-analysis-flow{margin:14px 0 4px}
     .theme-analysis-intro{margin:0 0 20px;padding:12px 14px;border-left:4px solid #0d9275;background:#f2faf7;color:#496b65;line-height:1.65}
     .theme-analysis-block{padding:24px 0;border-top:2px solid #cfe2de}
@@ -383,21 +376,20 @@
     .theme-analysis-copy strong{display:block;margin-bottom:3px;color:#0b675f}
     @media (max-width:900px){.theme-analysis-head{align-items:flex-start;flex-direction:column}.theme-analysis-meta{justify-content:flex-start}.theme-analysis-copy{grid-template-columns:1fr}.theme-analysis-copy p{border-right:0;border-bottom:1px solid #e4ecea}.theme-analysis-copy p:last-child{border-bottom:0}}
   </style>
-  <h3 class="theme-analysis-title">日内主线表 × 题材详细解析</h3>
-  <p class="theme-analysis-intro">按题材连续复盘：每个板块先看核心标的的真实涨停表现与市场地位，再看日内节奏、板块分析和次日验证。趋势核心未涨停时明确标注，不与封板票混写。</p>
-  <article class="theme-analysis-block" id="theme-t1" data-theme-section><div class="theme-analysis-head"><h4 class="theme-analysis-title">1. 锂电池/固态电池</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">首日启动主线</span><span class="theme-analysis-chip">当日强度7341，全市场最强</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">时代万恒<br><small>600241</small></td><td><span class="limit-up-tag">2板，首日启动身位</span></td><td>题材核心候选</td><td>主动性与题材内唯一性较强，领涨持续性待分化验证</td><td>缩量转强或健康换手回封</td></tr><tr><td class="theme-stock-name">国轩高科<br><small>002074</small></td><td><span class="limit-up-tag">首板涨停、热榜靠前</span></td><td>容量助攻</td><td>有跟随性，能否反推核心待验</td><td>竞价强并继续封板助攻</td></tr><tr><td class="theme-stock-name">诺德股份<br><small>600110</small></td><td><span class="limit-up-tag">首板样本</span></td><td>电池低位扩散观察</td><td>当前以跟随为主</td><td>能否形成二板梯队</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>政策线索发酵 -&gt; 时代万恒提供身位 -&gt; 容量后排跟随</p><p><strong>板块分析</strong>首日爆发只完成方向确认，次日分化才决定是否进入持续行情。时代万恒承担题材内唯一性检验。</p><p><strong>次日验证</strong>核心主动回封、后排一字或强二板、容量承接。</p></div></article><article class="theme-analysis-block" id="theme-t2" data-theme-section><div class="theme-analysis-head"><h4 class="theme-analysis-title">2. 文化传媒/AI应用</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">空间高度与回流线</span><span class="theme-analysis-chip">AI应用5130，新华传媒6板</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">新华传媒<br><small>600825</small></td><td><span class="limit-up-tag">6板一字</span></td><td>市场空间突破龙</td><td>高度领涨强，主动换手尚未验证</td><td>首次分歧充分换手回封</td></tr><tr><td class="theme-stock-name">新华文轩<br><small>601811</small></td><td><span class="limit-up-tag">7天6板修复样本</span></td><td>传媒高位辨识度</td><td>更多承担情绪映射，主动性待验</td><td>避免大负反馈拖累空间</td></tr><tr><td class="theme-stock-name">华策股份<br><small>300133</small></td><td><span class="limit-up-tag">活跃观察</span></td><td>AI应用传媒观察票</td><td>主动性与异动状态待核</td><td>只看板块共振，不做独立冲高</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>空间龙一字 -&gt; 板块回流 -&gt; 后排扩散不足</p><p><strong>板块分析</strong>新华传媒是当前唯一空间突破龙，但连续一字降低可交易性。空间高度与板块主升必须分开判断。</p><p><strong>次日验证</strong>新华传媒健康6进7并带动后排。</p></div></article><article class="theme-analysis-block" id="theme-t3" data-theme-section><div class="theme-analysis-head"><h4 class="theme-analysis-title">3. 机器人/汽车</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">中位轮动</span><span class="theme-analysis-chip">机器人1406，题材效应弱</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">雪龙集团<br><small>603949</small></td><td><span class="limit-up-tag">4板</span></td><td>机器人汽车中位高标</td><td>个股高度在，板块领涨性不足</td><td>全量换手回封并带后排</td></tr><tr><td class="theme-stock-name">襄阳轴承<br><small>000678</small></td><td><span class="limit-up-tag">3板</span></td><td>汽车中位样本</td><td>跟随性为主</td><td>半放量回封并避免深水</td></tr><tr><td class="theme-stock-name">九阳股份<br><small>002242</small></td><td><span class="limit-up-tag">2板观察</span></td><td>机器人/消费复合票</td><td>归因与带动性不足</td><td>必须有清晰板块扩散</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>中位高度维持 -&gt; 后排缺位 -&gt; 接力性价比下降</p><p><strong>板块分析</strong>雪龙集团与襄阳轴承有身位但缺少梯队。中位票必须充分换手并带后排，否则是孤立接力。</p><p><strong>次日验证</strong>量能放大、主动回封和后排助攻。</p></div></article><article class="theme-analysis-block" id="theme-t4" data-theme-section><div class="theme-analysis-head"><h4 class="theme-analysis-title">4. 房地产</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">政策轮动</span><span class="theme-analysis-chip">局部首板，持续性不足</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">万科A<br><small>000002</small></td><td><span class="limit-up-tag">首板涨停、热榜3</span></td><td>地产容量表态</td><td>有主动性，领涨扩散待验</td><td>持续主动并带地产梯队</td></tr><tr><td class="theme-stock-name">我爱我家<br><small>000560</small></td><td><span class="limit-up-tag">活跃观察</span></td><td>地产辨识度</td><td>跟随性待验</td><td>板块转强时才保留</td></tr><tr><td class="theme-stock-name">深物业A<br><small>000011</small></td><td><span class="limit-up-tag">口述观察、状态待核</span></td><td>地产低位观察</td><td>待核</td><td>核验身位与板块归属</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>消息刺激 -&gt; 万科A表态 -&gt; 梯队未形成</p><p><strong>板块分析</strong>万科A涨停提供容量表态，但地产尚未形成题材级赚钱效应。</p><p><strong>次日验证</strong>二板与新增首板同时出现。</p></div></article><article class="theme-analysis-block" id="theme-t5" data-theme-section><div class="theme-analysis-head"><h4 class="theme-analysis-title">5. 通信/PCB/科技</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">超跌修复</span><span class="theme-analysis-chip">通信5926、AI应用5130</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">超声电子<br><small>000823</small></td><td><span class="limit-up-tag">首板涨停、热榜12</span></td><td>PCB修复前排</td><td>有表态，带动性待验</td><td>继续强势并带PCB扩散</td></tr><tr><td class="theme-stock-name">亨通光电<br><small>600487</small></td><td><span class="limit-up-tag">继续走弱</span></td><td>通信容量风险锚</td><td>暂无主动性</td><td>指数稳定时能否止跌</td></tr><tr><td class="theme-stock-name">善水科技<br><small>301190</small></td><td><span class="limit-up-tag">2板观察</span></td><td>染料/科技低位样本</td><td>题材归因弱</td><td>无板块效应则降级</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>科技反弹 -&gt; PCB与通信修复 -&gt; 容量反馈分化</p><p><strong>板块分析</strong>强度数值较高，但亨通光电等容量反馈偏弱，尚未形成一致赚钱效应。</p><p><strong>次日验证</strong>容量、ETF和涨停梯队共同转强。</p></div></article>
+<h3 class="theme-analysis-title">日内主线表 × 题材详细解析</h3>
+<p class="theme-analysis-intro">按题材连续复盘：每个板块先看核心标的的真实涨停表现与市场地位，再看日内节奏、板块分析和次日验证。趋势核心未涨停时明确标注，不与封板票混写。</p>
+<article class="theme-analysis-block" data-theme-section="" id="theme-t1"><div class="theme-analysis-head"><h4 class="theme-analysis-title">1. 锂电池/固态电池</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">首日启动主线</span><span class="theme-analysis-chip">当日强度7341，全市场最强</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">时代万恒<br/><small>600241</small></td><td><span class="limit-up-tag">2板，首日启动身位</span></td><td>题材核心候选</td><td>主动性与题材内唯一性较强，领涨持续性待分化验证</td><td>缩量转强或健康换手回封</td></tr><tr><td class="theme-stock-name">国轩高科<br/><small>002074</small></td><td><span class="limit-up-tag">首板涨停、热榜靠前</span></td><td>容量助攻</td><td>有跟随性，能否反推核心待验</td><td>竞价强并继续封板助攻</td></tr><tr><td class="theme-stock-name">诺德股份<br/><small>600110</small></td><td><span class="limit-up-tag">首板样本</span></td><td>电池低位扩散观察</td><td>当前以跟随为主</td><td>能否形成二板梯队</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>政策线索发酵 -&gt; 时代万恒提供身位 -&gt; 容量后排跟随</p><p><strong>板块分析</strong>首日爆发只完成方向确认，次日分化才决定是否进入持续行情。时代万恒承担题材内唯一性检验。</p><p><strong>次日验证</strong>核心主动回封、后排一字或强二板、容量承接。</p></div></article><article class="theme-analysis-block" data-theme-section="" id="theme-t2"><div class="theme-analysis-head"><h4 class="theme-analysis-title">2. 文化传媒/AI应用</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">空间高度与回流线</span><span class="theme-analysis-chip">AI应用5130，新华传媒6板</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">新华传媒<br/><small>600825</small></td><td><span class="limit-up-tag">6板一字</span></td><td>市场空间突破龙</td><td>高度领涨强，主动换手尚未验证</td><td>首次分歧充分换手回封</td></tr><tr><td class="theme-stock-name">新华文轩<br/><small>601811</small></td><td><span class="limit-up-tag">7天6板修复样本</span></td><td>传媒高位辨识度</td><td>更多承担情绪映射，主动性待验</td><td>避免大负反馈拖累空间</td></tr><tr><td class="theme-stock-name">华策股份<br/><small>300133</small></td><td><span class="limit-up-tag">活跃观察</span></td><td>AI应用传媒观察票</td><td>主动性与异动状态待核</td><td>只看板块共振，不做独立冲高</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>空间龙一字 -&gt; 板块回流 -&gt; 后排扩散不足</p><p><strong>板块分析</strong>新华传媒是当前唯一空间突破龙，但连续一字降低可交易性。空间高度与板块主升必须分开判断。</p><p><strong>次日验证</strong>新华传媒健康6进7并带动后排。</p></div></article><article class="theme-analysis-block" data-theme-section="" id="theme-t3"><div class="theme-analysis-head"><h4 class="theme-analysis-title">3. 机器人/汽车</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">中位轮动</span><span class="theme-analysis-chip">机器人1406，题材效应弱</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">雪龙集团<br/><small>603949</small></td><td><span class="limit-up-tag">4板</span></td><td>机器人汽车中位高标</td><td>个股高度在，板块领涨性不足</td><td>全量换手回封并带后排</td></tr><tr><td class="theme-stock-name">襄阳轴承<br/><small>000678</small></td><td><span class="limit-up-tag">3板</span></td><td>汽车中位样本</td><td>跟随性为主</td><td>半放量回封并避免深水</td></tr><tr><td class="theme-stock-name">九阳股份<br/><small>002242</small></td><td><span class="limit-up-tag">2板观察</span></td><td>机器人/消费复合票</td><td>归因与带动性不足</td><td>必须有清晰板块扩散</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>中位高度维持 -&gt; 后排缺位 -&gt; 接力性价比下降</p><p><strong>板块分析</strong>雪龙集团与襄阳轴承有身位但缺少梯队。中位票必须充分换手并带后排，否则是孤立接力。</p><p><strong>次日验证</strong>量能放大、主动回封和后排助攻。</p></div></article><article class="theme-analysis-block" data-theme-section="" id="theme-t4"><div class="theme-analysis-head"><h4 class="theme-analysis-title">4. 房地产</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">政策轮动</span><span class="theme-analysis-chip">局部首板，持续性不足</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">万科A<br/><small>000002</small></td><td><span class="limit-up-tag">首板涨停、热榜3</span></td><td>地产容量表态</td><td>有主动性，领涨扩散待验</td><td>持续主动并带地产梯队</td></tr><tr><td class="theme-stock-name">我爱我家<br/><small>000560</small></td><td><span class="limit-up-tag">活跃观察</span></td><td>地产辨识度</td><td>跟随性待验</td><td>板块转强时才保留</td></tr><tr><td class="theme-stock-name">深物业A<br/><small>000011</small></td><td><span class="limit-up-tag">口述观察、状态待核</span></td><td>地产低位观察</td><td>待核</td><td>核验身位与板块归属</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>消息刺激 -&gt; 万科A表态 -&gt; 梯队未形成</p><p><strong>板块分析</strong>万科A涨停提供容量表态，但地产尚未形成题材级赚钱效应。</p><p><strong>次日验证</strong>二板与新增首板同时出现。</p></div></article><article class="theme-analysis-block" data-theme-section="" id="theme-t5"><div class="theme-analysis-head"><h4 class="theme-analysis-title">5. 通信/PCB/科技</h4><div class="theme-analysis-meta"><span class="theme-analysis-chip">超跌修复</span><span class="theme-analysis-chip">通信5926、AI应用5130</span></div></div><div class="theme-stock-table-wrap"><table class="theme-stock-table"><thead><tr><th>核心标的</th><th>涨停表现</th><th>市场地位</th><th>主动性/领涨性</th><th>次日个股验证</th></tr></thead><tbody><tr><td class="theme-stock-name">超声电子<br/><small>000823</small></td><td><span class="limit-up-tag">首板涨停、热榜12</span></td><td>PCB修复前排</td><td>有表态，带动性待验</td><td>继续强势并带PCB扩散</td></tr><tr><td class="theme-stock-name">亨通光电<br/><small>600487</small></td><td><span class="limit-up-tag">继续走弱</span></td><td>通信容量风险锚</td><td>暂无主动性</td><td>指数稳定时能否止跌</td></tr><tr><td class="theme-stock-name">善水科技<br/><small>301190</small></td><td><span class="limit-up-tag">2板观察</span></td><td>染料/科技低位样本</td><td>题材归因弱</td><td>无板块效应则降级</td></tr></tbody></table></div><div class="theme-analysis-copy"><p><strong>板块节奏</strong>科技反弹 -&gt; PCB与通信修复 -&gt; 容量反馈分化</p><p><strong>板块分析</strong>强度数值较高，但亨通光电等容量反馈偏弱，尚未形成一致赚钱效应。</p><p><strong>次日验证</strong>容量、ETF和涨停梯队共同转强。</p></div></article>
 </section>
-
 </section>
-<section class="section-card" id="chapter-7-七-事件催化时间线-9293ac" data-phase="diagnosis" data-chapter-number="07"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">七、事件催化时间线</h2>
+<section class="section-card" data-chapter-number="07" data-phase="diagnosis" id="chapter-7-七-事件催化时间线-9293ac"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">七、事件催化时间线</h2>
 <!-- Required placeholders: DATE_START, DATE_END, EVENT_COUNT, TIMELINE_ITEMS_HTML, TIMELINE_SOURCE_URL -->
-<div class="event-catalyst-timeline" data-event-catalyst-timeline data-date-start="2026-09-29" data-date-end="2026-10-13">
-  <div class="event-timeline-summary">
-    <div><span class="section-kicker">Catalyst Window</span><h3>事件催化时间线（D0 至 D+14）</h3></div>
-    <div class="event-window-badge">2026-09-29 - 2026-10-13 · 6 项</div>
-  </div>
-  <p class="source-note">数据优先参考 <a href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">韭研公社时间轴</a>。事件等级来自站点热度，只用于排序；交易判断为复盘推演，临近日期须复核。</p>
-  <div class="event-timeline-track"><article class="event-timeline-item is-today" data-event-date="2026-09-29"><div class="event-item-head"><span class="event-date">2026-09-29 · 周二</span><span class="event-day-label">D0 今日</span></div><h4 class="event-item-title">锂电池首日启动</h4><div class="event-theme-tags"><span class="event-theme-tag">锂电池</span><span class="event-theme-tag">固态电池</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">强 · 预热</span></p><p><strong>盘面推演</strong>强度7341，时代万恒成为分化检验锚。</p><p><strong>验证与风险</strong>政策与业务关联尚未完全核验。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article><article class="event-timeline-item is-next" data-event-date="2026-09-30"><div class="event-item-head"><span class="event-date">2026-09-30 · 周三</span><span class="event-day-label">D+1</span></div><h4 class="event-item-title">首日爆发后的分化确认</h4><div class="event-theme-tags"><span class="event-theme-tag">锂电池</span><span class="event-theme-tag">情绪修复</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">强 · 分歧检验</span></p><p><strong>盘面推演</strong>前排转强与后排助攻决定题材持续性。</p><p><strong>验证与风险</strong>节前缩量可能放大高开兑现。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-10-01"><div class="event-item-head"><span class="event-date">2026-10-01 · 周四</span><span class="event-day-label">D+2</span></div><h4 class="event-item-title">国庆休市窗口开始</h4><div class="event-theme-tags"><span class="event-theme-tag">跨节风险</span><span class="event-theme-tag">消息累积</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">中 · 窗口观察</span></p><p><strong>盘面推演</strong>长假信息集中，节后重新定价。</p><p><strong>验证与风险</strong>不以假期消息替代盘面确认。</p></div><a class="event-source-link" href="https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-10-08"><div class="event-item-head"><span class="event-date">2026-10-08 · 周四</span><span class="event-day-label">D+9</span></div><h4 class="event-item-title">长假后市场重定价观察</h4><div class="event-theme-tags"><span class="event-theme-tag">指数</span><span class="event-theme-tag">新主线</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 窗口观察</span></p><p><strong>盘面推演</strong>优先看成交、指数跳空与新题材选择。</p><p><strong>验证与风险</strong>外盘与假期消息可能带来过度一致。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-10-09"><div class="event-item-head"><span class="event-date">2026-10-09 · 周五</span><span class="event-day-label">D+10</span></div><h4 class="event-item-title">节后持续性检验</h4><div class="event-theme-tags"><span class="event-theme-tag">题材节奏</span><span class="event-theme-tag">梯队扩散</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 分歧检验</span></p><p><strong>盘面推演</strong>检验首日方向是否具备次日溢价。</p><p><strong>验证与风险</strong>无后排扩散的脉冲容易兑现。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-10-13"><div class="event-item-head"><span class="event-date">2026-10-13 · 周二</span><span class="event-day-label">D+14</span></div><h4 class="event-item-title">D+14周期复核</h4><div class="event-theme-tags"><span class="event-theme-tag">高度空间</span><span class="event-theme-tag">新周期</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 窗口观察</span></p><p><strong>盘面推演</strong>复核新华传媒打开高度后的市场承接与新核心。</p><p><strong>验证与风险</strong>历史类比只作观察，不作为确定预测。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" target="_blank" rel="noreferrer">查看韭研公社时间轴来源</a></article></div>
+<div class="event-catalyst-timeline" data-date-end="2026-10-13" data-date-start="2026-09-29" data-event-catalyst-timeline="">
+<div class="event-timeline-summary">
+<div><span class="section-kicker">Catalyst Window</span><h3>事件催化时间线（D0 至 D+14）</h3></div>
+<div class="event-window-badge">2026-09-29 - 2026-10-13 · 6 项</div>
+</div>
+<p class="source-note">数据优先参考 <a href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">韭研公社时间轴</a>。事件等级来自站点热度，只用于排序；交易判断为复盘推演，临近日期须复核。</p>
+<div class="event-timeline-track"><article class="event-timeline-item is-today" data-event-date="2026-09-29"><div class="event-item-head"><span class="event-date">2026-09-29 · 周二</span><span class="event-day-label">D0 今日</span></div><h4 class="event-item-title">锂电池首日启动</h4><div class="event-theme-tags"><span class="event-theme-tag">锂电池</span><span class="event-theme-tag">固态电池</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">强 · 预热</span></p><p><strong>盘面推演</strong>强度7341，时代万恒成为分化检验锚。</p><p><strong>验证与风险</strong>政策与业务关联尚未完全核验。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">查看韭研公社时间轴来源</a></article><article class="event-timeline-item is-next" data-event-date="2026-09-30"><div class="event-item-head"><span class="event-date">2026-09-30 · 周三</span><span class="event-day-label">D+1</span></div><h4 class="event-item-title">首日爆发后的分化确认</h4><div class="event-theme-tags"><span class="event-theme-tag">锂电池</span><span class="event-theme-tag">情绪修复</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">强 · 分歧检验</span></p><p><strong>盘面推演</strong>前排转强与后排助攻决定题材持续性。</p><p><strong>验证与风险</strong>节前缩量可能放大高开兑现。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-10-01"><div class="event-item-head"><span class="event-date">2026-10-01 · 周四</span><span class="event-day-label">D+2</span></div><h4 class="event-item-title">国庆休市窗口开始</h4><div class="event-theme-tags"><span class="event-theme-tag">跨节风险</span><span class="event-theme-tag">消息累积</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">中 · 窗口观察</span></p><p><strong>盘面推演</strong>长假信息集中，节后重新定价。</p><p><strong>验证与风险</strong>不以假期消息替代盘面确认。</p></div><a class="event-source-link" href="https://big5.www.gov.cn/gate/big5/www.gov.cn/zhengce/zhengceku/202511/content_7047091.htm" rel="noreferrer" target="_blank">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-10-08"><div class="event-item-head"><span class="event-date">2026-10-08 · 周四</span><span class="event-day-label">D+9</span></div><h4 class="event-item-title">长假后市场重定价观察</h4><div class="event-theme-tags"><span class="event-theme-tag">指数</span><span class="event-theme-tag">新主线</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 窗口观察</span></p><p><strong>盘面推演</strong>优先看成交、指数跳空与新题材选择。</p><p><strong>验证与风险</strong>外盘与假期消息可能带来过度一致。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-10-09"><div class="event-item-head"><span class="event-date">2026-10-09 · 周五</span><span class="event-day-label">D+10</span></div><h4 class="event-item-title">节后持续性检验</h4><div class="event-theme-tags"><span class="event-theme-tag">题材节奏</span><span class="event-theme-tag">梯队扩散</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 分歧检验</span></p><p><strong>盘面推演</strong>检验首日方向是否具备次日溢价。</p><p><strong>验证与风险</strong>无后排扩散的脉冲容易兑现。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">查看韭研公社时间轴来源</a></article><article class="event-timeline-item" data-event-date="2026-10-13"><div class="event-item-head"><span class="event-date">2026-10-13 · 周二</span><span class="event-day-label">D+14</span></div><h4 class="event-item-title">D+14周期复核</h4><div class="event-theme-tags"><span class="event-theme-tag">高度空间</span><span class="event-theme-tag">新周期</span></div><div class="event-impact-grid"><p><strong>催化判断</strong><span class="event-level">观察 · 窗口观察</span></p><p><strong>盘面推演</strong>复核新华传媒打开高度后的市场承接与新核心。</p><p><strong>验证与风险</strong>历史类比只作观察，不作为确定预测。</p></div><a class="event-source-link" href="https://www.jiuyangongshe.com/timeline" rel="noreferrer" target="_blank">查看韭研公社时间轴来源</a></article></div>
 </div>
 <style>
 .event-catalyst-timeline{margin:14px 0 4px;padding:20px;border:1px solid rgba(18,75,66,.14);border-radius:16px;background:linear-gradient(135deg,#f7fffb,#fffaf0)}
@@ -408,20 +400,19 @@
 .event-item-title{margin:9px 0 7px;font-size:16px;line-height:1.55;color:#173f38}.event-theme-tags{display:flex;flex-wrap:wrap;gap:6px}.event-theme-tag{padding:4px 7px;border-radius:999px;background:#eaf7f1;color:#087064;font-size:11px;font-weight:850}.event-impact-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}.event-impact-grid p{margin:0;padding:9px 10px;border-radius:9px;background:#f7faf8;color:#365851;font-size:12px;line-height:1.55}.event-impact-grid strong{display:block;margin-bottom:3px;color:#0c665b}.event-level{font-size:11px;font-weight:900;color:#8a6012}.event-source-link{display:inline-block;margin-top:9px;color:#1476a8;font-size:11px;font-weight:800}
 @media(max-width:760px){.event-catalyst-timeline{padding:15px}.event-impact-grid{grid-template-columns:1fr}.event-timeline-track{padding-left:22px}.event-timeline-item:before{left:-20px}.event-timeline-summary h3{font-size:20px}}
 </style>
-
 </section>
-<section class="section-card" id="chapter-8-八-异动监管-龙虎榜与人气榜情况-40f05e" data-phase="diagnosis" data-chapter-number="08"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">八、异动监管、龙虎榜与人气榜情况</h2>
-<h3 id="sub-8-1-一-异动监管-ff3108" class="subchapter-title">一 异动监管</h3>
+<section class="section-card" data-chapter-number="08" data-phase="diagnosis" id="chapter-8-八-异动监管-龙虎榜与人气榜情况-40f05e"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">八、异动监管、龙虎榜与人气榜情况</h2>
+<h3 class="subchapter-title" id="sub-8-1-一-异动监管-ff3108">一 异动监管</h3>
 <p class="body-line bullet-line">今日没有特别值得关注的异动触发。</p>
 <p class="body-line bullet-line">华策股份可能逐渐接近异动窗口，具体累计涨幅、公告和监管状态待核验。</p>
 <p class="body-line bullet-line">用户估算新华传媒9月30日涨停仍不会触发异动，可能至少到8板附近；新华文轩可能还需约两个涨停。以上均为口述估算，不是交易所规则结论。</p>
 <p class="body-line bullet-line tone-risk">对60开头沪市票在弱情绪中接近五板以上时，必须核验公告、异常波动次数和监管状态；五板只是个人风险检查点，不是机械阈值。</p>
-<h3 id="sub-8-2-二-龙虎榜与资金面-c445d8" class="subchapter-title">二 龙虎榜与资金面</h3>
+<h3 class="subchapter-title" id="sub-8-2-二-龙虎榜与资金面-c445d8">二 龙虎榜与资金面</h3>
 <p class="body-line tone-action">用户观察到今日明显增量资金主要集中在新股，其他个股主力金额普遍偏小，短线资金活跃度不足。没有提供可核验的具体席位和金额，因此本节不作席位归因，也不据此确认龙头资金。</p>
-<h3 id="sub-8-3-三-人气榜-4b178d" class="subchapter-title">三 人气榜</h3>
+<h3 class="subchapter-title" id="sub-8-3-三-人气榜-4b178d">三 人气榜</h3>
 <div class="table-shell" id="source-table-11"><table class="data-table"><thead><tr><th>类别</th><th>2026年9月29日</th></tr></thead><tbody><tr><td>同花顺热榜核心</td><td>万科A 热榜3；新华传媒 热榜4 6天6板；鸿富诚 热榜7；新华文轩 热榜8 7天6板；超声电子 热榜11；襄阳轴承 热榜20 3天3板；国轩高科 热榜23；澳弘电子 热榜26 12天8板；中新赛克 热榜46 2天2板；津药药业 热榜49 2天2板</td></tr><tr><td>人气飙升</td><td>路畅科技 飙升榜9 飙升38位 未进入热榜前50；同花顺热榜前50没有其他飙升超过30名个股</td></tr><tr><td>其他榜单记录</td><td>沈鼓集团 热榜1；原表类别含义需结合数据源进一步确认</td></tr><tr><td>口述补充</td><td>亨通光电在另一人气观察中居前，但股价仍在下跌；不能因为人气或PCB通信反弹直接参与</td></tr></tbody></table></div>
 </section>
-<section class="section-card" id="chapter-9-九-跌停与炸板情况-d5f182" data-phase="diagnosis" data-chapter-number="09"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">九、跌停与炸板情况</h2>
+<section class="section-card" data-chapter-number="09" data-phase="diagnosis" id="chapter-9-九-跌停与炸板情况-d5f182"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">九、跌停与炸板情况</h2>
 <p class="body-line bullet-line tone-risk">跌停与强负反馈：跌停10只，较前一日口述约56只明显减少；华茂股份、金健米业、会稽山、万向德农等老周期标的仍在出清，部分名称待确认。</p>
 <p class="body-line bullet-line">断板反包：澳弘电子最强；南威软件、新华文轩等更多属于超跌反弹，未形成可复制的反包赚钱模式。</p>
 <p class="body-line bullet-line">炸板与回封：断板8只，封板率88%；整体修复但中位晋级失败仍可能产生深水负反馈。</p>
@@ -429,70 +420,64 @@
 <p class="body-line bullet-line tone-action">明日观察重点：跌停是否继续收敛，电池分化是否健康，高度票断板后是否出现极端负反馈。</p>
 </section>
 <div class="phase-divider" id="phase-playbook"><span>PHASE 03</span><strong>明日推演</strong><p>按大盘、板块、核心票、情景预案的顺序建立次日剧本。</p></div>
-<section class="section-card" id="chapter-10-十-核心关键票汇总与明日个股预案-0aebc2" data-phase="playbook" data-chapter-number="10"><h2 class="chapter-title">十、明日作战推演总纲（大盘 → 板块 → 核心票）</h2>
-<section class="next-day-playbook" data-next-day-playbook data-date="2026-09-29">
-  <header class="next-day-playbook__header">
-    <div>
-      <span class="next-day-playbook__kicker">NEXT-DAY PLAYBOOK</span>
-      <h3>明日作战推演</h3>
-    </div>
-    <p>9月30日依次确认指数企稳、退潮收敛、锂电池分化与核心主动性；默认空仓，全部条件满足才一成仓试错。</p>
-  </header>
-
-  <ol class="next-day-playbook__flow" aria-label="明日决策顺序">
-    <li><span>01</span>大盘定风险预算</li>
-    <li><span>02</span>板块定进攻方向</li>
-    <li><span>03</span>核心票定触发动作</li>
-    <li><span>04</span>情景切换定仓位</li>
-  </ol>
-
-  <div class="next-day-playbook__step" id="chapter-11-十一-大盘明日预期节奏-78977f" data-market-outlook>
-    <div class="next-day-playbook__step-head">
-      <span>01</span>
-      <div><small>MARKET FIRST</small><h4>十一、大盘与板块题材预期节奏</h4></div>
-    </div>
-    <div class="market-outlook-grid" id="next-day-market-outlook">
-      <article><span>基准预期</span><p>缩量震荡与退潮修复反复，指数再收企稳K线。</p></article>
-      <article class="is-positive"><span>转强确认</span><p>跌停维持低位、中位失败票不再极端负反馈、成交不继续塌缩。</p></article>
-      <article class="is-risk"><span>风险证伪</span><p>指数冲高回落、高位开板、跌停重新扩散。</p></article>
-      <article class="is-action"><span>执行边界</span><p>未补齐最大亏损前，不把观察计划转成正式交易。</p></article>
-    </div>
-
-    <div class="next-day-playbook__subsection" id="next-day-theme-outlook" data-theme-outlook>
-      <div class="next-day-playbook__subhead"><h5>板块题材预期节奏</h5><p>先验证题材强度，再把动作下沉到核心票。</p></div>
-      <div class="table-shell next-day-playbook__table-shell">
-        <table class="next-day-playbook__table">
-          <thead><tr><th>优先级</th><th>板块题材</th><th>当前节奏</th><th>核心锚</th><th>明日预期</th><th>转强确认</th><th>证伪信号</th><th>执行</th></tr></thead>
-          <tbody><tr><td><span class="playbook-priority">第一</span></td><td>锂电池</td><td>首日爆发</td><td>时代万恒、国轩高科</td><td>第一次分化</td><td>核心主动回封、后排一字或强二板、容量承接</td><td>核心与后排同步回落</td><td>全条件满足才一成仓试错</td></tr><tr><td><span class="playbook-priority">第二</span></td><td>传媒/AI应用</td><td>高度抱团与回流</td><td>新华传媒、新华文轩</td><td>空间拓展检验</td><td>新华传媒健康6进7并带后排</td><td>开板失控、封单衰减、板块不跟</td><td>观察高度，不追无量一字</td></tr><tr><td><span class="playbook-priority">第三</span></td><td>通信/PCB</td><td>超跌修复</td><td>超声电子、亨通光电</td><td>修复持续性检验</td><td>容量、ETF和涨停梯队同步增强</td><td>指数稳而核心继续走弱</td><td>暂不参与</td></tr><tr><td><span class="playbook-priority">风险</span></td><td>机器人/汽车中位</td><td>孤立接力</td><td>雪龙集团、襄阳轴承</td><td>放量分歧</td><td>充分换手回封并有后排助攻</td><td>深水、炸板或同步负反馈</td><td>不做中位接力</td></tr></tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-
-  <div class="next-day-playbook__step" id="chapter-12-十二-明日核心票弱转强-转强判定-板块预期细化表-3ffd87" data-core-stock-checks>
-    <div class="next-day-playbook__step-head">
-      <span>02</span>
-      <div><small>CORE STOCK CHECK</small><h4>十二、核心票弱转强/转强判定</h4></div>
-    </div>
-    <p class="next-day-playbook__guide">只在大盘风险预算与板块强度通过后执行个股预案。主动性、板块跟随和失败条件必须同时核对。</p>
-    <div class="table-shell next-day-playbook__table-shell" id="next-day-core-stock-checks">
-      <table class="next-day-playbook__table is-core">
-        <thead><tr><th>板块</th><th>核心票</th><th>预期定位</th><th>今日状态</th><th>开盘预期</th><th>弱转强/转强判定</th><th>板块确认</th><th>失败信号</th><th>操作预案</th></tr></thead>
-        <tbody><tr><td>锂电池</td><td>时代万恒</td><td>题材核心候选</td><td>2板，首日爆发身位</td><td>温和高开或平开分歧，避免过度一致</td><td>缩量主动上板或健康换手回封</td><td>国轩高科及低位后排继续助攻</td><td>炸板无承接或板块同步走弱</td><td>仅一成仓试错</td></tr><tr><td>传媒</td><td>新华传媒</td><td>6板空间突破龙</td><td>连续一字，首次分歧待验</td><td>封单稳定但不把无量强度当买点</td><td>打开后充分换手回封</td><td>传媒与AI应用后排出现跟随</td><td>封单撤退、开板直线跳水</td><td>观察高度，不追一字</td></tr><tr><td>锂电池</td><td>国轩高科</td><td>容量助攻</td><td>首板涨停、热榜靠前</td><td>竞价强于板块平均</td><td>主动上板并反推时代万恒</td><td>电池梯队继续扩散</td><td>冲高回落或单票表态</td><td>只作板块确认锚</td></tr><tr><td>机器人/汽车</td><td>雪龙集团</td><td>4板中位风险锚</td><td>量能不足、题材助攻弱</td><td>必须充分放量分歧</td><td>全量换手后主动回封</td><td>机器人中低位同步补强</td><td>无量加速或开板无承接</td><td>不主动参与</td></tr></tbody>
-      </table>
-    </div>
-
-    <div class="next-day-playbook__subsection" id="next-day-scenario-playbooks" data-scenario-playbooks>
-      <div class="next-day-playbook__subhead"><h5>情景推演与执行预案</h5><p>盘前不猜唯一答案，盘中按触发条件切换剧本。</p></div>
-      <div class="scenario-playbook-grid"><article class="scenario-playbook-card"><div class="scenario-playbook-card__head"><h6>退潮收敛后的电池分化转强</h6><span>主场景</span></div><dl><dt>大盘触发</dt><dd>指数站稳、跌停不扩散</dd><dt>板块验证</dt><dd>时代万恒转强且后排助攻</dd><dt>核心动作</dt><dd>只按触发卡试错核心</dd><dt>仓位计划</dt><dd>不超过一成仓</dd><dt>切换条件</dt><dd>核心与板块同步转弱</dd></dl></article><article class="scenario-playbook-card"><div class="scenario-playbook-card__head"><h6>传媒继续打开高度</h6><span>次场景</span></div><dl><dt>大盘触发</dt><dd>高位负反馈收敛</dd><dt>板块验证</dt><dd>新华传媒健康6进7并带后排</dd><dt>核心动作</dt><dd>观察空间，不追无量一字</dd><dt>仓位计划</dt><dd>0仓观察</dd><dt>切换条件</dt><dd>开板失控或板块不跟</dd></dl></article><article class="scenario-playbook-card"><div class="scenario-playbook-card__head"><h6>指数与情绪共振加强</h6><span>低概率</span></div><dl><dt>大盘触发</dt><dd>成交回流、指数强K线</dd><dt>板块验证</dt><dd>电池与传媒至少一条形成完整梯队</dd><dt>核心动作</dt><dd>只做唯一核心确认</dd><dt>仓位计划</dt><dd>确认后仍以轻仓为主</dd><dt>切换条件</dt><dd>中位负反馈重新扩大</dd></dl></article><article class="scenario-playbook-card is-risk"><div class="scenario-playbook-card__head"><h6>修复失败与退潮延续</h6><span>风险场景</span></div><dl><dt>大盘触发</dt><dd>指数再弱、跌停增加</dd><dt>板块验证</dt><dd>时代万恒和新华传媒同时失效</dd><dt>核心动作</dt><dd>取消全部交易计划</dd><dt>仓位计划</dt><dd>空仓</dd><dt>切换条件</dt><dd>负反馈收敛并出现主动核心</dd></dl></article></div>
-      <div class="playbook-execution-order">
-        <strong>执行顺序</strong>
-        <ol><li>先看指数能否再收一根企稳K线。</li><li>再看跌停与中位失败票是否继续收敛。</li><li>随后确认锂电池分化和时代万恒主动性。</li><li>最后才决定是否用不超过一成仓试错；条件不全继续空仓。</li></ol>
-      </div>
-    </div>
-  </div>
+<section class="section-card" data-chapter-number="10" data-phase="playbook" id="chapter-10-十-核心关键票汇总与明日个股预案-0aebc2"><h2 class="chapter-title">十、明日作战推演总纲（大盘 → 板块 → 核心票）</h2>
+<section class="next-day-playbook" data-date="2026-09-29" data-next-day-playbook="">
+<header class="next-day-playbook__header">
+<div>
+<span class="next-day-playbook__kicker">NEXT-DAY PLAYBOOK</span>
+<h3>明日作战推演</h3>
+</div>
+<p>9月30日依次确认指数企稳、退潮收敛、锂电池分化与核心主动性；默认空仓，全部条件满足才一成仓试错。</p>
+</header>
+<ol aria-label="明日决策顺序" class="next-day-playbook__flow">
+<li><span>01</span>大盘定风险预算</li>
+<li><span>02</span>板块定进攻方向</li>
+<li><span>03</span>核心票定触发动作</li>
+<li><span>04</span>情景切换定仓位</li>
+</ol>
+<div class="next-day-playbook__step" data-market-outlook="" id="chapter-11-十一-大盘明日预期节奏-78977f">
+<div class="next-day-playbook__step-head">
+<span>01</span>
+<div><small>MARKET FIRST</small><h4>十一、大盘与板块题材预期节奏</h4></div>
+</div>
+<div class="market-outlook-grid" id="next-day-market-outlook">
+<article><span>基准预期</span><p>缩量震荡与退潮修复反复，指数再收企稳K线。</p></article>
+<article class="is-positive"><span>转强确认</span><p>跌停维持低位、中位失败票不再极端负反馈、成交不继续塌缩。</p></article>
+<article class="is-risk"><span>风险证伪</span><p>指数冲高回落、高位开板、跌停重新扩散。</p></article>
+<article class="is-action"><span>执行边界</span><p>未补齐最大亏损前，不把观察计划转成正式交易。</p></article>
+</div>
+<div class="next-day-playbook__subsection" data-theme-outlook="" id="next-day-theme-outlook">
+<div class="next-day-playbook__subhead"><h5>板块题材预期节奏</h5><p>先验证题材强度，再把动作下沉到核心票。</p></div>
+<div class="table-shell next-day-playbook__table-shell">
+<table class="next-day-playbook__table">
+<thead><tr><th>优先级</th><th>板块题材</th><th>当前节奏</th><th>核心锚</th><th>明日预期</th><th>转强确认</th><th>证伪信号</th><th>执行</th></tr></thead>
+<tbody><tr><td><span class="playbook-priority">第一</span></td><td>锂电池</td><td>首日爆发</td><td>时代万恒、国轩高科</td><td>第一次分化</td><td>核心主动回封、后排一字或强二板、容量承接</td><td>核心与后排同步回落</td><td>全条件满足才一成仓试错</td></tr><tr><td><span class="playbook-priority">第二</span></td><td>传媒/AI应用</td><td>高度抱团与回流</td><td>新华传媒、新华文轩</td><td>空间拓展检验</td><td>新华传媒健康6进7并带后排</td><td>开板失控、封单衰减、板块不跟</td><td>观察高度，不追无量一字</td></tr><tr><td><span class="playbook-priority">第三</span></td><td>通信/PCB</td><td>超跌修复</td><td>超声电子、亨通光电</td><td>修复持续性检验</td><td>容量、ETF和涨停梯队同步增强</td><td>指数稳而核心继续走弱</td><td>暂不参与</td></tr><tr><td><span class="playbook-priority">风险</span></td><td>机器人/汽车中位</td><td>孤立接力</td><td>雪龙集团、襄阳轴承</td><td>放量分歧</td><td>充分换手回封并有后排助攻</td><td>深水、炸板或同步负反馈</td><td>不做中位接力</td></tr></tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="next-day-playbook__step" data-core-stock-checks="" id="chapter-12-十二-明日核心票弱转强-转强判定-板块预期细化表-3ffd87">
+<div class="next-day-playbook__step-head">
+<span>02</span>
+<div><small>CORE STOCK CHECK</small><h4>十二、核心票弱转强/转强判定</h4></div>
+</div>
+<p class="next-day-playbook__guide">只在大盘风险预算与板块强度通过后执行个股预案。主动性、板块跟随和失败条件必须同时核对。</p>
+<div class="table-shell next-day-playbook__table-shell" id="next-day-core-stock-checks">
+<table class="next-day-playbook__table is-core">
+<thead><tr><th>板块</th><th>核心票</th><th>预期定位</th><th>今日状态</th><th>开盘预期</th><th>弱转强/转强判定</th><th>板块确认</th><th>失败信号</th><th>操作预案</th></tr></thead>
+<tbody><tr><td>锂电池</td><td>时代万恒</td><td>题材核心候选</td><td>2板，首日爆发身位</td><td>温和高开或平开分歧，避免过度一致</td><td>缩量主动上板或健康换手回封</td><td>国轩高科及低位后排继续助攻</td><td>炸板无承接或板块同步走弱</td><td>仅一成仓试错</td></tr><tr><td>传媒</td><td>新华传媒</td><td>6板空间突破龙</td><td>连续一字，首次分歧待验</td><td>封单稳定但不把无量强度当买点</td><td>打开后充分换手回封</td><td>传媒与AI应用后排出现跟随</td><td>封单撤退、开板直线跳水</td><td>观察高度，不追一字</td></tr><tr><td>锂电池</td><td>国轩高科</td><td>容量助攻</td><td>首板涨停、热榜靠前</td><td>竞价强于板块平均</td><td>主动上板并反推时代万恒</td><td>电池梯队继续扩散</td><td>冲高回落或单票表态</td><td>只作板块确认锚</td></tr><tr><td>机器人/汽车</td><td>雪龙集团</td><td>4板中位风险锚</td><td>量能不足、题材助攻弱</td><td>必须充分放量分歧</td><td>全量换手后主动回封</td><td>机器人中低位同步补强</td><td>无量加速或开板无承接</td><td>不主动参与</td></tr></tbody>
+</table>
+</div>
+<div class="next-day-playbook__subsection" data-scenario-playbooks="" id="next-day-scenario-playbooks">
+<div class="next-day-playbook__subhead"><h5>情景推演与执行预案</h5><p>盘前不猜唯一答案，盘中按触发条件切换剧本。</p></div>
+<div class="scenario-playbook-grid"><article class="scenario-playbook-card"><div class="scenario-playbook-card__head"><h6>退潮收敛后的电池分化转强</h6><span>主场景</span></div><dl><dt>大盘触发</dt><dd>指数站稳、跌停不扩散</dd><dt>板块验证</dt><dd>时代万恒转强且后排助攻</dd><dt>核心动作</dt><dd>只按触发卡试错核心</dd><dt>仓位计划</dt><dd>不超过一成仓</dd><dt>切换条件</dt><dd>核心与板块同步转弱</dd></dl></article><article class="scenario-playbook-card"><div class="scenario-playbook-card__head"><h6>传媒继续打开高度</h6><span>次场景</span></div><dl><dt>大盘触发</dt><dd>高位负反馈收敛</dd><dt>板块验证</dt><dd>新华传媒健康6进7并带后排</dd><dt>核心动作</dt><dd>观察空间，不追无量一字</dd><dt>仓位计划</dt><dd>0仓观察</dd><dt>切换条件</dt><dd>开板失控或板块不跟</dd></dl></article><article class="scenario-playbook-card"><div class="scenario-playbook-card__head"><h6>指数与情绪共振加强</h6><span>低概率</span></div><dl><dt>大盘触发</dt><dd>成交回流、指数强K线</dd><dt>板块验证</dt><dd>电池与传媒至少一条形成完整梯队</dd><dt>核心动作</dt><dd>只做唯一核心确认</dd><dt>仓位计划</dt><dd>确认后仍以轻仓为主</dd><dt>切换条件</dt><dd>中位负反馈重新扩大</dd></dl></article><article class="scenario-playbook-card is-risk"><div class="scenario-playbook-card__head"><h6>修复失败与退潮延续</h6><span>风险场景</span></div><dl><dt>大盘触发</dt><dd>指数再弱、跌停增加</dd><dt>板块验证</dt><dd>时代万恒和新华传媒同时失效</dd><dt>核心动作</dt><dd>取消全部交易计划</dd><dt>仓位计划</dt><dd>空仓</dd><dt>切换条件</dt><dd>负反馈收敛并出现主动核心</dd></dl></article></div>
+<div class="playbook-execution-order">
+<strong>执行顺序</strong>
+<ol><li>先看指数能否再收一根企稳K线。</li><li>再看跌停与中位失败票是否继续收敛。</li><li>随后确认锂电池分化和时代万恒主动性。</li><li>最后才决定是否用不超过一成仓试错；条件不全继续空仓。</li></ol>
+</div>
+</div>
+</div>
 </section>
-
 <style>
 .next-day-playbook{margin-top:18px;border:1px solid rgba(9,83,73,.18);border-top:4px solid #086c62;background:#f8fcfa;color:#173f39;box-shadow:0 16px 36px rgba(25,75,67,.08)}
 .next-day-playbook__header{display:grid;grid-template-columns:minmax(250px,.7fr) minmax(360px,1.3fr);gap:24px;align-items:end;padding:24px 26px 20px;background:#0d4f47;color:#fff}
@@ -512,9 +497,9 @@
 @media(max-width:640px){.next-day-playbook__header,.next-day-playbook__step{padding:18px}.next-day-playbook__flow,.market-outlook-grid{grid-template-columns:1fr}.next-day-playbook__flow li{border-right:0;border-bottom:1px solid #cfe1dc}.next-day-playbook__subhead{display:block}.next-day-playbook__subhead p{margin-top:5px}.playbook-execution-order{grid-template-columns:1fr}.playbook-execution-order ol{grid-template-columns:1fr}}
 </style>
 </section>
-<section class="section-card" id="chapter-13-十三-龙头预备票-最终定稿-c57786" data-phase="playbook" data-chapter-number="13"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">十三、龙头预备票（最终定稿）</h2>
-<aside class="leader-competition-watch" id="leader-competition-watch" data-leader-competition-watch>
-  <style>
+<section class="section-card" data-chapter-number="13" data-phase="playbook" id="chapter-13-十三-龙头预备票-最终定稿-c57786"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">十三、龙头预备票（最终定稿）</h2><section class="trading-framework" data-trading-framework="core" id="trading-framework-core"><h3>人和 · 选择最核心的个股</h3><p class="framework-source">交易体系经验补充 · 2026-10-04；不改写当日事实、历史仓位或原始判断。</p><div class="framework-points"><article class="framework-point"><h4>量能节奏与共振</h4><p>逐板检查缩量、放量、回封与转强确认；区分与题材共振、与市场共振，或独立运行。</p></article><article class="framework-point"><h4>龙头七维与双唯一性</h4><p>核验身位、领涨性、抗跌性、市场性、价值性，以及题材内唯一性、题材之间连板高度唯一性；主动性另列，不能替代领涨性。</p></article><article class="framework-point"><h4>卡位与竞争反馈</h4><p>二进三、三进四、四进五同时看低卡高与同身位PK；比较量能、主动性、后排助攻及败方负反馈，唯一性未确认不抢定论。</p></article></div></section>
+<aside class="leader-competition-watch" data-leader-competition-watch="" id="leader-competition-watch">
+<style>
     .leader-competition-watch{margin:16px 0 18px;border:1px solid rgba(13,112,99,.2);border-left:4px solid #0d7063;background:#f7fbfa}
     .leader-competition-watch__head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:14px 16px;border-bottom:1px solid rgba(13,112,99,.14)}
     .leader-competition-watch__head h4{margin:0;color:#084f47;font-size:18px}
@@ -526,41 +511,39 @@
     .leader-competition-watch__item span{color:#344742;line-height:1.65}
     @media(max-width:760px){.leader-competition-watch__head{display:grid}.leader-competition-watch__grid{grid-template-columns:1fr}.leader-competition-watch__item:nth-child(odd){border-right:0}.leader-competition-watch__item{grid-template-columns:86px 1fr}}
   </style>
-  <div class="leader-competition-watch__head">
-    <h4>卡位观察</h4>
-    <p>二进三、三进四、四进五都是唯一性竞争节点，重点识别低位卡高位与同身位互卡。</p>
-  </div>
-  <div class="leader-competition-watch__grid"><div class="leader-competition-watch__item"><strong>低位卡高位</strong><span>低身位票用更强的主动性、量能和板块带动，争夺并替代高位票的辨识度。</span></div><div class="leader-competition-watch__item"><strong>同身位互卡</strong><span>同板数个股比较先后手、封单、换手、回封质量和后排跟随，不能只看谁先涨停。</span></div><div class="leader-competition-watch__item"><strong>量能护卡</strong><span>晋级票必须用健康换手或放量回封守住地位；缩量硬顶、开板无承接都容易被卡掉。</span></div><div class="leader-competition-watch__item"><strong>败方联动</strong><span>卡位胜出不代表与败方完全脱钩；败方若封死跌停或持续深水，会拖累胜者与同高度情绪。</span></div><div class="leader-competition-watch__item"><strong>执行纪律</strong><span>唯一性未确认前不打板；胜出者转强、败方负反馈可控且板块跟随后，再按龙头预备处理。</span></div></div>
+<div class="leader-competition-watch__head">
+<h4>卡位观察</h4>
+<p>二进三、三进四、四进五都是唯一性竞争节点，重点识别低位卡高位与同身位互卡。</p>
+</div>
+<div class="leader-competition-watch__grid"><div class="leader-competition-watch__item"><strong>低位卡高位</strong><span>低身位票用更强的主动性、量能和板块带动，争夺并替代高位票的辨识度。</span></div><div class="leader-competition-watch__item"><strong>同身位互卡</strong><span>同板数个股比较先后手、封单、换手、回封质量和后排跟随，不能只看谁先涨停。</span></div><div class="leader-competition-watch__item"><strong>量能护卡</strong><span>晋级票必须用健康换手或放量回封守住地位；缩量硬顶、开板无承接都容易被卡掉。</span></div><div class="leader-competition-watch__item"><strong>败方联动</strong><span>卡位胜出不代表与败方完全脱钩；败方若封死跌停或持续深水，会拖累胜者与同高度情绪。</span></div><div class="leader-competition-watch__item"><strong>执行纪律</strong><span>唯一性未确认前不打板；胜出者转强、败方负反馈可控且板块跟随后，再按龙头预备处理。</span></div></div>
 </aside>
-
-
-<h3 id="sub-13-1-一-总龙候选名单-8a1dfe" class="subchapter-title">一 总龙候选名单</h3>
+<h3 class="subchapter-title" id="sub-13-1-一-总龙候选名单-8a1dfe">一 总龙候选名单</h3>
 <p class="body-line bullet-line tone-action">核心候选：当前没有完整意义上的下一周期总龙预备票。</p>
 <p class="body-line bullet-line">空间突破龙：新华传媒，唯一负责打开市场高度的标的。</p>
 <p class="body-line bullet-line tone-action">题材核心候选：时代万恒，负责检验锂电池持续性。</p>
 <p class="body-line bullet-line tone-action">切换观察：国轩高科、新华文轩、万科A。</p>
 <p class="body-line bullet-line">暂不纳入：雪龙集团、襄阳轴承及其他缺乏题材效应的中位票。</p>
-<h3 id="sub-13-2-二-总龙唯一性排序-846135" class="subchapter-title">二 总龙唯一性排序</h3>
+<h3 class="subchapter-title" id="sub-13-2-二-总龙唯一性排序-846135">二 总龙唯一性排序</h3>
 <p class="body-line tone-action">新华传媒 市场高度和空间突破大于时代万恒 电池题材内核心候选大于其他标的。二者并非同身位直接竞争：新华传媒负责打开高度，时代万恒负责验证新题材。</p>
-<h3 id="sub-13-3-三-龙头七维核验明细-3c5120" class="subchapter-title">三 龙头七维核验明细</h3>
+<h3 class="subchapter-title" id="sub-13-3-三-龙头七维核验明细-3c5120">三 龙头七维核验明细</h3>
 <p class="body-line">主动性与领涨性分开看：主动性是先于板块回流、先找方向；领涨性是上板后能带动后排补涨跟随上板。龙头若只有主动回流、没有后排跟随领涨，预期要降级；龙头带不动题材，题材容易死，题材死又会反过来带炸龙头。</p>
-<aside class="leader-uniqueness-note" data-leader-uniqueness-knowledge><div class="leader-uniqueness-note__head"><span>◆ 龙头唯一性</span><h4>同身位唯一性竞争与量能确认</h4></div><ol class="leader-uniqueness-note__list"><li><strong>竞争阶段</strong><span>龙版传媒、大晟文化、欢瑞世纪同处4板时，题材内与跨题材高度唯一性都未确定，先观察、不抢板。</span></li><li><strong>量能门槛</strong><span>连续一字晋级的个股，到4板必须充分放量并完成回封；放不出量或回封弱，最容易在卡位中掉队。</span></li><li><strong>确认买点</strong><span>龙版传媒4板充分放量胜出，5板缩量转强确认；健康路径是两个半放量、一个全放量，再完成转强。</span></li><li><strong>败方反馈</strong><span>同身位竞争结束后，胜者与败者仍处于同一情绪单元。败者可以弱，但不能跌停或持续深水，否则会反向拖累胜者与高标情绪。</span></li><li><strong>七维结论</strong><span>三四板出现多只同身位票时，必须同时比较题材内唯一性与题材之间连板高度唯一性，最终定论前不打板。</span></li></ol></aside>
+<aside class="leader-uniqueness-note" data-leader-uniqueness-knowledge=""><div class="leader-uniqueness-note__head"><span>◆ 龙头唯一性</span><h4>同身位唯一性竞争与量能确认</h4></div><ol class="leader-uniqueness-note__list"><li><strong>竞争阶段</strong><span>龙版传媒、大晟文化、欢瑞世纪同处4板时，题材内与跨题材高度唯一性都未确定，先观察、不抢板。</span></li><li><strong>量能门槛</strong><span>连续一字晋级的个股，到4板必须充分放量并完成回封；放不出量或回封弱，最容易在卡位中掉队。</span></li><li><strong>确认买点</strong><span>龙版传媒4板充分放量胜出，5板缩量转强确认；健康路径是两个半放量、一个全放量，再完成转强。</span></li><li><strong>败方反馈</strong><span>同身位竞争结束后，胜者与败者仍处于同一情绪单元。败者可以弱，但不能跌停或持续深水，否则会反向拖累胜者与高标情绪。</span></li><li><strong>七维结论</strong><span>三四板出现多只同身位票时，必须同时比较题材内唯一性与题材之间连板高度唯一性，最终定论前不打板。</span></li></ol></aside>
 <p class="body-line">主动性指个股先于题材回流启动；领涨性指涨停行为能够带动题材跟随。个股可能有主动性，但不一定具备有效领涨性。</p>
 <div class="table-shell" id="source-table-14"><table class="data-table"><thead><tr><th>标的</th><th>身位</th><th>领涨</th><th>主动</th><th>抗跌</th><th>市场</th><th>价值</th><th>题材内唯一</th><th>跨题材高度唯一</th><th>五维/七维结论</th><th>监管距离</th><th>梯队完整</th><th>题材持续</th><th>筹码量能</th></tr></thead><tbody><tr><td>新华传媒</td><td>6板</td><td>强</td><td>强</td><td>待验</td><td>强</td><td>中</td><td>强</td><td>强</td><td>空间突破龙</td><td>用户估算8板附近 待核</td><td>传媒有回流</td><td>中</td><td>一字为主 今日约1.4亿</td></tr><tr><td>时代万恒</td><td>2板</td><td>有</td><td>有</td><td>不足</td><td>有</td><td>有政策逻辑</td><td>强</td><td>不足</td><td>题材核心候选</td><td>未核验</td><td>首板助攻待验</td><td>待分化验证</td><td>两个半放量板</td></tr><tr><td>国轩高科</td><td>首板</td><td>待验</td><td>中</td><td>待验</td><td>强</td><td>中</td><td>不足</td><td>不足</td><td>容量锚点</td><td>未核验</td><td>待形成</td><td>待验</td><td>首板承接待验</td></tr><tr><td>新华文轩</td><td>7天6板</td><td>中</td><td>中</td><td>待验</td><td>强</td><td>中</td><td>中</td><td>中</td><td>人气与梯队票</td><td>用户估算再2板 待核</td><td>较弱</td><td>中</td><td>超跌反包属性</td></tr></tbody></table></div>
-<h3 id="sub-13-4-四-明日总龙决胜观察要点-44a414" class="subchapter-title">四 明日总龙决胜观察要点</h3>
+<h3 class="subchapter-title" id="sub-13-4-四-明日总龙决胜观察要点-44a414">四 明日总龙决胜观察要点</h3>
 <p class="body-line bullet-line">新华传媒能否健康完成6进7，并继续向8板以上拓展空间。</p>
 <p class="body-line bullet-line">时代万恒能否在锂电池第一次分化中缩量转强或健康回封。</p>
 <p class="body-line bullet-line">时代万恒上板后，国轩高科及电池后排是否出现一字、强二板或批量承接。</p>
 <p class="body-line bullet-line">中位失败票是否继续产生深水和跌停，避免严重输家反馈拖累赢家。</p>
-<h3 id="sub-13-5-五-卡位观察-c53825" class="subchapter-title">五 卡位观察</h3>
+<h3 class="subchapter-title" id="sub-13-5-五-卡位观察-c53825">五 卡位观察</h3>
 <p class="body-line tone-action">低位卡高位方面，时代万恒不是直接卡位新华传媒，而是争夺下一题材核心资格；必须同时具备主动性、板块跟随和健康量能。同身位卡位方面，二板电池票优先比较量能、率先上板、回封主动性和后排反馈。失败竞争者若出现极端负反馈，可能反向拖累胜者。</p>
 <p class="body-line tone-action">用户历史节奏推演：新华传媒可能类似先行高度开拓者，在其打开7至9板空间后，约半个月或更长时间再出现真正带领完整短线周期的高辨识度核心。10月底至11月初仅作为观察窗口，不作为确定预测。</p>
 <p class="body-line tone-action">当日核心交易规则：题材强时只做最核心前排；题材弱时只等空间突破与新题材确认；天时、地利、人和未形成共振时继续空仓。</p>
 </section>
-<section class="section-card" id="chapter-14-十四-口述信息全量归档与待确认信息-d62038" data-phase="playbook" data-chapter-number="14"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">十四、口述信息全量归档与待确认信息</h2><details class="archive-disclosure"><summary>口述信息与待确认内容</summary><div class="archive-content">
-<h3 id="sub-14-1-一-已纳入的关键票池-d9de70" class="subchapter-title">一 已纳入的关键票池</h3>
+<section class="section-card" data-chapter-number="14" data-phase="playbook" id="chapter-14-十四-口述信息全量归档与待确认信息-d62038"><div class="section-kicker">Daily Review</div><h2 class="chapter-title">十四、口述信息全量归档与待确认信息</h2><details class="archive-disclosure"><summary>口述信息与待确认内容</summary><div class="archive-content">
+<h3 class="subchapter-title" id="sub-14-1-一-已纳入的关键票池-d9de70">一 已纳入的关键票池</h3>
 <p class="body-line">新华传媒、新华文轩、时代万恒、国轩高科、诺德股份、雪龙集团、襄阳轴承、澳弘电子、万科A、我爱我家、深物业A、华策股份、超声电子、亨通光电、善水科技、九阳股份、浙江新能、中新赛克、津药药业、南威软件、万向德农、沃格光电、爱丽家居、南华生物、爱爱精工、大有能源、哈药股份、平潭发展、大金重工、金健米业、会稽山、路畅科技、鸿富诚、沈鼓集团。</p>
-<h3 id="sub-14-2-二-待确认信息-d83f6f" class="subchapter-title">二 待确认信息</h3>
+<h3 class="subchapter-title" id="sub-14-2-二-待确认信息-d83f6f">二 待确认信息</h3>
 <p class="body-line bullet-line">金城股份、福建水泥、吉星科技、华茂股份及部分跌停票的语音识别名称和当日状态。</p>
 <p class="body-line bullet-line">深振业A等地产口述标的的准确名称、身位和板块归属。</p>
 <p class="body-line bullet-line">新型电池十五五规划原文，以及时代万恒与全固态电池政策的直接业务关联。</p>
@@ -569,7 +552,7 @@
 <p class="body-line bullet-line">新华传媒成交额约1.4亿元、封单约19亿元以及此前40至50亿元封单的口述数值。</p>
 <p class="body-line bullet-line">国庆节前后准确交易日安排及节后事件催化。</p>
 <p class="body-line bullet-line">用户提到的历史周期标的、日期和间隔，需要另行核对后才能用于统计结论。</p>
-<h3 id="sub-14-3-三-原始口述逐段归档-01964e" class="subchapter-title">三 原始口述逐段归档</h3>
+<h3 class="subchapter-title" id="sub-14-3-三-原始口述逐段归档-01964e">三 原始口述逐段归档</h3>
 <p class="body-line tone-risk">以下保留用户本次复盘的全部口述原文。疑似语音识别误词不在原文层改写，相关规范名称、客观数据和待核信息以上方结构化复盘及待确认清单为准。</p>
 <p class="body-line">口述原文一 连板 断板与情绪周期</p>
 <p class="body-line">今天先做一个快速复盘，因为盘面比较垃圾，先从连板上看，连板的5进6，新华传媒确实晋级了，但今天放量了。前面都是几千万的放，今天放了1.4个亿，明天就会放更多。明天6进7，你看它封单只有19个亿了，前面的封单都是50个亿40多个亿，今天直接砍半，就看他打高度。明天估计他还是晋级的，但是你看三进4这里，304还是说了连板，现在亏钱效应比较多，金城股份直接跌停，福建水泥直接升水，只有一个晋级成功了，雪龙集团做车和做人形机器人，但人形机器人这个领域没有持续性，2进三只有一个机器人晋级了，吉星科技红盘震荡，大业股份高开冲高后下杀深水，你看这种2进3三进4只进一个，你怎么玩呢？你玩不了啊：</p>
@@ -588,21 +571,18 @@
 <p class="body-line tone-risk">再看一下益栋和龙虎榜，这样的行情没什么异动可以看，今天的没有异动，华池的华策股份可能要碰异动了，其他基本没有碰异动，新华传媒明天涨停都没碰，异动估计至少800对。新华文轩明天涨停，两个涨停才会碰一动，其实没什么很多的异动，就看新华传媒能不能碰八板以及更高版，这是关键，人气榜这里最高的是新华文轩，新华传媒，还有万科A地产。这里蹭的超声电子是PCB这边的回抽，襄阳轴承是3板，国轩高科也是首板。国轩高科主要是电池这边的首板顶出来的，今天主力金额只有做新股的有较大增量资金进出。主力金额比较少，没什么短线资金在活跃这里，龙头预备看不出来，现在没有什么龙头预备，没有持续性的题材炒作，只有一个打高度的空间突破龙，就是新华传媒。各个题材现在短线情绪是退潮的第二天，没什么可看的。</p>
 <p class="body-line tone-action">没有持续性的题材炒作，只有一个打高度的空间突破龙，就是新华传媒。各个题材看，主要是锂电池的持续性够不够，估计也不够，估计是轮动顶出来3天小题材而已，这边就简单分析，明天主要空仓过一下就行，不用太出手，最多出手一仓，一成仓就差不多。明天主要交易策略是一空仓或一成仓试错电池的分化前排。今天的操作是空仓观望，很简单，做得非常好。明天就继续保持节前大假日之前的操作，不宜多，因为很容易出金，没增量资金去做，你不好做，保持住，克制住，不要乱动手，不要多动手，顺周期，顺势而为，天时地利人和的时候做交易。天时地利人和交易这四个点很重要，现在天时地利都不行，天时还在突破，地利也没有持续性，那你就不要去做交易</p>
 </div></details></section>
-
-<div class="phase-divider" id="phase-execution" data-tone="warm"><span>PHASE 04</span><strong>交易执行</strong><p>把战略落到进场、离场、仓位与最大亏损，盘中只按条件行动。</p></div>
-<section class="section-card plan-section" id="operation-plan" data-phase="execution" data-chapter-number="15">
-  <div class="section-kicker">Plan Before Trade</div>
-  <h2 class="chapter-title">十五、今日操作计划</h2>
-  <p class="body-line tone-action">复盘只是在找自己舒服的解释时，会偏离交易系统。这个模块固定把“进场条件、离场条件、最多亏多少”写到桌面上，先复盘过程，再讨论结果。</p>
-
-<section class="operation-strategy-outline" id="operation-strategy-outline" data-operation-strategy-outline>
-  <header class="operation-strategy-outline__header">
-    <div><span>PLAN BEFORE TRADE</span><h3>明日战略总纲</h3></div>
-    <p>基准空仓，只做全条件确认。</p>
-  </header>
-  <ol class="operation-strategy-outline__grid"><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第一</span><strong>先看指数</strong><p>再收一根企稳K线，跌停与中位负反馈继续收敛。</p></li><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第二</span><strong>再看电池</strong><p>时代万恒转强且后排一字或强二板助攻。</p></li><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第三</span><strong>观察高度</strong><p>新华传媒6进7是否健康打开市场空间。</p></li><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第四</span><strong>控制仓位</strong><p>大概率空仓，小概率不超过一成仓试错。</p></li></ol>
+<div class="phase-divider" data-tone="warm" id="phase-execution"><span>PHASE 04</span><strong>交易执行</strong><p>把战略落到进场、离场、仓位与最大亏损，盘中只按条件行动。</p></div>
+<section class="section-card plan-section" data-chapter-number="15" data-phase="execution" id="operation-plan">
+<div class="section-kicker">Plan Before Trade</div>
+<h2 class="chapter-title">十五、今日操作计划</h2><section class="trading-framework" data-trading-framework="execution" id="trading-framework-execution"><h3>交易 · 从判断落实到动作</h3><p class="framework-source">交易体系经验补充 · 2026-10-04；不改写当日事实、历史仓位或原始判断。</p><div class="framework-chain"><strong>阶段</strong><span aria-hidden="true">→</span><strong>模式</strong><span aria-hidden="true">→</span><strong>买点</strong><span aria-hidden="true">→</span><strong>预算（仓位）</strong><span aria-hidden="true">→</span><strong>卖点</strong></div><div class="framework-points"><article class="framework-point"><h4>模式匹配</h4><p>根据天时选择最匹配的战法模式，根据地利选择最有预期的题材，根据人和选择最核心的个股。</p></article><article class="framework-point"><h4>哪一天动手</h4><p>先写弱转强还是转强确认，明确属于题材与个股的哪个阶段。</p></article><article class="framework-point"><h4>哪个分时节点</h4><p>写清半路、上板扫板或其他熟悉买点的具体触发信号；未出现就不进场。</p></article><article class="framework-point"><h4>每笔开仓六要素</h4><p>模式、唯一性、触发、仓位、最大亏损、失效动作缺一不执行；同时预设进场、离场与仓位管理。</p></article></div><h4>两套天时，两套预算与退出</h4><div class="framework-budgets"><article><h4>弱环境 · 预算不是目标</h4><p>本人新计划：总仓预算70%–80%，单票30%–40%；这是条件成立时的上限，不是每天必须用满，也不是强制轻仓。</p><p>机会不足可更低仓或空仓。单票比例按账户总资产计算，不与持仓中占比混淆。</p><p>快进快出；3进4确认后，4进5取得溢价时考虑按预案减仓或离场，不因唯一性延长为强环境持有预期。</p></article><article><h4>强环境 · 风控仍不豁免</h4><p>本人新计划：条件成立时总仓可到100%，单票60%–80%；仍受最大亏损、熟悉模式和退出条件约束，不是推荐无条件满仓。</p><p>逻辑有效时可更耐心，失效仍按计划退出。先规划首次确认仓位，不因买少而次日追高补仓。</p></article></div><p class="framework-notice">以上为本人条件性经验，不是通用仓位建议，也不覆盖当日更低的已写定上限。历史复盘的仓位、实际交易和原始判断保持不变。</p></section>
+<p class="body-line tone-action">复盘只是在找自己舒服的解释时，会偏离交易系统。这个模块固定把“进场条件、离场条件、最多亏多少”写到桌面上，先复盘过程，再讨论结果。</p>
+<section class="operation-strategy-outline" data-operation-strategy-outline="" id="operation-strategy-outline">
+<header class="operation-strategy-outline__header">
+<div><span>PLAN BEFORE TRADE</span><h3>明日战略总纲</h3></div>
+<p>基准空仓，只做全条件确认。</p>
+</header>
+<ol class="operation-strategy-outline__grid"><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第一</span><strong>先看指数</strong><p>再收一根企稳K线，跌停与中位负反馈继续收敛。</p></li><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第二</span><strong>再看电池</strong><p>时代万恒转强且后排一字或强二板助攻。</p></li><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第三</span><strong>观察高度</strong><p>新华传媒6进7是否健康打开市场空间。</p></li><li class="operation-strategy-outline__item"><span class="operation-strategy-outline__order">第四</span><strong>控制仓位</strong><p>大概率空仓，小概率不超过一成仓试错。</p></li></ol>
 </section>
-
 <style>
 .operation-strategy-outline{margin:16px 0 24px;border-top:3px solid #0b7166;border-bottom:1px solid #d6e4e0;background:#fffaf0;color:#173e38}
 .operation-strategy-outline__header{display:flex;align-items:end;justify-content:space-between;gap:18px;padding:16px 18px;background:#123f39;color:#fff}
@@ -611,56 +591,50 @@
 @media(max-width:980px){.operation-strategy-outline__grid{grid-template-columns:repeat(2,minmax(0,1fr))}.operation-strategy-outline__item:nth-child(2){border-right:0}.operation-strategy-outline__item:nth-child(-n+2){border-bottom:1px solid #e8dfcc}}
 @media(max-width:650px){.operation-strategy-outline__header{display:block}.operation-strategy-outline__header p{margin-top:7px;text-align:left}.operation-strategy-outline__grid{grid-template-columns:1fr}.operation-strategy-outline__item{border-right:0;border-bottom:1px solid #e8dfcc}.operation-strategy-outline__item:last-child{border-bottom:0}}
 </style>
-
-  <h3 id="operation-kiss" class="subchapter-title">操作与情绪复盘（KISS模型）</h3>
-  <div class="kiss-grid" data-kiss-three-section><article class="kiss-card"><span>Keep｜继续保持</span><p>保持空仓纪律、核心前排与不做后排的原则。</p></article><article class="kiss-card"><span>Improve｜需要改进</span><p>盘前补齐最大亏损、具体退出价格和时间条件。</p></article><article class="kiss-card"><span>Start｜开始执行</span><p>只按触发卡试错锂电池第一次分化核心。</p></article><article class="kiss-card"><span>Stop｜立即停止</span><p>停止节前纯套利、中位孤立接力与临时起意交易。</p></article></div>
-
-  <h3 id="second-review-2026-07-22" class="subchapter-title">盘后二次复盘</h3>
-  <div class="kiss-grid second-review-grid"><article class="kiss-card"><span>空仓也是正确交易</span><p>节前量能不足、退潮未止，保持空仓优于低胜率套利。</p></article><article class="kiss-card"><span>修复不等于新周期</span><p>双冰后的反核只完成情绪缓和，仍需连续止跌与新题材分化确认。</p></article><article class="kiss-card"><span>只做可验证核心</span><p>时代万恒必须用主动回封和后排助攻证明持续性。</p></article></div>
-
-<h3 id="theme-rhythm-run" class="subchapter-title">题材节奏运行</h3>
-  <div class="theme-rhythm-run-grid"><section class="theme-rhythm-stage"><h4>一、首日启动爆发</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>两个以上一字定方向</span><p>题材首日启动时，最好至少有两个以上一字板把方向钉住，说明资金共识不是单票脉冲。</p></article><article class="kiss-card"><span>存在身位领先龙头</span><p>题材内部最好有一个身位领先的龙头，用它锚定题材高度、分歧承接和次日预期。</p></article><article class="kiss-card"><span>容量和连板梯队存在</span><p>题材不能只有小票脉冲，要同时看到容量票、中军或趋势票，以及连板梯队的完整性。</p></article><article class="kiss-card"><span>逻辑正宗且越新越好</span><p>题材逻辑要正宗，最好是新逻辑、新催化、新叙事；旧题材借消息反抽要主动降级。</p></article></div></section><section class="theme-rhythm-stage"><h4>二、次日分化抗跌</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>前排必须超预期</span><p>首板很多的题材爆发日，次日前排正常应该开一字或极强高开，才能证明资金认可题材强度；如果前排都开不出一字，说明题材强度低于预期，要降低接力仓位。</p></article><article class="kiss-card"><span>后排要继续补首板</span><p>爆发次日不能只靠昨天的前排硬顶，后排还应该有新的首板继续顶出来，维持板块热度和扩散强度；如果没有新增首板，说明题材热度开始衰减。</p></article><article class="kiss-card"><span>分化日看前排封单与后排扩散</span><p>强分化不是单纯看涨停数量，而是看前排是否一字锁死、换手前排是否主动回封、后排是否仍有首板补涨；三者同时满足，题材才可能继续走主线。</p></article><article class="kiss-card"><span>不及预期时快速降级</span><p>如果前排不一字、后排无新增首板、核心开盘后承接弱，就把题材从主攻降级为轮动套利，不再按高潮延续去重仓追高。</p></article></div></section><section class="theme-rhythm-stage"><h4>三、后续轮动节奏</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>前排不断抗跌领涨</span><p>主升题材里，前排核心要不断抗跌、领涨、主动修复，不能只靠后排乱冲维持表面热度。</p></article><article class="kiss-card"><span>后排不断首板助攻</span><p>后排要持续有新首板补涨，给前排提供题材扩散和情绪助攻，说明资金仍愿意在板块内挖掘。</p></article><article class="kiss-card"><span>前后排脱节不严重</span><p>前排强、后排全崩，说明题材只剩抱团；后排强、前排不强，说明没有核心。健康主升要前后排节奏相对同步。</p></article><article class="kiss-card"><span>断板仍趋势向上</span><p>前排即使断板，也应该承接健康、趋势向上；只要没有大负反馈，题材仍可能通过轮动和反包维持生命力。</p></article><article class="kiss-card"><span>高位  中位  低位跟上梯队</span><p>一个题材运行的时候，不仅仅是高位连板继续，中位也要有一两个顶住强度，低位也要有几个补首板助攻。中位和低位任意一个断掉、负反馈严重或冲高回落，都是龙头可能断板的吹哨信号。</p></article><article class="kiss-card"><span>题材证伪情况判断</span><p>盯盘时先看前排辨识度，再看后排负反馈。若只是部分前排辨识度回落、龙头仍主动向上，题材只是开始出问题但未完全证伪；若龙头、前排辨识度和后排同分时回落，说明题材整体分歧被确认，龙头也不能独善其身，要按证伪处理。</p></article></div></section><section class="theme-rhythm-stage"><h4>四、龙头见顶结束</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>后排跌停吹哨</span><p>题材主升阶段，后排不应该直接跌停；一旦后排出现跌停，就是题材持续性开始见顶的吹哨信号。</p></article><article class="kiss-card"><span>辨识度标的深水</span><p>主升题材里，辨识度标的可以断板，但不应该冲高回落后直接跳到深水；这代表前排正反馈开始转弱。</p></article><article class="kiss-card"><span>前排负反馈不能大</span><p>前排应该持续趋势正反馈，可以分歧、可以断板，但不能出现大跳水、大阴线、深水负反馈。</p></article><article class="kiss-card"><span>后排负反馈不能极端</span><p>后排可以弱，但不能出现跌停这种极端负反馈；后排跌停扩散，说明资金已经开始从题材内部撤退。</p></article><article class="kiss-card"><span>历史对照看吹哨</span><p>强分化日不一定结束，关键看有没有跌停和辨识度深水。比如医药强分化但无跌停时还能回流；等后排跌停出现，龙头高度就容易接近尾声。</p></article><article class="kiss-card"><span>执行上快速降级</span><p>当前排辨识度走弱叠加后排跌停，主升预期要立刻降级为退潮预警；不再按龙头加速处理，只做减仓、止盈或离场。</p></article></div></section></div>
-
-  <h3 id="operation-process-review" class="subchapter-title">正确复盘重点</h3>
-  <p class="body-line tone-action">一笔交易从决定进场到决定离场，中间到底做了哪些动作？看到什么具体信号准备动手？这个信号是系统提前规定，还是盘中临场决定？</p>
-  <p class="body-line tone-risk">进场之后是否设置止损，盘中有没有因为害怕手动下移止损？止盈是进场前规划好，还是利润回吐后慌张平掉？不要只盯结果，要盯过程。</p>
-  <h3 id="operation-plan-three-questions" class="subchapter-title">书面计划三问</h3>
-  <div class="question-grid"><article>我在什么条件下进场？</article><article>对了怎么办，错了怎么办？</article><article>这笔最多亏多少？</article></div>
-  <h3 id="editable-operation-table" class="subchapter-title">可编辑交易计划表</h3>
-  <section class="plan-editor" data-operation-plan data-plan-cache-sanitizer="v1">
-    <div class="plan-toolbar">
-      <button type="button" data-add-row="目前持仓票">新增持仓票</button>
-      <button type="button" data-add-row="计划内票">新增计划内票</button>
-      <button type="button" data-export-plan>导出CSV</button>
-      <button type="button" data-reset-plan>恢复默认</button>
-      <span class="plan-save-status" data-save-status>本地已保存</span>
-    </div>
-    <div class="plan-table-wrap"><table class="plan-table">
-      <thead><tr><th>类型</th><th>标的</th><th>个股预期定位</th><th>隔日操作策略</th><th>什么条件进场</th><th>什么条件离场</th><th>最多亏多少</th><th>备注</th><th>操作</th></tr></thead>
-      <tbody data-plan-body></tbody>
-    </table></div>
-  </section>
-  <h3 id="holding-handling-table" class="subchapter-title">持仓处理计划表</h3>
-  <section class="holding-plan-editor" data-holding-plan>
-    <div class="plan-toolbar">
-      <button type="button" data-add-holding-row>新增持仓处理</button>
-      <button type="button" data-export-holding>导出CSV</button>
-      <button type="button" data-reset-holding>恢复默认</button>
-      <span class="plan-save-status" data-holding-save-status>本地已保存</span>
-    </div>
-    <div class="holding-table-wrap"><table class="holding-table">
-      <thead><tr><th>题材</th><th>标的</th><th>仓位比例</th><th>预期定位</th><th>当日涨幅</th><th>封板状态</th><th>隔日开盘预期</th><th>隔日分时预期</th><th>隔日操作策略</th><th>当日题材情况</th><th>隔日题材预期</th><th>止损条件</th><th>操作</th></tr></thead>
-      <tbody data-holding-plan-body></tbody>
-    </table></div>
-  </section>
-  <script type="application/json" data-plan-defaults>[{&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;时代万恒&quot;, &quot;position&quot;: [&quot;龙头预备&quot;, &quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;龙头核心做T或格局&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;缩量转强或健康分歧回封，后排至少出现一字或强二板助攻。&quot;, &quot;exit&quot;: &quot;核心与板块同步回落、炸板无承接或中位负反馈重新扩大。&quot;, &quot;maxLoss&quot;: &quot;盘前补齐精确账户损失；未补齐不执行。&quot;, &quot;note&quot;: &quot;最多一成仓，唯一交易候选。&quot;}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;新华传媒&quot;, &quot;position&quot;: [&quot;龙头预备&quot;, &quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;只观察6进7与首次充分换手回封，不追连续一字。&quot;, &quot;exit&quot;: &quot;封单持续衰减、开板直线跳水或传媒后排不跟。&quot;, &quot;maxLoss&quot;: &quot;0仓观察，不隔夜顶单。&quot;, &quot;note&quot;: &quot;空间突破龙。&quot;}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;国轩高科&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;竞价强并主动上板，形成电池后排助攻。&quot;, &quot;exit&quot;: &quot;冲高回落、板块无扩散或时代万恒失效。&quot;, &quot;maxLoss&quot;: &quot;只作板块确认，不单独交易。&quot;, &quot;note&quot;: &quot;电池容量助攻锚。&quot;}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;雪龙集团&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;走弱止损&quot;], &quot;entry&quot;: &quot;充分放量回封且机器人中低位同步补强。&quot;, &quot;exit&quot;: &quot;无量加速、炸板无承接或后排不跟。&quot;, &quot;maxLoss&quot;: &quot;不主动参与中位接力。&quot;, &quot;note&quot;: &quot;中位风险锚。&quot;}]</script>
-  <script type="application/json" data-holding-defaults>[]</script>
+<h3 class="subchapter-title" id="operation-kiss">操作与情绪复盘（KISS模型）</h3>
+<div class="kiss-grid" data-kiss-three-section=""><article class="kiss-card"><span>Keep｜继续保持</span><p>保持空仓纪律、核心前排与不做后排的原则。</p></article><article class="kiss-card"><span>Improve｜需要改进</span><p>盘前补齐最大亏损、具体退出价格和时间条件。</p></article><article class="kiss-card"><span>Start｜开始执行</span><p>只按触发卡试错锂电池第一次分化核心。</p></article><article class="kiss-card"><span>Stop｜立即停止</span><p>停止节前纯套利、中位孤立接力与临时起意交易。</p></article></div>
+<h3 class="subchapter-title" id="second-review-2026-07-22">盘后二次复盘</h3>
+<div class="kiss-grid second-review-grid"><article class="kiss-card"><span>空仓也是正确交易</span><p>节前量能不足、退潮未止，保持空仓优于低胜率套利。</p></article><article class="kiss-card"><span>修复不等于新周期</span><p>双冰后的反核只完成情绪缓和，仍需连续止跌与新题材分化确认。</p></article><article class="kiss-card"><span>只做可验证核心</span><p>时代万恒必须用主动回封和后排助攻证明持续性。</p></article></div>
+<h3 class="subchapter-title" id="theme-rhythm-run">题材节奏运行</h3>
+<div class="theme-rhythm-run-grid"><section class="theme-rhythm-stage"><h4>一、首日启动爆发</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>两个以上一字定方向</span><p>题材首日启动时，最好至少有两个以上一字板把方向钉住，说明资金共识不是单票脉冲。</p></article><article class="kiss-card"><span>存在身位领先龙头</span><p>题材内部最好有一个身位领先的龙头，用它锚定题材高度、分歧承接和次日预期。</p></article><article class="kiss-card"><span>容量和连板梯队存在</span><p>题材不能只有小票脉冲，要同时看到容量票、中军或趋势票，以及连板梯队的完整性。</p></article><article class="kiss-card"><span>逻辑正宗且越新越好</span><p>题材逻辑要正宗，最好是新逻辑、新催化、新叙事；旧题材借消息反抽要主动降级。</p></article></div></section><section class="theme-rhythm-stage"><h4>二、次日分化抗跌</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>前排必须超预期</span><p>首板很多的题材爆发日，次日前排正常应该开一字或极强高开，才能证明资金认可题材强度；如果前排都开不出一字，说明题材强度低于预期，要降低接力仓位。</p></article><article class="kiss-card"><span>后排要继续补首板</span><p>爆发次日不能只靠昨天的前排硬顶，后排还应该有新的首板继续顶出来，维持板块热度和扩散强度；如果没有新增首板，说明题材热度开始衰减。</p></article><article class="kiss-card"><span>分化日看前排封单与后排扩散</span><p>强分化不是单纯看涨停数量，而是看前排是否一字锁死、换手前排是否主动回封、后排是否仍有首板补涨；三者同时满足，题材才可能继续走主线。</p></article><article class="kiss-card"><span>不及预期时快速降级</span><p>如果前排不一字、后排无新增首板、核心开盘后承接弱，就把题材从主攻降级为轮动套利，不再按高潮延续去重仓追高。</p></article></div></section><section class="theme-rhythm-stage"><h4>三、后续轮动节奏</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>前排不断抗跌领涨</span><p>主升题材里，前排核心要不断抗跌、领涨、主动修复，不能只靠后排乱冲维持表面热度。</p></article><article class="kiss-card"><span>后排不断首板助攻</span><p>后排要持续有新首板补涨，给前排提供题材扩散和情绪助攻，说明资金仍愿意在板块内挖掘。</p></article><article class="kiss-card"><span>前后排脱节不严重</span><p>前排强、后排全崩，说明题材只剩抱团；后排强、前排不强，说明没有核心。健康主升要前后排节奏相对同步。</p></article><article class="kiss-card"><span>断板仍趋势向上</span><p>前排即使断板，也应该承接健康、趋势向上；只要没有大负反馈，题材仍可能通过轮动和反包维持生命力。</p></article><article class="kiss-card"><span>高位  中位  低位跟上梯队</span><p>一个题材运行的时候，不仅仅是高位连板继续，中位也要有一两个顶住强度，低位也要有几个补首板助攻。中位和低位任意一个断掉、负反馈严重或冲高回落，都是龙头可能断板的吹哨信号。</p></article><article class="kiss-card"><span>题材证伪情况判断</span><p>盯盘时先看前排辨识度，再看后排负反馈。若只是部分前排辨识度回落、龙头仍主动向上，题材只是开始出问题但未完全证伪；若龙头、前排辨识度和后排同分时回落，说明题材整体分歧被确认，龙头也不能独善其身，要按证伪处理。</p></article></div></section><section class="theme-rhythm-stage"><h4>四、龙头见顶结束</h4><div class="theme-rhythm-card-grid"><article class="kiss-card"><span>后排跌停吹哨</span><p>题材主升阶段，后排不应该直接跌停；一旦后排出现跌停，就是题材持续性开始见顶的吹哨信号。</p></article><article class="kiss-card"><span>辨识度标的深水</span><p>主升题材里，辨识度标的可以断板，但不应该冲高回落后直接跳到深水；这代表前排正反馈开始转弱。</p></article><article class="kiss-card"><span>前排负反馈不能大</span><p>前排应该持续趋势正反馈，可以分歧、可以断板，但不能出现大跳水、大阴线、深水负反馈。</p></article><article class="kiss-card"><span>后排负反馈不能极端</span><p>后排可以弱，但不能出现跌停这种极端负反馈；后排跌停扩散，说明资金已经开始从题材内部撤退。</p></article><article class="kiss-card"><span>历史对照看吹哨</span><p>强分化日不一定结束，关键看有没有跌停和辨识度深水。比如医药强分化但无跌停时还能回流；等后排跌停出现，龙头高度就容易接近尾声。</p></article><article class="kiss-card"><span>执行上快速降级</span><p>当前排辨识度走弱叠加后排跌停，主升预期要立刻降级为退潮预警；不再按龙头加速处理，只做减仓、止盈或离场。</p></article></div></section></div>
+<h3 class="subchapter-title" id="operation-process-review">正确复盘重点</h3>
+<p class="body-line tone-action">一笔交易从决定进场到决定离场，中间到底做了哪些动作？看到什么具体信号准备动手？这个信号是系统提前规定，还是盘中临场决定？</p>
+<p class="body-line tone-risk">进场之后是否设置止损，盘中有没有因为害怕手动下移止损？止盈是进场前规划好，还是利润回吐后慌张平掉？不要只盯结果，要盯过程。</p>
+<h3 class="subchapter-title" id="operation-plan-three-questions">书面计划三问</h3>
+<div class="question-grid"><article>我在什么条件下进场？</article><article>对了怎么办，错了怎么办？</article><article>这笔最多亏多少？</article></div>
+<h3 class="subchapter-title" id="editable-operation-table">可编辑交易计划表</h3>
+<section class="plan-editor" data-operation-plan="" data-plan-cache-sanitizer="v1" data-plan-framework="2026-10-04">
+<div class="plan-toolbar">
+<button data-add-row="目前持仓票" type="button">新增持仓票</button>
+<button data-add-row="计划内票" type="button">新增计划内票</button>
+<button data-export-plan="" type="button">导出CSV</button>
+<button data-reset-plan="" type="button">恢复默认</button>
+<span class="plan-save-status" data-save-status="">本地已保存</span>
+</div>
+<div class="plan-table-wrap"><table class="plan-table">
+<thead><tr><th>类型 / 阶段</th><th>标的 / 唯一性</th><th>预期定位 / 模式</th><th>隔日策略</th><th>买点 / 触发</th><th>卖点 / 失效动作</th><th>预算 / 最大亏损</th><th>备注</th><th>操作</th></tr></thead>
+<tbody data-plan-body=""></tbody>
+</table></div>
 </section>
-
-      <p class="source-note">Source Word: 用户提供的 2026-09-29 A股超短全景复盘全量文档</p>
-    </main>
-  </div>
-
+<h3 class="subchapter-title" id="holding-handling-table">持仓处理计划表</h3>
+<section class="holding-plan-editor" data-holding-plan="">
+<div class="plan-toolbar">
+<button data-add-holding-row="" type="button">新增持仓处理</button>
+<button data-export-holding="" type="button">导出CSV</button>
+<button data-reset-holding="" type="button">恢复默认</button>
+<span class="plan-save-status" data-holding-save-status="">本地已保存</span>
+</div>
+<div class="holding-table-wrap"><table class="holding-table">
+<thead><tr><th>题材</th><th>标的</th><th>仓位比例</th><th>预期定位</th><th>当日涨幅</th><th>封板状态</th><th>隔日开盘预期</th><th>隔日分时预期</th><th>隔日操作策略</th><th>当日题材情况</th><th>隔日题材预期</th><th>止损条件</th><th>操作</th></tr></thead>
+<tbody data-holding-plan-body=""></tbody>
+</table></div>
+</section>
+<script data-plan-defaults="" type="application/json">[{&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;时代万恒&quot;, &quot;position&quot;: [&quot;龙头预备&quot;, &quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;龙头核心做T或格局&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;缩量转强或健康分歧回封，后排至少出现一字或强二板助攻。&quot;, &quot;exit&quot;: &quot;核心与板块同步回落、炸板无承接或中位负反馈重新扩大。&quot;, &quot;maxLoss&quot;: &quot;盘前补齐精确账户损失；未补齐不执行。&quot;, &quot;note&quot;: &quot;最多一成仓，唯一交易候选。&quot;}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;新华传媒&quot;, &quot;position&quot;: [&quot;龙头预备&quot;, &quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;只观察6进7与首次充分换手回封，不追连续一字。&quot;, &quot;exit&quot;: &quot;封单持续衰减、开板直线跳水或传媒后排不跟。&quot;, &quot;maxLoss&quot;: &quot;0仓观察，不隔夜顶单。&quot;, &quot;note&quot;: &quot;空间突破龙。&quot;}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;国轩高科&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;竞价强并主动上板，形成电池后排助攻。&quot;, &quot;exit&quot;: &quot;冲高回落、板块无扩散或时代万恒失效。&quot;, &quot;maxLoss&quot;: &quot;只作板块确认，不单独交易。&quot;, &quot;note&quot;: &quot;电池容量助攻锚。&quot;}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;雪龙集团&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;走弱止损&quot;], &quot;entry&quot;: &quot;充分放量回封且机器人中低位同步补强。&quot;, &quot;exit&quot;: &quot;无量加速、炸板无承接或后排不跟。&quot;, &quot;maxLoss&quot;: &quot;不主动参与中位接力。&quot;, &quot;note&quot;: &quot;中位风险锚。&quot;}]</script>
+<script data-holding-defaults="" type="application/json">[]</script>
+</section>
+<p class="source-note">Source Word: 用户提供的 2026-09-29 A股超短全景复盘全量文档</p>
+</main>
+</div>
 <script>
 (function(){
   const decodeJson = text => String(text || '').replace(/&quot;/g,'"').replace(/&#34;/g,'"').replace(/&#39;/g,"'").replace(/&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');
@@ -727,6 +701,8 @@
     return Boolean(text) && (text.includes('\uFFFD') || /^[?？\s]+$/.test(text));
   };
   const cleanText = (value, fallback = '') => isCorruptedPlaceholder(value) ? String(fallback ?? '') : String(value ?? '');
+  const PLAN_FRAMEWORK_V1 = true;
+  const planExtraFields = (row, fallback) => ({stage:cleanText(row?.stage ?? (fallback.stock && fallback.stock === row?.stock ? fallback.stage : '')), mode:cleanText(row?.mode ?? (fallback.stock && fallback.stock === row?.stock ? fallback.mode : '')), uniqueness:cleanText(row?.uniqueness ?? (fallback.stock && fallback.stock === row?.stock ? fallback.uniqueness : '')), budget:cleanText(row?.budget ?? (fallback.stock && fallback.stock === row?.stock ? fallback.budget : '')), failureAction:cleanText(row?.failureAction ?? (fallback.stock && fallback.stock === row?.stock ? fallback.failureAction : ''))});
   const cleanSelection = (value, fallback = []) => {
     const raw = normalizeSelection(value);
     const hadCorruption = raw.some(item => isCorruptedPlaceholder(item));
@@ -748,7 +724,7 @@
   try { options = JSON.parse(localStorage.getItem(optionKey) || 'null') || defaultOptions; } catch (error) { options = defaultOptions; }
   rows = rows.map((row, index) => {
     const fallback = planDefaults.find(item => item.stock && item.stock === cleanText(row?.stock)) || planDefaults[index] || {};
-    return {
+    return {...planExtraFields(row, fallback),
       type:cleanText(row?.type, fallback.type), stock:cleanText(row?.stock, fallback.stock),
       position:cleanSelection(row?.position, fallback.position), nextStrategy:cleanSelection(row?.nextStrategy, fallback.nextStrategy),
       entry:cleanText(row?.entry, fallback.entry), exit:cleanText(row?.exit, fallback.exit),
@@ -768,6 +744,9 @@
       if (status) status.textContent = '本地保存失败';
     }
   };
+  const planField = (row, index, label, field) => `<span class="plan-field-label">${esc(label)}</span><div class="plan-field-value" contenteditable="true" role="textbox" aria-label="${esc(label)}" data-index="${index}" data-field="${field}">${esc(row[field])}</div>`;
+  const groupCell = (row, index, aLabel, aField, bLabel, bField) => `<td>${planField(row,index,aLabel,aField)}${planField(row,index,bLabel,bField)}</td>`;
+  const modeCell = (markup, row, index) => markup.slice(0,-5) + planField(row,index,'模式','mode') + '</td>';
   const textCell = (row, index, field) => `<td contenteditable="true" data-index="${index}" data-field="${field}" title="可直接编辑">${esc(row[field])}</td>`;
   const multiCell = (row, index, field) => {
     const selected = normalizeSelection(row[field]);
@@ -776,7 +755,7 @@
     return `<td class="multi-select-cell" data-multi-cell data-index="${index}" data-field="${field}"><div class="multi-select-control">${chips}</div><div class="multi-add"><input data-option-input placeholder="自定义"><button type="button" data-add-option>添加</button></div></td>`;
   };
   const render = () => {
-    body.innerHTML = rows.map((row, index) => `<tr>${textCell(row,index,'type')}${textCell(row,index,'stock')}${multiCell(row,index,'position')}${multiCell(row,index,'nextStrategy')}${textCell(row,index,'entry')}${textCell(row,index,'exit')}${textCell(row,index,'maxLoss')}${textCell(row,index,'note')}<td><div class="plan-row-actions"><button type="button" class="plan-row-save" data-index="${index}" data-save-row>保存</button><button type="button" class="plan-row-delete" data-index="${index}" data-delete-row>删除</button></div></td></tr>`).join('');
+    body.innerHTML = rows.map((row, index) => `<tr>${groupCell(row,index,'类型','type','阶段','stage')}${groupCell(row,index,'标的','stock','唯一性','uniqueness')}${modeCell(multiCell(row,index,'position'),row,index)}${multiCell(row,index,'nextStrategy')}${textCell(row,index,'entry')}${groupCell(row,index,'离场条件','exit','失效动作','failureAction')}${groupCell(row,index,'预算（仓位）','budget','最大亏损','maxLoss')}${textCell(row,index,'note')}<td><div class="plan-row-actions"><button type="button" class="plan-row-save" data-index="${index}" data-save-row>保存</button><button type="button" class="plan-row-delete" data-index="${index}" data-delete-row>删除</button></div></td></tr>`).join('');
   };
   root.addEventListener('input', event => {
     const cell = event.target.closest('[contenteditable][data-field]');
@@ -815,7 +794,7 @@
       render(); save(); return;
     }
     const exportButton = event.target.closest('[data-export-plan]');
-    if (exportButton) exportCsv(['类型','标的','个股预期定位','隔日操作策略','什么条件进场','什么条件离场','最多亏多少','备注'], rows.map(r => [r.type,r.stock,normalizeSelection(r.position).join('、'),normalizeSelection(r.nextStrategy).join('、'),r.entry,r.exit,r.maxLoss,r.note]), '2026-09-29-今日操作计划.csv');
+    if (exportButton) exportCsv(['类型','阶段','标的','唯一性','模式','个股预期定位','隔日操作策略','买点触发','卖点条件','失效动作','预算（仓位）','最大亏损','备注'], rows.map(r => [r.type,r.stage,r.stock,r.uniqueness,r.mode,normalizeSelection(r.position).join('、'),normalizeSelection(r.nextStrategy).join('、'),r.entry,r.exit,r.failureAction,r.budget,r.maxLoss,r.note]), '2026-09-29-今日操作计划.csv');
   });
   function exportCsv(header, rows, name) {
     const csv = [header, ...rows].map(line => line.map(v => `"${String(v || '').replaceAll('"','""')}"`).join(',')).join('\n');
@@ -863,9 +842,8 @@
   render(); save();
 })();
 </script>
-
 <!-- Locked canonical detail-page shell: editorial-flow-v3. Daily builds may populate content but must not alter this shell unless the user explicitly requests a redesign. Inject once after all daily modules are rendered. -->
-<style data-detail-workbench-style data-layout-version="editorial-flow-v3">
+<style data-detail-workbench-style="" data-layout-version="editorial-flow-v3">
 :root{--wb-bg:#edf1ef;--wb-paper:#fff;--wb-ink:#172825;--wb-muted:#667571;--wb-line:#d8dfdc;--wb-line-strong:#bcc9c5;--wb-green:#087467;--wb-green-dark:#153f39;--wb-cyan:#e9f5f2;--wb-red:#b84e43;--wb-red-soft:#fbefed;--wb-gold:#a97016;--wb-gold-soft:#fff7e8;--wb-blue:#356f91;--wb-shadow:0 12px 30px rgba(25,50,45,.07)}
 html{scroll-padding-top:18px}.review-workbench{margin:0;background:var(--wb-bg);color:var(--wb-ink);font-family:"Source Han Sans SC","Noto Sans CJK SC","Microsoft YaHei","PingFang SC",sans-serif;letter-spacing:0}.review-workbench::before{content:"";position:fixed;inset:0 0 auto;height:3px;background:#d6ddda;z-index:120}.reading-progress{position:fixed;inset:0 auto auto 0;width:0;height:3px;background:var(--wb-green);z-index:121;transition:width .08s linear}
 .review-workbench .layout{width:min(1720px,calc(100vw - 24px));margin:12px auto 34px;display:grid;grid-template-columns:252px minmax(0,1fr);gap:18px;align-items:start}.review-workbench .content{min-width:0;border:1px solid var(--wb-line);background:var(--wb-paper);box-shadow:var(--wb-shadow)}
@@ -920,7 +898,7 @@ html{scroll-padding-top:18px}.review-workbench{margin:0;background:var(--wb-bg);
 @media(max-width:820px){.review-workbench .layout{width:100%;margin:0}.review-workbench .content{border-radius:0}.review-workbench .hero{padding:24px 17px 20px}.review-workbench .hero h1{display:block;font-size:30px;line-height:1.22}.hero-title-date,.hero-title-main,.hero-title-plan{display:block}.hero-title-main{margin-top:7px}.hero-title-plan{width:max-content;margin-top:10px}.review-workbench .hero-lead{font-size:14px}.review-workbench .hero-stats{gap:6px}.review-workbench .hero-stats span{padding:6px 8px}.review-route{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.review-route a{border-right:1px solid var(--wb-line)!important;border-bottom:1px solid var(--wb-line)!important}.review-workbench #source-table-1{padding:14px}.review-workbench #source-table-1 th{padding:13px 14px;font-size:13px}.phase-divider{grid-template-columns:1fr;padding:13px 17px;gap:4px}.phase-divider span{display:none}.phase-divider p{grid-column:auto}.review-workbench .section-card{padding:24px 15px 28px}.review-workbench .chapter-title{font-size:21px}.review-workbench .body-line{font-size:14px}.review-workbench .recap-summary-modules__header{display:block}.review-workbench .recap-summary-modules__header p{margin-top:6px}.review-workbench .recap-summary-row{grid-template-columns:1fr}.review-workbench .recap-summary-row__title{border-right:0;border-bottom:1px solid var(--wb-line)}.review-workbench .recap-summary-points{grid-template-columns:1fr;padding:11px 12px}.review-workbench .recap-summary-point{min-height:auto;border:0!important;box-shadow:inset 2px 0 0 #e1ebe7}.review-workbench .decision-dashboard,.review-workbench .theme-analysis-flow,.review-workbench .event-catalyst-timeline,.review-workbench .next-day-playbook{margin-left:-15px;margin-right:-15px}.review-workbench .decision-dashboard__head,.review-workbench .event-catalyst-timeline,.review-workbench .next-day-playbook__header,.review-workbench .next-day-playbook__step{padding-left:15px;padding-right:15px}.review-workbench .decision-band,.review-workbench .theme-analysis-block{margin-left:10px;margin-right:10px}.review-workbench .theme-analysis-flow>h3,.review-workbench .theme-analysis-flow>.theme-analysis-intro{margin-left:15px;margin-right:15px}.review-workbench .theme-stock-table-wrap,.review-workbench .theme-analysis-copy{margin-left:12px;margin-right:12px}.review-workbench .theme-analysis-copy{grid-template-columns:1fr}.workbench-tools button{min-width:48px;min-height:44px;padding:8px}.review-workbench .plan-toolbar button,.review-workbench .plan-row-save,.review-workbench .plan-row-delete{min-height:44px}}
 @media(prefers-reduced-motion:reduce){.review-workbench *{scroll-behavior:auto!important;transition-duration:.01ms!important}}
 </style>
-<script data-detail-workbench-script>
+<script data-detail-workbench-script="">
 (function(){
   const body=document.body;
   const progress=document.querySelector('[data-reading-progress]');
@@ -978,6 +956,5 @@ html{scroll-padding-top:18px}.review-workbench{margin:0;background:var(--wb-bg);
   nodes.forEach((node,index)=>node.open=index===0);
 })();
 </script>
-
 </body>
 </html>
