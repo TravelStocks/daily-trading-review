@@ -48,6 +48,8 @@
 .plan-field-value[contenteditable]{min-height:24px;padding:4px 0;outline:0;overflow-wrap:anywhere;cursor:text}
 .plan-field-value[contenteditable]:empty::before{content:"待填";color:#889790}
 .plan-field-value[contenteditable]:focus{background:#fff7e8;box-shadow:inset 0 -2px #b98632}
+.plan-mode-select{display:block;width:100%;max-width:100%;min-width:0;margin-top:4px;padding:5px 3px;border:1px solid #c8d8d2;border-radius:4px;background:#fff;color:#174f47;font:inherit;font-size:12px;line-height:1.5;text-overflow:ellipsis}
+.plan-mode-select:focus-visible{outline:2px solid #087467;outline-offset:2px}
 @media(max-width:680px){.framework-points,.framework-budgets{grid-template-columns:1fr;gap:0}.framework-chain{font-size:12px}.trading-framework{margin:14px 0}}
 </style></head>
 <body class="review-workbench" id="page-top"><div class="reading-progress" data-reading-progress=""></div><div class="mobile-toc-scrim" data-toc-scrim=""></div><div aria-label="页面工具" class="workbench-tools"><button data-toc-toggle="" type="button">目录</button><button data-back-top="" type="button">顶部</button></div>
@@ -746,7 +748,25 @@
   };
   const planField = (row, index, label, field) => `<span class="plan-field-label">${esc(label)}</span><div class="plan-field-value" contenteditable="true" role="textbox" aria-label="${esc(label)}" data-index="${index}" data-field="${field}">${esc(row[field])}</div>`;
   const groupCell = (row, index, aLabel, aField, bLabel, bField) => `<td>${planField(row,index,aLabel,aField)}${planField(row,index,bLabel,bField)}</td>`;
-  const modeCell = (markup, row, index) => markup.slice(0,-5) + planField(row,index,'模式','mode') + '</td>';
+  // PLAN_MODES_START
+  const PLAN_MODE_OPTIONS = ["主升连板龙-龙头", "低位接力-切换", "机构趋势", "补涨", "连板龙转趋势龙-龙头二波", "龙头反抽以及监管套利", "总龙趋势下补涨连板龙-补涨龙中位3板"];
+  const planModeSelector = (row, index) => {
+    const current = cleanText(row.mode);
+    const choices = [...PLAN_MODE_OPTIONS, ...(current && !PLAN_MODE_OPTIONS.includes(current) ? [current] : [])];
+    const items = choices.map(value => `<option value="${esc(value)}"${value === current ? ' selected' : ''}>${esc(value)}</option>`).join('');
+    return `<label class="plan-field-label" for="plan-mode-${index}">模式</label><select class="plan-mode-select" id="plan-mode-${index}" data-plan-mode data-index="${index}" aria-label="${esc(row.stock || '第' + (index + 1) + '行')}的交易模式" title="${esc(current || '选择交易模式')}"><option value=""${!current ? ' selected' : ''}>待选</option>${items}</select>`;
+  };
+  const modeCell = (markup, row, index) => markup.slice(0,-5) + planModeSelector(row,index) + '</td>';
+  root.addEventListener('change', event => {
+    const selector = event.target.closest('[data-plan-mode]');
+    if(!selector) return;
+    const index = Number(selector.dataset.index);
+    if(!Number.isInteger(index) || index < 0 || index >= rows.length) return;
+    rows[index].mode = selector.value;
+    selector.title = selector.value || '选择交易模式';
+    save();
+  });
+  // PLAN_MODES_END
   const textCell = (row, index, field) => `<td contenteditable="true" data-index="${index}" data-field="${field}" title="可直接编辑">${esc(row[field])}</td>`;
   const multiCell = (row, index, field) => {
     const selected = normalizeSelection(row[field]);
