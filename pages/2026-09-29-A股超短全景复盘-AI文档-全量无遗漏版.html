@@ -53,16 +53,16 @@
 [data-operation-plan] .plan-table-wrap{max-width:100%;overflow-x:auto;border-radius:6px}
 [data-operation-plan] .plan-table{min-width:1500px;table-layout:fixed}
 [data-operation-plan] .plan-table th,[data-operation-plan] .plan-table td{width:auto;text-align:left}
-[data-operation-plan] .plan-table th:nth-child(1),[data-operation-plan] .plan-table td:nth-child(1){width:7%}
-[data-operation-plan] .plan-table th:nth-child(2),[data-operation-plan] .plan-table td:nth-child(2){width:7%}
-[data-operation-plan] .plan-table th:nth-child(3),[data-operation-plan] .plan-table td:nth-child(3){width:8%}
-[data-operation-plan] .plan-table th:nth-child(4),[data-operation-plan] .plan-table td:nth-child(4){width:12%}
-[data-operation-plan] .plan-table th:nth-child(5),[data-operation-plan] .plan-table td:nth-child(5){width:14%}
-[data-operation-plan] .plan-table th:nth-child(6),[data-operation-plan] .plan-table td:nth-child(6){width:10%}
+[data-operation-plan] .plan-table th:nth-child(1),[data-operation-plan] .plan-table td:nth-child(1){width:11%}
+[data-operation-plan] .plan-table th:nth-child(2),[data-operation-plan] .plan-table td:nth-child(2){width:6%}
+[data-operation-plan] .plan-table th:nth-child(3),[data-operation-plan] .plan-table td:nth-child(3){width:12%}
+[data-operation-plan] .plan-table th:nth-child(4),[data-operation-plan] .plan-table td:nth-child(4){width:10%}
+[data-operation-plan] .plan-table th:nth-child(5),[data-operation-plan] .plan-table td:nth-child(5){width:12%}
+[data-operation-plan] .plan-table th:nth-child(6),[data-operation-plan] .plan-table td:nth-child(6){width:11%}
 [data-operation-plan] .plan-table th:nth-child(7),[data-operation-plan] .plan-table td:nth-child(7){width:12%}
 [data-operation-plan] .plan-table th:nth-child(8),[data-operation-plan] .plan-table td:nth-child(8){width:12%}
-[data-operation-plan] .plan-table th:nth-child(9),[data-operation-plan] .plan-table td:nth-child(9){width:12%}
-[data-operation-plan] .plan-table th:nth-child(10),[data-operation-plan] .plan-table td:nth-child(10){width:6%}
+[data-operation-plan] .plan-table th:nth-child(9),[data-operation-plan] .plan-table td:nth-child(9){width:9%}
+[data-operation-plan] .plan-table th:nth-child(10),[data-operation-plan] .plan-table td:nth-child(10){width:5%}
 @media(max-width:680px){.framework-points,.framework-budgets{grid-template-columns:1fr;gap:0}.framework-chain{font-size:12px}.trading-framework{margin:14px 0}}
 </style></head>
 <body class="review-workbench" id="page-top"><div class="reading-progress" data-reading-progress=""></div><div class="mobile-toc-scrim" data-toc-scrim=""></div><div aria-label="页面工具" class="workbench-tools"><button data-toc-toggle="" type="button">目录</button><button data-back-top="" type="button">顶部</button></div>
@@ -629,7 +629,7 @@
 <h3 class="subchapter-title" id="operation-plan-three-questions">书面计划三问</h3>
 <div class="question-grid"><article>我在什么条件下进场？</article><article>对了怎么办，错了怎么办？</article><article>这笔最多亏多少？</article></div>
 <h3 class="subchapter-title" id="editable-operation-table">可编辑交易计划表</h3>
-<section class="plan-editor" data-operation-plan="" data-plan-cache-sanitizer="v1" data-plan-framework="2026-10-05">
+<section class="plan-editor" data-operation-plan="" data-plan-cache-sanitizer="v1" data-plan-framework="2026-10-05" data-plan-rhythm="v1">
 <div class="plan-toolbar">
 <button data-add-row="目前持仓票" type="button">新增持仓票</button>
 <button data-add-row="计划内票" type="button">新增计划内票</button>
@@ -655,7 +655,7 @@
 <tbody data-holding-plan-body=""></tbody>
 </table></div>
 </section>
-<script data-plan-defaults="" type="application/json">[{&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;时代万恒&quot;, &quot;position&quot;: [&quot;龙头预备&quot;, &quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;龙头核心做T或格局&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;缩量转强或健康分歧回封，后排至少出现一字或强二板助攻。&quot;, &quot;exit&quot;: &quot;核心与板块同步回落、炸板无承接或中位负反馈重新扩大。&quot;, &quot;maxLoss&quot;: &quot;盘前补齐精确账户损失；未补齐不执行。&quot;, &quot;note&quot;: &quot;最多一成仓，唯一交易候选。&quot;}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;新华传媒&quot;, &quot;position&quot;: [&quot;龙头预备&quot;, &quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;只观察6进7与首次充分换手回封，不追连续一字。&quot;, &quot;exit&quot;: &quot;封单持续衰减、开板直线跳水或传媒后排不跟。&quot;, &quot;maxLoss&quot;: &quot;0仓观察，不隔夜顶单。&quot;, &quot;note&quot;: &quot;空间突破龙。&quot;}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;国轩高科&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;竞价强并主动上板，形成电池后排助攻。&quot;, &quot;exit&quot;: &quot;冲高回落、板块无扩散或时代万恒失效。&quot;, &quot;maxLoss&quot;: &quot;只作板块确认，不单独交易。&quot;, &quot;note&quot;: &quot;电池容量助攻锚。&quot;}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;雪龙集团&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;走弱止损&quot;], &quot;entry&quot;: &quot;充分放量回封且机器人中低位同步补强。&quot;, &quot;exit&quot;: &quot;无量加速、炸板无承接或后排不跟。&quot;, &quot;maxLoss&quot;: &quot;不主动参与中位接力。&quot;, &quot;note&quot;: &quot;中位风险锚。&quot;}]</script>
+<script data-plan-defaults="" type="application/json">[{&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;时代万恒&quot;, &quot;position&quot;: [&quot;龙头预备&quot;, &quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;龙头核心做T或格局&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;缩量转强或健康分歧回封，后排至少出现一字或强二板助攻。&quot;, &quot;exit&quot;: &quot;核心与板块同步回落、炸板无承接或中位负反馈重新扩大。&quot;, &quot;maxLoss&quot;: &quot;盘前补齐精确账户损失；未补齐不执行。&quot;, &quot;note&quot;: &quot;最多一成仓，唯一交易候选。&quot;, &quot;theme&quot;: &quot;锂电池 / 固态电池&quot;, &quot;themeRhythm&quot;: &quot;当日：首日启动爆发；次日：第一次分化，验证前排转强与后排助攻。&quot;, &quot;volumeRhythm&quot;: &quot;原文观察：二板及前一板均为半放量；次日：缩量转强或再换手回封，拒绝无承接炸板。&quot;}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;新华传媒&quot;, &quot;position&quot;: [&quot;龙头预备&quot;, &quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;只观察6进7与首次充分换手回封，不追连续一字。&quot;, &quot;exit&quot;: &quot;封单持续衰减、开板直线跳水或传媒后排不跟。&quot;, &quot;maxLoss&quot;: &quot;0仓观察，不隔夜顶单。&quot;, &quot;note&quot;: &quot;空间突破龙。&quot;, &quot;theme&quot;: &quot;传媒 / AI应用&quot;, &quot;themeRhythm&quot;: &quot;当日：高度抱团与板块回流，后排扩散待验；次日：验证6进7能否带动板块。&quot;, &quot;volumeRhythm&quot;: &quot;当日：连续一字，首次充分换手分歧待验；次日：看放量回封与后排跟随，不追无量一字。&quot;}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;国轩高科&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;竞价强并主动上板，形成电池后排助攻。&quot;, &quot;exit&quot;: &quot;冲高回落、板块无扩散或时代万恒失效。&quot;, &quot;maxLoss&quot;: &quot;只作板块确认，不单独交易。&quot;, &quot;note&quot;: &quot;电池容量助攻锚。&quot;, &quot;theme&quot;: &quot;锂电池 / 固态电池&quot;, &quot;themeRhythm&quot;: &quot;当日：电池首日爆发的容量助攻；次日：验证分化承接与一进二扩散。&quot;, &quot;volumeRhythm&quot;: &quot;当日：首板承接待验，完整量能序列待核；次日：看主动上板、承接与容量助攻。&quot;}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;雪龙集团&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;走弱止损&quot;], &quot;entry&quot;: &quot;充分放量回封且机器人中低位同步补强。&quot;, &quot;exit&quot;: &quot;无量加速、炸板无承接或后排不跟。&quot;, &quot;maxLoss&quot;: &quot;不主动参与中位接力。&quot;, &quot;note&quot;: &quot;中位风险锚。&quot;, &quot;theme&quot;: &quot;机器人 / 汽车&quot;, &quot;themeRhythm&quot;: &quot;当日：孤立中位接力，题材弱、后排助攻不足；次日：看分歧能否补出中低位梯队。&quot;, &quot;volumeRhythm&quot;: &quot;原文观察：4板量能不足，已有一个全放量及一个半放量；次日：必须充分放量回封，警惕无量加速。&quot;}]</script>
 <script data-holding-defaults="" type="application/json">[]</script>
 </section>
 <p class="source-note">Source Word: 用户提供的 2026-09-29 A股超短全景复盘全量文档</p>
@@ -728,7 +728,7 @@
   };
   const cleanText = (value, fallback = '') => isCorruptedPlaceholder(value) ? String(fallback ?? '') : String(value ?? '');
   const PLAN_FRAMEWORK_V1 = true;
-  const planExtraFields = (row, fallback) => ({theme:cleanText(row?.theme ?? (fallback.stock && fallback.stock === row?.stock ? fallback.theme : '')), stage:cleanText(row?.stage ?? (fallback.stock && fallback.stock === row?.stock ? fallback.stage : '')), mode:cleanText(row?.mode ?? (fallback.stock && fallback.stock === row?.stock ? fallback.mode : '')), uniqueness:cleanText(row?.uniqueness ?? (fallback.stock && fallback.stock === row?.stock ? fallback.uniqueness : '')), weather:cleanText(row?.weather ?? (fallback.stock && fallback.stock === row?.stock ? fallback.weather : '')), budget:cleanText(row?.budget ?? (fallback.stock && fallback.stock === row?.stock ? fallback.budget : '')), entryDay:cleanText(row?.entryDay ?? (fallback.stock && fallback.stock === row?.stock ? fallback.entryDay : '')), exitDay:cleanText(row?.exitDay ?? (fallback.stock && fallback.stock === row?.stock ? fallback.exitDay : '')), failureAction:cleanText(row?.failureAction ?? (fallback.stock && fallback.stock === row?.stock ? fallback.failureAction : ''))});
+  const planExtraFields = (row, fallback) => ({theme:cleanText(row?.theme ?? (fallback.stock && fallback.stock === row?.stock ? fallback.theme : '')), themeRhythm:cleanText(row?.themeRhythm ?? (fallback.stock && fallback.stock === row?.stock ? fallback.themeRhythm : '')), stage:cleanText(row?.stage ?? (fallback.stock && fallback.stock === row?.stock ? fallback.stage : '')), volumeRhythm:cleanText(row?.volumeRhythm ?? (fallback.stock && fallback.stock === row?.stock ? fallback.volumeRhythm : '')), mode:cleanText(row?.mode ?? (fallback.stock && fallback.stock === row?.stock ? fallback.mode : '')), uniqueness:cleanText(row?.uniqueness ?? (fallback.stock && fallback.stock === row?.stock ? fallback.uniqueness : '')), weather:cleanText(row?.weather ?? (fallback.stock && fallback.stock === row?.stock ? fallback.weather : '')), budget:cleanText(row?.budget ?? (fallback.stock && fallback.stock === row?.stock ? fallback.budget : '')), entryDay:cleanText(row?.entryDay ?? (fallback.stock && fallback.stock === row?.stock ? fallback.entryDay : '')), exitDay:cleanText(row?.exitDay ?? (fallback.stock && fallback.stock === row?.stock ? fallback.exitDay : '')), failureAction:cleanText(row?.failureAction ?? (fallback.stock && fallback.stock === row?.stock ? fallback.failureAction : ''))});
   const cleanSelection = (value, fallback = []) => {
     const raw = normalizeSelection(value);
     const hadCorruption = raw.some(item => isCorruptedPlaceholder(item));
@@ -809,7 +809,7 @@
   const planStrategyCell = (row,index) => multiCell(row,index,'nextStrategy').slice(0,-5) + planField(row,index,'备注','note') + '</td>';
   // PLAN_ORDER_END
   const render = () => {
-    body.innerHTML = rows.map((row, index) => `<tr>${planCell(row,index,'题材','theme')}${planCell(row,index,'阶段','stage')}${groupCell(row,index,'个股','stock','类型','type')}${planStatusCell(row,index)}<td>${planModeSelector(row,index)}</td><td>${planWeatherSelector(row,index)}${planField(row,index,'仓位预算','budget')}${planField(row,index,'最大亏损','maxLoss')}</td>${groupCell(row,index,'择日','entryDay','分时 / 触发','entry')}<td>${planField(row,index,'择日','exitDay')}${planField(row,index,'分时 / 离场条件','exit')}${planField(row,index,'失效动作','failureAction')}</td>${planStrategyCell(row,index)}<td><div class="plan-row-actions"><button type="button" class="plan-row-save" data-index="${index}" data-save-row>保存</button><button type="button" class="plan-row-delete" data-index="${index}" data-delete-row>删除</button></div></td></tr>`).join('');
+    body.innerHTML = rows.map((row, index) => `<tr>${groupCell(row,index,'题材','theme','题材节奏','themeRhythm')}${planCell(row,index,'阶段','stage')}<td>${planField(row,index,'个股','stock')}${planField(row,index,'龙头量能节奏','volumeRhythm')}${planField(row,index,'类型','type')}</td>${planStatusCell(row,index)}<td>${planModeSelector(row,index)}</td><td>${planWeatherSelector(row,index)}${planField(row,index,'仓位预算','budget')}${planField(row,index,'最大亏损','maxLoss')}</td>${groupCell(row,index,'择日','entryDay','分时 / 触发','entry')}<td>${planField(row,index,'择日','exitDay')}${planField(row,index,'分时 / 离场条件','exit')}${planField(row,index,'失效动作','failureAction')}</td>${planStrategyCell(row,index)}<td><div class="plan-row-actions"><button type="button" class="plan-row-save" data-index="${index}" data-save-row>保存</button><button type="button" class="plan-row-delete" data-index="${index}" data-delete-row>删除</button></div></td></tr>`).join('');
   };
   root.addEventListener('input', event => {
     const cell = event.target.closest('[contenteditable][data-field]');
@@ -848,7 +848,7 @@
       render(); save(); return;
     }
     const exportButton = event.target.closest('[data-export-plan]');
-    if (exportButton) exportCsv(['题材','阶段','个股','地位','唯一性','模式','天时（强/弱）','仓位预算','最大亏损','买点（择日）','买点（分时/触发）','卖点（择日）','卖点（分时/离场）','失效动作','类型','隔日操作策略','备注'], rows.map(r => [r.theme,r.stage,r.stock,normalizeSelection(r.position).join('、'),r.uniqueness,r.mode,r.weather,r.budget,r.maxLoss,r.entryDay,r.entry,r.exitDay,r.exit,r.failureAction,r.type,normalizeSelection(r.nextStrategy).join('、'),r.note]), '2026-09-29-今日操作计划.csv');
+    if (exportButton) exportCsv(['题材','题材节奏','阶段','个股','龙头量能节奏','地位','唯一性','模式','天时（强/弱）','仓位预算','最大亏损','买点（择日）','买点（分时/触发）','卖点（择日）','卖点（分时/离场）','失效动作','类型','隔日操作策略','备注'], rows.map(r => [r.theme,r.themeRhythm,r.stage,r.stock,r.volumeRhythm,normalizeSelection(r.position).join('、'),r.uniqueness,r.mode,r.weather,r.budget,r.maxLoss,r.entryDay,r.entry,r.exitDay,r.exit,r.failureAction,r.type,normalizeSelection(r.nextStrategy).join('、'),r.note]), '2026-09-29-今日操作计划.csv');
   });
   function exportCsv(header, rows, name) {
     const csv = [header, ...rows].map(line => line.map(v => `"${String(v || '').replaceAll('"','""')}"`).join(',')).join('\n');
