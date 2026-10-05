@@ -486,7 +486,16 @@
       "source_docx": "用户提供的 2026-09-29 A股超短全景复盘全量文档",
       "page_path": "pages\\2026-09-29-A股超短全景复盘-AI文档-全量无遗漏版.html",
       "missing_count": 0,
-      "missing_preview": []
+      "missing_preview": [],
+      "theme_coverage": {
+        "version": "2026-10-05-v1",
+        "themes": 7,
+        "stock_rows": 57,
+        "quote_rows": 57,
+        "previous_date": "2026-09-28",
+        "hot_gap": "仅留存热榜11只，原前50名完整快照缺失；未使用当前榜冒充历史榜",
+        "tests_passed": 38
+      }
     }
   },
   "latest_date": "2026-09-29",
