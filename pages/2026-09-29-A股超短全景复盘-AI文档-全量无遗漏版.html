@@ -63,6 +63,33 @@
 [data-operation-plan] .plan-table th:nth-child(8),[data-operation-plan] .plan-table td:nth-child(8){width:12%}
 [data-operation-plan] .plan-table th:nth-child(9),[data-operation-plan] .plan-table td:nth-child(9){width:9%}
 [data-operation-plan] .plan-table th:nth-child(10),[data-operation-plan] .plan-table td:nth-child(10){width:5%}
+[data-operation-plan] .plan-rhythm-row>td{padding:0 12px 16px;background:#f9fbfc;border-bottom:2px solid #cfdddf;width:auto}
+.plan-rhythm-pair{width:min(820px,calc(100vw - 72px));max-width:100%;padding:14px 0 0;position:sticky;left:12px}
+.plan-rhythm-heading{display:flex;align-items:baseline;flex-wrap:wrap;gap:5px;margin-bottom:10px;font-size:13px;color:#234b52}
+.plan-rhythm-sources{margin-left:auto;font-size:11px;color:#647579}
+.plan-rhythm-sources a{color:#466779;text-decoration:underline;text-underline-offset:3px}
+.plan-rhythm-grid{display:grid;grid-template-columns:100px repeat(var(--rhythm-days),minmax(0,1fr));gap:8px;align-items:center;text-align:center;font-variant-numeric:tabular-nums}
+.plan-rhythm-grid>strong,.plan-rhythm-grid>span:first-child{text-align:left;font-size:12px}
+.plan-rhythm-dates{color:#677a80;font-size:12px;padding-bottom:8px;border-bottom:1px solid #d8e2e5}
+.plan-rhythm-counts{padding:10px 0;border-bottom:1px solid #d8e2e5}
+.plan-rhythm-counts b{font-size:18px;color:#0c6d63}
+.plan-rhythm-counts small{font-size:11px;margin-left:4px;color:#677a80}
+.plan-rhythm-volumes{align-items:end;padding-top:10px}
+.plan-rhythm-volumes>strong{align-self:center}
+.plan-rhythm-volumes>strong small{display:block;color:#677a80;font-size:11px;font-weight:400;margin-top:4px}
+.plan-volume-column{min-width:0;outline-offset:3px}
+.plan-volume-column:focus-visible{outline:2px solid #1b7cb3}
+.plan-volume-value{display:block;font-size:12px;margin-bottom:5px;white-space:nowrap;color:#425b65}
+.plan-volume-track{height:68px;border-bottom:1px solid #c2d2d9;display:flex;align-items:end;justify-content:center;background:repeating-linear-gradient(to top,transparent 0,transparent 32px,#edf1f3 33px,#edf1f3 34px)}
+.plan-volume-bar{width:28px;max-width:65%;background:#5684aa;border-radius:2px 2px 0 0}
+.is-current .plan-volume-bar{background:#0d9275}
+.plan-rhythm-missing,.plan-rhythm-gap{color:#8a7067;font-size:11px}
+.plan-rhythm-gap{margin:4px 0 10px}
+.plan-rhythm-notes{display:grid;gap:4px;margin-top:12px;border-top:1px solid #d8e2e5;padding-top:9px}
+.plan-rhythm-notes>div{display:grid;grid-template-columns:160px minmax(0,1fr);gap:12px;align-items:baseline}
+.plan-rhythm-notes .plan-field-label{font-size:11px;margin:0;color:#56717a}
+.plan-rhythm-notes .plan-field-value{font-size:12px;line-height:1.6}
+@media(max-width:680px){.plan-rhythm-pair{width:calc(100vw - 68px)}.plan-rhythm-grid{grid-template-columns:72px repeat(var(--rhythm-days),minmax(0,1fr));gap:4px}.plan-volume-value{font-size:10px}.plan-rhythm-counts b{font-size:16px}.plan-rhythm-notes>div{grid-template-columns:1fr;gap:0}.plan-rhythm-sources{font-size:10px;margin-left:0}}
 @media(max-width:680px){.framework-points,.framework-budgets{grid-template-columns:1fr;gap:0}.framework-chain{font-size:12px}.trading-framework{margin:14px 0}}
 </style></head>
 <body class="review-workbench" id="page-top"><div class="reading-progress" data-reading-progress=""></div><div class="mobile-toc-scrim" data-toc-scrim=""></div><div aria-label="页面工具" class="workbench-tools"><button data-toc-toggle="" type="button">目录</button><button data-back-top="" type="button">顶部</button></div>
@@ -629,7 +656,7 @@
 <h3 class="subchapter-title" id="operation-plan-three-questions">书面计划三问</h3>
 <div class="question-grid"><article>我在什么条件下进场？</article><article>对了怎么办，错了怎么办？</article><article>这笔最多亏多少？</article></div>
 <h3 class="subchapter-title" id="editable-operation-table">可编辑交易计划表</h3>
-<section class="plan-editor" data-operation-plan="" data-plan-cache-sanitizer="v1" data-plan-framework="2026-10-05" data-plan-rhythm="v1">
+<section class="plan-editor" data-operation-plan="" data-plan-cache-sanitizer="v1" data-plan-framework="2026-10-05" data-plan-rhythm="v2">
 <div class="plan-toolbar">
 <button data-add-row="目前持仓票" type="button">新增持仓票</button>
 <button data-add-row="计划内票" type="button">新增计划内票</button>
@@ -655,7 +682,7 @@
 <tbody data-holding-plan-body=""></tbody>
 </table></div>
 </section>
-<script data-plan-defaults="" type="application/json">[{&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;时代万恒&quot;, &quot;position&quot;: [&quot;龙头预备&quot;, &quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;龙头核心做T或格局&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;缩量转强或健康分歧回封，后排至少出现一字或强二板助攻。&quot;, &quot;exit&quot;: &quot;核心与板块同步回落、炸板无承接或中位负反馈重新扩大。&quot;, &quot;maxLoss&quot;: &quot;盘前补齐精确账户损失；未补齐不执行。&quot;, &quot;note&quot;: &quot;最多一成仓，唯一交易候选。&quot;, &quot;theme&quot;: &quot;锂电池 / 固态电池&quot;, &quot;themeRhythm&quot;: &quot;当日：首日启动爆发；次日：第一次分化，验证前排转强与后排助攻。&quot;, &quot;volumeRhythm&quot;: &quot;原文观察：二板及前一板均为半放量；次日：缩量转强或再换手回封，拒绝无承接炸板。&quot;}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;新华传媒&quot;, &quot;position&quot;: [&quot;龙头预备&quot;, &quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;只观察6进7与首次充分换手回封，不追连续一字。&quot;, &quot;exit&quot;: &quot;封单持续衰减、开板直线跳水或传媒后排不跟。&quot;, &quot;maxLoss&quot;: &quot;0仓观察，不隔夜顶单。&quot;, &quot;note&quot;: &quot;空间突破龙。&quot;, &quot;theme&quot;: &quot;传媒 / AI应用&quot;, &quot;themeRhythm&quot;: &quot;当日：高度抱团与板块回流，后排扩散待验；次日：验证6进7能否带动板块。&quot;, &quot;volumeRhythm&quot;: &quot;当日：连续一字，首次充分换手分歧待验；次日：看放量回封与后排跟随，不追无量一字。&quot;}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;国轩高科&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;竞价强并主动上板，形成电池后排助攻。&quot;, &quot;exit&quot;: &quot;冲高回落、板块无扩散或时代万恒失效。&quot;, &quot;maxLoss&quot;: &quot;只作板块确认，不单独交易。&quot;, &quot;note&quot;: &quot;电池容量助攻锚。&quot;, &quot;theme&quot;: &quot;锂电池 / 固态电池&quot;, &quot;themeRhythm&quot;: &quot;当日：电池首日爆发的容量助攻；次日：验证分化承接与一进二扩散。&quot;, &quot;volumeRhythm&quot;: &quot;当日：首板承接待验，完整量能序列待核；次日：看主动上板、承接与容量助攻。&quot;}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;雪龙集团&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;走弱止损&quot;], &quot;entry&quot;: &quot;充分放量回封且机器人中低位同步补强。&quot;, &quot;exit&quot;: &quot;无量加速、炸板无承接或后排不跟。&quot;, &quot;maxLoss&quot;: &quot;不主动参与中位接力。&quot;, &quot;note&quot;: &quot;中位风险锚。&quot;, &quot;theme&quot;: &quot;机器人 / 汽车&quot;, &quot;themeRhythm&quot;: &quot;当日：孤立中位接力，题材弱、后排助攻不足；次日：看分歧能否补出中低位梯队。&quot;, &quot;volumeRhythm&quot;: &quot;原文观察：4板量能不足，已有一个全放量及一个半放量；次日：必须充分放量回封，警惕无量加速。&quot;}]</script>
+<script data-plan-defaults="" type="application/json">[{&quot;type&quot;: &quot;计划内票&quot;, &quot;stock&quot;: &quot;时代万恒&quot;, &quot;theme&quot;: &quot;锂电池 / 固态电池&quot;, &quot;themeRhythm&quot;: &quot;当日：首日启动爆发；次日：第一次分化，验证前排转强与后排助攻。&quot;, &quot;volumeRhythm&quot;: &quot;原文观察：二板及前一板均为半放量；次日：缩量转强或再换手回封，拒绝无承接炸板。&quot;, &quot;position&quot;: [&quot;龙头预备&quot;, &quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;龙头核心做T或格局&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;缩量转强或健康分歧回封，后排至少出现一字或强二板助攻。&quot;, &quot;exit&quot;: &quot;核心与板块同步回落、炸板无承接或中位负反馈重新扩大。&quot;, &quot;maxLoss&quot;: &quot;盘前补齐精确账户损失；未补齐不执行。&quot;, &quot;note&quot;: &quot;最多一成仓，唯一交易候选。&quot;, &quot;stockCode&quot;: &quot;600241&quot;, &quot;rhythmGroups&quot;: [&quot;锂电池&quot;], &quot;rhythmEvidence&quot;: {&quot;date&quot;: &quot;2026-09-29&quot;, &quot;stock&quot;: &quot;时代万恒&quot;, &quot;code&quot;: &quot;600241&quot;, &quot;theme&quot;: &quot;锂电池 / 固态电池&quot;, &quot;themeGroups&quot;: [&quot;锂电池&quot;], &quot;unit&quot;: &quot;手&quot;, &quot;themeSource&quot;: &quot;https://travelstocks.github.io/daily-trading-workbench/data/market-context.json&quot;, &quot;volumeSource&quot;: &quot;https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600241%2Cday%2C2026-09-09%2C2026-09-29%2C20%2C&quot;, &quot;volumeStatus&quot;: &quot;verified&quot;, &quot;days&quot;: [{&quot;date&quot;: &quot;2026-09-23&quot;, &quot;limitUpCount&quot;: null, &quot;volume&quot;: 23843.0}, {&quot;date&quot;: &quot;2026-09-24&quot;, &quot;limitUpCount&quot;: null, &quot;volume&quot;: 18488.0}, {&quot;date&quot;: &quot;2026-09-28&quot;, &quot;limitUpCount&quot;: null, &quot;volume&quot;: 183136.0}, {&quot;date&quot;: &quot;2026-09-29&quot;, &quot;limitUpCount&quot;: 12, &quot;volume&quot;: 171579.0}]}}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;新华传媒&quot;, &quot;theme&quot;: &quot;传媒 / AI应用&quot;, &quot;themeRhythm&quot;: &quot;当日：高度抱团与板块回流，后排扩散待验；次日：验证6进7能否带动板块。&quot;, &quot;volumeRhythm&quot;: &quot;当日：连续一字，首次充分换手分歧待验；次日：看放量回封与后排跟随，不追无量一字。&quot;, &quot;position&quot;: [&quot;龙头预备&quot;, &quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;只观察6进7与首次充分换手回封，不追连续一字。&quot;, &quot;exit&quot;: &quot;封单持续衰减、开板直线跳水或传媒后排不跟。&quot;, &quot;maxLoss&quot;: &quot;0仓观察，不隔夜顶单。&quot;, &quot;note&quot;: &quot;空间突破龙。&quot;, &quot;stockCode&quot;: &quot;600825&quot;, &quot;rhythmGroups&quot;: [&quot;AI应用/传媒&quot;, &quot;AI应用&quot;, &quot;传媒&quot;], &quot;rhythmEvidence&quot;: {&quot;date&quot;: &quot;2026-09-29&quot;, &quot;stock&quot;: &quot;新华传媒&quot;, &quot;code&quot;: &quot;600825&quot;, &quot;theme&quot;: &quot;传媒 / AI应用&quot;, &quot;themeGroups&quot;: [&quot;AI应用/传媒&quot;, &quot;AI应用&quot;, &quot;传媒&quot;], &quot;unit&quot;: &quot;手&quot;, &quot;themeSource&quot;: &quot;https://travelstocks.github.io/daily-trading-workbench/data/market-context.json&quot;, &quot;volumeSource&quot;: &quot;https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh600825%2Cday%2C2026-09-09%2C2026-09-29%2C20%2C&quot;, &quot;volumeStatus&quot;: &quot;verified&quot;, &quot;days&quot;: [{&quot;date&quot;: &quot;2026-09-23&quot;, &quot;limitUpCount&quot;: 2, &quot;volume&quot;: 45798.0}, {&quot;date&quot;: &quot;2026-09-24&quot;, &quot;limitUpCount&quot;: 3, &quot;volume&quot;: 59852.0}, {&quot;date&quot;: &quot;2026-09-28&quot;, &quot;limitUpCount&quot;: 3, &quot;volume&quot;: 50275.0}, {&quot;date&quot;: &quot;2026-09-29&quot;, &quot;limitUpCount&quot;: 9, &quot;volume&quot;: 156515.0}]}}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;国轩高科&quot;, &quot;theme&quot;: &quot;锂电池 / 固态电池&quot;, &quot;themeRhythm&quot;: &quot;当日：电池首日爆发的容量助攻；次日：验证分化承接与一进二扩散。&quot;, &quot;volumeRhythm&quot;: &quot;当日：首板承接待验，完整量能序列待核；次日：看主动上板、承接与容量助攻。&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;冲高兑现套利&quot;, &quot;走弱止损&quot;], &quot;entry&quot;: &quot;竞价强并主动上板，形成电池后排助攻。&quot;, &quot;exit&quot;: &quot;冲高回落、板块无扩散或时代万恒失效。&quot;, &quot;maxLoss&quot;: &quot;只作板块确认，不单独交易。&quot;, &quot;note&quot;: &quot;电池容量助攻锚。&quot;, &quot;stockCode&quot;: &quot;002074&quot;, &quot;rhythmGroups&quot;: [&quot;锂电池&quot;], &quot;rhythmEvidence&quot;: {&quot;date&quot;: &quot;2026-09-29&quot;, &quot;stock&quot;: &quot;国轩高科&quot;, &quot;code&quot;: &quot;002074&quot;, &quot;theme&quot;: &quot;锂电池 / 固态电池&quot;, &quot;themeGroups&quot;: [&quot;锂电池&quot;], &quot;unit&quot;: &quot;手&quot;, &quot;themeSource&quot;: &quot;https://travelstocks.github.io/daily-trading-workbench/data/market-context.json&quot;, &quot;volumeSource&quot;: &quot;https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sz002074%2Cday%2C2026-09-09%2C2026-09-29%2C20%2C&quot;, &quot;volumeStatus&quot;: &quot;verified&quot;, &quot;days&quot;: [{&quot;date&quot;: &quot;2026-09-23&quot;, &quot;limitUpCount&quot;: null, &quot;volume&quot;: 320029.0}, {&quot;date&quot;: &quot;2026-09-24&quot;, &quot;limitUpCount&quot;: null, &quot;volume&quot;: 192487.0}, {&quot;date&quot;: &quot;2026-09-28&quot;, &quot;limitUpCount&quot;: null, &quot;volume&quot;: 219627.0}, {&quot;date&quot;: &quot;2026-09-29&quot;, &quot;limitUpCount&quot;: 12, &quot;volume&quot;: 461440.0}]}}, {&quot;type&quot;: &quot;观察票&quot;, &quot;stock&quot;: &quot;雪龙集团&quot;, &quot;theme&quot;: &quot;机器人 / 汽车&quot;, &quot;themeRhythm&quot;: &quot;当日：孤立中位接力，题材弱、后排助攻不足；次日：看分歧能否补出中低位梯队。&quot;, &quot;volumeRhythm&quot;: &quot;原文观察：4板量能不足，已有一个全放量及一个半放量；次日：必须充分放量回封，警惕无量加速。&quot;, &quot;position&quot;: [&quot;观察试错&quot;], &quot;nextStrategy&quot;: [&quot;走弱止损&quot;], &quot;entry&quot;: &quot;充分放量回封且机器人中低位同步补强。&quot;, &quot;exit&quot;: &quot;无量加速、炸板无承接或后排不跟。&quot;, &quot;maxLoss&quot;: &quot;不主动参与中位接力。&quot;, &quot;note&quot;: &quot;中位风险锚。&quot;, &quot;stockCode&quot;: &quot;603949&quot;, &quot;rhythmGroups&quot;: [&quot;汽车产业链/机器人&quot;, &quot;汽车产业链&quot;, &quot;机器人&quot;], &quot;rhythmEvidence&quot;: {&quot;date&quot;: &quot;2026-09-29&quot;, &quot;stock&quot;: &quot;雪龙集团&quot;, &quot;code&quot;: &quot;603949&quot;, &quot;theme&quot;: &quot;机器人 / 汽车&quot;, &quot;themeGroups&quot;: [&quot;汽车产业链/机器人&quot;, &quot;汽车产业链&quot;, &quot;机器人&quot;], &quot;unit&quot;: &quot;手&quot;, &quot;themeSource&quot;: &quot;https://travelstocks.github.io/daily-trading-workbench/data/market-context.json&quot;, &quot;volumeSource&quot;: &quot;https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=sh603949%2Cday%2C2026-09-09%2C2026-09-29%2C20%2C&quot;, &quot;volumeStatus&quot;: &quot;verified&quot;, &quot;days&quot;: [{&quot;date&quot;: &quot;2026-09-23&quot;, &quot;limitUpCount&quot;: 3, &quot;volume&quot;: 38881.0}, {&quot;date&quot;: &quot;2026-09-24&quot;, &quot;limitUpCount&quot;: 8, &quot;volume&quot;: 44651.0}, {&quot;date&quot;: &quot;2026-09-28&quot;, &quot;limitUpCount&quot;: 8, &quot;volume&quot;: 163866.0}, {&quot;date&quot;: &quot;2026-09-29&quot;, &quot;limitUpCount&quot;: 4, &quot;volume&quot;: 35209.0}]}}]</script>
 <script data-holding-defaults="" type="application/json">[]</script>
 </section>
 <p class="source-note">Source Word: 用户提供的 2026-09-29 A股超短全景复盘全量文档</p>
@@ -808,8 +835,48 @@
   const planStatusCell = (row,index) => multiCell(row,index,'position').replace('<div class="multi-select-control">','<span class="plan-field-label">地位 / 预期定位</span><div class="multi-select-control">').slice(0,-5) + planField(row,index,'唯一性','uniqueness') + '</td>';
   const planStrategyCell = (row,index) => multiCell(row,index,'nextStrategy').slice(0,-5) + planField(row,index,'备注','note') + '</td>';
   // PLAN_ORDER_END
+  // PLAN_RHYTHM_START
+  const rhythmDefaults = planDefaults;
+  const rhythmDate = storageKey.match(/\d{4}-\d{2}-\d{2}/)?.[0];
+  const rhythmNumber = value => typeof value === 'number' && Number.isFinite(value) && value >= 0;
+  const rhythmAmount = value => value >= 10000 ? (value / 10000).toFixed(2) + '万手' : value.toLocaleString('zh-CN') + '手';
+  const rhythmLink = (url,label) => typeof url === 'string' && url.startsWith('https://') ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)}</a>` : esc(label + '待核');
+  const planRhythmEvidence = row => {
+    const fact = rhythmDefaults.find(item => cleanText(item.stock) === cleanText(row.stock) && cleanText(item.theme) === cleanText(row.theme))?.rhythmEvidence;
+    return fact && rhythmDate && fact.date === rhythmDate && fact.stock === row.stock && fact.theme === row.theme && fact.unit === '手' ? fact : null;
+  };
+  const planRhythmCsv = row => {
+    const days = planRhythmEvidence(row)?.days || [];
+    return ['limitUpCount','volume'].map(field => days.map(day => `${day.date}: ${rhythmNumber(day[field]) ? day[field] : '待核'}`).join(' / '));
+  };
+  const planRhythmFacts = row => {
+    const fact = planRhythmEvidence(row);
+    const identity = `<strong>${esc(row.theme || '题材待填')}</strong><span aria-hidden="true"> ↔ </span><strong>${esc(row.stock || '个股待填')}</strong>`;
+    if(!fact) return `<div class="plan-rhythm-heading">${identity}</div><p class="plan-rhythm-gap">涨停数 / 成交量待核</p>`;
+    const days = (fact.days || []).filter(day => /^\d{4}-\d{2}-\d{2}$/.test(day.date) && day.date <= fact.date).slice(-4);
+    if(!days.length) return `<div class="plan-rhythm-heading">${identity}</div><p class="plan-rhythm-gap">涨停数 / 成交量待核</p>`;
+    const maximum = Math.max(0,...days.map(day => rhythmNumber(day.volume) ? day.volume : 0));
+    const grid = `style="--rhythm-days:${days.length}"`;
+    const dates = `<div class="plan-rhythm-grid plan-rhythm-dates" ${grid}><span>日期</span>${days.map(day => `<time datetime="${esc(day.date)}">${esc(day.date.slice(5).replace('-','/'))}</time>`).join('')}</div>`;
+    const counts = `<div class="plan-rhythm-grid plan-rhythm-counts" ${grid}><strong>题材涨停数</strong>${days.map(day => `<span title="${esc((fact.themeGroups || []).join(' / '))}">${rhythmNumber(day.limitUpCount) && Number.isInteger(day.limitUpCount) ? `<b>${day.limitUpCount}</b><small>家</small>` : '<span class="plan-rhythm-missing">未单列 / 待核</span>'}</span>`).join('')}</div>`;
+    const bars = `<div class="plan-rhythm-grid plan-rhythm-volumes" ${grid}><strong>个股成交量<small>单位：手</small></strong>${days.map(day => {
+      if(!rhythmNumber(day.volume)) return '<div class="plan-volume-column"><span class="plan-rhythm-missing">待核</span><div class="plan-volume-track"></div></div>';
+      const height = maximum ? day.volume / maximum * 100 : 0;
+      const description = `${day.date} 成交量 ${day.volume.toLocaleString('zh-CN')}手`;
+      return `<div class="plan-volume-column${day.date === fact.date ? ' is-current' : ''}" tabindex="0" aria-label="${esc(description)}" title="${esc(description)}"><span class="plan-volume-value">${rhythmAmount(day.volume)}</span><div class="plan-volume-track"><div class="plan-volume-bar" style="height:${height}%"></div></div></div>`;
+    }).join('')}</div>`;
+    return `<div class="plan-rhythm-heading">${identity}<span class="plan-rhythm-sources">${rhythmLink(fact.themeSource,'题材来源')} · ${rhythmLink(fact.volumeSource,'量能来源')}</span></div>${dates}${counts}${bars}`;
+  };
+  const planRhythmRow = (row,index) => `<tr class="plan-rhythm-row"><td colspan="10"><div class="plan-rhythm-pair"><div data-plan-rhythm-facts="${index}">${planRhythmFacts(row)}</div><div class="plan-rhythm-notes"><div>${planField(row,index,'题材节奏 / 次日验证','themeRhythm')}</div><div>${planField(row,index,'个股量能 / 次日验证','volumeRhythm')}</div></div></div></td></tr>`;
+  const refreshPlanRhythm = cell => {
+    if(!['stock','theme'].includes(cell.dataset.field)) return;
+    const index = Number(cell.dataset.index);
+    const panel = body.querySelector?.(`[data-plan-rhythm-facts="${index}"]`);
+    if(panel && rows[index]) panel.innerHTML = planRhythmFacts(rows[index]);
+  };
+  // PLAN_RHYTHM_END
   const render = () => {
-    body.innerHTML = rows.map((row, index) => `<tr>${groupCell(row,index,'题材','theme','题材节奏','themeRhythm')}${planCell(row,index,'阶段','stage')}<td>${planField(row,index,'个股','stock')}${planField(row,index,'龙头量能节奏','volumeRhythm')}${planField(row,index,'类型','type')}</td>${planStatusCell(row,index)}<td>${planModeSelector(row,index)}</td><td>${planWeatherSelector(row,index)}${planField(row,index,'仓位预算','budget')}${planField(row,index,'最大亏损','maxLoss')}</td>${groupCell(row,index,'择日','entryDay','分时 / 触发','entry')}<td>${planField(row,index,'择日','exitDay')}${planField(row,index,'分时 / 离场条件','exit')}${planField(row,index,'失效动作','failureAction')}</td>${planStrategyCell(row,index)}<td><div class="plan-row-actions"><button type="button" class="plan-row-save" data-index="${index}" data-save-row>保存</button><button type="button" class="plan-row-delete" data-index="${index}" data-delete-row>删除</button></div></td></tr>`).join('');
+    body.innerHTML = rows.map((row, index) => `<tr>${planCell(row,index,'题材','theme')}${planCell(row,index,'阶段','stage')}<td>${planField(row,index,'个股','stock')}${planField(row,index,'类型','type')}</td>${planStatusCell(row,index)}<td>${planModeSelector(row,index)}</td><td>${planWeatherSelector(row,index)}${planField(row,index,'仓位预算','budget')}${planField(row,index,'最大亏损','maxLoss')}</td>${groupCell(row,index,'择日','entryDay','分时 / 触发','entry')}<td>${planField(row,index,'择日','exitDay')}${planField(row,index,'分时 / 离场条件','exit')}${planField(row,index,'失效动作','failureAction')}</td>${planStrategyCell(row,index)}<td><div class="plan-row-actions"><button type="button" class="plan-row-save" data-index="${index}" data-save-row>保存</button><button type="button" class="plan-row-delete" data-index="${index}" data-delete-row>删除</button></div></td></tr>${planRhythmRow(row,index)}`).join('');
   };
   root.addEventListener('input', event => {
     const cell = event.target.closest('[contenteditable][data-field]');
@@ -817,6 +884,7 @@
     const index = Number(cell.dataset.index);
     rows[index][cell.dataset.field] = cell.textContent.trim();
     save();
+    refreshPlanRhythm(cell);
   });
   root.addEventListener('click', event => {
     const add = event.target.closest('[data-add-row]');
@@ -848,7 +916,7 @@
       render(); save(); return;
     }
     const exportButton = event.target.closest('[data-export-plan]');
-    if (exportButton) exportCsv(['题材','题材节奏','阶段','个股','龙头量能节奏','地位','唯一性','模式','天时（强/弱）','仓位预算','最大亏损','买点（择日）','买点（分时/触发）','卖点（择日）','卖点（分时/离场）','失效动作','类型','隔日操作策略','备注'], rows.map(r => [r.theme,r.themeRhythm,r.stage,r.stock,r.volumeRhythm,normalizeSelection(r.position).join('、'),r.uniqueness,r.mode,r.weather,r.budget,r.maxLoss,r.entryDay,r.entry,r.exitDay,r.exit,r.failureAction,r.type,normalizeSelection(r.nextStrategy).join('、'),r.note]), '2026-09-29-今日操作计划.csv');
+    if (exportButton) exportCsv(['题材','题材节奏','阶段','个股','龙头量能节奏','地位','唯一性','模式','天时（强/弱）','仓位预算','最大亏损','买点（择日）','买点（分时/触发）','卖点（择日）','卖点（分时/离场）','失效动作','类型','隔日操作策略','备注','题材涨停数（逐日）','成交量（逐日/手）'], rows.map(r => [r.theme,r.themeRhythm,r.stage,r.stock,r.volumeRhythm,normalizeSelection(r.position).join('、'),r.uniqueness,r.mode,r.weather,r.budget,r.maxLoss,r.entryDay,r.entry,r.exitDay,r.exit,r.failureAction,r.type,normalizeSelection(r.nextStrategy).join('、'),r.note,...planRhythmCsv(r)]), '2026-09-29-今日操作计划.csv');
   });
   function exportCsv(header, rows, name) {
     const csv = [header, ...rows].map(line => line.map(v => `"${String(v || '').replaceAll('"','""')}"`).join(',')).join('\n');
