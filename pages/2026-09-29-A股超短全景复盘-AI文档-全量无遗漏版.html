@@ -50,6 +50,19 @@
 .plan-field-value[contenteditable]:focus{background:#fff7e8;box-shadow:inset 0 -2px #b98632}
 .plan-mode-select{display:block;width:100%;max-width:100%;min-width:0;margin-top:4px;padding:5px 3px;border:1px solid #c8d8d2;border-radius:4px;background:#fff;color:#174f47;font:inherit;font-size:12px;line-height:1.5;text-overflow:ellipsis}
 .plan-mode-select:focus-visible{outline:2px solid #087467;outline-offset:2px}
+[data-operation-plan] .plan-table-wrap{max-width:100%;overflow-x:auto;border-radius:6px}
+[data-operation-plan] .plan-table{min-width:1500px;table-layout:fixed}
+[data-operation-plan] .plan-table th,[data-operation-plan] .plan-table td{width:auto;text-align:left}
+[data-operation-plan] .plan-table th:nth-child(1),[data-operation-plan] .plan-table td:nth-child(1){width:7%}
+[data-operation-plan] .plan-table th:nth-child(2),[data-operation-plan] .plan-table td:nth-child(2){width:7%}
+[data-operation-plan] .plan-table th:nth-child(3),[data-operation-plan] .plan-table td:nth-child(3){width:8%}
+[data-operation-plan] .plan-table th:nth-child(4),[data-operation-plan] .plan-table td:nth-child(4){width:12%}
+[data-operation-plan] .plan-table th:nth-child(5),[data-operation-plan] .plan-table td:nth-child(5){width:14%}
+[data-operation-plan] .plan-table th:nth-child(6),[data-operation-plan] .plan-table td:nth-child(6){width:10%}
+[data-operation-plan] .plan-table th:nth-child(7),[data-operation-plan] .plan-table td:nth-child(7){width:12%}
+[data-operation-plan] .plan-table th:nth-child(8),[data-operation-plan] .plan-table td:nth-child(8){width:12%}
+[data-operation-plan] .plan-table th:nth-child(9),[data-operation-plan] .plan-table td:nth-child(9){width:12%}
+[data-operation-plan] .plan-table th:nth-child(10),[data-operation-plan] .plan-table td:nth-child(10){width:6%}
 @media(max-width:680px){.framework-points,.framework-budgets{grid-template-columns:1fr;gap:0}.framework-chain{font-size:12px}.trading-framework{margin:14px 0}}
 </style></head>
 <body class="review-workbench" id="page-top"><div class="reading-progress" data-reading-progress=""></div><div class="mobile-toc-scrim" data-toc-scrim=""></div><div aria-label="页面工具" class="workbench-tools"><button data-toc-toggle="" type="button">目录</button><button data-back-top="" type="button">顶部</button></div>
@@ -625,7 +638,7 @@
 <span class="plan-save-status" data-save-status="">本地已保存</span>
 </div>
 <div class="plan-table-wrap"><table class="plan-table">
-<thead><tr><th>类型 / 阶段</th><th>标的 / 唯一性</th><th>预期定位 / 模式</th><th>隔日策略</th><th>买点 / 触发</th><th>卖点 / 失效动作</th><th>预算 / 最大亏损</th><th>备注</th><th>操作</th></tr></thead>
+<thead><tr><th scope="col">题材</th><th scope="col">阶段</th><th scope="col">个股</th><th scope="col">地位</th><th scope="col">模式</th><th scope="col">仓位（强天时还是弱天时）</th><th scope="col">买点（择日和分时）</th><th scope="col">卖点（择日和分时）</th><th scope="col">策略 / 备注</th><th scope="col">操作</th></tr></thead>
 <tbody data-plan-body=""></tbody>
 </table></div>
 </section>
@@ -715,7 +728,7 @@
   };
   const cleanText = (value, fallback = '') => isCorruptedPlaceholder(value) ? String(fallback ?? '') : String(value ?? '');
   const PLAN_FRAMEWORK_V1 = true;
-  const planExtraFields = (row, fallback) => ({stage:cleanText(row?.stage ?? (fallback.stock && fallback.stock === row?.stock ? fallback.stage : '')), mode:cleanText(row?.mode ?? (fallback.stock && fallback.stock === row?.stock ? fallback.mode : '')), uniqueness:cleanText(row?.uniqueness ?? (fallback.stock && fallback.stock === row?.stock ? fallback.uniqueness : '')), budget:cleanText(row?.budget ?? (fallback.stock && fallback.stock === row?.stock ? fallback.budget : '')), failureAction:cleanText(row?.failureAction ?? (fallback.stock && fallback.stock === row?.stock ? fallback.failureAction : ''))});
+  const planExtraFields = (row, fallback) => ({theme:cleanText(row?.theme ?? (fallback.stock && fallback.stock === row?.stock ? fallback.theme : '')), stage:cleanText(row?.stage ?? (fallback.stock && fallback.stock === row?.stock ? fallback.stage : '')), mode:cleanText(row?.mode ?? (fallback.stock && fallback.stock === row?.stock ? fallback.mode : '')), uniqueness:cleanText(row?.uniqueness ?? (fallback.stock && fallback.stock === row?.stock ? fallback.uniqueness : '')), weather:cleanText(row?.weather ?? (fallback.stock && fallback.stock === row?.stock ? fallback.weather : '')), budget:cleanText(row?.budget ?? (fallback.stock && fallback.stock === row?.stock ? fallback.budget : '')), entryDay:cleanText(row?.entryDay ?? (fallback.stock && fallback.stock === row?.stock ? fallback.entryDay : '')), exitDay:cleanText(row?.exitDay ?? (fallback.stock && fallback.stock === row?.stock ? fallback.exitDay : '')), failureAction:cleanText(row?.failureAction ?? (fallback.stock && fallback.stock === row?.stock ? fallback.failureAction : ''))});
   const cleanSelection = (value, fallback = []) => {
     const raw = normalizeSelection(value);
     const hadCorruption = raw.some(item => isCorruptedPlaceholder(item));
@@ -769,11 +782,11 @@
   };
   const modeCell = (markup, row, index) => markup.slice(0,-5) + planModeSelector(row,index) + '</td>';
   root.addEventListener('change', event => {
-    const selector = event.target.closest('[data-plan-mode]');
+    const selector = event.target.closest('[data-plan-mode], [data-plan-weather]');
     if(!selector) return;
     const index = Number(selector.dataset.index);
     if(!Number.isInteger(index) || index < 0 || index >= rows.length) return;
-    rows[index].mode = selector.value;
+    rows[index][selector.dataset.planField || 'mode'] = selector.value;
     selector.title = selector.value || '选择交易模式';
     save();
   });
@@ -785,8 +798,18 @@
     const chips = unique([...(options[field]||[]), ...selected]).map(option => `<button type="button" class="multi-chip${selected.includes(option) ? ' is-selected' : ''}" data-index="${index}" data-field="${field}" data-option="${esc(option)}">${esc(option)}</button>`).join('');
     return `<td class="multi-select-cell" data-multi-cell data-index="${index}" data-field="${field}"><div class="multi-select-control">${chips}</div><div class="multi-add"><input data-option-input placeholder="自定义"><button type="button" data-add-option>添加</button></div></td>`;
   };
+  // PLAN_ORDER_START
+  const planCell = (row,index,label,field) => `<td>${planField(row,index,label,field)}</td>`;
+  const planWeatherSelector = (row,index) => {
+    const current = cleanText(row.weather);
+    const choices = ['强天时','弱天时', ...(current && !['强天时','弱天时'].includes(current) ? [current] : [])];
+    return `<label class="plan-field-label" for="plan-weather-${index}">天时</label><select class="plan-mode-select" id="plan-weather-${index}" data-plan-weather data-plan-field="weather" data-index="${index}" aria-label="天时"><option value=""${!current ? ' selected' : ''}>待选</option>${choices.map(value => `<option value="${esc(value)}"${value === current ? ' selected' : ''}>${esc(value)}</option>`).join('')}</select>`;
+  };
+  const planStatusCell = (row,index) => multiCell(row,index,'position').replace('<div class="multi-select-control">','<span class="plan-field-label">地位 / 预期定位</span><div class="multi-select-control">').slice(0,-5) + planField(row,index,'唯一性','uniqueness') + '</td>';
+  const planStrategyCell = (row,index) => multiCell(row,index,'nextStrategy').slice(0,-5) + planField(row,index,'备注','note') + '</td>';
+  // PLAN_ORDER_END
   const render = () => {
-    body.innerHTML = rows.map((row, index) => `<tr>${groupCell(row,index,'类型','type','阶段','stage')}${groupCell(row,index,'标的','stock','唯一性','uniqueness')}${modeCell(multiCell(row,index,'position'),row,index)}${multiCell(row,index,'nextStrategy')}${textCell(row,index,'entry')}${groupCell(row,index,'离场条件','exit','失效动作','failureAction')}${groupCell(row,index,'预算（仓位）','budget','最大亏损','maxLoss')}${textCell(row,index,'note')}<td><div class="plan-row-actions"><button type="button" class="plan-row-save" data-index="${index}" data-save-row>保存</button><button type="button" class="plan-row-delete" data-index="${index}" data-delete-row>删除</button></div></td></tr>`).join('');
+    body.innerHTML = rows.map((row, index) => `<tr>${planCell(row,index,'题材','theme')}${planCell(row,index,'阶段','stage')}${groupCell(row,index,'个股','stock','类型','type')}${planStatusCell(row,index)}<td>${planModeSelector(row,index)}</td><td>${planWeatherSelector(row,index)}${planField(row,index,'仓位预算','budget')}${planField(row,index,'最大亏损','maxLoss')}</td>${groupCell(row,index,'择日','entryDay','分时 / 触发','entry')}<td>${planField(row,index,'择日','exitDay')}${planField(row,index,'分时 / 离场条件','exit')}${planField(row,index,'失效动作','failureAction')}</td>${planStrategyCell(row,index)}<td><div class="plan-row-actions"><button type="button" class="plan-row-save" data-index="${index}" data-save-row>保存</button><button type="button" class="plan-row-delete" data-index="${index}" data-delete-row>删除</button></div></td></tr>`).join('');
   };
   root.addEventListener('input', event => {
     const cell = event.target.closest('[contenteditable][data-field]');
@@ -825,7 +848,7 @@
       render(); save(); return;
     }
     const exportButton = event.target.closest('[data-export-plan]');
-    if (exportButton) exportCsv(['类型','阶段','标的','唯一性','模式','个股预期定位','隔日操作策略','买点触发','卖点条件','失效动作','预算（仓位）','最大亏损','备注'], rows.map(r => [r.type,r.stage,r.stock,r.uniqueness,r.mode,normalizeSelection(r.position).join('、'),normalizeSelection(r.nextStrategy).join('、'),r.entry,r.exit,r.failureAction,r.budget,r.maxLoss,r.note]), '2026-09-29-今日操作计划.csv');
+    if (exportButton) exportCsv(['题材','阶段','个股','地位','唯一性','模式','天时（强/弱）','仓位预算','最大亏损','买点（择日）','买点（分时/触发）','卖点（择日）','卖点（分时/离场）','失效动作','类型','隔日操作策略','备注'], rows.map(r => [r.theme,r.stage,r.stock,normalizeSelection(r.position).join('、'),r.uniqueness,r.mode,r.weather,r.budget,r.maxLoss,r.entryDay,r.entry,r.exitDay,r.exit,r.failureAction,r.type,normalizeSelection(r.nextStrategy).join('、'),r.note]), '2026-09-29-今日操作计划.csv');
   });
   function exportCsv(header, rows, name) {
     const csv = [header, ...rows].map(line => line.map(v => `"${String(v || '').replaceAll('"','""')}"`).join(',')).join('\n');
