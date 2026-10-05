@@ -842,8 +842,8 @@
   const rhythmAmount = value => value >= 10000 ? (value / 10000).toFixed(2) + '万手' : value.toLocaleString('zh-CN') + '手';
   const rhythmLink = (url,label) => typeof url === 'string' && url.startsWith('https://') ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)}</a>` : esc(label + '待核');
   const planRhythmEvidence = row => {
-    const fact = rhythmDefaults.find(item => cleanText(item.stock) === cleanText(row.stock) && cleanText(item.theme) === cleanText(row.theme))?.rhythmEvidence;
-    return fact && rhythmDate && fact.date === rhythmDate && fact.stock === row.stock && fact.theme === row.theme && fact.unit === '手' ? fact : null;
+    const fact = rhythmDefaults.find(item => cleanText(item.stock) === cleanText(row.stock) && (!cleanText(row.theme) || cleanText(item.theme) === cleanText(row.theme)))?.rhythmEvidence;
+    return fact && rhythmDate && fact.date === rhythmDate && fact.stock === row.stock && (!cleanText(row.theme) || fact.theme === row.theme) && fact.unit === '手' ? fact : null;
   };
   const planRhythmCsv = row => {
     const days = planRhythmEvidence(row)?.days || [];
@@ -851,7 +851,7 @@
   };
   const planRhythmFacts = row => {
     const fact = planRhythmEvidence(row);
-    const identity = `<strong>${esc(row.theme || '题材待填')}</strong><span aria-hidden="true"> ↔ </span><strong>${esc(row.stock || '个股待填')}</strong>`;
+    const identity = `<strong>${esc(row.theme || (fact ? '数据题材：' + fact.theme : '题材待填'))}</strong><span aria-hidden="true"> ↔ </span><strong>${esc(row.stock || '个股待填')}</strong>`;
     if(!fact) return `<div class="plan-rhythm-heading">${identity}</div><p class="plan-rhythm-gap">涨停数 / 成交量待核</p>`;
     const days = (fact.days || []).filter(day => /^\d{4}-\d{2}-\d{2}$/.test(day.date) && day.date <= fact.date).slice(-4);
     if(!days.length) return `<div class="plan-rhythm-heading">${identity}</div><p class="plan-rhythm-gap">涨停数 / 成交量待核</p>`;
