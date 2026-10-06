@@ -870,7 +870,7 @@
   const planField = (row, index, label, field) => `<span class="plan-field-label">${esc(label)}</span><div class="plan-field-value" contenteditable="true" role="textbox" aria-label="${esc(label)}" data-index="${index}" data-field="${field}">${esc(row[field])}</div>`;
   const groupCell = (row, index, aLabel, aField, bLabel, bField) => `<td>${planField(row,index,aLabel,aField)}${planField(row,index,bLabel,bField)}</td>`;
   // PLAN_MODES_START
-  const PLAN_MODE_OPTIONS = ["主升连板龙-龙头", "低位接力-切换", "机构趋势", "补涨", "连板龙转趋势龙-龙头二波", "龙头反抽以及监管套利", "总龙趋势下补涨连板龙-补涨龙中位3板"];
+  const PLAN_MODE_OPTIONS = ["唯一性中高位连板龙-龙头主升2", "进监管后反核龙头继续连板-龙头主升3", "低位接力-切换", "机构趋势", "补涨", "连板龙转趋势龙-龙头二波", "龙头反抽以及监管套利", "总龙趋势下补涨连板龙-补涨龙中位3板"];
   const planModeSelector = (row, index) => {
     const current = cleanText(row.mode);
     const choices = [...PLAN_MODE_OPTIONS, ...(current && !PLAN_MODE_OPTIONS.includes(current) ? [current] : [])];
