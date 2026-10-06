@@ -50,6 +50,18 @@
 .plan-field-value[contenteditable]:focus{background:#fff7e8;box-shadow:inset 0 -2px #b98632}
 .plan-mode-select{display:block;width:100%;max-width:100%;min-width:0;margin-top:4px;padding:5px 3px;border:1px solid #c8d8d2;border-radius:4px;background:#fff;color:#174f47;font:inherit;font-size:12px;line-height:1.5;text-overflow:ellipsis}
 .plan-mode-select:focus-visible{outline:2px solid #087467;outline-offset:2px}
+.plan-role-group{min-width:0;margin:0 0 12px;padding:0;border:0}
+.plan-role-group legend{margin:0 0 5px;padding:0;color:#496962;font-size:11px;font-weight:700}
+.plan-role-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
+.plan-role-choice{display:flex;align-items:center;gap:5px;min-width:0;min-height:28px;padding:3px 4px;border-radius:3px;background:#f4f7f6;color:#234b45;cursor:pointer}
+.plan-role-choice input{flex:0 0 13px;width:13px;height:13px;margin:0;accent-color:#087467}
+.plan-role-choice span{font-size:11px;line-height:1.4;overflow-wrap:anywhere}
+.plan-role-choice:has(input:checked){background:#e3f2ec;color:#075f50;font-weight:700}
+.plan-role-choice:has(input:focus-visible){outline:2px solid #087467;outline-offset:1px}
+.plan-role-extra{margin:0 0 8px;border-top:1px solid #dde5e1;padding-top:6px}
+.plan-role-extra summary{color:#78877f;font-size:10px;cursor:pointer}
+.plan-role-extra .plan-role-options{margin-top:6px}
+@media(pointer:coarse){.plan-role-choice{min-height:44px}}
 [data-operation-plan] .plan-table-wrap{max-width:100%;overflow-x:auto;border-radius:6px}
 [data-operation-plan] .plan-table{min-width:1500px;table-layout:fixed}
 [data-operation-plan] .plan-table th,[data-operation-plan] .plan-table td{width:auto;text-align:left}
@@ -825,7 +837,7 @@
   };
   const cleanText = (value, fallback = '') => isCorruptedPlaceholder(value) ? String(fallback ?? '') : String(value ?? '');
   const PLAN_FRAMEWORK_V1 = true;
-  const planExtraFields = (row, fallback) => ({theme:cleanText(row?.theme ?? (fallback.stock && fallback.stock === row?.stock ? fallback.theme : '')), themeRhythm:cleanText(row?.themeRhythm ?? (fallback.stock && fallback.stock === row?.stock ? fallback.themeRhythm : '')), stage:cleanText(row?.stage ?? (fallback.stock && fallback.stock === row?.stock ? fallback.stage : '')), volumeRhythm:cleanText(row?.volumeRhythm ?? (fallback.stock && fallback.stock === row?.stock ? fallback.volumeRhythm : '')), mode:cleanText(row?.mode ?? (fallback.stock && fallback.stock === row?.stock ? fallback.mode : '')), uniqueness:cleanText(row?.uniqueness ?? (fallback.stock && fallback.stock === row?.stock ? fallback.uniqueness : '')), weather:cleanText(row?.weather ?? (fallback.stock && fallback.stock === row?.stock ? fallback.weather : '')), budget:cleanText(row?.budget ?? (fallback.stock && fallback.stock === row?.stock ? fallback.budget : '')), entryDay:cleanText(row?.entryDay ?? (fallback.stock && fallback.stock === row?.stock ? fallback.entryDay : '')), exitDay:cleanText(row?.exitDay ?? (fallback.stock && fallback.stock === row?.stock ? fallback.exitDay : '')), failureAction:cleanText(row?.failureAction ?? (fallback.stock && fallback.stock === row?.stock ? fallback.failureAction : ''))});
+  const planExtraFields = (row, fallback) => ({theme:cleanText(row?.theme ?? (fallback.stock && fallback.stock === row?.stock ? fallback.theme : '')), themeRhythm:cleanText(row?.themeRhythm ?? (fallback.stock && fallback.stock === row?.stock ? fallback.themeRhythm : '')), stage:cleanText(row?.stage ?? (fallback.stock && fallback.stock === row?.stock ? fallback.stage : '')), volumeRhythm:cleanText(row?.volumeRhythm ?? (fallback.stock && fallback.stock === row?.stock ? fallback.volumeRhythm : '')), mode:cleanText(row?.mode ?? (fallback.stock && fallback.stock === row?.stock ? fallback.mode : '')), boardPosition:cleanText(row?.boardPosition ?? (fallback.stock && fallback.stock === row?.stock ? fallback.boardPosition : '')), uniqueness:cleanText(row?.uniqueness ?? (fallback.stock && fallback.stock === row?.stock ? fallback.uniqueness : '')), weather:cleanText(row?.weather ?? (fallback.stock && fallback.stock === row?.stock ? fallback.weather : '')), budget:cleanText(row?.budget ?? (fallback.stock && fallback.stock === row?.stock ? fallback.budget : '')), entryDay:cleanText(row?.entryDay ?? (fallback.stock && fallback.stock === row?.stock ? fallback.entryDay : '')), exitDay:cleanText(row?.exitDay ?? (fallback.stock && fallback.stock === row?.stock ? fallback.exitDay : '')), failureAction:cleanText(row?.failureAction ?? (fallback.stock && fallback.stock === row?.stock ? fallback.failureAction : ''))});
   const cleanSelection = (value, fallback = []) => {
     const raw = normalizeSelection(value);
     const hadCorruption = raw.some(item => isCorruptedPlaceholder(item));
@@ -879,10 +891,17 @@
   };
   const modeCell = (markup, row, index) => markup.slice(0,-5) + planModeSelector(row,index) + '</td>';
   root.addEventListener('change', event => {
-    const selector = event.target.closest('[data-plan-mode], [data-plan-weather]');
+    const selector = event.target.closest('[data-plan-mode], [data-plan-weather], [data-plan-role]');
     if(!selector) return;
     const index = Number(selector.dataset.index);
     if(!Number.isInteger(index) || index < 0 || index >= rows.length) return;
+    if(selector.dataset.planRole !== undefined) {
+      const selected = new Set(normalizeSelection(rows[index].position));
+      selector.checked ? selected.add(selector.value) : selected.delete(selector.value);
+      rows[index].position = Array.from(selected);
+      save();
+      return;
+    }
     rows[index][selector.dataset.planField || 'mode'] = selector.value;
     selector.title = selector.value || '选择交易模式';
     save();
@@ -902,7 +921,18 @@
     const choices = ['强天时','弱天时', ...(current && !['强天时','弱天时'].includes(current) ? [current] : [])];
     return `<label class="plan-field-label" for="plan-weather-${index}">天时</label><select class="plan-mode-select" id="plan-weather-${index}" data-plan-weather data-plan-field="weather" data-index="${index}" aria-label="天时"><option value=""${!current ? ' selected' : ''}>待选</option>${choices.map(value => `<option value="${esc(value)}"${value === current ? ' selected' : ''}>${esc(value)}</option>`).join('')}</select>`;
   };
-  const planStatusCell = (row,index) => multiCell(row,index,'position').replace('<div class="multi-select-control">','<span class="plan-field-label">地位 / 预期定位</span><div class="multi-select-control">').slice(0,-5) + planField(row,index,'唯一性','uniqueness') + '</td>';
+  const PLAN_ROLE_GROUPS = [{"title": "龙头类型", "options": ["龙头", "连板龙", "伴生龙", "趋势龙", "补涨龙", "跟风龙"]}, {"title": "梯队角色", "options": ["前排", "中军", "弹性", "情绪", "后排", "跟风", "补涨"]}];
+  const PLAN_ROLE_HINTS = {"中军": "大容量中军是否依然震荡向上？", "情绪": "高位是否有一字板顶住身位龙头以及板块情绪？", "后排": "是否有不断的后排来助攻前排？"};
+  const planStatusCell = (row,index) => {
+    const selected = normalizeSelection(row.position);
+    const known = PLAN_ROLE_GROUPS.flatMap(group => group.options);
+    const oldPositioning = ['接力套利','龙头预备','观察试错'];
+    const extra = unique([...(options.position || []), ...selected]).filter(value => !known.includes(value) && (!oldPositioning.includes(value) || selected.includes(value)));
+    const choice = (value, group) => `<label class="plan-role-choice" title="${esc(PLAN_ROLE_HINTS[value] || value)}"><input type="checkbox" data-plan-role data-index="${index}" value="${esc(value)}"${selected.includes(value) ? ' checked' : ''} aria-label="${esc((row.stock || '第' + (index + 1) + '行') + '的' + group + '：' + value)}"><span>${esc(value)}</span></label>`;
+    const groups = PLAN_ROLE_GROUPS.map(group => `<fieldset class="plan-role-group"><legend>${esc(group.title)}</legend><div class="plan-role-options">${group.options.map(value => choice(value,group.title)).join('')}</div></fieldset>`).join('');
+    const custom = extra.length ? `<details class="plan-role-extra"><summary>自定义 / 历史</summary><div class="plan-role-options">${extra.map(value => choice(value,'历史或自定义地位')).join('')}</div></details>` : '';
+    return `<td class="multi-select-cell plan-status-cell" data-multi-cell data-index="${index}" data-field="position">${groups}${custom}<div class="multi-add"><input type="text" aria-label="自定义地位" data-option-input placeholder="自定义地位"><button type="button" data-add-option>添加</button></div>${planField(row,index,'身位','boardPosition')}${planField(row,index,'唯一性','uniqueness')}</td>`;
+  };
   const planStrategyCell = (row,index) => multiCell(row,index,'nextStrategy').slice(0,-5) + planField(row,index,'备注','note') + '</td>';
   // PLAN_ORDER_END
   // PLAN_RHYTHM_START
@@ -986,7 +1016,7 @@
       render(); save(); return;
     }
     const exportButton = event.target.closest('[data-export-plan]');
-    if (exportButton) exportCsv(['题材','题材节奏','阶段','个股','龙头量能节奏','地位','唯一性','模式','天时（强/弱）','仓位预算','最大亏损','买点（择日）','买点（分时/触发）','卖点（择日）','卖点（分时/离场）','失效动作','类型','隔日操作策略','备注','题材涨停数（逐日）','成交量（逐日/手）'], rows.map(r => [r.theme,r.themeRhythm,r.stage,r.stock,r.volumeRhythm,normalizeSelection(r.position).join('、'),r.uniqueness,r.mode,r.weather,r.budget,r.maxLoss,r.entryDay,r.entry,r.exitDay,r.exit,r.failureAction,r.type,normalizeSelection(r.nextStrategy).join('、'),r.note,...planRhythmCsv(r)]), '2026-09-29-今日操作计划.csv');
+    if (exportButton) exportCsv(['题材','题材节奏','阶段','个股','龙头量能节奏','地位','身位','唯一性','模式','天时（强/弱）','仓位预算','最大亏损','买点（择日）','买点（分时/触发）','卖点（择日）','卖点（分时/离场）','失效动作','类型','隔日操作策略','备注','题材涨停数（逐日）','成交量（逐日/手）'], rows.map(r => [r.theme,r.themeRhythm,r.stage,r.stock,r.volumeRhythm,normalizeSelection(r.position).join('、'),r.boardPosition,r.uniqueness,r.mode,r.weather,r.budget,r.maxLoss,r.entryDay,r.entry,r.exitDay,r.exit,r.failureAction,r.type,normalizeSelection(r.nextStrategy).join('、'),r.note,...planRhythmCsv(r)]), '2026-09-29-今日操作计划.csv');
   });
   function exportCsv(header, rows, name) {
     const csv = [header, ...rows].map(line => line.map(v => `"${String(v || '').replaceAll('"','""')}"`).join(',')).join('\n');
