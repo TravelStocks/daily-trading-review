@@ -66,7 +66,7 @@
 [data-operation-plan] .plan-table{min-width:1500px;table-layout:fixed}
 [data-operation-plan] .plan-table th,[data-operation-plan] .plan-table td{width:auto;text-align:left}
 [data-operation-plan] .plan-table th:nth-child(1),[data-operation-plan] .plan-table td:nth-child(1){width:11%}
-[data-operation-plan] .plan-table th:nth-child(2),[data-operation-plan] .plan-table td:nth-child(2){width:6%}
+[data-operation-plan] .plan-table th:nth-child(2),[data-operation-plan] .plan-table td:nth-child(2){width:100px;min-width:100px}
 [data-operation-plan] .plan-table th:nth-child(3),[data-operation-plan] .plan-table td:nth-child(3){width:12%}
 [data-operation-plan] .plan-table th:nth-child(4),[data-operation-plan] .plan-table td:nth-child(4){width:150px;min-width:150px}
 [data-operation-plan] .plan-table th:nth-child(5),[data-operation-plan] .plan-table td:nth-child(5){width:12%}
@@ -891,7 +891,7 @@
   };
   const modeCell = (markup, row, index) => markup.slice(0,-5) + planModeSelector(row,index) + '</td>';
   root.addEventListener('change', event => {
-    const selector = event.target.closest('[data-plan-mode], [data-plan-weather], [data-plan-role]');
+    const selector = event.target.closest('[data-plan-mode], [data-plan-stage], [data-plan-weather], [data-plan-role]');
     if(!selector) return;
     const index = Number(selector.dataset.index);
     if(!Number.isInteger(index) || index < 0 || index >= rows.length) return;
@@ -903,7 +903,7 @@
       return;
     }
     rows[index][selector.dataset.planField || 'mode'] = selector.value;
-    selector.title = selector.value || '选择交易模式';
+    selector.title = selector.value || (selector.dataset.planField === 'stage' ? '选择阶段' : selector.dataset.planField === 'weather' ? '选择天时' : '选择交易模式');
     save();
   });
   // PLAN_MODES_END
@@ -916,6 +916,13 @@
   };
   // PLAN_ORDER_START
   const planCell = (row,index,label,field) => `<td>${planField(row,index,label,field)}</td>`;
+  const PLAN_STAGE_OPTIONS = ["主升2", "主升3", "补涨", "总龙二波", "切换"];
+  const planStageSelector = (row,index) => {
+    const current = cleanText(row.stage);
+    const choices = [...PLAN_STAGE_OPTIONS, ...(current && !PLAN_STAGE_OPTIONS.includes(current) ? [current] : [])];
+    const items = choices.map(value => `<option value="${esc(value)}"${value === current ? ' selected' : ''}>${esc(value)}</option>`).join('');
+    return `<label class="plan-field-label" for="plan-stage-${index}">阶段</label><select class="plan-mode-select" id="plan-stage-${index}" data-plan-stage data-plan-field="stage" data-index="${index}" aria-label="${esc(row.stock || '第' + (index + 1) + '行')}的阶段" title="${esc(current || '选择阶段')}"><option value=""${!current ? ' selected' : ''}>待选</option>${items}</select>`;
+  };
   const planWeatherSelector = (row,index) => {
     const current = cleanText(row.weather);
     const choices = ['强天时','弱天时', ...(current && !['强天时','弱天时'].includes(current) ? [current] : [])];
@@ -976,7 +983,7 @@
   };
   // PLAN_RHYTHM_END
   const render = () => {
-    body.innerHTML = rows.map((row, index) => `<tr>${planCell(row,index,'题材','theme')}${planCell(row,index,'阶段','stage')}<td>${planField(row,index,'个股','stock')}${planField(row,index,'类型','type')}</td>${planStatusCell(row,index)}<td>${planModeSelector(row,index)}</td><td>${planWeatherSelector(row,index)}${planField(row,index,'仓位预算','budget')}${planField(row,index,'最大亏损','maxLoss')}</td>${groupCell(row,index,'择日','entryDay','分时 / 触发','entry')}<td>${planField(row,index,'择日','exitDay')}${planField(row,index,'分时 / 离场条件','exit')}${planField(row,index,'失效动作','failureAction')}</td>${planStrategyCell(row,index)}<td><div class="plan-row-actions"><button type="button" class="plan-row-save" data-index="${index}" data-save-row>保存</button><button type="button" class="plan-row-delete" data-index="${index}" data-delete-row>删除</button></div></td></tr>${planRhythmRow(row,index)}`).join('');
+    body.innerHTML = rows.map((row, index) => `<tr>${planCell(row,index,'题材','theme')}<td>${planStageSelector(row,index)}</td><td>${planField(row,index,'个股','stock')}${planField(row,index,'类型','type')}</td>${planStatusCell(row,index)}<td>${planModeSelector(row,index)}</td><td>${planWeatherSelector(row,index)}${planField(row,index,'仓位预算','budget')}${planField(row,index,'最大亏损','maxLoss')}</td>${groupCell(row,index,'择日','entryDay','分时 / 触发','entry')}<td>${planField(row,index,'择日','exitDay')}${planField(row,index,'分时 / 离场条件','exit')}${planField(row,index,'失效动作','failureAction')}</td>${planStrategyCell(row,index)}<td><div class="plan-row-actions"><button type="button" class="plan-row-save" data-index="${index}" data-save-row>保存</button><button type="button" class="plan-row-delete" data-index="${index}" data-delete-row>删除</button></div></td></tr>${planRhythmRow(row,index)}`).join('');
   };
   root.addEventListener('input', event => {
     const cell = event.target.closest('[contenteditable][data-field]');
