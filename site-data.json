@@ -1,5 +1,60 @@
 [
   {
+    "date_iso": "2026-09-30",
+    "date_label": "9/30",
+    "date_display": "2026.09.30",
+    "title": "章盟主式超短全景复盘（2026.9.30 周三）+ 10.8个股板块预案 - AI文档",
+    "source_docx": "用户提供的9/30完整复盘文档（原件只读）",
+    "page_path": "pages\\章盟主式超短全景复盘（2026.9.30 周三）+ 10.8个股板块预案 - AI文档.html",
+    "author": "Raymond",
+    "intro": "节前缩量修复，旧周期出清，新周期等待发酵。",
+    "emotion_summary": "客观修复期；用户判断退潮末期向混沌过渡，赚钱效应未扩散。",
+    "emotion_label": "修复期 / 退潮末向混沌（用户判断）",
+    "emotion_score": null,
+    "main_line_summary": [
+      "医药9只首板扩散，中军与前排共同验证。",
+      "电力/风电7只，先看晋级；锂电池12→6只需强-弱-强。",
+      "新华7板、襄阳4板与题材广度分开看。"
+    ],
+    "core_stock_summary": "新华首次换手、时代3进4、襄阳4进5、闽东主动反抽均需条件确认。",
+    "core_stock_list": [
+      "新华传媒",
+      "时代万恒",
+      "襄阳轴承",
+      "闽东电力"
+    ],
+    "next_focus_lines": [
+      "10/8先核天时与公告",
+      "医药/电力晋级，锂电池强-弱-强",
+      "无模式买点或预算就等待"
+    ],
+    "risk_summary": "8跌停、12断板；高位失败反馈大，监管与催化未核，历史热榜留空。",
+    "personal_reflection": [],
+    "operation_emotion_analysis": "未提供实际交易与持仓；只保留公开条件框架，不生成私人操作指令。",
+    "manual_rhythm_note": "双冰以上可做修复回流预期，双高潮以上可做砸盘预期！",
+    "stock_annotations": [],
+    "board_tags": [
+      "医药",
+      "电力/风电",
+      "锂电池",
+      "机器人"
+    ],
+    "status_tags": [
+      "条件观察",
+      "热榜缺口"
+    ],
+    "summary_headline": "节前修复，节后先验证",
+    "research_bucket": "复盘反思",
+    "has_reflection": false,
+    "market_style_note": "防守与切换优先，局部修复不直接确认新主升。",
+    "main_line_focus": "医药首板扩散；电力晋级；锂电池分化回流",
+    "core_focus_note": "高度不是买点，量价与题材共振才确认",
+    "tomorrow_focus_note": "10/8复市，先天时地利，再核核心量能",
+    "risk_focus_note": "预算、最大亏损未填，不执行",
+    "word_count_hint": 17471,
+    "updated_at": "2026-10-08 07:41:47"
+  },
+  {
     "date_iso": "2026-09-29",
     "date_label": "9/29",
     "date_display": "2026.09.29",
