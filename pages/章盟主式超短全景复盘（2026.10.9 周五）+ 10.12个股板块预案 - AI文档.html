@@ -46,6 +46,7 @@
 .plan-role-choice{display:flex;align-items:center;gap:5px;min-width:0;min-height:28px;padding:3px 4px;border-radius:3px;background:#f4f7f6;color:#234b45;cursor:pointer}
 .plan-role-choice input{flex:0 0 13px;width:13px;height:13px;margin:0;accent-color:#087467}
 .plan-role-choice span{font-size:11px;line-height:1.4;overflow-wrap:anywhere}
+.plan-role-choice:has(input[value="不是龙头"]){grid-column:1/-1}
 .plan-role-choice:has(input:checked){background:#e3f2ec;color:#075f50;font-weight:700}
 .plan-role-choice:has(input:focus-visible){outline:2px solid #087467;outline-offset:1px}
 .plan-role-extra{margin:0 0 8px;border-top:1px solid #dde5e1;padding-top:6px}
@@ -873,8 +874,17 @@
     if(!Number.isInteger(index) || index < 0 || index >= rows.length) return;
     if(selector.dataset.planRole !== undefined) {
       const selected = new Set(normalizeSelection(rows[index].position));
+      const leaderTypes = PLAN_ROLE_GROUPS.find(group => group.options.includes('不是龙头'))?.options || [];
+      if(selector.checked && selector.value === '不是龙头') {
+        leaderTypes.filter(value => value !== '不是龙头').forEach(value => selected.delete(value));
+      } else if(selector.checked && leaderTypes.includes(selector.value)) {
+        selected.delete('不是龙头');
+      }
       selector.checked ? selected.add(selector.value) : selected.delete(selector.value);
       rows[index].position = Array.from(selected);
+      root.querySelectorAll('[data-plan-role]').forEach(choice => {
+        if(choice.dataset.index === selector.dataset.index) choice.checked = selected.has(choice.value);
+      });
       save();
       return;
     }
@@ -904,8 +914,8 @@
     const choices = ['强天时','弱天时', ...(current && !['强天时','弱天时'].includes(current) ? [current] : [])];
     return `<label class="plan-field-label" for="plan-weather-${index}">天时</label><select class="plan-mode-select" id="plan-weather-${index}" data-plan-weather data-plan-field="weather" data-index="${index}" aria-label="天时"><option value=""${!current ? ' selected' : ''}>待选</option>${choices.map(value => `<option value="${esc(value)}"${value === current ? ' selected' : ''}>${esc(value)}</option>`).join('')}</select>`;
   };
-  const PLAN_ROLE_GROUPS = [{"title": "龙头类型", "options": ["龙头", "连板龙", "伴生龙", "趋势龙", "补涨龙", "跟风龙"]}, {"title": "梯队角色", "options": ["前排", "中军", "弹性", "情绪", "后排", "跟风", "补涨"]}];
-  const PLAN_ROLE_HINTS = {"中军": "大容量中军是否依然震荡向上？", "情绪": "高位是否有一字板顶住身位龙头以及板块情绪？", "后排": "是否有不断的后排来助攻前排？"};
+  const PLAN_ROLE_GROUPS = [{"title": "龙头类型", "options": ["龙头", "连板龙", "伴生龙", "趋势龙", "补涨龙", "跟风龙", "不是龙头"]}, {"title": "梯队角色", "options": ["前排", "中军", "弹性", "情绪", "后排", "跟风", "补涨"]}];
+  const PLAN_ROLE_HINTS = {"不是龙头": "不认定为龙头；可继续标记前排、中军等梯队角色。", "中军": "大容量中军是否依然震荡向上？", "情绪": "高位是否有一字板顶住身位龙头以及板块情绪？", "后排": "是否有不断的后排来助攻前排？"};
   const planStatusCell = (row,index) => {
     const selected = normalizeSelection(row.position);
     const known = PLAN_ROLE_GROUPS.flatMap(group => group.options);
