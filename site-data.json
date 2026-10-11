@@ -1,5 +1,62 @@
 [
   {
+    "date_iso": "2026-10-09",
+    "date_label": "10/9",
+    "date_display": "2026.10.09",
+    "title": "章盟主式超短全景复盘（2026.10.9 周五）+ 10.12个股板块预案 - AI文档",
+    "source_docx": "用户提供的10/9完整版复盘（公开副本；原件只读）",
+    "page_path": "pages\\章盟主式超短全景复盘（2026.10.9 周五）+ 10.12个股板块预案 - AI文档.html",
+    "author": "Raymond",
+    "intro": "指数低位修复，短线高标抱团；电池与消费竞争，传媒打开高度。",
+    "emotion_summary": "69涨停、8跌停、13炸板，最高9板；高位晋级强、三板断层。",
+    "emotion_label": "修复期 / 高标抱团（原复盘判断）",
+    "emotion_score": null,
+    "main_line_summary": [
+      "电池7家、消费10家涨停，5板同身位竞争尚未最终确认。",
+      "传媒16家涨停，新华9板定市场高度；AI应用强度14962另列。",
+      "医药与农业续强才提高关注，不提前确认低位切换。"
+    ],
+    "core_stock_summary": "新华传媒定高度，时代万恒与九阳股份看5进6竞争，紫竹高科看4进5换手。",
+    "core_stock_list": [
+      "新华传媒",
+      "时代万恒",
+      "九阳股份",
+      "紫竹高科",
+      "华北制药"
+    ],
+    "next_focus_lines": [
+      "10/12先核天时与监管公告",
+      "电池看弱分歧承接，消费看续强，传媒看首次分化",
+      "同身位PK同时核胜者、败者与题材跟随"
+    ],
+    "risk_summary": "指数尚未确认筑底；科技趋势负反馈、三板断层及高标监管风险仍在。",
+    "personal_reflection": [],
+    "operation_emotion_analysis": "个人持仓、实际交易与反思保留在本地原文；公开页面仅展示市场判断和条件框架。",
+    "manual_rhythm_note": "双冰以上可做修复回流预期，双高潮以上可做砸盘预期！",
+    "stock_annotations": [],
+    "board_tags": [
+      "锂电池",
+      "传媒",
+      "大消费",
+      "医药"
+    ],
+    "status_tags": [
+      "高标抱团",
+      "条件确认",
+      "热榜部分缺口"
+    ],
+    "summary_headline": "高位抱团修复，分歧检验胜者",
+    "research_bucket": "复盘反思",
+    "has_reflection": false,
+    "market_style_note": "高标抱团与旧周期修复，科技趋势暂不作为主攻方向。",
+    "main_line_focus": "锂电池优先；传媒首次分化；消费续强验证",
+    "core_focus_note": "量能、题材跟随与败者反馈共同确认",
+    "tomorrow_focus_note": "10/12先判断，再核真实承接与封板",
+    "risk_focus_note": "预算、最大亏损与退出动作未填写，不执行新开仓",
+    "word_count_hint": 12568,
+    "updated_at": "2026-10-11 10:47:32"
+  },
+  {
     "date_iso": "2026-09-30",
     "date_label": "9/30",
     "date_display": "2026.09.30",
