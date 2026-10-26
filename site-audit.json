@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-21 23:54:19",
+  "generated_at": "2026-10-26 09:37:39",
   "site_dir": "C:\\Users\\Administrator\\Desktop\\Codex\\daily-trading-review",
   "index_path": "C:\\Users\\Administrator\\Desktop\\Codex\\daily-trading-review\\index.html",
   "desktop_entry": "C:\\Users\\Administrator\\Desktop\\Codex\\daily-trading-review\\A股复盘站-首页.html",
-  "record_count": 73,
+  "record_count": 74,
   "records": {
     "2026-03-19": {
       "title": "A股超短全复盘（2026年3月19日）——板块+标的+情绪+操作全梳理",
@@ -515,9 +515,16 @@
       "page_path": "pages\\章盟主式超短全景复盘（2026.10.21 周三）+ 10.22个股板块预案 - AI文档.html",
       "missing_count": 0,
       "missing_preview": []
+    },
+    "2026-10-23": {
+      "title": "章盟主式超短全景复盘（2026.10.23 周五）+ 10.26个股板块预案 - AI文档",
+      "source_docx": "10/23完整复盘的市场判断公开副本；原件与私人交易档案仅存本地",
+      "page_path": "pages\\章盟主式超短全景复盘（2026.10.23 周五）+ 10.26个股板块预案 - AI文档.html",
+      "missing_count": 0,
+      "missing_preview": []
     }
   },
-  "latest_date": "2026-10-21",
+  "latest_date": "2026-10-23",
   "latest_validation": {
     "missing_count": 0,
     "detail_page_exists": true,
