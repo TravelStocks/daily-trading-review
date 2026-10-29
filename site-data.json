@@ -1,5 +1,60 @@
 [
   {
+    "date_iso": "2026-10-29",
+    "date_label": "10/29",
+    "date_display": "2026.10.29",
+    "title": "章盟主式超短全景复盘（2026.10.29 周四）+ 10.30个股板块预案 - AI文档",
+    "source_docx": "2026-10-29-章盟主式超短全景复盘-AI文档.docx",
+    "page_path": "pages\\章盟主式超短全景复盘（2026.10.29 周四）+ 10.30个股板块预案 - AI文档.html",
+    "author": "Raymond",
+    "intro": "大盘、科技与机器人大分歧。机器人是否回流、航天能否续强，需同时验证。",
+    "emotion_summary": "三表39涨停、41跌停、25炸板；封板率60.94%。",
+    "emotion_label": "冰点期（源表）／主线大分歧（用户）",
+    "emotion_score": null,
+    "main_line_summary": [
+      "用户维持机器人主线判断。",
+      "航天连续增强时，重新评估竞争关系。",
+      "核心、容量、梯队和失败端共同验证。"
+    ],
+    "core_stock_summary": "三核心：襄阳、大业、福莱；两补涨候选：沪工、光洋。未给唯一总龙排序。",
+    "core_stock_list": [
+      "襄阳轴承",
+      "大业股份",
+      "福莱新材",
+      "上海沪工",
+      "光洋股份"
+    ],
+    "next_focus_lines": [
+      "指数与成交额是否修复",
+      "机器人回流是否有广度",
+      "航天续强是否形成竞争"
+    ],
+    "risk_summary": "41家跌停，后排风险不可用核心收红掩盖；监管空间未核。",
+    "personal_reflection": [],
+    "operation_emotion_analysis": "个人执行、反思和考卷仅存本地。",
+    "manual_rhythm_note": "双冰以上可做修复回流预期，双高潮以上可做砸盘预期！",
+    "stock_annotations": [],
+    "board_tags": [
+      "机器人",
+      "商业航天",
+      "分歧检验"
+    ],
+    "status_tags": [
+      "冰点期",
+      "回流待验"
+    ],
+    "summary_headline": "大分歧之后，验证回流而非预定回流",
+    "research_bucket": "复盘反思",
+    "has_reflection": false,
+    "market_style_note": "【事实】指数与成长风格同步承压。沪指3651.43点，深指11138.20点，创业板2517.59点，科创50为1228.09点。成交额15565亿元，较前一交易日减少720亿元。市场体感偏弱，不能用少数逆势核心的表现代替全市场赚钱效应。",
+    "main_line_focus": "机器人为用户主线；航天构成条件竞争",
+    "core_focus_note": "襄阳断板仍收涨；光洋和青岛最高4板。",
+    "tomorrow_focus_note": "用户期待放量回流；弱修复和继续走弱必须保留。",
+    "risk_focus_note": "不以核心标签豁免触发、预算或退出。",
+    "word_count_hint": 23168,
+    "updated_at": "2026-10-29 22:20:48"
+  },
+  {
     "date_iso": "2026-10-28",
     "date_label": "10/28",
     "date_display": "2026.10.28",
