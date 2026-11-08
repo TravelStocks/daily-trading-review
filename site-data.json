@@ -1,5 +1,57 @@
 [
   {
+    "date_iso": "2026-11-06",
+    "date_label": "11/6",
+    "date_display": "2026.11.06",
+    "title": "A股超短全景复盘（2026.11.6 周五）+ 11.9个股板块预案",
+    "source_docx": "2026-11-08_A股每日复盘_AI分析版.docx",
+    "page_path": "pages\\A股超短全景复盘（2026.11.6 周五）+ 11.9个股板块预案.html",
+    "author": "Raymond",
+    "intro": "指数缩量走低，716家上涨、4431家下跌。光伏连续两天强度第一，但周五强度由14744降至3680；名次续强不等于全板块加速。",
+    "emotion_summary": "32涨停、15跌停，13炸板。",
+    "emotion_label": "弱市局部活跃（原稿分析）",
+    "emotion_score": null,
+    "main_line_summary": [
+      "强度3680，第1名；光伏分类6家涨停。",
+      "强度2279，第3名；AI应用分类4家涨停。",
+      "强度2116，第4名；大农业分类2家涨停。"
+    ],
+    "core_stock_summary": "闽发与浙文并列五板，周末公告后核对市场承接。",
+    "core_stock_list": [
+      "闽发铝业",
+      "浙文影业"
+    ],
+    "next_focus_lines": [
+      "回封能否带动永臻股份及后排首板",
+      "浙文影业能否获得传媒中位承接"
+    ],
+    "risk_summary": "弱势中的少数强票不能替代整体赚钱效应。",
+    "personal_reflection": [],
+    "operation_emotion_analysis": "私人执行记录不公开。",
+    "manual_rhythm_note": "双冰以上可做修复回流预期，双高潮以上可做砸盘预期！",
+    "stock_annotations": [],
+    "board_tags": [
+      "光伏",
+      "AI应用",
+      "农业",
+      "电力"
+    ],
+    "status_tags": [
+      "缩量普跌",
+      "局部续强"
+    ],
+    "summary_headline": "弱市中的双五板",
+    "research_bucket": "复盘反思",
+    "has_reflection": false,
+    "market_style_note": "二、市场风格与赚钱效应解析",
+    "main_line_focus": "光伏续强，AI应用仍需梯队确认",
+    "core_focus_note": "五板两只；四进五2/2。",
+    "tomorrow_focus_note": "11月9日先核板块，再核核心。",
+    "risk_focus_note": "公告风险和分歧扩大均可改变预期。",
+    "word_count_hint": 7030,
+    "updated_at": "2026-11-08 13:06:38"
+  },
+  {
     "date_iso": "2026-11-02",
     "date_label": "11/2",
     "date_display": "2026.11.02",
