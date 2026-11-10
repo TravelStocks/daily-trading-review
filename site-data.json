@@ -1,5 +1,71 @@
 [
   {
+    "date_iso": "2026-11-10",
+    "date_label": "11/10",
+    "date_display": "2026.11.10",
+    "title": "A股超短全景复盘（2026.11.10 周二）+ 11.11个股板块预案",
+    "source_docx": "2026-11-10_A股每日复盘_AI分析版.docx",
+    "page_path": "pages\\A股超短全景复盘（2026.11.10 周二）+ 11.11个股板块预案.html",
+    "author": "Raymond",
+    "intro": "沪深成交15,048亿元，93家涨停、无跌停，封板率83.04%。机器人连续两日强度第一，AI应用趋势延续；闽发七板打开高度，光伏只见弱回流。",
+    "emotion_summary": "93涨停、0跌停、19炸板",
+    "emotion_label": "单日高潮／混沌中发酵",
+    "emotion_score": null,
+    "main_line_summary": [
+      "大周期二阶段：第一波主升一",
+      "二阶段主升二尾声；浙文自身转主升三",
+      "分歧延续后弱回流",
+      "抱团较强，板块爆发未确认",
+      "东方三板相聚；老抱团与名字接力分看"
+    ],
+    "core_stock_summary": "闽发七板；机器人连板核心尚未选出。",
+    "core_stock_list": [
+      "东方海洋",
+      "日出东方",
+      "闽发铝业",
+      "浙文影业",
+      "新华传媒",
+      "九阳股份",
+      "冰山冷热",
+      "海洋王",
+      "大业股份",
+      "福莱新材",
+      "宇树科技"
+    ],
+    "next_focus_lines": [
+      "宇树、福莱稳住，二板中能否选出主动领涨者。",
+      "浙文水下承接、新华趋势、文投与大晟的换手差异。",
+      "龙江缩量转强、同题材低位一字与板块发酵须同时出现。"
+    ],
+    "risk_summary": "弱支线高开不等于转强，最高板不代替题材广度。",
+    "personal_reflection": [],
+    "operation_emotion_analysis": "公开版仅记录盘面与条件。",
+    "manual_rhythm_note": "双冰以上可做修复回流预期，双高潮以上可做砸盘预期！",
+    "stock_annotations": [],
+    "board_tags": [
+      "机器人",
+      "AI应用",
+      "光伏",
+      "冰雪消费",
+      "名称炒作"
+    ],
+    "status_tags": [
+      "普涨修复",
+      "反包",
+      "二阶段"
+    ],
+    "summary_headline": "机器人领涨，七板打开高度",
+    "research_bucket": "复盘反思",
+    "has_reflection": false,
+    "market_style_note": "二、市场风格与赚钱效应解析",
+    "main_line_focus": "机器人与AI应用",
+    "core_focus_note": "华培／泰尔待选强，龙江三进四看低位一字。",
+    "tomorrow_focus_note": "11/11验证板块与分时的组合信号。",
+    "risk_focus_note": "单日高潮不代表次日无分歧。",
+    "word_count_hint": 14222,
+    "updated_at": "2026-11-10 10:42:52"
+  },
+  {
     "date_iso": "2026-11-09",
     "date_label": "11/9",
     "date_display": "2026.11.09",
