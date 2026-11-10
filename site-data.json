@@ -1,5 +1,66 @@
 [
   {
+    "date_iso": "2026-11-09",
+    "date_label": "11/9",
+    "date_display": "2026.11.09",
+    "title": "A股超短全景复盘（2026.11.9 周一）+ 11.10个股板块预案",
+    "source_docx": "2026-11-09_A股每日复盘_AI分析版.docx",
+    "page_path": "pages\\A股超短全景复盘（2026.11.9 周一）+ 11.10个股板块预案.html",
+    "author": "Raymond",
+    "intro": "沪深成交14826亿元，54家涨停、44家炸板，封板率55.10%。闽发铝业晋级六板，但三至五板断层；高位兑现与低位轮动同时出现。",
+    "emotion_summary": "54涨停、1跌停、44炸板。",
+    "emotion_label": "混沌期弱修复（原稿判断）",
+    "emotion_score": null,
+    "main_line_summary": [
+      "当日无同名分类，不视为零涨停。",
+      "短线侠第2，强度8127；航天分类7家涨停。",
+      "短线侠第1，强度11186；机器人分类12家涨停。",
+      "AI应用分类2家涨停。",
+      "名称炒作分类11家涨停。",
+      "冰雪产业分类5家涨停。"
+    ],
+    "core_stock_summary": "闽发唯一六板；光伏梯队和中军未同步，商业航天看容量修复。",
+    "core_stock_list": [
+      "闽发铝业",
+      "日出东方",
+      "浙文影业",
+      "西部材料",
+      "中国卫星",
+      "宇树科技"
+    ],
+    "next_focus_lines": [
+      "闽发是否获得日出东方、容量中军与新首板支持",
+      "商业航天能否修复中国卫星长上影并保持前排承接"
+    ],
+    "risk_summary": "低位首板活跃不等于新周期开始。",
+    "personal_reflection": [],
+    "operation_emotion_analysis": "私人执行记录不公开。",
+    "manual_rhythm_note": "双冰以上可做修复回流预期，双高潮以上可做砸盘预期！",
+    "stock_annotations": [],
+    "board_tags": [
+      "光伏",
+      "商业航天",
+      "机器人概念",
+      "AI应用",
+      "名称炒作",
+      "冰雪产业"
+    ],
+    "status_tags": [
+      "缩量震荡",
+      "接力断层"
+    ],
+    "summary_headline": "高度延续，板块未同步",
+    "research_bucket": "复盘反思",
+    "has_reflection": false,
+    "market_style_note": "二、市场风格与赚钱效应解析",
+    "main_line_focus": "机器人居强度首位，商业航天看前排与中军",
+    "core_focus_note": "五进六1/2，三至五板空缺。",
+    "tomorrow_focus_note": "11月10日先验证题材跟随，再评估个股承接。",
+    "risk_focus_note": "高位孤立与炸板增加均是反证。",
+    "word_count_hint": 6801,
+    "updated_at": "2026-11-09 19:41:03"
+  },
+  {
     "date_iso": "2026-11-06",
     "date_label": "11/6",
     "date_display": "2026.11.06",
