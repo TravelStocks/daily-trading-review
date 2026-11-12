@@ -1,5 +1,66 @@
 [
   {
+    "date_iso": "2026-11-11",
+    "date_label": "11/11",
+    "date_display": "2026.11.11",
+    "title": "A股超短全景复盘（2026.11.11 周三）+ 11.12个股板块预案",
+    "source_docx": "2026-11-11_A股每日复盘_AI分析版.docx",
+    "page_path": "pages\\A股超短全景复盘（2026.11.11 周三）+ 11.12个股板块预案.html",
+    "author": "Raymond",
+    "intro": "机器人连续三天位居强度前四，光通信首次进前四、仅差86点。闽发七进八温和断板，市场高度落到四板。",
+    "emotion_summary": "84涨停，19炸板，沪深收盘池0跌停",
+    "emotion_label": "单日高潮／多日发酵转主升（原稿）",
+    "emotion_score": null,
+    "main_line_summary": [
+      "连续三日高强度，二阶段待选连板龙",
+      "CPO十日首次高强度，PCB分歧后回流",
+      "轮动分歧，趋势锚和反包高度分看",
+      "旧高度断板，小幅回流",
+      "冰雪核心抱团，食品有负反馈"
+    ],
+    "core_stock_summary": "大业、襄阳看分歧承接；东方双四板，机器人连板龙未定。",
+    "core_stock_list": [
+      "冰山冷热",
+      "闽发铝业",
+      "浙文影业",
+      "新华传媒",
+      "大业股份",
+      "襄阳轴承"
+    ],
+    "next_focus_lines": [
+      "分歧时比较大业、襄阳的收回与横盘；低位PK不先定龙。",
+      "比较中际、新易盛与机器人容量；若只是一日脉冲，仍按轮动。",
+      "看浙文、新华谁先回流，文投能否给出反包溢价。"
+    ],
+    "risk_summary": "科技争量与机器人分歧并存；深水不等于低吸确认。",
+    "personal_reflection": [],
+    "operation_emotion_analysis": "公开版列条件与风险。",
+    "manual_rhythm_note": "双冰以上可做修复回流预期，双高潮以上可做砸盘预期！",
+    "stock_annotations": [],
+    "board_tags": [
+      "机器人",
+      "科技：光通信、芯片与PCB",
+      "AI应用",
+      "光伏与东方",
+      "消费与冰雪"
+    ],
+    "status_tags": [
+      "放量企稳",
+      "趋势抱团",
+      "同身位PK"
+    ],
+    "summary_headline": "机器人连续三天居前，光通信逼近",
+    "research_bucket": "复盘反思",
+    "has_reflection": false,
+    "market_style_note": "二、市场风格与赚钱效应解析",
+    "main_line_focus": "机器人、光通信",
+    "core_focus_note": "大业和襄阳只择一，低位二板只观察。",
+    "tomorrow_focus_note": "11/12 看CPO第二天、机器人分歧后的承接。",
+    "risk_focus_note": "窗口估算不是交易所公告。",
+    "word_count_hint": 11562,
+    "updated_at": "2026-11-11 20:07:05"
+  },
+  {
     "date_iso": "2026-11-10",
     "date_label": "11/10",
     "date_display": "2026.11.10",
