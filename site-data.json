@@ -1,5 +1,69 @@
 [
   {
+    "date_iso": "2026-11-12",
+    "date_label": "11/12",
+    "date_display": "2026.11.12",
+    "title": "A股超短全景复盘（2026.11.12 周四）+ 11.13个股板块预案",
+    "source_docx": "2026-11-12_A股每日复盘_AI分析版.docx",
+    "page_path": "pages\\A股超短全景复盘（2026.11.12 周四）+ 11.13个股板块预案.html",
+    "author": "Raymond",
+    "intro": "两只“东方”升五板，但37家封住、35家炸板。机器人仍排第一，绝对强度从15,276降至3,762。次日修复先验前排承接，再看亏钱股是否止跌。",
+    "emotion_summary": "37涨停、5跌停，炸板35家",
+    "emotion_label": "冰点／首次大分歧",
+    "emotion_score": null,
+    "main_line_summary": [
+      "混沌转主升后的首次大分歧",
+      "分歧加深，尚未确认修复",
+      "梯队最齐，高位已见松筹",
+      "主线分歧中的避险轮动",
+      "原稿仍看震荡向上，强度却转负",
+      "芯片相对强，CPO未接棒"
+    ],
+    "core_stock_summary": "日出东方、大东方并列五板；机器人二进三尚待唯一胜者。",
+    "core_stock_list": [
+      "日出东方",
+      "大东方",
+      "襄阳轴承",
+      "闽发铝业",
+      "北纬科技",
+      "日上集团",
+      "中重科技"
+    ],
+    "next_focus_lines": [
+      "老核心止跌、襄阳守住承接，低位二板出现晋级；单一低位板不能确认回流。",
+      "先看日出换手后有没有五板溢价，再看大东方与东方海洋的承接；只观察不新增。",
+      "先看闽发深跌后能否企稳，异动临界或猛杀无承接时不确认。"
+    ],
+    "risk_summary": "高标晋级不代表普通接力容错回升。",
+    "personal_reflection": [],
+    "operation_emotion_analysis": "区分市场观察、条件预案与实际成交。",
+    "manual_rhythm_note": "双冰以上可做修复回流预期，双高潮以上可做砸盘预期！",
+    "stock_annotations": [],
+    "board_tags": [
+      "机器人",
+      "AI应用与传媒",
+      "东方与阳字辈",
+      "消费与冰雪",
+      "光伏",
+      "芯片与光通信"
+    ],
+    "status_tags": [
+      "放量普跌",
+      "冰点",
+      "二进三PK"
+    ],
+    "summary_headline": "高度升至五板，封板率降至51.39%",
+    "research_bucket": "复盘反思",
+    "has_reflection": false,
+    "market_style_note": "二、市场风格与赚钱效应解析",
+    "main_line_focus": "机器人、东方名称线",
+    "core_focus_note": "抱团低吸与低位切换分别验证。",
+    "tomorrow_focus_note": "11/13先看跌停核心，再看二板竞争。",
+    "risk_focus_note": "不把先封当胜出，不把监管测算当固定阈值。",
+    "word_count_hint": 14678,
+    "updated_at": "2026-11-12 10:20:11"
+  },
+  {
     "date_iso": "2026-11-11",
     "date_label": "11/11",
     "date_display": "2026.11.11",
