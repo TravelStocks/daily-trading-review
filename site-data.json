@@ -1,5 +1,65 @@
 [
   {
+    "date_iso": "2026-11-13",
+    "date_label": "11/13",
+    "date_display": "2026.11.13",
+    "title": "A股超短全景复盘（2026.11.13 周五）+ 11.16个股板块预案",
+    "source_docx": "2026-11-13_A股每日复盘_AI分析版.docx",
+    "page_path": "pages\\A股超短全景复盘（2026.11.13 周五）+ 11.16个股板块预案.html",
+    "author": "Raymond",
+    "intro": "连续第二个冰点：涨停仍是37家，跌停从5家升到33家，最高板从五板降到四板。周一只验证北纬科技：个股先转强，机器人能否跟上？",
+    "emotion_summary": "37涨停、33跌停；最高四板",
+    "emotion_label": "连续二冰",
+    "emotion_score": null,
+    "main_line_summary": [
+      "老抱团退潮，低位新段待证",
+      "高低切，原稿拟判补涨",
+      "芯片持续相对强，科技整体转混沌",
+      "消费轮动、名称线仅留前排穿越观察",
+      "原光伏周期结束，金辰仅看个股"
+    ],
+    "core_stock_summary": "北纬科技、金辰股份并列三板，天普股份唯一四板。",
+    "core_stock_list": [
+      "北纬科技",
+      "金辰股份",
+      "天普股份",
+      "文投控股",
+      "日出东方"
+    ],
+    "next_focus_lines": [
+      "看谁先动、谁跟上、谁能封到尾盘。只有北纬孤强不是板块回流。",
+      "先看文投承接、首板次日溢价；没有晋级不能确认新主升。",
+      "容量要成组修复，不能拿华胜首板替代光通信回流。"
+    ],
+    "risk_summary": "四板停牌不改周五高度；局部首板修复不等于新主升。",
+    "personal_reflection": [],
+    "operation_emotion_analysis": "周一分支以可观测信号为准。",
+    "manual_rhythm_note": "双冰以上可做修复回流预期，双高潮以上可做砸盘预期！",
+    "stock_annotations": [],
+    "board_tags": [
+      "机器人",
+      "AI应用与传媒",
+      "芯片、算力与光通信",
+      "消费与名称线",
+      "光伏与电力"
+    ],
+    "status_tags": [
+      "连续二冰",
+      "缩量普跌",
+      "三进四观察"
+    ],
+    "summary_headline": "跌停由5家增至33家，三进四只验证北纬",
+    "research_bucket": "复盘反思",
+    "has_reflection": false,
+    "market_style_note": "二、市场风格与赚钱效应解析",
+    "main_line_focus": "机器人回流条件与AI应用高低切",
+    "core_focus_note": "北纬先动之后，还要看容量与低位响应。",
+    "tomorrow_focus_note": "11/16观察回封、助攻和尾盘留存。",
+    "risk_focus_note": "半仓是讨论，不是确定预算；无跟随无新增。",
+    "word_count_hint": 17358,
+    "updated_at": "2026-11-15 20:19:32"
+  },
+  {
     "date_iso": "2026-11-12",
     "date_label": "11/12",
     "date_display": "2026.11.12",
