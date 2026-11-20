@@ -40,10 +40,11 @@
     const records = Array.from(new Map([...(Array.isArray(prior) ? prior : []), ...(memory.get(week) || [])]
       .filter(record => validDate(record.date) && weekOf(record.date) === week)
       .map(record => [JSON.stringify([record.date,record.basis]),record])).values());
-    const seedHit = week && weekOf(seed.targetDate) === week && seed.targetDate <= date &&
+    const seedTriggerDate = seed.weeklyTriggeredOn || seed.targetDate;
+    const seedHit = week && weekOf(seedTriggerDate) === week && seedTriggerDate <= date &&
       (seed.weeklyStatus === 'hit' || lossHit(seed.weeklyReturn));
     if (week && (state.weeklyStatus === 'hit' || lossHit(state.weeklyReturn) || seedHit)) {
-      const record = {date:seedHit ? seed.targetDate : date, basis:seedHit ? seed.weeklyBasis : state.weeklyBasis};
+      const record = {date:seedHit ? seedTriggerDate : date, basis:seedHit ? seed.weeklyBasis : state.weeklyBasis};
       if (!records.some(item => item.date === record.date && item.basis === record.basis)) records.push(record);
       memory.set(week, records);
       write(key, records);

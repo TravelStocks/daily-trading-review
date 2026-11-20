@@ -37,6 +37,9 @@ async function allBudget(p,value){const a=await budgets(p);assert(a.length>0);as
   await cell.fill('20%');await cell.dispatchEvent('input');
   const key='a-share-operation-plan-2026-11-09-v2';
   const draft=await p.evaluate(k=>JSON.parse(localStorage.getItem(k))[0].budget,key);assert.equal(draft,'20%');
+  await change(p,'weeklyReturn','-4.99');
+  assert.equal(await cell.textContent(),'20%');
+  assert.equal(await cell.getAttribute('contenteditable'),'true');
   await change(p,'weeklyReturn','-5');
   await allBudget(p,'0');
   assert.equal(await cell.getAttribute('contenteditable'),'false');
@@ -58,6 +61,14 @@ async function allBudget(p,value){const a=await budgets(p);assert(a.length>0);as
   await p.goto(url('2026-11-13'));await allBudget(p,'待核');
   const fresh=await browser.newContext({viewport:{width:390,height:1000}});
   const q=await fresh.newPage();await route(q);await q.goto(url('2026-11-19'));await allBudget(q,'0');
+  const rule=await q.locator('[data-weekly-risk-rule]').textContent();
+  assert(rule.includes('当前权益 / 周初权益'));
+  assert(rule.includes('不按周内高点回撤'));
+  assert(rule.includes('本周剩余时间停止开新仓'));
+  assert.equal(await q.evaluate(()=>JSON.parse(localStorage.getItem('a-share-weekly-loss-stop-2026-11-16-v1'))[0].date),'2026-11-17');
+  await change(q,'targetDate','2026-11-18');await allBudget(q,'0');
+  await change(q,'targetDate','2026-11-16');await allBudget(q,'待核');
+  await change(q,'targetDate','2026-11-20');await allBudget(q,'0');
   assert.equal(await q.locator('[data-preflight-answer="mindset"]').textContent(),'待核');
   assert(await q.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
   await q.locator('#daily-preflight').scrollIntoViewIfNeeded();

@@ -11,7 +11,8 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
 START = '<!-- DAILY_PREFLIGHT_START -->'
 END = '<!-- DAILY_PREFLIGHT_END -->'
-ASSET_VERSION = '20261120-1'
+ASSET_VERSION = '20261120-2'
+RISK_RULE = '按周初权益计算整周收益，包含已实现和浮动盈亏，不按周内高点回撤。无出入金时，周收益率 =（当前权益 / 周初权益 - 1）× 100%；有出入金先单独核对，数据未确认标待核。本周任一时点周收益率 ≤ -5%（恰好亏5%也算）即触线：本周剩余时间停止开新仓，新增开仓预算统一为0。空仓、换票、亏损收窄、看好龙头或小仓试错均不能解除。进入新周重新核对周初权益与三问，不自动放行；已有持仓继续按原退出计划管理。'
 QUESTIONS = [
     ('weekly', '本周累计亏损有没有达到5%？', [('','待核'),('clear','已确认本周未触线'),('hit','已触线：停止本周新开仓')]),
     ('mindset', '我是不是急着回本，才想买得更早、买得更重？', [('','待核'),('steady','本人确认：不以回本驱动'),('urgent','有急于回本的心态')]),
@@ -24,8 +25,9 @@ def validate(values):
     for prefix, _, choices in QUESTIONS:
         if values.get(prefix + 'Status','') not in dict(choices):
             raise ValueError('Invalid preflight status: ' + prefix)
-    if values.get('targetDate'):
-        date.fromisoformat(values['targetDate'])
+    for key in ['targetDate', 'weeklyTriggeredOn']:
+        if values.get(key):
+            date.fromisoformat(values[key])
     return values
 
 def panel(day, values):
@@ -42,6 +44,7 @@ def panel(day, values):
     seed = json.dumps(values,ensure_ascii=False).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
     return (START + f'<section class="daily-preflight" id="daily-preflight" data-daily-preflight data-review-date="{day}">'
             '<h3>盘前必问 · 三项前置检查</h3><label class="preflight-date">预案执行日<input type="date" data-preflight-field="targetDate"></label>'
+            + f'<p data-weekly-risk-rule>{RISK_RULE}</p>'
             + ''.join(blocks) + '<p class="preflight-result" data-preflight-result role="status">待核：三项确认后再看新增预算；周亏达到5%停止本周开新仓。</p>'
             '<p class="preflight-storage" data-preflight-storage></p>'
             f'<script type="application/json" data-daily-preflight-defaults>{seed}</script></section>' + END)
