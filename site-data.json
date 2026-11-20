@@ -1,5 +1,61 @@
 [
   {
+    "date_iso": "2026-11-19",
+    "date_label": "11/19",
+    "date_display": "2026.11.19",
+    "title": "A股超短全景复盘（2026.11.19 周四）+ 11.20个股板块预案",
+    "source_docx": "2026-11-19_A股每日复盘_AI分析版.docx",
+    "page_path": "pages\\A股超短全景复盘（2026.11.19 周四）+ 11.20个股板块预案.html",
+    "author": "Raymond",
+    "intro": "退潮中的四进五。原稿判断天时极弱：先看华东重机反包修复，给高溢价就兑现，随后停手；算力、芯片与指数共振成立后才重新评估。",
+    "emotion_summary": "23涨停、68跌停；最高三板",
+    "emotion_label": "冰点期",
+    "emotion_score": null,
+    "main_line_summary": [
+      "一、复盘总纲"
+    ],
+    "core_stock_summary": "华东修复应对；三只三板并列，九阳独立穿越。",
+    "core_stock_list": [
+      "华东重机",
+      "真视通",
+      "盛剑科技",
+      "全筑股份",
+      "九阳股份"
+    ],
+    "next_focus_lines": [
+      "算力强回流、芯片续强或强回流，同时指数放量向上，才重新评估。",
+      "北纬后续由连板转趋势能否成立，仍需题材与容量跟随。",
+      "九阳二波突破与独立抱团能否持续；单票修复不能代替整条线。",
+      "旧周期风险出清与新周期接棒分开，不能仅看九阳独立拉升。"
+    ],
+    "risk_summary": "极弱天时不扩大试错；单票修复不能证明题材和指数共振。",
+    "personal_reflection": [],
+    "operation_emotion_analysis": "条件预案与实际成交分开，私人数据不公开。",
+    "manual_rhythm_note": "双冰以上可做修复回流预期，双高潮以上可做砸盘预期！",
+    "stock_annotations": [],
+    "board_tags": [
+      "算力与芯片",
+      "机器人",
+      "消费、家电与名字炒作",
+      "AI应用与传媒"
+    ],
+    "status_tags": [
+      "冰点期",
+      "四进五失败",
+      "三板并列"
+    ],
+    "summary_headline": "退潮中的四进五：先应对修复，再等共振",
+    "research_bucket": "复盘反思",
+    "has_reflection": false,
+    "market_style_note": "二、市场风格与赚钱效应解析",
+    "main_line_focus": "算力分歧、芯片回流与旧抱团穿越",
+    "core_focus_note": "真视通、盛剑、全筑并列三板，没有高度唯一性。",
+    "tomorrow_focus_note": "11/20华东高溢价兑现后停手；共振成立才再评估。",
+    "risk_focus_note": "观察池不等于开仓名单，未授权新增计划。",
+    "word_count_hint": 5153,
+    "updated_at": "2026-11-19 20:24:59"
+  },
+  {
     "date_iso": "2026-11-13",
     "date_label": "11/13",
     "date_display": "2026.11.13",
