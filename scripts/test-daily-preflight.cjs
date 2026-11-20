@@ -1,6 +1,7 @@
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
 const {chromium}=require(process.env.PW);
 const root=path.resolve(__dirname,'..');
+fs.mkdirSync(path.join(root,'output'),{recursive:true});
 const entries=JSON.parse(fs.readFileSync(path.join(root,'site-data.json')));
 const entry=date=>entries.find(item=>item.date_iso===date);
 const url=date=>'https://review.test/'+entry(date).page_path.replaceAll('\\','/');
