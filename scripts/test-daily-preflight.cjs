@@ -1,0 +1,73 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const {chromium}=require(process.env.PW);
+const root=path.resolve(__dirname,'..');
+const entries=JSON.parse(fs.readFileSync(path.join(root,'site-data.json')));
+const entry=date=>entries.find(item=>item.date_iso===date);
+const url=date=>'https://review.test/'+entry(date).page_path.replaceAll('\\','/');
+async function route(page,block=false){
+  await page.route('**/*',r=>{
+    const u=new URL(r.request().url());
+    if(u.hostname!=='review.test'||block&&u.pathname.endsWith('daily-preflight.js'))return r.abort();
+    const f=path.join(root,decodeURIComponent(u.pathname));
+    return fs.existsSync(f)&&fs.statSync(f).isFile()?r.fulfill({path:f}):r.abort();
+  });
+}
+async function change(p,field,value){
+  const node=p.locator('[data-preflight-field="'+field+'"]');
+  await node.evaluate(e=>{const editor=e.closest('.preflight-editor');if(editor)editor.hidden=false;});
+  if(await node.evaluate(e=>e.tagName)==='SELECT')await node.selectOption(value);
+  else {await node.fill(value);await node.dispatchEvent('change');await node.blur();}
+}
+const budgets=p=>p.locator('[data-operation-plan] [data-field="budget"]').allTextContents();
+async function allBudget(p,value){const a=await budgets(p);assert(a.length>0);assert(a.every(v=>v===value),JSON.stringify(a));}
+(async()=>{
+  const browser=await chromium.launch({headless:true,executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'});
+  const context=await browser.newContext({acceptDownloads:true,viewport:{width:1440,height:1000}});
+  const p=await context.newPage();await route(p);
+  const errors=[];p.on('pageerror',e=>errors.push(e.message));
+  await p.goto(url('2026-11-09'));
+  assert.equal(await p.locator('.preflight-question').count(),3);
+  assert.equal(await p.locator('[data-plan-preconditions]>section').first().getAttribute('id'),'daily-preflight');
+  await allBudget(p,'待核');
+  assert.equal(await p.locator('[data-preflight-field="targetDate"]').inputValue(),'2026-11-10');
+  for(const [field,value] of Object.entries({weeklyStatus:'clear',weeklyBasis:'测试：期初及当日权益已核，本周无触线',mindsetStatus:'steady',mindsetBasis:'测试：本人确认不为回本',contextStatus:'supported',contextBasis:'测试：当前天时与题材、买点和仓位已核'}))await change(p,field,value);
+  const cell=p.locator('[data-operation-plan] [data-field="budget"]').first();
+  assert.equal(await cell.getAttribute('contenteditable'),'true');
+  await cell.fill('20%');await cell.dispatchEvent('input');
+  const key='a-share-operation-plan-2026-11-09-v2';
+  const draft=await p.evaluate(k=>JSON.parse(localStorage.getItem(k))[0].budget,key);assert.equal(draft,'20%');
+  await change(p,'weeklyReturn','-5');
+  await allBudget(p,'0');
+  assert.equal(await cell.getAttribute('contenteditable'),'false');
+  assert.equal(await p.evaluate(k=>JSON.parse(localStorage.getItem(k))[0].budget,key),'20%');
+  const downloadPromise=p.waitForEvent('download');
+  await p.locator('[data-export-plan]').click();
+  const download=await downloadPromise;const csv=fs.readFileSync(await download.path(),'utf8');
+  const lines=csv.trim().split(/\r?\n/).filter(Boolean);
+  const parse=line=>Array.from(line.matchAll(/"((?:[^"]|"")*)"(?:,|$)/g),m=>m[1].replaceAll('""','"'));
+  const header=parse(lines[0]);const col=header.indexOf('仓位预算');
+  assert(col>=0);assert(lines.slice(1).every(line=>parse(line)[col]==='0'));
+  await p.locator('[data-add-row]').first().click();await allBudget(p,'0');
+  await p.locator('[data-reset-plan]').click();await allBudget(p,'0');
+  await change(p,'weeklyReturn','0');await change(p,'weeklyStatus','clear');await allBudget(p,'0');
+  await p.reload();await allBudget(p,'0');
+  assert.equal(await p.evaluate(()=>JSON.parse(localStorage.getItem('a-share-weekly-loss-stop-2026-11-09-v1')).length),1);
+  await p.goto(url('2026-11-10'));await allBudget(p,'0');
+  await p.goto(url('2026-11-06'));await allBudget(p,'待核');
+  await p.goto(url('2026-11-13'));await allBudget(p,'待核');
+  const fresh=await browser.newContext({viewport:{width:390,height:1000}});
+  const q=await fresh.newPage();await route(q);await q.goto(url('2026-11-19'));await allBudget(q,'0');
+  assert.equal(await q.locator('[data-preflight-answer="mindset"]').textContent(),'待核');
+  assert(await q.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+  await q.locator('#daily-preflight').scrollIntoViewIfNeeded();
+  await q.screenshot({path:path.join(root,'output/preflight-mobile.png')});
+  await q.setViewportSize({width:1440,height:1000});
+  await q.locator('#daily-preflight').scrollIntoViewIfNeeded();
+  await q.screenshot({path:path.join(root,'output/preflight-desktop.png')});
+  const blocked=await browser.newPage();await route(blocked,true);await blocked.goto(url('2026-11-09'));await allBudget(blocked,'待核');
+  const broken=await browser.newPage();await route(broken);await broken.addInitScript(()=>localStorage.setItem('a-share-weekly-loss-stop-2026-11-09-v1','{'));
+  await broken.goto(url('2026-11-09'));await allBudget(broken,'待核');
+  assert.equal(errors.length,0,errors.join('\n'));
+  await browser.close();
+  console.log('PASS: pending, exact -5%, all row budgets, CSV, add/reset/reload, saved drafts, same-week carry, date/week isolation, public seed, storage failure, missing JS, desktop/mobile.');
+})().catch(e=>{console.error(e);process.exit(1)});
