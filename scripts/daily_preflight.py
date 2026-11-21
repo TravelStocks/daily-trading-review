@@ -30,7 +30,7 @@ def select_field(key, label, choices):
 
 def context_steps():
     return (
-        '<p class="preflight-order">先判断大盘下跌、企稳还是转强，再核题材持续性与实际回流，最后决定龙头买点和仓位。不能因为看好龙头就忽略天时。</p>'
+        '<p class="preflight-order">先分别判断大盘与短线情绪是在下跌、企稳还是转强，再核题材持续性与实际回流，最后决定龙头买点和仓位。指数与情绪共振下行时，不新开中高位连板接力仓；等待共同企稳或转强，不能因为看好龙头就忽略天时。医药、电力仅为防御观察方向，行业名称不能自动放行；周亏按周初权益达到5%后，本周新增开仓预算始终为0。</p>'
         '<div class="preflight-context-step"><h5>3.1 大盘：下跌、企稳还是转强？</h5>'
         '<p class="preflight-conclusion">结论：<span data-preflight-answer="market">待核</span></p>'
         '<p class="preflight-basis">依据：<span data-preflight-basis="market">待核</span></p></div>'
@@ -43,7 +43,7 @@ def context_steps():
 def context_editor():
     return (
         select_field('marketStage', '大盘状态', CONTEXT_CHOICES['marketStage'])
-        + '<label>大盘依据 / 日期（指数走势、量能与反证）<textarea data-preflight-field="marketBasis" rows="3"></textarea></label>'
+        + '<label>大盘与情绪依据 / 日期（分别写指数走势、量能；高标反馈、晋级与炸板、赚钱与亏钱效应。未确认标待核）<textarea data-preflight-field="marketBasis" rows="3"></textarea></label>'
         + select_field('themeContinuity', '题材持续性', CONTEXT_CHOICES['themeContinuity'])
         + select_field('themeReflow', '题材回流状态', CONTEXT_CHOICES['themeReflow'])
         + '<label>题材依据 / 日期（题材名称、逐日强弱、实际回流或未确认信号）<textarea data-preflight-field="themeBasis" rows="3"></textarea></label>'
