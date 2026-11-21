@@ -1,5 +1,65 @@
 [
   {
+    "date_iso": "2026-11-20",
+    "date_label": "11/20",
+    "date_display": "2026.11.20",
+    "title": "A股超短全景复盘（2026.11.20 周五）+ 11.23个股板块预案",
+    "source_docx": "2026-11-20_A股每日复盘_AI分析版.docx",
+    "page_path": "pages\\A股超短全景复盘（2026.11.20 周五）+ 11.23个股板块预案.html",
+    "author": "Raymond",
+    "intro": "极弱天时，先守纪律。主升连板预备池为空；原稿仅保留北纬科技的分歧承接预案，直接拉高或承接不清都放过。",
+    "emotion_summary": "28涨停、58跌停；四板并列、三板空缺",
+    "emotion_label": "冰点期",
+    "emotion_score": null,
+    "main_line_summary": [
+      "芯片、PCB与算力",
+      "机器人",
+      "AI应用与传媒",
+      "名称股与旧抱团"
+    ],
+    "core_stock_summary": "北纬条件预案；真视通、盛剑最终只观察。",
+    "core_stock_list": [
+      "北纬科技",
+      "真视通",
+      "盛剑科技",
+      "九阳股份",
+      "中京电子"
+    ],
+    "next_focus_lines": [
+      "芯片验证持续性，算力验证回流能否扩散到容量与后排；两个四板最终均不接力。",
+      "北纬分歧承接与襄阳缩量企稳分别观察；个股趋势不等于题材主升。",
+      "文投看缺口支撑及后续延续，新华作情绪锚，不以首板幸存者替代后排。",
+      "九阳看10日、15日线及连续深水；东方海洋反包受其反馈影响，优先级低于北纬。"
+    ],
+    "risk_summary": "极弱天时不扩大试错；原稿预算服从现行风控与更严确认。",
+    "personal_reflection": [],
+    "operation_emotion_analysis": "实际成交、账户仓位与私人反思不公开。",
+    "manual_rhythm_note": "",
+    "stock_annotations": [],
+    "board_tags": [
+      "芯片与PCB",
+      "算力",
+      "机器人",
+      "AI应用与传媒",
+      "旧抱团"
+    ],
+    "status_tags": [
+      "冰点期",
+      "四板并列",
+      "分歧承接"
+    ],
+    "summary_headline": "极弱天时：只留北纬条件预案，不追接力",
+    "research_bucket": "收盘复盘",
+    "has_reflection": false,
+    "market_style_note": "极弱天时，局部抱团与反包；中高位接力承压。",
+    "main_line_focus": "芯片相对强，算力大分歧，个股抱团与题材主升分开。",
+    "core_focus_note": "三进四2/3不抹去全筑失败；北纬未收盘封板。",
+    "tomorrow_focus_note": "11/23：北纬给分歧有承接才评估，直接拉高放过。",
+    "risk_focus_note": "原稿条件预案不是已获开仓许可。11/23属于新交易周，周亏与心态须本人重新核对；现行弱天时要求右侧确认，更严的一成上限优先。无完整风险参数不执行。",
+    "word_count_hint": 5583,
+    "updated_at": "2026-11-20 19:49:15"
+  },
+  {
     "date_iso": "2026-11-19",
     "date_label": "11/19",
     "date_display": "2026.11.19",
