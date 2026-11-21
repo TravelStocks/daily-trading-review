@@ -16,3 +16,4 @@
 .preflight-order{font-size:14px;line-height:1.8;color:#285b4b}.preflight-context-step{padding:12px 0;border-bottom:1px solid #dbe4df}.preflight-context-step h5,.preflight-decision-title{font-size:15px;line-height:1.6;margin:10px 0 6px;letter-spacing:0}
 .plan-field-value[data-preflight-locked]{color:#a0372a;font-weight:700;cursor:default}
 @media(max-width:650px){.daily-preflight h3{font-size:22px!important}.preflight-question h4{font-size:16px}.preflight-question button{min-height:40px}.preflight-result{font-size:13px}}
+.daily-preflight .preflight-motto{font-size:28px;font-weight:800;line-height:1.4;color:#7c241c;margin:0 0 16px}@media(max-width:650px){.daily-preflight .preflight-motto{font-size:24px}}
