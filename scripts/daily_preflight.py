@@ -81,6 +81,7 @@ def panel(day, values):
     seed = json.dumps(values,ensure_ascii=False).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
     return (START + f'<section class="daily-preflight" id="daily-preflight" data-daily-preflight data-review-date="{day}">'
             '<h3>盘前必问 · 三项前置检查</h3><label class="preflight-date">预案执行日<input type="date" data-preflight-field="targetDate"></label>'
+            '<h4>风控才是股市存活的生命线。</h4><p><strong>先问风控，再问心态，最后问买点与仓位。第一问触线，后两问不能推翻停止开仓。</strong></p>'
             + f'<p data-weekly-risk-rule>{RISK_RULE}</p>'
             + ''.join(blocks) + '<p class="preflight-result" data-preflight-result role="status">待核：三项确认后再看新增预算；周亏达到5%停止本周开新仓。</p>'
             '<p class="preflight-storage" data-preflight-storage></p>'
