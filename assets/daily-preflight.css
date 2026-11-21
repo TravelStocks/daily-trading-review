@@ -13,5 +13,6 @@
 .preflight-editor label{display:grid;gap:5px;font-size:13px}.preflight-editor textarea{width:100%;min-height:72px;resize:vertical}
 .preflight-result,.preflight-plan-notice{border-left:3px solid #a33b2d;padding:10px 14px;background:#fcf3ef;line-height:1.7;white-space:pre-wrap;font-size:14px}
 .preflight-storage{font-size:12px;color:#687a72}.preflight-budget-original{display:block;color:#687a72;font-size:11px;white-space:normal}
+.preflight-order{font-size:14px;line-height:1.8;color:#285b4b}.preflight-context-step{padding:12px 0;border-bottom:1px solid #dbe4df}.preflight-context-step h5,.preflight-decision-title{font-size:15px;line-height:1.6;margin:10px 0 6px;letter-spacing:0}
 .plan-field-value[data-preflight-locked]{color:#a0372a;font-weight:700;cursor:default}
 @media(max-width:650px){.daily-preflight h3{font-size:22px!important}.preflight-question h4{font-size:16px}.preflight-question button{min-height:40px}.preflight-result{font-size:13px}}

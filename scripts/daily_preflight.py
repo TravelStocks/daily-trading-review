@@ -11,13 +11,43 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
 START = '<!-- DAILY_PREFLIGHT_START -->'
 END = '<!-- DAILY_PREFLIGHT_END -->'
-ASSET_VERSION = '20261120-2'
+ASSET_VERSION = '20261121-context-order'
 RISK_RULE = '按周初权益计算整周收益，包含已实现和浮动盈亏，不按周内高点回撤。无出入金时，周收益率 =（当前权益 / 周初权益 - 1）× 100%；有出入金先单独核对，数据未确认标待核。本周任一时点周收益率 ≤ -5%（恰好亏5%也算）即触线：本周剩余时间停止开新仓，新增开仓预算统一为0。空仓、换票、亏损收窄、看好龙头或小仓试错均不能解除。进入新周重新核对周初权益与三问，不自动放行；已有持仓继续按原退出计划管理。'
 QUESTIONS = [
     ('weekly', '本周累计亏损有没有达到5%？', [('','待核'),('clear','已确认本周未触线'),('hit','已触线：停止本周新开仓')]),
     ('mindset', '我是不是急着回本，才想买得更早、买得更重？', [('','待核'),('steady','本人确认：不以回本驱动'),('urgent','有急于回本的心态')]),
     ('context', '天时和题材，是否支持这个买点及仓位？', [('','待核'),('supported','已核对：当前支持'),('unsupported','当前不支持')]),
 ]
+CONTEXT_CHOICES = {
+    'marketStage': [('', '待核'), ('falling', '下跌'), ('stabilizing', '企稳'), ('strengthening', '转强')],
+    'themeContinuity': [('', '待核'), ('sustained', '有持续性'), ('broken', '持续性不足 / 已中断')],
+    'themeReflow': [('', '待核'), ('confirmed', '回流已确认'), ('expected', '仅预期回流'), ('none', '未见回流'), ('ongoing', '持续走强，非回流节点')],
+}
+
+def select_field(key, label, choices):
+    options = ''.join(f'<option value="{value}">{text}</option>' for value, text in choices)
+    return f'<label>{label}<select data-preflight-field="{key}">{options}</select></label>'
+
+def context_steps():
+    return (
+        '<p class="preflight-order">先判断大盘下跌、企稳还是转强，再核题材持续性与实际回流，最后决定龙头买点和仓位。不能因为看好龙头就忽略天时。</p>'
+        '<div class="preflight-context-step"><h5>3.1 大盘：下跌、企稳还是转强？</h5>'
+        '<p class="preflight-conclusion">结论：<span data-preflight-answer="market">待核</span></p>'
+        '<p class="preflight-basis">依据：<span data-preflight-basis="market">待核</span></p></div>'
+        '<div class="preflight-context-step"><h5>3.2 题材：有没有持续性和实际回流？</h5>'
+        '<p class="preflight-conclusion">持续性：<span data-preflight-answer="themeContinuity">待核</span><br>回流：<span data-preflight-answer="themeReflow">待核</span></p>'
+        '<p class="preflight-basis">依据：<span data-preflight-basis="theme">待核</span></p></div>'
+        '<h5 class="preflight-decision-title">3.3 个股：以上证据是否支持龙头买点及仓位？</h5>'
+    )
+
+def context_editor():
+    return (
+        select_field('marketStage', '大盘状态', CONTEXT_CHOICES['marketStage'])
+        + '<label>大盘依据 / 日期（指数走势、量能与反证）<textarea data-preflight-field="marketBasis" rows="3"></textarea></label>'
+        + select_field('themeContinuity', '题材持续性', CONTEXT_CHOICES['themeContinuity'])
+        + select_field('themeReflow', '题材回流状态', CONTEXT_CHOICES['themeReflow'])
+        + '<label>题材依据 / 日期（题材名称、逐日强弱、实际回流或未确认信号）<textarea data-preflight-field="themeBasis" rows="3"></textarea></label>'
+    )
 
 def validate(values):
     if not isinstance(values, dict) or any(not isinstance(v,str) for v in values.values()):
@@ -25,6 +55,9 @@ def validate(values):
     for prefix, _, choices in QUESTIONS:
         if values.get(prefix + 'Status','') not in dict(choices):
             raise ValueError('Invalid preflight status: ' + prefix)
+    for key, choices in CONTEXT_CHOICES.items():
+        if values.get(key, '') not in dict(choices):
+            raise ValueError('Invalid preflight context field: ' + key)
     for key in ['targetDate', 'weeklyTriggeredOn']:
         if values.get(key):
             date.fromisoformat(values[key])
@@ -37,10 +70,14 @@ def panel(day, values):
         weekly = '<label>本周收益率（%，亏损填负数；可留空）<input type="number" step="0.01" data-preflight-field="weeklyReturn"></label>' if prefix == 'weekly' else ''
         blocks.append(
             f'<article class="preflight-question"><header><h4>{i}. {title}</h4><button type="button" data-preflight-edit aria-expanded="false">编辑</button></header>'
+            + (context_steps() if prefix == 'context' else '')
+            +
             f'<p class="preflight-conclusion">结论：<span data-preflight-answer="{prefix}">待核</span></p>'
             f'<p class="preflight-basis">依据：<span data-preflight-basis="{prefix}">待核</span></p>'
-            f'<div class="preflight-editor" hidden><label>结论<select data-preflight-field="{prefix}Status">{options}</select></label>{weekly}'
-            f'<label>依据 / 核对日期<textarea data-preflight-field="{prefix}Basis" rows="3"></textarea></label></div></article>')
+            '<div class="preflight-editor" hidden>'
+            + (context_editor() if prefix == 'context' else '')
+            + f'<label>{"买点及仓位综合结论" if prefix == "context" else "结论"}<select data-preflight-field="{prefix}Status">{options}</select></label>{weekly}'
+            + f'<label>{"龙头地位、买点、仓位上限、失效条件 / 日期" if prefix == "context" else "依据 / 核对日期"}<textarea data-preflight-field="{prefix}Basis" rows="3"></textarea></label></div></article>')
     seed = json.dumps(values,ensure_ascii=False).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
     return (START + f'<section class="daily-preflight" id="daily-preflight" data-daily-preflight data-review-date="{day}">'
             '<h3>盘前必问 · 三项前置检查</h3><label class="preflight-date">预案执行日<input type="date" data-preflight-field="targetDate"></label>'

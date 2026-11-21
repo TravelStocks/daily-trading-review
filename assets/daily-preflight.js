@@ -16,6 +16,11 @@
     catch { storageFailed = true; }
   };
   const state = {...seed};
+  const contextLabels = {
+    marketStage: {falling:'下跌',stabilizing:'企稳',strengthening:'转强'},
+    themeContinuity: {sustained:'有持续性',broken:'持续性不足 / 已中断'},
+    themeReflow: {confirmed:'回流已确认',expected:'仅预期回流',none:'未见回流',ongoing:'持续走强，非回流节点'}
+  };
   const saved = read(dayKey);
   if (saved && !Array.isArray(saved)) {
     for (const key of allowed) if (typeof saved[key] === 'string') state[key] = saved[key];
@@ -53,21 +58,27 @@
     const locked = Boolean(trigger);
     const complete = prefix => Boolean(String(state[prefix + 'Basis'] || '').trim());
     const weeklyClear = !storageFailed && week && state.weeklyStatus === 'clear' && complete('weekly');
+    const contextSequenceComplete = Boolean(contextLabels.marketStage[state.marketStage] && complete('market') &&
+      contextLabels.themeContinuity[state.themeContinuity] && contextLabels.themeReflow[state.themeReflow] && complete('theme'));
     const ready = !locked && weeklyClear && state.mindsetStatus === 'steady' && complete('mindset') &&
-      state.contextStatus === 'supported' && complete('context');
-    return {locked, ready, trigger, week, weeklyClear};
+      contextSequenceComplete && state.contextStatus === 'supported' && complete('context');
+    return {locked, ready, trigger, week, weeklyClear, contextSequenceComplete};
   };
   const set = (selector, value) => { root.querySelector(selector).textContent = value; };
   const notify = () => window.dispatchEvent(new CustomEvent('daily-preflight-change'));
   const refresh = () => {
     snapshot = evaluate();
-    const {locked,ready,trigger,weeklyClear} = snapshot;
+    const {locked,ready,trigger,weeklyClear,contextSequenceComplete} = snapshot;
     set('[data-preflight-answer="weekly"]', locked ? '已触线 · 本周停止开新仓' : weeklyClear ? '已确认未触线 · 继续核对后两问' : '待核');
     set('[data-preflight-basis="weekly"]', locked ? (trigger.basis || '本人确认本周已触线；具体依据待补。') + '\n触线记录适用日：' + trigger.date : state.weeklyBasis || '待核：尚未确认本周期初权益、当前收益及本周触线记录。');
     set('[data-preflight-answer="mindset"]', state.mindsetStatus === 'urgent' ? '急于回本 · 不得放宽纪律' : state.mindsetStatus === 'steady' && state.mindsetBasis?.trim() ? '本人已确认 · 不以回本驱动这笔交易' : '待核');
     set('[data-preflight-basis="mindset"]', state.mindsetBasis || '待核：需要本人当前确认，不根据亏损推测心态。');
-    set('[data-preflight-answer="context"]', state.contextStatus === 'unsupported' ? '当前不支持 · 不执行新开仓' : state.contextStatus === 'supported' && state.contextBasis?.trim() ? '已确认支持 · 仍服从周风控与更严限仓' : '待核');
-    set('[data-preflight-basis="context"]', state.contextBasis || '待核：需核对当前天时、题材回流、主动性、承接及仓位。');
+    set('[data-preflight-answer="market"]', contextLabels.marketStage[state.marketStage] && state.marketBasis?.trim() ? contextLabels.marketStage[state.marketStage] : '待核');
+    set('[data-preflight-basis="market"]', state.marketBasis || '待核：记录大盘状态及对应日期、走势、量能与反证；单根阳线或十字星不直接等于底部确认。');
+    for (const key of ['themeContinuity','themeReflow']) set('[data-preflight-answer="' + key + '"]', contextLabels[key][state[key]] && state.themeBasis?.trim() ? contextLabels[key][state[key]] : '待核');
+    set('[data-preflight-basis="theme"]', state.themeBasis || '待核：写明题材、逐日强弱和回流证据；区分实际回流与仅有回流预期。');
+    set('[data-preflight-answer="context"]', state.contextStatus === 'unsupported' ? '当前不支持 · 不执行新开仓' : !contextSequenceComplete ? '待核 · 先完成大盘与题材判断' : state.contextStatus === 'supported' && state.contextBasis?.trim() ? '已确认支持 · 仍服从周风控与更严限仓' : '待核');
+    set('[data-preflight-basis="context"]', state.contextBasis || '待核：基于前两步，核对龙头地位、主动性、承接、左右侧买点、仓位上限与失效条件；不能只因看好龙头而放行。');
     const message = locked ? '本周已触及亏损5%：所有新增开仓预算为0。看好龙头、回本冲动、换票或后续回升均不解除；已有持仓按原退出计划处理。' :
       ready ? '三问已记录；按原预案与更严风控执行，不代表买点已触发。' : '前置检查未全部确认：新增开仓预算待核，不作为开仓许可。';
     set('[data-preflight-result]', message);
@@ -100,6 +111,10 @@
     if (!field) return;
     const oldTarget = state.targetDate;
     state[field.dataset.preflightField] = field.value;
+    if (['marketStage','marketBasis','themeContinuity','themeReflow','themeBasis'].includes(field.dataset.preflightField)) {
+      state.contextStatus = '';
+      root.querySelector('[data-preflight-field="contextStatus"]').value = '';
+    }
     if (field.dataset.preflightField === 'targetDate' && oldTarget !== field.value) {
       for (const key of allowed.filter(key => key !== 'targetDate')) state[key] = '';
       fields.forEach(item => {item.value = state[item.dataset.preflightField] || '';});
