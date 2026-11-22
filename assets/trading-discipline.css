@@ -1,0 +1,17 @@
+.trading-discipline{margin:24px 0;padding:24px 0;border-top:2px solid #aebdb8;min-width:0;scroll-margin-top:140px}
+.trading-discipline h2{font-size:26px!important;line-height:1.4;letter-spacing:0;margin:0 0 8px!important}
+.trading-discipline .discipline-date{font-size:13px;line-height:1.7;color:#596d68;margin:0 0 20px}
+.discipline-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1.35fr);gap:24px}
+.discipline-column{min-width:0;padding:14px 0 0;border-top:5px solid var(--discipline-color);background:transparent;border-radius:0;box-shadow:none}
+.discipline-forbidden{--discipline-color:#a1332d}.discipline-limited{--discipline-color:#936014}.discipline-primary{--discipline-color:#176c58}
+.trading-discipline .discipline-column h3{font-size:22px!important;color:var(--discipline-color);line-height:1.4;margin:0 0 4px!important;letter-spacing:0}
+.trading-discipline .discipline-action{font-size:13px;font-weight:700;color:var(--discipline-color);margin:0 0 14px}
+.trading-discipline .discipline-column ul{display:block;list-style:disc;padding-left:20px;margin:0}
+.trading-discipline .discipline-column li{border:0;padding:0;margin:0 0 12px;font-size:15px;line-height:1.7;overflow-wrap:anywhere}
+.trading-discipline .discipline-column li:before{content:none}
+.discipline-column li span{display:block;font-size:14px;font-weight:400;color:#4e625c}
+.trading-discipline .discipline-column>p:not(.discipline-action){font-size:14px;line-height:1.8;color:#4e625c}
+.trading-discipline .discipline-threshold,.trading-discipline .discipline-check,.trading-discipline .discipline-stop{font-size:14px;line-height:1.8;margin:16px 0 0;overflow-wrap:anywhere}
+.trading-discipline .discipline-stop{color:#8d302a;border-top:1px solid #d8e1dd;padding-top:12px}
+@media(max-width:800px){.discipline-grid{grid-template-columns:1fr;gap:22px}.trading-discipline h2{font-size:24px!important}.trading-discipline{scroll-margin-top:120px}}
+

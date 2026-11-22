@@ -11,13 +11,38 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
 START = '<!-- DAILY_PREFLIGHT_START -->'
 END = '<!-- DAILY_PREFLIGHT_END -->'
-ASSET_VERSION = '20261121-risk-motto-first'
+ASSET_VERSION = '20261122-trading-discipline'
 RISK_RULE = '按周初权益计算整周收益，包含已实现和浮动盈亏，不按周内高点回撤。无出入金时，周收益率 =（当前权益 / 周初权益 - 1）× 100%；有出入金先单独核对，数据未确认标待核。本周任一时点周收益率 ≤ -5%（恰好亏5%也算）即触线：本周剩余时间停止开新仓，新增开仓预算统一为0。空仓、换票、亏损收窄、看好龙头或小仓试错均不能解除。进入新周重新核对周初权益与三问，不自动放行；已有持仓继续按原退出计划管理。'
 QUESTIONS = [
     ('weekly', '本周累计亏损有没有达到5%？', [('','待核'),('clear','已确认本周未触线'),('hit','已触线：停止本周新开仓')]),
     ('mindset', '我是不是急着回本，才想买得更早、买得更重？', [('','待核'),('steady','本人确认：不以回本驱动'),('urgent','有急于回本的心态')]),
     ('context', '天时和题材，是否支持这个买点及仓位？', [('','待核'),('supported','已核对：当前支持'),('unsupported','当前不支持')]),
 ]
+DISCIPLINE_LISTS = """<section class="trading-discipline" id="trading-discipline" data-trading-discipline>
+<h2>三份交易清单</h2>
+<p class="discipline-date">个人执行纪律 · 2026-11-22更新 · 先过风控三问，再逐票归类</p>
+<div class="discipline-grid">
+<section class="discipline-column discipline-forbidden" data-trading-category="forbidden"><h3>禁忌清单</h3><p class="discipline-action">不新增开仓</p><ul>
+<li><strong>抢反弹、抄底、切换</strong></li><li><strong>同身位PK</strong></li><li><strong>低身位卡高身位PK</strong></li>
+</ul><p>不抢未定龙，不做被动跟风；不在弱天时左侧重仓，不为回本加仓。切换不再保留旧版“半成仓试错”例外。</p></section>
+<section class="discipline-column discipline-limited" data-trading-category="limited"><h3>少做清单</h3><p class="discipline-action">严格筛选，条件写清</p><ul>
+<li><strong>普通补涨</strong><span>仅确认地位的“补涨三板龙”列入主做，其余仍少做。</span></li>
+<li><strong>监管反核</strong><span>若做，仅限首日，最多两成仓；更严限仓和周风控优先。</span></li>
+<li><strong>绕异动</strong></li>
+</ul></section>
+<section class="discipline-column discipline-primary" data-trading-category="primary"><h3>主做清单</h3><p class="discipline-action">满足条件再做</p><ul>
+<li><strong>龙头二波</strong><span>突破平台或反包板。</span></li>
+<li><strong>抱团龙</strong><span>反包或突破平台，只做主动核心。</span></li>
+<li><strong>补涨三板龙</strong><span>确认地位的三板买点，不延伸为四板盲接。</span></li>
+<li><strong>题材第一波主升二阶段连板龙</strong><span>竞价超预期缺口；回封大单半路；板上连续大单进攻。</span></li>
+</ul></section>
+</div>
+<p class="discipline-threshold"><strong>1/4口径：</strong>连续进攻大单金额 ≥ 上方压单金额 × 1/4，仅作为准备排单信号；仍须同时核对题材、龙头地位、量能与失效条件，不是自动买入。</p>
+<p class="discipline-check"><strong>逐票核对：</strong>标的 → 清单归类 → 依据与时点 → 买点及失效条件 → 新增预算。禁忌票新增预算0；少做须写清参与条件；未确认标待核。主做不等于无条件做。</p>
+<p class="discipline-stop"><strong>周亏按周初权益计算，达到5%，本周全部新增开仓预算为0。三份清单均不能豁免。</strong></p>
+</section>
+"""
+
 CONTEXT_CHOICES = {
     'marketStage': [('', '待核'), ('falling', '下跌'), ('stabilizing', '企稳'), ('strengthening', '转强')],
     'themeContinuity': [('', '待核'), ('sustained', '有持续性'), ('broken', '持续性不足 / 已中断')],
@@ -49,6 +74,15 @@ def context_editor():
         + '<label>题材依据 / 日期（题材名称、逐日强弱、实际回流或未确认信号）<textarea data-preflight-field="themeBasis" rows="3"></textarea></label>'
     )
 
+def discipline_review():
+    return (DISCIPLINE_LISTS
+        + '<article class="preflight-checklist-review"><header><h4>今日逐票清单核对</h4><button type="button" data-preflight-edit aria-expanded="false">编辑</button></header>'
+        '<p class="preflight-conclusion">结论：<span data-preflight-answer="checklist">待核</span></p>'
+        '<p class="preflight-basis">依据：<span data-preflight-basis="checklist">待核：逐票记录清单归类、依据与时点、买点及失效条件、预算；禁忌票预算0。</span></p>'
+        '<div class="preflight-editor" hidden>'
+        + select_field('checklistStatus', '核对结论', [('', '待核'), ('reviewed', '已逐票核对，禁忌票已剔除 / 仅零预算观察')])
+        + '<label>逐票依据 / 日期（少做写条件，主做写买点，禁忌预算0；无计划时写明继续空仓）<textarea data-preflight-field="checklistBasis" rows="5"></textarea></label></div></article>')
+
 def validate(values):
     if not isinstance(values, dict) or any(not isinstance(v,str) for v in values.values()):
         raise ValueError('Daily preflight must be a flat string dictionary')
@@ -61,6 +95,8 @@ def validate(values):
     for key in ['targetDate', 'weeklyTriggeredOn']:
         if values.get(key):
             date.fromisoformat(values[key])
+    if values.get('checklistStatus', '') not in ['', 'reviewed']:
+        raise ValueError('Invalid checklist status')
     return values
 
 def panel(day, values):
@@ -83,7 +119,7 @@ def panel(day, values):
             '<p class="preflight-motto" data-preflight-motto><strong>风控才是股市存活的生命线。</strong></p><p data-no-rebound-rule><strong>不要抢反弹，不要抄底。收益空间有限、风险难以控制时，宁可空仓，也不在悬崖边上跳舞。君子不立危墙之下，先避免置身险境。</strong></p><p><strong>先问风控，再问心态，最后问买点与仓位。第一问触线，后两问不能推翻停止开仓。</strong></p>'
             '<h3>盘前必问 · 三项前置检查</h3><label class="preflight-date">预案执行日<input type="date" data-preflight-field="targetDate"></label>'
             + f'<p data-weekly-risk-rule>{RISK_RULE}</p>'
-            + ''.join(blocks) + '<p class="preflight-result" data-preflight-result role="status">待核：三项确认后再看新增预算；周亏达到5%停止本周开新仓。</p>'
+            + ''.join(blocks) + discipline_review() + '<p class="preflight-result" data-preflight-result role="status">待核：三问及逐票清单核对完成后再看新增预算；周亏达到5%停止本周开新仓。</p>'
             '<p class="preflight-storage" data-preflight-storage></p>'
             f'<script type="application/json" data-daily-preflight-defaults>{seed}</script></section>' + END)
 
@@ -142,12 +178,12 @@ def apply(page, values=None, source=None):
     raw = raw[:root_tag.end()] + panel(day,values) + raw[root_tag.end():]
     asset_dir = page.parent.parent / 'assets'
     asset_dir.mkdir(exist_ok=True)
-    for name in ['daily-preflight.js','daily-preflight.css']:
+    for name in ['daily-preflight.js','daily-preflight.css','trading-discipline.css']:
         source = ROOT / 'assets' / name
         destination = asset_dir / name
         if source.resolve() != destination.resolve():
             shutil.copyfile(source,destination)
-    link = f'<link rel="stylesheet" data-daily-preflight-asset href="../assets/daily-preflight.css?v={ASSET_VERSION}">'
+    link = f'<link rel="stylesheet" data-daily-preflight-asset href="../assets/daily-preflight.css?v={ASSET_VERSION}"><link rel="stylesheet" data-daily-preflight-asset href="../assets/trading-discipline.css?v={ASSET_VERSION}">'
     raw = raw.replace('</head>',link+'</head>',1)
     if 'data-daily-preflight-nav' not in raw:
         nav = re.search(r'<a\b[^>]*href="#plan-preconditions"[^>]*>',raw)

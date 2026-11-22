@@ -60,8 +60,9 @@
     const weeklyClear = !storageFailed && week && state.weeklyStatus === 'clear' && complete('weekly');
     const contextSequenceComplete = Boolean(contextLabels.marketStage[state.marketStage] && complete('market') &&
       contextLabels.themeContinuity[state.themeContinuity] && contextLabels.themeReflow[state.themeReflow] && complete('theme'));
+    const checklistReady = !allowed.includes('checklistStatus') || state.checklistStatus === 'reviewed' && complete('checklist');
     const ready = !locked && weeklyClear && state.mindsetStatus === 'steady' && complete('mindset') &&
-      contextSequenceComplete && state.contextStatus === 'supported' && complete('context');
+      contextSequenceComplete && state.contextStatus === 'supported' && complete('context') && checklistReady;
     return {locked, ready, trigger, week, weeklyClear, contextSequenceComplete};
   };
   const set = (selector, value) => { root.querySelector(selector).textContent = value; };
@@ -79,8 +80,13 @@
     set('[data-preflight-basis="theme"]', state.themeBasis || '待核：写明题材、逐日强弱和回流证据；区分实际回流与仅有回流预期。');
     set('[data-preflight-answer="context"]', state.contextStatus === 'unsupported' ? '当前不支持 · 不执行新开仓' : !contextSequenceComplete ? '待核 · 先完成大盘与题材判断' : state.contextStatus === 'supported' && state.contextBasis?.trim() ? '已确认支持 · 仍服从周风控与更严限仓' : '待核');
     set('[data-preflight-basis="context"]', state.contextBasis || '待核：基于前两步，核对龙头地位、主动性、承接、左右侧买点、仓位上限与失效条件；不能只因看好龙头而放行。');
+    if (allowed.includes('checklistStatus')) {
+      const checked = state.checklistStatus === 'reviewed' && state.checklistBasis?.trim();
+      set('[data-preflight-answer="checklist"]', checked ? '已逐票核对 · 仍服从三问和更严风控' : '待核 · 尚未完成逐票清单核对');
+      set('[data-preflight-basis="checklist"]', state.checklistBasis || '待核：逐票记录归类、依据与时点、买点及失效条件、预算。禁忌票剔除或仅零预算观察；无计划时写明继续空仓。');
+    }
     const message = locked ? '本周已触及亏损5%：所有新增开仓预算为0。看好龙头、回本冲动、换票或后续回升均不解除；已有持仓按原退出计划处理。' :
-      ready ? '三问已记录；按原预案与更严风控执行，不代表买点已触发。' : '前置检查未全部确认：新增开仓预算待核，不作为开仓许可。';
+      ready ? '三问及页面要求的逐票清单核对已记录；按原预案与更严风控执行，不代表买点已触发。' : '前置检查未全部确认：新增开仓预算待核，不作为开仓许可。';
     set('[data-preflight-result]', message);
     document.querySelectorAll('[data-preflight-plan-notice]').forEach(node => {node.textContent = message;});
     set('[data-preflight-storage]', storageFailed ? '本地存储不可用或记录损坏，请核对；未自动放行。' : '检查结果保存在当前浏览器；公共页面不会上传本地修改。');
@@ -101,7 +107,7 @@
   root.addEventListener('click', event => {
     const button = event.target.closest('[data-preflight-edit]');
     if (!button) return;
-    const editor = button.closest('.preflight-question').querySelector('.preflight-editor');
+    const editor = button.closest('.preflight-question,.preflight-checklist-review').querySelector('.preflight-editor');
     editor.hidden = !editor.hidden;
     button.textContent = editor.hidden ? '编辑' : '完成';
     button.setAttribute('aria-expanded', String(!editor.hidden));
@@ -111,6 +117,10 @@
     if (!field) return;
     const oldTarget = state.targetDate;
     state[field.dataset.preflightField] = field.value;
+    if (allowed.includes('checklistStatus') && ['checklistBasis','marketStage','marketBasis','themeContinuity','themeReflow','themeBasis','contextStatus','contextBasis'].includes(field.dataset.preflightField)) {
+      state.checklistStatus = '';
+      root.querySelector('[data-preflight-field="checklistStatus"]').value = '';
+    }
     if (['marketStage','marketBasis','themeContinuity','themeReflow','themeBasis'].includes(field.dataset.preflightField)) {
       state.contextStatus = '';
       root.querySelector('[data-preflight-field="contextStatus"]').value = '';

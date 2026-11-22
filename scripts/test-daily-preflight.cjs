@@ -111,6 +111,44 @@ async function allBudget(p,value){const a=await budgets(p);assert(a.length>0);as
   const blocked=await browser.newPage();await route(blocked,true);await blocked.goto(url('2026-11-09'));await allBudget(blocked,'待核');
   const broken=await browser.newPage();await route(broken);await broken.addInitScript(()=>localStorage.setItem('a-share-weekly-loss-stop-2026-11-09-v1','{'));
   await broken.goto(url('2026-11-09'));await allBudget(broken,'待核');
+  const checklistContext=await browser.newContext({viewport:{width:1440,height:1100}});
+  const c=await checklistContext.newPage();await route(c);c.on('pageerror',e=>errors.push(e.message));
+  await c.goto(url('2026-11-20'));
+  assert.equal(await c.locator('.preflight-question').count(),3);
+  assert.equal(await c.locator('[data-trading-category]').count(),3);
+  assert.equal(await c.locator('[data-trading-category="forbidden"] li').count(),3);
+  assert.equal(await c.locator('[data-trading-category="primary"] li').count(),4);
+  assert(await c.locator('#daily-preflight').evaluate(el=>{
+    const questions=el.querySelectorAll('.preflight-question'),lists=el.querySelector('[data-trading-discipline]');
+    return Boolean(questions[2].compareDocumentPosition(lists)&Node.DOCUMENT_POSITION_FOLLOWING);
+  }));
+  await allBudget(c,'待核');
+  for(const [field,value]of Object.entries({weeklyStatus:'clear',weeklyBasis:'测试：新周期初已核且未触线',mindsetStatus:'steady',mindsetBasis:'测试：本人确认',marketStage:'stabilizing',marketBasis:'测试：指数情绪企稳',themeContinuity:'sustained',themeReflow:'confirmed',themeBasis:'测试：题材实际回流',contextBasis:'测试：主动核心，买点与限仓已核',contextStatus:'supported'}))await change(c,field,value);
+  await allBudget(c,'待核');
+  await c.locator('.preflight-checklist-review [data-preflight-edit]').click();
+  await change(c,'checklistStatus','reviewed');await allBudget(c,'待核');
+  await change(c,'checklistBasis','测试：计划逐票已归类；禁忌票剔除，少做条件、主做买点及预算已核');
+  assert.equal(await c.locator('[data-preflight-field="checklistStatus"]').inputValue(),'');
+  await change(c,'checklistStatus','reviewed');
+  assert.equal(await c.evaluate(()=>window.dailyPreflight.budget('20%')),'20%');
+  await c.reload();
+  assert.equal(await c.locator('[data-preflight-field="checklistStatus"]').inputValue(),'reviewed');
+  assert((await c.locator('[data-preflight-basis="checklist"]').textContent()).includes('计划逐票'));
+  await change(c,'contextBasis','测试：买点依据有更新');await allBudget(c,'待核');
+  await change(c,'checklistStatus','reviewed');
+  await change(c,'weeklyReturn','-5');await allBudget(c,'0');
+  await change(c,'checklistStatus','reviewed');await allBudget(c,'0');
+  await c.reload();await allBudget(c,'0');
+  await change(c,'targetDate','2026-11-24');await allBudget(c,'0');
+  assert.equal(await c.locator('[data-preflight-field="checklistStatus"]').inputValue(),'');
+  await change(c,'targetDate','2026-11-30');await allBudget(c,'待核');
+  await c.addStyleTag({content:'html{scroll-behavior:auto!important}'});
+  for(const width of [1440,390]){
+    await c.setViewportSize({width,height:1100});
+    await c.locator('#trading-discipline').evaluate(el=>el.scrollIntoView({block:'start'}));
+    assert(await c.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+    await c.screenshot({path:path.join(root,'output/trading-discipline-'+width+'.png')});
+  }
   assert.equal(errors.length,0,errors.join('\n'));
   await browser.close();
   console.log('PASS: context sequence/evidence, pending and legacy answers, upstream changes require reconfirmation, exact -5%, all row budgets, CSV, add/reset/reload, saved drafts, same-week carry, date/week isolation, public seed, storage failure, missing JS, desktop/mobile.');

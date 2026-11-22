@@ -5,6 +5,9 @@
 .daily-preflight input,.daily-preflight select,.daily-preflight textarea{font:inherit;box-sizing:border-box;max-width:100%;border:1px solid #c7d6cf;border-radius:4px;padding:8px;background:#fff;color:#183e35}
 .daily-preflight input[type=date]{width:160px}.daily-preflight input[type=number]{width:160px}
 .preflight-question{padding:18px 0;border-top:1px solid #dbe4df}
+.preflight-checklist-review{padding:18px 0;border-top:1px solid #dbe4df}
+.preflight-checklist-review header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.preflight-checklist-review button{flex-shrink:0;border:1px solid #c7d6cf;border-radius:4px;padding:6px 12px;background:white;color:#285b4b;font:inherit;font-size:13px;cursor:pointer;min-height:40px}
 .preflight-question header{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
 .preflight-question button{flex-shrink:0;border:1px solid #c7d6cf;border-radius:4px;padding:6px 12px;background:white;color:#285b4b;font:inherit;font-size:13px;cursor:pointer}
 .preflight-conclusion{font-weight:700;color:#714820;margin:10px 0 6px;line-height:1.6}
