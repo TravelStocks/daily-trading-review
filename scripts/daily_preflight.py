@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
 START = '<!-- DAILY_PREFLIGHT_START -->'
 END = '<!-- DAILY_PREFLIGHT_END -->'
-ASSET_VERSION = '20261122-mode-priority'
+ASSET_VERSION = '20261122-four-stops'
 RISK_RULE = '按周初权益计算整周收益，包含已实现和浮动盈亏，不按周内高点回撤。无出入金时，周收益率 =（当前权益 / 周初权益 - 1）× 100%；有出入金先单独核对，数据未确认标待核。本周任一时点周收益率 ≤ -5%（恰好亏5%也算）即触线：本周剩余时间停止开新仓，新增开仓预算统一为0。空仓、换票、亏损收窄、看好龙头或小仓试错均不能解除。进入新周重新核对周初权益与三问，不自动放行；已有持仓继续按原退出计划管理。'
 QUESTIONS = [
     ('weekly', '本周累计亏损有没有达到5%？', [('','待核'),('clear','已确认本周未触线'),('hit','已触线：停止本周新开仓')]),
@@ -24,7 +24,7 @@ DISCIPLINE_LISTS = """<section class="trading-discipline" id="trading-discipline
 <div class="discipline-grid">
 <section class="discipline-column discipline-forbidden" data-trading-category="forbidden"><h3>禁忌清单</h3><p class="discipline-action">不新增开仓</p><ul>
 <li><strong>抢反弹、抄底、切换</strong></li><li><strong>同身位PK</strong></li><li><strong>低身位卡高身位PK</strong></li>
-</ul><p>不抢未定龙，不做被动跟风；不在弱天时左侧重仓，不为回本加仓。切换不再保留旧版“半成仓试错”例外。</p></section>
+</ul><ol class="discipline-four-stops"><li>不抢未定龙</li><li>不做被动跟风</li><li>不在弱天时左侧重仓</li><li>不为回本放宽纪律</li></ol><p>切换不再保留旧版“半成仓试错”例外。</p></section>
 <section class="discipline-column discipline-limited" data-trading-category="limited"><h3>少做清单</h3><p class="discipline-action">严格筛选，条件写清</p><ul>
 <li><strong>普通补涨</strong><span>仅确认地位的“补涨三板龙”列入主做，其余仍少做。</span></li>
 <li><strong>监管反核</strong><span>若做，仅限首日，最多两成仓；更严限仓和周风控优先。</span></li>

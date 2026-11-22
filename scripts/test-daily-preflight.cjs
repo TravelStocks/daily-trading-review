@@ -116,7 +116,8 @@ async function allBudget(p,value){const a=await budgets(p);assert(a.length>0);as
   await c.goto(url('2026-11-20'));
   assert.equal(await c.locator('.preflight-question').count(),3);
   assert.equal(await c.locator('[data-trading-category]').count(),3);
-  assert.equal(await c.locator('[data-trading-category="forbidden"] li').count(),3);
+  assert.equal(await c.locator('[data-trading-category="forbidden"] > ul > li').count(),3);
+  assert.deepEqual(await c.locator('[data-trading-category="forbidden"] .discipline-four-stops > li').allTextContents(),['不抢未定龙','不做被动跟风','不在弱天时左侧重仓','不为回本放宽纪律']);
   assert.equal(await c.locator('[data-trading-category="primary"] li').count(),4);
   assert.deepEqual(await c.locator('[data-trading-category="primary"] .mode-priority-label b').allTextContents(),['80%','12%','6%','2%']);
   assert.deepEqual(await c.locator('[data-trading-category="primary"] li>strong').allTextContents(),['题材第一波主升二阶段连板龙','龙头二波','抱团龙','补涨三板龙']);
