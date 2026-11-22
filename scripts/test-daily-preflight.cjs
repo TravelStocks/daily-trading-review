@@ -118,6 +118,9 @@ async function allBudget(p,value){const a=await budgets(p);assert(a.length>0);as
   assert.equal(await c.locator('[data-trading-category]').count(),3);
   assert.equal(await c.locator('[data-trading-category="forbidden"] li').count(),3);
   assert.equal(await c.locator('[data-trading-category="primary"] li').count(),4);
+  assert.deepEqual(await c.locator('[data-trading-category="primary"] .mode-priority-label b').allTextContents(),['80%','12%','6%','2%']);
+  assert.deepEqual(await c.locator('[data-trading-category="primary"] li>strong').allTextContents(),['题材第一波主升二阶段连板龙','龙头二波','抱团龙','补涨三板龙']);
+  assert.match(await c.locator('[data-trading-category="primary"]').innerText(),/不是单笔仓位比例或开仓指令/);
   assert(await c.locator('#daily-preflight').evaluate(el=>{
     const questions=el.querySelectorAll('.preflight-question'),lists=el.querySelector('[data-trading-discipline]');
     return Boolean(questions[2].compareDocumentPosition(lists)&Node.DOCUMENT_POSITION_FOLLOWING);

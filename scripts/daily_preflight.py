@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
 START = '<!-- DAILY_PREFLIGHT_START -->'
 END = '<!-- DAILY_PREFLIGHT_END -->'
-ASSET_VERSION = '20261122-trading-discipline'
+ASSET_VERSION = '20261122-mode-priority'
 RISK_RULE = '按周初权益计算整周收益，包含已实现和浮动盈亏，不按周内高点回撤。无出入金时，周收益率 =（当前权益 / 周初权益 - 1）× 100%；有出入金先单独核对，数据未确认标待核。本周任一时点周收益率 ≤ -5%（恰好亏5%也算）即触线：本周剩余时间停止开新仓，新增开仓预算统一为0。空仓、换票、亏损收窄、看好龙头或小仓试错均不能解除。进入新周重新核对周初权益与三问，不自动放行；已有持仓继续按原退出计划管理。'
 QUESTIONS = [
     ('weekly', '本周累计亏损有没有达到5%？', [('','待核'),('clear','已确认本周未触线'),('hit','已触线：停止本周新开仓')]),
@@ -30,12 +30,12 @@ DISCIPLINE_LISTS = """<section class="trading-discipline" id="trading-discipline
 <li><strong>监管反核</strong><span>若做，仅限首日，最多两成仓；更严限仓和周风控优先。</span></li>
 <li><strong>绕异动</strong></li>
 </ul></section>
-<section class="discipline-column discipline-primary" data-trading-category="primary"><h3>主做清单</h3><p class="discipline-action">满足条件再做</p><ul>
-<li><strong>龙头二波</strong><span>突破平台或反包板。</span></li>
-<li><strong>抱团龙</strong><span>反包或突破平台，只做主动核心。</span></li>
-<li><strong>补涨三板龙</strong><span>确认地位的三板买点，不延伸为四板盲接。</span></li>
-<li><strong>题材第一波主升二阶段连板龙</strong><span>竞价超预期缺口；回封大单半路；板上连续大单进攻。</span></li>
-</ul></section>
+<section class="discipline-column discipline-primary" data-trading-category="primary"><h3>主做清单</h3><p class="discipline-action">模式内确认，不自动放行</p><ol class="primary-mode-priority">
+<li><span class="mode-priority-label">第一优先级 · 核心主攻 <b>80%</b></span><strong>题材第一波主升二阶段连板龙</strong><span>竞价超预期缺口；回封大单半路；板上连续大单进攻。</span></li>
+<li><span class="mode-priority-label">第二优先级 · 重点关注 <b>12%</b></span><strong>龙头二波</strong><span>突破平台或反包板。</span></li>
+<li><span class="mode-priority-label">第三优先级 · 次要关注 <b>6%</b></span><strong>抱团龙</strong><span>反包或突破平台，只做主动核心。</span></li>
+<li><span class="mode-priority-label">第四优先级 · 严格择机 <b>2%</b></span><strong>补涨三板龙</strong><span>确认地位的三板买点，不延伸为四板盲接。</span></li>
+</ol><p>主模式与次模式为8:2；次模式内部二波、抱团、补涨为6:3:1。80%、12%、6%、2%是模式侧重与重要程度，不是单笔仓位比例或开仓指令；风控与确认条件始终优先。</p></section>
 </div>
 <p class="discipline-threshold"><strong>1/4口径：</strong>连续进攻大单金额 ≥ 上方压单金额 × 1/4，仅作为准备排单信号；仍须同时核对题材、龙头地位、量能与失效条件，不是自动买入。</p>
 <p class="discipline-check"><strong>逐票核对：</strong>标的 → 清单归类 → 依据与时点 → 买点及失效条件 → 新增预算。禁忌票新增预算0；少做须写清参与条件；未确认标待核。主做不等于无条件做。</p>

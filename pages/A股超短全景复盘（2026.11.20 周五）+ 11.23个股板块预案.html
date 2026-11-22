@@ -201,7 +201,7 @@
 .decision-step #stock-pool td:nth-child(3),.decision-step #stock-pool td:nth-child(5){white-space:nowrap}
 .decision-step #high-board-volumes .data-table{min-width:1050px}
 .decision-step #leader-theme-factors .data-table,.decision-step #stock-mode-fit .data-table{min-width:1050px}
-</style><link rel="stylesheet" data-daily-preflight-asset href="../assets/daily-preflight.css?v=20261122-trading-discipline"><link rel="stylesheet" data-daily-preflight-asset href="../assets/trading-discipline.css?v=20261122-trading-discipline"></head>
+</style><link rel="stylesheet" data-daily-preflight-asset href="../assets/daily-preflight.css?v=20261122-mode-priority"><link rel="stylesheet" data-daily-preflight-asset href="../assets/trading-discipline.css?v=20261122-mode-priority"></head>
 <body class="review-workbench close-report" id="page-top"><div class="reading-progress" data-reading-progress=""></div><div class="mobile-toc-scrim" data-toc-scrim=""></div><div aria-label="页面工具" class="workbench-tools"><button data-toc-toggle="" type="button">目录</button><button data-back-top="" type="button">顶部</button></div>
 <div class="layout">
 <aside class="toc">
@@ -232,12 +232,12 @@
 <li><strong>监管反核</strong><span>若做，仅限首日，最多两成仓；更严限仓和周风控优先。</span></li>
 <li><strong>绕异动</strong></li>
 </ul></section>
-<section class="discipline-column discipline-primary" data-trading-category="primary"><h3>主做清单</h3><p class="discipline-action">满足条件再做</p><ul>
-<li><strong>龙头二波</strong><span>突破平台或反包板。</span></li>
-<li><strong>抱团龙</strong><span>反包或突破平台，只做主动核心。</span></li>
-<li><strong>补涨三板龙</strong><span>确认地位的三板买点，不延伸为四板盲接。</span></li>
-<li><strong>题材第一波主升二阶段连板龙</strong><span>竞价超预期缺口；回封大单半路；板上连续大单进攻。</span></li>
-</ul></section>
+<section class="discipline-column discipline-primary" data-trading-category="primary"><h3>主做清单</h3><p class="discipline-action">模式内确认，不自动放行</p><ol class="primary-mode-priority">
+<li><span class="mode-priority-label">第一优先级 · 核心主攻 <b>80%</b></span><strong>题材第一波主升二阶段连板龙</strong><span>竞价超预期缺口；回封大单半路；板上连续大单进攻。</span></li>
+<li><span class="mode-priority-label">第二优先级 · 重点关注 <b>12%</b></span><strong>龙头二波</strong><span>突破平台或反包板。</span></li>
+<li><span class="mode-priority-label">第三优先级 · 次要关注 <b>6%</b></span><strong>抱团龙</strong><span>反包或突破平台，只做主动核心。</span></li>
+<li><span class="mode-priority-label">第四优先级 · 严格择机 <b>2%</b></span><strong>补涨三板龙</strong><span>确认地位的三板买点，不延伸为四板盲接。</span></li>
+</ol><p>主模式与次模式为8:2；次模式内部二波、抱团、补涨为6:3:1。80%、12%、6%、2%是模式侧重与重要程度，不是单笔仓位比例或开仓指令；风控与确认条件始终优先。</p></section>
 </div>
 <p class="discipline-threshold"><strong>1/4口径：</strong>连续进攻大单金额 ≥ 上方压单金额 × 1/4，仅作为准备排单信号；仍须同时核对题材、龙头地位、量能与失效条件，不是自动买入。</p>
 <p class="discipline-check"><strong>逐票核对：</strong>标的 → 清单归类 → 依据与时点 → 买点及失效条件 → 新增预算。禁忌票新增预算0；少做须写清参与条件；未确认标待核。主做不等于无条件做。</p>
@@ -724,7 +724,7 @@
 <p class="source-note">Source Word: 2026-11-20_A股每日复盘_AI分析版.docx</p>
 </main>
 </div>
-<script data-daily-preflight-asset src="../assets/daily-preflight.js?v=20261122-trading-discipline"></script><script>
+<script data-daily-preflight-asset src="../assets/daily-preflight.js?v=20261122-mode-priority"></script><script>
 (function(){
   const decodeJson = text => String(text || '').replace(/&quot;/g,'"').replace(/&#34;/g,'"').replace(/&#39;/g,"'").replace(/&apos;/g,"'").replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&amp;/g,'&');
   const parseJsonNode = (node, fallback) => {
