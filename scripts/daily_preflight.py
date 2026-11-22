@@ -80,7 +80,7 @@ def panel(day, values):
             + f'<label>{"龙头地位、买点、仓位上限、失效条件 / 日期" if prefix == "context" else "依据 / 核对日期"}<textarea data-preflight-field="{prefix}Basis" rows="3"></textarea></label></div></article>')
     seed = json.dumps(values,ensure_ascii=False).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')
     return (START + f'<section class="daily-preflight" id="daily-preflight" data-daily-preflight data-review-date="{day}">'
-            '<p class="preflight-motto" data-preflight-motto><strong>风控才是股市存活的生命线。</strong></p><p><strong>先问风控，再问心态，最后问买点与仓位。第一问触线，后两问不能推翻停止开仓。</strong></p>'
+            '<p class="preflight-motto" data-preflight-motto><strong>风控才是股市存活的生命线。</strong></p><p data-no-rebound-rule><strong>不要抢反弹，不要抄底。收益空间有限、风险难以控制时，宁可空仓，也不在悬崖边上跳舞。君子不立危墙之下，先避免置身险境。</strong></p><p><strong>先问风控，再问心态，最后问买点与仓位。第一问触线，后两问不能推翻停止开仓。</strong></p>'
             '<h3>盘前必问 · 三项前置检查</h3><label class="preflight-date">预案执行日<input type="date" data-preflight-field="targetDate"></label>'
             + f'<p data-weekly-risk-rule>{RISK_RULE}</p>'
             + ''.join(blocks) + '<p class="preflight-result" data-preflight-result role="status">待核：三项确认后再看新增预算；周亏达到5%停止本周开新仓。</p>'
