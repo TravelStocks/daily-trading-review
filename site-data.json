@@ -1,5 +1,60 @@
 [
   {
+    "date_iso": "2026-11-27",
+    "date_label": "11/27",
+    "date_display": "2026.11.27",
+    "title": "章盟主式超短全景复盘（2026.11.27 周五）+11.30龙头预案",
+    "source_docx": "2026-11-27-章盟主式超短全景复盘-AI文档.docx",
+    "page_path": "pages\\章盟主式超短全景复盘（2026.11.27 周五）+11.30龙头预案.html",
+    "author": "Raymond",
+    "intro": "放量普涨后，先验证核心与容量能否承接分化。Plan A按周一、周二两天推进；Plan B防御低吸、Plan C科技ETF各守条件，不挤占主计划。",
+    "emotion_summary": "沪深413涨停、42炸板，封板率90.77%；唯一六板，二板以上7/14晋级，失败7只均值+1.10%。",
+    "emotion_label": "主升周期内单日高潮（原稿）",
+    "emotion_score": "",
+    "main_line_summary": [
+      "一、复盘总纲"
+    ],
+    "core_stock_summary": "Plan A克来与证通；B杭州与好当家；C科技ETF备选。",
+    "core_stock_list": [
+      "克来机电",
+      "证通电子",
+      "杭州解百",
+      "好当家"
+    ],
+    "next_focus_lines": [
+      "周一核克来6进7与证通3进4；最快周二再看证通4进5。",
+      "杭州解百、好当家：科技转弱且防御独立承接，低吸不追高。",
+      "588170趋势备选；第二只ETF代码不完整，不能执行。",
+      "纯切换禁新增；5至6亿元是未来全天参考，竞价时不能预知。"
+    ],
+    "risk_summary": "纯切换禁做；全天量能不倒用于竞价；未定预算和退出不自动放行。",
+    "personal_reflection": "私人执行记录留本地",
+    "operation_emotion_analysis": "实际持仓及账户不公开",
+    "manual_rhythm_note": "双冰以上可做修复回流预期，双高潮以上可做砸盘预期！",
+    "stock_annotations": [],
+    "board_tags": [
+      "算力",
+      "芯片",
+      "机器人",
+      "光通信",
+      "PCB"
+    ],
+    "status_tags": [
+      "完整复盘",
+      "Plan A/B/C"
+    ],
+    "summary_headline": "普涨之后看承接，先高标，再等换手",
+    "research_bucket": "复盘反思",
+    "has_reflection": true,
+    "market_style_note": "二、市场风格与赚钱效应解析",
+    "main_line_focus": "算力芯片拟主升一，机器人拟主升二末段",
+    "core_focus_note": "克来6进7、证通先3进4后4进5",
+    "tomorrow_focus_note": "先核分化承接，B/C不能占A机会",
+    "risk_focus_note": "纯切换、未定龙及未补齐风控不新增",
+    "word_count_hint": 13323,
+    "updated_at": "2026-11-28 00:30:01"
+  },
+  {
     "date_iso": "2026-11-26",
     "date_label": "11/26",
     "date_display": "2026.11.26",
